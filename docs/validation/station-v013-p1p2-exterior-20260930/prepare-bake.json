@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle v013 required\");\nvar folder=\"Assets/Station/Models/SereneExteriorLightmapMeshesV013\";\nUnityEditor.AssetDatabase.CreateFolder(\"Assets/Station/Models\",\"SereneExteriorLightmapMeshesV013\");\nvar copies=new System.Collections.Generic.Dictionary<UnityEngine.Mesh,UnityEngine.Mesh>();int count=0;\nvar root=UnityEngine.GameObject.Find(\"V013 civic exterior finish\");\nforeach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None)){\n var p=r.bounds.center;\n bool local=r.transform.IsChildOf(root.transform)||(p.x>167&&p.x<181&&p.z< -201&&p.z> -216&&r.bounds.size.x<15);\n if(!local||!r.enabled||r.name.Contains(\"Meshy\")||r.transform.parent&&r.transform.parent.name.Contains(\"Meshy\")||System.Array.Exists(r.sharedMaterials,m=>!m||m.renderQueue>=3000||m.shader.name.Contains(\"Unlit\")))continue;\n var mf=r.GetComponent<UnityEngine.MeshFilter>();if(!mf)continue;var mesh=mf.sharedMesh;\n if(mesh.uv2.Length!=mesh.vertexCount){\n  if(!copies.TryGetValue(mesh,out var copy)){\n   copy=UnityEngine.Object.Instantiate(mesh);copy.name=mesh.name+\" exterior lightmap UV\";\n   if(!UnityEditor.Unwrapping.GenerateSecondaryUVSet(copy))throw new System.Exception(\"Unwrap failed: \"+mesh.name);\n   UnityEditor.AssetDatabase.CreateAsset(copy,folder+\"/Mesh-\"+copies.Count.ToString(\"D3\")+\".asset\");copies.Add(mesh,copy);\n  }mf.sharedMesh=copy;\n }\n UnityEditor.GameObjectUtility.SetStaticEditorFlags(r.gameObject,UnityEditor.GameObjectUtility.GetStaticEditorFlags(r.gameObject)|UnityEditor.StaticEditorFlags.ContributeGI);r.receiveGI=UnityEngine.ReceiveGI.Lightmaps;r.scaleInLightmap=r.bounds.size.x>30?.5f:1;count++;\n}\nvar probeGo=new UnityEngine.GameObject(\"V013 civic pavilion light probes\");probeGo.transform.SetParent(root.transform);var group=probeGo.AddComponent<UnityEngine.LightProbeGroup>();\nvar points=new System.Collections.Generic.List<UnityEngine.Vector3>();\nforeach(float y in new[]{.6f,1.6f,3.5f})foreach(float x in new[]{168f,171f,174f,177f,180f})foreach(float z in new[]{-201f,-205f,-209f,-213f,-216f})points.Add(new UnityEngine.Vector3(x,y,z));\ngroup.probePositions=points.ToArray();\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{contributors=count,newMeshCopies=copies.Count,newProbePoints=points.Count,started=UnityEditor.Lightmapping.BakeAsync()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "contributors": 51,
+        "newMeshCopies": 35,
+        "newProbePoints": 75,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

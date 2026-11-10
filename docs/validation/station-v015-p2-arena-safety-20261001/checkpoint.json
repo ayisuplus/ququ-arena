@@ -1,0 +1,87 @@
+{
+  "baseline": "1ef3041b",
+  "date": "2026-10-01",
+  "scope": "Arena mechanics and safety gates; P2-P5 incomplete",
+  "hashes": [
+    {
+      "file": "QuQuArena3D/Assets/Scripts/Presentation/StationArenaSafety.cs",
+      "sha256": "A40E1353DCD3DCDD600C54D29A830EBCB4B2B9E98CBEECA7E56331199E1A3484"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDuelPlatforms.cs",
+      "sha256": "75C5D3B57C388064F4D032685134EAB6D86F7DFAAD97C56A4374022D11BB2E7B"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Scripts/Presentation/ArenaFighter.cs",
+      "sha256": "E3F899A625EC9208D9CFCF47010F001F92DAB18C3A258E1F4D33DB6A75EBB1C7"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Scripts/App/ArenaStationLiveMatch.cs",
+      "sha256": "BD8A94B07E2F7F7DB9E56A77496C4C6A4C3E8106CF73CACF032FC293CB39C9DF"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Scripts/Validation/StationRingArenaSafetyProbe.cs",
+      "sha256": "A517709F911F24A19280F6CD220153F7939C44F1F23F3C34841D10F7711C329B"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Editor/StationRingPrototypeBuild.cs",
+      "sha256": "C0181CB82BD099D8C58AA188C92EF7BBA114EF850E128D4CCC3062315A253453"
+    },
+    {
+      "file": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingBuildingsV015.unity",
+      "sha256": "E4E42A6BD35FABEC1A0501F4A7337DFB94C74D76EC4BC22842827D972B8E1B7F"
+    },
+    {
+      "file": ".cache/v015-p2-arena-safety-player/StationRingPrototype.exe",
+      "sha256": "30D4B41A85303ABF83C686F06B75AB1681471C79B9DC7FE530EAD09099FDF63D"
+    },
+    {
+      "file": ".cache/v015-p2-arena-safety-player/StationRingPrototype_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "D517580D00D8FCDF22C90FE1B8398AA3AFD3C6A9710C071FEA2D203CAF260AFF"
+    }
+  ],
+  "reports": [
+    {
+      "file": "editor-final-phase97/arena.json",
+      "passed": true,
+      "checks": 142,
+      "seconds": 126.61541748046875,
+      "sha256": "408722E043309E9B152E75EF1646400F19CEDB4162A972BF4958538421B78F92"
+    },
+    {
+      "file": "player-phase0/arena.json",
+      "passed": true,
+      "checks": 166,
+      "seconds": 132.53216552734375,
+      "sha256": "672F24E73DD6C1F024B1B10821E98341F6B4267B926752B1FCE107CB9CFF8527"
+    },
+    {
+      "file": "player-phase97/arena.json",
+      "passed": true,
+      "checks": 166,
+      "seconds": 132.51844787597656,
+      "sha256": "9FB4D6ED1194C6E9C0D2429E98258E97511B9A55A1E965CF0D64523655BB5A89"
+    },
+    {
+      "file": "upper-regression97/upper.json",
+      "passed": true,
+      "checks": 498,
+      "seconds": 133.45335388183594,
+      "sha256": "0E3A1C9FC1058A79B95354E1403689526985F1B364A48A476A353A5A661D6BA5"
+    },
+    {
+      "file": "dock-regression97/dock.json",
+      "passed": true,
+      "checks": 107,
+      "seconds": 98.38141632080078,
+      "sha256": "67A3A3E4DD5DD01AE23D5AF97A6CA66918E9165C118FA067B3D7092D3FB83293"
+    }
+  ],
+  "staticChecks": 3551,
+  "preservationChecks": 59512,
+  "sceneRecordsBefore": 36180,
+  "sceneRecordsAfter": 36394,
+  "removedSceneRecords": 0,
+  "modifiedExistingSceneRecords": 4,
+  "editorProbeNote": "Editor 142 checks preceded addition of eight corner-pressure cases; final compiled Player checks all 166. Runtime implementation unchanged between these tests."
+}

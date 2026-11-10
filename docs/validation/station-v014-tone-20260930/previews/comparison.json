@@ -1,0 +1,51 @@
+{
+  "choices": [
+    {
+      "name": "baseline",
+      "sun": 0.9,
+      "exposure": 0.1,
+      "contrast": 6.0,
+      "saturation": -3.0
+    },
+    {
+      "name": "soft-white",
+      "sun": 1.5,
+      "exposure": 0.65,
+      "contrast": 8.0,
+      "saturation": 0.0
+    },
+    {
+      "name": "bright-white",
+      "sun": 2.2,
+      "exposure": 1.0,
+      "contrast": 10.0,
+      "saturation": 0.0
+    },
+    {
+      "name": "exposure-only",
+      "sun": 0.9,
+      "exposure": 1.1,
+      "contrast": 8.0,
+      "saturation": 0.0
+    }
+  ],
+  "views": [
+    {
+      "name": "exterior",
+      "position": "(-45.00, 24.00, -205.00)",
+      "target": "(0.00, 3.00, -154.00)"
+    },
+    {
+      "name": "planting",
+      "position": "(14.00, 1.70, -157.00)",
+      "target": "(20.00, 2.00, -164.00)"
+    },
+    {
+      "name": "suite",
+      "position": "(164.80, 1.70, -96.90)",
+      "target": "(160.80, 1.25, -90.30)"
+    }
+  ],
+  "restoredSun": 0.9,
+  "sceneDirty": false
+}

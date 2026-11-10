@@ -1,0 +1,1327 @@
+{
+  "id": "31141f65-74aa-4429-983e-d59a8c14435a",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "syllogism",
+    "title": "三段论擂台",
+    "description": "古典直言三段论（传统逻辑题库形制，内容自建）。给两个前提一个结论，判断结论能否从前提必然推出——现代一阶语义（『有些』=至少一个、全称无存在含义），题面前缀已声明。valid 为有效式（Barbara/Celarent/Darii/E 换位/链式）；invalid-converse 为换位与肯定后件谬误；invalid-negative 为否定前提谬误；invalid-particular 为特称误推（双特称前提、特称推全称、『有些』不当蕴含『有些不』）。多题结论在现实世界为真但推不出来——测严格蕴含不是测朴素直觉。exact 裁判（是/否）；每题 meta.form 存结构化命题，契约测试区域枚举模型检验逐题复算。",
+    "author": "AI斗兽场（内容自建，形制致敬传统逻辑题库）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:syllogism:2026-09-10",
+    "taskPrefix": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "valid": "有效式（前提真则结论必然真）",
+      "invalid-converse": "换位与肯定后件谬误",
+      "invalid-negative": "否定前提谬误",
+      "invalid-particular": "特称误推（双特称/特称推全称）"
+    }
+  },
+  "startedAt": "2026-09-23T12:57:13.670Z",
+  "durationMs": 48795,
+  "contestants": [
+    {
+      "id": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "name": "DeepSeek-Flash",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "eca8fe86-57f0-49fd-88ea-16164d5aa465"
+    },
+    {
+      "id": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "name": "MiMo-V2.6-Flash",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "7b85e114-b714-4053-b044-585d9c9213c1"
+    },
+    {
+      "id": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "name": "MiMo-V2.6-Pro",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "77bcf4ad-cf41-4efa-a36e-10611cc9d477"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 877,
+      "solveMs": 878,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出是或否。需要判断三段论：所有猫都是动物，所有动物都需要氧气，所以所有猫都需要氧气。有效。输出「是」。注意只两个字？是。不要标点？用户要求只输出「是」或「否」，不多一个字。 final 是. ",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 68,
+        "cachedInput": 0,
+        "reasoning": 66
+      },
+      "finishedMs": 880
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2210,
+      "solveMs": 2210,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Classic syllogism: All cats are animals, all animals need oxygen → all cats need oxygen. Valid.\n\nYes.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 29,
+        "cachedInput": 64,
+        "reasoning": 26
+      },
+      "finishedMs": 2236
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2306,
+      "solveMs": 2306,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "是",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 2330
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 927,
+      "solveMs": 927,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文。需要判断结论能否从前提必然推出。前提：没有猫是狗。结论：没有狗是猫。这是换位法，全称否定命题可以简单换位，必然成立。在所有前提成立情形下，猫和狗没有交集，则狗和猫也没有交集。输出「是」。需要只输出是或否。确保不多字。",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 80,
+        "cachedInput": 0,
+        "reasoning": 78
+      },
+      "finishedMs": 953
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2119,
+      "solveMs": 2119,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\"没有猫是狗\" = All cats are not dogs. Therefore \"没有狗是猫\" = All dogs are not cats. This is a valid conversion of a universal negative proposition (E proposition), which is valid.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 49,
+        "cachedInput": 64,
+        "reasoning": 46
+      },
+      "finishedMs": 3001
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 3898,
+      "solveMs": 3898,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "This is a classic conversion of E-proposition (universal negative). \"No cats are dogs\" converts to \"No dogs are cats.\" This is valid for E-propositions in traditional logic.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 42,
+        "cachedInput": 0,
+        "reasoning": 39
+      },
+      "finishedMs": 4853
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1025,
+      "solveMs": 1026,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只需“是”或“否”。需要判断三段论：所有鸟都会飞。有些宠物是鸟。所以有些宠物会飞。形式：所有B是F。有些P是B。因此有些P是F。有效。存在至少一个宠物是鸟，该宠物是鸟所以会飞，因此有些宠物会飞。必然成立。输出“是”。注意只输出是或否。 ",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 91,
+        "cachedInput": 0,
+        "reasoning": 89
+      },
+      "finishedMs": 3264
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 5466,
+      "solveMs": 5467,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "All birds can fly. Some pets are birds. Therefore, some pets can fly.\n\nSome pets are birds → there exists at least one pet that is a bird. All birds can fly → that pet can fly. Therefore, some pets can fly.\n\nThis is a valid syllogism (Darapti-like). Yes.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 70,
+        "cachedInput": 0,
+        "reasoning": 67
+      },
+      "finishedMs": 7808
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 4152,
+      "solveMs": 4152,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "All birds fly. Some pets are birds. Therefore, some pets can fly.\n\n\"Some pets are birds\" means at least one pet is a bird. That pet, being a bird, can fly. So that pet can fly and is a pet. Therefore, some pets can fly.\n\nYes, this follows necessarily.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 67,
+        "cachedInput": 0,
+        "reasoning": 64
+      },
+      "finishedMs": 7154
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1002,
+      "solveMs": 1002,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出是或否。需要判断三段论：所有鲸都不是鱼（鲸 ∩ 鱼 = 空）。所有白鲸都是鲸（白鲸 ⊆ 鲸）。所以所有白鲸都不是鱼（白鲸 ⊆ 非鱼）。有效。输出「是」。注意只输出一个字？要求只输出「是」或「否」，不多一个字。最终是。 ",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 84,
+        "cachedInput": 0,
+        "reasoning": 82
+      },
+      "finishedMs": 4267
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1822,
+      "solveMs": 1822,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "三段论：所有鲸都不是鱼（鲸∩ 鱼 = ∅），所有白鲸都是鲸（白鲸 ⊆ 鲸），所以所有白鲸都不是鱼（白鲸 ∩ 鱼 = ∅）。这是有效的三段论。",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 61,
+        "cachedInput": 0,
+        "reasoning": 58
+      },
+      "finishedMs": 6091
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 7112,
+      "solveMs": 7112,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "All whales are not fish. All belugas are whales. So all belugas are not fish.\n\nThis is a valid syllogism (Celarent/Cesare type). It's necessarily valid.",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 45,
+        "cachedInput": 0,
+        "reasoning": 42
+      },
+      "finishedMs": 11966
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 839,
+      "solveMs": 839,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need answer Chinese yes/no. Need determine syllogism. All sparrows birds. All birds oviparous. All oviparous vertebrates. Therefore all sparrows vertebrates. Valid chain. Need output 是 only. Ensure no extra. ",
+      "score": 1,
+      "usage": {
+        "input": 111,
+        "output": 52,
+        "cachedInput": 0,
+        "reasoning": 50
+      },
+      "finishedMs": 6932
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2607,
+      "solveMs": 2607,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "三段论链条：麻雀→鸟→卵生→脊椎。",
+      "score": 1,
+      "usage": {
+        "input": 96,
+        "output": 20,
+        "cachedInput": 0,
+        "reasoning": 17
+      },
+      "finishedMs": 9540
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 744,
+      "solveMs": 744,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "是",
+      "score": 1,
+      "usage": {
+        "input": 96,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 7899
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1150,
+      "solveMs": 1150,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断结论能否从前提必然推出。前提：所有猫都是动物。结论：所有动物都是猫。显然不能必然推出。所以输出 否。必须只输出一个字？ \"否\" 或 \"是\"。要求只输出「是」或「否」，不多一个字。所以最终：否。",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 79,
+        "cachedInput": 0,
+        "reasoning": 77
+      },
+      "finishedMs": 8959
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 963,
+      "solveMs": 963,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "否",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 8863
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 656,
+      "solveMs": 656,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "否",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 9520
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1274,
+      "solveMs": 1274,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断三段论。前提：所有医生都学过生物。有些教师也学过生物。结论：有些教师是医生。这形式：所有 D 是 B。有些 T 是 B。因此有些 T 是 D。无效。因为教师学过的生物者可能不是医生。结论不必然。输出 否。",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 83,
+        "cachedInput": 0,
+        "reasoning": 81
+      },
+      "finishedMs": 10234
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4990,
+      "solveMs": 4990,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises: All doctors have studied biology. Some teachers have studied biology.\n\nThe conclusion: Some teachers are doctors.\n\nThis doesn't necessarily follow. The teachers who studied biology could have studied biology through another path (not being doctors). The set of people who studied biology includes all doctors, and also includes some teachers, but these two groups within \"studied biology\" might not overlap.\n\nSo the conclusion does not necessarily follow.",
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 89,
+        "cachedInput": 0,
+        "reasoning": 86
+      },
+      "finishedMs": 14511
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3974,
+      "solveMs": 3974,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises: All doctors have studied biology. Some teachers have also studied biology. Conclusion: Some teachers are doctors.\n\nThis doesn't follow necessarily. The teachers who studied biology might not be doctors at all.",
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 45,
+        "cachedInput": 0,
+        "reasoning": 42
+      },
+      "finishedMs": 13516
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1092,
+      "solveMs": 1092,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断结论能否从前提必然推出。前提：所有狗都是动物。所有猫都是动物。结论：所有猫都是狗。显然不能必然推出。需只输出否。注意格式。最終只输出 否。 ",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 63,
+        "cachedInput": 0,
+        "reasoning": 61
+      },
+      "finishedMs": 11327
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1607,
+      "solveMs": 1607,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises are: All dogs are animals. All cats are animals. The conclusion is: All cats are dogs.\n\nThis does not follow necessarily. Cats being animals and dogs being animals does not imply cats are dogs.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 47,
+        "cachedInput": 0,
+        "reasoning": 44
+      },
+      "finishedMs": 12936
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2441,
+      "solveMs": 2441,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises say all dogs are animals and all cats are animals. The conclusion says all cats are dogs. This does not follow - cats could be animals but not dogs.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 38,
+        "cachedInput": 0,
+        "reasoning": 35
+      },
+      "finishedMs": 14408
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1063,
+      "solveMs": 1063,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need answer Chinese yes/no. Need analyze. Premise: Some flowers are not roses. Conclusion: Some roses are not flowers. Does it necessarily follow? Need determine. \"有些花不是玫瑰\" means exists x such that x is flower and not rose. Conclusion: exists x such that x is rose and not flower. Not entailed. In fact if all roses are flowers (common category) then conclusion impossible. But in logic terms, premise says there is a non-rose flower, does not imply any rose at all, let alone non-flower. So no. Need output only 是 or 否. Final 否. ",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 133,
+        "cachedInput": 0,
+        "reasoning": 131
+      },
+      "finishedMs": 13999
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 8276,
+      "solveMs": 8276,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Premise: 有些花不是玫瑰 (Some flowers are not roses).\nConclusion: 有些玫瑰不是花 (Some roses are not flowers).\n\nDoes the premise necessarily entail the conclusion? No. Just because some flowers are not roses doesn't mean some roses are not flowers. In fact, all roses could be flowers while some flowers are not roses.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 74,
+        "cachedInput": 0,
+        "reasoning": 71
+      },
+      "finishedMs": 21792
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4531,
+      "solveMs": 4531,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premise: \"有些花不是玫瑰\" (Some flowers are not roses). This means there exists at least one flower that is not a rose.\n\nThe conclusion: \"有些玫瑰不是花\" (Some roses are not flowers). This means there exists at least one rose that is not a flower.\n\nCan the conclusion necessarily follow from the premise? No. The premise says some flowers are not roses. This is compatible with all roses being flowers (in fact, in reality, all roses ARE flowers). The premise tells us nothing about whether roses might not be flowers.\n\nSo the conclusion does not necessarily follow.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 125,
+        "cachedInput": 0,
+        "reasoning": 122
+      },
+      "finishedMs": 18531
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1217,
+      "solveMs": 1217,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出 是 或 否。需要判断结论能否从前提必然推出。前提：所有猫都是动物。结论：有些动物不是猫。从所有猫都是动物不能推出存在动物不是猫。若所有存在都是猫且猫是动物，则前提成立而结论假。注意「有些」表示至少存在一个，结论需要存在非猫动物。前提没有存在断言。所以不必然成立。输出 否。",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 97,
+        "cachedInput": 0,
+        "reasoning": 95
+      },
+      "finishedMs": 15626
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4217,
+      "solveMs": 4217,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises are: All cats are animals.\n\nThe conclusion: Some animals are not cats.\n\nCan we deduce this necessarily?\n\n\"All cats are animals\" — this is given. The conclusion says \"Some animals are not cats.\"\n\nConsider: if there is at least one animal that is not a cat, the conclusion holds. But what if all animals are cats? Then \"all cats are animals\" and \"all animals are cats\" — the conclusion \"some animals are not cats\" would be false.\n\nBut wait — the premise is only \"All cats are animals.\" This doesn't guarantee that there exists an animal that is not a cat. It's possible that the set of animals equals the set of cats (assuming cats exist).\n\nSo the conclusion does NOT necessarily follow from the premise alone. The premise doesn't exclude the possibility that all animals are cats.\n\nTherefore the answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 182,
+        "cachedInput": 0,
+        "reasoning": 179
+      },
+      "finishedMs": 18729
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 6018,
+      "solveMs": 6018,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\"所有猫都是动物。\" → \"有些动物不是猫。\"\n\nThe premise says all cats are animals. The conclusion says some animals are not cats.\n\nIs this necessarily true? Consider the possibility that animals and cats are the same set - if the only animals are cats, then all cats are animals is true, but \"some animals are not cats\" would be false. Since we only know that all cats are animals, but there might be no non-cat animals, the conclusion doesn't necessarily follow.\n\nWait, but the problem says \"所有前提都成立的情形下\" - we need to check if the conclusion must hold whenever the premise is true.\n\nIf the premise is true (all cats are animals), is the conclusion (some animals are not cats) necessarily true?\n\nNo. It's possible that the set of animals equals the set of cats. For example, in a universe where only cats exist as animals. Then all cats are animals is true, but there are no animals that aren't cats.\n\nSo the answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 214,
+        "cachedInput": 0,
+        "reasoning": 211
+      },
+      "finishedMs": 21645
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1222,
+      "solveMs": 1222,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断三段论：所有猫都是动物。所有狗都不是猫。所以所有狗都不是动物。形式：M ⊆ A; D ∩ M = ∅; 结论 D ∩ A = ∅。不必然，因为狗可以不是猫但是动物。前提可满足且结论假：狗是动物。所以否。只输出 否。",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 86,
+        "cachedInput": 0,
+        "reasoning": 84
+      },
+      "finishedMs": 19754
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2652,
+      "solveMs": 2652,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premise: All cats are animals. No dogs are cats. Conclusion: No dogs are animals.\n\nThis doesn't follow. Dogs can still be animals even if they're not cats.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 41,
+        "cachedInput": 0,
+        "reasoning": 38
+      },
+      "finishedMs": 21383
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1888,
+      "solveMs": 1888,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "All cats are animals. No dogs are cats. Therefore, no dogs are animals.\n\nThis is invalid. Dogs could be animals without being cats. Counterexample: Dogs are animals but not cats.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 43,
+        "cachedInput": 0,
+        "reasoning": 40
+      },
+      "finishedMs": 21643
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1288,
+      "solveMs": 1288,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断三段论。前提：所有鸟都会飞。所有企鹅都不是鸟。结论：有些企鹅不会飞。问能否必然推出在所有前提成立情形下结论必然成立。注意“有些”至少存在一个，不蕴含有些不。需要判断。\n\n形式化：∀x(Bird -> Fly). ∀x(Penguin -> ¬Bird). 结论 ∃x(Penguin ∧ ¬Fly). 前提没有断言企鹅存在。即使存在企鹅，因不是鸟，不能推出不会飞，可能所有企鹅都会飞（虽然前提所有鸟会飞不限制非鸟）。若没有企鹅，结论“有些企鹅不会飞”假。因此不能必然推出。输出否。 Ensure only \"否\". ",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 168,
+        "cachedInput": 0,
+        "reasoning": 166
+      },
+      "finishedMs": 22672
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4369,
+      "solveMs": 4369,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises:\n1. All birds can fly.\n2. All penguins are not birds.\n3. Conclusion: Some penguins cannot fly.\n\nFrom premise 1 and 2, we know penguins are not birds. But can penguins fly or not? The premises don't tell us about penguins' flying ability directly.\n\nWe know \"all birds can fly\" - this tells us about birds. Penguins are not birds, so we can't conclude anything about whether penguins fly or not.\n\nWait, but the conclusion is \"some penguins cannot fly.\" This would require at least one penguin that cannot fly. From the premises alone, we can't determine whether penguins fly or not. The premises are silent on non-birds' flying ability.\n\nSo the conclusion does NOT necessarily follow from the premises. The answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 176,
+        "cachedInput": 0,
+        "reasoning": 173
+      },
+      "finishedMs": 26013
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 19618,
+      "solveMs": 19618,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me analyze this step by step.\n\nPremise 1: All birds can fly. (All birds ⊆ can fly)\nPremise 2: All penguins are not birds. (All penguins ∩ birds = ∅)\n\nConclusion: Some penguins cannot fly. (There exists at least one penguin that cannot fly)\n\nFrom Premise 1: All birds can fly.\nFrom Premise 2: Penguins are not birds.\n\nBut wait - Premise 1 says all birds can fly. This means being a bird is sufficient for flying. But it doesn't say that only birds can fly.\n\nNow, penguins are not birds. Does this mean penguins can't fly? Not necessarily from the premises alone. The premises say:\n- If something is a bird, it can fly.\n- Nothing that is a penguin is a bird.\n\nFrom these, can we conclude that some penguins cannot fly? \n\nWe know penguins are not birds. The first premise only tells us about birds (they all fly). It doesn't restrict flying to only birds. So penguins could potentially fly (they just aren't birds, and the premise about birds doesn't constrain penguins' flying ability).\n\nBut wait - can we even conclude that penguins exist? The premises say \"All penguins are not birds.\" This could be vacuously true if there are no penguins. If there are no penguins, then \"some penguins cannot fly\" is false.\n\nActually, in syllogistic logic, \"All penguins are not birds\" - let me think about this more carefully. \"所有企鹅都不是鸟\" means \"All penguins are not-birds\" or equivalently \"No penguins are birds.\"\n\nIn traditional syllogistic logic, universal statements don't carry existential import in the standard modern interpretation. But in traditional Aristotelian logic, they do.\n\nEven if we assume penguins exist (existential import), from the premises:\n- All birds can fly\n- No penguins are birds\n- Penguins exist (assumed)\n\nCan we conclude that some penguins cannot fly? No. The premises don't say anything about whether penguins can or cannot fly. Penguins aren't birds, so Premise 1 doesn't apply to them. Penguins could all fly (as non-birds), or none could fly, or some could.\n\nSo the conclusion \"some penguins cannot fly\" does not necessarily follow.\n\nEven simpler: the premises don't establish that any penguin exists. \"Some penguins cannot fly\" requires the existence of at least one penguin that cannot fly.Actually, let me reconsider. In many Chinese logic textbook conventions, \"所有企鹅都不是鸟\" might carry existential import (there exist penguins, and none of them are birds). But even with existential import, we can't conclude that some penguins don't fly.\n\nThe answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 600,
+        "cachedInput": 0,
+        "reasoning": 597
+      },
+      "finishedMs": 41264
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1547,
+      "solveMs": 1547,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出是或否。需要判断三段论有效性。前提：有些花不是红色的。所有红色的东西都是暖色的。结论：有些花不是暖色的。\n\n形式：存在 x 是花且非红。所有红 -> 暖。结论存在 x 是花且非暖。这不能推出。因为那些非红的花可能是暖色。比如蓝花？暖色包括红橙黄等，非红但暖可能橙色花。前提成立结论不必然。因此否。注意只输出「否」。",
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 115,
+        "cachedInput": 0,
+        "reasoning": 113
+      },
+      "finishedMs": 23341
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7160,
+      "solveMs": 7160,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We have: some flowers are not red. All red things are warm-colored. Conclusion: some flowers are not warm-colored.\n\nCounterexample: flowers that are not red could all be warm-colored (e.g., blue flowers are... well, blue is cool, but logically possible: warm-colored set contains non-red items). Let non-red flowers all be warm-colored. Then premise holds (some flowers not red), all red things are warm (vacuously satisfied if no red things), conclusion \"some flowers not warm-colored\" fails.\n\nYes counterexample possible: universe: flower A (blue), color blue not red, blue is warm-colored? We can stipulate blue as warm-colored. All red things warm: vacuously. So conclusion false. So not necessarily valid.",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 158,
+        "cachedInput": 0,
+        "reasoning": 155
+      },
+      "finishedMs": 29833
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 15033,
+      "solveMs": 15033,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me check: Some flowers are not red. All red things are warm-colored. Conclusion: Some flowers are not warm-colored.\n\nFrom \"Some flowers are not red\" and \"All red things are warm-colored,\" we cannot conclude \"Some flowers are not warm-colored.\" The flowers that are not red could still be warm-colored (just not red). There's no information about whether non-red flowers are warm-colored or not.\n\nSo the conclusion does not necessarily follow.\n\nWait, let me think again more carefully with syllogistic logic.\n\nPremise 1: Some flowers are not red. (Particular negative about flowers and red)\nPremise 2: All red things are warm-colored. (Universal affirmative about red and warm-colored)\n\nThis is a syllogism with:\n- Term1 (minor): flowers\n- Term 2 (major): warm-colored\n- Term 3 (middle): red\n\nFigure: The middle term (red) is subject in Premise 1 and predicate in Premise 2. This is Figure 2.\n\nMood: O (some flowers are not red) and A (all red are warm) giving conclusion O (some flowers are not warm).\n\nThis is the mood OAO in Figure 2. Let me check if this is valid.\n\nActually, let me just use a counterexample to test.\n\nConsider: \n- Flowers = {a, b}\n- Red = {a}\n- Warm-colored = {a, b}\n\nPremise 1: Some flowers are not red → b is a flower and b is not red. ✓\nPremise 2: All red things are warm-colored → a is red and a is warm-colored. ✓\nConclusion: Some flowers are not warm-colored → is there a flower that is not warm-colored? a is warm, b is warm. No. ✗\n\nSo the conclusion doesn't follow. The answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 396,
+        "cachedInput": 0,
+        "reasoning": 393
+      },
+      "finishedMs": 38375
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1290,
+      "solveMs": 1290,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断三段论。前提：没有鸟是哺乳动物。所有蝙蝠都不是鸟。结论：所有蝙蝠都是哺乳动物。形式：No B are M (鸟与哺乳动物不相交)。All bats are not birds (蝙蝠与鸟不相交)。结论 All bats are mammals. 显然不能推出，因为蝙蝠可能不是鸟也不是哺乳动物，或者可以是其他。前提成立时，存在蝙蝠非哺乳动物也可能。因此不必然成立。输出否。",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 110,
+        "cachedInput": 0,
+        "reasoning": 108
+      },
+      "finishedMs": 27304
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 5510,
+      "solveMs": 5510,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The syllogism: \"没有鸟是哺乳动物\" (No bird is a mammal). \"所有蝙蝠都不是鸟\" (All bats are not birds). Conclusion: \"所有蝙蝠都是哺乳动物\" (All bats are mammals).\n\nThis does not necessarily follow. Bats not being birds and no birds being mammals doesn't mean bats must be mammals. Bats could be neither birds nor mammals (or some could be and some not).\n\nSo the answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 103,
+        "cachedInput": 0,
+        "reasoning": 100
+      },
+      "finishedMs": 32815
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7593,
+      "solveMs": 7593,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me analyze this syllogism.\n\nPremises:\n1. No bird is a mammal. (No B is M)\n2. All bats are not birds. (No bat is a bird)\n\nConclusion: All bats are mammals.\n\nFrom premise 1: No bird is a mammal. (No B is M)\nFrom premise 2: No bat is a bird. (No Ba is B)\n\nCan we conclude: All bats are mammals? (All Ba is M)\n\nThe premises tell us:\n- No birds are mammals\n- No bats are birds\n\nBut nothing connects bats to mammals. Bats could be mammals, or bats could be something that is neither bird nor mammal. The premises don't force bats to be mammals.\n\nFor a counterexample: Suppose bats are reptiles. Then:\n- No bird is a mammal ✓ (birds and mammals don't overlap)\n- No bat is a bird ✓ (reptiles aren't birds)\n- But bats are not mammals ✗\n\nSo the conclusion does not necessarily follow.",
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 217,
+        "cachedInput": 0,
+        "reasoning": 214
+      },
+      "finishedMs": 37427
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1330,
+      "solveMs": 1330,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断三段论：所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。是否必然成立？ 逻辑形式：∀x(Cat→Fish-eater). ∃x(Animal ∧ ¬Cat). 结论 ∃x(Animal ∧ ¬Fish-eater). 不必然，因为非猫动物可能也吃鱼。需要否。注意「有些」至少存在，不蕴含有些不。前提可以所有动物都是猫或非猫都吃鱼等。所以否。 final only 否.",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 124,
+        "cachedInput": 0,
+        "reasoning": 122
+      },
+      "finishedMs": 34147
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1824,
+      "solveMs": 1824,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need: All cats eat fish. Some animals are not cats. Therefore some animals do not eat fish. Does it necessarily follow? No — the non-cat animals might all eat fish. So answer 否.",
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 47,
+        "cachedInput": 0,
+        "reasoning": 44
+      },
+      "finishedMs": 35972
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3337,
+      "solveMs": 3337,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The premises: All cats eat fish. Some animals are not cats. Conclusion: Some animals do not eat fish.\n\nFrom \"some animals are not cats,\" we know there exists at least one animal that is not a cat. From \"all cats eat fish,\" we know nothing about non-cats eating fish or not. Non-cats could eat fish or not. So it's possible that some animals who are not cats still eat fish. Therefore the conclusion doesn't necessarily follow.\n\nThe answer is 否.",
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 106,
+        "cachedInput": 0,
+        "reasoning": 103
+      },
+      "finishedMs": 39310
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 906,
+      "solveMs": 906,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文。需要判断三段论：有些学生是运动员。有些运动员是大学生。所以有些学生是大学生。需要只输出是或否。这里显然不必然，因为两个“有些”可能指不同个体，交集不保证。例如学生A运动员，运动员B大学生，A不是大学生。因此否。必须只输出「否」。",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 75,
+        "cachedInput": 0,
+        "reasoning": 73
+      },
+      "finishedMs": 38335
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4111,
+      "solveMs": 4111,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The question: Some students are athletes. Some athletes are university students. Therefore, some students are university students. Is this necessarily valid?\n\nCounterexample: Students = {a}, Athletes = {b, c}, University students = {c}. Some students are athletes: need a ∈ athletes... Let's construct: some students are athletes means there exists x in both students and athletes. Some athletes are university students means there exists y in both athletes and university students. But x could ≠ y, and students ∩ university students could be empty.\n\nExample: Students = {a}, Athletes = {a, b}, University students = {b}. Then students ∩ university students = ∅. So conclusion doesn't hold. Not valid.\n\nAnswer: 否",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 157,
+        "cachedInput": 0,
+        "reasoning": 154
+      },
+      "finishedMs": 42449
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2631,
+      "solveMs": 2631,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Two premises: Some students are athletes. Some athletes are college students. Conclusion: Some students are college students.\n\nCounter-model: Suppose students = {A, B}, athletes = {B, C}, college students = {C, D}. Then some students are athletes (B), some athletes are college students (C), but no student is a college student (students are A,B; college students are C,D — no overlap).\n\nSo the conclusion does not necessarily follow.",
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 98,
+        "cachedInput": 0,
+        "reasoning": 95
+      },
+      "finishedMs": 41006
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 688,
+      "solveMs": 688,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need answer Chinese only 是/否. Need determine entailment. Premise: Some cats are black. Conclusion: Some cats are not black. Does it necessarily follow? No. Some means at least one. Could all cats black. Thus not necessarily. Output 否. Need only char.",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 63,
+        "cachedInput": 0,
+        "reasoning": 61
+      },
+      "finishedMs": 40000
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2219,
+      "solveMs": 2219,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\"有些猫是黑色的\" means at least one cat is black. The conclusion \"有些猫不是黑色的\" means at least one cat is not black. This does not follow necessarily. For example, if ALL cats are black, the premise \"有些猫是黑色的\" is true (at least one cat is black), but the conclusion \"有些猫不是黑色的\" would be false.",
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 85,
+        "cachedInput": 0,
+        "reasoning": 82
+      },
+      "finishedMs": 42220
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2802,
+      "solveMs": 2802,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\"有些猫是黑色的\"只表示至少有一只猫是黑色的。结论\"有些猫不是黑色的\"表示至少有一只猫不是黑色的。这个推理不必然成立，因为可能所有的猫都是黑色的。",
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 52,
+        "cachedInput": 0,
+        "reasoning": 49
+      },
+      "finishedMs": 43809
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 820,
+      "solveMs": 820,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断推理：前提：有些鸟不会飞（存在至少一只鸟不会飞）。结论：所有鸟都不会飞。显然不能必然推出。答案：否。只输出一个字/词。",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 55,
+        "cachedInput": 0,
+        "reasoning": 53
+      },
+      "finishedMs": 42085
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1154,
+      "solveMs": 1154,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Some birds can't fly → all birds can't fly. Not necessarily.",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 19,
+        "cachedInput": 0,
+        "reasoning": 16
+      },
+      "finishedMs": 43240
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 770,
+      "solveMs": 770,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "否",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 42991
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 818,
+      "solveMs": 818,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need answer Chinese only 是/否. Need judge: Some teachers are writers. Therefore all teachers are writers. Not necessarily. So 否. Must output only one char? \"否\".",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 42,
+        "cachedInput": 0,
+        "reasoning": 40
+      },
+      "finishedMs": 43268
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1044,
+      "solveMs": 1044,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "有些教师是作家，不能推出所有教师都是作家。",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 16,
+        "cachedInput": 0,
+        "reasoning": 13
+      },
+      "finishedMs": 44036
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 668,
+      "solveMs": 668,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "否",
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 5,
+        "cachedInput": 0,
+        "reasoning": 2
+      },
+      "finishedMs": 43909
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1108,
+      "solveMs": 1108,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出“是”或“否”。需要判断结论能否从前提必然推出。前提：所有猫都是动物。有些猫是黑色的。结论：所有黑色的东西都是猫。显然不能必然推出。有些猫是黑色只说明至少存在黑色猫，不排除其他黑色东西不是猫。因此结论不必然成立。输出 否。确保只一个字？用户要求只输出「是」或「否」，不多一个字。所以最终“否”。",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 101,
+        "cachedInput": 0,
+        "reasoning": 99
+      },
+      "finishedMs": 44377
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1903,
+      "solveMs": 1903,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The conclusion is \"All black things are cats.\" The premises are: All cats are animals, and some cats are black. This clearly doesn't lead to \"all black things are cats.\"",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 42,
+        "cachedInput": 0,
+        "reasoning": 39
+      },
+      "finishedMs": 45713
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4882,
+      "solveMs": 4882,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\"有些猫是黑色的\" means at least one cat is black. \"所有黑色的东西都是猫\" means all black things are cats. The premises don't guarantee this - there could be black non-cats.",
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 48,
+        "cachedInput": 0,
+        "reasoning": 45
+      },
+      "finishedMs": 48793
+    }
+  ],
+  "withdrawals": [],
+  "meta": {
+    "arenaFingerprint": "1279f9c33dff8c08",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.35.0",
+    "plannedTasks": 20,
+    "rankingPolicy": "quality-ci-v1",
+    "execution": {
+      "schedule": "pool",
+      "concurrency": 4,
+      "reasoning": "provider-default",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  }
+}

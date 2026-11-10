@@ -1,0 +1,91 @@
+{
+  "scene": "Assets/Station/Scenes/BlackHoleStationFourWingsV014.unity",
+  "playing": false,
+  "CompetitionId": "",
+  "backend": "http://127.0.0.1:8181",
+  "view": "Player eye camera",
+  "eye": "(23.90, 2.06, 143.13)",
+  "screen": "(179.00, 2.99, -15.00)",
+  "guides": [
+    {
+      "name": "South crossroad guide",
+      "GuideTitle": "南侧十字路 · 路线选择",
+      "GuideDirections": "向西：生态花园与温室南门\n向东：公共生活区与咖啡厅\n向北：沿南轴返回核心公共回廊\n向南：外围环路与外侧观景路",
+      "p": "(-3.00, 0.00, -192.50)"
+    },
+    {
+      "name": "North ring junction route console",
+      "GuideTitle": "北侧环路 · 交汇导览",
+      "GuideDirections": "向东沿环路：北侧港区与货运检修\n向西沿环路：西侧科研与公开赛题档案\n向南走径向路：经停靠舱旁通道返回核心\n沿环路继续可前往南侧生态与东侧生活区",
+      "p": "(8.00, 0.00, 337.20)"
+    },
+    {
+      "name": "Port side-bay visitor guide",
+      "GuideTitle": "北侧港区访客导览",
+      "GuideDirections": "向南：中央核心、模型住处与环形赛场\n向北：候舱厅与停泊舱\n东翼：咖啡与公共生活；南翼：生态花园\n西翼：科研与档案\n四角主街通往外环，公共甲板连续可达。",
+      "p": "(24.00, 0.00, 132.00)"
+    },
+    {
+      "name": "Cafe south walk guide",
+      "GuideTitle": "公共生活区 · 南侧横道",
+      "GuideDirections": "向东：观景咖啡厅与生活街\n向西：中段观景停留点、生态花园温室\n此路可直接跨区；外围环路提供另一条绕行路线",
+      "p": "(160.00, 0.00, -192.50)"
+    },
+    {
+      "name": "Garden south walk guide",
+      "GuideTitle": "生态花园 · 南侧横道",
+      "GuideDirections": "向西：温室南门与生态花园\n向东：中段观景停留点、公共生活区咖啡厅\n此路可直接跨区；外围环路提供另一条绕行路线",
+      "p": "(-160.00, 0.00, -192.50)"
+    },
+    {
+      "name": "East arcade live match information console",
+      "GuideTitle": "北侧港区赛事观察点",
+      "GuideDirections": "向南：中央核心、模型住处与环形赛场\n向北：候舱厅与停泊舱\n东翼：咖啡与公共生活；南翼：生态花园\n西翼：科研与档案\n四角主街通往外环，公共甲板连续可达。",
+      "p": "(-24.00, 0.00, 132.00)"
+    },
+    {
+      "name": "Southeast civic match board",
+      "GuideTitle": "东南公共生活 · 赛事屏",
+      "GuideDirections": "向东：观景咖啡厅与外环\n向西：核心公共回廊\n向南：生态花园与下层观景台\n此处显示现有赛事连接状态",
+      "p": "(138.00, 0.00, -19.50)"
+    }
+  ],
+  "residents": [
+    {
+      "ResidentId": "resident/glm",
+      "InitialWait": 23.0,
+      "WalkSpeed": 1.3,
+      "points": 3
+    },
+    {
+      "ResidentId": "resident/deepseek",
+      "InitialWait": 8.0,
+      "WalkSpeed": 1.3,
+      "points": 21
+    },
+    {
+      "ResidentId": "resident/claude",
+      "InitialWait": 20.0,
+      "WalkSpeed": 1.3,
+      "points": 22
+    },
+    {
+      "ResidentId": "resident/chatgpt",
+      "InitialWait": 0.0,
+      "WalkSpeed": 2.6,
+      "points": 18
+    },
+    {
+      "ResidentId": "resident/kimi",
+      "InitialWait": 32.0,
+      "WalkSpeed": 1.3,
+      "points": 3
+    },
+    {
+      "ResidentId": "resident/gemini",
+      "InitialWait": 14.0,
+      "WalkSpeed": 1.3,
+      "points": 27
+    }
+  ]
+}

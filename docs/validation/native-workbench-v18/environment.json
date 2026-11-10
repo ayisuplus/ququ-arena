@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-21T06:23:21.030Z",
+  "docker": {
+    "ready": false,
+    "message": "工程环境未就绪：请启动 Docker Desktop 并准备 node:24-bookworm-slim",
+    "detail": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified."
+  },
+  "native": {
+    "ready": false,
+    "version": "0.85.1",
+    "hash": "975257b81d71a9e5282a42d4e204767fdcd7dd6952d150ac6a50c7e907b6d6ed",
+    "message": "原生扩展环境未就绪；请在本机运行 node scripts/build-harness-runtime.mjs"
+  }
+}

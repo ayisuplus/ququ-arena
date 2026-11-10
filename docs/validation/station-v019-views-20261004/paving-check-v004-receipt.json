@@ -1,0 +1,76 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\check-lot-paving.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "id": "cafe-court-wing",
+          "hits": [
+            {
+              "name": "Southeast civic life public floor",
+              "parent": "Southeast civic life district graybox",
+              "areaSquareMetres": 578
+            },
+            {
+              "name": "Civic paving panel",
+              "parent": "Civic deck cladding",
+              "areaSquareMetres": 572.7103719580045
+            },
+            {
+              "name": "R2 public planning deck",
+              "parent": "<scene root>",
+              "areaSquareMetres": 578.0002246928448
+            }
+          ]
+        },
+        {
+          "id": "study-court-wing",
+          "hits": [
+            {
+              "name": "R2 public planning deck",
+              "parent": "<scene root>",
+              "areaSquareMetres": 308.00015455448136
+            }
+          ]
+        },
+        {
+          "id": "homes-shared-wing",
+          "hits": [
+            {
+              "name": "R3 homes and ecology planning deck",
+              "parent": "<scene root>",
+              "areaSquareMetres": 413.9999793266234
+            }
+          ]
+        },
+        {
+          "id": "guest-court-wing",
+          "hits": [
+            {
+              "name": "R3 homes and ecology planning deck",
+              "parent": "<scene root>",
+              "areaSquareMetres": 149.99996715303314
+            }
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

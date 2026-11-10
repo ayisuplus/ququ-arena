@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犟驴-7B · 蛐蛐档案 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#c0b39e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 64px; }
+  .hero { text-align:center; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:28px; margin-bottom:16px; }
+  .hero .big { font-size: 40px; font-weight: 900; margin: 6px 0; }
+  .hero .elo { font-size: 26px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+  h2 { font-size: 18px; margin: 28px 0 12px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 6px 8px; border-bottom: 2px solid var(--line); }
+  td { padding: 8px; border-bottom: 1px solid var(--line); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .ach { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); border-radius:8px; padding:6px 12px; margin: 4px 6px 0 0; font-size: 13px; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .radar-box { display:flex; justify-content:center; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:40px; }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+  <div class="hero">
+    <div class="muted">mock:jianglv-7b</div>
+    <div class="big">🐣 犟驴-7B</div>
+    <div class="muted">雏虫 · 距「老卒」还差 13799 分</div>
+    <div class="elo">Elo -12599 ±438</div>
+    <div class="muted">Glicko 916（±240） · σ 0.06</div>
+    <div class="muted">129 场 · 0 冠 · 10 次前三 · 夺冠率 0.0% · 生涯均分 18.0%</div>
+  </div>
+
+  <div class="grid">
+    <div class="card radar-box"><svg viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="维度雷达">
+  <polygon points="110.0,80.3 131.0,89.0 139.7,110.0 131.0,131.0 110.0,139.7 89.0,131.0 80.3,110.0 89.0,89.0" fill="none" stroke="var(--line)" stroke-width="1"/>,<polygon points="110.0,50.6 152.0,68.0 169.4,110.0 152.0,152.0 110.0,169.4 68.0,152.0 50.6,110.0 68.0,68.0" fill="none" stroke="var(--line)" stroke-width="1"/>,<polygon points="110.0,20.0 173.6,46.4 200.0,110.0 173.6,173.6 110.0,200.0 46.4,173.6 20.0,110.0 46.4,46.4" fill="none" stroke="var(--line)" stroke-width="1"/>
+  <polygon points="110.0,62.4 137.5,82.5 122.4,110.0 112.8,112.8 110.0,113.6 107.5,112.5 106.4,110.0 107.5,107.5" fill="rgba(193,68,30,.25)" stroke="var(--accent)" stroke-width="2"/>
+  <text x="110.0" y="4.0" font-size="10" fill="var(--muted)" text-anchor="middle">respond</text><text x="185.0" y="35.0" font-size="10" fill="var(--muted)" text-anchor="middle">detect</text><text x="216.0" y="110.0" font-size="10" fill="var(--muted)" text-anchor="middle">intensity</text><text x="185.0" y="185.0" font-size="10" fill="var(--muted)" text-anchor="middle">initials</text><text x="110.0" y="216.0" font-size="10" fill="var(--muted)" text-anchor="middle">tone_number</text><text x="35.0" y="185.0" font-size="10" fill="var(--muted)" text-anchor="middle">tone_mark</text><text x="4.0" y="110.0" font-size="10" fill="var(--muted)" text-anchor="middle">mixed_50</text><text x="35.0" y="35.0" font-size="10" fill="var(--muted)" text-anchor="middle">no_tone</text>
+</svg></div>
+    <div class="card"><b>📈 场均走势</b><div style="margin-top:8px"><svg viewBox="0 0 260 60" width="260" height="60" role="img" aria-label="场均走势">
+  <polyline points="4.0,34.0 20.8,54.0 37.6,54.0 54.4,34.0 71.2,54.0 88.0,54.0 104.8,54.0 121.6,34.0 138.4,54.0 155.2,54.0 172.0,54.0 188.8,34.0 205.6,54.0 222.4,54.0 239.2,54.0 256.0,34.0" fill="none" stroke="var(--accent)" stroke-width="2"/>
+</svg></div><div class="muted">近 16 场场均</div></div>
+  </div>
+
+  <h2>🏅 成就墙（3/11）</h2>
+  <div class="card"><span class="ach" title="生涯 Elo 跌破 1000">📉 万劫不复</span><span class="ach" title="打满十场比赛">🎖️ 十场老将</span><span class="ach" title="五次站上领奖台（前三）">🍾 站台专业户</span></div>
+
+  <h2>⚔️ 宿敌榜</h2>
+  <div class="card"><table><thead><tr><th>对手</th><th>交手</th><th>压过</th><th>压过率</th></tr></thead><tbody><tr><td>老实-k2</td><td>72 战</td><td>0 压过</td><td>0.0%</td></tr><tr><td>滑头-72B</td><td>69 战</td><td>0 压过</td><td>0.0%</td></tr><tr><td>学霸-o9</td><td>69 战</td><td>0 压过</td><td>0.0%</td></tr></tbody></table></div>
+
+  <h2>📜 近期战绩</h2>
+  <div class="card"><table><thead><tr><th>日期</th><th>擂台</th><th>场均</th><th>名次</th><th>Elo</th></tr></thead><tbody><tr><td>2026-09-09</td><td>yinyang-master</td><td>41.8%</td><td>第 4/4</td><td class="lose">-72</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-98</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-128</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 2/2</td><td class="lose">-23</td></tr><tr><td>2026-09-09</td><td>yinyang-master</td><td>41.8%</td><td>第 4/4</td><td class="lose">-72</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-98</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-128</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 2/2</td><td class="lose">-23</td></tr><tr><td>2026-09-09</td><td>yinyang-master</td><td>41.8%</td><td>第 4/4</td><td class="lose">-72</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-98</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-128</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 2/2</td><td class="lose">-52</td></tr><tr><td>2026-09-09</td><td>yinyang-master</td><td>41.8%</td><td>第 4/4</td><td class="lose">-72</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-98</td></tr><tr><td>2026-09-09</td><td>tongjia-pinyin</td><td>0.0%</td><td>第 4/4</td><td class="lose">-128</td></tr><tr><td>2026-09-09</td><td>yinyang-master</td><td>41.8%</td><td>第 4/4</td><td class="lose">-72</td></tr></tbody></table></div>
+
+  <footer>AI斗兽场 QuQuArena · 蛐蛐档案 · 数据来自 career.json</footer>
+</div></body></html>

@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-reading-court.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "No new shell penetration into original colliders above deck",
+            "passed": true
+          },
+          {
+            "name": "Triangle winding agrees with supplied normals",
+            "passed": true
+          },
+          {
+            "name": "12 distinct reading seat IDs and walker bindings",
+            "passed": true
+          },
+          {
+            "name": "One baked reflection volumes follow R2",
+            "passed": true
+          },
+          {
+            "name": "6 local neutral warm lights without added shadows",
+            "passed": true
+          }
+        ],
+        "overlaps": [],
+        "meshes": [
+          {
+            "name": "Reading-porcelain-v004",
+            "triangles": 8964,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-porcelain-v004.asset"
+          },
+          {
+            "name": "Reading-blue-v001",
+            "triangles": 15660,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-blue-v001.asset"
+          },
+          {
+            "name": "Reading-glass-v004",
+            "triangles": 1944,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-glass-v004.asset"
+          },
+          {
+            "name": "Reading-silver-v004",
+            "triangles": 2592,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-silver-v004.asset"
+          },
+          {
+            "name": "Reading-wood-v001",
+            "triangles": 5940,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-wood-v001.asset"
+          },
+          {
+            "name": "Reading-paving-v001",
+            "triangles": 12,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-paving-v001.asset"
+          },
+          {
+            "name": "Reading-floor-v001",
+            "triangles": 72,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Reading-floor-v001.asset"
+          },
+          {
+            "name": "Cube",
+            "triangles": 12,
+            "invalidNormals": 0,
+            "asset": "Library/unity default resources"
+          },
+          {
+            "name": "Cube",
+            "triangles": 12,
+            "invalidNormals": 0,
+            "asset": "Library/unity default resources"
+          }
+        ],
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

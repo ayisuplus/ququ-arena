@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var t=UnityEngine.GameObject.Find(\"V015 public research and reading courts\").transform.Find(\"Research folded linking canopy\");var f=t.GetComponent<UnityEngine.MeshFilter>();var c=t.GetComponent<UnityEngine.MeshCollider>();return new{renderMesh=UnityEditor.AssetDatabase.GetAssetPath(f.sharedMesh),collisionMesh=UnityEditor.AssetDatabase.GetAssetPath(c.sharedMesh),filterId=UnityEditor.GlobalObjectId.GetGlobalObjectIdSlow(f).ToString(),colliderId=UnityEditor.GlobalObjectId.GetGlobalObjectIdSlow(c).ToString(),sameMesh=f.sharedMesh==c.sharedMesh};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "renderMesh": "Assets/Station/Models/R2SoffitV019v001/Research-canopy-open-v001 uv v001.asset",
+        "collisionMesh": "Assets/Station/Models/ArrivalV019v001/Research-canopy-open-v001.asset",
+        "filterId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-477589983-0",
+        "colliderId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-477589981-0",
+        "sameMesh": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

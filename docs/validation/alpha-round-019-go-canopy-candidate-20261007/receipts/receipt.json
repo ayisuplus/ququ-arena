@@ -1,0 +1,165 @@
+{
+  "atUtc": "2026-10-07T10:59:13.408Z",
+  "sessionId": "48b45572-e154-439a-b620-a2ebeb947018",
+  "before": {
+    "ompSessionId": "01a114a3-56cd-7000-8448-6ae712b16a33",
+    "provider": "opencode-go",
+    "model": "mimo-v2.6-pro",
+    "messageCount": 14,
+    "isSettled": true,
+    "isStreaming": false,
+    "hasPendingAsyncWork": false,
+    "queuedMessageCount": 0
+  },
+  "after": {
+    "ompSessionId": "01a114a3-56cd-7000-8448-6ae712b16a33",
+    "provider": "opencode-go",
+    "model": "mimo-v2.6-pro",
+    "messageCount": 35,
+    "isSettled": true,
+    "isStreaming": false,
+    "hasPendingAsyncWork": false,
+    "queuedMessageCount": 0
+  },
+  "accepted": {
+    "atUtc": "2026-10-07T10:45:36.201Z",
+    "success": true
+  },
+  "requests": 1,
+  "retry": false,
+  "responseModels": [
+    "opencode-go/mimo-v2.6-pro"
+  ],
+  "native": {
+    "status": "completed",
+    "agentInvoked": true,
+    "sessionSettled": true,
+    "hasError": false
+  },
+  "tools": {
+    "count": 11,
+    "names": [
+      "read",
+      "read",
+      "read",
+      "bash",
+      "bash",
+      "read",
+      "bash",
+      "bash",
+      "bash",
+      "read",
+      "read"
+    ],
+    "errors": 1,
+    "restored": {
+      "enabled": [
+        "read",
+        "bash",
+        "edit",
+        "ask",
+        "eval",
+        "glob",
+        "grep",
+        "task",
+        "wait",
+        "todo",
+        "web_search",
+        "write",
+        "alpha_artifact",
+        "alpha_comfy",
+        "alpha_generate_image",
+        "alpha_generate_voice",
+        "alpha_generate_video",
+        "ast_edit",
+        "debug",
+        "lsp",
+        "alpha_office"
+      ],
+      "active": [
+        "read",
+        "bash",
+        "edit",
+        "ask",
+        "eval",
+        "glob",
+        "grep",
+        "task",
+        "wait",
+        "todo",
+        "web_search",
+        "write",
+        "alpha_artifact",
+        "alpha_comfy",
+        "alpha_generate_image",
+        "alpha_generate_voice",
+        "alpha_generate_video"
+      ],
+      "mounted": [
+        "ast_edit",
+        "debug",
+        "lsp",
+        "alpha_office"
+      ]
+    },
+    "restoreExact": true
+  },
+  "imageReads": [
+    {
+      "path": "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-018-arrival-occlusion-20261007\\measurement-v2\\arrival-edit-mode.png",
+      "bytes": 851739,
+      "sha256": "258b09332bdac507aef3a5343a24d3a3ef8dd0c78e4345576809093dcf28c691",
+      "reads": [
+        {
+          "start": {
+            "atUtc": "2026-10-07T10:45:48.101Z",
+            "type": "tool_execution_start",
+            "toolName": "read",
+            "toolCallId": "call_5bae9cdc2bee4dad9fb8d30c",
+            "path": "E:/projects/黑洞空间站/docs/validation/alpha-round-018-arrival-occlusion-20261007/measurement-v2/arrival-edit-mode.png",
+            "hasError": false,
+            "imageBlocks": []
+          },
+          "end": {
+            "atUtc": "2026-10-07T10:45:48.275Z",
+            "type": "tool_execution_end",
+            "toolName": "read",
+            "toolCallId": "call_5bae9cdc2bee4dad9fb8d30c",
+            "isError": false,
+            "hasError": false,
+            "imageBlocks": [
+              {
+                "mimeType": "image/webp",
+                "encodedCharacters": 93956,
+                "dataSha256": "986ce621cdc1332047503e19e5e542915879c2ec25efdef91882e58d3e9395b2"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "game": {
+    "before": {
+      "head": "bdbd574d6a4809fe90490ea1fb2950f9039ea8b7",
+      "status": "",
+      "index": "008894bfc65864e47f1b7c50d54b804610b0aeaaff54f8db94918e2b8065d52c"
+    },
+    "after": {
+      "head": "bdbd574d6a4809fe90490ea1fb2950f9039ea8b7",
+      "status": "",
+      "index": "008894bfc65864e47f1b7c50d54b804610b0aeaaff54f8db94918e2b8065d52c"
+    }
+  },
+  "configUnchanged": true,
+  "latestSnapshot": {
+    "id": "bcfa9993-f3e7-4484-adc5-b92b59280d8a",
+    "sessionId": "48b45572-e154-439a-b620-a2ebeb947018",
+    "startedAt": "2026-10-07T10:42:58.599Z",
+    "finishedAt": "2026-10-07T10:59:13.003Z",
+    "outcome": "完成",
+    "settled": true,
+    "changed": []
+  },
+  "scope": "One genuine Go candidate proposal based on R18 edit-mode geometry, with read and bash allowed for read-only local inspection. No asset editing or Player acceptance authorized."
+}

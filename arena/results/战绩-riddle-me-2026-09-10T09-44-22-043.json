@@ -1,0 +1,1015 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "riddle-me",
+    "title": "谜语擂台",
+    "description": "经典谜语 16 题（自建，canonical 谜底）：riddle-object 事物谜 4（花生/雨/画/西瓜）+ riddle-char 字谜 12（告/拿/府/胖/晶/交/雷/家/回/明/闹/奈）。测中文拆字与会意能力。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:riddle-me:2026-09-10",
+    "taskPrefix": "只输出谜底本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "riddle-object": "事物谜",
+      "riddle-char": "字谜"
+    }
+  },
+  "startedAt": "2026-09-10T09:44:22.043Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RD-OBJ-01",
+      "condition": "riddle-object",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：麻屋子，红帐子，里面住着个白胖子。（打一物）",
+      "answer": "花生",
+      "target": "花生",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-01",
+      "condition": "riddle-object",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：麻屋子，红帐子，里面住着个白胖子。（打一物）",
+      "answer": "花生",
+      "target": "花生",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-01",
+      "condition": "riddle-object",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：麻屋子，红帐子，里面住着个白胖子。（打一物）",
+      "answer": "花",
+      "target": "花生",
+      "latencyMs": 118,
+      "score": 0,
+      "note": "期望「花生」，实答「花」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-01",
+      "condition": "riddle-object",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：麻屋子，红帐子，里面住着个白胖子。（打一物）",
+      "answer": "花生",
+      "target": "花生",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-02",
+      "condition": "riddle-object",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：千条线，万条线，落到水里看不见。（打一自然现象）",
+      "answer": "雨",
+      "target": "雨",
+      "latencyMs": 215,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-02",
+      "condition": "riddle-object",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：千条线，万条线，落到水里看不见。（打一自然现象）",
+      "answer": "雨",
+      "target": "雨",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-02",
+      "condition": "riddle-object",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：千条线，万条线，落到水里看不见。（打一自然现象）",
+      "answer": "雨",
+      "target": "雨",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-02",
+      "condition": "riddle-object",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：千条线，万条线，落到水里看不见。（打一自然现象）",
+      "answer": "雨",
+      "target": "雨",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-03",
+      "condition": "riddle-object",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：远看山有色，近听水无声。（打一物）",
+      "answer": "画",
+      "target": "画",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-03",
+      "condition": "riddle-object",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：远看山有色，近听水无声。（打一物）",
+      "answer": "画",
+      "target": "画",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-03",
+      "condition": "riddle-object",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：远看山有色，近听水无声。（打一物）",
+      "answer": "画",
+      "target": "画",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-03",
+      "condition": "riddle-object",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：远看山有色，近听水无声。（打一物）",
+      "answer": "画",
+      "target": "画",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-04",
+      "condition": "riddle-object",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：身穿绿衣裳，肚里水汪汪，生的籽儿多，个个黑脸膛。（打一水果）",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-04",
+      "condition": "riddle-object",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：身穿绿衣裳，肚里水汪汪，生的籽儿多，个个黑脸膛。（打一水果）",
+      "answer": "西",
+      "target": "西瓜",
+      "latencyMs": 339,
+      "score": 0,
+      "note": "期望「西瓜」，实答「西」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-04",
+      "condition": "riddle-object",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：身穿绿衣裳，肚里水汪汪，生的籽儿多，个个黑脸膛。（打一水果）",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-OBJ-04",
+      "condition": "riddle-object",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：身穿绿衣裳，肚里水汪汪，生的籽儿多，个个黑脸膛。（打一水果）",
+      "answer": "西",
+      "target": "西瓜",
+      "latencyMs": 268,
+      "score": 0,
+      "note": "期望「西瓜」，实答「西」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-01",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬掉牛尾巴。（打一字）",
+      "answer": "告",
+      "target": "告",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-01",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬掉牛尾巴。（打一字）",
+      "answer": "告",
+      "target": "告",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-01",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬掉牛尾巴。（打一字）",
+      "answer": "告",
+      "target": "告",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-01",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬掉牛尾巴。（打一字）",
+      "answer": "告",
+      "target": "告",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-02",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一人一张口，口下长只手。（打一字）",
+      "answer": "拿",
+      "target": "拿",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-02",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一人一张口，口下长只手。（打一字）",
+      "answer": "拿",
+      "target": "拿",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-02",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一人一张口，口下长只手。（打一字）",
+      "answer": "拿",
+      "target": "拿",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-02",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一人一张口，口下长只手。（打一字）",
+      "answer": "拿",
+      "target": "拿",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-03",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一点一横长，一撇到南洋，南洋有个人，只有一寸长。（打一字）",
+      "answer": "府",
+      "target": "府",
+      "latencyMs": 215,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-03",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一点一横长，一撇到南洋，南洋有个人，只有一寸长。（打一字）",
+      "answer": "府",
+      "target": "府",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-03",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一点一横长，一撇到南洋，南洋有个人，只有一寸长。（打一字）",
+      "answer": "府",
+      "target": "府",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-03",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一点一横长，一撇到南洋，南洋有个人，只有一寸长。（打一字）",
+      "answer": "府",
+      "target": "府",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-04",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：半个月亮。（打一字）",
+      "answer": "胖",
+      "target": "胖",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-04",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：半个月亮。（打一字）",
+      "answer": "胖",
+      "target": "胖",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-04",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：半个月亮。（打一字）",
+      "answer": "胖",
+      "target": "胖",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-04",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：半个月亮。（打一字）",
+      "answer": "胖",
+      "target": "胖",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-05",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：七十二小时。（打一字）",
+      "answer": "晶",
+      "target": "晶",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-05",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：七十二小时。（打一字）",
+      "answer": "晶",
+      "target": "晶",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-05",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：七十二小时。（打一字）",
+      "answer": "晶",
+      "target": "晶",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-05",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：七十二小时。（打一字）",
+      "answer": "晶",
+      "target": "晶",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-06",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬定。（打一字）",
+      "answer": "交",
+      "target": "交",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-06",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬定。（打一字）",
+      "answer": "交",
+      "target": "交",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-06",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬定。（打一字）",
+      "answer": "交",
+      "target": "交",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-06",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一口咬定。（打一字）",
+      "answer": "交",
+      "target": "交",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-07",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：需要一半，留下一半。（打一字）",
+      "answer": "雷",
+      "target": "雷",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-07",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：需要一半，留下一半。（打一字）",
+      "answer": "雷",
+      "target": "雷",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-07",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：需要一半，留下一半。（打一字）",
+      "answer": "雷",
+      "target": "雷",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-07",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：需要一半，留下一半。（打一字）",
+      "answer": "雷",
+      "target": "雷",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-08",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：拱猪入门。（打一字）",
+      "answer": "家",
+      "target": "家",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-08",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：拱猪入门。（打一字）",
+      "answer": "家",
+      "target": "家",
+      "latencyMs": 92,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-08",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：拱猪入门。（打一字）",
+      "answer": "家",
+      "target": "家",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-08",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：拱猪入门。（打一字）",
+      "answer": "家",
+      "target": "家",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-09",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：格外大方。（打一字）",
+      "answer": "回",
+      "target": "回",
+      "latencyMs": 334,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-09",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：格外大方。（打一字）",
+      "answer": "回",
+      "target": "回",
+      "latencyMs": 154,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RD-CHR-09",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：格外大方。（打一字）",
+      "answer": "回",
+      "target": "回",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-09",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：格外大方。（打一字）",
+      "answer": "回",
+      "target": "回",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-10",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一月一日非今天。（打一字）",
+      "answer": "明",
+      "target": "明",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-10",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一月一日非今天。（打一字）",
+      "answer": "明",
+      "target": "明",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-10",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一月一日非今天。（打一字）",
+      "answer": "明",
+      "target": "明",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-10",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一月一日非今天。（打一字）",
+      "answer": "明",
+      "target": "明",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 16,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-11",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：综合门市。（打一字）",
+      "answer": "闹",
+      "target": "闹",
+      "latencyMs": 365,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-11",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：综合门市。（打一字）",
+      "answer": "闹",
+      "target": "闹",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-11",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：综合门市。（打一字）",
+      "answer": "闹",
+      "target": "闹",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-11",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：综合门市。（打一字）",
+      "answer": "闹",
+      "target": "闹",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-12",
+      "condition": "riddle-char",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一大二小。（打一字）",
+      "answer": "奈",
+      "target": "奈",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-12",
+      "condition": "riddle-char",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一大二小。（打一字）",
+      "answer": "奈",
+      "target": "奈",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-12",
+      "condition": "riddle-char",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一大二小。（打一字）",
+      "answer": "奈",
+      "target": "奈",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RD-CHR-12",
+      "condition": "riddle-char",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身，不多一个字。\n谜面：一大二小。（打一字）",
+      "answer": "奈",
+      "target": "奈",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "03446eb4d08773d1",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.19.0"
+  }
+}

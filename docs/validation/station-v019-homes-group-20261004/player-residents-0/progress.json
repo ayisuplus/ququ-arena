@@ -1,0 +1,220 @@
+{
+    "phase": 0.0,
+    "gameSeconds": 1320.7291259765625,
+    "realSeconds": 440.2392883300781,
+    "timeScale": 3.0,
+    "passed": false,
+    "residents": [
+        {
+            "id": "chatgpt",
+            "ground": "v015-r3",
+            "visits": 4,
+            "returns": 4,
+            "target": 3,
+            "outbound": true,
+            "position": {
+                "x": 55.013954162597659,
+                "y": 0.07999998331069946,
+                "z": -201.70347595214845
+            }
+        },
+        {
+            "id": "claude",
+            "ground": "v015-r3",
+            "visits": 1,
+            "returns": 0,
+            "target": 0,
+            "outbound": false,
+            "position": {
+                "x": 20.28187370300293,
+                "y": 0.07999986410140991,
+                "z": -220.4663848876953
+            }
+        },
+        {
+            "id": "deepseek",
+            "ground": "v015-r3",
+            "visits": 1,
+            "returns": 1,
+            "target": 5,
+            "outbound": true,
+            "position": {
+                "x": 187.55982971191407,
+                "y": 0.07999992370605469,
+                "z": 11.071334838867188
+            }
+        },
+        {
+            "id": "gemini",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 6,
+            "outbound": true,
+            "position": {
+                "x": -170.5575714111328,
+                "y": 0.07999992370605469,
+                "z": -172.1798095703125
+            }
+        },
+        {
+            "id": "glm",
+            "ground": "v015-r3",
+            "visits": 26,
+            "returns": 26,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -101.50822448730469,
+                "y": 0.07999998331069946,
+                "z": -203.71583557128907
+            }
+        },
+        {
+            "id": "kimi",
+            "ground": "v015-r3",
+            "visits": 24,
+            "returns": 24,
+            "target": 2,
+            "outbound": true,
+            "position": {
+                "x": -92.59687042236328,
+                "y": 0.07999980449676514,
+                "z": -203.34637451171876
+            }
+        }
+    ],
+    "checks": [
+        {
+            "name": "six visible independent residents",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "six original room identities enabled",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/back progress restored",
+            "passed": true,
+            "error": 0.0
+        }
+    ],
+    "issues": []
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b02-crystal\\refined-v003\\B02_CrystalArchive_v003.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 3514,
+      "materials": 5,
+      "textures": 0,
+      "hasUVs": false,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        24.000431060791016,
+        18.114322662353516,
+        11.231579780578613
+      ]
+    },
+    "failures": [],
+    "checksRun": 7,
+    "inspectorWarnings": [
+      "3 of 5 primitives have no TEXCOORD_0: the mesh cannot be textured or retextured until it is UV unwrapped",
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

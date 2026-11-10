@@ -1,0 +1,50 @@
+{
+  "name": "practical-multi",
+  "title": "实用场景 · 多轮任务",
+  "mode": "multi_turn",
+  "description": "使用明确标注的合成材料，覆盖核对、排期、预算、数据、需求变更与复盘。开放题允许不同合理答案；多轮任务含三轮固定材料与修订要求，个别任务需要识别不可满足的约束。",
+  "author": "AI斗兽场 · 人工可编辑",
+  "version": "1.0.0",
+  "judge": {
+    "kind": "rubric",
+    "dimensions": [
+      {
+        "id": "goal",
+        "name": "目标完成",
+        "weight": 40,
+        "criteria": "满足最终交付要求，结果可执行；遗漏主要交付扣分。"
+      },
+      {
+        "id": "constraints",
+        "name": "约束保持",
+        "weight": 25,
+        "criteria": "保留未被后续替换的约束，正确识别变更与冲突；忽略关键约束扣分。"
+      },
+      {
+        "id": "revision",
+        "name": "修订质量",
+        "weight": 20,
+        "criteria": "根据新增材料实质修订，说明变化及影响；仅复述旧答案扣分。"
+      },
+      {
+        "id": "evidence",
+        "name": "依据与核对",
+        "weight": 15,
+        "criteria": "用给定材料核对关键结论和计算，标明假设与未知；编造依据扣分。"
+      }
+    ]
+  },
+  "conditions": {
+    "reconciliation": "材料核对",
+    "scheduling": "项目排期",
+    "budget": "预算调整",
+    "data": "数据解读",
+    "requirements": "需求变更",
+    "retrospective": "案例复盘"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "逐题核对数字、资源与依赖、变更覆盖及评分条件；合成材料，语义评审仍可能存在裁判差异。"
+  },
+  "canary": "ququ-arena:4d7f1856-f4b2-4a9c-9361-d7e920"
+}

@@ -1,0 +1,596 @@
+{
+  "auditedAt": "2026-09-12",
+  "libraries": 73,
+  "tasks": 2034,
+  "defaultJudges": {
+    "exact": 70,
+    "llm": 3
+  },
+  "librariesNeedingModelJudge": 3,
+  "entries": [
+    {
+      "name": "anagram-check",
+      "title": "变位词擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "36ae3fb79c0b0fa0"
+    },
+    {
+      "name": "analogy-pair",
+      "title": "类比推理擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "d40349b34b7d4d77"
+    },
+    {
+      "name": "arith-word",
+      "title": "应用题擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "2013c308ec0302d8"
+    },
+    {
+      "name": "base-convert",
+      "title": "进制转换擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0da8d01936c97971"
+    },
+    {
+      "name": "case-clash",
+      "title": "案卷冲突检测擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "47a7d00f5ed3bfad"
+    },
+    {
+      "name": "case-extract",
+      "title": "案卷要素 · 时间线与缺失擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "4da11e94dffa7b36"
+    },
+    {
+      "name": "childhood-song",
+      "title": "儿歌词擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "88c45d6b6071ff68"
+    },
+    {
+      "name": "cipher-decode",
+      "title": "密码破译擂台",
+      "tasks": 30,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "71ec6a28ac544864"
+    },
+    {
+      "name": "conditional-logic",
+      "title": "假言推理擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0fbc7f2cecd86330"
+    },
+    {
+      "name": "core-arena",
+      "title": "综合竞技 · 推理与数据",
+      "tasks": 48,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "84d4638598dff4f6"
+    },
+    {
+      "name": "couplet-chain",
+      "title": "名句接龙擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "f8e74ecfdc905f0e"
+    },
+    {
+      "name": "data-analysis",
+      "title": "资料分析擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0f7c54837cd33b6c"
+    },
+    {
+      "name": "date-reason",
+      "title": "日期推算擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "76a66609da672a57"
+    },
+    {
+      "name": "definition-judge",
+      "title": "定义判断擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "3c6ac97287c17b9e"
+    },
+    {
+      "name": "digit-slang",
+      "title": "数字黑话擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "8a201fdac91e26c0"
+    },
+    {
+      "name": "dyck-bracket",
+      "title": "括号补全擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "6b460b600bd8cdb0"
+    },
+    {
+      "name": "element-symbol",
+      "title": "元素符号擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "efbd43b66cb1d5e3"
+    },
+    {
+      "name": "emoji-grid",
+      "title": "表情棋盘 · 空间推理擂台",
+      "tasks": 40,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "598d6f4abc56131a"
+    },
+    {
+      "name": "emoji-quiz",
+      "title": "表情猜谜擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "c213e79e6a1f0732"
+    },
+    {
+      "name": "event-order",
+      "title": "事件排序擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0b61be796b86c85d"
+    },
+    {
+      "name": "excel-survivor",
+      "title": "烂 Excel 求生",
+      "tasks": 6,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "14bb87fc9193324e"
+    },
+    {
+      "name": "experience-replay",
+      "title": "经验回放 · 模式归纳擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "e82eb096a9174bd6"
+    },
+    {
+      "name": "honesty-trap",
+      "title": "诚实度陷阱擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "02cb5c0b065d09bf"
+    },
+    {
+      "name": "idiom-blank",
+      "title": "成语填字擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "66e47422df952875"
+    },
+    {
+      "name": "idiom-fix",
+      "title": "成语纠错擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0e56d389aa2d2acd"
+    },
+    {
+      "name": "judge-shield",
+      "title": "裁判抗污染 · 注入擂台",
+      "tasks": 28,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "9d3eb7029bc23f7a"
+    },
+    {
+      "name": "kb-fringe",
+      "title": "知识边缘 · 标注淘汰区擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "66c5c89d7ad5fe84"
+    },
+    {
+      "name": "legal-boundary",
+      "title": "法槌边界 · 妄断诱导擂台",
+      "tasks": 52,
+      "defaultJudge": "llm",
+      "requiresJudge": true,
+      "fingerprint": "6a4a56374211e6e6"
+    },
+    {
+      "name": "legal-math",
+      "title": "法条算术 · 期间与数额擂台",
+      "tasks": 21,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "abab4157e1b3b237"
+    },
+    {
+      "name": "logical-deduction",
+      "title": "逻辑排位擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "bfa52af2af5380fd"
+    },
+    {
+      "name": "math24-judge",
+      "title": "24 点裁决擂台",
+      "tasks": 30,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "41ed4efdae2de26e"
+    },
+    {
+      "name": "measure-word",
+      "title": "量词填空擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "d8ec6de6be6ca46c"
+    },
+    {
+      "name": "metacog-gate",
+      "title": "元认知闸门 · 知之为知之擂台",
+      "tasks": 150,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "dec288d5ce9b2015"
+    },
+    {
+      "name": "mini-sudoku",
+      "title": "迷你数独擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "d4d9e45ff367bad7"
+    },
+    {
+      "name": "navigate",
+      "title": "指令导航擂台",
+      "tasks": 26,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "65038926302257fd"
+    },
+    {
+      "name": "number-sequence",
+      "title": "数列推理擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "6c1c5cddf11a1705"
+    },
+    {
+      "name": "odd-one-out",
+      "title": "找不同擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "66bc850084e7fc60"
+    },
+    {
+      "name": "palindrome-cn",
+      "title": "回文擂台",
+      "tasks": 36,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "1b096984822cee6c"
+    },
+    {
+      "name": "pattern-grid",
+      "title": "图形规律擂台",
+      "tasks": 12,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "ffafe68e86a95400"
+    },
+    {
+      "name": "poem-match",
+      "title": "诗意配对擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "86380e0cbe205acb"
+    },
+    {
+      "name": "polite-troll",
+      "title": "喷子道场 · 礼貌保持擂台",
+      "tasks": 40,
+      "defaultJudge": "llm",
+      "requiresJudge": true,
+      "fingerprint": "2df61095dbf31015"
+    },
+    {
+      "name": "province-plate",
+      "title": "车牌省简称擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "49635024c5014f4a"
+    },
+    {
+      "name": "reading-mini",
+      "title": "阅读理解擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "06d20437c82771c3"
+    },
+    {
+      "name": "reference-cn",
+      "title": "中文指代擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "f47d3a867d22c589"
+    },
+    {
+      "name": "reverse-word-cn",
+      "title": "反转词擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "e8a6f4811237e2c9"
+    },
+    {
+      "name": "riddle-me",
+      "title": "谜语擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "03446eb4d08773d1"
+    },
+    {
+      "name": "roman-num",
+      "title": "罗马数字擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0eddb7d4c5c86920"
+    },
+    {
+      "name": "ruozhiba",
+      "title": "弱智吧 · 反陷阱擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "c0cf6f8de2d74c08"
+    },
+    {
+      "name": "sentence-order",
+      "title": "语句排序擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "7664456d7f408d42"
+    },
+    {
+      "name": "session-shift",
+      "title": "规则漂移 · 持续学习擂台",
+      "tasks": 32,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "c29ca1351b10329b"
+    },
+    {
+      "name": "shuffle-track",
+      "title": "洗牌追踪擂台",
+      "tasks": 26,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "3d38d2ac8b2df6ed"
+    },
+    {
+      "name": "soup-lateral",
+      "title": "海龟汤擂台",
+      "tasks": 12,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "ecf0879fbacee3a0"
+    },
+    {
+      "name": "star-sign",
+      "title": "星座日期擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "4fb81acd7c52faa5"
+    },
+    {
+      "name": "statute-choice",
+      "title": "法条竞合 · 择一适用擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "6b10c13d34ee8aff"
+    },
+    {
+      "name": "statute-match",
+      "title": "法条定位 · 合同编擂台",
+      "tasks": 22,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "d83b78799a7c67ec"
+    },
+    {
+      "name": "statute-reading",
+      "title": "法条细读 · 咬文嚼字擂台",
+      "tasks": 96,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "e1f8458049ea9058"
+    },
+    {
+      "name": "stroke-count",
+      "title": "笔画数擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "fee6af7e9ffbd9a8"
+    },
+    {
+      "name": "stroop-test",
+      "title": "斯特鲁普效应擂台",
+      "tasks": 26,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "ce0ddcf8ab1d828d"
+    },
+    {
+      "name": "syllogism",
+      "title": "三段论擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "1279f9c33dff8c08"
+    },
+    {
+      "name": "t9-encode",
+      "title": "九宫格编码擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "7a4800349e7e462e"
+    },
+    {
+      "name": "temporal-seq",
+      "title": "日程推算擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "b4b3d7e09c5dd1e8"
+    },
+    {
+      "name": "tongjia-pinyin",
+      "title": "通假·拼音剖面擂台",
+      "tasks": 85,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "def240638a207d62"
+    },
+    {
+      "name": "tongjia-typo",
+      "title": "错字归正 · 语境对照擂台",
+      "tasks": 140,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "71c75c839f630eee"
+    },
+    {
+      "name": "truth-lie",
+      "title": "真假话擂台",
+      "tasks": 26,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "2c1d336eecba2a65"
+    },
+    {
+      "name": "unit-convert",
+      "title": "单位换算擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "a8dd99f0fe3caa96"
+    },
+    {
+      "name": "verify-claim",
+      "title": "宣称核验 · 证据克制度擂台",
+      "tasks": 16,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "eb1810365d117ee3"
+    },
+    {
+      "name": "voxel-craft",
+      "title": "合成链路规划擂台",
+      "tasks": 22,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "ccb16d2581dd48df"
+    },
+    {
+      "name": "word-blank",
+      "title": "选词填空擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "1c0b6a92beb20f51"
+    },
+    {
+      "name": "word-sort-pinyin",
+      "title": "拼音排序擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "6a8476e99728aff2"
+    },
+    {
+      "name": "xiehouyu",
+      "title": "歇后语接龙擂台",
+      "tasks": 20,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "5bd8bf054dca3e35"
+    },
+    {
+      "name": "yinyang-master",
+      "title": "阴阳怪气大师赛",
+      "tasks": 8,
+      "defaultJudge": "llm",
+      "requiresJudge": true,
+      "fingerprint": "59efed54d9058ed5"
+    },
+    {
+      "name": "zebra-mini",
+      "title": "斑马迷你擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "4d895df1318771b9"
+    },
+    {
+      "name": "zodiac-year",
+      "title": "生肖年份擂台",
+      "tasks": 24,
+      "defaultJudge": "exact",
+      "requiresJudge": false,
+      "fingerprint": "0729c15db2e9b57c"
+    }
+  ]
+}

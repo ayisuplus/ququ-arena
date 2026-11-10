@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "UnityEditor.AssetDatabase.Refresh();return new{compilationFailed=UnityEditor.EditorUtility.scriptCompilationFailed,scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty,play=UnityEditor.EditorApplication.isPlaying};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "compilationFailed": false,
+        "scene": "BlackHoleStationSereneV013",
+        "dirty": false,
+        "play": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

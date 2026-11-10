@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\AI斗兽场\\production\\black-hole-station\\verify_station_residents.cs"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\r\n  \"steps\": 2001,\r\n  \"simulatedSeconds\": 100.05,\r\n  \"chatVisits\": 1,\r\n  \"claudeVisits\": 1,\r\n  \"chatReturns\": 1,\r\n  \"claudeReturns\": 1,\r\n  \"minimumSeparation\": 6.07501936,\r\n  \"fighterHiddenResident\": true,\r\n  \"residentReappeared\": true,\r\n  \"nearDialogue\": 1,\r\n  \"sceneUnchanged\": true\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-street-sample.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "geometry": [
+          {
+            "name": "R2 inner promenade",
+            "vertexCount": 4464,
+            "planeError": 0,
+            "uvError": 0,
+            "submeshes": 3
+          },
+          {
+            "name": "Reading shared sage forecourt",
+            "vertexCount": 4044,
+            "planeError": 0,
+            "uvError": 0,
+            "submeshes": 2
+          }
+        ],
+        "roofSame": true,
+        "routeSamples": 1365,
+        "collisions": [],
+        "unsupported": [],
+        "errors": [],
+        "routeSeats": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+    "stage": "read-fixed",
+    "mode": "Standalone Player, real frame movement",
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationRingPrototypeV015.unity",
+    "error": "",
+    "passed": true,
+    "frames": 120,
+    "targetFrameRate": 60,
+    "checks": [
+        {
+            "name": "real world save initialized",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "v1 primary save restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "v1 stationary position restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "v1 stationary standing position stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "v1 stationary standing camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "v1 save remains writable",
+            "passed": true,
+            "error": 0.0
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\.cache\\v019-inspect-return-intersection.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "Solid front sill 1 9",
+          "count": 194,
+          "range": [
+            15.7399988,
+            15.8000021,
+            12.6800013,
+            13.0000029
+          ]
+        },
+        {
+          "name": "Facade Silver",
+          "count": 0,
+          "range": null
+        },
+        {
+          "name": "Distance fading panel joints",
+          "count": 32,
+          "range": [
+            13.9250021,
+            16.003006,
+            -13.0030031,
+            13.0030031
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

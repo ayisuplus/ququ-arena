@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\inspect-reading-floor-ray.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "R2 public planning deck/V015 package - 06 study/V019 reading court architecture/Reading paving",
+          "distance": 2.98083925,
+          "globalId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-1255938841-0",
+          "materials": [
+            "Assets/Station/Materials/DistrictsV019/Reading court blue ceramic.mat"
+          ]
+        },
+        {
+          "path": "R2 public planning deck",
+          "distance": 3.09297562,
+          "globalId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-168051215-0",
+          "materials": [
+            "Assets/Station/Materials/LandscapeV015/Pearl porcelain deck.mat"
+          ]
+        },
+        {
+          "path": "R2 public planning deck/V015 package - 06 study/V019 reading court architecture/Reading glass",
+          "distance": 0.245366871,
+          "globalId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-1652560917-0",
+          "materials": [
+            "Assets/Station/Materials/DistrictsV019/Reading blue clear glass.mat"
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

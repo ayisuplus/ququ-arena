@@ -1,0 +1,60 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 120,
+    "reflectionCycles": 3,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=6",
+        "V019 reflection - research low runtime updates=6"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [
+        "V015 reflection - cafe runtime updates=8",
+        "V015 reflection - research runtime updates=8",
+        "V015 reflection - 06 study runtime updates=8",
+        "V019 reflection - research main runtime updates=6",
+        "V019 reflection - research low runtime updates=6",
+        "V019 reflection - reading main runtime updates=6",
+        "V019 reflection - cafe rear runtime updates=6",
+        "V019 reflection - cafe loggia runtime updates=6"
+    ],
+    "homesReflectionTextures": [],
+    "views": [
+        {
+            "name": "research-arrival",
+            "frames": 1691,
+            "renderedFrames": 1691,
+            "p95Ms": 6.066603183746338,
+            "drawCalls": 6414.691306918983
+        },
+        {
+            "name": "research-turn",
+            "frames": 2137,
+            "renderedFrames": 2137,
+            "p95Ms": 5.098795413970947,
+            "drawCalls": 2193.217594759008
+        },
+        {
+            "name": "research-court",
+            "frames": 2162,
+            "renderedFrames": 2162,
+            "p95Ms": 4.955201625823975,
+            "drawCalls": 2135.81914893617
+        },
+        {
+            "name": "research-near",
+            "frames": 1926,
+            "renderedFrames": 1926,
+            "p95Ms": 5.731398582458496,
+            "drawCalls": 2412.5472481827624
+        }
+    ],
+    "errors": []
+}

@@ -1,0 +1,26 @@
+本轮只处理黑洞空间站 v019 的一个游戏施工前判断：科研到达视角里大檐底板与已有中层体量的关系。请给出一份能指导下一小轮施工的单目标判断。当前只读工具可用，不写文件，不启动程序，不改场景、网格、材质、灯光、曝光或碰撞，不提交，不请求模型切换或重试。
+
+先实际 read 以下两张新的正常窗口 Player 原图；必须看图，读取失败就明确说无法看图，不按文件名或文本介绍假装已看见：
+C:/Users/36322/.codex/worktrees/unified-capabilities/alpha-agent/docs/validation/alpha-round-016-tool-refresh-20261007/player/research-arrival.png
+C:/Users/36322/.codex/worktrees/unified-capabilities/alpha-agent/docs/validation/alpha-round-016-tool-refresh-20261007/player/research-turn.png
+
+再 read 以下项目原件（工作目录为 E:/projects/黑洞空间站）：
+1. AGENTS.md（按最新条目理解保护边界）
+2. docs/黑洞空间站升级方案/v019/三项问题整改执行清单_v007.md
+3. docs/validation/station-v019-r2-arrival-20261004/README.md
+4. production/black-hole-station/v019/install-linking-canopy.cs
+5. QuQuArena3D/Assets/Scripts/Validation/StationAnnexRenderProbeV018.cs 的科研机位部分（约170–210行，可按需补读）
+
+图像来源：协调者使用 c21c4dc 业务源对应的既有 BatchPlayer 新采集；完整190文件哈希另行核对，之后游戏提交仅为档案。使用既有 --station-r2-ssao-render 四科研机位入口，该入口关闭 TMP 文本渲染以排除字体；本次没有改变 SSAO 或任何配置。固定视图不能证明实际行走、全相位或视觉认可。Player 执行由协调者提供，不要写成你运行了 Player/Unity。
+
+历史背景必须核对：124–128°单开口已经安装；116–120°额外双开口因前端过短/孤立柱顶被否决。目标是独立 Research folded linking canopy，不是旧科研馆原入口顶棚。另有阅读木纹密度已完成无修改结论，不要重做或扩展到色调/SSAO/全站换色。
+
+请最后仅输出中文判断报告（建议600–1000字）：
+- 按每张图分别描述你实际看见的低层、中层与上方遮挡，至少给出一个能由该图直接核对的空间关系；区分目视事实与因果推断。
+- 对照现有开口源码，选择一个有依据的最小候选；若当前证据不足以决定具体尺寸，明确指出缺的唯一测量和下一步如何取得，不编造坐标或把假设写成可直接安装的尺寸。
+- 候选或测量只涉及目标檐口局部，列清保留项、预期画面改善、可能损失与同机位/几何/碰撞/路线验收。
+- 不重新提出已否决的双开口，不新增塔楼，不用调色冒充高低层次改善。无需为了给出修改而硬改；结论应使下一步具体可执行。
+
+这是一轮真实 Alpha 看图与施工定位，不是施工完成。若图片输入或工具执行失败，保留事实并停止，不绕用其他提供商。
+
+如果现有单开口已经解决原到达遮挡问题，请明确给出无需继续改檐口的结论。不要仅因旧清单写过问题就认定新图仍有同样缺陷。

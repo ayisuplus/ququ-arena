@@ -1,0 +1,222 @@
+{
+  "evidence": "Windows player, isolated backend, saved fixtures; no paid model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "entrance": {
+    "modes": [
+      "standard",
+      "chibi"
+    ],
+    "count": 4,
+    "escape": true,
+    "homeInterrupt": true,
+    "staticMode": true,
+    "floorFlush": true,
+    "healthUnchanged": true
+  },
+  "lateralLifts": true,
+  "cameraRestore": {
+    "positionError": 0.0,
+    "rotationError": 0.0,
+    "before": "(0.00000, 15.06205, -17.76045)",
+    "after": "(0.00000, 15.06205, -17.76045)"
+  },
+  "travel": [
+    {
+      "from": "Arena",
+      "to": "Lab",
+      "seconds": 5.08350754
+    },
+    {
+      "from": "Lab",
+      "to": "Referee",
+      "seconds": 5.083393
+    },
+    {
+      "from": "Referee",
+      "to": "Commentary",
+      "seconds": 2.03340149
+    },
+    {
+      "from": "Commentary",
+      "to": "Gallery",
+      "seconds": 5.08375168
+    },
+    {
+      "from": "Gallery",
+      "to": "Arena",
+      "seconds": 5.08353043
+    }
+  ],
+  "travelSkipAndStatic": true,
+  "performance": [
+    {
+      "view": "1920-home",
+      "fps": 59.9933167,
+      "p95ms": 16.6686,
+      "cpuMs": 16.668519166666648,
+      "gpuMs": 0.82524444444444456,
+      "drawCallsMax": 406,
+      "trianglesMax": 870259
+    },
+    {
+      "view": "1920-arena",
+      "fps": 59.995533,
+      "p95ms": 16.669096,
+      "cpuMs": 16.667908333333315,
+      "gpuMs": 0.77577315555555548,
+      "drawCallsMax": 410,
+      "trianglesMax": 1460486
+    },
+    {
+      "view": "1920-Lab",
+      "fps": 59.9956,
+      "p95ms": 16.6691036,
+      "cpuMs": 16.667873333333304,
+      "gpuMs": 0.7955982222222221,
+      "drawCallsMax": 552,
+      "trianglesMax": 1974920
+    },
+    {
+      "view": "1920-Referee",
+      "fps": 59.9984436,
+      "p95ms": 16.669096,
+      "cpuMs": 16.667103888888882,
+      "gpuMs": 0.78421191111111055,
+      "drawCallsMax": 169,
+      "trianglesMax": 721822
+    },
+    {
+      "view": "1920-Commentary",
+      "fps": 59.99694,
+      "p95ms": 16.6693039,
+      "cpuMs": 16.667511666666652,
+      "gpuMs": 0.7041486222222223,
+      "drawCallsMax": 252,
+      "trianglesMax": 751757
+    },
+    {
+      "view": "1920-Gallery",
+      "fps": 59.9959221,
+      "p95ms": 16.6690044,
+      "cpuMs": 16.667795555555557,
+      "gpuMs": 0.66772124444444358,
+      "drawCallsMax": 316,
+      "trianglesMax": 2135372
+    },
+    {
+      "view": "2560-home",
+      "fps": 59.9981,
+      "p95ms": 16.6690044,
+      "cpuMs": 16.667197777777783,
+      "gpuMs": 0.97397191111111225,
+      "drawCallsMax": 406,
+      "trianglesMax": 870259
+    },
+    {
+      "view": "2560-arena",
+      "fps": 59.4054451,
+      "p95ms": 17.2848,
+      "cpuMs": 16.832617647058818,
+      "gpuMs": 1.102754061624649,
+      "drawCallsMax": 410,
+      "trianglesMax": 1460486
+    },
+    {
+      "view": "2560-Lab",
+      "fps": 59.995,
+      "p95ms": 16.6689968,
+      "cpuMs": 16.6680386111111,
+      "gpuMs": 0.85946666666666671,
+      "drawCallsMax": 552,
+      "trianglesMax": 1974920
+    },
+    {
+      "view": "2560-Referee",
+      "fps": 59.99396,
+      "p95ms": 16.6691971,
+      "cpuMs": 16.668357222222223,
+      "gpuMs": 0.94786204444444466,
+      "drawCallsMax": 169,
+      "trianglesMax": 721822
+    },
+    {
+      "view": "2560-Commentary",
+      "fps": 59.9990768,
+      "p95ms": 16.6688,
+      "cpuMs": 16.666920555555542,
+      "gpuMs": 0.88655146666666729,
+      "drawCallsMax": 252,
+      "trianglesMax": 751757
+    },
+    {
+      "view": "2560-Gallery",
+      "fps": 59.99895,
+      "p95ms": 16.6689968,
+      "cpuMs": 16.66694972222221,
+      "gpuMs": 0.93581226666666717,
+      "drawCallsMax": 316,
+      "trianglesMax": 2135372
+    },
+    {
+      "view": "3840-home",
+      "fps": 59.98687,
+      "p95ms": 16.6697979,
+      "cpuMs": 16.670309166666652,
+      "gpuMs": 1.7393464888888888,
+      "drawCallsMax": 406,
+      "trianglesMax": 870259
+    },
+    {
+      "view": "3840-arena",
+      "fps": 59.9908867,
+      "p95ms": 16.6696014,
+      "cpuMs": 16.669568888888879,
+      "gpuMs": 1.6800604444444445,
+      "drawCallsMax": 410,
+      "trianglesMax": 1460486
+    },
+    {
+      "view": "3840-Lab",
+      "fps": 59.9996452,
+      "p95ms": 16.6686,
+      "cpuMs": 16.666792222222234,
+      "gpuMs": 1.5406478222222215,
+      "drawCallsMax": 552,
+      "trianglesMax": 1974920
+    },
+    {
+      "view": "3840-Referee",
+      "fps": 59.9899635,
+      "p95ms": 16.6696014,
+      "cpuMs": 16.66946722222221,
+      "gpuMs": 1.4784263111111096,
+      "drawCallsMax": 169,
+      "trianglesMax": 721822
+    },
+    {
+      "view": "3840-Commentary",
+      "fps": 59.99764,
+      "p95ms": 16.6686,
+      "cpuMs": 16.667322222222207,
+      "gpuMs": 1.4766343111111107,
+      "drawCallsMax": 252,
+      "trianglesMax": 751757
+    },
+    {
+      "view": "3840-Gallery",
+      "fps": 59.996,
+      "p95ms": 16.6689,
+      "cpuMs": 16.667769166666652,
+      "gpuMs": 1.7327388444444431,
+      "drawCallsMax": 316,
+      "trianglesMax": 2135372
+    }
+  ],
+  "inactiveInteriors": true,
+  "motionOff": true,
+  "blackHoleToggle": true,
+  "threeResolutions": true,
+  "runtimeErrors": [],
+  "backendPid": 8920,
+  "passed": true
+}

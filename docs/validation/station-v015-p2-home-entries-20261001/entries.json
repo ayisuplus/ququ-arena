@@ -1,0 +1,350 @@
+{
+  "scope": "Geometry-derived candidate entry targets; not live collision, route or room-function proof",
+  "sourceSceneSha256": "0FC1A6EBD2E536762D1E5CF42CC8A8590B1BDB11E7B7DF6DA39223E68B93134B",
+  "inputs": {
+    "source-objects.jsonl": "32c30667e13b6ddc02f9098de819d83d05582ffa1300b677f9b4888d2b92bd23",
+    "real-building-plan.json": "d900e00d2fc46effd8603959c702b9855058bfc76e93cc5f4a9897ffaf95de18",
+    "real-building-object-map.json": "c11adec65c108e2ca3d6c492365e84dbced3768fa5b2e9fad3a0c7462b12297d"
+  },
+  "rooms": [
+    {
+      "roomId": "room/resident/chatgpt",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1708423226-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1708423226-0",
+      "package": "resident chatgpt home package",
+      "identityRootRingLocal": [
+        23.902878,
+        0.0,
+        -124.941218
+      ],
+      "entries": [
+        {
+          "label": "building entrance",
+          "sourcePosition": [
+            96.0,
+            0,
+            61.99999885
+          ],
+          "ringLocal": [
+            133.105243,
+            0,
+            -158.628654
+          ],
+          "sourceGeometryGapWidth": 2.799998,
+          "approachRingLocal": [
+            131.819668,
+            0,
+            -157.096565
+          ],
+          "insideRingLocal": [
+            134.390819,
+            0,
+            -160.160743
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1958499100-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-609226917-0"
+          ],
+          "identityRootDistance": 114.280356
+        },
+        {
+          "label": "private pod entrance",
+          "sourcePosition": [
+            112.0,
+            0,
+            61.99999885
+          ],
+          "ringLocal": [
+            143.389845,
+            0,
+            -170.885365
+          ],
+          "sourceGeometryGapWidth": 2.799998,
+          "approachRingLocal": [
+            142.10427,
+            0,
+            -169.353276
+          ],
+          "insideRingLocal": [
+            144.67542,
+            0,
+            -172.417454
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-374641901-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1862142678-0"
+          ],
+          "identityRootDistance": 128.015623
+        }
+      ]
+    },
+    {
+      "roomId": "room/resident/claude",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2060720436-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-2060720436-0",
+      "package": "resident claude home package",
+      "identityRootRingLocal": [
+        -21.538761,
+        0.0,
+        -140.693772
+      ],
+      "entries": [
+        {
+          "label": "building entrance",
+          "sourcePosition": [
+            96.0,
+            0,
+            89.0
+          ],
+          "ringLocal": [
+            103.5375,
+            0,
+            -179.33221
+          ],
+          "sourceGeometryGapWidth": 2.799988,
+          "approachRingLocal": [
+            102.5375,
+            0,
+            -177.60016
+          ],
+          "insideRingLocal": [
+            104.5375,
+            0,
+            -181.064261
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1583226613-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-207052650-0"
+          ],
+          "identityRootDistance": 130.908365
+        },
+        {
+          "label": "private pod entrance",
+          "sourcePosition": [
+            112.0,
+            0,
+            89.0
+          ],
+          "ringLocal": [
+            111.5375,
+            0,
+            -193.188617
+          ],
+          "sourceGeometryGapWidth": 2.799988,
+          "approachRingLocal": [
+            110.5375,
+            0,
+            -191.456566
+          ],
+          "insideRingLocal": [
+            112.5375,
+            0,
+            -194.920668
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1667544397-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-838926021-0"
+          ],
+          "identityRootDistance": 143.055933
+        }
+      ]
+    },
+    {
+      "roomId": "room/resident/deepseek",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-468079072-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-468079072-0",
+      "package": "resident deepseek home package",
+      "identityRootRingLocal": [
+        62.59082,
+        0.0,
+        -98.209189
+      ],
+      "entries": [
+        {
+          "label": "building entrance",
+          "sourcePosition": [
+            96.0,
+            0,
+            35.0
+          ],
+          "ringLocal": [
+            158.628653,
+            0,
+            -133.105244
+          ],
+          "sourceGeometryGapWidth": 2.8,
+          "approachRingLocal": [
+            157.096564,
+            0,
+            -131.819669
+          ],
+          "insideRingLocal": [
+            160.160742,
+            0,
+            -134.390819
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-311625217-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-552188551-0"
+          ],
+          "identityRootDistance": 102.181212
+        },
+        {
+          "label": "private pod entrance",
+          "sourcePosition": [
+            112.0,
+            0,
+            35.0
+          ],
+          "ringLocal": [
+            170.885364,
+            0,
+            -143.389846
+          ],
+          "sourceGeometryGapWidth": 2.8,
+          "approachRingLocal": [
+            169.353275,
+            0,
+            -142.104271
+          ],
+          "insideRingLocal": [
+            172.417453,
+            0,
+            -144.675421
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-937307967-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-914299771-0"
+          ],
+          "identityRootDistance": 117.341382
+        }
+      ]
+    },
+    {
+      "roomId": "room/resident/gemini",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1185036906-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1185036906-0",
+      "package": "gemini glm kimi existing home group",
+      "identityRootRingLocal": [
+        -113.326182,
+        0.0,
+        -285.660947
+      ],
+      "entries": [
+        {
+          "label": "private room entrance",
+          "sourcePosition": [
+            -90.5,
+            0,
+            66.0
+          ],
+          "ringLocal": [
+            -32.61371,
+            0,
+            -207.996625
+          ],
+          "sourceGeometryGapWidth": 2.200012,
+          "approachRingLocal": [
+            -34.583326,
+            0,
+            -207.649328
+          ],
+          "insideRingLocal": [
+            -30.644095,
+            0,
+            -208.343921
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-808131363-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-74212133-0"
+          ],
+          "identityRootDistance": 112.010044
+        }
+      ]
+    },
+    {
+      "roomId": "room/resident/glm",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1751378552-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1751378552-0",
+      "package": "gemini glm kimi existing home group",
+      "identityRootRingLocal": [
+        -113.326182,
+        0.0,
+        -285.660947
+      ],
+      "entries": [
+        {
+          "label": "private room entrance",
+          "sourcePosition": [
+            -73.5,
+            0,
+            58.0
+          ],
+          "ringLocal": [
+            -43.444191,
+            0,
+            -223.349171
+          ],
+          "sourceGeometryGapWidth": 2.200012,
+          "approachRingLocal": [
+            -41.474576,
+            0,
+            -223.696467
+          ],
+          "insideRingLocal": [
+            -45.413807,
+            0,
+            -223.001875
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1575330233-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1260027342-0"
+          ],
+          "identityRootDistance": 93.628254
+        }
+      ]
+    },
+    {
+      "roomId": "room/resident/kimi",
+      "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1694850978-0",
+      "candidateId": "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-1694850978-0",
+      "package": "gemini glm kimi existing home group",
+      "identityRootRingLocal": [
+        -113.326182,
+        0.0,
+        -285.660947
+      ],
+      "entries": [
+        {
+          "label": "private room entrance",
+          "sourcePosition": [
+            -73.5,
+            0,
+            66.0
+          ],
+          "ringLocal": [
+            -35.565729,
+            0,
+            -224.738357
+          ],
+          "sourceGeometryGapWidth": 2.200012,
+          "approachRingLocal": [
+            -37.535345,
+            0,
+            -224.39106
+          ],
+          "insideRingLocal": [
+            -33.596114,
+            0,
+            -225.085653
+          ],
+          "candidateWallIds": [
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-929959129-0",
+            "GlobalObjectId_V1-2-595f77ff0ce97424a91c52c333a23493-517119228-0"
+          ],
+          "identityRootDistance": 98.783855
+        }
+      ]
+    }
+  ]
+}

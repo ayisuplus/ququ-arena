@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationCreativeBuildingsV016\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"Saved V016 Edit required\");\nconst string target=\"Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity\";\nif(System.IO.File.Exists(target))throw new System.Exception(\"V017 candidate already exists\");\nif(!UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene,target))throw new System.Exception(\"Save v017 failed\");\nreturn new{scene=scene.path,scene.isDirty,objects=scene.GetRootGameObjects().Sum(g=>g.GetComponentsInChildren<UnityEngine.Transform>(true).Length)};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+        "isDirty": false,
+        "objects": 15430
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

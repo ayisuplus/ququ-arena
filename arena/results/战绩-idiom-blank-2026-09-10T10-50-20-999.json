@@ -1,0 +1,1251 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "idiom-blank",
+    "title": "成语填字擂台",
+    "description": "高频成语空一字填字（自建 canonical 单字答案，20 题）。与 emoji-quiz（表情→成语整猜）互补：本罐考最后一粒字的精准。exact 裁判，错一字翻车。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:idiom-blank:2026-09-10",
+    "taskPrefix": "只输出缺的这一个字本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "blank": "成语填一字"
+    }
+  },
+  "startedAt": "2026-09-10T10:50:20.999Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "IB-01",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画龙点__」缺一个字，填哪个字？",
+      "answer": "睛",
+      "target": "睛",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-01",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画龙点__」缺一个字，填哪个字？",
+      "answer": "睛",
+      "target": "睛",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-01",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画龙点__」缺一个字，填哪个字？",
+      "answer": "睛",
+      "target": "睛",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-01",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画龙点__」缺一个字，填哪个字？",
+      "answer": "睛",
+      "target": "睛",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-02",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「守株待__」缺一个字，填哪个字？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-02",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「守株待__」缺一个字，填哪个字？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 365,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-02",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「守株待__」缺一个字，填哪个字？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-02",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「守株待__」缺一个字，填哪个字？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-03",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「亡羊补__」缺一个字，填哪个字？",
+      "answer": "牢",
+      "target": "牢",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-03",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「亡羊补__」缺一个字，填哪个字？",
+      "answer": "牢",
+      "target": "牢",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-03",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「亡羊补__」缺一个字，填哪个字？",
+      "answer": "牢",
+      "target": "牢",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-03",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「亡羊补__」缺一个字，填哪个字？",
+      "answer": "牢",
+      "target": "牢",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-04",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「掩耳盗__」缺一个字，填哪个字？",
+      "answer": "铃",
+      "target": "铃",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-04",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「掩耳盗__」缺一个字，填哪个字？",
+      "answer": "铃",
+      "target": "铃",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-04",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「掩耳盗__」缺一个字，填哪个字？",
+      "answer": "铃",
+      "target": "铃",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-04",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「掩耳盗__」缺一个字，填哪个字？",
+      "answer": "铃",
+      "target": "铃",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-05",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「对牛弹__」缺一个字，填哪个字？",
+      "answer": "琴",
+      "target": "琴",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-05",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「对牛弹__」缺一个字，填哪个字？",
+      "answer": "琴",
+      "target": "琴",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-05",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「对牛弹__」缺一个字，填哪个字？",
+      "answer": "琴",
+      "target": "琴",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-05",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「对牛弹__」缺一个字，填哪个字？",
+      "answer": "琴",
+      "target": "琴",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-06",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「狐假虎__」缺一个字，填哪个字？",
+      "answer": "威",
+      "target": "威",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-06",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「狐假虎__」缺一个字，填哪个字？",
+      "answer": "威",
+      "target": "威",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-06",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「狐假虎__」缺一个字，填哪个字？",
+      "answer": "威",
+      "target": "威",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-06",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「狐假虎__」缺一个字，填哪个字？",
+      "answer": "威",
+      "target": "威",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-07",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「井底之__」缺一个字，填哪个字？",
+      "answer": "蛙",
+      "target": "蛙",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-07",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「井底之__」缺一个字，填哪个字？",
+      "answer": "蛙",
+      "target": "蛙",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-07",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「井底之__」缺一个字，填哪个字？",
+      "answer": "蛙",
+      "target": "蛙",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IB-07",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「井底之__」缺一个字，填哪个字？",
+      "answer": "蛙",
+      "target": "蛙",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-08",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「杯弓蛇__」缺一个字，填哪个字？",
+      "answer": "影",
+      "target": "影",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-08",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「杯弓蛇__」缺一个字，填哪个字？",
+      "answer": "影",
+      "target": "影",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-08",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「杯弓蛇__」缺一个字，填哪个字？",
+      "answer": "影",
+      "target": "影",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-08",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「杯弓蛇__」缺一个字，填哪个字？",
+      "answer": "影",
+      "target": "影",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-09",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「鹤立鸡__」缺一个字，填哪个字？",
+      "answer": "群",
+      "target": "群",
+      "latencyMs": 291,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-09",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「鹤立鸡__」缺一个字，填哪个字？",
+      "answer": "群",
+      "target": "群",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-09",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「鹤立鸡__」缺一个字，填哪个字？",
+      "answer": "群",
+      "target": "群",
+      "latencyMs": 306,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-09",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「鹤立鸡__」缺一个字，填哪个字？",
+      "answer": "群",
+      "target": "群",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-10",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一箭双__」缺一个字，填哪个字？",
+      "answer": "雕",
+      "target": "雕",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-10",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一箭双__」缺一个字，填哪个字？",
+      "answer": "雕",
+      "target": "雕",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-10",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一箭双__」缺一个字，填哪个字？",
+      "answer": "雕",
+      "target": "雕",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-10",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一箭双__」缺一个字，填哪个字？",
+      "answer": "雕",
+      "target": "雕",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-11",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「卧虎藏__」缺一个字，填哪个字？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-11",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「卧虎藏__」缺一个字，填哪个字？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-11",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「卧虎藏__」缺一个字，填哪个字？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-11",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「卧虎藏__」缺一个字，填哪个字？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-12",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画饼充__」缺一个字，填哪个字？",
+      "answer": "饥",
+      "target": "饥",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-12",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画饼充__」缺一个字，填哪个字？",
+      "answer": "饥",
+      "target": "饥",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-12",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画饼充__」缺一个字，填哪个字？",
+      "answer": "饥",
+      "target": "饥",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-12",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「画饼充__」缺一个字，填哪个字？",
+      "answer": "饥",
+      "target": "饥",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-13",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「望梅止__」缺一个字，填哪个字？",
+      "answer": "渴",
+      "target": "渴",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-13",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「望梅止__」缺一个字，填哪个字？",
+      "answer": "渴",
+      "target": "渴",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-13",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「望梅止__」缺一个字，填哪个字？",
+      "answer": "渴",
+      "target": "渴",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-13",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「望梅止__」缺一个字，填哪个字？",
+      "answer": "渴",
+      "target": "渴",
+      "latencyMs": 115,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-14",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「顺手牵__」缺一个字，填哪个字？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-14",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「顺手牵__」缺一个字，填哪个字？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-14",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「顺手牵__」缺一个字，填哪个字？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-14",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「顺手牵__」缺一个字，填哪个字？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-15",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「三心二__」缺一个字，填哪个字？",
+      "answer": "意",
+      "target": "意",
+      "latencyMs": 253,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-15",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「三心二__」缺一个字，填哪个字？",
+      "answer": "意",
+      "target": "意",
+      "latencyMs": 408,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-15",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「三心二__」缺一个字，填哪个字？",
+      "answer": "意",
+      "target": "意",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-15",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「三心二__」缺一个字，填哪个字？",
+      "answer": "意",
+      "target": "意",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-16",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「七上八__」缺一个字，填哪个字？",
+      "answer": "下",
+      "target": "下",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-16",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「七上八__」缺一个字，填哪个字？",
+      "answer": "下",
+      "target": "下",
+      "latencyMs": 424,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-16",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「七上八__」缺一个字，填哪个字？",
+      "answer": "下",
+      "target": "下",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-16",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「七上八__」缺一个字，填哪个字？",
+      "answer": "下",
+      "target": "下",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-17",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「九牛一__」缺一个字，填哪个字？",
+      "answer": "毛",
+      "target": "毛",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-17",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「九牛一__」缺一个字，填哪个字？",
+      "answer": "毛",
+      "target": "毛",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-17",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「九牛一__」缺一个字，填哪个字？",
+      "answer": "毛",
+      "target": "毛",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-17",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「九牛一__」缺一个字，填哪个字？",
+      "answer": "毛",
+      "target": "毛",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-18",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一清二__」缺一个字，填哪个字？",
+      "answer": "白",
+      "target": "白",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-18",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一清二__」缺一个字，填哪个字？",
+      "answer": "白",
+      "target": "白",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-18",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一清二__」缺一个字，填哪个字？",
+      "answer": "白",
+      "target": "白",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-18",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一清二__」缺一个字，填哪个字？",
+      "answer": "白",
+      "target": "白",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-19",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一窍不__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-19",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一窍不__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-19",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一窍不__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-19",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「一窍不__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-20",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「各显神__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-20",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「各显神__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-20",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「各显神__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "IB-20",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的这一个字本身，不多一个字。\n成语填字：「各显神__」缺一个字，填哪个字？",
+      "answer": "通",
+      "target": "通",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "66e47422df952875",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.23.0"
+  }
+}

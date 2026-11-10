@@ -1,0 +1,9 @@
+{
+  "sampledUtc": "2026-10-06T10:07:51.6588341Z",
+  "passed": true,
+  "switchSecondsAfterStart": 5.420423800000002,
+  "checkSecondsAfterStart": 10.859686199999999,
+  "checkSecondsAfterSwitch": 5.439262399999997,
+  "wrapSecondsAfterNewText": 10.142193800000001,
+  "explanation": "Check must occur after original 8-second deadline and before an incorrect round-change reset could reach 8 seconds. Wrap must observe exactly one automatic turn."
+}

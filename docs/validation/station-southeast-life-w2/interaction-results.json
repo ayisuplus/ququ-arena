@@ -1,0 +1,31 @@
+{
+  "scene": "Assets/Station/Scenes/BlackHoleStationSoutheastLifeW2.unity",
+  "firstPerson": true,
+  "cafeStableId": "east-lounge-cafe-01",
+  "servedDelta": 1,
+  "drunkDelta": 1,
+  "saveSceneId": "BlackHoleStationSoutheastLifeW2",
+  "saveIsolated": true,
+  "checks": [
+    {
+      "check": "street through cafe door to counter",
+      "meters": 34.5,
+      "end": "(209.00, 0.08, -208.00)"
+    },
+    {
+      "check": "counter to public seat",
+      "meters": 3.0,
+      "end": "(209.00, 0.08, -205.00)"
+    },
+    {
+      "check": "cafe back to street",
+      "meters": 37.5,
+      "end": "(190.00, 0.08, -190.00)"
+    },
+    {
+      "check": "street to outer lookout",
+      "meters": 57.0,
+      "end": "(190.00, 0.08, -247.00)"
+    }
+  ]
+}

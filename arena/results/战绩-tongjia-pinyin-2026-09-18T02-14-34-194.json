@@ -1,0 +1,152 @@
+{
+  "id": "b17896976734671",
+  "arena": {
+    "name": "tongjia-pinyin",
+    "title": "通假·拼音剖面擂台",
+    "description": "复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。",
+    "author": "TongJia-Bench",
+    "version": "0.2.0",
+    "canary": "ququ-arena:0263d039-75cd-e2f0-352c-bd1750",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "tone_mark": "带调拼音还原",
+      "tone_number": "数字调拼音还原",
+      "no_tone": "无声调拼音还原",
+      "initials": "首字母缩写还原（悬崖维度）",
+      "mixed_50": "汉字拼音混写还原"
+    },
+    "$schema": "../../arena.schema.json",
+    "review": {
+      "date": "2026-09-13",
+      "note": "暂停首字母还原与分类欠定问答；补足数量和方向的等价答案、修正长江“长”的拼音；无汉字指代线索时接受他/她两种人称写法。",
+      "excluded": {
+        "t2-p2h-0004": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0009": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0014": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0019": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0024": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0029": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0034": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0039": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0044": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0049": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0054": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0059": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0064": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0069": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-p2h-0074": "首字母字符串无法在开放语境中唯一还原原句，单一参考句不应作为输赢依据。",
+        "t2-pqa-0006": "“汉字属于什么文字系统”未限定分类体系，表意、意音、语素音节等回答不能用单一字符串裁决。",
+        "t2-pqa-0009": "“春节是什么节日”未限定回答维度，传统节日、农历新年等均成立。"
+      }
+    }
+  },
+  "startedAt": "2026-09-18T02:14:34.194Z",
+  "durationMs": 1168,
+  "contestants": [
+    {
+      "id": "custom:0b8ebb1c-0611-42ad-b8fc-f0925b1a8e07",
+      "name": "Qwen3.8-27B · Groq 免费档",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "qwen/qwen3.8-27b"
+    },
+    {
+      "id": "custom:466e841d-2f0f-49f3-8fd6-fdc7e98f4ceb",
+      "name": "GPT-OSS-20B · Groq 免费档",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "openai/gpt-oss-20b"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "custom:0b8ebb1c-0611-42ad-b8fc-f0925b1a8e07",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "",
+      "target": "北京是中国的首都",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 257,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "接口不可用，已退赛：Qwen3.8-27B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "withdrawal": {
+        "modelId": "custom:0b8ebb1c-0611-42ad-b8fc-f0925b1a8e07",
+        "taskId": "t2-p2h-0001",
+        "reason": "unavailable",
+        "message": "接口不可用，已退赛：Qwen3.8-27B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+        "failures": 1,
+        "at": 1789697674452
+      },
+      "note": "接口不可用，已退赛：Qwen3.8-27B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "finishedMs": 258
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "custom:466e841d-2f0f-49f3-8fd6-fdc7e98f4ceb",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "",
+      "target": "北京是中国的首都",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 234,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "接口不可用，已退赛：GPT-OSS-20B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "withdrawal": {
+        "modelId": "custom:466e841d-2f0f-49f3-8fd6-fdc7e98f4ceb",
+        "taskId": "t2-p2h-0001",
+        "reason": "unavailable",
+        "message": "接口不可用，已退赛：GPT-OSS-20B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+        "failures": 1,
+        "at": 1789697674440
+      },
+      "note": "接口不可用，已退赛：GPT-OSS-20B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "finishedMs": 247
+    }
+  ],
+  "withdrawals": [
+    {
+      "modelId": "custom:0b8ebb1c-0611-42ad-b8fc-f0925b1a8e07",
+      "taskId": "t2-p2h-0001",
+      "reason": "unavailable",
+      "message": "接口不可用，已退赛：Qwen3.8-27B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "failures": 1,
+      "at": 1789697674452
+    },
+    {
+      "modelId": "custom:466e841d-2f0f-49f3-8fd6-fdc7e98f4ceb",
+      "taskId": "t2-p2h-0001",
+      "reason": "unavailable",
+      "message": "接口不可用，已退赛：GPT-OSS-20B · Groq 免费档 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "failures": 1,
+      "at": 1789697674440
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ec2ad6325c1dc61a",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.29.0",
+    "plannedTasks": 5,
+    "rankingPolicy": "quality-efficiency-v1",
+    "execution": {
+      "schedule": "rounds",
+      "concurrency": 8,
+      "reasoning": "medium",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  },
+  "timelineFile": "timeline-6e19fe7e-7443-4394-b9b9-f812e0248401.jsonl"
+}

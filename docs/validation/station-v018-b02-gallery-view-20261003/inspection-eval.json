@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v018\\b02-gallery-view\\inspect.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationAnnexInteriorsV018.unity",
+        "isDirty": false,
+        "hits": [
+          {
+            "name": "Gallery observation window",
+            "distance": 2.70750523,
+            "local": "(-1.1000, 7.6000, 1.7075)"
+          },
+          {
+            "name": "B02_DeepBlueGlazing",
+            "distance": 2.76913285,
+            "local": "(-1.1000, 7.6000, 1.7691)"
+          }
+        ],
+        "meshes": 49
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

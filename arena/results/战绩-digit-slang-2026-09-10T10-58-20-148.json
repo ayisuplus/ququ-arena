@@ -1,0 +1,1033 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "digit-slang",
+    "title": "数字黑话擂台",
+    "description": "中文互联网数字谐音黑话解码（自建 canonical，16 题）：520→我爱你、233→大笑、9494→就是就是。测网络亚文化库存与谐音解码——不认得 886 的模型没上过中文互联网。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:digit-slang:2026-09-10",
+    "taskPrefix": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "slang": "数字谐音解码"
+    }
+  },
+  "startedAt": "2026-09-10T10:58:20.148Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DS-01",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「520」在中文网络聊天里是什么意思？",
+      "answer": "我爱你",
+      "target": "我爱你",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-01",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「520」在中文网络聊天里是什么意思？",
+      "answer": "我爱",
+      "target": "我爱你",
+      "latencyMs": 99,
+      "score": 0,
+      "note": "期望「我爱你」，实答「我爱」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-01",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「520」在中文网络聊天里是什么意思？",
+      "answer": "我爱的",
+      "target": "我爱你",
+      "latencyMs": 294,
+      "score": 0,
+      "note": "期望「我爱你」，实答「我爱的」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-01",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「520」在中文网络聊天里是什么意思？",
+      "answer": "爱你",
+      "target": "我爱你",
+      "latencyMs": 306,
+      "score": 0,
+      "note": "期望「我爱你」，实答「爱你」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-02",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「1314」在中文网络聊天里是什么意思？",
+      "answer": "一生一世",
+      "target": "一生一世",
+      "latencyMs": 171,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-02",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「1314」在中文网络聊天里是什么意思？",
+      "answer": "一生一世",
+      "target": "一生一世",
+      "latencyMs": 110,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-02",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「1314」在中文网络聊天里是什么意思？",
+      "answer": "一生一世",
+      "target": "一生一世",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-02",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「1314」在中文网络聊天里是什么意思？",
+      "answer": "一生一世",
+      "target": "一生一世",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-03",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「886」在中文网络聊天里是什么意思？",
+      "answer": "拜拜了",
+      "target": "拜拜了",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-03",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「886」在中文网络聊天里是什么意思？",
+      "answer": "拜拜了",
+      "target": "拜拜了",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-03",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「886」在中文网络聊天里是什么意思？",
+      "answer": "拜拜",
+      "target": "拜拜了",
+      "latencyMs": 95,
+      "score": 0,
+      "note": "期望「拜拜了」，实答「拜拜」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-03",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「886」在中文网络聊天里是什么意思？",
+      "answer": "的拜了",
+      "target": "拜拜了",
+      "latencyMs": 468,
+      "score": 0,
+      "note": "期望「拜拜了」，实答「的拜了」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-04",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「666」在中文网络聊天里是什么意思？",
+      "answer": "厉",
+      "target": "厉害",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「厉害」，实答「厉」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-04",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「666」在中文网络聊天里是什么意思？",
+      "answer": "厉害",
+      "target": "厉害",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-04",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「666」在中文网络聊天里是什么意思？",
+      "answer": "厉",
+      "target": "厉害",
+      "latencyMs": 105,
+      "score": 0,
+      "note": "期望「厉害」，实答「厉」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-04",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「666」在中文网络聊天里是什么意思？",
+      "answer": "厉害",
+      "target": "厉害",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DS-05",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「233」在中文网络聊天里是什么意思？",
+      "answer": "大笑",
+      "target": "大笑",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-05",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「233」在中文网络聊天里是什么意思？",
+      "answer": "大",
+      "target": "大笑",
+      "latencyMs": 338,
+      "score": 0,
+      "note": "期望「大笑」，实答「大」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-05",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「233」在中文网络聊天里是什么意思？",
+      "answer": "大笑",
+      "target": "大笑",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-05",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「233」在中文网络聊天里是什么意思？",
+      "answer": "大",
+      "target": "大笑",
+      "latencyMs": 83,
+      "score": 0,
+      "note": "期望「大笑」，实答「大」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-06",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「555」在中文网络聊天里是什么意思？",
+      "answer": "呜呜呜",
+      "target": "呜呜呜",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-06",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「555」在中文网络聊天里是什么意思？",
+      "answer": "呜呜呜",
+      "target": "呜呜呜",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-06",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「555」在中文网络聊天里是什么意思？",
+      "answer": "呜呜呜",
+      "target": "呜呜呜",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-06",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「555」在中文网络聊天里是什么意思？",
+      "answer": "呜呜呜",
+      "target": "呜呜呜",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-07",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「9494」在中文网络聊天里是什么意思？",
+      "answer": "就是就是",
+      "target": "就是就是",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-07",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「9494」在中文网络聊天里是什么意思？",
+      "answer": "就是就是",
+      "target": "就是就是",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-07",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「9494」在中文网络聊天里是什么意思？",
+      "answer": "就是就是",
+      "target": "就是就是",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-07",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「9494」在中文网络聊天里是什么意思？",
+      "answer": "就是就是",
+      "target": "就是就是",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-08",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「484」在中文网络聊天里是什么意思？",
+      "answer": "是不是",
+      "target": "是不是",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-08",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「484」在中文网络聊天里是什么意思？",
+      "answer": "是不是",
+      "target": "是不是",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-08",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「484」在中文网络聊天里是什么意思？",
+      "answer": "是是",
+      "target": "是不是",
+      "latencyMs": 243,
+      "score": 0,
+      "note": "期望「是不是」，实答「是是」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-08",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「484」在中文网络聊天里是什么意思？",
+      "answer": "是不是",
+      "target": "是不是",
+      "latencyMs": 452,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-09",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「88」在中文网络聊天里是什么意思？",
+      "answer": "拜拜",
+      "target": "拜拜",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-09",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「88」在中文网络聊天里是什么意思？",
+      "answer": "拜拜",
+      "target": "拜拜",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-09",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「88」在中文网络聊天里是什么意思？",
+      "answer": "拜",
+      "target": "拜拜",
+      "latencyMs": 471,
+      "score": 0,
+      "note": "期望「拜拜」，实答「拜」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-09",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「88」在中文网络聊天里是什么意思？",
+      "answer": "拜拜",
+      "target": "拜拜",
+      "latencyMs": 335,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-10",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「74」在中文网络聊天里是什么意思？",
+      "answer": "气死",
+      "target": "气死",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-10",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「74」在中文网络聊天里是什么意思？",
+      "answer": "气死",
+      "target": "气死",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-10",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「74」在中文网络聊天里是什么意思？",
+      "answer": "气",
+      "target": "气死",
+      "latencyMs": 209,
+      "score": 0,
+      "note": "期望「气死」，实答「气」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-10",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「74」在中文网络聊天里是什么意思？",
+      "answer": "气死",
+      "target": "气死",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-11",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「995」在中文网络聊天里是什么意思？",
+      "answer": "救救我",
+      "target": "救救我",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-11",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「995」在中文网络聊天里是什么意思？",
+      "answer": "救救我",
+      "target": "救救我",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-11",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「995」在中文网络聊天里是什么意思？",
+      "answer": "救救",
+      "target": "救救我",
+      "latencyMs": 467,
+      "score": 0,
+      "note": "期望「救救我」，实答「救救」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-11",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「995」在中文网络聊天里是什么意思？",
+      "answer": "救救我",
+      "target": "救救我",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-12",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「596」在中文网络聊天里是什么意思？",
+      "answer": "我走了",
+      "target": "我走了",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-12",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「596」在中文网络聊天里是什么意思？",
+      "answer": "走了",
+      "target": "我走了",
+      "latencyMs": 353,
+      "score": 0,
+      "note": "期望「我走了」，实答「走了」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-12",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「596」在中文网络聊天里是什么意思？",
+      "answer": "我走中",
+      "target": "我走了",
+      "latencyMs": 427,
+      "score": 0,
+      "note": "期望「我走了」，实答「我走中」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-12",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「596」在中文网络聊天里是什么意思？",
+      "answer": "我走了",
+      "target": "我走了",
+      "latencyMs": 315,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-13",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「770」在中文网络聊天里是什么意思？",
+      "answer": "亲亲你",
+      "target": "亲亲你",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-13",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「770」在中文网络聊天里是什么意思？",
+      "answer": "亲亲你",
+      "target": "亲亲你",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-13",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「770」在中文网络聊天里是什么意思？",
+      "answer": "人亲你",
+      "target": "亲亲你",
+      "latencyMs": 338,
+      "score": 0,
+      "note": "期望「亲亲你」，实答「人亲你」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-13",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「770」在中文网络聊天里是什么意思？",
+      "answer": "亲亲",
+      "target": "亲亲你",
+      "latencyMs": 470,
+      "score": 0,
+      "note": "期望「亲亲你」，实答「亲亲」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-14",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「880」在中文网络聊天里是什么意思？",
+      "answer": "抱这你",
+      "target": "抱抱你",
+      "latencyMs": 129,
+      "score": 0,
+      "note": "期望「抱抱你」，实答「抱这你」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-14",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「880」在中文网络聊天里是什么意思？",
+      "answer": "抱抱你",
+      "target": "抱抱你",
+      "latencyMs": 424,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-14",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「880」在中文网络聊天里是什么意思？",
+      "answer": "抱的你",
+      "target": "抱抱你",
+      "latencyMs": 227,
+      "score": 0,
+      "note": "期望「抱抱你」，实答「抱的你」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-14",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「880」在中文网络聊天里是什么意思？",
+      "answer": "抱抱你",
+      "target": "抱抱你",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-15",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「530」在中文网络聊天里是什么意思？",
+      "answer": "我想你",
+      "target": "我想你",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-15",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「530」在中文网络聊天里是什么意思？",
+      "answer": "我想",
+      "target": "我想你",
+      "latencyMs": 439,
+      "score": 0,
+      "note": "期望「我想你」，实答「我想」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-15",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「530」在中文网络聊天里是什么意思？",
+      "answer": "我你",
+      "target": "我想你",
+      "latencyMs": 290,
+      "score": 0,
+      "note": "期望「我想你」，实答「我你」",
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-15",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「530」在中文网络聊天里是什么意思？",
+      "answer": "我想你",
+      "target": "我想你",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-16",
+      "condition": "slang",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「920」在中文网络聊天里是什么意思？",
+      "answer": "就爱你",
+      "target": "就爱你",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-16",
+      "condition": "slang",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「920」在中文网络聊天里是什么意思？",
+      "answer": "就爱你",
+      "target": "就爱你",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-16",
+      "condition": "slang",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「920」在中文网络聊天里是什么意思？",
+      "answer": "就爱有",
+      "target": "就爱你",
+      "latencyMs": 211,
+      "score": 0,
+      "note": "期望「就爱你」，实答「就爱有」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DS-16",
+      "condition": "slang",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n数字黑话解码：「920」在中文网络聊天里是什么意思？",
+      "answer": "就爱你",
+      "target": "就爱你",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 2
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "8a201fdac91e26c0",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.24.0"
+  }
+}

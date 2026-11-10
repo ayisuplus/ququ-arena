@@ -1,0 +1,157 @@
+{
+  "cases": [
+    {
+      "preset": "chatgpt",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 4.59960029E-05,
+      "rootTravel": 0.0,
+      "interval": 1.35567665
+    },
+    {
+      "preset": "claude",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 4.50969419E-05,
+      "rootTravel": 0.0,
+      "interval": 1.22202015
+    },
+    {
+      "preset": "deepseek",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 5.462592E-05,
+      "rootTravel": 0.0,
+      "interval": 1.23533154
+    },
+    {
+      "preset": "gemini",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 5.31272271E-05,
+      "rootTravel": 0.0,
+      "interval": 1.1686945
+    },
+    {
+      "preset": "glm",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 5.02032672E-05,
+      "rootTravel": 0.0,
+      "interval": 1.261549
+    },
+    {
+      "preset": "kimi",
+      "chibi": false,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 6.54483738E-05,
+      "rootTravel": 0.0,
+      "interval": 1.245287
+    },
+    {
+      "preset": "chatgpt",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 4.20234719E-05,
+      "rootTravel": 0.0,
+      "interval": 1.29056931
+    },
+    {
+      "preset": "claude",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 2.90353582E-05,
+      "rootTravel": 0.0,
+      "interval": 1.34938049
+    },
+    {
+      "preset": "deepseek",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 2.85364349E-05,
+      "rootTravel": 0.0,
+      "interval": 1.17177582
+    },
+    {
+      "preset": "gemini",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 3.35383265E-05,
+      "rootTravel": 0.0,
+      "interval": 1.23851013
+    },
+    {
+      "preset": "glm",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 2.88775E-05,
+      "rootTravel": 0.0,
+      "interval": 1.20010376
+    },
+    {
+      "preset": "kimi",
+      "chibi": true,
+      "contacts": 2,
+      "settlements": 1,
+      "handError": 2.97275146E-05,
+      "rootTravel": 0.0,
+      "interval": 1.32439423
+    }
+  ],
+  "genericAndImported": true,
+  "singleBothCorrectCancelStatic": true,
+  "rangedEffects": 0,
+  "closeupVfx": {
+    "samples": [
+      {
+        "file": "closeup-hit-0.png",
+        "t": 0.0,
+        "bright": 31992,
+        "contact": "0.32,2.09,-0.08"
+      },
+      {
+        "file": "closeup-hit-1.png",
+        "t": 0.3363266,
+        "bright": 38353,
+        "contact": "0.32,2.09,-0.08"
+      },
+      {
+        "file": "closeup-hit-2.png",
+        "t": 0.6759758,
+        "bright": 34680,
+        "contact": "0.32,2.09,-0.08"
+      },
+      {
+        "file": "closeup-hit-3.png",
+        "t": 1.03865433,
+        "bright": 26234,
+        "contact": "0.32,2.09,-0.08"
+      },
+      {
+        "file": "closeup-hit-4.png",
+        "t": 1.3632164,
+        "bright": 26281,
+        "contact": "0.32,2.09,-0.08"
+      }
+    ],
+    "brightPeakDelta": 6361,
+    "contactWindow": "(-0.28, 2.56, -2.05)"
+  },
+  "fixtureRounds": 8,
+  "duplicateAndReconnect": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "width": 3830,
+  "height": 2043,
+  "passed": true
+}

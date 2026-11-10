@@ -1,0 +1,1254 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "reading-mini",
+    "title": "阅读理解擂台",
+    "description": "形制致敬 RACE/语文阅读理解（内容自建，短文均为原创小短文）。每题一段 2-4 句短文 + 四选一问题，exact 裁判（选项字母）。detail 细节定位 8 题（答案逐字在文中，契约测试锚定 answerText ⊆ 短文）、main-idea 主旨概括 4 题（干扰项为以偏概全的细节）、infer 推理判断 4 题（只能推出一个选项）、word-meaning 词义指代 4 题（「它/扎得很深很广/苦心/少之又少」语境义）。传统评测第一大户，测的是「读没读懂」而非「背没背过」。",
+    "author": "AI斗兽场（内容自建，形制致敬阅读理解题）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:reading-mini:2026-09-10",
+    "taskPrefix": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "detail": "细节定位（答案逐字在文中）",
+      "main-idea": "主旨概括（干扰项以偏概全）",
+      "infer": "推理判断（只能推出一个选项）",
+      "word-meaning": "词义与指代理解"
+    }
+  },
+  "startedAt": "2026-09-10T15:45:53.713Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RM-DT-01",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n大熊猫主要栖息在中国四川、陕西和甘肃的山区。它们每天要花 12 到 16 个小时进食，一只成年大熊猫每天能吃掉约 20 公斤竹子。虽然以竹子为主食，大熊猫在分类上却属于食肉目。\n问题：一只成年大熊猫每天大约能吃掉多少公斤竹子？\nA. 10\nB. 15\nC. 20\nD. 30",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RM-DT-01",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n大熊猫主要栖息在中国四川、陕西和甘肃的山区。它们每天要花 12 到 16 个小时进食，一只成年大熊猫每天能吃掉约 20 公斤竹子。虽然以竹子为主食，大熊猫在分类上却属于食肉目。\n问题：一只成年大熊猫每天大约能吃掉多少公斤竹子？\nA. 10\nB. 15\nC. 20\nD. 30",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-01",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n大熊猫主要栖息在中国四川、陕西和甘肃的山区。它们每天要花 12 到 16 个小时进食，一只成年大熊猫每天能吃掉约 20 公斤竹子。虽然以竹子为主食，大熊猫在分类上却属于食肉目。\n问题：一只成年大熊猫每天大约能吃掉多少公斤竹子？\nA. 10\nB. 15\nC. 20\nD. 30",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-01",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n大熊猫主要栖息在中国四川、陕西和甘肃的山区。它们每天要花 12 到 16 个小时进食，一只成年大熊猫每天能吃掉约 20 公斤竹子。虽然以竹子为主食，大熊猫在分类上却属于食肉目。\n问题：一只成年大熊猫每天大约能吃掉多少公斤竹子？\nA. 10\nB. 15\nC. 20\nD. 30",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-02",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n故宫建成于 1420 年，占地约 72 万平方米，有大小宫殿七十多座、房屋九千余间，是世界上现存规模最大的木结构古建筑群。\n问题：故宫建成于哪一年？\nA. 1406\nB. 1420\nC. 1550\nD. 1644",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-02",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n故宫建成于 1420 年，占地约 72 万平方米，有大小宫殿七十多座、房屋九千余间，是世界上现存规模最大的木结构古建筑群。\n问题：故宫建成于哪一年？\nA. 1406\nB. 1420\nC. 1550\nD. 1644",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-02",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n故宫建成于 1420 年，占地约 72 万平方米，有大小宫殿七十多座、房屋九千余间，是世界上现存规模最大的木结构古建筑群。\n问题：故宫建成于哪一年？\nA. 1406\nB. 1420\nC. 1550\nD. 1644",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-02",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n故宫建成于 1420 年，占地约 72 万平方米，有大小宫殿七十多座、房屋九千余间，是世界上现存规模最大的木结构古建筑群。\n问题：故宫建成于哪一年？\nA. 1406\nB. 1420\nC. 1550\nD. 1644",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-03",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n长江全长 6300 多千米，发源于唐古拉山脉，流经 11 个省级行政区，最终注入东海，是中国第一长河。\n问题：长江最终注入哪个海？\nA. 渤海\nB. 黄海\nC. 东海\nD. 南海",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-03",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n长江全长 6300 多千米，发源于唐古拉山脉，流经 11 个省级行政区，最终注入东海，是中国第一长河。\n问题：长江最终注入哪个海？\nA. 渤海\nB. 黄海\nC. 东海\nD. 南海",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-03",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n长江全长 6300 多千米，发源于唐古拉山脉，流经 11 个省级行政区，最终注入东海，是中国第一长河。\n问题：长江最终注入哪个海？\nA. 渤海\nB. 黄海\nC. 东海\nD. 南海",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 228,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-03",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n长江全长 6300 多千米，发源于唐古拉山脉，流经 11 个省级行政区，最终注入东海，是中国第一长河。\n问题：长江最终注入哪个海？\nA. 渤海\nB. 黄海\nC. 东海\nD. 南海",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-04",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂发现蜜源后，会飞回蜂巢跳「8 字舞」向同伴传递信息：舞蹈的方向指示蜜源的方位，舞蹈持续的时间则告诉同伴蜜源有多远。\n问题：蜜蜂发现蜜源后，用什么方式向同伴传递信息？\nA. 发出鸣声\nB. 跳「8 字舞」\nC. 释放气味\nD. 拍打翅膀",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-04",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂发现蜜源后，会飞回蜂巢跳「8 字舞」向同伴传递信息：舞蹈的方向指示蜜源的方位，舞蹈持续的时间则告诉同伴蜜源有多远。\n问题：蜜蜂发现蜜源后，用什么方式向同伴传递信息？\nA. 发出鸣声\nB. 跳「8 字舞」\nC. 释放气味\nD. 拍打翅膀",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-04",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂发现蜜源后，会飞回蜂巢跳「8 字舞」向同伴传递信息：舞蹈的方向指示蜜源的方位，舞蹈持续的时间则告诉同伴蜜源有多远。\n问题：蜜蜂发现蜜源后，用什么方式向同伴传递信息？\nA. 发出鸣声\nB. 跳「8 字舞」\nC. 释放气味\nD. 拍打翅膀",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-04",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂发现蜜源后，会飞回蜂巢跳「8 字舞」向同伴传递信息：舞蹈的方向指示蜜源的方位，舞蹈持续的时间则告诉同伴蜜源有多远。\n问题：蜜蜂发现蜜源后，用什么方式向同伴传递信息？\nA. 发出鸣声\nB. 跳「8 字舞」\nC. 释放气味\nD. 拍打翅膀",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-05",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n为了适应干旱的沙漠环境，仙人掌的叶退化成了刺，可以大大减少水分蒸发；它的根系却十分发达，能深入地下十几米寻找水源。\n问题：仙人掌的叶退化成了什么？\nA. 刺\nB. 绒毛\nC. 花朵\nD. 果实",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-05",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n为了适应干旱的沙漠环境，仙人掌的叶退化成了刺，可以大大减少水分蒸发；它的根系却十分发达，能深入地下十几米寻找水源。\n问题：仙人掌的叶退化成了什么？\nA. 刺\nB. 绒毛\nC. 花朵\nD. 果实",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-05",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n为了适应干旱的沙漠环境，仙人掌的叶退化成了刺，可以大大减少水分蒸发；它的根系却十分发达，能深入地下十几米寻找水源。\n问题：仙人掌的叶退化成了什么？\nA. 刺\nB. 绒毛\nC. 花朵\nD. 果实",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-05",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n为了适应干旱的沙漠环境，仙人掌的叶退化成了刺，可以大大减少水分蒸发；它的根系却十分发达，能深入地下十几米寻找水源。\n问题：仙人掌的叶退化成了什么？\nA. 刺\nB. 绒毛\nC. 花朵\nD. 果实",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-06",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公元前 221 年，秦统一六国。为巩固统一，秦朝推行了一系列措施：统一文字，以小篆为标准字体；统一度量衡；统一货币。\n问题：秦朝统一后推行的标准文字是什么？\nA. 大篆\nB. 小篆\nC. 隶书\nD. 楷书",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-06",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公元前 221 年，秦统一六国。为巩固统一，秦朝推行了一系列措施：统一文字，以小篆为标准字体；统一度量衡；统一货币。\n问题：秦朝统一后推行的标准文字是什么？\nA. 大篆\nB. 小篆\nC. 隶书\nD. 楷书",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-06",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公元前 221 年，秦统一六国。为巩固统一，秦朝推行了一系列措施：统一文字，以小篆为标准字体；统一度量衡；统一货币。\n问题：秦朝统一后推行的标准文字是什么？\nA. 大篆\nB. 小篆\nC. 隶书\nD. 楷书",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-06",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公元前 221 年，秦统一六国。为巩固统一，秦朝推行了一系列措施：统一文字，以小篆为标准字体；统一度量衡；统一货币。\n问题：秦朝统一后推行的标准文字是什么？\nA. 大篆\nB. 小篆\nC. 隶书\nD. 楷书",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-07",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n京杭大运河全长约 1794 千米，始建于春秋时期，连通海河、黄河、淮河、长江、钱塘江五大水系，是世界上里程最长的古代运河。\n问题：京杭大运河全长约为多少千米？\nA. 1294\nB. 1594\nC. 1794\nD. 1994",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-07",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n京杭大运河全长约 1794 千米，始建于春秋时期，连通海河、黄河、淮河、长江、钱塘江五大水系，是世界上里程最长的古代运河。\n问题：京杭大运河全长约为多少千米？\nA. 1294\nB. 1594\nC. 1794\nD. 1994",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-07",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n京杭大运河全长约 1794 千米，始建于春秋时期，连通海河、黄河、淮河、长江、钱塘江五大水系，是世界上里程最长的古代运河。\n问题：京杭大运河全长约为多少千米？\nA. 1294\nB. 1594\nC. 1794\nD. 1994",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-07",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n京杭大运河全长约 1794 千米，始建于春秋时期，连通海河、黄河、淮河、长江、钱塘江五大水系，是世界上里程最长的古代运河。\n问题：京杭大运河全长约为多少千米？\nA. 1294\nB. 1594\nC. 1794\nD. 1994",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-08",
+      "condition": "detail",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n萤火虫能发光，是因为腹部末端有发光器，其中的荧光素在荧光酶作用下与氧气发生反应，把化学能转化为光能。这种光几乎不产生热量，所以被称为冷光。\n问题：萤火虫的光为什么被称为冷光？\nA. 发光时间短\nB. 颜色偏蓝\nC. 只在夜里发光\nD. 几乎不产生热量",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-08",
+      "condition": "detail",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n萤火虫能发光，是因为腹部末端有发光器，其中的荧光素在荧光酶作用下与氧气发生反应，把化学能转化为光能。这种光几乎不产生热量，所以被称为冷光。\n问题：萤火虫的光为什么被称为冷光？\nA. 发光时间短\nB. 颜色偏蓝\nC. 只在夜里发光\nD. 几乎不产生热量",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 337,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-08",
+      "condition": "detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n萤火虫能发光，是因为腹部末端有发光器，其中的荧光素在荧光酶作用下与氧气发生反应，把化学能转化为光能。这种光几乎不产生热量，所以被称为冷光。\n问题：萤火虫的光为什么被称为冷光？\nA. 发光时间短\nB. 颜色偏蓝\nC. 只在夜里发光\nD. 几乎不产生热量",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 315,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-DT-08",
+      "condition": "detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n萤火虫能发光，是因为腹部末端有发光器，其中的荧光素在荧光酶作用下与氧气发生反应，把化学能转化为光能。这种光几乎不产生热量，所以被称为冷光。\n问题：萤火虫的光为什么被称为冷光？\nA. 发光时间短\nB. 颜色偏蓝\nC. 只在夜里发光\nD. 几乎不产生热量",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-01",
+      "condition": "main-idea",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n有人以为记忆力是天生的，其实记忆力和肌肉一样，可以通过锻炼增强。每天背诵十分钟、经常回忆当天学过的东西、保证充足睡眠，都能让记忆力稳步提高。科学家对记忆冠军的研究发现，他们并非天赋异禀，而是长期使用了科学的记忆方法。\n问题：这段话主要想说明什么？\nA. 记忆力是天生的，后天无法改变\nB. 记忆冠军都很聪明\nC. 背诵十分钟就能成为记忆冠军\nD. 记忆力可以通过科学方法锻炼提高",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-01",
+      "condition": "main-idea",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n有人以为记忆力是天生的，其实记忆力和肌肉一样，可以通过锻炼增强。每天背诵十分钟、经常回忆当天学过的东西、保证充足睡眠，都能让记忆力稳步提高。科学家对记忆冠军的研究发现，他们并非天赋异禀，而是长期使用了科学的记忆方法。\n问题：这段话主要想说明什么？\nA. 记忆力是天生的，后天无法改变\nB. 记忆冠军都很聪明\nC. 背诵十分钟就能成为记忆冠军\nD. 记忆力可以通过科学方法锻炼提高",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-01",
+      "condition": "main-idea",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n有人以为记忆力是天生的，其实记忆力和肌肉一样，可以通过锻炼增强。每天背诵十分钟、经常回忆当天学过的东西、保证充足睡眠，都能让记忆力稳步提高。科学家对记忆冠军的研究发现，他们并非天赋异禀，而是长期使用了科学的记忆方法。\n问题：这段话主要想说明什么？\nA. 记忆力是天生的，后天无法改变\nB. 记忆冠军都很聪明\nC. 背诵十分钟就能成为记忆冠军\nD. 记忆力可以通过科学方法锻炼提高",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-01",
+      "condition": "main-idea",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n有人以为记忆力是天生的，其实记忆力和肌肉一样，可以通过锻炼增强。每天背诵十分钟、经常回忆当天学过的东西、保证充足睡眠，都能让记忆力稳步提高。科学家对记忆冠军的研究发现，他们并非天赋异禀，而是长期使用了科学的记忆方法。\n问题：这段话主要想说明什么？\nA. 记忆力是天生的，后天无法改变\nB. 记忆冠军都很聪明\nC. 背诵十分钟就能成为记忆冠军\nD. 记忆力可以通过科学方法锻炼提高",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-02",
+      "condition": "main-idea",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n城市里的大树不仅是风景。夏天，树冠能遮住烈日，让树荫下比太阳地里低好几度；树叶能吸附灰尘、净化空气；鸟雀在枝头做窝，为城市增添生机。保护好身边的每一棵树，就是保护我们自己的家园。\n问题：这段话的主要内容是？\nA. 城市里的树有多种益处，应该保护\nB. 夏天树荫下很凉快\nC. 树叶能吸附灰尘\nD. 鸟雀在树上做窝",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-02",
+      "condition": "main-idea",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n城市里的大树不仅是风景。夏天，树冠能遮住烈日，让树荫下比太阳地里低好几度；树叶能吸附灰尘、净化空气；鸟雀在枝头做窝，为城市增添生机。保护好身边的每一棵树，就是保护我们自己的家园。\n问题：这段话的主要内容是？\nA. 城市里的树有多种益处，应该保护\nB. 夏天树荫下很凉快\nC. 树叶能吸附灰尘\nD. 鸟雀在树上做窝",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-02",
+      "condition": "main-idea",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n城市里的大树不仅是风景。夏天，树冠能遮住烈日，让树荫下比太阳地里低好几度；树叶能吸附灰尘、净化空气；鸟雀在枝头做窝，为城市增添生机。保护好身边的每一棵树，就是保护我们自己的家园。\n问题：这段话的主要内容是？\nA. 城市里的树有多种益处，应该保护\nB. 夏天树荫下很凉快\nC. 树叶能吸附灰尘\nD. 鸟雀在树上做窝",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-02",
+      "condition": "main-idea",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n城市里的大树不仅是风景。夏天，树冠能遮住烈日，让树荫下比太阳地里低好几度；树叶能吸附灰尘、净化空气；鸟雀在枝头做窝，为城市增添生机。保护好身边的每一棵树，就是保护我们自己的家园。\n问题：这段话的主要内容是？\nA. 城市里的树有多种益处，应该保护\nB. 夏天树荫下很凉快\nC. 树叶能吸附灰尘\nD. 鸟雀在树上做窝",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-03",
+      "condition": "main-idea",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂采蜜时，会顺便把花粉从一朵花带到另一朵花，帮助植物完成授粉。据统计，人类吃的食物中，约有三分之一的作物需要蜜蜂等昆虫授粉。如果蜜蜂消失，许多瓜果将大幅减产。小小的蜜蜂，支撑着大大的餐桌。\n问题：这段话意在强调什么？\nA. 蜜蜂会跳「8 字舞」\nB. 蜜蜂对人类的贡献不容忽视\nC. 蜜蜂酿蜜很辛苦\nD. 植物都靠昆虫授粉",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-03",
+      "condition": "main-idea",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂采蜜时，会顺便把花粉从一朵花带到另一朵花，帮助植物完成授粉。据统计，人类吃的食物中，约有三分之一的作物需要蜜蜂等昆虫授粉。如果蜜蜂消失，许多瓜果将大幅减产。小小的蜜蜂，支撑着大大的餐桌。\n问题：这段话意在强调什么？\nA. 蜜蜂会跳「8 字舞」\nB. 蜜蜂对人类的贡献不容忽视\nC. 蜜蜂酿蜜很辛苦\nD. 植物都靠昆虫授粉",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-03",
+      "condition": "main-idea",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂采蜜时，会顺便把花粉从一朵花带到另一朵花，帮助植物完成授粉。据统计，人类吃的食物中，约有三分之一的作物需要蜜蜂等昆虫授粉。如果蜜蜂消失，许多瓜果将大幅减产。小小的蜜蜂，支撑着大大的餐桌。\n问题：这段话意在强调什么？\nA. 蜜蜂会跳「8 字舞」\nB. 蜜蜂对人类的贡献不容忽视\nC. 蜜蜂酿蜜很辛苦\nD. 植物都靠昆虫授粉",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-03",
+      "condition": "main-idea",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n蜜蜂采蜜时，会顺便把花粉从一朵花带到另一朵花，帮助植物完成授粉。据统计，人类吃的食物中，约有三分之一的作物需要蜜蜂等昆虫授粉。如果蜜蜂消失，许多瓜果将大幅减产。小小的蜜蜂，支撑着大大的餐桌。\n问题：这段话意在强调什么？\nA. 蜜蜂会跳「8 字舞」\nB. 蜜蜂对人类的贡献不容忽视\nC. 蜜蜂酿蜜很辛苦\nD. 植物都靠昆虫授粉",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-04",
+      "condition": "main-idea",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n过去，旅客要提前到车站排队买票；后来可以网上购票，凭纸质车票进站；如今，许多车站刷身份证或手机就能直接乘车。传统的纸质车票正在退出历史舞台，车票形态的变化，折射出出行方式的进步。\n问题：这段话主要写了什么？\nA. 怎样在网上购买车票\nB. 纸质车票的制作过程\nC. 车票形态的变化反映了出行的进步\nD. 排队买票很辛苦",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-04",
+      "condition": "main-idea",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n过去，旅客要提前到车站排队买票；后来可以网上购票，凭纸质车票进站；如今，许多车站刷身份证或手机就能直接乘车。传统的纸质车票正在退出历史舞台，车票形态的变化，折射出出行方式的进步。\n问题：这段话主要写了什么？\nA. 怎样在网上购买车票\nB. 纸质车票的制作过程\nC. 车票形态的变化反映了出行的进步\nD. 排队买票很辛苦",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-04",
+      "condition": "main-idea",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n过去，旅客要提前到车站排队买票；后来可以网上购票，凭纸质车票进站；如今，许多车站刷身份证或手机就能直接乘车。传统的纸质车票正在退出历史舞台，车票形态的变化，折射出出行方式的进步。\n问题：这段话主要写了什么？\nA. 怎样在网上购买车票\nB. 纸质车票的制作过程\nC. 车票形态的变化反映了出行的进步\nD. 排队买票很辛苦",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-MI-04",
+      "condition": "main-idea",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n过去，旅客要提前到车站排队买票；后来可以网上购票，凭纸质车票进站；如今，许多车站刷身份证或手机就能直接乘车。传统的纸质车票正在退出历史舞台，车票形态的变化，折射出出行方式的进步。\n问题：这段话主要写了什么？\nA. 怎样在网上购买车票\nB. 纸质车票的制作过程\nC. 车票形态的变化反映了出行的进步\nD. 排队买票很辛苦",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-01",
+      "condition": "infer",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小华把两杯同样多的水，一杯放在阳光下的阳台上，一杯放在阴凉处。两天后，阳台上的那杯只剩半杯，阴凉处的那杯却只少了一点。\n问题：从文中可以推断出什么？\nA. 阳台上的水被人喝掉了\nB. 阴凉处的水不会蒸发\nC. 水在任何地方蒸发得一样快\nD. 有阳光照射时水蒸发得更快",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-01",
+      "condition": "infer",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小华把两杯同样多的水，一杯放在阳光下的阳台上，一杯放在阴凉处。两天后，阳台上的那杯只剩半杯，阴凉处的那杯却只少了一点。\n问题：从文中可以推断出什么？\nA. 阳台上的水被人喝掉了\nB. 阴凉处的水不会蒸发\nC. 水在任何地方蒸发得一样快\nD. 有阳光照射时水蒸发得更快",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-01",
+      "condition": "infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小华把两杯同样多的水，一杯放在阳光下的阳台上，一杯放在阴凉处。两天后，阳台上的那杯只剩半杯，阴凉处的那杯却只少了一点。\n问题：从文中可以推断出什么？\nA. 阳台上的水被人喝掉了\nB. 阴凉处的水不会蒸发\nC. 水在任何地方蒸发得一样快\nD. 有阳光照射时水蒸发得更快",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-01",
+      "condition": "infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小华把两杯同样多的水，一杯放在阳光下的阳台上，一杯放在阴凉处。两天后，阳台上的那杯只剩半杯，阴凉处的那杯却只少了一点。\n问题：从文中可以推断出什么？\nA. 阳台上的水被人喝掉了\nB. 阴凉处的水不会蒸发\nC. 水在任何地方蒸发得一样快\nD. 有阳光照射时水蒸发得更快",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-02",
+      "condition": "infer",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n某种候鸟每年秋天从北方飞往南方越冬，第二年春天再飞回北方繁殖。今年春天，观鸟爱好者在北方比往年提前十天就观测到了这种鸟。\n问题：根据文意可以推断出什么？\nA. 这种鸟今年提前从南方启程北飞了\nB. 这种鸟不再去南方越冬了\nC. 观鸟爱好者今年观测得更仔细\nD. 这种鸟将留在北方过冬",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-02",
+      "condition": "infer",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n某种候鸟每年秋天从北方飞往南方越冬，第二年春天再飞回北方繁殖。今年春天，观鸟爱好者在北方比往年提前十天就观测到了这种鸟。\n问题：根据文意可以推断出什么？\nA. 这种鸟今年提前从南方启程北飞了\nB. 这种鸟不再去南方越冬了\nC. 观鸟爱好者今年观测得更仔细\nD. 这种鸟将留在北方过冬",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-02",
+      "condition": "infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n某种候鸟每年秋天从北方飞往南方越冬，第二年春天再飞回北方繁殖。今年春天，观鸟爱好者在北方比往年提前十天就观测到了这种鸟。\n问题：根据文意可以推断出什么？\nA. 这种鸟今年提前从南方启程北飞了\nB. 这种鸟不再去南方越冬了\nC. 观鸟爱好者今年观测得更仔细\nD. 这种鸟将留在北方过冬",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-02",
+      "condition": "infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n某种候鸟每年秋天从北方飞往南方越冬，第二年春天再飞回北方繁殖。今年春天，观鸟爱好者在北方比往年提前十天就观测到了这种鸟。\n问题：根据文意可以推断出什么？\nA. 这种鸟今年提前从南方启程北飞了\nB. 这种鸟不再去南方越冬了\nC. 观鸟爱好者今年观测得更仔细\nD. 这种鸟将留在北方过冬",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-03",
+      "condition": "infer",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n实验室里，把金属块放进热水中，金属块很快就变热了；把同样大小的木块放进同一杯热水中，木块升温却慢得多。\n问题：这个实验最可能说明什么？\nA. 金属比木头重\nB. 热水温度不够高\nC. 金属比木头更容易导热\nD. 木块比金属块更大",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 79,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-03",
+      "condition": "infer",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n实验室里，把金属块放进热水中，金属块很快就变热了；把同样大小的木块放进同一杯热水中，木块升温却慢得多。\n问题：这个实验最可能说明什么？\nA. 金属比木头重\nB. 热水温度不够高\nC. 金属比木头更容易导热\nD. 木块比金属块更大",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 79,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-03",
+      "condition": "infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n实验室里，把金属块放进热水中，金属块很快就变热了；把同样大小的木块放进同一杯热水中，木块升温却慢得多。\n问题：这个实验最可能说明什么？\nA. 金属比木头重\nB. 热水温度不够高\nC. 金属比木头更容易导热\nD. 木块比金属块更大",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 79,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-03",
+      "condition": "infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n实验室里，把金属块放进热水中，金属块很快就变热了；把同样大小的木块放进同一杯热水中，木块升温却慢得多。\n问题：这个实验最可能说明什么？\nA. 金属比木头重\nB. 热水温度不够高\nC. 金属比木头更容易导热\nD. 木块比金属块更大",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 79,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-04",
+      "condition": "infer",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n王师傅修车三十年，一听发动机的声音就能判断出故障出在哪里。徒弟们问他诀窍，他说：「听得多了，自然就分辨得出来。」\n问题：王师傅的话说明他的本领主要来自什么？\nA. 天生听力好\nB. 先进的检测设备\nC. 师傅的暗中指点\nD. 长期实践积累的经验",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-04",
+      "condition": "infer",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n王师傅修车三十年，一听发动机的声音就能判断出故障出在哪里。徒弟们问他诀窍，他说：「听得多了，自然就分辨得出来。」\n问题：王师傅的话说明他的本领主要来自什么？\nA. 天生听力好\nB. 先进的检测设备\nC. 师傅的暗中指点\nD. 长期实践积累的经验",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 112,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-04",
+      "condition": "infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n王师傅修车三十年，一听发动机的声音就能判断出故障出在哪里。徒弟们问他诀窍，他说：「听得多了，自然就分辨得出来。」\n问题：王师傅的话说明他的本领主要来自什么？\nA. 天生听力好\nB. 先进的检测设备\nC. 师傅的暗中指点\nD. 长期实践积累的经验",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-IF-04",
+      "condition": "infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n王师傅修车三十年，一听发动机的声音就能判断出故障出在哪里。徒弟们问他诀窍，他说：「听得多了，自然就分辨得出来。」\n问题：王师傅的话说明他的本领主要来自什么？\nA. 天生听力好\nB. 先进的检测设备\nC. 师傅的暗中指点\nD. 长期实践积累的经验",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RM-WM-01",
+      "condition": "word-meaning",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n鲸虽然生活在水里，外形也像鱼，但它用肺呼吸，每隔一段时间就要浮出水面换气；而且鲸是胎生的，幼鲸靠吃母鲸的奶长大。所以，鲸不是鱼，而是哺乳动物。\n问题：文中的「它」指的是什么？\nA. 鱼\nB. 鲸\nC. 幼鲸\nD. 母鲸",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-01",
+      "condition": "word-meaning",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n鲸虽然生活在水里，外形也像鱼，但它用肺呼吸，每隔一段时间就要浮出水面换气；而且鲸是胎生的，幼鲸靠吃母鲸的奶长大。所以，鲸不是鱼，而是哺乳动物。\n问题：文中的「它」指的是什么？\nA. 鱼\nB. 鲸\nC. 幼鲸\nD. 母鲸",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-01",
+      "condition": "word-meaning",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n鲸虽然生活在水里，外形也像鱼，但它用肺呼吸，每隔一段时间就要浮出水面换气；而且鲸是胎生的，幼鲸靠吃母鲸的奶长大。所以，鲸不是鱼，而是哺乳动物。\n问题：文中的「它」指的是什么？\nA. 鱼\nB. 鲸\nC. 幼鲸\nD. 母鲸",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-01",
+      "condition": "word-meaning",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n鲸虽然生活在水里，外形也像鱼，但它用肺呼吸，每隔一段时间就要浮出水面换气；而且鲸是胎生的，幼鲸靠吃母鲸的奶长大。所以，鲸不是鱼，而是哺乳动物。\n问题：文中的「它」指的是什么？\nA. 鱼\nB. 鲸\nC. 幼鲸\nD. 母鲸",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-02",
+      "condition": "word-meaning",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n竹子在前四年只长三厘米，从第五年开始，每天能长三十厘米，六周就能长到十五米。原来，前四年竹子在地下悄悄发展根系，把根扎得很深很广。\n问题：文中「扎得很深很广」说的是竹子的什么？\nA. 竹竿\nB. 竹叶\nC. 根系\nD. 竹节",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-02",
+      "condition": "word-meaning",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n竹子在前四年只长三厘米，从第五年开始，每天能长三十厘米，六周就能长到十五米。原来，前四年竹子在地下悄悄发展根系，把根扎得很深很广。\n问题：文中「扎得很深很广」说的是竹子的什么？\nA. 竹竿\nB. 竹叶\nC. 根系\nD. 竹节",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-02",
+      "condition": "word-meaning",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n竹子在前四年只长三厘米，从第五年开始，每天能长三十厘米，六周就能长到十五米。原来，前四年竹子在地下悄悄发展根系，把根扎得很深很广。\n问题：文中「扎得很深很广」说的是竹子的什么？\nA. 竹竿\nB. 竹叶\nC. 根系\nD. 竹节",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-02",
+      "condition": "word-meaning",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n竹子在前四年只长三厘米，从第五年开始，每天能长三十厘米，六周就能长到十五米。原来，前四年竹子在地下悄悄发展根系，把根扎得很深很广。\n问题：文中「扎得很深很广」说的是竹子的什么？\nA. 竹竿\nB. 竹叶\nC. 根系\nD. 竹节",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 396,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-03",
+      "condition": "word-meaning",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小明的字写得歪歪扭扭，老师常提醒他要坐端正、握好笔。小明不以为然，觉得只要认识字就行。直到一次考试，他因为字迹潦草被扣了分，才明白老师的苦心。\n问题：文中「老师的苦心」指的是什么？\nA. 老师想为难小明\nB. 老师希望小明把字写好\nC. 老师喜欢批评学生\nD. 老师想让小明多写作业",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-03",
+      "condition": "word-meaning",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小明的字写得歪歪扭扭，老师常提醒他要坐端正、握好笔。小明不以为然，觉得只要认识字就行。直到一次考试，他因为字迹潦草被扣了分，才明白老师的苦心。\n问题：文中「老师的苦心」指的是什么？\nA. 老师想为难小明\nB. 老师希望小明把字写好\nC. 老师喜欢批评学生\nD. 老师想让小明多写作业",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-03",
+      "condition": "word-meaning",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小明的字写得歪歪扭扭，老师常提醒他要坐端正、握好笔。小明不以为然，觉得只要认识字就行。直到一次考试，他因为字迹潦草被扣了分，才明白老师的苦心。\n问题：文中「老师的苦心」指的是什么？\nA. 老师想为难小明\nB. 老师希望小明把字写好\nC. 老师喜欢批评学生\nD. 老师想让小明多写作业",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-03",
+      "condition": "word-meaning",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n小明的字写得歪歪扭扭，老师常提醒他要坐端正、握好笔。小明不以为然，觉得只要认识字就行。直到一次考试，他因为字迹潦草被扣了分，才明白老师的苦心。\n问题：文中「老师的苦心」指的是什么？\nA. 老师想为难小明\nB. 老师希望小明把字写好\nC. 老师喜欢批评学生\nD. 老师想让小明多写作业",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 110,
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-04",
+      "condition": "word-meaning",
+      "model": "mock:xueba-o9",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n地球上的水看起来很多，其实绝大部分是海水，不能直接饮用。淡水只占很小一部分，而且大部分淡水还被冻结在两极的冰盖里。可供人类直接利用的淡水，其实少之又少。\n问题：文中「少之又少」用来形容什么？\nA. 海水\nB. 冰盖\nC. 两极\nD. 可供人类直接利用的淡水",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-04",
+      "condition": "word-meaning",
+      "model": "mock:huatou-72b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n地球上的水看起来很多，其实绝大部分是海水，不能直接饮用。淡水只占很小一部分，而且大部分淡水还被冻结在两极的冰盖里。可供人类直接利用的淡水，其实少之又少。\n问题：文中「少之又少」用来形容什么？\nA. 海水\nB. 冰盖\nC. 两极\nD. 可供人类直接利用的淡水",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-04",
+      "condition": "word-meaning",
+      "model": "mock:jianglv-7b",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n地球上的水看起来很多，其实绝大部分是海水，不能直接饮用。淡水只占很小一部分，而且大部分淡水还被冻结在两极的冰盖里。可供人类直接利用的淡水，其实少之又少。\n问题：文中「少之又少」用来形容什么？\nA. 海水\nB. 冰盖\nC. 两极\nD. 可供人类直接利用的淡水",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RM-WM-04",
+      "condition": "word-meaning",
+      "model": "mock:laoshi-k2",
+      "prompt": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n地球上的水看起来很多，其实绝大部分是海水，不能直接饮用。淡水只占很小一部分，而且大部分淡水还被冻结在两极的冰盖里。可供人类直接利用的淡水，其实少之又少。\n问题：文中「少之又少」用来形容什么？\nA. 海水\nB. 冰盖\nC. 两极\nD. 可供人类直接利用的淡水",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "06d20437c82771c3",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.7.0"
+  }
+}

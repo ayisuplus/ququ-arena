@@ -1,0 +1,1869 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "math24-judge",
+    "title": "24 点裁决擂台",
+    "description": "四个 1-9 数字能否凑出 24（能/不能）——把「表达式多解」绕过为可解性二值判断。可解性由生成器全排列枚举权威判定；能/不能各 15 均衡采样；锚定已知案：3 3 8 8（经典难题，能）与 1 1 1 1（不能）。测算术搜索与数感。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:math24-judge:2026-09-10",
+    "taskPrefix": "只输出「能」或「不能」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "solvable": "可解（应回答「能」）",
+      "unsolvable": "不可解（应回答「不能」）"
+    }
+  },
+  "startedAt": "2026-09-10T09:47:15.225Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "M24-PIN-3388",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、3、8、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "M24-PIN-3388",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、3、8、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-3388",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、3、8、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-3388",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、3、8、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-1111",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、1、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-1111",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、1、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-1111",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、1、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-PIN-1111",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、1、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 147,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-03",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-03",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-03",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 277,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-03",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-04",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、4、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-04",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、4、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-04",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、4、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-04",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、4、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-05",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-05",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-05",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 366,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-05",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-06",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、9、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-06",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、9、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-06",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、9、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-06",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、9、1、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-07",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、4、9、5 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-07",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、4、9、5 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-07",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、4、9、5 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 259,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-07",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、4、9、5 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-08",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、2、2、6 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-08",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、2、2、6 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-08",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、2、2、6 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-08",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、2、2、6 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-09",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、2、1、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-09",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、2、1、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-09",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、2、1、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-09",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、2、1、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-10",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-10",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-10",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-10",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-11",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、7、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-11",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、7、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 99,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-11",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、7、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-11",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 9、7、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 130,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-12",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、3、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-12",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、3、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-12",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、3、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-12",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 6、3、5、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-13",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、3、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-13",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、3、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-13",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、3、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-13",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、3、4 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-14",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、6、8、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-14",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、6、8、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-14",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、6、8、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-14",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、6、8、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-15",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、1、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-15",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、1、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-15",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、1、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-15",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、7、1、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-16",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、3、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-16",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、3、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 83,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-16",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、3、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-16",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、3、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-17",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-17",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-17",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-17",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-18",
+      "condition": "solvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、4、4、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 310,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-18",
+      "condition": "solvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、4、4、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-18",
+      "condition": "solvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、4、4、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-18",
+      "condition": "solvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 2、4、4、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "能",
+      "target": "能",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-19",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、7、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-19",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、7、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 379,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-19",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、7、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 310,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-19",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、6、7、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-20",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 4、2、3、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 298,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-20",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 4、2、3、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-20",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 4、2、3、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-20",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 4、2、3、3 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 273,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "M24-21",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、1、6、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-21",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、1、6、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-21",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、1、6、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-21",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、1、6、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-22",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 8、7、7、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 330,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-22",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 8、7、7、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-22",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 8、7、7、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 213,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-22",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 8、7、7、1 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-23",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-23",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-23",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-23",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、5、6、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 217,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-24",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、8、9、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-24",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、8、9、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 436,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-24",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、8、9、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 157,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-24",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、8、9、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-25",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、5、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-25",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、5、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 442,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-25",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、5、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 478,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-25",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、5、5、8 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-26",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、9、4、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-26",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、9、4、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-26",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、9、4、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 242,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-26",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、9、4、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 346,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-27",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、6、5、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-27",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、6、5、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 174,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-27",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、6、5、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-27",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 5、6、5、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-28",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、1、2、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-28",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、1、2、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-28",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、1、2、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-28",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 3、1、2、2 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-29",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、7、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-29",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、7、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-29",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、7、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-29",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 1、6、7、7 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-30",
+      "condition": "unsolvable",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不",
+      "target": "不能",
+      "latencyMs": 183,
+      "score": 0,
+      "note": "期望「不能」，实答「不」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-30",
+      "condition": "unsolvable",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-30",
+      "condition": "unsolvable",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "M24-30",
+      "condition": "unsolvable",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「能」或「不能」，不多一个字。\n用 7、8、7、9 这四个数字（每个数字恰好用一次）和加减乘除，能否凑出 24？",
+      "answer": "不能",
+      "target": "不能",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "41ed4efdae2de26e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.19.0"
+  }
+}

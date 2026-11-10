@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"v013 Edit mode required\");\nvar avatar=UnityEngine.GameObject.Find(\"P2W visible player graybox avatar\").GetComponent<UnityEngine.Renderer>();var enabled=avatar.enabled;\ntry {\n avatar.enabled=false;\n foreach(var name in new[]{\"Cafe local reflections\",\"Forecourt local reflections\"}){\n  var p=UnityEngine.GameObject.Find(name).GetComponent<UnityEngine.ReflectionProbe>();\n  var path=\"Assets/Station/Textures/SereneReflectionsV013/\"+(name.StartsWith(\"Cafe\")?\"CafeInterior\":\"ForecourtInterior\")+\".exr\";\n  if(!UnityEditor.Lightmapping.BakeReflectionProbe(p,path))throw new System.Exception(\"Bake failed: \"+name);\n  UnityEditor.AssetDatabase.ImportAsset(path,UnityEditor.ImportAssetOptions.ForceSynchronousImport);\n  var cube=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Cubemap>(path);if(!cube||cube.width!=256)throw new System.Exception(\"Invalid cubemap: \"+path);\n  p.customBakedTexture=cube;UnityEditor.EditorUtility.SetDirty(p);\n }\n} finally {avatar.enabled=enabled;}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{baked=2};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "baked": 2
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

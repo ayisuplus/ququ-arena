@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var current = UnityEngine.SceneManagement.SceneManager.GetActiveScene(); if (UnityEditor.EditorApplication.isPlaying || current.isDirty) throw new System.Exception(\"Expected clean Edit state\"); var restored = UnityEditor.SceneManagement.EditorSceneManager.OpenScene(\"Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity\"); return new { path = restored.path, restored.isDirty, playing = UnityEditor.EditorApplication.isPlaying };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false,
+        "playing": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

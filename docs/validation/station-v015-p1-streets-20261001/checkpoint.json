@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-01",
+  "baseline": "9730eb25",
+  "objectiveComplete": false,
+  "p1": "offset-street technical gate passed",
+  "p2": "measured envelope candidate, ownership and dynamic daily routes pending",
+  "reports": [
+    {
+      "path": "editor60/streets.json",
+      "passed": true,
+      "checks": 129,
+      "frames": 4770
+    },
+    {
+      "path": "player30/streets.json",
+      "passed": true,
+      "checks": 129,
+      "frames": 2391
+    },
+    {
+      "path": "player60/streets.json",
+      "passed": true,
+      "checks": 129,
+      "frames": 4769
+    },
+    {
+      "path": "player144/streets.json",
+      "passed": true,
+      "checks": 129,
+      "frames": 11423
+    },
+    {
+      "path": "player60/read.json",
+      "passed": true,
+      "checks": 7,
+      "frames": 120
+    }
+  ],
+  "files": [
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingPrototypeProbe.cs",
+      "sha256": "66C07FD61EB38B1F3DE27CDC6D25F0868C2A9CAD3E546CE306DC22F8A8BB5E2F"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Editor/StationRingPrototypeBuild.cs",
+      "sha256": "EC34F94CC6290AAF5EC6F24E01826B0B0CA75E32A2D20C9626A04DD0DDC1989D"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationRingStreetsV015.unity",
+      "sha256": "978CA014A608BD3C9207B265C5A9271766BA233D7F7C9D88269E77814190D887"
+    },
+    {
+      "path": ".cache/v015-p1-streets-player/StationRingPrototype.exe",
+      "sha256": "30D4B41A85303ABF83C686F06B75AB1681471C79B9DC7FE530EAD09099FDF63D"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingLayoutV015.unity",
+      "sha256": "82A7BB697A246CC45ADC8A3483AAA73C3F2C2C10249FF8284B831670129A5412"
+    }
+  ]
+}

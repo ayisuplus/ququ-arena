@@ -1,0 +1,15 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "anagram-check",
+  "title": "变位词擂台",
+  "description": "两词是否互为变位（listen↔silent，字母完全相同仅顺序不同）。是=洗牌生成、否=改一字母且保底不成变位；生成器即权威，契约测试重排复算。测字符级细心。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:anagram-check:2026-09-10",
+  "taskPrefix": "只输出「是」或「否」，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "is-anagram": "互为变位（答「是」）",
+    "not-anagram": "不互为变位（答「否」）"
+  }
+}

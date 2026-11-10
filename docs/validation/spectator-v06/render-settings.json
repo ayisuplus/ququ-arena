@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "C:/Users/36322/AppData/Local/Temp/ququ-v06-configure.cs",
+      "entry": "ConfigureV06.Main",
+      "timeout_ms": "60000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 596,
+      "executeMs": 1669,
+      "assemblyName": "PipelineRunScript_ququ-v06-configure_43aa6733b89d41e8af3858fb7eb82790",
+      "success": true,
+      "result": {
+        "pipeline": "PC_RPAsset",
+        "scale": 1,
+        "msaa": 4,
+        "anisotropic": "ForceEnable",
+        "textures": [
+          {
+            "preset": "chatgpt",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/chatgpt/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "chatgpt",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/chatgpt/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "claude",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/claude/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "claude",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/claude/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "deepseek",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/deepseek/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "deepseek",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/deepseek/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "gemini",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/gemini/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "gemini",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/gemini/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "glm",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/glm/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "glm",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/glm/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "kimi",
+            "property": "_BaseMap",
+            "path": "Assets/Art/ModelPresets/kimi/SourceBaseColor.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          },
+          {
+            "preset": "kimi",
+            "property": "_BumpMap",
+            "path": "Assets/Art/ModelPresets/kimi/SourceNormal.png",
+            "width": 2048,
+            "height": 2048,
+            "filter": "Trilinear",
+            "aniso": 16
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\36322\\AppData\\Local\\Temp\\ququ-arena3d-build-22dd3ca5"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

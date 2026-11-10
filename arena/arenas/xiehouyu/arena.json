@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "xiehouyu",
+  "title": "歇后语接龙擂台",
+  "description": "20 条通行歇后语，出前半答后半（内容自建，canonical 答案）。测中文民间语言库存量——\"泥菩萨过河\"之后接不出\"自身难保\"的模型不配谈中文。exact 裁判（归一化去标点）。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:xiehouyu:2026-09-10",
+  "taskPrefix": "只输出歇后语的后半句本身，不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "classic": "通行歇后语接龙"
+  }
+}

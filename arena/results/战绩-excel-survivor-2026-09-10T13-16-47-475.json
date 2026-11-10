@@ -1,0 +1,421 @@
+{
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "excel-survivor",
+    "title": "烂 Excel 求生",
+    "description": "测大模型能不能从一堆烂表格里活着出来：伪装分隔符、千分位、表头偏移、全角数字、前向填充、混乱日期——每题都是真实办公室惨案。exact 裁判。",
+    "author": "AI斗兽场内置",
+    "canary": "ququ-arena:78036449-6831-8dfa-f492-ab175c",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "format_trick": "伪装格式：分隔符与排版假象",
+      "dirty": "脏数据：千分位/全角/混入字符",
+      "structure": "结构陷阱：表头偏移与前向填充"
+    }
+  },
+  "startedAt": "2026-09-10T13:16:47.475Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:xueba-o9",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:huatou-72b",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "3",
+      "target": "33",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「33」，实答「3」",
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:jianglv-7b",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:laoshi-k2",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-002",
+      "condition": "format_trick",
+      "model": "mock:xueba-o9",
+      "prompt": "某财务表把数字排成了「千分位+空格对齐」的印刷体：\n\n| 月份 | 销售额 |\n| 一月 |  1,234 |\n| 二月 |  2,345 |\n| 三月 |    666 |\n\n请计算三个月销售总额（去掉千分位逗号再求和），只输出数字。\n",
+      "answer": "4245",
+      "target": "4245",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-002",
+      "condition": "format_trick",
+      "model": "mock:huatou-72b",
+      "prompt": "某财务表把数字排成了「千分位+空格对齐」的印刷体：\n\n| 月份 | 销售额 |\n| 一月 |  1,234 |\n| 二月 |  2,345 |\n| 三月 |    666 |\n\n请计算三个月销售总额（去掉千分位逗号再求和），只输出数字。\n",
+      "answer": "4245",
+      "target": "4245",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-002",
+      "condition": "format_trick",
+      "model": "mock:jianglv-7b",
+      "prompt": "某财务表把数字排成了「千分位+空格对齐」的印刷体：\n\n| 月份 | 销售额 |\n| 一月 |  1,234 |\n| 二月 |  2,345 |\n| 三月 |    666 |\n\n请计算三个月销售总额（去掉千分位逗号再求和），只输出数字。\n",
+      "answer": "42",
+      "target": "4245",
+      "latencyMs": 104,
+      "score": 0,
+      "note": "期望「4245」，实答「42」",
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-002",
+      "condition": "format_trick",
+      "model": "mock:laoshi-k2",
+      "prompt": "某财务表把数字排成了「千分位+空格对齐」的印刷体：\n\n| 月份 | 销售额 |\n| 一月 |  1,234 |\n| 二月 |  2,345 |\n| 三月 |    666 |\n\n请计算三个月销售总额（去掉千分位逗号再求和），只输出数字。\n",
+      "answer": "4245",
+      "target": "4245",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-003",
+      "condition": "dirty",
+      "model": "mock:xueba-o9",
+      "prompt": "下面这张表混入了全角数字（０-９）和半角数字：\n\n| 工号 | 工时 |\n| A1 | ４０ |\n| A2 | 35 |\n| A3 | ２５ |\n\n请计算总工时，只输出数字。\n",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-003",
+      "condition": "dirty",
+      "model": "mock:huatou-72b",
+      "prompt": "下面这张表混入了全角数字（０-９）和半角数字：\n\n| 工号 | 工时 |\n| A1 | ４０ |\n| A2 | 35 |\n| A3 | ２５ |\n\n请计算总工时，只输出数字。\n",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-003",
+      "condition": "dirty",
+      "model": "mock:jianglv-7b",
+      "prompt": "下面这张表混入了全角数字（０-９）和半角数字：\n\n| 工号 | 工时 |\n| A1 | ４０ |\n| A2 | 35 |\n| A3 | ２５ |\n\n请计算总工时，只输出数字。\n",
+      "answer": "10",
+      "target": "100",
+      "latencyMs": 150,
+      "score": 0,
+      "note": "期望「100」，实答「10」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-003",
+      "condition": "dirty",
+      "model": "mock:laoshi-k2",
+      "prompt": "下面这张表混入了全角数字（０-９）和半角数字：\n\n| 工号 | 工时 |\n| A1 | ４０ |\n| A2 | 35 |\n| A3 | ２５ |\n\n请计算总工时，只输出数字。\n",
+      "answer": "10",
+      "target": "100",
+      "latencyMs": 112,
+      "score": 0,
+      "note": "期望「100」，实答「10」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-004",
+      "condition": "dirty",
+      "model": "mock:xueba-o9",
+      "prompt": "下面的「备注」列混入了单位文本，请只提取数值部分求和：\n\n| 项目 | 数量 |\n| 钢筋 | 12 根 |\n| 水泥 | 8 袋 |\n| 砂石 | 5 车 |\n\n请计算总数量，只输出数字。\n",
+      "answer": "25",
+      "target": "25",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-004",
+      "condition": "dirty",
+      "model": "mock:huatou-72b",
+      "prompt": "下面的「备注」列混入了单位文本，请只提取数值部分求和：\n\n| 项目 | 数量 |\n| 钢筋 | 12 根 |\n| 水泥 | 8 袋 |\n| 砂石 | 5 车 |\n\n请计算总数量，只输出数字。\n",
+      "answer": "2",
+      "target": "25",
+      "latencyMs": 192,
+      "score": 0,
+      "note": "期望「25」，实答「2」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-004",
+      "condition": "dirty",
+      "model": "mock:jianglv-7b",
+      "prompt": "下面的「备注」列混入了单位文本，请只提取数值部分求和：\n\n| 项目 | 数量 |\n| 钢筋 | 12 根 |\n| 水泥 | 8 袋 |\n| 砂石 | 5 车 |\n\n请计算总数量，只输出数字。\n",
+      "answer": "2",
+      "target": "25",
+      "latencyMs": 211,
+      "score": 0,
+      "note": "期望「25」，实答「2」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-004",
+      "condition": "dirty",
+      "model": "mock:laoshi-k2",
+      "prompt": "下面的「备注」列混入了单位文本，请只提取数值部分求和：\n\n| 项目 | 数量 |\n| 钢筋 | 12 根 |\n| 水泥 | 8 袋 |\n| 砂石 | 5 车 |\n\n请计算总数量，只输出数字。\n",
+      "answer": "25",
+      "target": "25",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-005",
+      "condition": "structure",
+      "model": "mock:xueba-o9",
+      "prompt": "这张表的首行是合并单元格大标题（不是表头），真正的表头在第二行：\n\n2026 年第一季度销售汇总（财务科制）\n区域,产品,销量\n华东,打印机,12\n华南,碎纸机,7\n华东,复印机,9\n\n请问华东区的总销量是多少？只输出数字。\n",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-005",
+      "condition": "structure",
+      "model": "mock:huatou-72b",
+      "prompt": "这张表的首行是合并单元格大标题（不是表头），真正的表头在第二行：\n\n2026 年第一季度销售汇总（财务科制）\n区域,产品,销量\n华东,打印机,12\n华南,碎纸机,7\n华东,复印机,9\n\n请问华东区的总销量是多少？只输出数字。\n",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-005",
+      "condition": "structure",
+      "model": "mock:jianglv-7b",
+      "prompt": "这张表的首行是合并单元格大标题（不是表头），真正的表头在第二行：\n\n2026 年第一季度销售汇总（财务科制）\n区域,产品,销量\n华东,打印机,12\n华南,碎纸机,7\n华东,复印机,9\n\n请问华东区的总销量是多少？只输出数字。\n",
+      "answer": "2",
+      "target": "21",
+      "latencyMs": 168,
+      "score": 0,
+      "note": "期望「21」，实答「2」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-005",
+      "condition": "structure",
+      "model": "mock:laoshi-k2",
+      "prompt": "这张表的首行是合并单元格大标题（不是表头），真正的表头在第二行：\n\n2026 年第一季度销售汇总（财务科制）\n区域,产品,销量\n华东,打印机,12\n华南,碎纸机,7\n华东,复印机,9\n\n请问华东区的总销量是多少？只输出数字。\n",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-006",
+      "condition": "structure",
+      "model": "mock:xueba-o9",
+      "prompt": "下面这张表的「班级」列是合并单元格遗留——空白格表示与上一行相同（前向填充）：\n\n| 班级 | 姓名 | 得分 |\n| 一班 | 张三 | 80 |\n|      | 李四 | 90 |\n| 二班 | 王五 | 70 |\n|      | 赵六 | 60 |\n\n请问一班的总分是多少？只输出数字。\n",
+      "answer": "17",
+      "target": "170",
+      "latencyMs": 467,
+      "score": 0,
+      "note": "期望「170」，实答「17」",
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-006",
+      "condition": "structure",
+      "model": "mock:huatou-72b",
+      "prompt": "下面这张表的「班级」列是合并单元格遗留——空白格表示与上一行相同（前向填充）：\n\n| 班级 | 姓名 | 得分 |\n| 一班 | 张三 | 80 |\n|      | 李四 | 90 |\n| 二班 | 王五 | 70 |\n|      | 赵六 | 60 |\n\n请问一班的总分是多少？只输出数字。\n",
+      "answer": "1国0",
+      "target": "170",
+      "latencyMs": 415,
+      "score": 0,
+      "note": "期望「170」，实答「1国0」",
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-006",
+      "condition": "structure",
+      "model": "mock:jianglv-7b",
+      "prompt": "下面这张表的「班级」列是合并单元格遗留——空白格表示与上一行相同（前向填充）：\n\n| 班级 | 姓名 | 得分 |\n| 一班 | 张三 | 80 |\n|      | 李四 | 90 |\n| 二班 | 王五 | 70 |\n|      | 赵六 | 60 |\n\n请问一班的总分是多少？只输出数字。\n",
+      "answer": "170",
+      "target": "170",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-006",
+      "condition": "structure",
+      "model": "mock:laoshi-k2",
+      "prompt": "下面这张表的「班级」列是合并单元格遗留——空白格表示与上一行相同（前向填充）：\n\n| 班级 | 姓名 | 得分 |\n| 一班 | 张三 | 80 |\n|      | 李四 | 90 |\n| 二班 | 王五 | 70 |\n|      | 赵六 | 60 |\n\n请问一班的总分是多少？只输出数字。\n",
+      "answer": "170",
+      "target": "170",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "14bb87fc9193324e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.1.0"
+  }
+}

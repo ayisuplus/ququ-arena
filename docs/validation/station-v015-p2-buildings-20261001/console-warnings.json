@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "seq": 3851,
+      "timestampUtc": "2026-09-30T21:40:20.4384266Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds.",
+      "stackTrace": "UnityEngine.Debug:LogWarning (object)\nUnity.Pipeline.Editor.BuildProcessors.PipelineRuntimeBuildProcessor:OnPreprocessBuild (UnityEditor.Build.BuildCallbackContext) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:73)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nStationRingPrototypeBuild:BuildCandidate (string,string) (at Assets/Editor/StationRingPrototypeBuild.cs:50)\nStationRingPrototypeBuild:BuildBuildings () (at Assets/Editor/StationRingPrototypeBuild.cs:30)\nUnityEditor.EditorApplication:ExecuteMenuItem (string)\nUnity.Pipeline.Editor.Commands.MenuItemCommand:ExecuteMenu (string) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/MenuItemCommand.cs:73)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    }
+  ],
+  "cursor": 3912,
+  "session": "814657f7922d4052bc4ce786f94bf596",
+  "returned": 1,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 56,
+    "warn": 164,
+    "log": 1780
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-09-30T21:50:36.0338437Z",
+    "ageMs": 66,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 1,
+    "consoleLogs": 62,
+    "seeded": true
+  }
+}

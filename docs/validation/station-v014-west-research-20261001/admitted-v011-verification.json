@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\QuQuArena3D\\Vendor\\ResearchEnvelopeV014-v011",
+    "manifest": {
+      "assetId": "black_hole_station_research_envelope_v014",
+      "description": "Original folded research-gallery envelope with closed 4cm clerestory glass and approach roof overlap; preserves original room footprint and doors.",
+      "displayName": "black-hole-station-research-envelope-v014",
+      "files": [
+        {
+          "bytes": 104516,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "ce0747588ce0215a2ba690f8706a07f11c3290a39f44753f12e7588e680db977"
+        },
+        {
+          "bytes": 1622,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "34b91ed6d2f04c4158055621b3c57746de5940640114505b97ddb4f43f34edf7"
+        },
+        {
+          "bytes": 549,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "0aac4148a7324ecd27f42cb16569bfda02641cd127b7e7673f9fe35576169a59"
+        },
+        {
+          "bytes": 2786,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "5a6a6b39935e6dbf481e10bac530991c50bac42931641ac3f7e37e66c2d75157"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_82416b58def0be9467b46197",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.1"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

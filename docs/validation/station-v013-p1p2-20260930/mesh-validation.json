@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var root=UnityEngine.GameObject.Find(\"V013 P1P2 finished joinery\");long tris=0;var missing=new System.Collections.Generic.List<string>();foreach(var f in root.GetComponentsInChildren<UnityEngine.MeshFilter>()){if(!f.sharedMesh)missing.Add(f.name);else tris+=f.sharedMesh.triangles.Length/3;}foreach(var r in root.GetComponentsInChildren<UnityEngine.Renderer>())foreach(var m in r.sharedMaterials)if(!m||!m.shader||!m.shader.isSupported)missing.Add(r.name);var s=UnityEngine.SceneManagement.SceneManager.GetActiveScene();return new{triangles=tris,missing,dirty=s.isDirty,parts=root.transform.childCount,lights=root.GetComponentsInChildren<UnityEngine.Light>().Length};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "triangles": 16476,
+        "missing": [],
+        "dirty": false,
+        "parts": 34,
+        "lights": 11
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

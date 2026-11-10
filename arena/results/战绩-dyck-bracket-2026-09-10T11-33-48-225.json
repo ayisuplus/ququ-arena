@@ -1,0 +1,1495 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "dyck-bracket",
+    "title": "括号补全擂台",
+    "description": "BBH Dyck languages 中文版（生成器自建）：四型括号的合法串砍尾，问按正确顺序还缺哪几个收尾括号。生成器栈模拟权威；缺失数=砍尾数自证入生成器。LLM 经典弱项。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:dyck-bracket:2026-09-10",
+    "taskPrefix": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "dyck-close": "括号砍尾补全"
+    }
+  },
+  "startedAt": "2026-09-10T11:33:48.225Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "))",
+      "target": "))",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "))",
+      "target": "))",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": "))",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": "))",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 149,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-06",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<<>({(())})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-06",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<<>({(())})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-06",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<<>({(())})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-06",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<<>({(())})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-07",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}[[{[[<{}>]]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}]]",
+      "target": "}]]",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-07",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}[[{[[<{}>]]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}]]",
+      "target": "}]]",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-07",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}[[{[[<{}>]]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "上]]",
+      "target": "}]]",
+      "latencyMs": 419,
+      "score": 0,
+      "note": "期望「}]]」，实答「上]]」",
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-07",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}[[{[[<{}>]]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}]]",
+      "target": "}]]",
+      "latencyMs": 147,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-08",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[(({[<[]>]})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]",
+      "target": ")]",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-08",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[(({[<[]>]})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]",
+      "target": ")]",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-08",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[(({[<[]>]})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]",
+      "target": ")]",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-08",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[(({[<[]>]})\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]",
+      "target": ")]",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-09",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{{[({()}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]}}",
+      "target": ")]}}",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-09",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{{[({()}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]}}",
+      "target": ")]}}",
+      "latencyMs": 306,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DK-09",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{{[({()}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]}}",
+      "target": ")]}}",
+      "latencyMs": 328,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-09",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{{[({()}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")]}}",
+      "target": ")]}}",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-10",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：((<>))(<[[]({})]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-10",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：((<>))(<[[]({})]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-10",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：((<>))(<[[]({})]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">)",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-10",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：((<>))(<[[]({})]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-11",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-11",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-11",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-11",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-12",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]([]<[(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>)",
+      "target": "]>)",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-12",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]([]<[(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>)",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-12",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]([]<[(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>)",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-12",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]([]<[(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>)",
+      "target": "]>)",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-13",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<[]<><{}>[<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>",
+      "latencyMs": 315,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-13",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<[]<><{}>[<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-13",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<[]<><{}>[<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]>",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-13",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<[]<><{}>[<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-14",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{[]}>[](\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": ")",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-14",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{[]}>[](\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": ")",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-14",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{[]}>[](\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": ")",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-14",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{[]}>[](\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": ")",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-15",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[]({}<(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-15",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[]({}<(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-15",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[]({}<(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-15",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()[]({}<(){}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">)",
+      "target": ">)",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-16",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{(()[]){<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}}}",
+      "target": "}}}",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-16",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{(()[]){<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}}}",
+      "target": "}}}",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-16",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{(()[]){<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}}",
+      "target": "}}}",
+      "latencyMs": 321,
+      "score": 0,
+      "note": "期望「}}}」，实答「}}」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-16",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{(()[]){<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}}}",
+      "target": "}}}",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-17",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{{}(<{}>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}}",
+      "target": ")}}",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-17",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{{}(<{}>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}}",
+      "target": ")}}",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-17",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{{}(<{}>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}",
+      "target": ")}}",
+      "latencyMs": 463,
+      "score": 0,
+      "note": "期望「)}}」，实答「)}」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-17",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{{}(<{}>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}}",
+      "target": ")}}",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-18",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{<><{}>}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-18",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{<><{}>}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-18",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{<><{}>}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-18",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：<{<><{}>}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-19",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{}()([]{}{[[]]}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}",
+      "target": ")}",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-19",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{}()([]{}{[[]]}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")",
+      "target": ")}",
+      "latencyMs": 207,
+      "score": 0,
+      "note": "期望「)}」，实答「)」",
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-19",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{}()([]{}{[[]]}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}",
+      "target": ")}",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-19",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{{}()([]{}{[[]]}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ")}",
+      "target": ")}",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-20",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[()[]]<[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-20",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[()[]]<[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]>",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-20",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[()[]]<[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]>",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-20",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[()[]]<[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]>",
+      "target": "]>",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-21",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>()]{}<<\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-21",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>()]{}<<\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">>",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-21",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>()]{}<<\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">",
+      "target": ">>",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-21",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>()]{}<<\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-22",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]<<()<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-22",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]<<()<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-22",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]<<()<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-22",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[]<<()<>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": ">>",
+      "target": ">>",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-23",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[<{[()][<{({})}>]}>]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-23",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[<{[()][<{({})}>]}>]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 100,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-23",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[<{[()][<{({})}>]}>]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 147,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-23",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[<{[()][<{({})}>]}>]\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 424,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-24",
+      "condition": "dyck-close",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：(){<({})>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 259,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-24",
+      "condition": "dyck-close",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：(){<({})>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-24",
+      "condition": "dyck-close",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：(){<({})>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DK-24",
+      "condition": "dyck-close",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：(){<({})>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "6b460b600bd8cdb0",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.28.0"
+  }
+}

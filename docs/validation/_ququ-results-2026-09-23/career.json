@@ -1,0 +1,505 @@
+{
+  "version": 1,
+  "entries": {
+    "openrouter:liquid/lfm-2.5-2.6b:free": {
+      "id": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "name": "liquid/lfm-2.5-2.6b:free",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1500,
+      "answered": 4,
+      "scoreSum": 4,
+      "byCondition": {
+        "conflict-ink": {
+          "n": 1,
+          "sum": 1
+        }
+      },
+      "lastBattleAt": "2026-09-23T04:56:46.350Z",
+      "history": [
+        {
+          "at": "2026-09-23T04:56:46.350Z",
+          "arena": "stroop-test",
+          "avg": 1,
+          "place": 1,
+          "field": 4,
+          "delta": 0,
+          "season": "2026-Q3"
+        }
+      ],
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1500,
+          "deltaSum": 0,
+          "eloFrom": 1500
+        }
+      },
+      "rivals": {},
+      "glicko": {
+        "r": 1500,
+        "rd": 350,
+        "sigma": 0.06
+      }
+    },
+    "openrouter:qwen/qwen3.8-27b:free": {
+      "id": "openrouter:qwen/qwen3.8-27b:free",
+      "name": "qwen/qwen3.8-27b:free",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1500,
+      "answered": 0,
+      "scoreSum": 0,
+      "byCondition": {},
+      "lastBattleAt": "2026-09-23T04:56:46.350Z",
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1500,
+          "deltaSum": 0,
+          "eloFrom": 1500
+        }
+      },
+      "glicko": {
+        "r": 1500,
+        "rd": 350,
+        "sigma": 0.06
+      }
+    },
+    "openrouter:z-ai/glm-5.2:free": {
+      "id": "openrouter:z-ai/glm-5.2:free",
+      "name": "z-ai/glm-5.2:free",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1500,
+      "answered": 0,
+      "scoreSum": 0,
+      "byCondition": {},
+      "lastBattleAt": "2026-09-23T04:56:46.350Z",
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1500,
+          "deltaSum": 0,
+          "eloFrom": 1500
+        }
+      },
+      "glicko": {
+        "r": 1500,
+        "rd": 350,
+        "sigma": 0.06
+      }
+    },
+    "custom:673ec651-bab4-433a-9530-22db507908d0": {
+      "id": "custom:673ec651-bab4-433a-9530-22db507908d0",
+      "name": "673ec651-bab4-433a-9530-22db507908d0",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1500,
+      "answered": 0,
+      "scoreSum": 0,
+      "byCondition": {},
+      "lastBattleAt": "2026-09-23T04:56:46.350Z",
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1500,
+          "deltaSum": 0,
+          "eloFrom": 1500
+        }
+      },
+      "glicko": {
+        "r": 1500,
+        "rd": 350,
+        "sigma": 0.06
+      }
+    },
+    "openrouter:nvidia/nemotron-3-super-120b-a12b:free": {
+      "id": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "name": "nvidia/nemotron-3-super-120b-a12b:free",
+      "battles": 2,
+      "titles": 2,
+      "podiums": 1,
+      "elo": 1512,
+      "answered": 15,
+      "scoreSum": 15,
+      "byCondition": {
+        "chain-5": {
+          "n": 1,
+          "sum": 1
+        },
+        "dyck-close": {
+          "n": 1,
+          "sum": 1
+        }
+      },
+      "lastBattleAt": "2026-09-23T05:12:45.673Z",
+      "history": [
+        {
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie",
+          "avg": 1,
+          "place": 1,
+          "field": 4,
+          "delta": 12,
+          "season": "2026-Q3"
+        },
+        {
+          "at": "2026-09-23T05:12:45.673Z",
+          "arena": "dyck-bracket",
+          "avg": 1,
+          "place": 1,
+          "field": 2,
+          "delta": 0,
+          "season": "2026-Q3"
+        }
+      ],
+      "seasons": {
+        "2026-Q3": {
+          "battles": 2,
+          "titles": 2,
+          "elo": 1512,
+          "deltaSum": 12,
+          "eloFrom": 1500
+        }
+      },
+      "achievements": [
+        {
+          "id": "first_title",
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie"
+        },
+        {
+          "id": "debut_champion",
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie"
+        },
+        {
+          "id": "flawless",
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie"
+        }
+      ],
+      "rivals": {
+        "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be": {
+          "n": 1,
+          "ahead": 1
+        },
+        "openrouter:nex-agi/nex-n2.5-pro:free": {
+          "n": 2,
+          "ahead": 2
+        },
+        "custom:66fad92c-14d6-4186-9338-9380768db4df": {
+          "n": 1,
+          "ahead": 1
+        }
+      },
+      "glicko": {
+        "r": 1600,
+        "rd": 201.3,
+        "sigma": 0.06
+      }
+    },
+    "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be": {
+      "id": "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be",
+      "name": "06b844ac-59a7-457e-b7e4-ad63aa6c22be",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1512,
+      "answered": 3,
+      "scoreSum": 3,
+      "byCondition": {
+        "chain-5": {
+          "n": 1,
+          "sum": 1
+        }
+      },
+      "lastBattleAt": "2026-09-23T05:07:39.103Z",
+      "history": [
+        {
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie",
+          "avg": 1,
+          "place": 2,
+          "field": 4,
+          "delta": 12,
+          "season": "2026-Q3"
+        }
+      ],
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1512,
+          "deltaSum": 12,
+          "eloFrom": 1500
+        }
+      },
+      "rivals": {
+        "openrouter:nvidia/nemotron-3-super-120b-a12b:free": {
+          "n": 1,
+          "ahead": 0
+        },
+        "openrouter:nex-agi/nex-n2.5-pro:free": {
+          "n": 1,
+          "ahead": 1
+        },
+        "custom:66fad92c-14d6-4186-9338-9380768db4df": {
+          "n": 1,
+          "ahead": 1
+        }
+      },
+      "glicko": {
+        "r": 1600,
+        "rd": 227.9384354305623,
+        "sigma": 0.06
+      }
+    },
+    "openrouter:nex-agi/nex-n2.5-pro:free": {
+      "id": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "name": "nex-agi/nex-n2.5-pro:free",
+      "battles": 2,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1511,
+      "answered": 10,
+      "scoreSum": 10,
+      "byCondition": {
+        "chain-5": {
+          "n": 1,
+          "sum": 1
+        },
+        "dyck-close": {
+          "n": 1,
+          "sum": 1
+        }
+      },
+      "lastBattleAt": "2026-09-23T05:12:45.673Z",
+      "history": [
+        {
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie",
+          "avg": 1,
+          "place": 3,
+          "field": 4,
+          "delta": 11,
+          "season": "2026-Q3"
+        },
+        {
+          "at": "2026-09-23T05:12:45.673Z",
+          "arena": "dyck-bracket",
+          "avg": 1,
+          "place": 2,
+          "field": 2,
+          "delta": 0,
+          "season": "2026-Q3"
+        }
+      ],
+      "seasons": {
+        "2026-Q3": {
+          "battles": 2,
+          "titles": 0,
+          "elo": 1511,
+          "deltaSum": 11,
+          "eloFrom": 1500
+        }
+      },
+      "rivals": {
+        "openrouter:nvidia/nemotron-3-super-120b-a12b:free": {
+          "n": 2,
+          "ahead": 0
+        },
+        "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be": {
+          "n": 1,
+          "ahead": 0
+        },
+        "custom:66fad92c-14d6-4186-9338-9380768db4df": {
+          "n": 1,
+          "ahead": 1
+        }
+      },
+      "glicko": {
+        "r": 1600,
+        "rd": 201.3,
+        "sigma": 0.06
+      }
+    },
+    "custom:66fad92c-14d6-4186-9338-9380768db4df": {
+      "id": "custom:66fad92c-14d6-4186-9338-9380768db4df",
+      "name": "66fad92c-14d6-4186-9338-9380768db4df",
+      "battles": 1,
+      "titles": 0,
+      "podiums": 0,
+      "elo": 1465,
+      "answered": 3,
+      "scoreSum": 2,
+      "byCondition": {
+        "chain-5": {
+          "n": 1,
+          "sum": 0.6666666666666666
+        }
+      },
+      "lastBattleAt": "2026-09-23T05:07:39.103Z",
+      "history": [
+        {
+          "at": "2026-09-23T05:07:39.103Z",
+          "arena": "truth-lie",
+          "avg": 0.6666666666666666,
+          "place": 4,
+          "field": 4,
+          "delta": -35,
+          "season": "2026-Q3"
+        }
+      ],
+      "seasons": {
+        "2026-Q3": {
+          "battles": 1,
+          "titles": 0,
+          "elo": 1465,
+          "deltaSum": -35,
+          "eloFrom": 1500
+        }
+      },
+      "rivals": {
+        "openrouter:nvidia/nemotron-3-super-120b-a12b:free": {
+          "n": 1,
+          "ahead": 0
+        },
+        "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be": {
+          "n": 1,
+          "ahead": 0
+        },
+        "openrouter:nex-agi/nex-n2.5-pro:free": {
+          "n": 1,
+          "ahead": 0
+        }
+      },
+      "glicko": {
+        "r": 1200,
+        "rd": 227.9384354305623,
+        "sigma": 0.06
+      }
+    }
+  },
+  "settledMatches": {
+    "57831ea0-d793-4538-81a7-86d9687fc878": [
+      {
+        "id": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "name": "liquid/lfm-2.5-2.6b:free",
+        "before": 1500,
+        "after": 1500,
+        "delta": 0,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "openrouter:qwen/qwen3.8-27b:free",
+        "name": "qwen/qwen3.8-27b:free",
+        "before": 1500,
+        "after": 1500,
+        "delta": 0,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "openrouter:z-ai/glm-5.2:free",
+        "name": "z-ai/glm-5.2:free",
+        "before": 1500,
+        "after": 1500,
+        "delta": 0,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "custom:673ec651-bab4-433a-9530-22db507908d0",
+        "name": "673ec651-bab4-433a-9530-22db507908d0",
+        "before": 1500,
+        "after": 1500,
+        "delta": 0,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      }
+    ],
+    "c6280330-e974-4544-af81-4f4ec3d28dc7": [
+      {
+        "id": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+        "name": "nvidia/nemotron-3-super-120b-a12b:free",
+        "before": 1500,
+        "after": 1512,
+        "delta": 12,
+        "isDebut": true,
+        "newAchievements": [
+          "first_title",
+          "debut_champion",
+          "flawless"
+        ],
+        "decayed": false
+      },
+      {
+        "id": "custom:06b844ac-59a7-457e-b7e4-ad63aa6c22be",
+        "name": "06b844ac-59a7-457e-b7e4-ad63aa6c22be",
+        "before": 1500,
+        "after": 1512,
+        "delta": 12,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "openrouter:nex-agi/nex-n2.5-pro:free",
+        "name": "nex-agi/nex-n2.5-pro:free",
+        "before": 1500,
+        "after": 1511,
+        "delta": 11,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "custom:66fad92c-14d6-4186-9338-9380768db4df",
+        "name": "66fad92c-14d6-4186-9338-9380768db4df",
+        "before": 1500,
+        "after": 1465,
+        "delta": -35,
+        "isDebut": true,
+        "newAchievements": [],
+        "decayed": false
+      }
+    ],
+    "c8c9caaf-8d0e-44aa-a065-cd359719bb48": [
+      {
+        "id": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+        "name": "nvidia/nemotron-3-super-120b-a12b:free",
+        "before": 1512,
+        "after": 1512,
+        "delta": 0,
+        "isDebut": false,
+        "newAchievements": [],
+        "decayed": false
+      },
+      {
+        "id": "openrouter:nex-agi/nex-n2.5-pro:free",
+        "name": "nex-agi/nex-n2.5-pro:free",
+        "before": 1511,
+        "after": 1511,
+        "delta": 0,
+        "isDebut": false,
+        "newAchievements": [],
+        "decayed": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 182,
+    "reflectionCycles": 5,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=10",
+        "V019 reflection - research low runtime updates=10"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [
+        "V015 reflection - cafe runtime updates=12",
+        "V015 reflection - research runtime updates=12",
+        "V015 reflection - 06 study runtime updates=10",
+        "V019 reflection - research main runtime updates=10",
+        "V019 reflection - research low runtime updates=10",
+        "V019 reflection - reading main runtime updates=10",
+        "V019 reflection - cafe rear runtime updates=10",
+        "V019 reflection - cafe loggia runtime updates=10"
+    ],
+    "views": [
+        {
+            "name": "cafe-court",
+            "frames": 2254,
+            "renderedFrames": 2254,
+            "p95Ms": 4.516801357269287,
+            "drawCalls": 2252.0545696539484
+        },
+        {
+            "name": "cafe-old-room",
+            "frames": 2470,
+            "renderedFrames": 2470,
+            "p95Ms": 4.240900993347168,
+            "drawCalls": 1005.1546558704454
+        },
+        {
+            "name": "cafe-loggia",
+            "frames": 1698,
+            "renderedFrames": 1698,
+            "p95Ms": 5.982199668884277,
+            "drawCalls": 5850.330977620731
+        },
+        {
+            "name": "reading-entry",
+            "frames": 2055,
+            "renderedFrames": 2055,
+            "p95Ms": 4.902303218841553,
+            "drawCalls": 3732.0944038929442
+        },
+        {
+            "name": "reading-court",
+            "frames": 2199,
+            "renderedFrames": 2199,
+            "p95Ms": 4.616999626159668,
+            "drawCalls": 2973.4970441109595
+        },
+        {
+            "name": "research-court",
+            "frames": 1702,
+            "renderedFrames": 1702,
+            "p95Ms": 5.969295978546143,
+            "drawCalls": 6457.629259694477
+        },
+        {
+            "name": "research-old-room",
+            "frames": 2185,
+            "renderedFrames": 2185,
+            "p95Ms": 4.714399337768555,
+            "drawCalls": 2975.9185354691076
+        }
+    ],
+    "errors": []
+}

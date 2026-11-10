@@ -1,0 +1,3712 @@
+{
+  "arena": {
+    "name": "tongjia-pinyin",
+    "title": "通假·拼音剖面擂台",
+    "description": "复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。",
+    "author": "TongJia-Bench",
+    "version": "0.1.0",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "tone_mark": "带调拼音还原",
+      "tone_number": "数字调拼音还原",
+      "no_tone": "无声调拼音还原",
+      "initials": "首字母缩写还原（悬崖维度）",
+      "mixed_50": "汉字拼音混写还原"
+    }
+  },
+  "startedAt": "2026-09-09T18:02:30.250Z",
+  "durationMs": 4,
+  "contestants": [
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 214,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北是中国的首都」",
+      "usage": {
+        "input": 30,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 167,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「京是中国的首都」",
+      "usage": {
+        "input": 33,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0003",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei jing shi zhong guo de shou du",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 282,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0003",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei jing shi zhong guo de shou du",
+      "answer": "北京是中",
+      "target": "北京是中国的首都",
+      "latencyMs": 381,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北京是中」",
+      "usage": {
+        "input": 30,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0003",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei jing shi zhong guo de shou du",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0004",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb j s z g d s d",
+      "answer": "北京是中",
+      "target": "北京是中国的首都",
+      "latencyMs": 279,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北京是中」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0004",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb j s z g d s d",
+      "answer": "北是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 229,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北是中国的首都」",
+      "usage": {
+        "input": 27,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0004",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb j s z g d s d",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0005",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbei京是中guodeshou都",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0005",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbei京是中guodeshou都",
+      "answer": "北京是中",
+      "target": "北京是中国的首都",
+      "latencyMs": 398,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北京是中」",
+      "usage": {
+        "input": 26,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0005",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbei京是中guodeshou都",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0006",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nrén gōng zhì néng zhèng zài gǎi biàn shì jiè",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0006",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nrén gōng zhì néng zhèng zài gǎi biàn shì jiè",
+      "answer": "人工智能正改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 195,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工智能正改变世界」",
+      "usage": {
+        "input": 35,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0006",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nrén gōng zhì néng zhèng zài gǎi biàn shì jiè",
+      "answer": "人为智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 413,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人为智能正在改变世界」",
+      "usage": {
+        "input": 35,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0007",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren2 gong1 zhi4 neng2 zheng4 zai4 gai3 bian4 shi4 jie4",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0007",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren2 gong1 zhi4 neng2 zheng4 zai4 gai3 bian4 shi4 jie4",
+      "answer": "人工是能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 99,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工是能正在改变世界」",
+      "usage": {
+        "input": 40,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0007",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren2 gong1 zhi4 neng2 zheng4 zai4 gai3 bian4 shi4 jie4",
+      "answer": "人工能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 324,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工能正在改变世界」",
+      "usage": {
+        "input": 40,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0008",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren gong zhi neng zheng zai gai bian shi jie",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 369,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0008",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren gong zhi neng zheng zai gai bian shi jie",
+      "answer": "人工智能正",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 394,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工智能正」",
+      "usage": {
+        "input": 35,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0008",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren gong zhi neng zheng zai gai bian shi jie",
+      "answer": "人工智能正在改变世大",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 187,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工智能正在改变世大」",
+      "usage": {
+        "input": 35,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0009",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nr g z n z z g b s j",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0009",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nr g z n z z g b s j",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0009",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nr g z n z z g b s j",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0010",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n人工智neng正在gaibian世jie",
+      "answer": "人工智能正",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 103,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「人工智能正」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0010",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n人工智neng正在gaibian世jie",
+      "answer": "工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "期望「人工智能正在改变世界」，实答「工智能正在改变世界」",
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0010",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n人工智neng正在gaibian世jie",
+      "answer": "人工智能正在改变世界",
+      "target": "人工智能正在改变世界",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0011",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njīn tiān de tiān qì fēi cháng shì hé jiāo yóu",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0011",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njīn tiān de tiān qì fēi cháng shì hé jiāo yóu",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0011",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njīn tiān de tiān qì fēi cháng shì hé jiāo yóu",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0012",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin1 tian1 de tian1 qi4 fei1 chang2 shi4 he2 jiao1 you2",
+      "answer": "今天的天气非常适合郊我",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 114,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非常适合郊我」",
+      "usage": {
+        "input": 41,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0012",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin1 tian1 de tian1 qi4 fei1 chang2 shi4 he2 jiao1 you2",
+      "answer": "今天人天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 370,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天人天气非常适合郊游」",
+      "usage": {
+        "input": 41,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0012",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin1 tian1 de tian1 qi4 fei1 chang2 shi4 he2 jiao1 you2",
+      "answer": "今天的天气非",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 322,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非」",
+      "usage": {
+        "input": 41,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0013",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin tian de tian qi fei chang shi he jiao you",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0013",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin tian de tian qi fei chang shi he jiao you",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0013",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin tian de tian qi fei chang shi he jiao you",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 101,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0014",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nj t d t q f c s h j y",
+      "answer": "今天的天气非",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非」",
+      "usage": {
+        "input": 30,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0014",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nj t d t q f c s h j y",
+      "answer": "今天的天气非常适合有游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 124,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非常适合有游」",
+      "usage": {
+        "input": 30,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0014",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nj t d t q f c s h j y",
+      "answer": "今天的天气非",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 180,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非」",
+      "usage": {
+        "input": 30,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0015",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\njin天detian气非chang适合郊you",
+      "answer": "今天的气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 297,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的气非常适合郊游」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0015",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\njin天detian气非chang适合郊you",
+      "answer": "今天的天气非常了合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 330,
+      "score": 0,
+      "note": "期望「今天的天气非常适合郊游」，实答「今天的天气非常了合郊游」",
+      "usage": {
+        "input": 29,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0015",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\njin天detian气非chang适合郊you",
+      "answer": "今天的天气非常适合郊游",
+      "target": "今天的天气非常适合郊游",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0016",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè běn shū de nèi róng shí fēn yǒu qù",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0016",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè běn shū de nèi róng shí fēn yǒu qù",
+      "answer": "这本书的内",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 260,
+      "score": 0,
+      "note": "期望「这本书的内容十分有趣」，实答「这本书的内」",
+      "usage": {
+        "input": 32,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0016",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè běn shū de nèi róng shí fēn yǒu qù",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0017",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ben3 shu1 de nei4 rong2 shi2 fen1 you3 qu4",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0017",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ben3 shu1 de nei4 rong2 shi2 fen1 you3 qu4",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0017",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ben3 shu1 de nei4 rong2 shi2 fen1 you3 qu4",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0018",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ben shu de nei rong shi fen you qu",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0018",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ben shu de nei rong shi fen you qu",
+      "answer": "这本书的内容十分有中",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 375,
+      "score": 0,
+      "note": "期望「这本书的内容十分有趣」，实答「这本书的内容十分有中」",
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0018",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ben shu de nei rong shi fen you qu",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0019",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz b s d n r s f y q",
+      "answer": "这本书的内",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 155,
+      "score": 0,
+      "note": "期望「这本书的内容十分有趣」，实答「这本书的内」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0019",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz b s d n r s f y q",
+      "answer": "这本的的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 383,
+      "score": 0,
+      "note": "期望「这本书的内容十分有趣」，实答「这本的的内容十分有趣」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0019",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz b s d n r s f y q",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0020",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhebenshudenei容shifenyouqu",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0020",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhebenshudenei容shifenyouqu",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 215,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0020",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhebenshudenei容shifenyouqu",
+      "answer": "这本书的内容十分有趣",
+      "target": "这本书的内容十分有趣",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0021",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nkē jì chuàng xīn tuī dòng shè huì jìn bù",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0021",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nkē jì chuàng xīn tuī dòng shè huì jìn bù",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 291,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0021",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nkē jì chuàng xīn tuī dòng shè huì jìn bù",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0022",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke1 ji4 chuang4 xin1 tui1 dong4 she4 hui4 jin4 bu4",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0022",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke1 ji4 chuang4 xin1 tui1 dong4 she4 hui4 jin4 bu4",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0022",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke1 ji4 chuang4 xin1 tui1 dong4 she4 hui4 jin4 bu4",
+      "answer": "科技创新推",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 109,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推」",
+      "usage": {
+        "input": 38,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0023",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke ji chuang xin tui dong she hui jin bu",
+      "answer": "科技创新推动社一进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 475,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推动社一进步」",
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0023",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke ji chuang xin tui dong she hui jin bu",
+      "answer": "科技创新推",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 335,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推」",
+      "usage": {
+        "input": 33,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0023",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke ji chuang xin tui dong she hui jin bu",
+      "answer": "这技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 182,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「这技创新推动社会进步」",
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0024",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nk j c x t d s h j b",
+      "answer": "科技创新推动了会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 421,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推动了会进步」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0024",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nk j c x t d s h j b",
+      "answer": "科技创新推",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0024",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nk j c x t d s h j b",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0025",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nkeji创新推动社会进bu",
+      "answer": "科技创新推",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 204,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推」",
+      "usage": {
+        "input": 24,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0025",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nkeji创新推动社会进bu",
+      "answer": "科技创新推动社会进上",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 192,
+      "score": 0,
+      "note": "期望「科技创新推动社会进步」，实答「科技创新推动社会进上」",
+      "usage": {
+        "input": 24,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0025",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nkeji创新推动社会进bu",
+      "answer": "科技创新推动社会进步",
+      "target": "科技创新推动社会进步",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0026",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntā měi tiān jiān chí duàn liàn shēn tǐ",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0026",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntā měi tiān jiān chí duàn liàn shēn tǐ",
+      "answer": "他每天持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 177,
+      "score": 0,
+      "note": "期望「他每天坚持锻炼身体」，实答「他每天持锻炼身体」",
+      "usage": {
+        "input": 32,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0026",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntā měi tiān jiān chí duàn liàn shēn tǐ",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0027",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta1 mei3 tian1 jian1 chi2 duan4 lian4 shen1 ti3",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0027",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta1 mei3 tian1 jian1 chi2 duan4 lian4 shen1 ti3",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0027",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta1 mei3 tian1 jian1 chi2 duan4 lian4 shen1 ti3",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0028",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta mei tian jian chi duan lian shen ti",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0028",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta mei tian jian chi duan lian shen ti",
+      "answer": "他每天坚持",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 238,
+      "score": 0,
+      "note": "期望「他每天坚持锻炼身体」，实答「他每天坚持」",
+      "usage": {
+        "input": 32,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0028",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta mei tian jian chi duan lian shen ti",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0029",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt m t j c d l s t",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0029",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt m t j c d l s t",
+      "answer": "他每天坚持",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 324,
+      "score": 0,
+      "note": "期望「他每天坚持锻炼身体」，实答「他每天坚持」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0029",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt m t j c d l s t",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0030",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n他每天坚chiduanlian身ti",
+      "answer": "他每天坚锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 140,
+      "score": 0,
+      "note": "期望「他每天坚持锻炼身体」，实答「他每天坚锻炼身体」",
+      "usage": {
+        "input": 27,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0030",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n他每天坚chiduanlian身ti",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0030",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n他每天坚chiduanlian身ti",
+      "answer": "他每天坚持锻炼身体",
+      "target": "他每天坚持锻炼身体",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0031",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhōng wén shì shì jiè shàng zuì nán de yǔ yán zhī yī",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0031",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhōng wén shì shì jiè shàng zuì nán de yǔ yán zhī yī",
+      "answer": "中文是世界上最难的语言之人",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「中文是世界上最难的语言之人」",
+      "usage": {
+        "input": 39,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0031",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhōng wén shì shì jiè shàng zuì nán de yǔ yán zhī yī",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0032",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong1 wen2 shi4 shi4 jie4 shang4 zui4 nan2 de yu3 yan2 zhi1 yi1",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0032",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong1 wen2 shi4 shi4 jie4 shang4 zui4 nan2 de yu3 yan2 zhi1 yi1",
+      "answer": "中文是世界上最",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 209,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「中文是世界上最」",
+      "usage": {
+        "input": 45,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0032",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong1 wen2 shi4 shi4 jie4 shang4 zui4 nan2 de yu3 yan2 zhi1 yi1",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 213,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0033",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong wen shi shi jie shang zui nan de yu yan zhi yi",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0033",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong wen shi shi jie shang zui nan de yu yan zhi yi",
+      "answer": "中文是世界上最的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 92,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「中文是世界上最的语言之一」",
+      "usage": {
+        "input": 39,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0033",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong wen shi shi jie shang zui nan de yu yan zhi yi",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0034",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz w s s j s z n d y y z y",
+      "answer": "中文是世界上最难的语之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 448,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「中文是世界上最难的语之一」",
+      "usage": {
+        "input": 32,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0034",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz w s s j s z n d y y z y",
+      "answer": "我文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 84,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「我文是世界上最难的语言之一」",
+      "usage": {
+        "input": 32,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0034",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz w s s j s z n d y y z y",
+      "answer": "中文是世界上最",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 233,
+      "score": 0,
+      "note": "期望「中文是世界上最难的语言之一」，实答「中文是世界上最」",
+      "usage": {
+        "input": 32,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0035",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n中文shishijieshangzuinan的语言之一",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0035",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n中文shishijieshangzuinan的语言之一",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0035",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n中文shishijieshangzuinan的语言之一",
+      "answer": "中文是世界上最难的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 7
+      }
+    },
+    {
+      "taskId": "t2-p2h-0036",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbǎo hù huán jìng shì měi gè rén de zé rèn",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 452,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0036",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbǎo hù huán jìng shì měi gè rén de zé rèn",
+      "answer": "保环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 113,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「保环境是每个人的责任」",
+      "usage": {
+        "input": 34,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0036",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbǎo hù huán jìng shì měi gè rén de zé rèn",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0037",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao3 hu4 huan2 jing4 shi4 mei3 ge4 ren2 de ze2 ren4",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0037",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao3 hu4 huan2 jing4 shi4 mei3 ge4 ren2 de ze2 ren4",
+      "answer": "保护环境是每",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「保护环境是每」",
+      "usage": {
+        "input": 39,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0037",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao3 hu4 huan2 jing4 shi4 mei3 ge4 ren2 de ze2 ren4",
+      "answer": "护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 252,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「护环境是每个人的责任」",
+      "usage": {
+        "input": 39,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0038",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao hu huan jing shi mei ge ren de ze ren",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0038",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao hu huan jing shi mei ge ren de ze ren",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0038",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao hu huan jing shi mei ge ren de ze ren",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0039",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb h h j s m g r d z r",
+      "answer": "保护环是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 190,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「保护环是每个人的责任」",
+      "usage": {
+        "input": 30,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0039",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb h h j s m g r d z r",
+      "answer": "保护环境是每个人责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 380,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「保护环境是每个人责任」",
+      "usage": {
+        "input": 30,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0039",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb h h j s m g r d z r",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0040",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbaohu环jing是mei个人的ze任",
+      "answer": "保护环境是每个人责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 245,
+      "score": 0,
+      "note": "期望「保护环境是每个人的责任」，实答「保护环境是每个人责任」",
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0040",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbaohu环jing是mei个人的ze任",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0040",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbaohu环jing是mei个人的ze任",
+      "answer": "保护环境是每个人的责任",
+      "target": "保护环境是每个人的责任",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 6
+      }
+    },
+    {
+      "taskId": "t2-p2h-0041",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè ge wèn tí xū yào rèn zhēn yán jiū",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0041",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè ge wèn tí xū yào rèn zhēn yán jiū",
+      "answer": "这个问题需",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 469,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「这个问题需」",
+      "usage": {
+        "input": 32,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0041",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè ge wèn tí xū yào rèn zhēn yán jiū",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0042",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ge wen4 ti2 xu1 yao4 ren4 zhen1 yan2 jiu1",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0042",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ge wen4 ti2 xu1 yao4 ren4 zhen1 yan2 jiu1",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0042",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ge wen4 ti2 xu1 yao4 ren4 zhen1 yan2 jiu1",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0043",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ge wen ti xu yao ren zhen yan jiu",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0043",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ge wen ti xu yao ren zhen yan jiu",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0043",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ge wen ti xu yao ren zhen yan jiu",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0044",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz g w t x y r z y j",
+      "answer": "这个问题要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 217,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「这个问题要认真研究」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0044",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz g w t x y r z y j",
+      "answer": "这个问题需要认真究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 121,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「这个问题需要认真究」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0044",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz g w t x y r z y j",
+      "answer": "这个问题需",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「这个问题需」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0045",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhege问题xuyao认真研jiu",
+      "answer": "为个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 404,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「为个问题需要认真研究」",
+      "usage": {
+        "input": 27,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0045",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhege问题xuyao认真研jiu",
+      "answer": "这个问题需认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 129,
+      "score": 0,
+      "note": "期望「这个问题需要认真研究」，实答「这个问题需认真研究」",
+      "usage": {
+        "input": 27,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0045",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhege问题xuyao认真研jiu",
+      "answer": "这个问题需要认真研究",
+      "target": "这个问题需要认真研究",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0046",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyīn yuè néng gòu táo yě rén de qíng cāo",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0046",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyīn yuè néng gòu táo yě rén de qíng cāo",
+      "answer": "音乐能够陶冶人的了操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 175,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的了操」",
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0046",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyīn yuè néng gòu táo yě rén de qíng cāo",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 201,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0047",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin1 yue4 neng2 gou4 tao2 ye3 ren2 de qing2 cao1",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0047",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin1 yue4 neng2 gou4 tao2 ye3 ren2 de qing2 cao1",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0047",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin1 yue4 neng2 gou4 tao2 ye3 ren2 de qing2 cao1",
+      "answer": "音乐能够陶",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶」",
+      "usage": {
+        "input": 37,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0048",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin yue neng gou tao ye ren de qing cao",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0048",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin yue neng gou tao ye ren de qing cao",
+      "answer": "音乐能够陶",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 453,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶」",
+      "usage": {
+        "input": 33,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0048",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin yue neng gou tao ye ren de qing cao",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0049",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ny y n g t y r d q c",
+      "answer": "音乐能够陶",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 112,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0049",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ny y n g t y r d q c",
+      "answer": "音乐能够陶冶人的操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 229,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的操」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0049",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ny y n g t y r d q c",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0050",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nyin乐能够taoyerende情cao",
+      "answer": "音乐能够陶",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 121,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0050",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nyin乐能够taoyerende情cao",
+      "answer": "音乐能够陶冶人的在操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 140,
+      "score": 0,
+      "note": "期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的在操」",
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0050",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nyin乐能够taoyerende情cao",
+      "answer": "音乐能够陶冶人的情操",
+      "target": "音乐能够陶冶人的情操",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0051",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhī shí gǎi biàn mìng yùn",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0051",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhī shí gǎi biàn mìng yùn",
+      "answer": "知识改",
+      "target": "知识改变命运",
+      "latencyMs": 364,
+      "score": 0,
+      "note": "期望「知识改变命运」，实答「知识改」",
+      "usage": {
+        "input": 26,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0051",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhī shí gǎi biàn mìng yùn",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0052",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi1 shi2 gai3 bian4 ming4 yun4",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0052",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi1 shi2 gai3 bian4 ming4 yun4",
+      "answer": "知识改变命",
+      "target": "知识改变命运",
+      "latencyMs": 468,
+      "score": 0,
+      "note": "期望「知识改变命运」，实答「知识改变命」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0052",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi1 shi2 gai3 bian4 ming4 yun4",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0053",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi shi gai bian ming yun",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0053",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi shi gai bian ming yun",
+      "answer": "知识改变命",
+      "target": "知识改变命运",
+      "latencyMs": 94,
+      "score": 0,
+      "note": "期望「知识改变命运」，实答「知识改变命」",
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0053",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi shi gai bian ming yun",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0054",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz s g b m y",
+      "answer": "识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 250,
+      "score": 0,
+      "note": "期望「知识改变命运」，实答「识改变命运」",
+      "usage": {
+        "input": 25,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0054",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz s g b m y",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0054",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz s g b m y",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0055",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhishi改bian命运",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0055",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhishi改bian命运",
+      "answer": "知识改",
+      "target": "知识改变命运",
+      "latencyMs": 338,
+      "score": 0,
+      "note": "期望「知识改变命运」，实答「知识改」",
+      "usage": {
+        "input": 24,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0055",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhishi改bian命运",
+      "answer": "知识改变命运",
+      "target": "知识改变命运",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0056",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuán jié jiù shì lì liàng",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0056",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuán jié jiù shì lì liàng",
+      "answer": "团结就是量",
+      "target": "团结就是力量",
+      "latencyMs": 463,
+      "score": 0,
+      "note": "期望「团结就是力量」，实答「团结就是量」",
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0056",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuán jié jiù shì lì liàng",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0057",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan2 jie2 jiu4 shi4 li4 liang4",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0057",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan2 jie2 jiu4 shi4 li4 liang4",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0057",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan2 jie2 jiu4 shi4 li4 liang4",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0058",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan jie jiu shi li liang",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0058",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan jie jiu shi li liang",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0058",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan jie jiu shi li liang",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0059",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt j j s l l",
+      "answer": "团结就",
+      "target": "团结就是力量",
+      "latencyMs": 239,
+      "score": 0,
+      "note": "期望「团结就是力量」，实答「团结就」",
+      "usage": {
+        "input": 25,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0059",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt j j s l l",
+      "answer": "团是就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 430,
+      "score": 0,
+      "note": "期望「团结就是力量」，实答「团是就是力量」",
+      "usage": {
+        "input": 25,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0059",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt j j s l l",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0060",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n团jiejiu是li量",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0060",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n团jiejiu是li量",
+      "answer": "团为就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 309,
+      "score": 0,
+      "note": "期望「团结就是力量」，实答「团为就是力量」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0060",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n团jiejiu是li量",
+      "answer": "团结就是力量",
+      "target": "团结就是力量",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0061",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshī bài shì chéng gōng zhī mǔ",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0061",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshī bài shì chéng gōng zhī mǔ",
+      "answer": "失败一成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 227,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败一成功之母」",
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0061",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshī bài shì chéng gōng zhī mǔ",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0062",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi1 bai4 shi4 cheng2 gong1 zhi1 mu3",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0062",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi1 bai4 shi4 cheng2 gong1 zhi1 mu3",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0062",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi1 bai4 shi4 cheng2 gong1 zhi1 mu3",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 471,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0063",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi bai shi cheng gong zhi mu",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0063",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi bai shi cheng gong zhi mu",
+      "answer": "失败是国功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 119,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败是国功之母」",
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0063",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi bai shi cheng gong zhi mu",
+      "answer": "失败是功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 420,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败是功之母」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0064",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns b s c g z m",
+      "answer": "失败是成",
+      "target": "失败是成功之母",
+      "latencyMs": 381,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败是成」",
+      "usage": {
+        "input": 26,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0064",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns b s c g z m",
+      "answer": "失败是成功母",
+      "target": "失败是成功之母",
+      "latencyMs": 399,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败是成功母」",
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0064",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns b s c g z m",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0065",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshibai是chenggong之mu",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0065",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshibai是chenggong之mu",
+      "answer": "失败是成",
+      "target": "失败是成功之母",
+      "latencyMs": 393,
+      "score": 0,
+      "note": "期望「失败是成功之母」，实答「失败是成」",
+      "usage": {
+        "input": 27,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-p2h-0065",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshibai是chenggong之mu",
+      "answer": "失败是成功之母",
+      "target": "失败是成功之母",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0066",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshí jiān jiù xiàng hǎi mián lǐ de shuǐ",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0066",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshí jiān jiù xiàng hǎi mián lǐ de shuǐ",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0066",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshí jiān jiù xiàng hǎi mián lǐ de shuǐ",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0067",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi2 jian1 jiu4 xiang4 hai3 mian2 li3 de shui3",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0067",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi2 jian1 jiu4 xiang4 hai3 mian2 li3 de shui3",
+      "answer": "时间人像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 260,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间人像海绵里的水」",
+      "usage": {
+        "input": 36,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0067",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi2 jian1 jiu4 xiang4 hai3 mian2 li3 de shui3",
+      "answer": "时间就像海里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 334,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海里的水」",
+      "usage": {
+        "input": 36,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0068",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi jian jiu xiang hai mian li de shui",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0068",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi jian jiu xiang hai mian li de shui",
+      "answer": "时间就像海绵里在水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 103,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海绵里在水」",
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0068",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi jian jiu xiang hai mian li de shui",
+      "answer": "时间就像海",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 176,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海」",
+      "usage": {
+        "input": 32,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0069",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns j j x h m l d s",
+      "answer": "时间就像海",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 181,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0069",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns j j x h m l d s",
+      "answer": "时间就像海里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 270,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海里的水」",
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0069",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns j j x h m l d s",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 471,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0070",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshijianjiu像海绵lideshui",
+      "answer": "时间就像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0070",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshijianjiu像海绵lideshui",
+      "answer": "时间了像海绵里的水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 267,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间了像海绵里的水」",
+      "usage": {
+        "input": 28,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0070",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshijianjiu像海绵lideshui",
+      "answer": "时间就像海绵里水",
+      "target": "时间就像海绵里的水",
+      "latencyMs": 201,
+      "score": 0,
+      "note": "期望「时间就像海绵里的水」，实答「时间就像海绵里水」",
+      "usage": {
+        "input": 28,
+        "output": 4
+      }
+    },
+    {
+      "taskId": "t2-p2h-0071",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndú shū pò wàn juàn xià bǐ rú yǒu shén",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0071",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndú shū pò wàn juàn xià bǐ rú yǒu shén",
+      "answer": "读书破万卷这笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 190,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「读书破万卷这笔如有神」",
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0071",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndú shū pò wàn juàn xià bǐ rú yǒu shén",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0072",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu2 shu1 po4 wan4 juan4 xia4 bi3 ru2 you3 shen2",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0072",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu2 shu1 po4 wan4 juan4 xia4 bi3 ru2 you3 shen2",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0072",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu2 shu1 po4 wan4 juan4 xia4 bi3 ru2 you3 shen2",
+      "answer": "读书破万卷人笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 447,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「读书破万卷人笔如有神」",
+      "usage": {
+        "input": 37,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0073",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu shu po wan juan xia bi ru you shen",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0073",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu shu po wan juan xia bi ru you shen",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0073",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu shu po wan juan xia bi ru you shen",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0074",
+      "condition": "initials",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nd s p w j x b r y s",
+      "answer": "读书破万下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 216,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「读书破万下笔如有神」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0074",
+      "condition": "initials",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nd s p w j x b r y s",
+      "answer": "是书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 157,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「是书破万卷下笔如有神」",
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0074",
+      "condition": "initials",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nd s p w j x b r y s",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0075",
+      "condition": "mixed_50",
+      "model": "mock:huatou-72b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n读书powan卷下笔ruyou神",
+      "answer": "读书破万卷下笔有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 421,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「读书破万卷下笔有神」",
+      "usage": {
+        "input": 26,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-p2h-0075",
+      "condition": "mixed_50",
+      "model": "mock:jianglv-7b",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n读书powan卷下笔ruyou神",
+      "answer": "读书破万卷",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 218,
+      "score": 0,
+      "note": "期望「读书破万卷下笔如有神」，实答「读书破万卷」",
+      "usage": {
+        "input": 26,
+        "output": 3
+      }
+    },
+    {
+      "taskId": "t2-p2h-0075",
+      "condition": "mixed_50",
+      "model": "mock:laoshi-k2",
+      "prompt": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n读书powan卷下笔ruyou神",
+      "answer": "读书破万卷下笔如有神",
+      "target": "读书破万卷下笔如有神",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 5
+      }
+    },
+    {
+      "taskId": "t2-pqa-0001",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nzhong guo de shou du shi na li",
+      "answer": "北京",
+      "target": "北京",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0001",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nzhong guo de shou du shi na li",
+      "answer": "北",
+      "target": "北京",
+      "latencyMs": 114,
+      "score": 0,
+      "note": "期望「北京」，实答「北」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0001",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nzhong guo de shou du shi na li",
+      "answer": "北京",
+      "target": "北京",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0002",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi nian you ji ge ji jie",
+      "answer": "四个",
+      "target": "四个",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0002",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi nian you ji ge ji jie",
+      "answer": "四",
+      "target": "四个",
+      "latencyMs": 218,
+      "score": 0,
+      "note": "期望「四个」，实答「四」",
+      "usage": {
+        "input": 22,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0002",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi nian you ji ge ji jie",
+      "answer": "四个",
+      "target": "四个",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0003",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nshui de hua xue shi shi shen me",
+      "answer": "H2",
+      "target": "H2O",
+      "latencyMs": 338,
+      "score": 0,
+      "note": "期望「H2O」，实答「H2」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0003",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nshui de hua xue shi shi shen me",
+      "answer": "大2O",
+      "target": "H2O",
+      "latencyMs": 335,
+      "score": 0,
+      "note": "期望「H2O」，实答「大2O」",
+      "usage": {
+        "input": 25,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0003",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nshui de hua xue shi shi shen me",
+      "answer": "H2O",
+      "target": "H2O",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0004",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ntai yang cong na ge fang xiang sheng qi",
+      "answer": "东方",
+      "target": "东方",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0004",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ntai yang cong na ge fang xiang sheng qi",
+      "answer": "东方",
+      "target": "东方",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0004",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ntai yang cong na ge fang xiang sheng qi",
+      "answer": "东方",
+      "target": "东方",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0005",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi zhou you ji tian",
+      "answer": "七天",
+      "target": "七天",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0005",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi zhou you ji tian",
+      "answer": "七",
+      "target": "七天",
+      "latencyMs": 450,
+      "score": 0,
+      "note": "期望「七天」，实答「七」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0005",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nyi zhou you ji tian",
+      "answer": "七天",
+      "target": "七天",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0006",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nhan zi shi yong shen me wen zi xi tong",
+      "answer": "表意文字",
+      "target": "表意文字",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0006",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nhan zi shi yong shen me wen zi xi tong",
+      "answer": "表在文字",
+      "target": "表意文字",
+      "latencyMs": 116,
+      "score": 0,
+      "note": "期望「表意文字」，实答「表在文字」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0006",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nhan zi shi yong shen me wen zi xi tong",
+      "answer": "表意文字",
+      "target": "表意文字",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0007",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchang jiang shi zhong guo di ji zhang de he liu",
+      "answer": "第一",
+      "target": "第一",
+      "latencyMs": 328,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0007",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchang jiang shi zhong guo di ji zhang de he liu",
+      "answer": "第",
+      "target": "第一",
+      "latencyMs": 94,
+      "score": 0,
+      "note": "期望「第一」，实答「第」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0007",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchang jiang shi zhong guo di ji zhang de he liu",
+      "answer": "第一",
+      "target": "第一",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0008",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ndi qiu rao shen me gong zhuan",
+      "answer": "太阳",
+      "target": "太阳",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0008",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ndi qiu rao shen me gong zhuan",
+      "answer": "太阳",
+      "target": "太阳",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0008",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\ndi qiu rao shen me gong zhuan",
+      "answer": "太阳",
+      "target": "太阳",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0009",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchun jie shi zhong guo de shen me jie ri",
+      "answer": "传统节日",
+      "target": "传统节日",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0009",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchun jie shi zhong guo de shen me jie ri",
+      "answer": "统节日",
+      "target": "传统节日",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "期望「传统节日」，实答「统节日」",
+      "usage": {
+        "input": 30,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0009",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nchun jie shi zhong guo de shen me jie ri",
+      "answer": "传统节日",
+      "target": "传统节日",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 2
+      }
+    },
+    {
+      "taskId": "t2-pqa-0010",
+      "condition": "no_tone",
+      "model": "mock:huatou-72b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nsan jiao xing you ji ge jiao",
+      "answer": "三个",
+      "target": "三个",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0010",
+      "condition": "no_tone",
+      "model": "mock:jianglv-7b",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nsan jiao xing you ji ge jiao",
+      "answer": "三个",
+      "target": "三个",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    },
+    {
+      "taskId": "t2-pqa-0010",
+      "condition": "no_tone",
+      "model": "mock:laoshi-k2",
+      "prompt": "请阅读以下拼音问题并用中文简要回答：\nsan jiao xing you ji ge jiao",
+      "answer": "三",
+      "target": "三个",
+      "latencyMs": 351,
+      "score": 0,
+      "note": "期望「三个」，实答「三」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      }
+    }
+  ]
+}

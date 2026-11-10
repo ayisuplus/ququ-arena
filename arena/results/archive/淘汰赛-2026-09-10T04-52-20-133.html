@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>淘汰赛 · 通假·拼音剖面擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#c0b39e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 32px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .bracket { display: flex; gap: 28px; align-items: stretch; overflow-x: auto; padding: 8px 0 16px; }
+  .round { display: flex; flex-direction: column; justify-content: space-around; gap: 16px; min-width: 240px; }
+  .round-name { text-align: center; color: var(--muted); font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .match { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .match.upset { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+  .side { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 14px; }
+  .side + .side { border-top: 1px solid var(--line); }
+  .side.won { background: #eaf5ee; font-weight: 700; }
+  [data-theme="dark"] .side.won { background: #1e3a2a; }
+  .sscore { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .side.won .sscore { color: #1a7f4b; }
+  .upset-tag { font-size: 11px; color: var(--gold); padding: 4px 14px 8px; }
+  .champ-box { text-align:center; background:var(--card); border:2px solid var(--gold); border-radius:16px; padding:28px; margin-bottom:28px; }
+  .champ-box .big { font-size: 38px; font-weight: 900; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:44px; }
+</style></head>
+<body><div class="wrap" role="main">
+<header>
+  <div class="badge">单 败 淘 汰 · 对 阵 图</div>
+  <h1>🏆 通假·拼音剖面擂台 · 淘汰赛</h1>
+  <div class="sub">2026-Q3 赛季 · 2026-09-10 04:52 · 种子按生涯 Elo 排位</div>
+</header>
+
+<div class="champ-box"><div class="muted">冠 军</div><div class="big">👑 滑头-72B</div></div>
+
+<div class="bracket">
+<div class="round">
+    <div class="round-name">半决赛</div>
+    <div class="match">
+      <div class="side won"><span class="sname">老实-k2</span><span class="sscore">100.0%</span></div>
+      <div class="side"><span class="sname">犟驴-7B</span><span class="sscore">0.0%</span></div>
+      
+    </div>
+<div class="match">
+      <div class="side won"><span class="sname">滑头-72B</span><span class="sscore">100.0%</span></div>
+      <div class="side"><span class="sname">学霸-o9</span><span class="sscore">50.0%</span></div>
+      
+    </div>
+  </div>
+<div class="round">
+    <div class="round-name">决赛</div>
+    <div class="match upset">
+      <div class="side"><span class="sname">老实-k2</span><span class="sscore">100.0%</span></div>
+      <div class="side won"><span class="sname">滑头-72B</span><span class="sscore">100.0%</span></div>
+      <div class="upset-tag">⚡ 平局下克上</div>
+    </div>
+  </div>
+</div>
+
+<footer>AI斗兽场 QuQuArena · 平局下克上：avg 相同时生涯 Elo 低者晋级</footer>
+</div></body></html>

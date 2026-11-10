@@ -1,0 +1,65 @@
+{
+  "triangles": 35908,
+  "materials": 5,
+  "render_meshes": 25,
+  "size_m_blender_xyz": [
+    25.40000057220459,
+    15.430000305175781,
+    14.889999389648438
+  ],
+  "checks": [
+    {
+      "name": "Module01_LeftBase front cavity",
+      "passed": true,
+      "depth_m": 10.657017707824707
+    },
+    {
+      "name": "Module01_LeftBase rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module02_LeftUpper front cavity",
+      "passed": true,
+      "depth_m": 8.347122192382812
+    },
+    {
+      "name": "Module02_LeftUpper rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module03_RightBase front cavity",
+      "passed": true,
+      "depth_m": 11.916958808898926
+    },
+    {
+      "name": "Module03_RightBase rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module04_RightUpper front cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module04_RightUpper rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module05_Crown front cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "Module05_Crown rear cavity",
+      "passed": false,
+      "depth_m": null
+    }
+  ],
+  "passed": false,
+  "collision": "Original v001 preserved; windows remain closed physical boundaries",
+  "construction": "Same five modules and core. Rear walls and walnut surrounds opened; front/rear glazing receives new Unity material. No new provider task, access route or room identity."
+}

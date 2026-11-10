@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return ArenaModelPresetBuild.ImportAll();"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "chatgpt: 18985 triangles, 2.57 m, six clips\nclaude: 19464 triangles, 2.45 m, six clips\ndeepseek: 19784 triangles, 2.58 m, six clips\ngemini: 19701 triangles, 2.56 m, six clips\nglm: 19119 triangles, 2.61 m, six clips\nkimi: 20126 triangles, 2.42 m, six clips"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

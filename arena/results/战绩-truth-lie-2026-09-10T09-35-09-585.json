@@ -1,0 +1,1646 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "truth-lie",
+    "title": "真假话擂台",
+    "description": "BBH web-of-lies 的中文生成器版：每人非老实人（只说真话）即骗子（只说假话），锚定首人身份后沿陈述链推导末人身份。生成器即权威：先定身份再生成一致陈述，链唯一可解；全部 30 题经独立传播复算校验零矛盾。测多步逻辑约束传播。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:truth-lie:2026-09-10",
+    "taskPrefix": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "chain-3": "3 人链（中等）",
+      "chain-4": "4 人链（绕晕）",
+      "chain-5": "5 人链（绕晕）"
+    }
+  },
+  "startedAt": "2026-09-10T09:35:09.585Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "TL-chain-5-01",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 429,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-01",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老人",
+      "target": "老实人",
+      "latencyMs": 276,
+      "score": 0,
+      "note": "期望「老实人」，实答「老人」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-01",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老人",
+      "target": "老实人",
+      "latencyMs": 171,
+      "score": 0,
+      "note": "期望「老实人」，实答「老人」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-01",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-02",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-02",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-02",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-02",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-03",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-03",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-03",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 181,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-03",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-04",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-04",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "实人",
+      "target": "老实人",
+      "latencyMs": 478,
+      "score": 0,
+      "note": "期望「老实人」，实答「实人」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-04",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-04",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-05",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-05",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "实人",
+      "target": "老实人",
+      "latencyMs": 421,
+      "score": 0,
+      "note": "期望「老实人」，实答「实人」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-05",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-05",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-06",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-06",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-06",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-06",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-07",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-07",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-07",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 477,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-07",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-08",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-08",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 398,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-08",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 251,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-08",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-09",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-09",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-09",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 324,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TL-chain-5-09",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」；丁 说：「戊 是骗子」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 306,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-5-10",
+      "condition": "chain-5",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-5-10",
+      "condition": "chain-5",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-5-10",
+      "condition": "chain-5",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 406,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-5-10",
+      "condition": "chain-5",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」；丁 说：「戊 是老实人」。\n\n问题：戊 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-01",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-01",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-01",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 390,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-01",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 444,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-02",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老人",
+      "target": "老实人",
+      "latencyMs": 429,
+      "score": 0,
+      "note": "期望「老实人」，实答「老人」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-02",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 151,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-02",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 419,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-02",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 277,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-03",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-03",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-03",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-03",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-04",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-04",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 101,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-04",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 313,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-04",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-05",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-05",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-05",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 453,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-05",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-06",
+      "condition": "chain-3",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-06",
+      "condition": "chain-3",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-06",
+      "condition": "chain-3",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-3-06",
+      "condition": "chain-3",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」。\n\n问题：丙 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 353,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-01",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 252,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-01",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 304,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-01",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 233,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-01",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-02",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-02",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 130,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-02",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实是",
+      "target": "老实人",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实是」",
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-02",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-03",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-03",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老有人",
+      "target": "老实人",
+      "latencyMs": 206,
+      "score": 0,
+      "note": "期望「老实人」，实答「老有人」",
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-03",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-03",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-04",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 330,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-04",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-04",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 228,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-04",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-05",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-05",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-05",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 240,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-05",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是骗子」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-06",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-06",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 387,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-06",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 103,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-06",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是老实人」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-07",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-07",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-07",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-07",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是骗子」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-08",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-08",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 469,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-08",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实",
+      "target": "老实人",
+      "latencyMs": 449,
+      "score": 0,
+      "note": "期望「老实人」，实答「老实」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-08",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-09",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-09",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-09",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗",
+      "target": "骗子",
+      "latencyMs": 193,
+      "score": 0,
+      "note": "期望「骗子」，实答「骗」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-09",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是老实人。\n甲 说：「乙 是老实人」；乙 说：「丙 是骗子」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "骗子",
+      "target": "骗子",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-10",
+      "condition": "chain-4",
+      "model": "mock:xueba-o9",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-10",
+      "condition": "chain-4",
+      "model": "mock:huatou-72b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-10",
+      "condition": "chain-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老在人",
+      "target": "老实人",
+      "latencyMs": 327,
+      "score": 0,
+      "note": "期望「老实人」，实答「老在人」",
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TL-chain-4-10",
+      "condition": "chain-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n已知 甲 是骗子。\n甲 说：「乙 是骗子」；乙 说：「丙 是老实人」；丙 说：「丁 是老实人」。\n\n问题：丁 是老实人还是骗子？",
+      "answer": "老实人",
+      "target": "老实人",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "2c1d336eecba2a65",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.18.0"
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 知识边缘 · 标注淘汰区擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 1 道题 · 冠军 学霸-o9 0.0%">
+<title>战报 · 知识边缘 · 标注淘汰区擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 知识边缘 · 标注淘汰区擂台</h1>
+  <div class="sub">素材为 cerebellum metacognition 的 kb 标注证据文件中**未进正赛的 20 条候选（另 2 条 3/3 通过但未入册的，与难度前沿无关，剔除）**——源项目用 1.5B 基座模型三 seed 标注（known=3/3 全对，unknown=0/3 才对），这些是没能一致性通过的题：fringe-known 是&quot;有审定答案但小模型答不稳&quot;的难度前沿（含 2 条 0/3 全错的硬题），fringe-unknown 是通过未知性规则但未入册的冷僻题。选题机制本身就是对抗性的：专收标注管线筛下来的题。每题 meta 带标注证据（correct_samples/规则/模型）。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-11T03:11:36.764Z · 用时 0.0s · 4 只蛐蛐 × 1 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td>
+      <td class="nw">1500</td><td class="nw">🐲 虫王</td><td class="nw win">18237 (+0)</td><td class="nw">1</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td>
+      <td class="nw">1500</td><td class="nw">🐲 虫王</td><td class="nw win">24810 (+0)</td><td class="nw">1</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td>
+      <td class="nw">1500</td><td class="nw">🐣 雏虫</td><td class="nw win">-92674 (+0)</td><td class="nw">1</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td>
+      <td class="nw">1500</td><td class="nw">🐲 虫王</td><td class="nw win">55182 (+0)</td><td class="nw">1</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 0.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 学霸-o9 以 0.0% 暂居首位，但有效题量不足（1 题），分差 95% CI [0.0%, 0.0%] 含 0——样本不足，名次不下结论。</li><li>💥 大爆冷！赛前最大热门 老实-k2（生涯 55182）仅列第 4，身价当场蒸发。</li><li>🎬 名场面：「KF-kb-k01」全员翻车（均分 0.0%）——你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。
+…</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>滑头-72B</th><th>犟驴-7B</th><th>老实-k2</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:transparent">50.0%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td><td style="background:transparent">50.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</span> 全场平均仅 <b>0.0%</b> —— KF-kb-k01</div>
+      <div class="prompt">你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。
+用户问题：「HTTP 404 状态码表示什么？」</div>
+      <div class="target">参考答案：资源不存在（Not Found）</div>
+      <ul><li><b>学霸-o9</b>（0.0%）：资源不存在（Not Found）</li><li><b>滑头-72B</b>（0.0%）：资源不存在（No</li><li><b>犟驴-7B</b>（0.0%）：资源不存（Not Found）</li><li><b>老实-k2</b>（0.0%）：资源不存在（Not Found）</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 4 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>KF-kb-k01</td><td><span class="tag">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">资源不存在（Not Found）</td>
+      <td class="muted">146ms</td>
+      <td class="muted">未命中 /404/</td>
+    </tr>
+<tr>
+      <td>KF-kb-k01</td><td><span class="tag">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">资源不存在（No</td>
+      <td class="muted">311ms</td>
+      <td class="muted">未命中 /404/</td>
+    </tr>
+<tr>
+      <td>KF-kb-k01</td><td><span class="tag">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">资源不存（Not Found）</td>
+      <td class="muted">408ms</td>
+      <td class="muted">未命中 /404/；未命中 /notfound|不存在|找不到/</td>
+    </tr>
+<tr>
+      <td>KF-kb-k01</td><td><span class="tag">淘汰区·知而难：有审定答案，小模型 1-2/3 不稳</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">资源不存在（Not Found）</td>
+      <td class="muted">259ms</td>
+      <td class="muted">未命中 /404/</td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.18.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>66c5c89d7ad5fe84</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:kb-fringe:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 37+8，滑头-72B 37+4，犟驴-7B 37+8，老实-k2 37+8
+</footer>
+</div></body></html>

@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:/projects/黑洞空间站/.cache/alpha-round-001/question-timing-check.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "mode": "check",
+        "passed": true,
+        "failed": 0,
+        "checks": [
+          "mode.file-readable | passed=True | actual=check | expected=a stage word from timing-mode.txt",
+          "check.board-present | passed=True | actual=board=True, question=True | expected=board=True, question=True",
+          "check.rotation-advanced-to-page-2 | passed=True | actual=2 | expected=2",
+          "check.footer-shows-new-vs | passed=True | actual=CHARLIE    VS    DELTA    2 / 72 | expected=contains CHARLIE and DELTA",
+          "check.heading-still-current | passed=True | actual=第 2 题  /  STATUS_SWITCH | expected=contains STATUS_SWITCH",
+          "check.new-text-resets-to-page-1 | passed=True | actual=1 | expected=1",
+          "check.prepared-last-page | passed=True | actual=72 | expected=72"
+        ],
+        "pageCount": 72,
+        "startedAt": 60.2454262,
+        "elapsedSeconds": 0,
+        "unity": "6000.3.24f1",
+        "playMode": true,
+        "scene": "",
+        "reusedExistingBoard": false,
+        "note": "one short synchronous stage per call; the 8s rotation is observed between calls, never awaited here"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-01",
+  "baseline_commit": "8fe01ff21b5043742b24a0ebea48a8c1a05597ff",
+  "tool": "built-in imagegen",
+  "prompts": "prompts.md",
+  "calls": 4,
+  "images": [
+    {
+      "id": "IMG-V015-001",
+      "file": "history/birdseye-v001-rejected.png",
+      "source_filename": "exec-04b2cee6-f30b-460c-a22a-38819db0edea.png",
+      "status": "rejected",
+      "mode": "generate",
+      "edit_target": null,
+      "width": 1672,
+      "height": 941,
+      "bytes": 2751528,
+      "sha256": "0cf855826421854fb181da0d67da231d5825abfe7de95129b19e76f5dc761251"
+    },
+    {
+      "id": "IMG-V015-001",
+      "file": "birdseye-v002.png",
+      "source_filename": "exec-007ac3a5-690f-4777-aea1-5e495fb21d89.png",
+      "status": "current-concept",
+      "mode": "edit",
+      "edit_target": "history/birdseye-v001-rejected.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2556926,
+      "sha256": "b0438710f71f22655af68ad3da8c7f12416e4cf6ea6a5310d5b479de0578f7fb"
+    },
+    {
+      "id": "IMG-V015-002",
+      "file": "history/pedestrian-v001-rejected.png",
+      "source_filename": "exec-4611b588-e66b-43c1-bc33-d6de0d5f037a.png",
+      "status": "rejected",
+      "mode": "generate",
+      "edit_target": null,
+      "width": 1672,
+      "height": 940,
+      "bytes": 2543654,
+      "sha256": "6b46cbd44f09374de52c1a9aa3052e8f77f3b24e38d759415bfe93072a9140d1"
+    },
+    {
+      "id": "IMG-V015-002",
+      "file": "pedestrian-v002.png",
+      "source_filename": "exec-780b4a30-b452-4305-b602-10b3fe6b96f5.png",
+      "status": "current-concept",
+      "mode": "edit",
+      "edit_target": "history/pedestrian-v001-rejected.png",
+      "width": 1672,
+      "height": 940,
+      "bytes": 2344269,
+      "sha256": "5395c66dce31808bfc5ddb61124771304b28ad69bcbc287574fd19187f5a0836"
+    }
+  ],
+  "review": {
+    "image_inspection": "Completed: concept checks and remaining discrepancies documented in README.md",
+    "user_visual_approval": "pending",
+    "unity_implementation": "not performed",
+    "rotation_and_walking_validation": "not performed"
+  }
+}

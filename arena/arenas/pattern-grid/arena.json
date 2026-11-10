@@ -1,0 +1,19 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "pattern-grid",
+  "title": "图形规律擂台",
+  "description": "文本符号矩阵规律推理（生成器自建）：○● 四格行按三规则之一递变（左旋/右旋/黑白反转），给前两行判断规则并写第三行。周期 2 起始行会被三规则同时满足——已剔除（规则不可辨的题不出）；规则可辨识性逐题自检。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:pattern-grid:2026-09-10",
+  "taskPrefix": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "rotate-left": "左旋一格",
+    "rotate-right": "右旋一格",
+    "invert": "黑白反转"
+  }
+}

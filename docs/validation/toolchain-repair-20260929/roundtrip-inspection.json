@@ -1,0 +1,76 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.inspect",
+  "ok": true,
+  "data": {
+    "filePath": "C:\\Users\\36322\\.codex\\tools\\game-development-studio-source-1.0.2\\smoke\\planter-roundtrip.glb",
+    "fileBytes": 46284712,
+    "generator": "glTF-Transform v4.4.2",
+    "meshCount": 1,
+    "primitiveCount": 1,
+    "vertexCount": 725205,
+    "triangleCount": 1348432,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "sceneGraphFallback": false,
+    "materialCount": 1,
+    "textureCount": 3,
+    "textureResolutions": [
+      {
+        "name": "Image_2",
+        "width": 2048,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "bytes": 2199189
+      },
+      {
+        "name": "Image_0",
+        "width": 2048,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "bytes": 3034053
+      },
+      {
+        "name": "Image_1",
+        "width": 2048,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "bytes": 1661988
+      }
+    ],
+    "boundingBox": {
+      "min": [
+        -0.6466389894485474,
+        -0.9519050121307373,
+        -0.6956570148468018
+      ],
+      "max": [
+        0.6284809708595276,
+        0.9509080052375793,
+        0.6940910220146179
+      ],
+      "sizeMeters": [
+        1.275119960308075,
+        1.9028130173683167,
+        1.3897480368614197
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "hasUVs": true,
+    "hasNormals": true,
+    "hasTangents": false,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false,
+      "hasEmissiveTexture": false
+    },
+    "animationCount": 0,
+    "hasSkin": false,
+    "warnings": [
+      "normal map present but not every primitive has TANGENT: tangents must be generated at import (MikkTSpace) or the normal map will light incorrectly"
+    ]
+  }
+}

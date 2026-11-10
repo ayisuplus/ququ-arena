@@ -1,0 +1,32 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\refined-v001\\B01_MoonSail_v001.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 45462,
+      "materials": 4,
+      "textures": 0,
+      "hasUVs": false,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        25.214627265930176,
+        14.47008918132633,
+        21.768779754638672
+      ]
+    },
+    "failures": [],
+    "checksRun": 7,
+    "inspectorWarnings": [
+      "2 of 4 primitives have no TEXCOORD_0: the mesh cannot be textured or retextured until it is UV unwrapped",
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

@@ -1,0 +1,2085 @@
+{
+  "at": "2026-09-12T07:58:41.399Z",
+  "functionalOnly": false,
+  "synthetic": true,
+  "noPreviewBattleRequests": true,
+  "noAgentOrModelCalls": true,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "checks": [
+    {
+      "state": "running",
+      "overlay": "rgb(82, 210, 230)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "对战中 · LIVE",
+      "status": "对战进行中",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "82 210 230",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "running",
+      "seatStates": [
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        },
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 0.903297,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 899.8939999919385,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00096, 0, 0, 1.00096, -54.8447, 3.34157)",
+              "translate": "none",
+              "opacity": "0.801606",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 899.8939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.978678, -0.2054, 0.2054, 0.978678, 0, 0)",
+              "translate": "none",
+              "opacity": "0.552757",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 899.8939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.949405, 0.314053, -0.314053, 0.949405, 0, 0)",
+              "translate": "none",
+              "opacity": "0.611944",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 899.8939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999871, 0.0160707, -0.0160707, 0.999871, 0, 0)",
+              "translate": "none",
+              "opacity": "0.642265",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 899.8939999919385,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -27.4808, 0)",
+              "translate": "none",
+              "opacity": "0.403142",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 849.8959999897052,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -1.44651px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 849.8959999897052,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -1.44651px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.361384,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1366.5939999919385,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00225, 0, 0, 1.00225, -53.647, 3.23121)",
+              "translate": "none",
+              "opacity": "0.803755",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1366.5939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.979376, -0.202047, 0.202047, 0.979376, 0, 0)",
+              "translate": "none",
+              "opacity": "0.556437",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1366.5939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.94564, 0.325216, -0.325216, 0.94564, 0, 0)",
+              "translate": "none",
+              "opacity": "0.6246",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1366.5939999919385,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999604, 0.0281528, -0.0281528, 0.999604, 0, 0)",
+              "translate": "none",
+              "opacity": "0.655248",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1366.5939999919385,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -26.9607, 0)",
+              "translate": "none",
+              "opacity": "0.407341",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1316.5959999897052,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -3.27507px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1316.5959999897052,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -3.27507px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-running.png"
+    },
+    {
+      "state": "pausing",
+      "overlay": "rgb(242, 191, 103)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "即将暂停 · PAUSING",
+      "status": "本题结束后暂停",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "242 191 103",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "pausing",
+      "seatStates": [
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        },
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.752089,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1783.2189999997615,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00388, 0, 0, 1.00388, -52.1353, 3.09191)",
+              "translate": "none",
+              "opacity": "0.806467",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2189999997615,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.980239, -0.197818, 0.197818, 0.980239, 0, 0)",
+              "translate": "none",
+              "opacity": "0.561073",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2189999997615,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.941872, 0.335971, -0.335971, 0.941872, 0, 0)",
+              "translate": "none",
+              "opacity": "0.636843",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2189999997615,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999219, 0.0395035, -0.0395035, 0.999219, 0, 0)",
+              "translate": "none",
+              "opacity": "0.667449",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1783.2189999997615,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -26.3049, 0)",
+              "translate": "none",
+              "opacity": "0.412635",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1716.5550000161863,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -4.7718px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1716.5550000161863,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -4.7718px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.224238,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2249.9189999997616,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00625, 0, 0, 1.00625, -49.9334, 2.88902)",
+              "translate": "none",
+              "opacity": "0.810417",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9189999997616,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.981462, -0.191658, 0.191658, 0.981462, 0, 0)",
+              "translate": "none",
+              "opacity": "0.567821",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9189999997616,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.937181, 0.348844, -0.348844, 0.937181, 0, 0)",
+              "translate": "none",
+              "opacity": "0.651561",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9189999997616,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.998605, 0.0527954, -0.0527954, 0.998605, 0, 0)",
+              "translate": "none",
+              "opacity": "0.681744",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2249.9189999997616,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -25.3502, 0)",
+              "translate": "none",
+              "opacity": "0.420343",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 2183.2550000161864,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -5.80809px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 2183.2550000161864,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -5.80809px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-pausing.png"
+    },
+    {
+      "state": "paused",
+      "overlay": "rgb(242, 191, 103)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已暂停 · PAUSED",
+      "status": "已暂停",
+      "transition": "0.8s",
+      "videoPaused": true,
+      "sceneMotion": "paused",
+      "sceneAccent": "242 191 103",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "paused",
+      "seatStates": [
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        },
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "paused",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "paused",
+          "videoPaused": true,
+          "videoTime": 0.909948,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00115, 0, 0, 1.00115, -54.6685, 3.32533)",
+              "translate": "none",
+              "opacity": "0.801922",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.978782, -0.204907, 0.204907, 0.978782, 0, 0)",
+              "translate": "none",
+              "opacity": "0.553299",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.948767, 0.315977, -0.315977, 0.948767, 0, 0)",
+              "translate": "none",
+              "opacity": "0.614121",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999835, 0.0181783, -0.0181783, 0.999835, 0, 0)",
+              "translate": "none",
+              "opacity": "0.64453",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -27.4042, 0)",
+              "translate": "none",
+              "opacity": "0.403761",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "paused",
+              "time": 883.2940000026485,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -1.56191px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "paused",
+              "time": 883.2940000026485,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -1.56191px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "paused",
+          "videoPaused": true,
+          "videoTime": 0.909948,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00115, 0, 0, 1.00115, -54.6685, 3.32533)",
+              "translate": "none",
+              "opacity": "0.801922",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.978782, -0.204907, 0.204907, 0.978782, 0, 0)",
+              "translate": "none",
+              "opacity": "0.553299",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.948767, 0.315977, -0.315977, 0.948767, 0, 0)",
+              "translate": "none",
+              "opacity": "0.614121",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999835, 0.0181783, -0.0181783, 0.999835, 0, 0)",
+              "translate": "none",
+              "opacity": "0.64453",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "paused",
+              "time": 983.2899999780113,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -27.4042, 0)",
+              "translate": "none",
+              "opacity": "0.403761",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "paused",
+              "time": 883.2940000026485,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -1.56191px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "paused",
+              "time": 883.2940000026485,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -1.56191px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-paused.png"
+    },
+    {
+      "state": "completed",
+      "overlay": "rgb(166, 226, 130)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已完成 · COMPLETE",
+      "status": "对战完成",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "166 226 130",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "completed",
+      "seatStates": [
+        {
+          "status": "done",
+          "time": "1.8s",
+          "score": "100%"
+        },
+        {
+          "status": "done",
+          "time": "1.8s",
+          "score": "100%"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.80413,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1850.0190000111702,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00418, 0, 0, 1.00418, -51.8533, 3.06593)",
+              "translate": "none",
+              "opacity": "0.806973",
+              "backgroundPosition": "0% 0%, 0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1850.0190000111702,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.980398, -0.19703, 0.19703, 0.980398, 0, 0)",
+              "translate": "none",
+              "opacity": "0.561938",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1850.0190000111702,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.941232, 0.337762, -0.337762, 0.941232, 0, 0)",
+              "translate": "none",
+              "opacity": "0.638886",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1850.0190000111702,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999144, 0.04137, -0.04137, 0.999144, 0, 0)",
+              "translate": "none",
+              "opacity": "0.669456",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1850.0190000111702,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -26.1827, 0)",
+              "translate": "none",
+              "opacity": "0.413622",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.278789,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2333.31900001117,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00674, 0, 0, 1.00674, -49.4826, 2.84748)",
+              "translate": "none",
+              "opacity": "0.811226",
+              "backgroundPosition": "0% 0%, 0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2333.31900001117,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.981707, -0.190396, 0.190396, 0.981707, 0, 0)",
+              "translate": "none",
+              "opacity": "0.569202",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2333.31900001117,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.936289, 0.35123, -0.35123, 0.936289, 0, 0)",
+              "translate": "none",
+              "opacity": "0.654298",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2333.31900001117,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.998474, 0.0552299, -0.0552299, 0.998474, 0, 0)",
+              "translate": "none",
+              "opacity": "0.684363",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2333.31900001117,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -25.1547, 0)",
+              "translate": "none",
+              "opacity": "0.421921",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-completed.png"
+    },
+    {
+      "state": "stopped",
+      "overlay": "rgb(164, 151, 192)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已中止 · STOPPED",
+      "status": "已中止 · 记录已保存",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "164 151 192",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "stopped",
+      "seatStates": [
+        {
+          "status": "stopped",
+          "time": "1.8s",
+          "score": "待评分"
+        },
+        {
+          "status": "stopped",
+          "time": "1.8s",
+          "score": "待评分"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.749914,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1783.2349999963772,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00388, 0, 0, 1.00388, -52.1352, 3.09191)",
+              "translate": "none",
+              "opacity": "0.806467",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2349999963772,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.980239, -0.197818, 0.197818, 0.980239, 0, 0)",
+              "translate": "none",
+              "opacity": "0.561074",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2349999963772,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.941872, 0.335972, -0.335972, 0.941872, 0, 0)",
+              "translate": "none",
+              "opacity": "0.636843",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1783.2349999963772,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999219, 0.0395039, -0.0395039, 0.999219, 0, 0)",
+              "translate": "none",
+              "opacity": "0.66745",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1783.2349999963772,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -26.3049, 0)",
+              "translate": "none",
+              "opacity": "0.412635",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.216428,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2249.9349999963774,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00625, 0, 0, 1.00625, -49.9333, 2.88902)",
+              "translate": "none",
+              "opacity": "0.810417",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9349999963774,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.981462, -0.191658, 0.191658, 0.981462, 0, 0)",
+              "translate": "none",
+              "opacity": "0.567821",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9349999963774,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.937181, 0.348844, -0.348844, 0.937181, 0, 0)",
+              "translate": "none",
+              "opacity": "0.651562",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2249.9349999963774,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.998605, 0.0527959, -0.0527959, 0.998605, 0, 0)",
+              "translate": "none",
+              "opacity": "0.681745",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2249.9349999963774,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -25.3501, 0)",
+              "translate": "none",
+              "opacity": "0.420343",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-stopped.png"
+    },
+    {
+      "state": "error",
+      "overlay": "rgb(235, 120, 128)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "运行失败 · ERROR",
+      "status": "赛事运行失败",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "235 120 128",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "error",
+      "seatStates": [
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        },
+        {
+          "status": "generating",
+          "time": "1.2s",
+          "score": "待评分"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.795248,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1849.9410000064875,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00418, 0, 0, 1.00418, -51.8537, 3.06596)",
+              "translate": "none",
+              "opacity": "0.806972",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1849.9410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.980397, -0.197031, 0.197031, 0.980397, 0, 0)",
+              "translate": "none",
+              "opacity": "0.561937",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1849.9410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.941232, 0.33776, -0.33776, 0.941232, 0, 0)",
+              "translate": "none",
+              "opacity": "0.638883",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1849.9410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.999144, 0.0413678, -0.0413678, 0.999144, 0, 0)",
+              "translate": "none",
+              "opacity": "0.669454",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1849.9410000064875,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -26.1828, 0)",
+              "translate": "none",
+              "opacity": "0.413621",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1733.2789999915751,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -4.82424px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 1733.2789999915751,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -4.82424px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.256779,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2316.6410000064875,
+              "target": "scene-aurora",
+              "pseudo": null,
+              "transform": "matrix(1.00664, 0, 0, 1.00664, -49.5742, 2.85592)",
+              "translate": "none",
+              "opacity": "0.811062",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2316.6410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.981658, -0.190652, 0.190652, 0.981658, 0, 0)",
+              "translate": "none",
+              "opacity": "0.568921",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2316.6410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.936469, 0.350751, -0.350751, 0.936469, 0, 0)",
+              "translate": "none",
+              "opacity": "0.653748",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2316.6410000064875,
+              "target": "scene-beam",
+              "pseudo": null,
+              "transform": "matrix(0.998501, 0.0547417, -0.0547417, 0.998501, 0, 0)",
+              "translate": "none",
+              "opacity": "0.683838",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2316.6410000064875,
+              "target": "scene-lasers",
+              "pseudo": null,
+              "transform": "matrix(1, 0, 0, 1, -25.1944, 0)",
+              "translate": "none",
+              "opacity": "0.421601",
+              "backgroundPosition": "0% 0%, 0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 2199.978999991575,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "none",
+              "translate": "0px -5.82825px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            },
+            {
+              "name": "sigil-hover",
+              "state": "running",
+              "time": 2199.978999991575,
+              "target": "arena-seat-sigil",
+              "pseudo": null,
+              "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+              "translate": "0px -5.82825px",
+              "opacity": "1",
+              "backgroundPosition": "0% 0%"
+            }
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "ring-error.png"
+    },
+    {
+      "state": "completed",
+      "overlay": "rgb(166, 226, 130)",
+      "blendMode": "color",
+      "overlayZ": "-2",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+      "overlayOpacity": "0.2",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(224, 234, 240)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "回放结束 · REPLAY END",
+      "status": "回放结束",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "sceneAccent": "166 226 130",
+      "seats": 2,
+      "visibleSeats": 2,
+      "stageState": "completed",
+      "seatStates": [
+        {
+          "status": "done",
+          "time": "1.8s",
+          "score": "100%"
+        },
+        {
+          "status": "done",
+          "time": "1.8s",
+          "score": "100%"
+        }
+      ],
+      "stageHeight": 430,
+      "pageLabel": "第 1 / 1 页 · 2 个模型",
+      "replay": true
+    },
+    {
+      "kind": "motion-controls",
+      "passed": [
+        "actual-transform-and-video-advance",
+        "toggle-pauses-lights-and-video",
+        "reload-retains-user-pause",
+        "toggle-resumes",
+        "battle-pause-and-resume",
+        "reduced-motion-dynamic-pause-and-resume",
+        "reduced-motion-preserves-user-pause"
+      ],
+      "reduced": {
+        "state": "running",
+        "overlay": "rgb(82, 210, 230)",
+        "blendMode": "color",
+        "overlayZ": "-2",
+        "shadeZ": "-1",
+        "filter": "grayscale(0.7) contrast(1.15) brightness(0.7) saturate(0.7)",
+        "overlayOpacity": "0.2",
+        "titleColor": "rgb(231, 241, 245)",
+        "answerColor": "rgb(214, 227, 233)",
+        "promptColor": "rgb(224, 234, 240)",
+        "titleFilter": "none",
+        "stageFilter": "none",
+        "titleBlend": "normal",
+        "badge": "对战中 · LIVE",
+        "status": "对战进行中",
+        "transition": "0s",
+        "videoPaused": true,
+        "sceneMotion": "paused",
+        "sceneAccent": "82 210 230",
+        "seats": 2,
+        "visibleSeats": 2,
+        "stageState": "running",
+        "seatStates": [
+          {
+            "status": "generating",
+            "time": "1.2s",
+            "score": "待评分"
+          },
+          {
+            "status": "generating",
+            "time": "1.2s",
+            "score": "待评分"
+          }
+        ],
+        "stageHeight": 430,
+        "pageLabel": "第 1 / 1 页 · 2 个模型"
+      }
+    },
+    {
+      "kind": "css-fallback",
+      "passed": [
+        "layers-animate-without-video",
+        "toggle-stays-available",
+        "pause-and-resume"
+      ]
+    },
+    {
+      "kind": "names",
+      "passed": [
+        "chinese",
+        "long-name-title-retained",
+        "angle-brackets-render-as-text",
+        "no-injected-elements-or-script",
+        "selection-with-literal-names"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 2,
+      "minimumSizes": [
+        {
+          "width": 923,
+          "height": 248
+        },
+        {
+          "width": 923,
+          "height": 248
+        },
+        {
+          "width": 1856,
+          "height": 178
+        }
+      ],
+      "seats": {
+        "pages": 1,
+        "seats": 2,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 4,
+      "minimumSizes": [
+        {
+          "width": 457,
+          "height": 248
+        },
+        {
+          "width": 457,
+          "height": 248
+        },
+        {
+          "width": 457,
+          "height": 248
+        },
+        {
+          "width": 457,
+          "height": 248
+        },
+        {
+          "width": 1856,
+          "height": 178
+        }
+      ],
+      "seats": {
+        "pages": 1,
+        "seats": 4,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page"
+        ]
+      },
+      "firstScreen": {
+        "commentaryInput": {
+          "top": 1002.984375,
+          "bottom": 1022.984375,
+          "height": 20
+        },
+        "modelTops": [
+          638.984375,
+          638.984375,
+          638.984375,
+          638.984375
+        ],
+        "nameGaps": [
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset",
+        "four-reading-positions-in-one-row",
+        "commentary-input-on-first-screen",
+        "seat-names-clear-platform"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 8,
+      "minimumSizes": [
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 606,
+          "height": 218
+        },
+        {
+          "width": 1222,
+          "height": 178
+        },
+        {
+          "width": 624,
+          "height": 634
+        }
+      ],
+      "seats": {
+        "pages": 2,
+        "seats": 8,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page",
+          "paging-keeps-hidden-window-hidden",
+          "rail-opens-model-window-and-page",
+          "streaming-keeps-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 16,
+      "minimumSizes": [
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 218
+        },
+        {
+          "width": 298,
+          "height": 446
+        },
+        {
+          "width": 1222,
+          "height": 178
+        },
+        {
+          "width": 624,
+          "height": 1090
+        }
+      ],
+      "seats": {
+        "pages": 4,
+        "seats": 16,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page",
+          "paging-keeps-hidden-window-hidden",
+          "rail-opens-model-window-and-page",
+          "streaming-keeps-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 2,
+      "minimumSizes": [
+        {
+          "width": 1163,
+          "height": 532
+        },
+        {
+          "width": 1163,
+          "height": 532
+        },
+        {
+          "width": 2336,
+          "height": 208
+        }
+      ],
+      "seats": {
+        "pages": 1,
+        "seats": 2,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 4,
+      "minimumSizes": [
+        {
+          "width": 577,
+          "height": 532
+        },
+        {
+          "width": 577,
+          "height": 532
+        },
+        {
+          "width": 577,
+          "height": 532
+        },
+        {
+          "width": 577,
+          "height": 532
+        },
+        {
+          "width": 2336,
+          "height": 208
+        }
+      ],
+      "seats": {
+        "pages": 1,
+        "seats": 4,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page"
+        ]
+      },
+      "firstScreen": {
+        "commentaryInput": {
+          "top": 1356.984375,
+          "bottom": 1376.984375,
+          "height": 20
+        },
+        "modelTops": [
+          678.984375,
+          678.984375,
+          678.984375,
+          678.984375
+        ],
+        "nameGaps": [
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset",
+        "four-reading-positions-in-one-row",
+        "commentary-input-on-first-screen",
+        "seat-names-clear-platform"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 8,
+      "minimumSizes": [
+        {
+          "width": 370,
+          "height": 261
+        },
+        {
+          "width": 370,
+          "height": 261
+        },
+        {
+          "width": 370,
+          "height": 261
+        },
+        {
+          "width": 370,
+          "height": 261
+        },
+        {
+          "width": 370,
+          "height": 260
+        },
+        {
+          "width": 370,
+          "height": 260
+        },
+        {
+          "width": 751,
+          "height": 262
+        },
+        {
+          "width": 1511,
+          "height": 208
+        },
+        {
+          "width": 815,
+          "height": 750
+        }
+      ],
+      "seats": {
+        "pages": 2,
+        "seats": 8,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page",
+          "paging-keeps-hidden-window-hidden",
+          "rail-opens-model-window-and-page",
+          "streaming-keeps-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 16,
+      "minimumSizes": [
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 370,
+          "height": 218
+        },
+        {
+          "width": 369,
+          "height": 218
+        },
+        {
+          "width": 369,
+          "height": 218
+        },
+        {
+          "width": 371,
+          "height": 446
+        },
+        {
+          "width": 1511,
+          "height": 178
+        },
+        {
+          "width": 815,
+          "height": 1090
+        }
+      ],
+      "seats": {
+        "pages": 4,
+        "seats": 16,
+        "maxSeatsPerPage": 4,
+        "passed": [
+          "all-models-on-rail",
+          "four-seat-paging",
+          "seat-selects-model",
+          "dock-tab-focus-updates-ring-page",
+          "paging-keeps-hidden-window-hidden",
+          "rail-opens-model-window-and-page",
+          "streaming-keeps-page"
+        ]
+      },
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "natural-motion-recording",
+      "durationSeconds": 4,
+      "file": "ring-motion.webm",
+      "observedTransformsChange": true,
+      "observedScreenshotChange": true,
+      "animationCaptureMode": "natural",
+      "before": {
+        "sceneMotion": "running",
+        "videoPaused": false,
+        "videoTime": 1.801238,
+        "videoDuration": 9.208008,
+        "animations": [
+          {
+            "name": "aurora-drift",
+            "state": "running",
+            "time": 1816.5780000069683,
+            "target": "scene-aurora",
+            "pseudo": null,
+            "transform": "matrix(1.00403, 0, 0, 1.00403, -51.9959, 3.07906)",
+            "translate": "none",
+            "opacity": "0.806717",
+            "backgroundPosition": "0% 0%, 0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1816.5780000069683,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.980317, -0.197428, 0.197428, 0.980317, 0, 0)",
+            "translate": "none",
+            "opacity": "0.561501",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1816.5780000069683,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.941554, 0.336863, -0.336863, 0.941554, 0, 0)",
+            "translate": "none",
+            "opacity": "0.63786",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1816.5780000069683,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.999182, 0.040434, -0.040434, 0.999182, 0, 0)",
+            "translate": "none",
+            "opacity": "0.66845",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "laser-travel",
+            "state": "running",
+            "time": 1816.5780000069683,
+            "target": "scene-lasers",
+            "pseudo": null,
+            "transform": "matrix(1, 0, 0, 1, -26.2445, 0)",
+            "translate": "none",
+            "opacity": "0.413123",
+            "backgroundPosition": "0% 0%, 0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 1749.914000023393,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "none",
+            "translate": "0px -4.87536px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 1749.914000023393,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+            "translate": "0px -4.87536px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 1749.914000023393,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "none",
+            "translate": "0px -4.87536px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 1749.914000023393,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "matrix(0.990268, -0.139173, 0.139173, 0.990268, 0, 0)",
+            "translate": "0px -4.87536px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          }
+        ]
+      },
+      "after": {
+        "sceneMotion": "running",
+        "videoPaused": false,
+        "videoTime": 6.338939,
+        "videoDuration": 9.208008,
+        "animations": [
+          {
+            "name": "aurora-drift",
+            "state": "running",
+            "time": 6349.710000006968,
+            "target": "scene-aurora",
+            "pseudo": null,
+            "transform": "matrix(1.05044, 0, 0, 1.05044, -8.87898, -0.893888)",
+            "translate": "none",
+            "opacity": "0.884071",
+            "backgroundPosition": "0% 0%, 0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6349.710000006968,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.997372, -0.0724545, 0.0724545, 0.997372, 0, 0)",
+            "translate": "none",
+            "opacity": "0.697094",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6349.710000006968,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.87596, 0.482383, -0.482383, 0.87596, 0, 0)",
+            "translate": "none",
+            "opacity": "0.809522",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6349.710000006968,
+            "target": "scene-beam",
+            "pseudo": null,
+            "transform": "matrix(0.983209, 0.182484, -0.182484, 0.983209, 0, 0)",
+            "translate": "none",
+            "opacity": "0.822146",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "laser-travel",
+            "state": "running",
+            "time": 6349.710000006968,
+            "target": "scene-lasers",
+            "pseudo": null,
+            "transform": "matrix(1, 0, 0, 1, -7.26073, 0)",
+            "translate": "none",
+            "opacity": "0.566383",
+            "backgroundPosition": "0% 0%, 0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 6283.0460000233925,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "none",
+            "translate": "0px -3.13668px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 6283.0460000233925,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+            "translate": "0px -3.13668px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 6283.0460000233925,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "none",
+            "translate": "0px -3.13668px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          },
+          {
+            "name": "sigil-hover",
+            "state": "running",
+            "time": 6283.0460000233925,
+            "target": "arena-seat-sigil",
+            "pseudo": null,
+            "transform": "matrix(0.990268, -0.139173, 0.139173, 0.990268, 0, 0)",
+            "translate": "0px -3.13668px",
+            "opacity": "1",
+            "backgroundPosition": "0% 0%"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "unexpected": [],
+  "missingAssets": []
+}

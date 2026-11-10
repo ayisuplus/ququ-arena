@@ -1,0 +1,19 @@
+{
+  "buildId": "build_f716e2b6a2e5",
+  "status": "completed",
+  "result": "Succeeded",
+  "platform": "StandaloneWindows64",
+  "buildTimeMs": 41311,
+  "totalSizeBytes": 1142243563,
+  "totalWarnings": 2,
+  "totalErrors": 0,
+  "warnings": [
+    {
+      "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+    },
+    {
+      "message": "warning CS0109: The member 'ArenaGame.AddComponent<T>()' does not hide an accessible member. The new keyword is not required.",
+      "file": "Assets\\Scripts\\App\\ArenaGame.cs"
+    }
+  ]
+}

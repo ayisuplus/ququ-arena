@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 事件排序擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 20 道题 · 冠军 学霸-o9 90.0%">
+<title>战报 · 事件排序擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 事件排序擂台</h1>
+  <div class="sub">形制致敬行测事件排序（内容自建）。给出打乱顺序的 5 个事件，按逻辑顺序重新排列，exact 裁判（序号数字串，如 35412）。causal 考因果链（着凉→发烧→就医）、process 考流程工序（泡茶/建房/出版/庭审/网购）、time-history 考时间先后（朝代/发明/近代史/人生阶段）、plot-logic 考事理情节（求职/破案/旅行/比赛/纠纷）。每题只设唯一合理顺序（环节间为必然先后，不给两可排序）；meta.events 存正确序、meta.order 存数字串，契约测试逐题验证输入展示序与正确序的映射一致（且展示序≠正确序，防送分）。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T15:31:50.294Z · 用时 0.0s · 4 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>因果链（起因→发展→结果）</th><th>流程工序（先后步骤固定）</th><th>时间先后（朝代/发明/史实/阶段）</th><th>事理情节（求职/破案/旅行/比赛/纠纷）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">90.0%<div class="ci">±12.5%</div></td>
+      <td>100.0%</td><td>80.0%</td><td>80.0%</td><td>100.0%</td>
+      <td class="nw">1568</td><td class="nw">🐲 虫王</td><td class="nw win">16120 (+68)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">85.0%<div class="ci">±15.0%</div></td>
+      <td>60.0%</td><td>100.0%</td><td>100.0%</td><td>80.0%</td>
+      <td class="nw">1550</td><td class="nw">🐲 虫王</td><td class="nw win">48968 (+50)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">70.0%<div class="ci">±20.0%</div></td>
+      <td>100.0%</td><td>60.0%</td><td>80.0%</td><td>40.0%</td>
+      <td class="nw">1443</td><td class="nw">🐲 虫王</td><td class="nw lose">22402 (-57)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">50.0%<div class="ci">±20.0%</div></td>
+      <td>20.0%</td><td>60.0%</td><td>80.0%</td><td>40.0%</td>
+      <td class="nw">1439</td><td class="nw">🐣 雏虫</td><td class="nw lose">-81877 (-61)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[-15.0%, 25.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.72（k=20 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 与 老实-k2 的分差 95% CI 为 [-15.0%, 25.0%]，含 0——谁是冠军纯属运气。</li><li>🩸 屠杀局：首尾 40.0% 的鸿沟——犟驴-7B 今晚不宜出门。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">因果链（起因→发展→结果）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">流程工序（先后步骤固定）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">时间先后（朝代/发明/史实/阶段）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">事理情节（求职/破案/旅行/比赛/纠纷）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">52.5%</td><td style="background:rgba(26,127,75,0.14)">60.0%</td><td style="background:rgba(26,127,75,0.28)">70.0%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.25)">67.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.14)">60.0%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.28)">30.0%</td><td style="background:rgba(193,68,30,0.24)">32.5%</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 80 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>EO-CA-01</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">342ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-01</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">187ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-01</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">354</td>
+      <td class="muted">82ms</td>
+      <td class="muted">期望「35412」，实答「354」</td>
+    </tr>
+<tr>
+      <td>EO-CA-01</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">362ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-02</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">183ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-02</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">109ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-02</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">251我3</td>
+      <td class="muted">92ms</td>
+      <td class="muted">期望「25143」，实答「251我3」</td>
+    </tr>
+<tr>
+      <td>EO-CA-02</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">251</td>
+      <td class="muted">106ms</td>
+      <td class="muted">期望「25143」，实答「251」</td>
+    </tr>
+<tr>
+      <td>EO-CA-03</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">225ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-03</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">200ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-03</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">5142</td>
+      <td class="muted">371ms</td>
+      <td class="muted">期望「35142」，实答「5142」</td>
+    </tr>
+<tr>
+      <td>EO-CA-03</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">410ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-04</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45132</td>
+      <td class="muted">356ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-04</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45132</td>
+      <td class="muted">136ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-04</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">451</td>
+      <td class="muted">292ms</td>
+      <td class="muted">期望「45132」，实答「451」</td>
+    </tr>
+<tr>
+      <td>EO-CA-04</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45132</td>
+      <td class="muted">330ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-05</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24513</td>
+      <td class="muted">461ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-05</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24513</td>
+      <td class="muted">203ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-05</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24513</td>
+      <td class="muted">349ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-CA-05</td><td><span class="tag">因果链（起因→发展→结果）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">245</td>
+      <td class="muted">349ms</td>
+      <td class="muted">期望「24513」，实答「245」</td>
+    </tr>
+<tr>
+      <td>EO-PR-01</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24153</td>
+      <td class="muted">104ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-01</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4153</td>
+      <td class="muted">192ms</td>
+      <td class="muted">期望「24153」，实答「4153」</td>
+    </tr>
+<tr>
+      <td>EO-PR-01</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2453</td>
+      <td class="muted">169ms</td>
+      <td class="muted">期望「24153」，实答「2453」</td>
+    </tr>
+<tr>
+      <td>EO-PR-01</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24153</td>
+      <td class="muted">337ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-02</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2541</td>
+      <td class="muted">212ms</td>
+      <td class="muted">期望「25413」，实答「2541」</td>
+    </tr>
+<tr>
+      <td>EO-PR-02</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25413</td>
+      <td class="muted">223ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-02</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25413</td>
+      <td class="muted">150ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-02</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25413</td>
+      <td class="muted">126ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-03</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">286ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-03</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">372ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-03</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">266ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-03</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">224ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-04</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45213</td>
+      <td class="muted">444ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-04</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45213</td>
+      <td class="muted">92ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-04</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45213</td>
+      <td class="muted">446ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-04</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45213</td>
+      <td class="muted">293ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-05</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">384ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PR-05</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4253</td>
+      <td class="muted">232ms</td>
+      <td class="muted">期望「42513」，实答「4253」</td>
+    </tr>
+<tr>
+      <td>EO-PR-05</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4513</td>
+      <td class="muted">419ms</td>
+      <td class="muted">期望「42513」，实答「4513」</td>
+    </tr>
+<tr>
+      <td>EO-PR-05</td><td><span class="tag">流程工序（先后步骤固定）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">119ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-01</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">300ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-01</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">225ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-01</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">300ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-01</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">96ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-02</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">279ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-02</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">241</td>
+      <td class="muted">281ms</td>
+      <td class="muted">期望「24135」，实答「241」</td>
+    </tr>
+<tr>
+      <td>EO-TH-02</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2大135</td>
+      <td class="muted">314ms</td>
+      <td class="muted">期望「24135」，实答「2大135」</td>
+    </tr>
+<tr>
+      <td>EO-TH-02</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">359ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-03</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">214</td>
+      <td class="muted">318ms</td>
+      <td class="muted">期望「21453」，实答「214」</td>
+    </tr>
+<tr>
+      <td>EO-TH-03</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">21453</td>
+      <td class="muted">94ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-03</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">21453</td>
+      <td class="muted">172ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-03</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">21453</td>
+      <td class="muted">141ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-04</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">158ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-04</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">312ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-04</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">287ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-04</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">150ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-05</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42531</td>
+      <td class="muted">232ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-05</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42531</td>
+      <td class="muted">448ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-05</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42531</td>
+      <td class="muted">435ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-TH-05</td><td><span class="tag">时间先后（朝代/发明/史实/阶段）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42531</td>
+      <td class="muted">429ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-01</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35124</td>
+      <td class="muted">447ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-01</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35124</td>
+      <td class="muted">250ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-01</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35124</td>
+      <td class="muted">106ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-01</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35124</td>
+      <td class="muted">130ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-02</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32514</td>
+      <td class="muted">188ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-02</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">325有4</td>
+      <td class="muted">197ms</td>
+      <td class="muted">期望「32514」，实答「325有4」</td>
+    </tr>
+<tr>
+      <td>EO-PL-02</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3514</td>
+      <td class="muted">461ms</td>
+      <td class="muted">期望「32514」，实答「3514」</td>
+    </tr>
+<tr>
+      <td>EO-PL-02</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32514</td>
+      <td class="muted">157ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-03</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34152</td>
+      <td class="muted">273ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-03</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34152</td>
+      <td class="muted">362ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-03</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3412</td>
+      <td class="muted">111ms</td>
+      <td class="muted">期望「34152」，实答「3412」</td>
+    </tr>
+<tr>
+      <td>EO-PL-03</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3415</td>
+      <td class="muted">217ms</td>
+      <td class="muted">期望「34152」，实答「3415」</td>
+    </tr>
+<tr>
+      <td>EO-PL-04</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">320ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-04</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">421了3</td>
+      <td class="muted">123ms</td>
+      <td class="muted">期望「42153」，实答「421了3」</td>
+    </tr>
+<tr>
+      <td>EO-PL-04</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">421</td>
+      <td class="muted">257ms</td>
+      <td class="muted">期望「42153」，实答「421」</td>
+    </tr>
+<tr>
+      <td>EO-PL-04</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">395ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-05</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52341</td>
+      <td class="muted">356ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-05</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">523</td>
+      <td class="muted">468ms</td>
+      <td class="muted">期望「52341」，实答「523」</td>
+    </tr>
+<tr>
+      <td>EO-PL-05</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52341</td>
+      <td class="muted">353ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EO-PL-05</td><td><span class="tag">事理情节（求职/破案/旅行/比赛/纠纷）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52341</td>
+      <td class="muted">364ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.6.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>b03ce00be3e6c8d3</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:event-order:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 1028+58，滑头-72B 1028+56，犟驴-7B 1028+52，老实-k2 1028+57
+</footer>
+</div></body></html>

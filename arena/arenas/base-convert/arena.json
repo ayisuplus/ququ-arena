@@ -1,0 +1,27 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "base-convert",
+  "title": "进制转换擂台",
+  "description": "二/八/十六进制与十进制双向转换（生成器自建）：转换由生成器计算，契约测试 parseInt/toString 双向复算。测进制基本功。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:base-convert:2026-09-10",
+  "taskPrefix": "只输出转换结果本身（数字/十六进制串），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true,
+    "ignoreCase": true
+  },
+  "conditions": {
+    "base-2-to-dec": "二进制→十进制",
+    "dec-to-base-2": "十进制→二进制",
+    "base-8-to-dec": "八进制→十进制",
+    "dec-to-base-8": "十进制→八进制",
+    "base-16-to-dec": "十六进制→十进制",
+    "dec-to-base-16": "十进制→十六进制"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "十六进制字母大小写等价；仍要求完整数值，不接受夹带错误结论。"
+  }
+}

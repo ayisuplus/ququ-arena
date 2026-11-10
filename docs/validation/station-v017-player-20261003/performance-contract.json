@@ -1,0 +1,31 @@
+{
+  "width": 1600,
+  "hardware": "NVIDIA GeForce RTX 5090",
+  "api": "Direct3D11",
+  "frozenBeforeCandidate": "2026-10-02T20:25:40.8113142Z",
+  "rule": "p95 <= max(16.67ms, 1.25 * baseline p95); report measured regression separately",
+  "height": 1000,
+  "note": "This is measured RTX5090 / 1600x1000 / D3D11 coverage, not a lower-end-device claim",
+  "limits": [
+    {
+      "limitP95Ms": 16.67,
+      "view": "entry",
+      "baselineP95Ms": 3.647002696990967
+    },
+    {
+      "limitP95Ms": 16.67,
+      "view": "plant-layers",
+      "baselineP95Ms": 3.570797920227051
+    },
+    {
+      "limitP95Ms": 16.67,
+      "view": "water",
+      "baselineP95Ms": 3.259594678878784
+    },
+    {
+      "limitP95Ms": 16.67,
+      "view": "fountain",
+      "baselineP95Ms": 3.9650938510894775
+    }
+  ]
+}

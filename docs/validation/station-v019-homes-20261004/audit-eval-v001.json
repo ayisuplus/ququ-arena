@@ -1,0 +1,81 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-homes.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "failures": [],
+        "colliders": 578,
+        "meshes": [
+          {
+            "name": "Homes porcelain",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-porcelain-v001.asset",
+            "vertexCount": 22032,
+            "triangles": 7344,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes porcelain.mat"
+          },
+          {
+            "name": "Homes glass",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-glass-v001.asset",
+            "vertexCount": 50220,
+            "triangles": 16740,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes clear glass.mat"
+          },
+          {
+            "name": "Homes wood",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-wood-v001.asset",
+            "vertexCount": 57672,
+            "triangles": 19224,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes walnut.mat"
+          },
+          {
+            "name": "Homes green",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-green-v001.asset",
+            "vertexCount": 57348,
+            "triangles": 19116,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes deep green enamel.mat"
+          },
+          {
+            "name": "Homes floor",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-floor-v001.asset",
+            "vertexCount": 1620,
+            "triangles": 540,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes warm stone.mat"
+          },
+          {
+            "name": "Homes paving",
+            "path": "Assets/Station/Models/HomesV019v001/Homes-paving-v001.asset",
+            "vertexCount": 108,
+            "triangles": 36,
+            "reversed": 0,
+            "material": "Assets/Station/Materials/DistrictsV019/Homes court green ceramic.mat"
+          }
+        ],
+        "roomIds": 0,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

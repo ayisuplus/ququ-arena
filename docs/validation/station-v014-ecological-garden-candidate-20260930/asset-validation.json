@@ -1,0 +1,32 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v014\\ecological-garden\\EcologicalShell.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 19216,
+      "materials": 4,
+      "textures": 0,
+      "hasUVs": true,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        49.3500016133072,
+        10.625,
+        45.35000002384186
+      ]
+    },
+    "failures": [],
+    "checksRun": 8,
+    "inspectorWarnings": [
+      "glTF reader: Missing optional extension, \"KHR_materials_emissive_strength\".",
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

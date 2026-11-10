@@ -1,0 +1,118 @@
+{
+  "realExecution": true,
+  "scope": "one existing Codex grader call; synthetic answer; no Docker engineering execution",
+  "agent": {
+    "id": "codex",
+    "version": "codex-cli 0.155.0-alpha.9.2",
+    "billing": "subscription"
+  },
+  "elapsedMs": 15180,
+  "record": {
+    "taskId": "real-judge-minimum",
+    "model": "anonymous-local-fixture",
+    "condition": "verification",
+    "prompt": "有 2 个箱子，每箱 3 个样品。请算总数，说明依据与假设。",
+    "answer": "材料明确给出 2 个箱子，每箱 3 个样品，因此共有 2 × 3 = 6 个样品。假设每箱数量准确且没有重复计数。",
+    "score": 0,
+    "latencyMs": 0,
+    "taskSnapshot": {
+      "id": "real-judge-minimum",
+      "condition": "verification",
+      "input": "有 2 个箱子，每箱 3 个样品。请算总数，说明依据与假设。",
+      "judge": {
+        "kind": "rubric",
+        "dimensions": [
+          {
+            "id": "correctness",
+            "name": "正确性",
+            "weight": 35,
+            "criteria": "关键事实、计算与结论正确；实质性错误按影响扣分。"
+          },
+          {
+            "id": "evidence",
+            "name": "依据",
+            "weight": 25,
+            "criteria": "结论对应给定材料，区分事实、假设与未知；编造或无依据断言扣分。"
+          },
+          {
+            "id": "completeness",
+            "name": "完整性",
+            "weight": 25,
+            "criteria": "覆盖全部要求及主要边界条件；遗漏重要问题扣分。"
+          },
+          {
+            "id": "clarity",
+            "name": "表达清晰度",
+            "weight": 15,
+            "criteria": "结构清楚，关键判断与行动可定位；含糊或自相矛盾扣分。"
+          }
+        ]
+      }
+    },
+    "rounds": [
+      {
+        "roundId": "r1",
+        "title": "完整答卷",
+        "prompt": "计算样品总数并说明依据。",
+        "answer": "材料明确给出 2 个箱子，每箱 3 个样品，因此共有 2 × 3 = 6 个样品。假设每箱数量准确且没有重复计数。",
+        "latencyMs": 0,
+        "solveMs": 0,
+        "attempts": 1,
+        "usageComplete": false
+      }
+    ]
+  },
+  "grade": {
+    "dimensions": [
+      {
+        "id": "correctness",
+        "score": 10,
+        "reason": "乘法计算及总数结论正确，无实质性错误。",
+        "evidence": [
+          {
+            "roundId": "r1",
+            "quote": "因此共有 2 × 3 = 6 个样品。"
+          }
+        ]
+      },
+      {
+        "id": "evidence",
+        "score": 10,
+        "reason": "依据直接对应材料，并明确区分给定事实与计数假设，无编造。",
+        "evidence": [
+          {
+            "roundId": "r1",
+            "quote": "材料明确给出 2 个箱子，每箱 3 个样品"
+          },
+          {
+            "roundId": "r1",
+            "quote": "假设每箱数量准确且没有重复计数。"
+          }
+        ]
+      },
+      {
+        "id": "completeness",
+        "score": 10,
+        "reason": "完整给出总数、计算依据及数量准确和不重复计数的主要假设。",
+        "evidence": [
+          {
+            "roundId": "r1",
+            "quote": "材料明确给出 2 个箱子，每箱 3 个样品，因此共有 2 × 3 = 6 个样品。假设每箱数量准确且没有重复计数。"
+          }
+        ]
+      },
+      {
+        "id": "clarity",
+        "score": 10,
+        "reason": "表述简洁，事实、计算结论和假设依次呈现，清楚且无矛盾。",
+        "evidence": [
+          {
+            "roundId": "r1",
+            "quote": "因此共有 2 × 3 = 6 个样品。假设每箱数量准确且没有重复计数。"
+          }
+        ]
+      }
+    ],
+    "score": 1
+  }
+}

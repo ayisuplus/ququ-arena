@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-cafe-geometry.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "overlaps": [],
+        "meshes": [
+          {
+            "name": "Cafe-porcelain-v001",
+            "triangles": 9180,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-porcelain-v001.asset"
+          },
+          {
+            "name": "Cafe-wood-v001",
+            "triangles": 5724,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-wood-v001.asset"
+          },
+          {
+            "name": "Cafe-blue-v001",
+            "triangles": 11232,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-blue-v001.asset"
+          },
+          {
+            "name": "Cafe-glass-v001",
+            "triangles": 2484,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-glass-v001.asset"
+          },
+          {
+            "name": "Cafe-silver-v001",
+            "triangles": 1296,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-silver-v001.asset"
+          },
+          {
+            "name": "Cafe-floor-v001",
+            "triangles": 60,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-floor-v001.asset"
+          },
+          {
+            "name": "Cafe-paving-v001",
+            "triangles": 24,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Cafe-paving-v001.asset"
+          }
+        ],
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

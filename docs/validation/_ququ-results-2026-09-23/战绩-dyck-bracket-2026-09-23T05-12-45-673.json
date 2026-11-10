@@ -1,0 +1,279 @@
+{
+  "id": "c8c9caaf-8d0e-44aa-a065-cd359719bb48",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "dyck-bracket",
+    "title": "括号补全擂台",
+    "description": "BBH Dyck languages 中文版（生成器自建）：四型括号的合法串砍尾，问按正确顺序还缺哪几个收尾括号。生成器栈模拟权威；缺失数=砍尾数自证入生成器。LLM 经典弱项。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.2.0",
+    "canary": "ququ-arena:dyck-bracket:2026-09-10",
+    "taskPrefix": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": false
+    },
+    "conditions": {
+      "dyck-close": "括号砍尾补全"
+    },
+    "review": {
+      "date": "2026-09-13",
+      "note": "保留括号原字符进行完整匹配，修复空回答、错误括号被判正确的问题。"
+    }
+  },
+  "startedAt": "2026-09-23T05:12:45.673Z",
+  "durationMs": 24416,
+  "contestants": [
+    {
+      "id": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "name": "nvidia/nemotron-3-super-120b-a12b:free",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "name": "nex-agi/nex-n2.5-pro:free",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "nex-agi/nex-n2.5-pro:free"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 5137,
+      "solveMs": 5137,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need to output only the missing closing brackets in order, no extra characters. Input string: `{[][]<<<>>>`. Actually it's: { [ [ ] ] < < < > > >. Wait we have `{[][]<<<>>>`. Let's parse: characters: '{', '[', ']', '[', ']', '<', '<', '<', '>', '>', '>'.\n\nWe need to find which closing brackets are missing to balance. Opening brackets: '{', '[', '[', '<', '<', '<' (since there are three '<' after the ']'?). Actually after the second ']' we have '<','<','<'. So total openings: '{' (1), '[' (2), '[' (3), '<' (4), '<' (5), '<' (6). No other opening.\n\nClosing brackets present: we have ']' after first '[', then ']' after second '[': that's two ']'. Then we have three '>' after the three '<'. So closings present: ']' (2), '>' (3). So we need to close the remaining openings in reverse order: we have stack: after processing string:\n\nInitialize empty stack.\n\nProcess '{' -> push '{'\n'[' -> push '['\n']' -> top is '[', matches, pop '[' -> stack now ['{']\n'[' -> push '['\n']' -> top is '[', pop -> stack ['{']\n'<' -> push '<'\n'<' -> push '<'\n'<' -> push '<'\n'>' -> top '<', pop -> stack ['{','[','[']? Wait we had after second ']' stack ['{']; then we pushed three '<': stack ['{','<','<','<']; after first '>' pop one '<' -> stack ['{','<','<']; second '>' -> ['{','<']; third '>' -> ['{'].\n\nEnd of string: stack = ['{'].\n\nThus missing closing brackets: need to close '{' with '}'. So output '}'. Only that.\n\nThus answer: }.\n\nWe must output only that character, no extra.\n\n",
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 441,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 376
+      },
+      "finishedMs": 6327
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 7134,
+      "solveMs": 7134,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\nWe need answer user in Chinese. Need parse. They ask: \"只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。 括号串没有写完：{[][]<<<>>> 问题：按正确顺序，还缺哪几个收尾括号？\"\n\nNeed output missing closing brackets only, in order, no extra. Need determine for bracket string \"{[][]<<<>>>\". Need parse brackets types: curly {}, square [], angle <<<>>>. Maybe parentheses? Need complete unfinished string by adding closing brackets for all unclosed openers. Need output in correct order. Need be careful: string: { [ ] [ ] < < < > > >. Let's parse stack:\nchar1 { push {\nchar2 [ push [\nchar3 ] matches [ pop\nchar4 [ push\nchar5 ] pop\nchar6 < push\nchar7 < push\nchar8 < push\nchar9 > pop\nchar10 > pop\nchar11 > pop\nremaining stack: { (bottom). Need missing closing: \"}\" only. But wait maybe they expect also missing all closing brackets? Since sequence has {[][]<<<>>> maybe angle triple all closed, square all closed, curly not. So output \"}\". Need only char. Ensure no extra. final: }.\n",
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 270,
+        "cachedInput": 0,
+        "cacheWrite": 0
+      },
+      "finishedMs": 8326
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 2976,
+      "solveMs": 2976,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need to output only the missing closing brackets themselves, in order, like ]}) etc. The input string: \"()<>[[]{\"? Actually given: ()<>[[{}. Let's write characters: '(' ')' '<' '>' '[' '[' '{' '}'? Wait the string: ()<>[[{} . Let's count: \"()\" then \"<>\" then \"[[\" then \"{}\"? Actually after [[ there is {}? The string: ()<>[[{} . That is '(' ')' '<' '>' '[' '[' '{' '}'. So we have opening brackets: '(' (opened then closed by ')'), '<' opened then closed by '>', '[' opened, '[' opened, '{' opened then closed by '}'. So we have two '[' opened, none closed yet. So need to close them in reverse order of opening: last opened is second '[' then first '['. So missing closing brackets: ']' then ']'. So output: \"]]\". No extra characters.\n\nThus answer: ]]\n\n",
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 221,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 191
+      },
+      "finishedMs": 4169
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 6838,
+      "solveMs": 6838,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\nWe need answer Chinese. Need solve. User asks only output missing closing brackets themselves in order, no extra char. Bracket string unfinished: \"()<>[[{}\". Need determine missing closing brackets in correct order. Need be careful.\n\nWe need parse stack of opening brackets. String: ( ) < > [ [ { }\nLet's parse:\n1 '(' push '('\n2 ')' matches '(' pop\n3 '<' push '<'\n4 '>' matches '<' pop\n5 '[' push\n6 '[' push\n7 '{' push\n8 '}' matches '{' pop\nRemaining stack: '[' '['. Need closing in reverse order: ']' then ']'. Output \"]]\". Need no extra.\n",
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 146,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 139
+      },
+      "finishedMs": 8030
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "))",
+      "target": "))",
+      "latencyMs": 4883,
+      "solveMs": 4883,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need to output only the missing closing brackets, in order, no extra characters.\n\nGiven opening bracket string: \"{}{}\"((.\n\nWe need to match opening brackets and close them in correct order. Let's parse.\n\nString: { } { } ( ( \n\nWait the string is: {}{}((\n\nThat is characters: '{', '}', '{', '}', '(', '('.\n\nWe need to close any currently open brackets that haven't been closed yet, in correct order (LIFO). As we go, we track stack.\n\nStart: empty.\n\n1 '{': push '{' onto stack.\n\n2 '}': top is '{', matches, pop. Stack empty.\n\n3 '{': push '{'.\n\n4 '}': matches, pop. Stack empty.\n\n5 '(': push '('.\n\n6 '(': push '('.\n\nEnd of string: stack has ['(', '('] (bottom first '(' then top '('). To close correctly, we need to close top first: so ')', then ')'.\n\nThus missing closing brackets in order: \"))\".\n\nWe need to output only that, no extra characters.\n\nThus answer: ))\n\n",
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 237,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 226
+      },
+      "finishedMs": 6074
+    },
+    {
+      "taskId": "DK-03",
+      "condition": "dyck-close",
+      "model": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{}{}((\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "))",
+      "target": "))",
+      "latencyMs": 4905,
+      "solveMs": 4905,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\nWe need answer Chinese. Need parse. User asks: \"只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。括号串没有写完：{}{}(( 问题：按正确顺序，还缺哪几个收尾括号？\" Need output missing closing brackets in order only. Need determine for string {}{}((. Let's parse.\n\nString: { } { } ( (\nNeed close innermost open brackets in correct order. Open stack after reading: first { closed by }, second { closed by }, then ( then (. Stack [(, (]. Need missing closings: \")\" for last then \")\" for previous, so \"))\". Output only.\n",
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 143,
+        "cachedInput": 0,
+        "cacheWrite": 0
+      },
+      "finishedMs": 6096
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 23223,
+      "solveMs": 23223,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need to output missing closing brackets themselves, in order, no extra characters.\n\nWe have bracket string: {()(<[]>)\n\nLet's parse: The string characters: { ( ) ( < [ ] > ) ?\n\nWait given: {()(<[]>). Let's write each char:\n\n1: {\n2: (\n3: )\n4: (\n5: <\n6: [\n7: ]\n8: >\n9: )\n10: (maybe missing?) Actually after > there is )? The string ends with )? The given: {()(<[]>). Yes after > there is ) then maybe missing? Actually the string ends with )? Let's count: characters: { ( ) ( < [ ] > ) . That's 9 characters? Let's list: { ( ) ( < [ ] > ) . That is 9? Let's index: 1 {, 2 (, 3 ), 4 (, 5 <, 6 [, 7 ], 8 >, 9 ). So string is \"{()(<[]>)\"? Actually there is a trailing ) after >, making it \"{()(<[]>)\"? Wait they wrote {()(<[]>). No extra ) at end? They wrote {()(<[]>). That is exactly what we have: open curly, open paren, close paren, open paren, less, open bracket, close bracket, greater, close paren. Yes that ends with a close paren. So the string is: { ( ) ( < [ ] > ) . No closing curly brace at end. Also missing maybe something else? Let's check bracket matching: We need to match opening brackets with correct types.\n\nWe have opening braces: { at start. Opening parentheses: at position 2 '(' and position 4 '(' . Opening angle bracket '<' at position5. Opening '[' at position6.\n\nClosing brackets encountered: position3 ')': matches most recent unmatched opening: that is position4 '('? Actually stack: after reading { (, stack: {, ( . Then position3 ')' matches top '(' (position2). So pop '(' at pos2. Stack now: {.\n\nPosition4 '(' push. Stack: {, ( .\n\nPosition5 '<' push. Stack: {, (, < .\n\nPosition6 '[' push. Stack: {, (, <, [ .\n\nPosition7 ']' matches top '[' (pos6). Pop. Stack: {, (, < .\n\nPosition8 '>' matches top '<' (pos5). Pop. Stack: {, ( .\n\nPosition9 ')' matches top '(' (pos4). Pop. Stack: { .\n\nEnd of input. Remaining stack: { . So need a closing '}' to match.\n\nThus missing closing bracket is just '}'. Output that character only, no extra.\n\nThus answer: }\n\n",
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 593,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 506
+      },
+      "finishedMs": 24415
+    },
+    {
+      "taskId": "DK-04",
+      "condition": "dyck-close",
+      "model": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{()(<[]>)\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 5926,
+      "solveMs": 5926,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\nWe need answer in Chinese? User asks only output missing closing brackets themselves in order, no extra chars. Need solve. Need parse bracket string: {()(<[]>)\n\nString: { ( ) ( < [ ] > )? Let's inspect exactly \"{()(<[]>)\" characters:\n1 {\n2 (\n3 )\n4 (\n5 <\n6 [\n7 ]\n8 >\n9 )\nNo closing for { maybe? Let's parse stack.\nStart { push\n( push\n) matches ( pop -> stack {\n( push -> stack {(\n< push -> {(<\n[ push -> {(<[\n] pop [ -> {(<\n> pop < -> {(\n) pop ( -> {\nEnd stack { missing } only. Need output \"}\". Ensure only char.\n",
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 173,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 135
+      },
+      "finishedMs": 7118
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 3387,
+      "solveMs": 3387,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need to output only the missing closing brackets in order, no extra characters.\n\nGiven the string: [<>][\n\nWe need to determine which closing brackets are missing to make the bracket string correct (balanced). Input: \"[<>][\". Let's parse.\n\nWe have opening brackets: '[' then '<' then '>' then ']' then '['.\n\nWe need to consider matching pairs: Typically bracket pairs: () [] {} <> . So opening brackets: ( [ { < ; closing: ) ] } >.\n\nGiven the string: [ < > ] [ \n\nLet's parse with a stack:\n\nInitialize stack empty.\n\nChar '[': push '[' onto stack.\n\nChar '<': push '<'.\n\nChar '>': closing '>' matches top '<'? Yes, '<' matches '>'. So pop '<'. Stack now: '['.\n\nChar ']': closing ']' matches top '['? Yes, matches. Pop '['. Stack now empty.\n\nChar '[': opening '[' push.\n\nEnd of string. Stack contains '['. So we need a closing ']' to match.\n\nThus missing closing brackets: ']' (just one). Output should be ']' (no extra characters). The instruction: \"只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\" So output just ']'.\n\nThus answer: ].\n\n",
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 292,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 282
+      },
+      "finishedMs": 7558
+    },
+    {
+      "taskId": "DK-05",
+      "condition": "dyck-close",
+      "model": "openrouter:nex-agi/nex-n2.5-pro:free",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：[<>][\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]",
+      "target": "]",
+      "latencyMs": 2627,
+      "solveMs": 2627,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "\nWe need answer in Chinese? User asks only output missing closing brackets themselves, in order, no extra. Need solve. Need be careful. String: [<>][\n\nWe need determine missing closing brackets in correct order. Let's parse: \"[<>][\". Characters: [ < > ] [\nOpen brackets: first '[' then '<' closed by '>' then ']' closes '['. Then final '[' unclosed. Need missing closing bracket: ]. Output only ]. Ensure no extra. final.\n",
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 104,
+        "cachedInput": 0,
+        "cacheWrite": 0
+      },
+      "finishedMs": 8702
+    }
+  ],
+  "withdrawals": [],
+  "meta": {
+    "arenaFingerprint": "8ddb1767b20041d5",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.35.0",
+    "plannedTasks": 5,
+    "rankingPolicy": "quality-ci-v1",
+    "execution": {
+      "schedule": "pool",
+      "concurrency": 8,
+      "reasoning": "provider-default",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  }
+}

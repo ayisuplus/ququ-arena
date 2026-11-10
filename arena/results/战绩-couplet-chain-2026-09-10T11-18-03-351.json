@@ -1,0 +1,112 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "couplet-chain",
+    "title": "名句接龙擂台",
+    "description": "16 条名联/古诗名句，出上联/上句答下联/下句（自建，canonical 答案）。测中文经典文本库存——「海阔凭鱼跃」接不出「天高任鸟飞」的模型，中文文学常识欠费。exact 裁判（归一化去标点）。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:couplet-chain:2026-09-10",
+    "taskPrefix": "只输出下联/下句本身，不多一个字、不加标点。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "classic": "名联/古诗接下句"
+    }
+  },
+  "startedAt": "2026-09-10T11:18:03.351Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "期望「天高任鸟飞」，实答「天高鸟飞」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "f8e74ecfdc905f0e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.26.0"
+  }
+}

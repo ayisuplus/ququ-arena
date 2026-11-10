@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 单位换算擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 20 道题 · 冠军 学霸-o9 95.0%">
+<title>战报 · 单位换算擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 单位换算擂台</h1>
+  <div class="sub">形制致敬小学单位换算与数据计量（内容自建）。传统基本功：length-area 长度面积（含公顷↔平方米 10000 进制）、weight-volume 重量与体积容积（含 1升=1立方分米、1毫升=1立方厘米）、time 时间（含世纪=100年、2.5小时=150分）、data-binary 数据单位二进制约定（1 KB=1024 B，题面逐题声明——1024 与 1000 之争在本罐没有借口）。答案均为整数，exact 裁判；每题 meta.expr 存换算式，契约测试逐题复算。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T15:14:58.445Z · 用时 0.0s · 4 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>长度与面积（含公顷/平方千米）</th><th>重量与体积容积（含升/毫升与立方单位互化）</th><th>时间单位（时/分/秒/天/周/世纪）</th><th>数据单位（二进制约定 1 KB = 1024 B）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">95.0%<div class="ci">±7.5%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>100.0%</td><td>80.0%</td>
+      <td class="nw">1564</td><td class="nw">🐲 虫王</td><td class="nw win">16004 (+64)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>80.0%</td><td>80.0%</td><td>60.0%</td><td>100.0%</td>
+      <td class="nw">1556</td><td class="nw">🐲 虫王</td><td class="nw win">48374 (+56)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">70.0%<div class="ci">±20.0%</div></td>
+      <td>80.0%</td><td>60.0%</td><td>80.0%</td><td>60.0%</td>
+      <td class="nw">1499</td><td class="nw">🐲 虫王</td><td class="nw lose">22183 (-1)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">35.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>20.0%</td><td>20.0%</td><td>40.0%</td>
+      <td class="nw">1381</td><td class="nw">🐣 雏虫</td><td class="nw lose">-80944 (-119)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[-5.0%, 35.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.86（k=20 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 与 老实-k2 的分差 95% CI 为 [-5.0%, 35.0%]，含 0——谁是冠军纯属运气。</li><li>🩸 屠杀局：首尾 60.0% 的鸿沟——犟驴-7B 今晚不宜出门。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">长度与面积（含公顷/平方千米）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">重量与体积容积（含升/毫升与立方单位互化）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">时间单位（时/分/秒/天/周/世纪）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">数据单位（二进制约定 1 KB = 1024 B）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.42)">80.0%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.07)">55.0%</td><td style="background:rgba(26,127,75,0.31)">72.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td style="background:rgba(193,68,30,0.07)">45.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.25)">67.5%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.42)">20.0%</td><td style="background:rgba(193,68,30,0.31)">27.5%</td><td style="background:rgba(193,68,30,0.24)">32.5%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 80 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>UC-LA-01</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3500</td>
+      <td class="muted">318ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-01</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3500</td>
+      <td class="muted">404ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-01</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3500</td>
+      <td class="muted">276ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-01</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3500</td>
+      <td class="muted">82ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-02</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">250</td>
+      <td class="muted">338ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-02</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">250</td>
+      <td class="muted">281ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-02</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">250</td>
+      <td class="muted">248ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-02</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">250</td>
+      <td class="muted">135ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-03</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">20000</td>
+      <td class="muted">473ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-03</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">20000</td>
+      <td class="muted">121ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-03</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2000大</td>
+      <td class="muted">304ms</td>
+      <td class="muted">期望「20000」，实答「2000大」</td>
+    </tr>
+<tr>
+      <td>UC-LA-03</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">200</td>
+      <td class="muted">342ms</td>
+      <td class="muted">期望「20000」，实答「200」</td>
+    </tr>
+<tr>
+      <td>UC-LA-04</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">130ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-04</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">50</td>
+      <td class="muted">303ms</td>
+      <td class="muted">期望「500」，实答「50」</td>
+    </tr>
+<tr>
+      <td>UC-LA-04</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">220ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-04</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">333ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-05</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">800</td>
+      <td class="muted">351ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-05</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">800</td>
+      <td class="muted">323ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-LA-05</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">80</td>
+      <td class="muted">303ms</td>
+      <td class="muted">期望「800」，实答「80」</td>
+    </tr>
+<tr>
+      <td>UC-LA-05</td><td><span class="tag">长度与面积（含公顷/平方千米）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">800</td>
+      <td class="muted">161ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-01</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2500</td>
+      <td class="muted">92ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-01</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">国500</td>
+      <td class="muted">462ms</td>
+      <td class="muted">期望「2500」，实答「国500」</td>
+    </tr>
+<tr>
+      <td>UC-WV-01</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">25</td>
+      <td class="muted">199ms</td>
+      <td class="muted">期望「2500」，实答「25」</td>
+    </tr>
+<tr>
+      <td>UC-WV-01</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2500</td>
+      <td class="muted">427ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-02</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">411ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-02</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">242ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-02</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">122ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-02</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">463ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-03</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3000</td>
+      <td class="muted">103ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-03</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3000</td>
+      <td class="muted">150ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-03</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">300</td>
+      <td class="muted">461ms</td>
+      <td class="muted">期望「3000」，实答「300」</td>
+    </tr>
+<tr>
+      <td>UC-WV-03</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">30</td>
+      <td class="muted">421ms</td>
+      <td class="muted">期望「3000」，实答「30」</td>
+    </tr>
+<tr>
+      <td>UC-WV-04</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2000</td>
+      <td class="muted">198ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-04</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">000</td>
+      <td class="muted">294ms</td>
+      <td class="muted">期望「2000」，实答「000」</td>
+    </tr>
+<tr>
+      <td>UC-WV-04</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">200</td>
+      <td class="muted">450ms</td>
+      <td class="muted">期望「2000」，实答「200」</td>
+    </tr>
+<tr>
+      <td>UC-WV-04</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2000</td>
+      <td class="muted">216ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-05</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">322ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-05</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">249ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-WV-05</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">50</td>
+      <td class="muted">465ms</td>
+      <td class="muted">期望「500」，实答「50」</td>
+    </tr>
+<tr>
+      <td>UC-WV-05</td><td><span class="tag">重量与体积容积（含升/毫升与立方单位互化）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">500</td>
+      <td class="muted">390ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-01</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">150</td>
+      <td class="muted">137ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-01</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">15</td>
+      <td class="muted">300ms</td>
+      <td class="muted">期望「150」，实答「15」</td>
+    </tr>
+<tr>
+      <td>UC-TM-01</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">150</td>
+      <td class="muted">469ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-01</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">150</td>
+      <td class="muted">406ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-02</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">72</td>
+      <td class="muted">456ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-02</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">72</td>
+      <td class="muted">89ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-02</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">362ms</td>
+      <td class="muted">期望「72」，实答「7」</td>
+    </tr>
+<tr>
+      <td>UC-TM-02</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">72</td>
+      <td class="muted">286ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-03</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">100</td>
+      <td class="muted">246ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-03</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">100</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-03</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">10</td>
+      <td class="muted">353ms</td>
+      <td class="muted">期望「100」，实答「10」</td>
+    </tr>
+<tr>
+      <td>UC-TM-03</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1中0</td>
+      <td class="muted">149ms</td>
+      <td class="muted">期望「100」，实答「1中0」</td>
+    </tr>
+<tr>
+      <td>UC-TM-04</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">60</td>
+      <td class="muted">143ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-04</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">60</td>
+      <td class="muted">81ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-04</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">475ms</td>
+      <td class="muted">期望「60」，实答「6」</td>
+    </tr>
+<tr>
+      <td>UC-TM-04</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">141ms</td>
+      <td class="muted">期望「60」，实答「6」</td>
+    </tr>
+<tr>
+      <td>UC-TM-05</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">14</td>
+      <td class="muted">354ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-05</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">14</td>
+      <td class="muted">272ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-TM-05</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">452ms</td>
+      <td class="muted">期望「14」，实答「1」</td>
+    </tr>
+<tr>
+      <td>UC-TM-05</td><td><span class="tag">时间单位（时/分/秒/天/周/世纪）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">14</td>
+      <td class="muted">395ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-01</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3072</td>
+      <td class="muted">229ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-01</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">30</td>
+      <td class="muted">350ms</td>
+      <td class="muted">期望「3072」，实答「30」</td>
+    </tr>
+<tr>
+      <td>UC-DB-01</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3上72</td>
+      <td class="muted">425ms</td>
+      <td class="muted">期望「3072」，实答「3上72」</td>
+    </tr>
+<tr>
+      <td>UC-DB-01</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">3072</td>
+      <td class="muted">441ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-02</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2048</td>
+      <td class="muted">400ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-02</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2048</td>
+      <td class="muted">293ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-02</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">224ms</td>
+      <td class="muted">期望「2048」，实答「20」</td>
+    </tr>
+<tr>
+      <td>UC-DB-02</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2048</td>
+      <td class="muted">413ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-03</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1536</td>
+      <td class="muted">211ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-03</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1536</td>
+      <td class="muted">376ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-03</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">536</td>
+      <td class="muted">364ms</td>
+      <td class="muted">期望「1536」，实答「536」</td>
+    </tr>
+<tr>
+      <td>UC-DB-03</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1536</td>
+      <td class="muted">323ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-04</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">324ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-04</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">478ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-04</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">84ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-04</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">186ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-05</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">248</td>
+      <td class="muted">210ms</td>
+      <td class="muted">期望「2048」，实答「248」</td>
+    </tr>
+<tr>
+      <td>UC-DB-05</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">204</td>
+      <td class="muted">206ms</td>
+      <td class="muted">期望「2048」，实答「204」</td>
+    </tr>
+<tr>
+      <td>UC-DB-05</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2048</td>
+      <td class="muted">409ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>UC-DB-05</td><td><span class="tag">数据单位（二进制约定 1 KB = 1024 B）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2048</td>
+      <td class="muted">413ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.5.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>a8dd99f0fe3caa96</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:unit-convert:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 530+36，滑头-72B 530+33，犟驴-7B 530+31，老实-k2 530+34
+</footer>
+</div></body></html>

@@ -1,0 +1,46 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 122,
+    "reflectionCycles": 3,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=6",
+        "V019 reflection - research low runtime updates=6"
+    ],
+    "views": [
+        {
+            "name": "research-front",
+            "frames": 2696,
+            "renderedFrames": 2696,
+            "p95Ms": 3.786904811859131,
+            "drawCalls": 2122.645400593472
+        },
+        {
+            "name": "research-reading",
+            "frames": 2215,
+            "renderedFrames": 2215,
+            "p95Ms": 4.524497032165527,
+            "drawCalls": 5424.974717832957
+        },
+        {
+            "name": "research-terrace",
+            "frames": 3098,
+            "renderedFrames": 3098,
+            "p95Ms": 3.393693447113037,
+            "drawCalls": 825.5739186571982
+        },
+        {
+            "name": "research-upper",
+            "frames": 2227,
+            "renderedFrames": 2227,
+            "p95Ms": 4.572498798370361,
+            "drawCalls": 5275.362819937135
+        }
+    ],
+    "errors": []
+}

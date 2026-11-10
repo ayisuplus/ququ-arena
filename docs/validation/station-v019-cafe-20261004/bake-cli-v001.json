@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\bake-cafe.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "V019 reflection - cafe rear",
+          "path": "Assets/Station/Textures/ReflectionsV019/Cafe-rear-v001.exr",
+          "width": 128
+        },
+        {
+          "name": "V019 reflection - cafe loggia",
+          "path": "Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v001.exr",
+          "width": 128
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

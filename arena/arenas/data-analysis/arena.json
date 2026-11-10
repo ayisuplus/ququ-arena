@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "data-analysis",
+  "title": "资料分析擂台",
+  "description": "形制致敬行测资料分析（内容自建）。给出数据材料，计算确定数值：growth-rate 增长/下降百分之几（(现-基)/基）、ratio 倍数与占比、average 平均数（含移多补少反求）、mixed 综合两步（先求部分再求总量等）。答案均为整数，exact 裁判；每题 meta.expr 存算式，契约测试白名单求值逐题复算（算式书写守整数链纪律：500*120/100 不写 500*1.2，防浮点尾差）。",
+  "author": "AI斗兽场（内容自建，形制致敬行测资料分析）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:data-analysis:2026-09-10",
+  "taskPrefix": "根据材料计算并回答。只输出答案的阿拉伯数字本身（不带单位；问「百分之几」时只填百分号前的数字），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "growth-rate": "增长率/下降率（(现期-基期)/基期）",
+    "ratio": "倍数与占比",
+    "average": "平均数（含反求）",
+    "mixed": "综合两步计算"
+  }
+}

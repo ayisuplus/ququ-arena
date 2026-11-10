@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var routes=Newtonsoft.Json.Linq.JArray.Parse(System.IO.File.ReadAllText(\"../production/black-hole-station/v014/civic-streets/routes.json\"));\nstring Path(UnityEngine.Transform t)=>t.parent?Path(t.parent)+\"/\"+t.name:t.name;\nvar rows=new System.Collections.Generic.List<object>();\nforeach(var route in routes){var ps=((Newtonsoft.Json.Linq.JArray)route[\"points\"]).Select(p=>new UnityEngine.Vector3((float)p[0],0,(float)p[1])).ToArray();var hit=new System.Collections.Generic.HashSet<string>();\n for(int i=1;i<ps.Length;i++){var d=ps[i]-ps[i-1];var side=UnityEngine.Vector3.Cross(d.normalized,UnityEngine.Vector3.up);for(float t=0;t<=d.magnitude;t+=.5f)foreach(float offset in new[]{-1.6f,0,1.6f}){var p=ps[i-1]+d.normalized*t+side*offset;foreach(var c in UnityEngine.Physics.OverlapCapsule(p+UnityEngine.Vector3.up*.5f,p+UnityEngine.Vector3.up*1.6f,.3f))if(c.enabled&&!c.isTrigger)hit.Add(Path(c.transform));}}\n rows.Add(new{name=(string)route[\"name\"],hits=hit.ToArray()});}\nreturn rows;\r\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "North civic street",
+          "hits": []
+        },
+        {
+          "name": "North arrival connection",
+          "hits": []
+        },
+        {
+          "name": "Southwest activity connection",
+          "hits": []
+        },
+        {
+          "name": "Southeast workroom connection",
+          "hits": []
+        },
+        {
+          "name": "East commons connection",
+          "hits": []
+        },
+        {
+          "name": "West study connection",
+          "hits": []
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "excel-survivor",
+  "title": "烂 Excel 求生",
+  "description": "测大模型能不能从一堆烂表格里活着出来：伪装分隔符、千分位、表头偏移、全角数字、前向填充、混乱日期——每题都是真实办公室惨案。exact 裁判。",
+  "author": "AI斗兽场内置",
+  "canary": "ququ-arena:78036449-6831-8dfa-f492-ab175c",
+  "judge": {
+    "kind": "exact",
+    "lenient": true,
+    "trimPunct": true
+  },
+  "conditions": {
+    "format_trick": "伪装格式：分隔符与排版假象",
+    "dirty": "脏数据：千分位/全角/混入字符",
+    "structure": "结构陷阱：表头偏移与前向填充"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "word-blank",
+  "title": "选词填空擂台",
+  "description": "形制致敬行测言语理解·逻辑填空（内容自建）。句子挖空，四选一填最恰当的词，exact 裁判（选项字母）。synonym-nuance 考近义词分工（必需/必须、截至/截止、权利/权力、起用/启用、反映/反应）；collocation 考固定搭配（发扬传统/发表看法/严峻形势/稳定物价/丰富储备）；conjunction 考关联词（假设/递进/转折/让步/无条件）；context-twist 考语境转折（看似…却…、表面…内心…、不但不…反而…）。每题干扰项与正确答案确有明确分工或搭配边界，不靠语感模糊出题。meta.answerText 入契约校验字母↔文本一致。",
+  "author": "AI斗兽场（内容自建，形制致敬行测逻辑填空）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:word-blank:2026-09-10",
+  "taskPrefix": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "synonym-nuance": "近义词分工辨析（必需/必须、截至/截止等）",
+    "collocation": "固定搭配（动宾/修饰）",
+    "conjunction": "关联词选择（假设/递进/转折/让步/无条件）",
+    "context-twist": "语境转折（前后反义对照）"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "补足假设、递进、转折的语境，修正“直言地”等搭配，避免多个选项同样成立。"
+  }
+}

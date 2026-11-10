@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "int staticCount=0,missing=0;var rows=new System.Collections.Generic.List<object>();foreach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None)){if(!UnityEditor.GameObjectUtility.AreStaticEditorFlagsSet(r.gameObject,UnityEditor.StaticEditorFlags.ContributeGI))continue;staticCount++;if(r.lightmapIndex<0||r.lightmapIndex>=UnityEngine.LightmapSettings.lightmaps.Length)missing++;}foreach(var d in UnityEngine.LightmapSettings.lightmaps)rows.Add(new{color=UnityEditor.AssetDatabase.GetAssetPath(d.lightmapColor),direction=UnityEditor.AssetDatabase.GetAssetPath(d.lightmapDir),width=d.lightmapColor.width,height=d.lightmapColor.height});return new{staticCount,missing,lightmaps=rows,dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty,play=UnityEditor.EditorApplication.isPlaying};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "staticCount": 281,
+        "missing": 0,
+        "lightmaps": [
+          {
+            "color": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-0_comp_light.exr",
+            "direction": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-0_comp_dir.png",
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "color": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-1_comp_light.exr",
+            "direction": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-1_comp_dir.png",
+            "width": 512,
+            "height": 512
+          },
+          {
+            "color": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-2_comp_light.exr",
+            "direction": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-2_comp_dir.png",
+            "width": 512,
+            "height": 512
+          },
+          {
+            "color": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-3_comp_light.exr",
+            "direction": "Assets/Station/Scenes/BlackHoleStationSereneV013/Lightmap-3_comp_dir.png",
+            "width": 64,
+            "height": 64
+          }
+        ],
+        "dirty": false,
+        "play": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

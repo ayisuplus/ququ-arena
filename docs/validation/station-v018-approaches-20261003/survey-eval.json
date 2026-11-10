@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v018\\approaches\\survey.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "V016 B01 moon sail exterior trial",
+          "RingId": "v015-r2",
+          "position": "(128.575, 0.020, 77.256)",
+          "nearby": 5,
+          "doors": [
+            {
+              "name": "V018 B01 main door",
+              "local": "(-4.600, 0.120, 8.120)"
+            },
+            {
+              "name": "V018 B01 reading door",
+              "local": "(3.950, 0.120, 8.420)"
+            }
+          ]
+        },
+        {
+          "name": "V016 B02 crystal archive exterior trial",
+          "RingId": "v015-r2",
+          "position": "(-136.952, 0.020, 44.498)",
+          "nearby": 4,
+          "doors": [
+            {
+              "name": "V018 B02 core door",
+              "local": "(-1.213, 0.180, 1.850)"
+            }
+          ]
+        },
+        {
+          "name": "V016 B03 tidal seed exterior trial",
+          "RingId": "v015-r3",
+          "position": "(-10.781, 0.020, 205.718)",
+          "nearby": 21,
+          "doors": [
+            {
+              "name": "B03 automatic seed conservatory door",
+              "local": "(13.950, 0.600, 0.000)"
+            }
+          ]
+        },
+        {
+          "name": "V016 B04 terraced lounge exterior trial",
+          "RingId": "v015-r3",
+          "position": "(-218.627, 0.020, -38.550)",
+          "nearby": 3,
+          "doors": [
+            {
+              "name": "V018 B04 core door",
+              "local": "(0.500, 0.380, 3.150)"
+            },
+            {
+              "name": "V018 B04 east terrace door",
+              "local": "(5.900, 4.950, 2.950)"
+            },
+            {
+              "name": "V018 B04 west terrace door",
+              "local": "(-6.600, 6.560, 2.950)"
+            },
+            {
+              "name": "V018 B04 crown terrace door",
+              "local": "(-4.400, 10.810, 0.850)"
+            }
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

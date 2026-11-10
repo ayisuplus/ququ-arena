@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var s=UnityEngine.SceneManagement.SceneManager.GetActiveScene();var p=\"../docs/validation/alpha-round-018-arrival-occlusion-20261007/measurement-v2/occlusion.json\";var j=Newtonsoft.Json.Linq.JObject.Parse(System.IO.File.ReadAllText(p));return new{s.path,s.isDirty,roots=s.rootCount,playing=UnityEditor.EditorApplication.isPlaying,temporary=UnityEngine.Resources.FindObjectsOfTypeAll<UnityEngine.GameObject>().Count(g=>g.name==\"R18 temporary arrival geometry camera\"),sampling=j[\"sampling\"],calibration=j[\"calibration\"],renderers=j[\"renderers\"].Count()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false,
+        "roots": 12,
+        "playing": false,
+        "temporary": 0,
+        "sampling": {
+          "stepPixels": 20,
+          "offsetPixels": 10,
+          "rays": 4000,
+          "nonTarget": 3492,
+          "belowUpper": 301,
+          "structuralSamples": 207,
+          "targetIndices": [
+            161,
+            289,
+            614,
+            1729,
+            3216
+          ],
+          "minimumHeight": 8.54,
+          "epsilonMetres": 0.005
+        },
+        "calibration": {
+          "frontProbe": true,
+          "backProbe": true,
+          "frontDistance": 1,
+          "backDistance": 1,
+          "frontTriangle": 0,
+          "backTriangle": 0
+        },
+        "renderers": 3342
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

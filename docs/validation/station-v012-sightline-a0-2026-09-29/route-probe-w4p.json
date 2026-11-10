@@ -1,0 +1,164 @@
+{
+  "scene": "BlackHoleStationSouthGardenLoopW4P",
+  "stops": [
+    {
+      "name": "cafe center",
+      "x": 205.0,
+      "z": -205.0,
+      "ground": "Southeast civic life outer-ring street floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "cafe aisle",
+      "x": 205.0,
+      "z": -209.0,
+      "ground": "Southeast civic life outer-ring street floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "door inside",
+      "x": 196.0,
+      "z": -207.0,
+      "ground": "Southeast civic life public floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "door",
+      "x": 194.0,
+      "z": -205.0,
+      "ground": "Southeast civic life public floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "street",
+      "x": 190.0,
+      "z": -205.0,
+      "ground": "Southeast civic life public floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "south turn",
+      "x": 190.0,
+      "z": -216.0,
+      "ground": "Southeast civic life public floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "corridor entry",
+      "x": 190.0,
+      "z": -220.0,
+      "ground": "Southeast lookout connector floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "inside turn",
+      "x": 190.0,
+      "z": -222.0,
+      "ground": "Southeast lookout connector floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "west exit",
+      "x": 186.0,
+      "z": -222.0,
+      "ground": "Southeast lookout connector floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "glass approach",
+      "x": 185.0,
+      "z": -225.0,
+      "ground": "Southeast lookout connector floor",
+      "standing_obstacles": []
+    },
+    {
+      "name": "window stop",
+      "x": 184.7,
+      "z": -230.0,
+      "ground": "Southeast lookout connector floor",
+      "standing_obstacles": []
+    }
+  ],
+  "segments": [
+    {
+      "from": "cafe center",
+      "to": "cafe aisle",
+      "distance": 4.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "cafe aisle",
+      "to": "door inside",
+      "distance": 9.219544,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 5.96046448E-08
+    },
+    {
+      "from": "door inside",
+      "to": "door",
+      "distance": 2.828427,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "door",
+      "to": "street",
+      "distance": 4.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "street",
+      "to": "south turn",
+      "distance": 11.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "south turn",
+      "to": "corridor entry",
+      "distance": 4.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "corridor entry",
+      "to": "inside turn",
+      "distance": 2.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "inside turn",
+      "to": "west exit",
+      "distance": 4.0,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "west exit",
+      "to": "glass approach",
+      "distance": 3.1622777,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    },
+    {
+      "from": "glass approach",
+      "to": "window stop",
+      "distance": 5.008992,
+      "blockers": [],
+      "ground_gaps": 0,
+      "max_floor_step": 0.0
+    }
+  ]
+}

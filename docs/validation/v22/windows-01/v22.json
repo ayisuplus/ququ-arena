@@ -1,0 +1,39 @@
+{
+  "evidence": "Real Windows rendering; saved competition fixtures, no new model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "travel": [
+    {
+      "from": "Arena",
+      "to": "Lab",
+      "seconds": 5.084486
+    },
+    {
+      "from": "Lab",
+      "to": "Referee",
+      "seconds": 5.08427048
+    },
+    {
+      "from": "Referee",
+      "to": "Commentary",
+      "seconds": 2.03578568
+    },
+    {
+      "from": "Commentary",
+      "to": "Gallery",
+      "seconds": 5.09703064
+    }
+  ],
+  "combatModeSwitch": {
+    "hits": 8,
+    "rounds": 8,
+    "deferred": true,
+    "duplicatesIgnored": true,
+    "reconnect": true
+  },
+  "error": "System.Exception: Motion off still animates\r\n  at QuQu.ArenaV22Check+<Check>d__5.MoveNext () [0x016b0] in <885c31bc689c4136b0a37e05b97f5981>:0 \r\n  at QuQu.ArenaV22Check+<Run>d__4.MoveNext () [0x00129] in <885c31bc689c4136b0a37e05b97f5981>:0 ",
+  "runtimeErrors": [
+    "Exception: Motion off still animates"
+  ],
+  "backendPid": 23596,
+  "passed": false
+}

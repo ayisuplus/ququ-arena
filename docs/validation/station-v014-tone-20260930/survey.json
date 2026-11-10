@@ -1,0 +1,117 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalGardenV014.unity",
+  "urp": "Assets/Settings/PC_RPAsset.asset",
+  "supportsHDR": true,
+  "colorSpace": "Linear",
+  "ambientMode": "Trilight",
+  "ambient": 1.0,
+  "sky": "RGBA(0.480, 0.510, 0.550, 1.000)",
+  "equator": "RGBA(0.330, 0.350, 0.370, 1.000)",
+  "ground": "RGBA(0.120, 0.130, 0.140, 1.000)",
+  "volumes": [
+    {
+      "name": "V013 serene interior grading",
+      "enabled": true,
+      "isGlobal": true,
+      "priority": 10.0,
+      "weight": 1.0,
+      "layer": 0,
+      "profile": "Assets/Station/Materials/V013-SereneVolume.asset",
+      "components": [
+        {
+          "name": "Tonemapping",
+          "json": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"Tonemapping\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Tonemapping\",\"active\":true,\"mode\":{\"m_OverrideState\":true,\"m_Value\":1},\"neutralHDRRangeReductionMode\":{\"m_OverrideState\":true,\"m_Value\":2},\"acesPreset\":{\"m_OverrideState\":true,\"m_Value\":3},\"hueShiftAmount\":{\"m_OverrideState\":true,\"m_Value\":0.0},\"detectPaperWhite\":{\"m_OverrideState\":true,\"m_Value\":false},\"paperWhite\":{\"m_OverrideState\":true,\"m_Value\":300.0},\"detectBrightnessLimits\":{\"m_OverrideState\":true,\"m_Value\":true},\"minNits\":{\"m_OverrideState\":true,\"m_Value\":0.004999999888241291},\"maxNits\":{\"m_OverrideState\":true,\"m_Value\":1000.0}}}"
+        },
+        {
+          "name": "Bloom",
+          "json": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"Bloom\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Bloom\",\"active\":true,\"skipIterations\":{\"m_OverrideState\":true,\"m_Value\":1},\"threshold\":{\"m_OverrideState\":true,\"m_Value\":1.2000000476837159},\"intensity\":{\"m_OverrideState\":true,\"m_Value\":0.11999999731779099},\"scatter\":{\"m_OverrideState\":true,\"m_Value\":0.44999998807907107},\"clamp\":{\"m_OverrideState\":true,\"m_Value\":65472.0},\"tint\":{\"m_OverrideState\":true,\"m_Value\":{\"r\":1.0,\"g\":1.0,\"b\":1.0,\"a\":1.0}},\"highQualityFiltering\":{\"m_OverrideState\":true,\"m_Value\":false},\"filter\":{\"m_OverrideState\":true,\"m_Value\":0},\"downscale\":{\"m_OverrideState\":true,\"m_Value\":0},\"maxIterations\":{\"m_OverrideState\":true,\"m_Value\":6},\"dirtTexture\":{\"m_OverrideState\":true,\"m_Value\":{\"instanceID\":0},\"dimension\":1},\"dirtIntensity\":{\"m_OverrideState\":true,\"m_Value\":0.0}}}"
+        },
+        {
+          "name": "ColorAdjustments",
+          "json": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"ColorAdjustments\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorAdjustments\",\"active\":true,\"postExposure\":{\"m_OverrideState\":true,\"m_Value\":0.10000000149011612},\"contrast\":{\"m_OverrideState\":true,\"m_Value\":6.0},\"colorFilter\":{\"m_OverrideState\":true,\"m_Value\":{\"r\":1.0,\"g\":1.0,\"b\":1.0,\"a\":1.0}},\"hueShift\":{\"m_OverrideState\":true,\"m_Value\":0.0},\"saturation\":{\"m_OverrideState\":true,\"m_Value\":-3.0}}}"
+        }
+      ]
+    }
+  ],
+  "cams": [
+    {
+      "name": "Station architectural overview camera - disabled in Play",
+      "enabled": false,
+      "allowHDR": true,
+      "data": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData\",\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":-1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":false,\"m_Antialiasing\":0,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}}"
+    },
+    {
+      "name": "Player eye camera",
+      "enabled": true,
+      "allowHDR": true,
+      "data": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData\",\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}}"
+    },
+    {
+      "name": "NE roof optical camera",
+      "enabled": false,
+      "allowHDR": true,
+      "data": null
+    }
+  ],
+  "lights": [
+    {
+      "name": "Directional Light",
+      "type": "Directional",
+      "intensity": 0.9,
+      "color": "RGBA(0.970, 0.985, 1.000, 1.000)",
+      "rotation": "(20.56, 270.00, 0.00)",
+      "bounceIntensity": 1.0,
+      "shadows": "Soft",
+      "bake": "Realtime"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "RGBA(0.880, 0.950, 1.000, 1.000)",
+      "rotation": "(90.00, 0.00, 0.00)",
+      "bounceIntensity": 1.0,
+      "shadows": "None",
+      "bake": "Realtime"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "RGBA(0.880, 0.950, 1.000, 1.000)",
+      "rotation": "(90.00, 0.00, 0.00)",
+      "bounceIntensity": 1.0,
+      "shadows": "None",
+      "bake": "Realtime"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "RGBA(0.880, 0.950, 1.000, 1.000)",
+      "rotation": "(90.00, 0.00, 0.00)",
+      "bounceIntensity": 1.0,
+      "shadows": "None",
+      "bake": "Realtime"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "RGBA(0.880, 0.950, 1.000, 1.000)",
+      "rotation": "(90.00, 0.00, 0.00)",
+      "bounceIntensity": 1.0,
+      "shadows": "None",
+      "bake": "Realtime"
+    }
+  ],
+  "mats": [
+    {
+      "name": "V013-P1P2-Pearl",
+      "path": "Assets/Station/Materials/V013-P1P2-Pearl.mat",
+      "color": "RGBA(0.780, 0.790, 0.800, 1.000)",
+      "metallic": 0.06,
+      "smooth": 0.32
+    }
+  ]
+}

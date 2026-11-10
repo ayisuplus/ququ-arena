@@ -1,0 +1,106 @@
+{
+  "baseline": "87fc5feb",
+  "purpose": "Open a direct street entrance to the existing reading forecourt; join old and new reading buildings and activity hall through one walkable district loop. Define the back of the shared court with two low edges.",
+  "opening": {
+    "frame": "V015 package - 06 study",
+    "x": -29.9,
+    "zMin": 17.5,
+    "zMax": 21.1,
+    "clearWidth": 3.6
+  },
+  "promenade": {
+    "xMin": -72,
+    "coreMin": -68,
+    "coreMax": -20,
+    "xMax": -16,
+    "positiveZ": true
+  },
+  "forecourtRearEdges": [
+    {
+      "name": "Reading side court edge",
+      "position": [
+        -54.253006,
+        0.05,
+        138.306946
+      ],
+      "size": [
+        17.77175,
+        0.65,
+        0.4
+      ],
+      "yaw": 157.500031
+    },
+    {
+      "name": "Activity side court edge",
+      "position": [
+        -33.554663201256986,
+        0.05,
+        144.82542351932437
+      ],
+      "size": [
+        15.3664474,
+        0.65,
+        0.4
+      ],
+      "yaw": -12.0000191
+    }
+  ],
+  "boundary": [
+    {
+      "name": "Reading court west end",
+      "min": [
+        -30.05,
+        0.055,
+        16.4
+      ],
+      "max": [
+        -29.75,
+        0.955,
+        17.5
+      ]
+    },
+    {
+      "name": "Reading court entrance far return",
+      "min": [
+        -30.05,
+        0.055,
+        21.1
+      ],
+      "max": [
+        -29.75,
+        0.955,
+        22.2
+      ]
+    },
+    {
+      "name": "Reading court short return",
+      "min": [
+        -30.05,
+        0.055,
+        16.1
+      ],
+      "max": [
+        -24,
+        0.955,
+        16.4
+      ]
+    }
+  ],
+  "entryFlare": {
+    "frame": "V015 package - 06 study",
+    "courtEdgeX": -29.5,
+    "throatX": -30.05,
+    "throatZ": [
+      17.5,
+      21.1
+    ],
+    "streetMouthZ": [
+      16.3,
+      22.3
+    ],
+    "outerStreetRadius": 100,
+    "courtSurfaceY": 0.055,
+    "streetSurfaceY": 0.012
+  },
+  "revision": "Activity edge shortened 0.08m to clear the separate legacy facade color band found by full collider audit. Nominal joint to structural sill becomes 0.18m."
+}

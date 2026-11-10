@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 应用题擂台 · AI斗兽场">
+<meta property="og:description" content="5 只蛐蛐 × 20 道题 · 冠军 笔记-DOTS 95.0%">
+<title>战报 · 应用题擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 应用题擂台</h1>
+  <div class="sub">形制致敬 GSM8K（多步算术应用题，内容自建）。传统评测第一基本功：读题列式算出确定数值。multi-step 考多步四则混合；classic-type 考小学经典题型（鸡兔同笼/相遇/工程/年龄）；trap-rounding 考进一法与去尾法（租船装箱必须进一、剪裁购买必须去尾）；fraction-of 考分数与占比（含「剩下的几分之几」陷阱）。答案均为整数，exact 裁判；每题 meta.expr 存算式，契约测试逐题复算（ceil/floor 白名单求值）。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T16:18:29.315Z · 用时 5.6s · 5 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>多步四则混合运算</th><th>经典题型（鸡兔同笼/相遇/工程/年龄）</th><th>进一法与去尾法（余数处理陷阱）</th><th>分数与占比（含『剩下的几分之几』陷阱）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">笔记-DOTS<div class="muted">dots:dots3-note-prev</div></td>
+      <td class="score">95.0%<div class="ci">±7.5%</div></td>
+      <td>80.0%</td><td>100.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1569</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1569 (+69)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">95.0%<div class="ci">±7.5%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>100.0%</td><td>80.0%</td>
+      <td class="nw">1539</td><td class="nw">🐲 虫王</td><td class="nw win">49717 (+39)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>60.0%</td><td>60.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1546</td><td class="nw">🐲 虫王</td><td class="nw win">16497 (+46)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">70.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>60.0%</td><td>100.0%</td><td>60.0%</td>
+      <td class="nw">1443</td><td class="nw">🐲 虫王</td><td class="nw lose">22551 (-57)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>5.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">65.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>100.0%</td><td>60.0%</td><td>40.0%</td>
+      <td class="nw">1403</td><td class="nw">🐣 雏虫</td><td class="nw lose">-83226 (-97)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[-15.0%, 15.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.64（k=20 题 × m=5 蛐蛐；m<10 波动大，仅供内部参考）——一致性中等，部分题可能在测别的能力。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！笔记-DOTS 与 老实-k2 的分差 95% CI 为 [-15.0%, 15.0%]，含 0——谁是冠军纯属运气。</li><li>🎬 名场面：「AW-MS-05」全员翻车（均分 40.0%）——只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。
+食堂原有一批大米，平均每天消耗 12…</li><li>🫡 虽败犹荣：犟驴-7B 垫底但也有 65.0%，换个小点的罐子未必输。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">多步四则混合运算</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">经典题型（鸡兔同笼/相遇/工程/年龄）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">进一法与去尾法（余数处理陷阱）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">分数与占比（含『剩下的几分之几』陷阱）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>笔记-DOTS</th><th>老实-k2</th><th>学霸-o9</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">笔记-DOTS</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.21)">65.0%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.21)">65.0%</td></tr>
+<tr><td class="name">学霸-o9</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.07)">55.0%</td><td style="background:rgba(26,127,75,0.10)">57.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td style="background:rgba(193,68,30,0.07)">45.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">52.5%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.21)">35.0%</td><td style="background:rgba(193,68,30,0.21)">35.0%</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">多步四则混合运算</span> 全场平均仅 <b>40.0%</b> —— AW-MS-05</div>
+      <div class="prompt">只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。
+食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？</div>
+      <div class="target">参考答案：100</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：<i>（空白）</i></li><li><b>学霸-o9</b>（0.0%）：00</li><li><b>犟驴-7B</b>（0.0%）：的00</li><li><b>滑头-72B</b>（100.0%）：100</li><li><b>老实-k2</b>（100.0%）：100</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 100 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>AW-MS-01</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">36</td>
+      <td class="muted">2.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-01</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">36</td>
+      <td class="muted">191ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-01</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3</td>
+      <td class="muted">288ms</td>
+      <td class="muted">期望「36」，实答「3」</td>
+    </tr>
+<tr>
+      <td>AW-MS-01</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">36</td>
+      <td class="muted">289ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-01</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">36</td>
+      <td class="muted">210ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-02</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">2.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-02</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">454ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-02</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">426ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-02</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">458ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-02</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">150ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-03</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">73</td>
+      <td class="muted">1.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-03</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">228ms</td>
+      <td class="muted">期望「73」，实答「7」</td>
+    </tr>
+<tr>
+      <td>AW-MS-03</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">356ms</td>
+      <td class="muted">期望「73」，实答「7」</td>
+    </tr>
+<tr>
+      <td>AW-MS-03</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">73</td>
+      <td class="muted">357ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-03</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">73</td>
+      <td class="muted">326ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-04</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1350</td>
+      <td class="muted">1.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-04</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1350</td>
+      <td class="muted">222ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-04</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1350</td>
+      <td class="muted">474ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-04</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">350</td>
+      <td class="muted">116ms</td>
+      <td class="muted">期望「1350」，实答「350」</td>
+    </tr>
+<tr>
+      <td>AW-MS-04</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">1350</td>
+      <td class="muted">178ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-05</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">513ms</td>
+      <td class="muted">期望「100」，实答「」</td>
+    </tr>
+<tr>
+      <td>AW-MS-05</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">00</td>
+      <td class="muted">305ms</td>
+      <td class="muted">期望「100」，实答「00」</td>
+    </tr>
+<tr>
+      <td>AW-MS-05</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">100</td>
+      <td class="muted">267ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-MS-05</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">的00</td>
+      <td class="muted">400ms</td>
+      <td class="muted">期望「100」，实答「的00」</td>
+    </tr>
+<tr>
+      <td>AW-MS-05</td><td><span class="tag">多步四则混合运算</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">100</td>
+      <td class="muted">467ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-01</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">2.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-01</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">334ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-01</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">228ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-01</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">476ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-01</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">4</td>
+      <td class="muted">431ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-02</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">2.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-02</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">273ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-02</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">303ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-02</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">289ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-02</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">331ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-03</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">3.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-03</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">423ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-03</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">262ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-03</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">341ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-03</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">416ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-04</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">3.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-04</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">321ms</td>
+      <td class="muted">期望「20」，实答「2」</td>
+    </tr>
+<tr>
+      <td>AW-CT-04</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">194ms</td>
+      <td class="muted">期望「20」，实答「2」</td>
+    </tr>
+<tr>
+      <td>AW-CT-04</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">395ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-04</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">131ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-05</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">23</td>
+      <td class="muted">2.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-05</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">289ms</td>
+      <td class="muted">期望「23」，实答「2」</td>
+    </tr>
+<tr>
+      <td>AW-CT-05</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">433ms</td>
+      <td class="muted">期望「23」，实答「2」</td>
+    </tr>
+<tr>
+      <td>AW-CT-05</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">23</td>
+      <td class="muted">191ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-CT-05</td><td><span class="tag">经典题型（鸡兔同笼/相遇/工程/年龄）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">23</td>
+      <td class="muted">442ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-01</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">2.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-01</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">263ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-01</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">81ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-01</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">330ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-01</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">6</td>
+      <td class="muted">162ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-02</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">16</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-02</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">16</td>
+      <td class="muted">434ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-02</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">16</td>
+      <td class="muted">110ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-02</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">363ms</td>
+      <td class="muted">期望「16」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-TR-02</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">16</td>
+      <td class="muted">225ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-03</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">11</td>
+      <td class="muted">913ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-03</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">11</td>
+      <td class="muted">278ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-03</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">11</td>
+      <td class="muted">266ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-03</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">408ms</td>
+      <td class="muted">期望「11」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-TR-03</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">11</td>
+      <td class="muted">314ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-04</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">2.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-04</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">228ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-04</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-04</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">256ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-04</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">80ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-05</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">2.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-05</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">226ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-05</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">238ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-05</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">227ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-TR-05</td><td><span class="tag">进一法与去尾法（余数处理陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">7</td>
+      <td class="muted">340ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-01</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">2.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-01</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">475ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-01</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">426ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-01</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">422ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-01</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">246ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-02</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">12</td>
+      <td class="muted">842ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-02</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">12</td>
+      <td class="muted">470ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-02</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">12</td>
+      <td class="muted">359ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-02</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">225ms</td>
+      <td class="muted">期望「12」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-FC-02</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">294ms</td>
+      <td class="muted">期望「12」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-FC-03</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24</td>
+      <td class="muted">2.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-03</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24</td>
+      <td class="muted">243ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-03</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24</td>
+      <td class="muted">81ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-03</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2</td>
+      <td class="muted">329ms</td>
+      <td class="muted">期望「24」，实答「2」</td>
+    </tr>
+<tr>
+      <td>AW-FC-03</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24</td>
+      <td class="muted">214ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-04</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">1.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-04</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">87ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-04</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">166ms</td>
+      <td class="muted">期望「18」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-FC-04</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">171ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-04</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">140ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-05</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">1.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-05</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">263ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>AW-FC-05</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">221ms</td>
+      <td class="muted">期望「18」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-FC-05</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">265ms</td>
+      <td class="muted">期望「18」，实答「1」</td>
+    </tr>
+<tr>
+      <td>AW-FC-05</td><td><span class="tag">分数与占比（含『剩下的几分之几』陷阱）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">18</td>
+      <td class="muted">105ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.8.1 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：笔记-DOTS / 学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>2013c308ec0302d8</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:arith-word:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：笔记-DOTS 1371+3325，学霸-o9 745+21，滑头-72B 745+22，犟驴-7B 745+22，老实-k2 745+22
+</footer>
+</div></body></html>

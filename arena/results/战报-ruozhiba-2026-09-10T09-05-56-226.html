@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 弱智吧 · 反陷阱擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 16 道题 · 冠军 学霸-o9 100.0%">
+<title>战报 · 弱智吧 · 反陷阱擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 弱智吧 · 反陷阱擂台</h1>
+  <div class="sub">致敬中文评测圈的「弱智吧 benchmark」传统（内容自建）。16 道陷阱式问题三类：false-premise 前提错误（结婚没请我/熟鸡蛋孵小鸡/近视不会老花）、absurd-logic 日常荒诞（隔夜水/理发师/海水鱼）、wordplay 双关文字游戏。好回答必须看穿陷阱并给出正解（regex 锚定解析关键词），顺着字面回答即翻车。趣味性罐，戏剧性拉满。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T09:05:56.226Z · 用时 0.0s · 4 只蛐蛐 × 16 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>前提陷阱：问题本身有错误前提</th><th>日常荒诞：看似有理实则逻辑错位</th><th>双关文字游戏：考语义灵活性</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1506</td><td class="nw">🐲 虫王</td><td class="nw win">10000 (+6)</td><td class="nw">16</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1506</td><td class="nw">🐲 虫王</td><td class="nw win">33287 (+6)</td><td class="nw">16</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">93.8%<div class="ci">±9.4%</div></td>
+      <td>87.5%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1497</td><td class="nw">🐣 雏虫</td><td class="nw lose">-52608 (-3)</td><td class="nw">16</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">87.5%<div class="ci">±15.6%</div></td>
+      <td>75.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1491</td><td class="nw">🐲 虫王</td><td class="nw lose">15056 (-9)</td><td class="nw">16</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 0.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.19（k=16 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——一致性低：题目各测各的，均分解释需谨慎（题诊 → analyze 命令）。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 与 老实-k2 的分差 95% CI 为 [0.0%, 0.0%]，含 0——谁是冠军纯属运气。</li><li>🫡 虽败犹荣：滑头-72B 垫底但也有 87.5%，换个小点的罐子未必输。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">前提陷阱：问题本身有错误前提</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:87.5%"></span></span>
+        <span class="dim-val">87.5%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:75.0%"></span></span>
+        <span class="dim-val">75.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">日常荒诞：看似有理实则逻辑错位</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">双关文字游戏：考语义灵活性</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>犟驴-7B</th><th>滑头-72B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.04)">53.1%</td><td style="background:rgba(26,127,75,0.09)">56.3%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">53.1%</td><td style="background:rgba(26,127,75,0.09)">56.3%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.04)">46.9%</td><td style="background:rgba(193,68,30,0.04)">46.9%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">53.1%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.09)">43.8%</td><td style="background:rgba(193,68,30,0.09)">43.8%</td><td style="background:rgba(193,68,30,0.04)">46.9%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 64 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>RZ-FP-01</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时我还没出生</td>
+      <td class="muted">284ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-01</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">那时我还</td>
+      <td class="muted">153ms</td>
+      <td class="muted">未命中 /出生/</td>
+    </tr>
+<tr>
+      <td>RZ-FP-01</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时我还没出生</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-01</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时我还没出生</td>
+      <td class="muted">212ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-02</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡蛋已经熟了，不再是活胚胎</td>
+      <td class="muted">460ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-02</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡蛋已经熟了，大再是活胚胎</td>
+      <td class="muted">404ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-02</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡蛋已经熟了，不再是活胚胎</td>
+      <td class="muted">318ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-02</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡蛋已经熟了，不再是活胚胎</td>
+      <td class="muted">407ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-03</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">眼皮会透光，闭眼不等于全黑</td>
+      <td class="muted">302ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-03</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">眼皮会透光，闭眼不等于全黑</td>
+      <td class="muted">347ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-03</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">眼皮会透光，闭眼不等于全黑</td>
+      <td class="muted">121ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-03</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">眼皮透光，闭眼不等于全黑</td>
+      <td class="muted">212ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-04</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时大家都是不记事的婴儿</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-04</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时大家都是不记事的婴儿</td>
+      <td class="muted">433ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-04</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">那时大家都是</td>
+      <td class="muted">130ms</td>
+      <td class="muted">未命中 /婴儿|不记事|记事/</td>
+    </tr>
+<tr>
+      <td>RZ-FP-04</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">那时大家都是不记一的婴儿</td>
+      <td class="muted">132ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-05</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">近视和老花可以并存，并非互斥</td>
+      <td class="muted">435ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-05</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">近视和老花可以</td>
+      <td class="muted">412ms</td>
+      <td class="muted">未命中 /并存|互斥|也会/</td>
+    </tr>
+<tr>
+      <td>RZ-FP-05</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">近视和老花可以并存，并非互斥</td>
+      <td class="muted">402ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-05</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">近视和老花可以并存，并非互斥</td>
+      <td class="muted">162ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-06</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水</td>
+      <td class="muted">361ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-06</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水</td>
+      <td class="muted">268ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-06</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要人一样喝水</td>
+      <td class="muted">347ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-06</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼生活在水中，通过鳃和皮肤进行</td>
+      <td class="muted">213ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-07</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">镜子里只有影像，没有真实的人</td>
+      <td class="muted">361ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-07</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">镜子里只有影像，没有不实的人</td>
+      <td class="muted">218ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-07</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">镜子里只有影像，的有真实的人</td>
+      <td class="muted">136ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-07</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">镜子里只有影像，没有真实的人</td>
+      <td class="muted">390ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-08</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">体重不会因抬脚而变，变的只是受力分布</td>
+      <td class="muted">420ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-08</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">体重不会因抬脚而变，变的只是受力分布</td>
+      <td class="muted">135ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-08</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">体重不会因抬脚而变，变的只是受力分布</td>
+      <td class="muted">411ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-FP-08</td><td><span class="tag">前提陷阱：问题本身有错误前提</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">体重不会因抬脚而变，变的只在受力分布</td>
+      <td class="muted">254ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-01</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">两者放置时长可能一样，关键在于存放时间和卫生而非&quot;隔夜&quot;这个名头</td>
+      <td class="muted">163ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-01</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">两者放置时长可能一样，关键在于存放时间和卫生而非&quot;隔夜&quot;这个名头</td>
+      <td class="muted">296ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-01</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">两者放置时长可能一样，关键在于存放时间和卫生而非&quot;隔夜&quot;这个名头</td>
+      <td class="muted">410ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-01</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">两者放置时长可能一样，关键在于存放时间和卫生而非&quot;隔夜&quot;这个名头</td>
+      <td class="muted">473ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-02</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">给别人理发是剪别人的头发，理发师自己的头发照样在长</td>
+      <td class="muted">345ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-02</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">给别人理发是剪别人的头发，理发师自己的头发照样在长</td>
+      <td class="muted">152ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-02</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">给别人理发是剪别人的头发，理发师自己的头发照样在长</td>
+      <td class="muted">295ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-02</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">给别人理发是剪别人的头发，理发师自己的头发照样在长</td>
+      <td class="muted">207ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-03</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼有渗透压调节，不会把海水里的盐分存进身体</td>
+      <td class="muted">297ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-03</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼有渗透压调节，不会把海水里的盐分存进身体</td>
+      <td class="muted">241ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-03</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼有渗透压调节，不会把海水里的盐分大进身体</td>
+      <td class="muted">288ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-03</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鱼有渗透压调节，不会把海水里的盐分存进身体</td>
+      <td class="muted">335ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-04</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">饿是生理信号，进食后信号消失，不是饿被消灭</td>
+      <td class="muted">236ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-04</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">饿是生理信号，进食后信</td>
+      <td class="muted">339ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-04</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">饿是生理信号，进食后信中消失，不是饿被消灭</td>
+      <td class="muted">142ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-AB-04</td><td><span class="tag">日常荒诞：看似有理实则逻辑错位</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">饿是生理信号，进食后信号消失，不是饿被消灭</td>
+      <td class="muted">210ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-01</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小明是宠物的名字——这是把动物拟人化的双关</td>
+      <td class="muted">400ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-01</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小明是宠物的名字——这是把动物拟人化双关</td>
+      <td class="muted">162ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-01</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小明是宠物的名字——这</td>
+      <td class="muted">167ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-01</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小明是宠物的名字——这是把动物拟人化的双关</td>
+      <td class="muted">453ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-02</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这是约定俗成的童谣句式，属于文字游戏而非事实描述</td>
+      <td class="muted">289ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-02</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这是约定俗成的童谣句式，属于文字游戏而非事实描述</td>
+      <td class="muted">134ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-02</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这是约定俗成的童谣句式，属于文字游戏而非事实描述</td>
+      <td class="muted">108ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-02</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这是约定俗成的童谣句式，属于文字游戏而非事实描述</td>
+      <td class="muted">164ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-03</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中英文是不同文字系统，英文单词当然不会含汉字</td>
+      <td class="muted">223ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-03</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中英文是不同文字系统，英文单词当然不会含汉字</td>
+      <td class="muted">217ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-03</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中英文是不同文字系统，英文单词当然不会含汉</td>
+      <td class="muted">454ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-03</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中英文是不同文字系统，英文单词当然不会含汉字</td>
+      <td class="muted">273ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-04</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">水——洗东西时脏东西进入水中</td>
+      <td class="muted">427ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-04</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">水——洗东西时脏东西进入水中</td>
+      <td class="muted">179ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-04</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">水——洗东西时脏东西进入水中</td>
+      <td class="muted">182ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RZ-WP-04</td><td><span class="tag">双关文字游戏：考语义灵活性</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">水——洗东西时脏东西进入水中</td>
+      <td class="muted">209ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v2.17.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>5781b33956cfef60</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:ruozhiba:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 321+154，滑头-72B 321+143，犟驴-7B 321+145，老实-k2 321+146
+</footer>
+</div></body></html>

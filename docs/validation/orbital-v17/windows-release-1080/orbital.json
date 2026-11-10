@@ -1,0 +1,38 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "homeMarkerClickable": true,
+  "homePerformance": {
+    "seconds": 10.0,
+    "frames": 600,
+    "fps": 59.9864845,
+    "p95ms": 16.6705017,
+    "maxMs": 17.0423965
+  },
+  "flightSeconds": 1.89750862,
+  "laboratoryPerformance": {
+    "seconds": 10.0,
+    "frames": 600,
+    "fps": 59.9857864,
+    "p95ms": 16.6700039,
+    "maxMs": 16.9973984
+  },
+  "arenaThroughWindow": [
+    0.491089076,
+    0.491941035,
+    49.1677551
+  ],
+  "orbitRestore": true,
+  "repeatClickSkips": true,
+  "focusRestore": true,
+  "broadcastPerformance": {
+    "seconds": 10.0,
+    "frames": 600,
+    "fps": 59.99142,
+    "p95ms": 16.6695,
+    "maxMs": 16.9319019
+  },
+  "error": "System.Exception: Esc failed to restore facility controls\r\n  at QuQu.ArenaOrbitalCheck+<Check>d__5.MoveNext () [0x00f8f] in <0898961ec98a4ee6b51a92233f183f95>:0 \r\n  at QuQu.ArenaOrbitalCheck+<Run>d__4.MoveNext () [0x000b5] in <0898961ec98a4ee6b51a92233f183f95>:0 ",
+  "passed": false,
+  "backendPid": 41228
+}

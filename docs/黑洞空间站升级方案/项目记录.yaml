@@ -1,0 +1,238 @@
+schema_version: 1
+project_id: BLACKHOLE-STATION-UPGRADE-001
+created_at: 2026-09-27
+status: v012_free_component_first_plan_ready
+implementation_started: true
+cleanup_executed: false
+baseline_commit: 5e70ed115cd8e0334aa1c01d4cbba78e26015810
+current_plan: 施工方案_v012.md
+current_cleanup_plan: 清理清单_v001.md
+approved_design_version: null
+confirmed_decisions:
+  - date: 2026-09-29
+    scope: 后续所有迭代允许下载与安装组件，尽量使用免费资源
+    decision: 通用资产与能力先评估现有资源及免费成熟组件，可自主下载安装；不安排新增付费组件采购，免费美术资产不合适时优先 Meshy 生成与 Blender 整理补齐
+    source: 用户允许后续迭代下载和安装组件，随后明确尽量免费，无需付费采购，认为付费不如 Meshy 生成
+    proposal_only: 四个免费官方资源仅为初筛候选，付费包退出采用计划；图片目视、账号归属、下载、导入、运行和视觉验收未完成，未选定或购买资源包
+  - date: 2026-09-29
+    scope: 场景视觉优先与制作工具授权
+    decision: 先完成场景与渲染，再逐步增加交互；Blender 和 Meshy 按需使用不设上限，Meshy 积分不足时停止并向用户报告
+    source: 用户要求写方案，并明确 Blender／Meshy 使用额度及不足时处理
+    proposal_only: 东南咖啡厅—短廊—黑洞观景台为首个样板建议；v011 已成文，参考图片目视、最终造型、样板施工与审美认可尚未完成
+  - date: 2026-09-27
+    scope: 利用两侧三角区
+    decision: 东侧居民公共客厅连接角色居住街区，西侧观测展厅或科研庭院连接科研区，保留中央贯通黑洞的空洞
+    source: 用户同意利用原三角留空并要求修改方案
+    superseded_by: 2026-09-28 第一人称与外围十字四区；公共职能迁出核心
+  - date: 2026-09-27
+    scope: 普通对局与冠军决赛结算演出
+    decision: 普通对局双方各乘原板原电梯返航；仅冠军决赛败者板消失坠入黑洞，冠军板升空接上方下落奖杯，再安全返航
+    source: 用户最新明确区分普通胜利和冠军演出
+  - date: 2026-09-27
+    scope: 宏观空间主尺度
+    decision: 从一开始扩大主空间骨架；方形生活层灰盒 240 × 240 m，竞技菱形四端距中心约 100 m，保留中心环台 44 m 外径与 20 m 通孔
+    source: 用户要求宏大场景和背景，不要做得太小气
+    superseded_by: 2026-09-28 中央比例修正与小规模开放世界目标
+  - date: 2026-09-28
+    scope: 中央环台比例
+    decision: 在 240 m 核心区灰盒中把环台改为 72 m 外径、约 32.73 m 中孔；中央井、平台与观众路线重新验证
+    source: 用户指定放大中央环台到接近最初概念图比例
+    superseded_by: 2026-09-28 井口比例复验
+  - date: 2026-09-28
+    scope: 中央井口比例复验
+    decision: 保留 72 m 环台外径和空间站拓扑，将灰盒中央开口扩至 50 m；尚未获得最终视觉批准
+    source: 最初总览图与同机位灰盒对照，以及独立机械和 Player 回归
+  - date: 2026-09-28
+    scope: 游戏最终形态
+    decision: 以最初概念图的空间站为核心，建设多层、多区、含站外设施的连续小规模开放世界；现有 240 m 场景仅为核心区原型
+    source: 用户明确纠正单一小场馆定位，并选择连续空间站世界
+  - date: 2026-09-28
+    scope: 第一人称与外围十字四区
+    decision: 默认第一人称；现有建筑改造为角色住处和中央擂台体系；向外扩建圆形世界，以十字划分四个主要漫游区，整体继续位于黑洞之上
+    source: 用户本轮文字与圆形外围十字分区手绘图
+    proposal_only: 四区主题和 720 m 外径仍是未获最终视觉批准的候选；W1 四区连通、W2 东南样板和 W3 其余三区迁移灰盒已独立施工
+  - date: 2026-09-28
+    scope: 模型的家、访客起点与后续扩建
+    decision: 核心住房属于大模型而非玩家；访客从东北港区抵达，旧玩家舱改为 DeepSeek 住所；西侧住宅保留未分配模块位及封闭扩建边界，不把六间作为未来上限
+    source: 用户纠正家的定义、选择东北港区抵达，并要求考虑后续扩建
+current_deliverables:
+  - object_id: PLAN-012
+    file: 施工方案_v012.md
+    editable_source: 施工方案_v012.md
+    approved_at: null
+    usage: 承接 v011 视觉样板与验收，调整为免费组件优先、Meshy／Blender 补缺；包含官方候选、当前依赖、接入风险与最小试装阶段，本轮仅方案与资料核查
+  - object_id: PLAN-011
+    file: 施工方案_v011.md
+    editable_source: 施工方案_v011.md
+    approved_at: null
+    usage: 承接 v010 世界方向，替代施工顺序；先视觉样板后四区扩展与生活交互，明确工具分工及 Meshy 积分不足停工报告；本轮仅方案，未进行生成或场景施工
+  - object_id: V010-EAST-CORE-PUBLIC-GATE-W4C-001
+    file: 施工记录/W4C_东轴核心公共入口_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationEastPublicGateW4C.unity
+    approved_at: null
+    usage: 东北港区经东轴单门进入核心的灰盒与 Win64 路线通过，保留墙外绕行；W4A 与 W3V2 进度只读导入并经旧场景回归，未来扩建需显式处理场景存档，完整围护和真人体验未验
+  - object_id: V010-W3-SAVE-MIGRATION-W4B-001
+    file: 施工记录/W4B_W3旧档迁移_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/App/StationWorldSave.cs
+    approved_at: null
+    usage: W3V2 来源档在 W4A 首次启动时只读导入；旧私人住房落到公共安全点，咖啡／温室／货运进度保留；隔离 Win64 与 W3 回归通过，其他旧场景未覆盖
+  - object_id: V010-MODEL-HOMES-W4A-CANDIDATE-001
+    file: 施工记录/W4A_模型住宅与港区访客抵达_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationModelHomesW4A.unity
+    approved_at: null
+    usage: 六位现有模型的住房关联、东北港区访客起点及西侧 7 × 6 m 未分配模块位；独立灰盒候选，完整外围漫游和发行门槛未验
+  - object_id: V009-THREE-DESTINATIONS-W3-CANDIDATE-001
+    file: 施工记录/W3_三区功能迁移灰盒_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationThreeDestinationsW3V2.unity
+    approved_at: null
+    usage: 西北研究台、西南温室和东北货台迁入外区；Editor 实走及左货台工单、Win64 Player 西南照料与西北档案跨进程恢复已验，三区内容密度、真人键鼠、旧档迁移和正式美术未验
+  - object_id: V009-FOUR-DISTRICTS-W2-CANDIDATE-001
+    file: 施工记录/W0-W2_四区灰盒与东南生活样板_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationSoutheastLifeW2V2.unity
+    approved_at: null
+    usage: 第一人称四区连通灰盒与东南咖啡、居民、转播样板；Editor 碰撞和 Win64 Player 双进程存档已验，另外三街区、旧档迁移、真人键鼠及正式美术未验
+  - object_id: P2W-CONTINUOUS-WORLD-PLAYER-001
+    file: 施工记录/P2W_连续世界单次Player漫游_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/Validation/StationContinuousWorldPlayerProbe.cs
+    approved_at: null
+    usage: 单次独立 Player 从玩家舱经过上下层环路、东南西行为点和北侧停靠舱返回；本机 mock 赛事与安全存档连续，实际键鼠、同机位概念图和长期性能仍待验收
+  - object_id: P4-WEST-RESEARCH-ARCHIVE-001
+    file: 施工记录/P4_西侧公开赛题研究台切片_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/App/StationResearchDesk.cs
+    approved_at: null
+    usage: 西侧研究台从本机赛事读取公开题目、已结算答卷和评分；玩家舱至科研庭院 Player 路线、4K 可读性与原世界回归通过，完整科研玩法和正式美术待施工
+  - object_id: P3-CENTRAL-BORE-50M-001
+    file: 施工记录/P3_中央井口50米比例复验_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Models/annular_ring_72m_outer_50m_bore_study.asset
+    approved_at: null
+    usage: 72 m 外径与 50 m 中孔的候选灰盒已写入独立世界；机械夹具和三个 Win64 Player 回归通过，正式赛事与美术源待验收
+  - object_id: P4-TWO-RESIDENT-ROOM-LOUNGE-001
+    file: 施工记录/P4_双居民房间客厅日程切片_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/App/StationResidentRoutine.cs
+    approved_at: null
+    usage: ChatGPT 与 Claude 样板居民在房间和东侧客厅间往返并提供固定短对话；隔离 Player 路线和本机 mock 赛事同名避让通过，完整日程与黑洞观景线待施工
+  - object_id: P4-EAST-LOUNGE-CAFE-001
+    file: 施工记录/P4_东侧客厅咖啡停留切片_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/Presentation/StationCafeMoment.cs
+    approved_at: null
+    usage: 东侧公共客厅取饮、入座、饮用、离座和候选世界存档；隔离 Player 步行与跨进程恢复通过，窗外黑洞视线、正式动作与实际按键待验收
+  - object_id: P2W-SOUTH-KEEL-DESCENT-001
+    file: 施工记录/P2W_南侧贴壳下行闭环_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 南侧温室沿南外壳下行至下层南回廊，Player 约 837 m 分次重启闭环及原功能回归通过；概念图总览对照与弃选长尾保留，正式美术和手动键鼠漫游待做
+  - object_id: P4-SOUTH-GREENHOUSE-CARE-001
+    file: 施工记录/P4_南侧温室照料切片_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/Presentation/StationGreenhouseCare.cs
+    approved_at: null
+    usage: 南侧局部温室可从居住舱连续抵达，检查和补水循环的进度写入候选世界存档；Player 跨进程、旧版 v1 候选存档和原世界回归通过；尚非完整公共区或最终美术
+  - object_id: P4-WORLD-SAVE-CANDIDATE-001
+    file: 施工记录/P4_候选世界安全存档_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/App/StationWorldSave.cs
+    approved_at: null
+    usage: 候选世界玩家安全位置与双货台检修状态的版本化存档；Player 跨进程及备份恢复通过；其他生活状态待做
+  - object_id: P2W-NORTH-DOCK-WORKORDER-001
+    file: 施工记录/P2W_北侧货运检修工单_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/Presentation/StationDockCargoService.cs
+    approved_at: null
+    usage: 北侧两组检修工单有到位检查和返泊完成状态；隔离 Player QA 通过；实际按键全程与跨会话存档待做
+  - object_id: P2W-NORTH-DOCK-SERVICE-001
+    file: 施工记录/P2W_北侧货运与封闭观景_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 北侧可操作货运台和上层封闭观景支路；Editor 十一路线及隔离 Player QA 通过；任务/存档/正式美术待做
+  - object_id: P2W-NORTH-ARRIVAL-SCALE-001
+    file: 施工记录/P2W_北侧抵达厅比例样板_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 北侧 14 m 抵达厅和 10 m 封闭接口比例样板；Editor 路线及隔离 Win64 Player QA 通过；真实活动和正式美术待做
+  - object_id: P2W-NORTH-DOCK-AIRLOCK-001
+    file: 施工记录/P2W_北侧接驳双门样板_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 北侧双门互锁和密封端板灰盒；Editor 往返与十条路线、隔离 Win64 Player QA 通过；空旷画面及正式站外活动待修
+  - object_id: P2W-PLAYER-PREVIEW-001
+    file: 施工记录/P2W_Windows预览验收_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 隔离 Win64 候选包在 Player 启动，起点与东北高台碰撞通过；完整键鼠漫游、性能、中文字体与正式美术未验收
+  - object_id: P2W-NE-GALLERY-001
+    file: 施工记录/P2W_东北角实体高位观景_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 东北圆节点内可步行抵达的实体高台与透明围护；Editor 水平输入爬坡和原十条路线通过，非 Player 或正式美术验收
+  - object_id: P2W-OBSERVATORY-001
+    file: 施工记录/P2W_东北观景节点样板_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationObservatory.unity
+    approved_at: null
+    usage: 独立候选场景的东北角可走玻璃节点与屋顶光学镜头；Editor 实走与十条原路线回归通过，非正式美术或 Player 验收
+  - object_id: P2W-EAST-BYPASS-001
+    file: 施工记录/P2W_东侧公共绕行验证_v001.md
+    editable_source: ../../production/black-hole-station/build_p2w_east_bypass.cs
+    approved_at: null
+    usage: 独立候选场景外侧公共廊直达北接驳区；Editor 角色碰撞实走、私人窗与中央井回归通过，非正式气闸或美术验收
+  - object_id: P2W-GRAYBOX-001
+    file: 施工记录/P2W_世界连通灰盒验证_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Station/Scenes/BlackHoleStationWorldConnectivity.unity
+    approved_at: null
+    usage: 独立候选场景的上层与下层闭环、北侧接驳区和第三人称连续漫游；Editor 实走与本机后端免费 mock 赛事验证，非正式美术或发行验收
+  - object_id: P2W-BASELINE-001
+    file: 施工记录/P2W_世界连通基线_v001.md
+    editable_source: 施工记录/P2W_世界连通基线_v001.md
+    approved_at: null
+    usage: 静态核查核心区、上部框架和第一人称控制的现状；定义多层与站外连通灰盒的下一轮验收
+  - object_id: LIVE-P1-001
+    file: 施工记录/P1_空间站真实赛事事件接入_v001.md
+    editable_source: ../../QuQuArena3D/Assets/Scripts/App/ArenaStationLiveMatch.cs
+    approved_at: null
+    usage: 独立新场景消费现有赛事后端事件；四人和二人 mock 比赛验证普通返航、冠军演出及实际掌击接触
+  - object_id: ARCHIVE-P0-V14-001
+    file: 施工记录/P0_v14归档验证_v001.md
+    editable_source: ../../production/black-hole-station/archive_legacy_v14.ps1
+    approved_at: null
+    usage: 外部 ZIP 的逐文件哈希和解压启动通过；原目录因自动审批拦截仍保留
+  - object_id: GRAYBOX-P2-001
+    file: 施工记录/P2_宏观场景灰盒验证_v001.md
+    editable_source: ../../production/black-hole-station/station_floor_gray_v002.blend
+    approved_at: null
+    usage: 240 米主站和 200 米竞技菱形的独立 Unity 结构灰盒，已从磁盘重开验证
+  - object_id: PLAN-001
+    file: 施工方案_v005.md
+    editable_source: 施工方案_v005.md
+    approved_at: null
+  - object_id: PLAN-008
+    file: 施工方案_v008.md
+    editable_source: 施工方案_v008.md
+    approved_at: null
+    usage: 历史多层开放世界方案；总图、默认视角和分区职责已由 v009 替代，赛事机制继续保留
+  - object_id: PLAN-009
+    file: 施工方案_v009.md
+    editable_source: 施工方案_v009.md
+    approved_at: null
+    usage: 第一人称、核心住房与擂台、外围十字四区与外环的规划提案；包含功能迁移、真实参考和后续验收，未修改场景
+  - object_id: PLAN-010
+    file: 施工方案_v010.md
+    editable_source: 施工方案_v010.md
+    approved_at: null
+    usage: 模型住处与访客入口修正；西侧住宅预留一个未分配模块位和封闭扩建接口，六个房间仅对应当前模型名单
+  - object_id: CLEANUP-001
+    file: 清理清单_v001.md
+    editable_source: 清理清单_v001.md
+    approved_at: null
+  - object_id: IMG-001
+    file: 08_概念图/IMG-001_空间站总览_v003.png
+    editable_source: null
+    approved_at: null
+    usage: 历史核心总览；v009 将两侧公共职能迁往外围，旧图不再代表当前完整世界分区；局部剖开展示
+  - object_id: IMG-002
+    file: 08_概念图/IMG-002_普通返航与冠军颁奖_v005.png
+    editable_source: null
+    approved_at: null
+  - object_id: IMG-003
+    file: 08_概念图/IMG-003_生活区与观景咖啡厅_v001.png
+    editable_source: null
+    approved_at: null
+  - object_id: IMG-004
+    file: 08_概念图/IMG-004_主要道具概念板_v001.png
+    editable_source: null
+    approved_at: null

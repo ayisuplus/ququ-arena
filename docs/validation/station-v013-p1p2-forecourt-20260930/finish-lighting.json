@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"v013 Edit mode required\");\nvar mat=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/V013-P1P2-Light.mat\");\nvar before=mat.shaderKeywords;\n// URP BaseShaderGUI derives _EMISSION from AnyEmissive; the default None cleared the keyword on import.\nmat.globalIlluminationFlags=UnityEngine.MaterialGlobalIlluminationFlags.BakedEmissive;\nmat.EnableKeyword(\"_EMISSION\");UnityEditor.EditorUtility.SetDirty(mat);\nvar legacy=UnityEngine.GameObject.Find(\"Southeast covered public street sample\");\nforeach(var r in legacy.GetComponentsInChildren<UnityEngine.Renderer>())if(r.name==\"Cafe approach frame\")r.enabled=false;\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{before,after=mat.shaderKeywords,flags=mat.globalIlluminationFlags.ToString()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "before": [],
+        "after": [
+          "_EMISSION"
+        ],
+        "flags": "BakedEmissive"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

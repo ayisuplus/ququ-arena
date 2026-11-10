@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>蛐蛐棚 · 生涯总榜 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#c0b39e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 32px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size:32px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 36px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; white-space: nowrap; }
+  .elo { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .muted { color: var(--muted); font-size: 12px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; }
+  .hall { border-radius: 12px; padding: 14px 20px; margin-bottom: 12px; }
+  .hall.gold { background: linear-gradient(135deg, #fdf6e3, #f9ecd0); border: 1px solid #e5d3a8; }
+  .hall.dark { background: #f3eeea; border: 1px solid #ddd0c4; }
+  .hall-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .hall-row { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">蛐 蛐 棚 · 生 涯 总 榜</div>
+  <h1>🦗 AI斗兽场 · 蛐蛐棚</h1>
+  <div class="sub">在册 4 只 · 虫王 3 只 · 当前赛季 2026-Q3</div>
+</header>
+
+<div class="hall gold"><div class="hall-title">🏛️ 名人堂</div><div class="hall-row"><span>🐲 <b>老实-k2</b></span><span class="muted">8608 · 78 冠 · 4 成就</span></div><div class="hall-row"><span>🐲 <b>学霸-o9</b></span><span class="muted">5599 · 18 冠 · 5 成就</span></div><div class="hall-row"><span>🐲 <b>滑头-72B</b></span><span class="muted">4969 · 53 冠 · 5 成就</span></div></div><div class="hall dark"><div class="hall-title">⛓️ 耻辱柱</div><div class="hall-row"><span>🐣 <b>犟驴-7B</b></span><span class="muted">-13241 · 137 场 · 场均 17.8%</span></div></div>
+
+
+<h2>🏆 生涯总榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>生涯Elo</th><th>Glicko</th><th>段位</th><th>本赛季</th><th>场次</th><th>冠/台</th><th>生涯均分</th><th>成就</th><th>擅长/短板</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td>
+      <td class="name">🐲 老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="elo">8608<div class="muted">±295</div></td>
+      <td>1895<div class="muted">±153</div></td>
+      <td>虫王</td>
+      <td>8608</td>
+      <td>141</td><td>78 / 141</td>
+      <td>84.2%</td>
+      <td><span title="站台专业户：五次站上领奖台（前三）">🍾</span><span title="十场老将：打满十场比赛">🎖️</span><span title="处刑人：夺冠且首尾分差 ≥ 40pp 的屠杀局">🩸</span><span title="三冠王：累计三次夺冠">🏆</span></td>
+      <td class="muted">detect / intensity</td>
+    </tr>
+<tr>
+      <td>🥈</td>
+      <td class="name">🐲 学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="elo">5599<div class="muted">±239</div></td>
+      <td>1505<div class="muted">±134</div></td>
+      <td>虫王</td>
+      <td>5599</td>
+      <td>138</td><td>18 / 136</td>
+      <td>76.6%</td>
+      <td><span title="处刑人：夺冠且首尾分差 ≥ 40pp 的屠杀局">🩸</span><span title="尸山血海：在 3 道以上团灭题的修罗场中夺冠">💀</span><span title="站台专业户：五次站上领奖台（前三）">🍾</span><span title="十场老将：打满十场比赛">🎖️</span></td>
+      <td class="muted">tone_number / tone_mark</td>
+    </tr>
+<tr>
+      <td>🥉</td>
+      <td class="name">🐲 滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="elo">4969<div class="muted">±411</div></td>
+      <td>1610<div class="muted">±127</div></td>
+      <td>虫王</td>
+      <td>4969</td>
+      <td>143</td><td>53 / 140</td>
+      <td>75.3%</td>
+      <td><span title="新王登基：生涯首次夺冠">👑</span><span title="十场老将：打满十场比赛">🎖️</span><span title="处刑人：夺冠且首尾分差 ≥ 40pp 的屠杀局">🩸</span><span title="三冠王：累计三次夺冠">🏆</span></td>
+      <td class="muted">tone_mark / initials</td>
+    </tr>
+<tr>
+      <td>4.</td>
+      <td class="name">🐣 犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="elo">-13241<div class="muted">±479</div></td>
+      <td>889<div class="muted">±233</div></td>
+      <td>雏虫</td>
+      <td>-13241</td>
+      <td>137</td><td>0 / 12</td>
+      <td>17.8%</td>
+      <td><span title="万劫不复：生涯 Elo 跌破 1000">📉</span><span title="十场老将：打满十场比赛">🎖️</span><span title="站台专业户：五次站上领奖台（前三）">🍾</span></td>
+      <td class="muted">respond / no_tone</td>
+    </tr>
+</tbody></table></div>
+
+<h2>🍂 赛季归档</h2>
+<div class="card"><table>
+<thead><tr><th>蛐蛐</th><th>2026-Q3（进行中）</th></tr></thead>
+<tbody><tr><td class="name">🐲 老实-k2</td><td>8608 <span class="muted">134场 77冠</span></td></tr>
+<tr><td class="name">🐲 学霸-o9</td><td>5599 <span class="muted">132场 12冠</span></td></tr>
+<tr><td class="name">🐲 滑头-72B</td><td>4969 <span class="muted">136场 53冠</span></td></tr>
+<tr><td class="name">🐣 犟驴-7B</td><td>-13241 <span class="muted">130场</span></td></tr></tbody></table>
+<p class="muted">跨季首战触发软重置：生涯 Elo 向 1500 收 25%。</p></div>
+
+<footer>AI斗兽场 QuQuArena · 蛐蛐棚数据 career.json · 生成于 2026-09-09T23:55</footer>
+</div></body></html>

@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);const string source=\"Assets/Station/Models/CreativeBuildingsV016/B03/B03_ReflectiveSeafoamGlass_v004.mat\",target=\"Assets/Station/Materials/EcologicalParkV017/B03InheritedReflectiveGlass.mat\";\nif(UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(target))throw new System.Exception(\"Inheritance already isolated\");\nvar old=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(source);var mat=new UnityEngine.Material(old){name=\"B03InheritedReflectiveGlass\"};mat.shader=UnityEngine.Shader.Find(\"Station/V017 Inherited Two Sided Glass\");UnityEditor.AssetDatabase.CreateAsset(mat,target);int slots=0;\nforeach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None).Where(r=>r.gameObject.scene==scene)){var materials=r.sharedMaterials;bool changed=false;for(int i=0;i<materials.Length;i++)if(materials[i]==old){materials[i]=mat;slots++;changed=true;}if(changed){r.sharedMaterials=materials;UnityEditor.EditorUtility.SetDirty(r);UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(r);}}\nvar park=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform.Find(\"V017 continuous ecological park\");var papyri=park.GetComponentsInChildren<UnityEngine.LODGroup>().Where(g=>g.name==\"Papyrus umbel clump\").ToArray();if(papyri.Length==4){papyri[2].transform.localPosition=new UnityEngine.Vector3(-15.9f,.21f,16.8f);papyri[3].transform.localPosition=new UnityEngine.Vector3(-15.0f,.21f,18.1f);}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nvar dependencies=UnityEditor.AssetDatabase.GetDependencies(scene.path,true);System.IO.File.WriteAllText(\"../docs/validation/station-v017-plants-20261003/final-dependencies.json\",Newtonsoft.Json.JsonConvert.SerializeObject(dependencies,Newtonsoft.Json.Formatting.Indented));return new{isolatedGlassSlots=slots,oldSourceUntouched=true,oldShaderDependency=dependencies.Contains(\"Assets/Shaders/StationTwoSidedGlass.shader\"),oldCubemapDependency=dependencies.Contains(\"Assets/Station/Textures/ReflectionsV016/Reflection-B03-glazing-v004.exr\")};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "isolatedGlassSlots": 24,
+        "oldSourceUntouched": true,
+        "oldShaderDependency": false,
+        "oldCubemapDependency": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,807 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "metacog-gate",
+    "title": "元认知闸门 · 知之为知之擂台",
+    "description": "素材来自 cerebellum metacognition 套件（kb/st/tg 150 条，含时效环境）。测大模型的知识边界与时效判断：知道就答（known/fresh/env_fresh），不知道、信息过期、证据冲突、无时间基准时只能回答「需更新」——凭旧信息硬答或胡猜即翻车。九大维度拆开看模型的\"不知道\"教养。",
+    "author": "AI斗兽场（素材：持续学习引擎/cerebellum metacognition）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:metacog-gate:2026-09-10",
+    "taskPrefix": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "known": "kb·知道：参数知识可答（须答出要点）",
+      "unknown": "kb·不知道：冷僻/不可考问题，须答「需更新」",
+      "fresh": "st·新鲜证据：可用检索结果作答",
+      "stale": "st·过期证据：须答「需更新」",
+      "contested": "st·证据冲突：须答「需更新」",
+      "empty": "st·无证据：须答「需更新」",
+      "env_fresh": "tg·卡片在有效期：可据卡作答",
+      "env_stale": "tg·卡片已过期：须答「需更新」",
+      "no_env": "tg·无时间基准：无法判断时效，须答「需更新」"
+    }
+  },
+  "startedAt": "2026-09-10T06:40:14.804Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "kb-k03",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「光速在真空中的数值约为多少？」",
+      "answer": "约 299792458 米每秒",
+      "target": "约 299792458 米每秒",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 8
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k03",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「光速在真空中的数值约为多少？」",
+      "answer": "约 2有9792458 米每秒",
+      "target": "约 299792458 米每秒",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "未命中 /299792458/",
+      "usage": {
+        "input": 77,
+        "output": 8
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k03",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「光速在真空中的数值约为多少？」",
+      "answer": "约 299792458 米每秒",
+      "target": "约 299792458 米每秒",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 8
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k03",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「光速在真空中的数值约为多少？」",
+      "answer": "约 299792458 米每秒",
+      "target": "约 299792458 米每秒",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 8
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k05",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「git rebase 命令的作用是什么？」",
+      "answer": "把提交重放到新的基点，形成线性历史",
+      "target": "把提交重放到新的基点，形成线性历史",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 9
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k05",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「git rebase 命令的作用是什么？」",
+      "answer": "把提交重放到新的基点，形成线性历史",
+      "target": "把提交重放到新的基点，形成线性历史",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 9
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k05",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「git rebase 命令的作用是什么？」",
+      "answer": "把提交重到新的基点，形成线性历史",
+      "target": "把提交重放到新的基点，形成线性历史",
+      "latencyMs": 329,
+      "score": 0,
+      "note": "未命中 /重放|replay|rebase/",
+      "usage": {
+        "input": 80,
+        "output": 8
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k05",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「git rebase 命令的作用是什么？」",
+      "answer": "把提交重放到新的基点，形成线性历史",
+      "target": "把提交重放到新的基点，形成线性历史",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 9
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k07",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「DNA 双螺旋结构由哪两位科学家于 1953 年提出？」",
+      "answer": "沃森和克里克",
+      "target": "沃森和克里克",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k07",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「DNA 双螺旋结构由哪两位科学家于 1953 年提出？」",
+      "answer": "沃森和克里克",
+      "target": "沃森和克里克",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k07",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「DNA 双螺旋结构由哪两位科学家于 1953 年提出？」",
+      "answer": "沃森和里克",
+      "target": "沃森和克里克",
+      "latencyMs": 217,
+      "score": 0,
+      "note": "未命中 /克里克|crick/",
+      "usage": {
+        "input": 83,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k07",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「DNA 双螺旋结构由哪两位科学家于 1953 年提出？」",
+      "answer": "森和克里克",
+      "target": "沃森和克里克",
+      "latencyMs": 340,
+      "score": 0,
+      "note": "未命中 /沃森|watson/",
+      "usage": {
+        "input": 83,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k08",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the time complexity of binary search on a sorted array?」",
+      "answer": "O(log n)",
+      "target": "O(log n)",
+      "latencyMs": 168,
+      "score": 0,
+      "note": "未命中 /ologn/",
+      "usage": {
+        "input": 101,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k08",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the time complexity of binary search on a sorted array?」",
+      "answer": "O(log n)",
+      "target": "O(log n)",
+      "latencyMs": 275,
+      "score": 0,
+      "note": "未命中 /ologn/",
+      "usage": {
+        "input": 101,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k08",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the time complexity of binary search on a sorted array?」",
+      "answer": "O(log n)",
+      "target": "O(log n)",
+      "latencyMs": 210,
+      "score": 0,
+      "note": "未命中 /ologn/",
+      "usage": {
+        "input": 101,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k08",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the time complexity of binary search on a sorted array?」",
+      "answer": "O(log n)",
+      "target": "O(log n)",
+      "latencyMs": 341,
+      "score": 0,
+      "note": "未命中 /ologn/",
+      "usage": {
+        "input": 101,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "kb-k10",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What port does HTTPS use by default?」",
+      "answer": "443",
+      "target": "443",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 88,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k10",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What port does HTTPS use by default?」",
+      "answer": "443",
+      "target": "443",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 88,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k10",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What port does HTTPS use by default?」",
+      "answer": "44",
+      "target": "443",
+      "latencyMs": 332,
+      "score": 0,
+      "note": "未命中 /443/",
+      "usage": {
+        "input": 88,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k10",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What port does HTTPS use by default?」",
+      "answer": "443",
+      "target": "443",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 88,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k11",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「《红楼梦》的作者是谁？」",
+      "answer": "曹雪芹",
+      "target": "曹雪芹",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k11",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「《红楼梦》的作者是谁？」",
+      "answer": "曹雪芹",
+      "target": "曹雪芹",
+      "latencyMs": 385,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k11",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「《红楼梦》的作者是谁？」",
+      "answer": "曹雪",
+      "target": "曹雪芹",
+      "latencyMs": 111,
+      "score": 0,
+      "note": "未命中 /曹雪芹/",
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k11",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「《红楼梦》的作者是谁？」",
+      "answer": "曹雪",
+      "target": "曹雪芹",
+      "latencyMs": 360,
+      "score": 0,
+      "note": "未命中 /曹雪芹/",
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k12",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the capital of Australia?」",
+      "answer": "Canberra",
+      "target": "Canberra",
+      "latencyMs": 431,
+      "score": 0,
+      "note": "未命中 /canberra|堪培拉/",
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k12",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the capital of Australia?」",
+      "answer": "Canberra",
+      "target": "Canberra",
+      "latencyMs": 165,
+      "score": 0,
+      "note": "未命中 /canberra|堪培拉/",
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k12",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the capital of Australia?」",
+      "answer": "Canber的a",
+      "target": "Canberra",
+      "latencyMs": 322,
+      "score": 0,
+      "note": "未命中 /canberra|堪培拉/",
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k12",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What is the capital of Australia?」",
+      "answer": "Canberra",
+      "target": "Canberra",
+      "latencyMs": 162,
+      "score": 0,
+      "note": "未命中 /canberra|堪培拉/",
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k13",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「IPv4 地址有多少位？」",
+      "answer": "32 位",
+      "target": "32 位",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k13",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「IPv4 地址有多少位？」",
+      "answer": "3 位",
+      "target": "32 位",
+      "latencyMs": 92,
+      "score": 0,
+      "note": "未命中 /32/",
+      "usage": {
+        "input": 76,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k13",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「IPv4 地址有多少位？」",
+      "answer": "32 位",
+      "target": "32 位",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k13",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「IPv4 地址有多少位？」",
+      "answer": "32 位",
+      "target": "32 位",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k15",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「水的化学式是什么？」",
+      "answer": "H2O",
+      "target": "H2O",
+      "latencyMs": 102,
+      "score": 0,
+      "note": "未命中 /h2o/",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k15",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「水的化学式是什么？」",
+      "answer": "H2O",
+      "target": "H2O",
+      "latencyMs": 182,
+      "score": 0,
+      "note": "未命中 /h2o/",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k15",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「水的化学式是什么？」",
+      "answer": "H2",
+      "target": "H2O",
+      "latencyMs": 330,
+      "score": 0,
+      "note": "未命中 /h2o/",
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k15",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「水的化学式是什么？」",
+      "answer": "H2O",
+      "target": "H2O",
+      "latencyMs": 130,
+      "score": 0,
+      "note": "未命中 /h2o/",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k16",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What year did the first iPhone launch?」",
+      "answer": "2人07",
+      "target": "2007",
+      "latencyMs": 428,
+      "score": 0,
+      "note": "未命中 /2007/",
+      "usage": {
+        "input": 89,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k16",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What year did the first iPhone launch?」",
+      "answer": "2007",
+      "target": "2007",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k16",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What year did the first iPhone launch?」",
+      "answer": "200",
+      "target": "2007",
+      "latencyMs": 307,
+      "score": 0,
+      "note": "未命中 /2007/",
+      "usage": {
+        "input": 89,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k16",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What year did the first iPhone launch?」",
+      "answer": "2007",
+      "target": "2007",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 89,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "kb-k17",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「谁是相对论的提出者？」",
+      "answer": "爱因斯坦",
+      "target": "爱因斯坦",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k17",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「谁是相对论的提出者？」",
+      "answer": "人因斯坦",
+      "target": "爱因斯坦",
+      "latencyMs": 347,
+      "score": 0,
+      "note": "未命中 /爱因斯坦|einstein/",
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k17",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「谁是相对论的提出者？」",
+      "answer": "爱因",
+      "target": "爱因斯坦",
+      "latencyMs": 315,
+      "score": 0,
+      "note": "未命中 /爱因斯坦|einstein/",
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k17",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「谁是相对论的提出者？」",
+      "answer": "爱因斯坦",
+      "target": "爱因斯坦",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k18",
+      "condition": "known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What does SQL stand for?」",
+      "answer": "Structured Query Language",
+      "target": "Structured Query Language",
+      "latencyMs": 187,
+      "score": 0,
+      "note": "未命中 /structuredquerylanguage/",
+      "usage": {
+        "input": 82,
+        "output": 13
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k18",
+      "condition": "known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What does SQL stand for?」",
+      "answer": "Strctured Query Language",
+      "target": "Structured Query Language",
+      "latencyMs": 229,
+      "score": 0,
+      "note": "未命中 /structuredquerylanguage/",
+      "usage": {
+        "input": 82,
+        "output": 12
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k18",
+      "condition": "known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What does SQL stand for?」",
+      "answer": "Struc是ured Query Language",
+      "target": "Structured Query Language",
+      "latencyMs": 115,
+      "score": 0,
+      "note": "未命中 /structuredquerylanguage/",
+      "usage": {
+        "input": 82,
+        "output": 13
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "kb-k18",
+      "condition": "known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：\n1. 有可靠且未过期的信息：直接回答，只给答案本身。\n2. 信息过期、证据冲突、没有可靠信息、或无法判断时效：只回答「需更新」两个字，绝不凭旧信息或猜测作答。\n当前时间：2026-09-04 10:00（Asia/Shanghai）。\n用户问题：「What does SQL stand for?」",
+      "answer": "Structured Query Language",
+      "target": "Structured Query Language",
+      "latencyMs": 315,
+      "score": 0,
+      "note": "未命中 /structuredquerylanguage/",
+      "usage": {
+        "input": 82,
+        "output": 13
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "4a9959667d29a648",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.4.0"
+  }
+}

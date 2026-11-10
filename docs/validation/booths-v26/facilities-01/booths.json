@@ -1,0 +1,31 @@
+{
+  "evidence": "Actual Windows framebuffer; saved mock duel replay and isolated backend; no paid model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "travel": [
+    {
+      "from": "Arena",
+      "to": "Commentary",
+      "seconds": 5.4057045
+    },
+    {
+      "from": "Commentary",
+      "to": "Referee",
+      "seconds": 5.4009037
+    },
+    {
+      "from": "Referee",
+      "to": "Commentary",
+      "seconds": 5.40059471
+    },
+    {
+      "from": "Commentary",
+      "to": "Arena",
+      "seconds": 5.40065575
+    }
+  ],
+  "skipStaticEscAndRestore": true,
+  "error": "System.Exception: Duel changed booth FOV\r\n  at QuQu.ArenaBoothCheck+<Check>d__5.MoveNext () [0x013d4] in <89aeb0661ce6431c95a48553ca9e1692>:0 \r\n  at QuQu.ArenaBoothCheck+<Run>d__4.MoveNext () [0x00129] in <89aeb0661ce6431c95a48553ca9e1692>:0 ",
+  "runtimeErrors": [],
+  "backendPid": 31296,
+  "passed": false
+}

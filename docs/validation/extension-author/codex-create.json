@@ -1,0 +1,127 @@
+{
+  "directory": "C:\\Users\\36322\\AppData\\Local\\Temp\\extension-author-codex-Lzs4GG",
+  "id": "d-7cac0c74-1756-4f00-ad45-8b6ceedf4fdb",
+  "name": "真实验收 · 回复长度参数工具",
+  "createdAt": "2026-09-13T12:39:35.506Z",
+  "updatedAt": "2026-09-13T12:40:25.888Z",
+  "revision": 4,
+  "source": {
+    "files": {
+      "package.json": "{\n  \"name\": \"my-pi-extension\",\n  \"version\": \"1.0.0\",\n  \"pi\": {\n    \"extensions\": [\n      \"./index.ts\"\n    ]\n  }\n}",
+      "index.ts": "import { Type } from '@sinclair/typebox';\nimport type { ExtensionAPI } from '@earendil-works/pi-coding-agent';\n\nexport default function (pi: ExtensionAPI) {\n  pi.registerFlag('note-prefix', {\n    description: '原样添加到输出前的前缀',\n    type: 'string',\n    default: '',\n  });\n  pi.registerTool({\n    name: 'echo_note',\n    label: 'Echo Note',\n    description: '返回 note-prefix 与 text 的直接拼接，不修改文本。',\n    parameters: Type.Object({ text: Type.String() }),\n    async execute(_id, { text }) {\n      return {\n        content: [{ type: 'text', text: (pi.getFlag('note-prefix') as string) + text }],\n        details: {},\n      };\n    },\n  });\n}\n",
+      "README.md": "# 最小 Echo Note 扩展\n\n版本：1.0.0。package.json 的 pi.extensions 指向 ./index.ts。\n\n仅注册工具 `echo_note` 和字符串参数 `note-prefix`（默认 `\"\"`），不注册事件或其他能力。\n\n工具输入：`{ \"text\": \"你好\" }`；输出的文本是 `note-prefix + text`。默认返回 `你好`；前缀设为 `备注：` 时返回 `备注：你好`。\n不修剪空白、不添加分隔符、不转换中文。空文本合法，返回前缀本身；默认返回空字符串。\n参数可通过草稿 set_flags 设置，例如 `{\"note-prefix\":\"备注：\"}`；不安装依赖、不访问文件或网络、不额外调用模型。\n\n## 功能用例\n\nextension-tests.json 包含两个明确标注的合成用例，使用默认空前缀：中文原样返回、空文本边界。通过开发工具 run_tests 在真实 ExtensionRunner 中执行，并严格核对完整 content、blocked 和 isError。\n这两个用例不覆盖非空前缀配置；功能通过不代表 Benchmark 提分。未保存为正式配置或启动实验。\n",
+      "extension-tests.json": "{\n  \"version\": 1,\n  \"cases\": [\n    {\n      \"name\": \"合成：中文原样返回\",\n      \"files\": {},\n      \"steps\": [\n        {\n          \"op\": \"tool\",\n          \"name\": \"echo_note\",\n          \"args\": {\n            \"text\": \"你好，斗兽场！\"\n          },\n          \"expect\": [\n            {\n              \"path\": \"blocked\",\n              \"equals\": false\n            },\n            {\n              \"path\": \"isError\",\n              \"equals\": false\n            },\n            {\n              \"path\": \"content\",\n              \"equals\": [\n                {\n                  \"type\": \"text\",\n                  \"text\": \"你好，斗兽场！\"\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"合成：空文本边界\",\n      \"files\": {},\n      \"steps\": [\n        {\n          \"op\": \"tool\",\n          \"name\": \"echo_note\",\n          \"args\": {\n            \"text\": \"\"\n          },\n          \"expect\": [\n            {\n              \"path\": \"blocked\",\n              \"equals\": false\n            },\n            {\n              \"path\": \"isError\",\n              \"equals\": false\n            },\n            {\n              \"path\": \"content\",\n              \"equals\": [\n                {\n                  \"type\": \"text\",\n                  \"text\": \"\"\n                }\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+    },
+    "flags": {}
+  },
+  "turns": [
+    {
+      "id": "4332dc66-b8cb-47a9-9ae1-8cfe08e35915",
+      "prompt": "创建最小 pi 原生扩展：注册 echo_note 工具，接收 text:string，返回相同文本。注册字符串参数 note-prefix，默认值为空字符串，工具输出前加该前缀。仅使用这一个工具和一个参数，不添加其他能力。添加 README 和合成 extension-tests.json：一个用例核对中文原样返回，另一个核对空文本。生成后真实运行用例。",
+      "text": "已读取最新草稿。按字面拼接 `note-prefix + text`，不自动添加空格、换行或去除空白；空文本合法。接下来只添加一个工具和一个字符串参数，补齐 README 与两个合成用例，再真实运行验证。\n\n已完成草稿：\n- 更新 `index.ts`，新增 `README.md`、`extension-tests.json`。\n- 保留有效 `package.json`：版本 `1.0.0`，入口 `./index.ts`。\n- 实际仅注册 `echo_note` 和字符串参数 `note-prefix`（默认 `\"\"`），无事件。\n- 真实运行两个合成用例：中文原样返回、空文本，均通过。\n\n非空前缀配置未纳入本次测试；功能通过不代表 Benchmark 提分。未保存正式配置或启动实验。",
+      "reasoning": "**Writing discovery note**\n**Planning prefix verification tests**",
+      "startedAt": "2026-09-13T12:39:36.065Z",
+      "status": "completed",
+      "events": [
+        {
+          "at": "2026-09-13T12:39:45.151Z",
+          "text": "read_draft"
+        },
+        {
+          "at": "2026-09-13T12:39:45.159Z",
+          "text": "get_extension_guide"
+        },
+        {
+          "at": "2026-09-13T12:40:16.612Z",
+          "text": "write_file · index.ts"
+        },
+        {
+          "at": "2026-09-13T12:40:16.622Z",
+          "text": "write_file · README.md"
+        },
+        {
+          "at": "2026-09-13T12:40:16.631Z",
+          "text": "write_file · extension-tests.json"
+        },
+        {
+          "at": "2026-09-13T12:40:16.639Z",
+          "text": "run_tests"
+        },
+        {
+          "at": "2026-09-13T12:40:16.825Z",
+          "text": "试运行：合成：中文原样返回"
+        },
+        {
+          "at": "2026-09-13T12:40:18.682Z",
+          "text": "通过：合成：中文原样返回"
+        },
+        {
+          "at": "2026-09-13T12:40:18.682Z",
+          "text": "试运行：合成：空文本边界"
+        },
+        {
+          "at": "2026-09-13T12:40:20.492Z",
+          "text": "通过：合成：空文本边界"
+        }
+      ],
+      "usage": {
+        "input": 83167,
+        "output": 1036
+      },
+      "elapsedMs": 49823
+    }
+  ],
+  "checks": [
+    {
+      "digest": "361f85d34d9a86b7cc8236f0c15aed454e6817ade5866b1015d77d056f994ea9",
+      "at": "2026-09-13T12:40:16.825Z",
+      "passed": true,
+      "image": "sha256:e984e03bd963f44d1aa86ff47e8665f2cbba54cb3ca50ee0bc7dbfd2da2e286a",
+      "runtimeHash": "975257b81d71a9e5282a42d4e204767fdcd7dd6952d150ac6a50c7e907b6d6ed",
+      "cases": [
+        {
+          "name": "合成：中文原样返回",
+          "passed": true,
+          "steps": [
+            {
+              "op": "tool · echo_note",
+              "passed": true,
+              "actual": "{\"blocked\":false,\"isError\":false,\"content\":[{\"type\":\"text\",\"text\":\"你好，斗兽场！\"}],\"details\":{}}"
+            }
+          ]
+        },
+        {
+          "name": "合成：空文本边界",
+          "passed": true,
+          "steps": [
+            {
+              "op": "tool · echo_note",
+              "passed": true,
+              "actual": "{\"blocked\":false,\"isError\":false,\"content\":[{\"type\":\"text\",\"text\":\"\"}],\"details\":{}}"
+            }
+          ]
+        }
+      ],
+      "capabilities": {
+        "tools": [
+          {
+            "name": "echo_note",
+            "description": "返回 note-prefix 与 text 的直接拼接，不修改文本。"
+          }
+        ],
+        "events": [],
+        "flags": [
+          {
+            "name": "note-prefix",
+            "description": "原样添加到输出前的前缀",
+            "type": "string",
+            "default": ""
+          }
+        ]
+      }
+    }
+  ],
+  "status": "ready",
+  "codexVersion": "codex-cli 0.154.0-alpha.6.2",
+  "checkCurrent": true
+}

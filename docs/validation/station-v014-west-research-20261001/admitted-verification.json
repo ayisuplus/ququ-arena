@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\QuQuArena3D\\Vendor\\ResearchEnvelopeV014",
+    "manifest": {
+      "assetId": "black_hole_station_research_envelope_v014",
+      "description": "Original folded 24x20m research-gallery roof and 30m approach envelope with clerestory, skylight and facade piers; Unity origin (-171,0,15).",
+      "displayName": "black-hole-station-research-envelope-v014",
+      "files": [
+        {
+          "bytes": 76236,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "65ca7b8e08ab89cd4730b0257cc77ba4388c11776f94765abb5e52412786b378"
+        },
+        {
+          "bytes": 1614,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "18a6c987db46fcde3094a0e6907e9afec3d42e861674d85d844fd28925e1aab9"
+        },
+        {
+          "bytes": 548,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "e09deb3c68bf5f29d2b8f7d11c0d4ca3ff042ea87614df6934607b7c8d539888"
+        },
+        {
+          "bytes": 2784,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "dbc9408f20cfc6bdd150fe361e601b00620e1cc0ee8bbc375dbcedbedf3199d0"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_9d548ccbcdc67dbd0f966e66",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

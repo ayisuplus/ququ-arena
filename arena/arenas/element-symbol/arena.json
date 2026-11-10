@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "element-symbol",
+  "title": "元素符号擂台",
+  "description": "化学元素符号 ↔ 中文名双向（生成器自建）：前 20 号 + 常见金属（铁铜锌银金汞铅锡碘氙）。周期表权威；契约逐题双向复算。测理科基本功。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:element-symbol:2026-09-10",
+  "taskPrefix": "只输出答案本身（中文名或符号），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "symbol-to-name": "符号→中文名", "name-to-symbol": "中文名→符号" }
+}

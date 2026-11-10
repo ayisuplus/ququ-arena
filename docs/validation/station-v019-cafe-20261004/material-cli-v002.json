@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\material-cafe.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "matPath": "Assets/Station/Materials/DistrictsV019/Cafe warm stone v002.mat",
+        "meshPath": "Assets/Station/Models/DistrictsV019/Cafe-floor-v003.asset",
+        "triangles": 540,
+        "textureRepeatMeters": 1.5,
+        "normalStrength": 0.28,
+        "smoothnessMultiplier": 0.65,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

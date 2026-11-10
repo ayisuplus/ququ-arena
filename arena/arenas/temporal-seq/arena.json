@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "temporal-seq",
+  "title": "日程推算擂台",
+  "description": "BBH temporal_sequences 的中文生成器版：一天若干不重叠时间块，问某时刻在进行什么活动（查询时刻必落在块中间——边界两可不问）。生成器铺设时间轴，答案=覆盖查询时刻的活动。测时间区间归属推理。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:temporal-seq:2026-09-10",
+  "taskPrefix": "只输出活动名称本身，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "schedule": "日程块归属" }
+}

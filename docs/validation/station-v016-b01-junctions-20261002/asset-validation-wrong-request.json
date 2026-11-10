@@ -1,0 +1,40 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\refined-v004\\B01_MoonSail_v004.glb",
+    "passed": false,
+    "errorCount": 1,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 49254,
+      "materials": 4,
+      "textures": 0,
+      "hasUVs": false,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        25.515623092651367,
+        14.621919255994726,
+        21.9562406539917
+      ]
+    },
+    "failures": [
+      {
+        "id": "uvs_present",
+        "severity": "error",
+        "actual": "at least one primitive has no TEXCOORD_0",
+        "expected": "every primitive carries UV coordinates",
+        "why": "Without UVs the mesh cannot be textured at all — not by a generator, not by hand."
+      }
+    ],
+    "checksRun": 8,
+    "inspectorWarnings": [
+      "3 of 5 primitives have no TEXCOORD_0: the mesh cannot be textured or retextured until it is UV unwrapped",
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Fails. Run normalize_mesh to generate UVs, then validate again."
+  }
+}

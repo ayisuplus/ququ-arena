@@ -1,0 +1,6891 @@
+{
+  "id": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+  "seq": 70,
+  "snapshot": {
+    "version": 1,
+    "id": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+    "createdAt": "2026-09-18T13:18:57.378Z",
+    "config": {
+      "arena": "fixture",
+      "models": [
+        "mock:xueba-o9",
+        "mock:huatou-72b"
+      ],
+      "draw": [
+        "mock:xueba-o9",
+        "mock:huatou-72b"
+      ],
+      "demo": true,
+      "limit": 10,
+      "requestId": "render-duel-fixture"
+    },
+    "entrants": [
+      {
+        "id": "mock:xueba-o9",
+        "name": "学霸-o9",
+        "kind": "mock"
+      },
+      {
+        "id": "mock:huatou-72b",
+        "name": "滑头-72B",
+        "kind": "mock"
+      }
+    ],
+    "duels": [
+      {
+        "id": "m1",
+        "stage": 0,
+        "sources": [],
+        "players": [
+          "mock:xueba-o9",
+          "mock:huatou-72b"
+        ],
+        "hp": [
+          70,
+          0
+        ],
+        "status": "completed",
+        "reason": "",
+        "winner": "mock:xueba-o9",
+        "regularLimit": 10,
+        "overtime": false,
+        "overtimeUsed": 0,
+        "questions": [
+          {
+            "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q3",
+              "condition": "test",
+              "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q7",
+              "condition": "test",
+              "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q4",
+              "condition": "test",
+              "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q11",
+              "condition": "test",
+              "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q13",
+              "condition": "test",
+              "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q9",
+              "condition": "test",
+              "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q12",
+              "condition": "test",
+              "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q14",
+              "condition": "test",
+              "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "b9b75a41d6037e8fb6c61191f82620bbb9aba4c1b507bf53474cbf4fd2f5b7cf",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q6",
+              "condition": "test",
+              "input": "第 6 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7cf177b1ddc5307e81f5e6be98aa1baecc1eb2d782d761536add20e1d682c569",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q1",
+              "condition": "test",
+              "input": "第 1 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "31a4c25d287535745a701307d7f7ef589ae4ab8b2ba57e6d91dade4225ee9867",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q5",
+              "condition": "test",
+              "input": "第 5 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f9e154c7e2c75c569ab1e7ddcb7ceda0cadd0565b6ab750c74f42913fd9c0bb0",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q15",
+              "condition": "test",
+              "input": "第 15 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5f5fc9d4eae3b3820f08cc72a024d9723324e9996644cd87dfbd8b56cffb4262",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q2",
+              "condition": "test",
+              "input": "第 2 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "bc81738d6550249b12e644b638650f8c50591adaa12a531c2057ac077b6db3ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q8",
+              "condition": "test",
+              "input": "第 8 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7c378dec4aa7f270367a54bb79649ba4b47c34d406117b6ba29f957bcb256280",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q10",
+              "condition": "test",
+              "input": "第 10 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          }
+        ],
+        "rounds": [
+          {
+            "id": "m1-r1",
+            "index": 1,
+            "overtime": false,
+            "question": {
+              "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q3",
+                "condition": "test",
+                "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q3",
+                "condition": "test",
+                "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q3",
+                "condition": "test",
+                "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              100,
+              100
+            ],
+            "after": [
+              100,
+              80
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r2",
+            "index": 2,
+            "overtime": false,
+            "question": {
+              "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q7",
+                "condition": "test",
+                "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q7",
+                "condition": "test",
+                "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q7",
+                "condition": "test",
+                "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              100,
+              80
+            ],
+            "after": [
+              80,
+              80
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 20
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 0
+              }
+            ]
+          },
+          {
+            "id": "m1-r3",
+            "index": 3,
+            "overtime": false,
+            "question": {
+              "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q4",
+                "condition": "test",
+                "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q4",
+                "condition": "test",
+                "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "score": 0.5,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q4",
+                "condition": "test",
+                "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "score": 0.5,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              80,
+              80
+            ],
+            "after": [
+              70,
+              70
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 10
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 10
+              }
+            ]
+          },
+          {
+            "id": "m1-r4",
+            "index": 4,
+            "overtime": false,
+            "question": {
+              "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q11",
+                "condition": "test",
+                "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q11",
+                "condition": "test",
+                "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q11",
+                "condition": "test",
+                "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              70
+            ],
+            "after": [
+              70,
+              70
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 0
+              }
+            ]
+          },
+          {
+            "id": "m1-r5",
+            "index": 5,
+            "overtime": false,
+            "question": {
+              "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q13",
+                "condition": "test",
+                "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q13",
+                "condition": "test",
+                "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q13",
+                "condition": "test",
+                "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              70
+            ],
+            "after": [
+              70,
+              50
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r6",
+            "index": 6,
+            "overtime": false,
+            "question": {
+              "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q9",
+                "condition": "test",
+                "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q9",
+                "condition": "test",
+                "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q9",
+                "condition": "test",
+                "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              50
+            ],
+            "after": [
+              70,
+              30
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r7",
+            "index": 7,
+            "overtime": false,
+            "question": {
+              "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q12",
+                "condition": "test",
+                "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q12",
+                "condition": "test",
+                "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q12",
+                "condition": "test",
+                "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              30
+            ],
+            "after": [
+              70,
+              10
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r8",
+            "index": 8,
+            "overtime": false,
+            "question": {
+              "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q14",
+                "condition": "test",
+                "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q14",
+                "condition": "test",
+                "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q14",
+                "condition": "test",
+                "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              10
+            ],
+            "after": [
+              70,
+              0
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "completed",
+    "activeDuelId": "",
+    "winner": "mock:xueba-o9",
+    "reason": "赛事结束",
+    "seq": 70
+  },
+  "events": [
+    {
+      "message": "对阵已锁定",
+      "seq": 1,
+      "type": "competition-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537379
+    },
+    {
+      "duelId": "m1",
+      "duel": {
+        "id": "m1",
+        "stage": 0,
+        "sources": [],
+        "players": [
+          "mock:xueba-o9",
+          "mock:huatou-72b"
+        ],
+        "hp": [
+          100,
+          100
+        ],
+        "status": "running",
+        "reason": "",
+        "winner": "",
+        "regularLimit": 10,
+        "overtime": false,
+        "overtimeUsed": 0,
+        "questions": [
+          {
+            "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q3",
+              "condition": "test",
+              "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q7",
+              "condition": "test",
+              "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q4",
+              "condition": "test",
+              "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q11",
+              "condition": "test",
+              "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q13",
+              "condition": "test",
+              "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q9",
+              "condition": "test",
+              "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q12",
+              "condition": "test",
+              "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q14",
+              "condition": "test",
+              "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "b9b75a41d6037e8fb6c61191f82620bbb9aba4c1b507bf53474cbf4fd2f5b7cf",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q6",
+              "condition": "test",
+              "input": "第 6 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7cf177b1ddc5307e81f5e6be98aa1baecc1eb2d782d761536add20e1d682c569",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q1",
+              "condition": "test",
+              "input": "第 1 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "31a4c25d287535745a701307d7f7ef589ae4ab8b2ba57e6d91dade4225ee9867",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q5",
+              "condition": "test",
+              "input": "第 5 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f9e154c7e2c75c569ab1e7ddcb7ceda0cadd0565b6ab750c74f42913fd9c0bb0",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q15",
+              "condition": "test",
+              "input": "第 15 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5f5fc9d4eae3b3820f08cc72a024d9723324e9996644cd87dfbd8b56cffb4262",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q2",
+              "condition": "test",
+              "input": "第 2 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "bc81738d6550249b12e644b638650f8c50591adaa12a531c2057ac077b6db3ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q8",
+              "condition": "test",
+              "input": "第 8 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7c378dec4aa7f270367a54bb79649ba4b47c34d406117b6ba29f957bcb256280",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q10",
+              "condition": "test",
+              "input": "第 10 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          }
+        ],
+        "rounds": []
+      },
+      "seq": 2,
+      "type": "duel-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537380
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 3,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537381
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 4,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537382
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q3",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 5,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537383
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q3",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 6,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537383
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q3",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q3",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 7,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537384
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q3",
+            "condition": "test",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q3",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 8,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537384
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q3",
+            "condition": "test",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q3",
+            "condition": "test",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          100
+        ],
+        "attacks": []
+      },
+      "seq": 9,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537385
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r1",
+        "index": 1,
+        "overtime": false,
+        "question": {
+          "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q3",
+            "condition": "test",
+            "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q3",
+            "condition": "test",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q3",
+            "condition": "test",
+            "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          100,
+          100
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 20
+          }
+        ]
+      },
+      "seq": 10,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537385
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 11,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537386
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 12,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537386
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q7",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 13,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537387
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q7",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 14,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537387
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q7",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q7",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 15,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537388
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q7",
+            "condition": "test",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q7",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 16,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537389
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q7",
+            "condition": "test",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q7",
+            "condition": "test",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          100,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 17,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537389
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r2",
+        "index": 2,
+        "overtime": false,
+        "question": {
+          "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q7",
+            "condition": "test",
+            "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q7",
+            "condition": "test",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q7",
+            "condition": "test",
+            "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          100,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 20
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 0
+          }
+        ]
+      },
+      "seq": 18,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537390
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 19,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537390
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 20,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537391
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q4",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 21,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537391
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q4",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 22,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537392
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q4",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q4",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 23,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537393
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q4",
+            "condition": "test",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "score": 0.5,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q4",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 24,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537393
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q4",
+            "condition": "test",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "score": 0.5,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q4",
+            "condition": "test",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "score": 0.5,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          80,
+          80
+        ],
+        "attacks": []
+      },
+      "seq": 25,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537394
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r3",
+        "index": 3,
+        "overtime": false,
+        "question": {
+          "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q4",
+            "condition": "test",
+            "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q4",
+            "condition": "test",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "score": 0.5,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q4",
+            "condition": "test",
+            "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "score": 0.5,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          80,
+          80
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 10
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 10
+          }
+        ]
+      },
+      "seq": 26,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537394
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 27,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537395
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 28,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537396
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q11",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 29,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537396
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q11",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 30,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537397
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q11",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q11",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 31,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537397
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q11",
+            "condition": "test",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q11",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 32,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537398
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q11",
+            "condition": "test",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q11",
+            "condition": "test",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 33,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537399
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r4",
+        "index": 4,
+        "overtime": false,
+        "question": {
+          "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q11",
+            "condition": "test",
+            "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q11",
+            "condition": "test",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q11",
+            "condition": "test",
+            "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 0
+          }
+        ]
+      },
+      "seq": 34,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537399
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 35,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537400
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 36,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537400
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q13",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 37,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537401
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q13",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 38,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537402
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q13",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q13",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 39,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537402
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q13",
+            "condition": "test",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q13",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 40,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537403
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q13",
+            "condition": "test",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q13",
+            "condition": "test",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          70
+        ],
+        "attacks": []
+      },
+      "seq": 41,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537404
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r5",
+        "index": 5,
+        "overtime": false,
+        "question": {
+          "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q13",
+            "condition": "test",
+            "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q13",
+            "condition": "test",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q13",
+            "condition": "test",
+            "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          70,
+          70
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 20
+          }
+        ]
+      },
+      "seq": 42,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537404
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 43,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537405
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 44,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537405
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q9",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 45,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537406
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q9",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 46,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537407
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q9",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q9",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 47,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537407
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q9",
+            "condition": "test",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q9",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 48,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537408
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q9",
+            "condition": "test",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q9",
+            "condition": "test",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          50
+        ],
+        "attacks": []
+      },
+      "seq": 49,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537409
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r6",
+        "index": 6,
+        "overtime": false,
+        "question": {
+          "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q9",
+            "condition": "test",
+            "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q9",
+            "condition": "test",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q9",
+            "condition": "test",
+            "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          70,
+          50
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 20
+          }
+        ]
+      },
+      "seq": 50,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537409
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 51,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537410
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 52,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537411
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q12",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 53,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537412
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q12",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 54,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537412
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q12",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q12",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 55,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537413
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q12",
+            "condition": "test",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q12",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 56,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537414
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q12",
+            "condition": "test",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q12",
+            "condition": "test",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          30
+        ],
+        "attacks": []
+      },
+      "seq": 57,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537414
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r7",
+        "index": 7,
+        "overtime": false,
+        "question": {
+          "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q12",
+            "condition": "test",
+            "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q12",
+            "condition": "test",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q12",
+            "condition": "test",
+            "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          70,
+          30
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 20
+          }
+        ]
+      },
+      "seq": 58,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537415
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 59,
+      "type": "round-start",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537416
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          null,
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 60,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537416
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q14",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "waiting",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 61,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537417
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "solving",
+        "records": [
+          {
+            "taskId": "Q14",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          null
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "generating",
+            "answer": "",
+            "reasoning": "",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 62,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537418
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "taskId": "Q14",
+            "condition": "test",
+            "model": "mock:xueba-o9",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          },
+          {
+            "taskId": "Q14",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "status": "judging",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 63,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537419
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q14",
+            "condition": "test",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "taskId": "Q14",
+            "condition": "test",
+            "model": "mock:huatou-72b",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "score": 0,
+            "latencyMs": 0,
+            "error": "评分未完成",
+            "note": "答案未评分"
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "status": "judging",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": "先检查命题条件，再判断结论是否成立。",
+            "attempt": 0
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 64,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537420
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "judging",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q14",
+            "condition": "test",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q14",
+            "condition": "test",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": false,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          10
+        ],
+        "attacks": []
+      },
+      "seq": 65,
+      "type": "model",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537421
+    },
+    {
+      "duelId": "m1",
+      "round": {
+        "id": "m1-r8",
+        "index": 8,
+        "overtime": false,
+        "question": {
+          "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+          "def": {
+            "name": "fixture",
+            "title": "双人对决验证",
+            "description": "controlled simulation",
+            "judge": {
+              "kind": "exact"
+            }
+          },
+          "task": {
+            "id": "Q14",
+            "condition": "test",
+            "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "target": "对"
+          }
+        },
+        "phase": "clash",
+        "records": [
+          {
+            "model": "mock:xueba-o9",
+            "taskId": "Q14",
+            "condition": "test",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "score": 1,
+            "latencyMs": 1
+          },
+          {
+            "model": "mock:huatou-72b",
+            "taskId": "Q14",
+            "condition": "test",
+            "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "score": 0,
+            "latencyMs": 1
+          }
+        ],
+        "live": [
+          {
+            "modelId": "mock:xueba-o9",
+            "attempt": 0,
+            "status": "done",
+            "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+            "reasoning": ""
+          },
+          {
+            "modelId": "mock:huatou-72b",
+            "attempt": 0,
+            "status": "done",
+            "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+            "reasoning": ""
+          }
+        ],
+        "settled": true,
+        "before": [
+          70,
+          10
+        ],
+        "after": [
+          70,
+          0
+        ],
+        "attacks": [
+          {
+            "target": "mock:xueba-o9",
+            "attacker": "mock:huatou-72b",
+            "damage": 0
+          },
+          {
+            "target": "mock:huatou-72b",
+            "attacker": "mock:xueba-o9",
+            "damage": 20
+          }
+        ]
+      },
+      "seq": 66,
+      "type": "round-resolved",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537421
+    },
+    {
+      "duelId": "m1",
+      "duel": {
+        "id": "m1",
+        "stage": 0,
+        "sources": [],
+        "players": [
+          "mock:xueba-o9",
+          "mock:huatou-72b"
+        ],
+        "hp": [
+          70,
+          0
+        ],
+        "status": "completed",
+        "reason": "",
+        "winner": "mock:xueba-o9",
+        "regularLimit": 10,
+        "overtime": false,
+        "overtimeUsed": 0,
+        "questions": [
+          {
+            "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q3",
+              "condition": "test",
+              "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q7",
+              "condition": "test",
+              "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q4",
+              "condition": "test",
+              "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q11",
+              "condition": "test",
+              "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q13",
+              "condition": "test",
+              "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q9",
+              "condition": "test",
+              "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q12",
+              "condition": "test",
+              "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q14",
+              "condition": "test",
+              "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "b9b75a41d6037e8fb6c61191f82620bbb9aba4c1b507bf53474cbf4fd2f5b7cf",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q6",
+              "condition": "test",
+              "input": "第 6 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7cf177b1ddc5307e81f5e6be98aa1baecc1eb2d782d761536add20e1d682c569",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q1",
+              "condition": "test",
+              "input": "第 1 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "31a4c25d287535745a701307d7f7ef589ae4ab8b2ba57e6d91dade4225ee9867",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q5",
+              "condition": "test",
+              "input": "第 5 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "f9e154c7e2c75c569ab1e7ddcb7ceda0cadd0565b6ab750c74f42913fd9c0bb0",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q15",
+              "condition": "test",
+              "input": "第 15 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "5f5fc9d4eae3b3820f08cc72a024d9723324e9996644cd87dfbd8b56cffb4262",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q2",
+              "condition": "test",
+              "input": "第 2 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "bc81738d6550249b12e644b638650f8c50591adaa12a531c2057ac077b6db3ba",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q8",
+              "condition": "test",
+              "input": "第 8 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          },
+          {
+            "key": "7c378dec4aa7f270367a54bb79649ba4b47c34d406117b6ba29f957bcb256280",
+            "def": {
+              "name": "fixture",
+              "title": "双人对决验证",
+              "description": "controlled simulation",
+              "judge": {
+                "kind": "exact"
+              }
+            },
+            "task": {
+              "id": "Q10",
+              "condition": "test",
+              "input": "第 10 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+              "target": "对"
+            }
+          }
+        ],
+        "rounds": [
+          {
+            "id": "m1-r1",
+            "index": 1,
+            "overtime": false,
+            "question": {
+              "key": "e6f0b4737c176d05e8fd1ea9cc96e243266a073ba62b5dc51569b1c386bac8ba",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q3",
+                "condition": "test",
+                "input": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q3",
+                "condition": "test",
+                "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q3",
+                "condition": "test",
+                "prompt": "第 3 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              100,
+              100
+            ],
+            "after": [
+              100,
+              80
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r2",
+            "index": 2,
+            "overtime": false,
+            "question": {
+              "key": "f634f80b6f77c2a216047803e118f5d9dc3388383e25ba6f5abd7c6c9495620d",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q7",
+                "condition": "test",
+                "input": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q7",
+                "condition": "test",
+                "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q7",
+                "condition": "test",
+                "prompt": "第 7 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              100,
+              80
+            ],
+            "after": [
+              80,
+              80
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 20
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 0
+              }
+            ]
+          },
+          {
+            "id": "m1-r3",
+            "index": 3,
+            "overtime": false,
+            "question": {
+              "key": "70803b3c73cca64b4c0730f30c6ba26c3f5a32be857a9eef7eab8c7403391cf9",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q4",
+                "condition": "test",
+                "input": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q4",
+                "condition": "test",
+                "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "score": 0.5,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q4",
+                "condition": "test",
+                "prompt": "第 4 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "score": 0.5,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "可以寻找一个反例来检验规则，但我还没有验证它是否满足题目的全部前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              80,
+              80
+            ],
+            "after": [
+              70,
+              70
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 10
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 10
+              }
+            ]
+          },
+          {
+            "id": "m1-r4",
+            "index": 4,
+            "overtime": false,
+            "question": {
+              "key": "642cb8fd46847cba627b4ec0b0a35c8f346e3e685386a4cb6a641a219c21ec92",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q11",
+                "condition": "test",
+                "input": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q11",
+                "condition": "test",
+                "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q11",
+                "condition": "test",
+                "prompt": "第 11 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              70
+            ],
+            "after": [
+              70,
+              70
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 0
+              }
+            ]
+          },
+          {
+            "id": "m1-r5",
+            "index": 5,
+            "overtime": false,
+            "question": {
+              "key": "f55e72de9e184af82731b7350900cb8d99c542960d71250d19b6857f67a538d4",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q13",
+                "condition": "test",
+                "input": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q13",
+                "condition": "test",
+                "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q13",
+                "condition": "test",
+                "prompt": "第 13 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              70
+            ],
+            "after": [
+              70,
+              50
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r6",
+            "index": 6,
+            "overtime": false,
+            "question": {
+              "key": "e26c6426acea1644ece65ae835cadf045502b379f94902e5d0a3f543c00a4809",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q9",
+                "condition": "test",
+                "input": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q9",
+                "condition": "test",
+                "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q9",
+                "condition": "test",
+                "prompt": "第 9 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              50
+            ],
+            "after": [
+              70,
+              30
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r7",
+            "index": 7,
+            "overtime": false,
+            "question": {
+              "key": "12ded73fe3e20c2c318dac0a74a4277f8dcf7beeb24aeade047d76280848b60d",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q12",
+                "condition": "test",
+                "input": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q12",
+                "condition": "test",
+                "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q12",
+                "condition": "test",
+                "prompt": "第 12 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              30
+            ],
+            "after": [
+              70,
+              10
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          },
+          {
+            "id": "m1-r8",
+            "index": 8,
+            "overtime": false,
+            "question": {
+              "key": "5c8ae3a9c16eddb093e8b9d42b5bb9f9f3497c34be06231b35948563adfa9cb8",
+              "def": {
+                "name": "fixture",
+                "title": "双人对决验证",
+                "description": "controlled simulation",
+                "judge": {
+                  "kind": "exact"
+                }
+              },
+              "task": {
+                "id": "Q14",
+                "condition": "test",
+                "input": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "target": "对"
+              }
+            },
+            "phase": "result",
+            "records": [
+              {
+                "model": "mock:xueba-o9",
+                "taskId": "Q14",
+                "condition": "test",
+                "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "score": 1,
+                "latencyMs": 1
+              },
+              {
+                "model": "mock:huatou-72b",
+                "taskId": "Q14",
+                "condition": "test",
+                "prompt": "第 14 道验证题：若所有星辰都遵循同一条规则，如何证明眼前的例外？请给出结论和理由。",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "score": 0,
+                "latencyMs": 1
+              }
+            ],
+            "live": [
+              {
+                "modelId": "mock:xueba-o9",
+                "attempt": 0,
+                "status": "done",
+                "answer": "先确认规则的适用范围，再检查前提。若前提不成立，现象并不构成反例；只有满足全部前提却违背结论，才能推翻命题。",
+                "reasoning": ""
+              },
+              {
+                "modelId": "mock:huatou-72b",
+                "attempt": 0,
+                "status": "done",
+                "answer": "我认为观察到的每一个例外都足以推翻所有规则，无需进一步检验前提。",
+                "reasoning": ""
+              }
+            ],
+            "settled": true,
+            "before": [
+              70,
+              10
+            ],
+            "after": [
+              70,
+              0
+            ],
+            "attacks": [
+              {
+                "target": "mock:xueba-o9",
+                "attacker": "mock:huatou-72b",
+                "damage": 0
+              },
+              {
+                "target": "mock:huatou-72b",
+                "attacker": "mock:xueba-o9",
+                "damage": 20
+              }
+            ]
+          }
+        ]
+      },
+      "winner": "mock:xueba-o9",
+      "seq": 67,
+      "type": "duel-end",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537423
+    },
+    {
+      "duelId": "m1",
+      "winner": "mock:xueba-o9",
+      "seq": 68,
+      "type": "advancement",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537423
+    },
+    {
+      "duelId": "m1",
+      "message": "5 秒后进入下一场；可暂停",
+      "seq": 69,
+      "type": "intermission",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537424
+    },
+    {
+      "winner": "mock:xueba-o9",
+      "message": "赛事结束",
+      "seq": 70,
+      "type": "competition-end",
+      "competitionId": "ccb734a23-daa5-4399-8471-bee3d7e31a36",
+      "at": 1789737537425
+    }
+  ]
+}

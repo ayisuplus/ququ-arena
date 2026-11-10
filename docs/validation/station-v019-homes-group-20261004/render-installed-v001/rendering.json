@@ -1,0 +1,71 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 163,
+    "reflectionCycles": 4,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=8",
+        "V019 reflection - research low runtime updates=8"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [],
+    "homesReflectionTextures": [
+        "V019 reflection - homes ground runtime updates=8",
+        "V019 reflection - homes upper runtime updates=8",
+        "V015 reflection - resident deepseek home package runtime updates=10",
+        "V015 reflection - resident chatgpt home package runtime updates=10",
+        "V015 reflection - resident claude home package runtime updates=10"
+    ],
+    "views": [
+        {
+            "name": "overview",
+            "frames": 2339,
+            "renderedFrames": 2339,
+            "p95Ms": 4.335898399353027,
+            "drawCalls": 1225.1137238135955
+        },
+        {
+            "name": "shared-street",
+            "frames": 2424,
+            "renderedFrames": 2424,
+            "p95Ms": 4.292701244354248,
+            "drawCalls": 636.562706270627
+        },
+        {
+            "name": "homes-to-shared",
+            "frames": 2193,
+            "renderedFrames": 2193,
+            "p95Ms": 4.589803218841553,
+            "drawCalls": 2115.174646602827
+        },
+        {
+            "name": "new-court-entry",
+            "frames": 2521,
+            "renderedFrames": 2521,
+            "p95Ms": 4.101296901702881,
+            "drawCalls": 504.23006743355816
+        },
+        {
+            "name": "shared-building",
+            "frames": 2482,
+            "renderedFrames": 2482,
+            "p95Ms": 4.1526007652282719,
+            "drawCalls": 541.8263497179694
+        },
+        {
+            "name": "six-homes-back",
+            "frames": 1747,
+            "renderedFrames": 1747,
+            "p95Ms": 5.72530460357666,
+            "drawCalls": 5131.7057813394395
+        }
+    ],
+    "errors": []
+}

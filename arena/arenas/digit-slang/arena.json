@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "digit-slang",
+  "title": "数字黑话擂台",
+  "description": "中文互联网数字谐音黑话解码（自建 canonical，16 题）：520→我爱你、233→大笑、9494→就是就是。测网络亚文化库存与谐音解码——不认得 886 的模型没上过中文互联网。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:digit-slang:2026-09-10",
+  "taskPrefix": "只输出这串数字黑话的含义本身（几个汉字），不多一个字。\n",
+  "judge": {
+    "kind": "exact"
+  },
+  "conditions": {
+    "slang": "数字谐音解码"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "blockedReason": "数字谐音与网络用语缺少语境，释义和表述不唯一，部分冷僻对应关系缺乏可核实出处。"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-12",
+  "provider": "Doubao",
+  "model": "Seedance 2.0",
+  "conversation": "https://www.doubao.com/chat/38441167085728258",
+  "quota": "Provider confirmed daily free quota; no additional purchase",
+  "generation": {
+    "aspectRatio": "21:9",
+    "requestedSeconds": 10
+  },
+  "original": {
+    "path": "docs/design/arena-doubao-original.mp4",
+    "width": 1470,
+    "height": 630,
+    "fps": 24,
+    "durationSeconds": 10.08,
+    "sha256": "902637FB0F429B4D6CFEE56F6E3DD5A701E46DD448D6EDD1822041BEA66904A1"
+  },
+  "installedLoop": {
+    "path": "arena/.local/arena-motion/previous-arena-loop.mp4",
+    "width": 1470,
+    "height": 630,
+    "fps": 24,
+    "durationSeconds": 9.208008,
+    "audio": false,
+    "sha256": "6874C1FA7AD0D5E1E90A4A019B46D237794D06B2B692A6EA48FF7575B07B02DD"
+  },
+  "processing": "20-frame wrap crossfade, H.264 CRF 21, yuv420p, faststart, audio removed; original preserved",
+  "inspection": "Fixed camera, cyan ring lights and fog, no visible characters or cuts; loop seam reduced, not a claim of mathematically identical end frames",
+  "browserValidation": [
+    "decoded dimensions",
+    "muted autoplay",
+    "loop enabled",
+    "pause",
+    "resume",
+    "HTTP Range 206"
+  ]
+}

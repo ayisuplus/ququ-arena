@@ -1,0 +1,53 @@
+{
+  "evidence": "Actual Windows framebuffer, isolated backend, saved mock duel replay; no model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "trips": [
+    {
+      "to": "Commentary",
+      "exterior": false,
+      "seconds": 6.65817738,
+      "movingFrames": 154
+    },
+    {
+      "to": "Arena",
+      "exterior": false,
+      "seconds": 6.65117073,
+      "movingFrames": 154
+    },
+    {
+      "to": "Commentary",
+      "exterior": true,
+      "seconds": 6.651247,
+      "movingFrames": 154
+    },
+    {
+      "to": "Arena",
+      "exterior": true,
+      "seconds": 6.651539,
+      "movingFrames": 154
+    }
+  ],
+  "movingFrames": 616,
+  "skipClickEscHomeStaticCrossStation": true,
+  "duelReplayHits": 8,
+  "performance": [
+    {
+      "width": 1920,
+      "fps": 59.9985542,
+      "p95ms": 16.6703014
+    },
+    {
+      "width": 2560,
+      "fps": 59.9924278,
+      "p95ms": 16.6696014
+    },
+    {
+      "width": 3840,
+      "fps": 59.9907341,
+      "p95ms": 16.6694012
+    }
+  ],
+  "runtimeErrors": [],
+  "backendPid": 34064,
+  "passed": true
+}

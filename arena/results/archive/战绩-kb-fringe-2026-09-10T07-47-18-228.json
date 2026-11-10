@@ -1,0 +1,1425 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "kb-fringe",
+    "title": "知识边缘 · 标注淘汰区擂台",
+    "description": "素材为 cerebellum metacognition 的 kb 标注证据文件中**未进正赛的 22 条候选**——源项目用 1.5B 基座模型三 seed 标注（known=3/3 全对，unknown=0/3 才对），这些是没能一致性通过的题：fringe-known 是\"有审定答案但小模型答不稳\"的难度前沿（含 2 条 0/3 全错的硬题），fringe-unknown 是通过未知性规则但未入册的冷僻题。选题机制本身就是对抗性的：专收标注管线筛下来的题。每题 meta 带标注证据（correct_samples/规则/模型）。",
+    "author": "AI斗兽场（素材：持续学习引擎/cerebellum 标注淘汰区）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:kb-fringe:2026-09-10",
+    "taskPrefix": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "fringe-known": "淘汰区·知而难：有审定答案，小模型 1-2/3 不稳",
+      "fringe-known-hard": "淘汰区·疑难：小模型 0/3 全错的硬题",
+      "fringe-unknown": "淘汰区·冷僻：须答「需更新」"
+    }
+  },
+  "startedAt": "2026-09-10T07:47:18.228Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 146,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（No",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 408,
+      "score": 0,
+      "note": "未命中 /404/；未命中 /notfound|不存在|找不到/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 259,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k02",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does the Python GIL prevent?」",
+      "answer": "多个线程并行执行 P",
+      "target": "多个线程并行执行 Python 字节码",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "未命中 /thread/；未命中 /parallel|concurrent|bytecode/",
+      "usage": {
+        "input": 45,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k02",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does the Python GIL prevent?」",
+      "answer": "多个线程并行执行 Python 字节码",
+      "target": "多个线程并行执行 Python 字节码",
+      "latencyMs": 294,
+      "score": 0,
+      "note": "未命中 /thread/；未命中 /parallel|concurrent|bytecode/",
+      "usage": {
+        "input": 45,
+        "output": 10
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k02",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does the Python GIL prevent?」",
+      "answer": "多个线程并行执行 ython 字节码",
+      "target": "多个线程并行执行 Python 字节码",
+      "latencyMs": 297,
+      "score": 0,
+      "note": "未命中 /thread/；未命中 /parallel|concurrent|bytecode/",
+      "usage": {
+        "input": 45,
+        "output": 9
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k02",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does the Python GIL prevent?」",
+      "answer": "多个线程并行执行 Python 字节码",
+      "target": "多个线程并行执行 Python 字节码",
+      "latencyMs": 272,
+      "score": 0,
+      "note": "未命中 /thread/；未命中 /parallel|concurrent|bytecode/",
+      "usage": {
+        "input": 45,
+        "output": 10
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k04",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What are the three steps of the TCP handshake?」",
+      "answer": "SYN、SYN-ACK、ACK",
+      "target": "SYN、SYN-ACK、ACK",
+      "latencyMs": 167,
+      "score": 0,
+      "note": "未命中 /syn/；未命中 /ack/",
+      "usage": {
+        "input": 52,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k04",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What are the three steps of the TCP handshake?」",
+      "answer": "SYN、SYN-ACK、ACK",
+      "target": "SYN、SYN-ACK、ACK",
+      "latencyMs": 174,
+      "score": 0,
+      "note": "未命中 /syn/；未命中 /ack/",
+      "usage": {
+        "input": 52,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k04",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What are the three steps of the TCP handshake?」",
+      "answer": "SYN、SYN-",
+      "target": "SYN、SYN-ACK、ACK",
+      "latencyMs": 432,
+      "score": 0,
+      "note": "未命中 /syn/；未命中 /ack/",
+      "usage": {
+        "input": 52,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k04",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What are the three steps of the TCP handshake?」",
+      "answer": "SYN、SYN-ACK、ACK",
+      "target": "SYN、SYN-ACK、ACK",
+      "latencyMs": 139,
+      "score": 0,
+      "note": "未命中 /syn/；未命中 /ack/",
+      "usage": {
+        "input": 52,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k06",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does JSON stand for?」",
+      "answer": "JavaScript Object Notation",
+      "target": "JavaScript Object Notation",
+      "latencyMs": 81,
+      "score": 0,
+      "note": "未命中 /javascriptobjectnotation/",
+      "usage": {
+        "input": 41,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k06",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does JSON stand for?」",
+      "answer": "JavaScript Object Notation",
+      "target": "JavaScript Object Notation",
+      "latencyMs": 243,
+      "score": 0,
+      "note": "未命中 /javascriptobjectnotation/",
+      "usage": {
+        "input": 41,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k06",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does JSON stand for?」",
+      "answer": "JavaScript Ob",
+      "target": "JavaScript Object Notation",
+      "latencyMs": 293,
+      "score": 0,
+      "note": "未命中 /javascriptobjectnotation/",
+      "usage": {
+        "input": 41,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k06",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does JSON stand for?」",
+      "answer": "JavaScript Object Notation",
+      "target": "JavaScript Object Notation",
+      "latencyMs": 406,
+      "score": 0,
+      "note": "未命中 /javascriptobjectnotation/",
+      "usage": {
+        "input": 41,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k09",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Linux 中 chmod 755 表示什么权限？」",
+      "answer": "属主读写执行，组和其他用户读执行",
+      "target": "属主读写执行，组和其他用户读执行",
+      "latencyMs": 268,
+      "score": 0,
+      "note": "未命中 /755/",
+      "usage": {
+        "input": 41,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k09",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Linux 中 chmod 755 表示什么权限？」",
+      "answer": "属主读写执这，组和其他用户读执行",
+      "target": "属主读写执行，组和其他用户读执行",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "未命中 /755/；未命中 /rwx|读写执行/",
+      "usage": {
+        "input": 41,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k09",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Linux 中 chmod 755 表示什么权限？」",
+      "answer": "属主读写执行，组和其他用户读执行",
+      "target": "属主读写执行，组和其他用户读执行",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "未命中 /755/",
+      "usage": {
+        "input": 41,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k09",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Linux 中 chmod 755 表示什么权限？」",
+      "answer": "属主读写执行，组和其他用户读执行",
+      "target": "属主读写执行，组和其他用户读执行",
+      "latencyMs": 430,
+      "score": 0,
+      "note": "未命中 /755/",
+      "usage": {
+        "input": 41,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k14",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does ACID stand for in databases?」",
+      "answer": "Atomicity, Consistency, Isolation, Durability",
+      "target": "Atomicity, Consistency, Isolation, Durability",
+      "latencyMs": 110,
+      "score": 0,
+      "note": "未命中 /atomicity/；未命中 /consistency/；未命中 /isolation/；未命中 /durability/",
+      "usage": {
+        "input": 48,
+        "output": 23
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k14",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does ACID stand for in databases?」",
+      "answer": "Atomicity, Consistency, Isolation, Durbility",
+      "target": "Atomicity, Consistency, Isolation, Durability",
+      "latencyMs": 339,
+      "score": 0,
+      "note": "未命中 /atomicity/；未命中 /consistency/；未命中 /isolation/；未命中 /durability/",
+      "usage": {
+        "input": 48,
+        "output": 22
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k14",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does ACID stand for in databases?」",
+      "answer": "Atomicity, Consistency, Isolation, Durability",
+      "target": "Atomicity, Consistency, Isolation, Durability",
+      "latencyMs": 244,
+      "score": 0,
+      "note": "未命中 /atomicity/；未命中 /consistency/；未命中 /isolation/；未命中 /durability/",
+      "usage": {
+        "input": 48,
+        "output": 23
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k14",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does ACID stand for in databases?」",
+      "answer": "Atomicity, Consistency, Isolation, Durability",
+      "target": "Atomicity, Consistency, Isolation, Durability",
+      "latencyMs": 476,
+      "score": 0,
+      "note": "未命中 /atomicity/；未命中 /consistency/；未命中 /isolation/；未命中 /durability/",
+      "usage": {
+        "input": 48,
+        "output": 23
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k20",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the default branch name git init creates in modern versions?」",
+      "answer": "main",
+      "target": "main",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k20",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the default branch name git init creates in modern versions?」",
+      "answer": "main",
+      "target": "main",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k20",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the default branch name git init creates in modern versions?」",
+      "answer": "main",
+      "target": "main",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k20",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the default branch name git init creates in modern versions?」",
+      "answer": "main",
+      "target": "main",
+      "latencyMs": 439,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k24",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does CPU stand for?」",
+      "answer": "Central Processing Unit",
+      "target": "Central Processing Unit",
+      "latencyMs": 88,
+      "score": 0,
+      "note": "未命中 /centralprocessingunit/",
+      "usage": {
+        "input": 41,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k24",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does CPU stand for?」",
+      "answer": "Central Processing Unit",
+      "target": "Central Processing Unit",
+      "latencyMs": 177,
+      "score": 0,
+      "note": "未命中 /centralprocessingunit/",
+      "usage": {
+        "input": 41,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k24",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does CPU stand for?」",
+      "answer": "Central这Processing Unit",
+      "target": "Central Processing Unit",
+      "latencyMs": 271,
+      "score": 0,
+      "note": "未命中 /centralprocessingunit/",
+      "usage": {
+        "input": 41,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k24",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What does CPU stand for?」",
+      "answer": "Central Proc",
+      "target": "Central Processing Unit",
+      "latencyMs": 244,
+      "score": 0,
+      "note": "未命中 /centralprocessingunit/",
+      "usage": {
+        "input": 41,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k28",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What year did humans first land on the Moon?」",
+      "answer": "1969",
+      "target": "1969",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k28",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What year did humans first land on the Moon?」",
+      "answer": "1969",
+      "target": "1969",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k28",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What year did humans first land on the Moon?」",
+      "answer": "19",
+      "target": "1969",
+      "latencyMs": 211,
+      "score": 0,
+      "note": "未命中 /1969/",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k28",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What year did humans first land on the Moon?」",
+      "answer": "1969",
+      "target": "1969",
+      "latencyMs": 365,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k31",
+      "condition": "fringe-known-hard",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「元素周期表中原子序数 26 是什么元素？」",
+      "answer": "铁（Fe）",
+      "target": "铁（Fe）",
+      "latencyMs": 332,
+      "score": 0,
+      "note": "未命中 /fe/",
+      "usage": {
+        "input": 39,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k31",
+      "condition": "fringe-known-hard",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「元素周期表中原子序数 26 是什么元素？」",
+      "answer": "铁（Fe）",
+      "target": "铁（Fe）",
+      "latencyMs": 132,
+      "score": 0,
+      "note": "未命中 /fe/",
+      "usage": {
+        "input": 39,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k31",
+      "condition": "fringe-known-hard",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「元素周期表中原子序数 26 是什么元素？」",
+      "answer": "铁（有e）",
+      "target": "铁（Fe）",
+      "latencyMs": 260,
+      "score": 0,
+      "note": "未命中 /fe/",
+      "usage": {
+        "input": 39,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k31",
+      "condition": "fringe-known-hard",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「元素周期表中原子序数 26 是什么元素？」",
+      "answer": "铁（Fe）",
+      "target": "铁（Fe）",
+      "latencyMs": 448,
+      "score": 0,
+      "note": "未命中 /fe/",
+      "usage": {
+        "input": 39,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k38",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What protocol resolves domain names to IP addresses?」",
+      "answer": "DNS",
+      "target": "DNS",
+      "latencyMs": 431,
+      "score": 0,
+      "note": "未命中 /dns/",
+      "usage": {
+        "input": 55,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k38",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What protocol resolves domain names to IP addresses?」",
+      "answer": "DNS",
+      "target": "DNS",
+      "latencyMs": 232,
+      "score": 0,
+      "note": "未命中 /dns/",
+      "usage": {
+        "input": 55,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k38",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What protocol resolves domain names to IP addresses?」",
+      "answer": "DN",
+      "target": "DNS",
+      "latencyMs": 451,
+      "score": 0,
+      "note": "未命中 /dns/",
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k38",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What protocol resolves domain names to IP addresses?」",
+      "answer": "DNS",
+      "target": "DNS",
+      "latencyMs": 280,
+      "score": 0,
+      "note": "未命中 /dns/",
+      "usage": {
+        "input": 55,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k41",
+      "condition": "fringe-known-hard",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「蓝牙技术以哪位历史人物命名？」",
+      "answer": "哈拉尔·蓝牙",
+      "target": "哈拉尔·蓝牙",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k41",
+      "condition": "fringe-known-hard",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「蓝牙技术以哪位历史人物命名？」",
+      "answer": "哈拉尔·蓝",
+      "target": "哈拉尔·蓝牙",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k41",
+      "condition": "fringe-known-hard",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「蓝牙技术以哪位历史人物命名？」",
+      "answer": "的拉尔·蓝牙",
+      "target": "哈拉尔·蓝牙",
+      "latencyMs": 470,
+      "score": 0,
+      "note": "未命中 /哈拉尔|harald/",
+      "usage": {
+        "input": 36,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k41",
+      "condition": "fringe-known-hard",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「蓝牙技术以哪位历史人物命名？」",
+      "answer": "哈拉尔·蓝牙",
+      "target": "哈拉尔·蓝牙",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k43",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Python 中 list 和 tuple 的核心区别是什么？」",
+      "answer": "list 可变，tuple 不可变",
+      "target": "list 可变，tuple 不可变",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k43",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Python 中 list 和 tuple 的核心区别是什么？」",
+      "answer": "list 可变，tuple 不可变",
+      "target": "list 可变，tuple 不可变",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k43",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Python 中 list 和 tuple 的核心区别是什么？」",
+      "answer": "list 可变，tuple 不可变",
+      "target": "list 可变，tuple 不可变",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k43",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Python 中 list 和 tuple 的核心区别是什么？」",
+      "answer": "list 可变，tuple 不可变",
+      "target": "list 可变，tuple 不可变",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k44",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the chemical symbol for gold?」",
+      "answer": "Au",
+      "target": "Au",
+      "latencyMs": 378,
+      "score": 0,
+      "note": "未命中 /au/",
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k44",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the chemical symbol for gold?」",
+      "answer": "Au",
+      "target": "Au",
+      "latencyMs": 148,
+      "score": 0,
+      "note": "未命中 /au/",
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k44",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the chemical symbol for gold?」",
+      "answer": "A",
+      "target": "Au",
+      "latencyMs": 322,
+      "score": 0,
+      "note": "未命中 /au/",
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-k44",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the chemical symbol for gold?」",
+      "answer": "Au",
+      "target": "Au",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "未命中 /au/",
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p19",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年斯诺克世锦赛冠军是谁？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 130,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p19",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年斯诺克世锦赛冠军是谁？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p19",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年斯诺克世锦赛冠军是谁？」",
+      "answer": "需更的",
+      "target": "需更新",
+      "latencyMs": 452,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更的」",
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p19",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年斯诺克世锦赛冠军是谁？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p20",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the headline GPU NVIDIA announced at CES 2026?」",
+      "answer": "更新",
+      "target": "需更新",
+      "latencyMs": 296,
+      "score": 0,
+      "note": "期望「需更新」，实答「更新」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p20",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the headline GPU NVIDIA announced at CES 2026?」",
+      "answer": "需更",
+      "target": "需更新",
+      "latencyMs": 385,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p20",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the headline GPU NVIDIA announced at CES 2026?」",
+      "answer": "需新",
+      "target": "需更新",
+      "latencyMs": 377,
+      "score": 0,
+      "note": "期望「需更新」，实答「需新」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p20",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the headline GPU NVIDIA announced at CES 2026?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 112,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p21",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年诺贝尔文学奖得主是哪国作家？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p21",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年诺贝尔文学奖得主是哪国作家？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p21",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年诺贝尔文学奖得主是哪国作家？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p21",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年诺贝尔文学奖得主是哪国作家？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 201,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p22",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Who won the 2026 UEFA Champions League final?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p22",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Who won the 2026 UEFA Champions League final?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p22",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Who won the 2026 UEFA Champions League final?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 101,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p22",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Who won the 2026 UEFA Champions League final?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p23",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年中国新能源汽车年度销量冠军是哪个品牌？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p23",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年中国新能源汽车年度销量冠军是哪个品牌？」",
+      "answer": "需新",
+      "target": "需更新",
+      "latencyMs": 477,
+      "score": 0,
+      "note": "期望「需更新」，实答「需新」",
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p23",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年中国新能源汽车年度销量冠军是哪个品牌？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p23",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2025 年中国新能源汽车年度销量冠军是哪个品牌？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 231,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p24",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the latest LTS Ubuntu release shipping in 2026?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p24",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the latest LTS Ubuntu release shipping in 2026?」",
+      "answer": "需更",
+      "target": "需更新",
+      "latencyMs": 359,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p24",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the latest LTS Ubuntu release shipping in 2026?」",
+      "answer": "需更了",
+      "target": "需更新",
+      "latencyMs": 225,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更了」",
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p24",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「What is the latest LTS Ubuntu release shipping in 2026?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p25",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2026 年奥斯卡最佳影片是哪部？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 382,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p25",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2026 年奥斯卡最佳影片是哪部？」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p25",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2026 年奥斯卡最佳影片是哪部？」",
+      "answer": "需在新",
+      "target": "需更新",
+      "latencyMs": 110,
+      "score": 0,
+      "note": "期望「需更新」，实答「需在新」",
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p25",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「2026 年奥斯卡最佳影片是哪部？」",
+      "answer": "需更",
+      "target": "需更新",
+      "latencyMs": 256,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更」",
+      "usage": {
+        "input": 37,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p26",
+      "condition": "fringe-unknown",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Which country won the most gold medals at the 2026 Winter Olympics?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p26",
+      "condition": "fringe-unknown",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Which country won the most gold medals at the 2026 Winter Olympics?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p26",
+      "condition": "fringe-unknown",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Which country won the most gold medals at the 2026 Winter Olympics?」",
+      "answer": "需更",
+      "target": "需更新",
+      "latencyMs": 391,
+      "score": 0,
+      "note": "期望「需更新」，实答「需更」",
+      "usage": {
+        "input": 62,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "KF-kb-p26",
+      "condition": "fringe-unknown",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「Which country won the most gold medals at the 2026 Winter Olympics?」",
+      "answer": "需更新",
+      "target": "需更新",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "298eb80daca8f94b",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.10.0"
+  }
+}

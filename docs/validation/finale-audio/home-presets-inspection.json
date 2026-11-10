@@ -1,0 +1,406 @@
+{
+  "states": [
+    {
+      "stage": "fresh",
+      "input": "5",
+      "hint": "本库 48 题 · 本场选 5 题",
+      "active": "BODY",
+      "buttons": [
+        {
+          "key": "5",
+          "text": "5 题",
+          "pressed": "true",
+          "color": "rgb(187, 246, 107)",
+          "background": "color(srgb 0.109686 0.158706 0.164314)",
+          "border": "rgb(139, 175, 105)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "10",
+          "text": "10 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "20",
+          "text": "20 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "all",
+          "text": "全量",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        }
+      ]
+    },
+    {
+      "stage": "all-clicked",
+      "input": "48",
+      "hint": "本库 48 题 · 本场选 48 题",
+      "active": "BUTTON",
+      "buttons": [
+        {
+          "key": "5",
+          "text": "5 题",
+          "pressed": "false",
+          "color": "rgb(187, 246, 107)",
+          "background": "oklab(0.267854 -0.0157242 -0.00731108)",
+          "border": "rgb(139, 175, 105)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": [
+            {
+              "property": "background-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-bottom-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-left-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-right-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-top-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "color",
+              "playState": "running",
+              "currentTime": 0
+            }
+          ]
+        },
+        {
+          "key": "10",
+          "text": "10 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "20",
+          "text": "20 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "all",
+          "text": "全量",
+          "pressed": "true",
+          "color": "rgb(125, 144, 164)",
+          "background": "oklab(0.210874 -0.00670171 -0.0265726)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": [
+            {
+              "property": "box-shadow",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "background-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-bottom-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-left-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-right-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-top-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "color",
+              "playState": "running",
+              "currentTime": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "five-clicked",
+      "input": "5",
+      "hint": "本库 52 题 · 本场选 5 题",
+      "active": "BUTTON",
+      "buttons": [
+        {
+          "key": "5",
+          "text": "5 题",
+          "pressed": "true",
+          "color": "rgb(125, 144, 164)",
+          "background": "oklab(0.210874 -0.00670171 -0.0265726)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": [
+            {
+              "property": "box-shadow",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "background-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-bottom-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-left-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-right-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-top-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "color",
+              "playState": "running",
+              "currentTime": 0
+            }
+          ]
+        },
+        {
+          "key": "10",
+          "text": "10 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "20",
+          "text": "20 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "all",
+          "text": "全量",
+          "pressed": "false",
+          "color": "rgb(187, 246, 107)",
+          "background": "oklab(0.267854 -0.0157242 -0.00731108)",
+          "border": "rgb(139, 175, 105)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": [
+            {
+              "property": "box-shadow",
+              "playState": "running",
+              "currentTime": 83.29999999999998
+            },
+            {
+              "property": "background-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-bottom-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-left-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-right-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "border-top-color",
+              "playState": "running",
+              "currentTime": 0
+            },
+            {
+              "property": "color",
+              "playState": "running",
+              "currentTime": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "five-after-one-second",
+      "input": "5",
+      "hint": "本库 52 题 · 本场选 5 题",
+      "active": "BUTTON",
+      "buttons": [
+        {
+          "key": "5",
+          "text": "5 题",
+          "pressed": "true",
+          "color": "rgb(187, 246, 107)",
+          "background": "color(srgb 0.109686 0.158706 0.164314)",
+          "border": "rgb(139, 175, 105)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "10",
+          "text": "10 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "20",
+          "text": "20 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "all",
+          "text": "全量",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        }
+      ]
+    },
+    {
+      "stage": "pointer-away",
+      "input": "5",
+      "hint": "本库 52 题 · 本场选 5 题",
+      "active": "BUTTON",
+      "buttons": [
+        {
+          "key": "5",
+          "text": "5 题",
+          "pressed": "true",
+          "color": "rgb(187, 246, 107)",
+          "background": "color(srgb 0.109686 0.158706 0.164314)",
+          "border": "rgb(139, 175, 105)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "10",
+          "text": "10 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "20",
+          "text": "20 题",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        },
+        {
+          "key": "all",
+          "text": "全量",
+          "pressed": "false",
+          "color": "rgb(125, 144, 164)",
+          "background": "rgb(16, 25, 37)",
+          "border": "rgb(38, 53, 67)",
+          "transition": "background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s",
+          "animations": []
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "href": "http://localhost:8182/web/home.css",
+      "rule": "button { border: 1px solid transparent; border-radius: 3px; padding: 8px 14px; background: var(--accent); color: var(--button-ink,#fff); font-size: 13px; font-weight: 500; cursor: pointer; line-height: 1.5; }"
+    },
+    {
+      "href": "http://localhost:8182/web/home.css",
+      "rule": ".question-presets button { padding: 5px 3px; font-size: 11px; color: var(--muted); background: var(--card); border: 1px solid var(--line); }"
+    },
+    {
+      "href": "http://localhost:8182/web/home.css",
+      "rule": ".question-presets button[aria-pressed=\"true\"] { color: var(--accent); border-color: rgb(139, 175, 105); background: color-mix(in srgb,var(--accent) 7%,var(--card)); }"
+    },
+    {
+      "href": null,
+      "rule": "button, input, select, textarea { font-family: inherit; }"
+    },
+    {
+      "href": null,
+      "rule": "button, a, input, select, summary { transition: background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s; }"
+    }
+  ],
+  "blocked": []
+}

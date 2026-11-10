@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\package-v004",
+    "manifest": {
+      "assetId": "v016_b01_moon_sail_machined_reveals",
+      "description": "Four solid lofted porcelain reveals replace ragged shell returns. Other meshes and original collision retained; 49254 GLB triangles. Unity satin porcelain variant, original transparent glass. No new spend; interior remains closed.",
+      "displayName": "V016 B01 Moon Sail Machined Reveals",
+      "files": [
+        {
+          "bytes": 1399800,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "78689bbf316f25bfea5b394c664b74b9b18613dbef34d25148d1c46bd3fa243d"
+        },
+        {
+          "bytes": 1819,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "e284fc50ba87f8e136b2a88d3c79cff24467130473555559c94f89b9866bbbb3"
+        },
+        {
+          "bytes": 1130,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "cdacfa59649a246269506327c914488bb7fe507aa7f6fa59e6da5a3d6bd35844"
+        },
+        {
+          "bytes": 2691,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "f6e2cf67a463ec514c9054ba06eebc9ebc2400be1f44baba24d0afafb5a74b34"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_b1c41aa071dd2d3d2d81d30b",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.4.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

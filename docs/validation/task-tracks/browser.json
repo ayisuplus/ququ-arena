@@ -1,0 +1,79 @@
+{
+  "checks": [
+    "开放题无参考答案可保存，权重不足拒绝保存，重新加载保留赛道",
+    "多轮增删排序、逐轮预览、保存和打包导出",
+    "真实HTTP接口跨轮历史、完整SSE恢复、阅读旧轮不跳转；失败评分保留答卷且未结算",
+    "仅补评失败答卷、正式分项原文引用跳转、完成后一次结算",
+    "三个赛道生涯统计与Elo分离",
+    "旧时间轴以补评后答卷为准；1440p回放恢复各轮且不重复结算",
+    "时间轴缺失时，保存的答卷仍能恢复逐轮历史和正式评分",
+    "开放题实际HTTP开赛与独立赛道结算"
+  ],
+  "errors": [],
+  "viewports": [
+    "1920x1080",
+    "2560x1440"
+  ],
+  "requests": [
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "a",
+      "messages": 1
+    },
+    {
+      "model": "b",
+      "messages": 1
+    },
+    {
+      "model": "a",
+      "messages": 3
+    },
+    {
+      "model": "b",
+      "messages": 3
+    },
+    {
+      "model": "a",
+      "messages": 5
+    },
+    {
+      "model": "b",
+      "messages": 5
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "a",
+      "messages": 1
+    },
+    {
+      "model": "b",
+      "messages": 1
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    },
+    {
+      "model": "judge",
+      "messages": 1
+    }
+  ]
+}

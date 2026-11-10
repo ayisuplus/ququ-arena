@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v017\\install-oak-seat-contacts.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "caps": 8,
+        "material": "Assets/Station/Materials/EcologicalParkV017/ParkOakContact.mat",
+        "source": "Assets/Station/Materials/V013-OakSurface.mat",
+        "newColliders": 0,
+        "originalSeats": 4
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

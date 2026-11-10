@@ -1,0 +1,47 @@
+{
+  "entries": [
+    {
+      "seq": 2638,
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    },
+    {
+      "seq": 2753,
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    },
+    {
+      "seq": 2819,
+      "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms"
+    },
+    {
+      "seq": 2826,
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    },
+    {
+      "seq": 2885,
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    },
+    {
+      "seq": 2913,
+      "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms"
+    },
+    {
+      "seq": 2944,
+      "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms"
+    },
+    {
+      "seq": 2987,
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    }
+  ],
+  "groundTruth": {
+    "sampledUtc": "2026-09-30T13:00:29.3539216Z",
+    "ageMs": 322,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 1,
+    "consoleWarnings": 0,
+    "consoleLogs": 31,
+    "seeded": true
+  },
+  "note": "Existing QuickInstaller path error and two eval observation timeouts; native mutation and audit independently verified."
+}

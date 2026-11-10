@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new { logic = ArenaBuild.ValidateLogic(), archive = ArenaArchiveChecks.Run(), presets = ArenaModelPresetBuild.CheckPreferences() };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "logic": "7 presentation and customization assertions passed",
+        "archive": "8 portable customization checks passed",
+        "presets": "11 model identity, legacy customization and portable preset checks passed"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

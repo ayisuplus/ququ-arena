@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "baseline": "0246484c",
+  "records": 38524,
+  "unchanged": 38515,
+  "changed": [
+    "1340637422",
+    "1486329699",
+    "1486329700",
+    "1691598320",
+    "1691598321",
+    "216112241",
+    "216112242",
+    "323710980",
+    "323710982"
+  ],
+  "added": 0,
+  "removed": 0,
+  "mesh_overrides": 10,
+  "material_overrides": 6,
+  "transparent_shadow_overrides": 5,
+  "candidate_sha256": "d6bbf32ec41044d3aa4a628204cfa23c2224e2828dc77acaf0dc32aba561e582",
+  "v015_sha256": "37432cbbda460e7d431d42e64bf37cd3adf9c83488fc5435a7a7ff5f6d468e27",
+  "protected_existing_files": 90,
+  "invariant": "Only B04 rear-wall/window-frame meshes, glazing material references/shadow flags and new B04 cubemap; four existing new-building reflection followers receive local box size/center and corresponding world-axis probe box. All building poses, hierarchy, collision, old assets, original 26 probes and reflection updater unchanged."
+}

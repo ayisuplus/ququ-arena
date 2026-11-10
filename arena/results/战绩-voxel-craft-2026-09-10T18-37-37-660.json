@@ -1,0 +1,114 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "voxel-craft",
+    "title": "合成链路规划擂台",
+    "description": "素材溯源 voxelgym（voxel 因果世界模型平台）的 recipes.toml 七条合成配方与 tasks/__init__.py 的 LADDER 十二里程碑成就链（collect_log→…→mine_diamond），内容照搬源文件。recipe-lookup 读配方描述（shapeless inputs / shaped pattern+key / needs_table）答产物 out；chain-prereq 在题面给出的完整成就链上答某里程碑的直接前驱；chain-count 数链上两里程碑之间经过几个里程碑（含两端）。考结构化配方精读与链式前置推理，exact 裁判。",
+    "author": "AI斗兽场（素材溯源：voxelgym）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:voxel-craft:2026-09-10",
+    "taskPrefix": "只输出答案本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "recipe-lookup": "读配方描述（inputs/pattern+key/needs_table）答产物 out",
+      "chain-prereq": "答成就链上某里程碑的直接前驱",
+      "chain-count": "数链区间经过的里程碑个数（含两端）"
+    }
+  },
+  "startedAt": "2026-09-10T18:37:37.660Z",
+  "durationMs": 0,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "pla",
+      "target": "planks",
+      "latencyMs": 377,
+      "score": 0,
+      "note": "期望「planks」，实答「pla」",
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 0
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ccb16d2581dd48df",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.17.0"
+  }
+}

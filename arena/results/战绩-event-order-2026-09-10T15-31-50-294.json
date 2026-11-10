@@ -1,0 +1,1275 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "event-order",
+    "title": "事件排序擂台",
+    "description": "形制致敬行测事件排序（内容自建）。给出打乱顺序的 5 个事件，按逻辑顺序重新排列，exact 裁判（序号数字串，如 35412）。causal 考因果链（着凉→发烧→就医）、process 考流程工序（泡茶/建房/出版/庭审/网购）、time-history 考时间先后（朝代/发明/近代史/人生阶段）、plot-logic 考事理情节（求职/破案/旅行/比赛/纠纷）。每题只设唯一合理顺序（环节间为必然先后，不给两可排序）；meta.events 存正确序、meta.order 存数字串，契约测试逐题验证输入展示序与正确序的映射一致（且展示序≠正确序，防送分）。",
+    "author": "AI斗兽场（内容自建，形制致敬行测事件排序）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:event-order:2026-09-10",
+    "taskPrefix": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "causal": "因果链（起因→发展→结果）",
+      "process": "流程工序（先后步骤固定）",
+      "time-history": "时间先后（朝代/发明/史实/阶段）",
+      "plot-logic": "事理情节（求职/破案/旅行/比赛/纠纷）"
+    }
+  },
+  "startedAt": "2026-09-10T15:31:50.294Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "EO-CA-01",
+      "condition": "causal",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①服药\n②康复\n③感冒着凉\n④就医\n⑤发烧",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-01",
+      "condition": "causal",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①服药\n②康复\n③感冒着凉\n④就医\n⑤发烧",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-01",
+      "condition": "causal",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①服药\n②康复\n③感冒着凉\n④就医\n⑤发烧",
+      "answer": "354",
+      "target": "35412",
+      "latencyMs": 82,
+      "score": 0,
+      "note": "期望「35412」，实答「354」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-01",
+      "condition": "causal",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①服药\n②康复\n③感冒着凉\n④就医\n⑤发烧",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-02",
+      "condition": "causal",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①堤坝决口\n②连续暴雨\n③紧急转移\n④村庄被淹\n⑤河水暴涨",
+      "answer": "25143",
+      "target": "25143",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-02",
+      "condition": "causal",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①堤坝决口\n②连续暴雨\n③紧急转移\n④村庄被淹\n⑤河水暴涨",
+      "answer": "25143",
+      "target": "25143",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-02",
+      "condition": "causal",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①堤坝决口\n②连续暴雨\n③紧急转移\n④村庄被淹\n⑤河水暴涨",
+      "answer": "251我3",
+      "target": "25143",
+      "latencyMs": 92,
+      "score": 0,
+      "note": "期望「25143」，实答「251我3」",
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-02",
+      "condition": "causal",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①堤坝决口\n②连续暴雨\n③紧急转移\n④村庄被淹\n⑤河水暴涨",
+      "answer": "251",
+      "target": "25143",
+      "latencyMs": 106,
+      "score": 0,
+      "note": "期望「25143」，实答「251」",
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-03",
+      "condition": "causal",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①开花\n②结果\n③种子萌发\n④授粉\n⑤长出幼苗",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-03",
+      "condition": "causal",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①开花\n②结果\n③种子萌发\n④授粉\n⑤长出幼苗",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-03",
+      "condition": "causal",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①开花\n②结果\n③种子萌发\n④授粉\n⑤长出幼苗",
+      "answer": "5142",
+      "target": "35142",
+      "latencyMs": 371,
+      "score": 0,
+      "note": "期望「35142」，实答「5142」",
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-03",
+      "condition": "causal",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①开花\n②结果\n③种子萌发\n④授粉\n⑤长出幼苗",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-04",
+      "condition": "causal",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①感染病毒\n②痊愈出院\n③住院治疗\n④劳累过度\n⑤免疫力下降",
+      "answer": "45132",
+      "target": "45132",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-04",
+      "condition": "causal",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①感染病毒\n②痊愈出院\n③住院治疗\n④劳累过度\n⑤免疫力下降",
+      "answer": "45132",
+      "target": "45132",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-04",
+      "condition": "causal",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①感染病毒\n②痊愈出院\n③住院治疗\n④劳累过度\n⑤免疫力下降",
+      "answer": "451",
+      "target": "45132",
+      "latencyMs": 292,
+      "score": 0,
+      "note": "期望「45132」，实答「451」",
+      "usage": {
+        "input": 54,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-04",
+      "condition": "causal",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①感染病毒\n②痊愈出院\n③住院治疗\n④劳累过度\n⑤免疫力下降",
+      "answer": "45132",
+      "target": "45132",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-05",
+      "condition": "causal",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①消防扑救\n②森林起火\n③大火扑灭\n④浓烟扩散\n⑤动物逃离",
+      "answer": "24513",
+      "target": "24513",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-05",
+      "condition": "causal",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①消防扑救\n②森林起火\n③大火扑灭\n④浓烟扩散\n⑤动物逃离",
+      "answer": "24513",
+      "target": "24513",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-05",
+      "condition": "causal",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①消防扑救\n②森林起火\n③大火扑灭\n④浓烟扩散\n⑤动物逃离",
+      "answer": "24513",
+      "target": "24513",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-CA-05",
+      "condition": "causal",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①消防扑救\n②森林起火\n③大火扑灭\n④浓烟扩散\n⑤动物逃离",
+      "answer": "245",
+      "target": "24513",
+      "latencyMs": 349,
+      "score": 0,
+      "note": "期望「24513」，实答「245」",
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-01",
+      "condition": "process",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①冲泡\n②烧水\n③品饮\n④洗茶\n⑤倒茶",
+      "answer": "24153",
+      "target": "24153",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-01",
+      "condition": "process",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①冲泡\n②烧水\n③品饮\n④洗茶\n⑤倒茶",
+      "answer": "4153",
+      "target": "24153",
+      "latencyMs": 192,
+      "score": 0,
+      "note": "期望「24153」，实答「4153」",
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-01",
+      "condition": "process",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①冲泡\n②烧水\n③品饮\n④洗茶\n⑤倒茶",
+      "answer": "2453",
+      "target": "24153",
+      "latencyMs": 169,
+      "score": 0,
+      "note": "期望「24153」，实答「2453」",
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-01",
+      "condition": "process",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①冲泡\n②烧水\n③品饮\n④洗茶\n⑤倒茶",
+      "answer": "24153",
+      "target": "24153",
+      "latencyMs": 337,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-02",
+      "condition": "process",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①装修\n②打地基\n③入住\n④封顶\n⑤砌墙",
+      "answer": "2541",
+      "target": "25413",
+      "latencyMs": 212,
+      "score": 0,
+      "note": "期望「25413」，实答「2541」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-02",
+      "condition": "process",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①装修\n②打地基\n③入住\n④封顶\n⑤砌墙",
+      "answer": "25413",
+      "target": "25413",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-02",
+      "condition": "process",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①装修\n②打地基\n③入住\n④封顶\n⑤砌墙",
+      "answer": "25413",
+      "target": "25413",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-02",
+      "condition": "process",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①装修\n②打地基\n③入住\n④封顶\n⑤砌墙",
+      "answer": "25413",
+      "target": "25413",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-03",
+      "condition": "process",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①排版\n②发行\n③审稿\n④撰稿\n⑤印刷",
+      "answer": "43152",
+      "target": "43152",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-03",
+      "condition": "process",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①排版\n②发行\n③审稿\n④撰稿\n⑤印刷",
+      "answer": "43152",
+      "target": "43152",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-03",
+      "condition": "process",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①排版\n②发行\n③审稿\n④撰稿\n⑤印刷",
+      "answer": "43152",
+      "target": "43152",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-03",
+      "condition": "process",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①排版\n②发行\n③审稿\n④撰稿\n⑤印刷",
+      "answer": "43152",
+      "target": "43152",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-04",
+      "condition": "process",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①宣判\n②举证质证\n③执行\n④立案\n⑤开庭审理",
+      "answer": "45213",
+      "target": "45213",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-04",
+      "condition": "process",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①宣判\n②举证质证\n③执行\n④立案\n⑤开庭审理",
+      "answer": "45213",
+      "target": "45213",
+      "latencyMs": 92,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-04",
+      "condition": "process",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①宣判\n②举证质证\n③执行\n④立案\n⑤开庭审理",
+      "answer": "45213",
+      "target": "45213",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-04",
+      "condition": "process",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①宣判\n②举证质证\n③执行\n④立案\n⑤开庭审理",
+      "answer": "45213",
+      "target": "45213",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-05",
+      "condition": "process",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①签收\n②付款\n③评价\n④下单\n⑤卖家发货",
+      "answer": "42513",
+      "target": "42513",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-05",
+      "condition": "process",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①签收\n②付款\n③评价\n④下单\n⑤卖家发货",
+      "answer": "4253",
+      "target": "42513",
+      "latencyMs": 232,
+      "score": 0,
+      "note": "期望「42513」，实答「4253」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-05",
+      "condition": "process",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①签收\n②付款\n③评价\n④下单\n⑤卖家发货",
+      "answer": "4513",
+      "target": "42513",
+      "latencyMs": 419,
+      "score": 0,
+      "note": "期望「42513」，实答「4513」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-PR-05",
+      "condition": "process",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①签收\n②付款\n③评价\n④下单\n⑤卖家发货",
+      "answer": "42513",
+      "target": "42513",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-01",
+      "condition": "time-history",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①唐朝\n②宋朝\n③明朝\n④秦朝\n⑤汉朝",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-01",
+      "condition": "time-history",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①唐朝\n②宋朝\n③明朝\n④秦朝\n⑤汉朝",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-01",
+      "condition": "time-history",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①唐朝\n②宋朝\n③明朝\n④秦朝\n⑤汉朝",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-01",
+      "condition": "time-history",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①唐朝\n②宋朝\n③明朝\n④秦朝\n⑤汉朝",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-02",
+      "condition": "time-history",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 项发明按出现先后排列：\n①蒸汽机\n②造纸术\n③电灯\n④活字印刷术\n⑤电子计算机",
+      "answer": "24135",
+      "target": "24135",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-02",
+      "condition": "time-history",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 项发明按出现先后排列：\n①蒸汽机\n②造纸术\n③电灯\n④活字印刷术\n⑤电子计算机",
+      "answer": "241",
+      "target": "24135",
+      "latencyMs": 281,
+      "score": 0,
+      "note": "期望「24135」，实答「241」",
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-02",
+      "condition": "time-history",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 项发明按出现先后排列：\n①蒸汽机\n②造纸术\n③电灯\n④活字印刷术\n⑤电子计算机",
+      "answer": "2大135",
+      "target": "24135",
+      "latencyMs": 314,
+      "score": 0,
+      "note": "期望「24135」，实答「2大135」",
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-02",
+      "condition": "time-history",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 项发明按出现先后排列：\n①蒸汽机\n②造纸术\n③电灯\n④活字印刷术\n⑤电子计算机",
+      "answer": "24135",
+      "target": "24135",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-03",
+      "condition": "time-history",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①辛亥革命\n②甲午战争\n③新中国成立\n④五四运动\n⑤抗日战争全面爆发",
+      "answer": "214",
+      "target": "21453",
+      "latencyMs": 318,
+      "score": 0,
+      "note": "期望「21453」，实答「214」",
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-03",
+      "condition": "time-history",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①辛亥革命\n②甲午战争\n③新中国成立\n④五四运动\n⑤抗日战争全面爆发",
+      "answer": "21453",
+      "target": "21453",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-03",
+      "condition": "time-history",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①辛亥革命\n②甲午战争\n③新中国成立\n④五四运动\n⑤抗日战争全面爆发",
+      "answer": "21453",
+      "target": "21453",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-03",
+      "condition": "time-history",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按时间先后排列：\n①辛亥革命\n②甲午战争\n③新中国成立\n④五四运动\n⑤抗日战争全面爆发",
+      "answer": "21453",
+      "target": "21453",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-04",
+      "condition": "time-history",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列学生一天的 5 个环节按时间先后排列：\n①午休\n②早读\n③熄灯就寝\n④晚自习\n⑤起床",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-04",
+      "condition": "time-history",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列学生一天的 5 个环节按时间先后排列：\n①午休\n②早读\n③熄灯就寝\n④晚自习\n⑤起床",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EO-TH-04",
+      "condition": "time-history",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列学生一天的 5 个环节按时间先后排列：\n①午休\n②早读\n③熄灯就寝\n④晚自习\n⑤起床",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 287,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-TH-04",
+      "condition": "time-history",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列学生一天的 5 个环节按时间先后排列：\n①午休\n②早读\n③熄灯就寝\n④晚自习\n⑤起床",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-TH-05",
+      "condition": "time-history",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个人生阶段按时间先后排列：\n①退休\n②入学\n③工作\n④出生\n⑤毕业",
+      "answer": "42531",
+      "target": "42531",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-TH-05",
+      "condition": "time-history",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个人生阶段按时间先后排列：\n①退休\n②入学\n③工作\n④出生\n⑤毕业",
+      "answer": "42531",
+      "target": "42531",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-TH-05",
+      "condition": "time-history",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个人生阶段按时间先后排列：\n①退休\n②入学\n③工作\n④出生\n⑤毕业",
+      "answer": "42531",
+      "target": "42531",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-TH-05",
+      "condition": "time-history",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个人生阶段按时间先后排列：\n①退休\n②入学\n③工作\n④出生\n⑤毕业",
+      "answer": "42531",
+      "target": "42531",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-01",
+      "condition": "plot-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①参加笔试面试\n②收到录用通知\n③看到招聘信息\n④办理入职手续\n⑤投递简历",
+      "answer": "35124",
+      "target": "35124",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-01",
+      "condition": "plot-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①参加笔试面试\n②收到录用通知\n③看到招聘信息\n④办理入职手续\n⑤投递简历",
+      "answer": "35124",
+      "target": "35124",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-01",
+      "condition": "plot-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①参加笔试面试\n②收到录用通知\n③看到招聘信息\n④办理入职手续\n⑤投递简历",
+      "answer": "35124",
+      "target": "35124",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-01",
+      "condition": "plot-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①参加笔试面试\n②收到录用通知\n③看到招聘信息\n④办理入职手续\n⑤投递简历",
+      "answer": "35124",
+      "target": "35124",
+      "latencyMs": 130,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-02",
+      "condition": "plot-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①锁定嫌疑人\n②群众报案\n③案发\n④抓捕归案\n⑤现场勘查取证",
+      "answer": "32514",
+      "target": "32514",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-02",
+      "condition": "plot-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①锁定嫌疑人\n②群众报案\n③案发\n④抓捕归案\n⑤现场勘查取证",
+      "answer": "325有4",
+      "target": "32514",
+      "latencyMs": 197,
+      "score": 0,
+      "note": "期望「32514」，实答「325有4」",
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-02",
+      "condition": "plot-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①锁定嫌疑人\n②群众报案\n③案发\n④抓捕归案\n⑤现场勘查取证",
+      "answer": "3514",
+      "target": "32514",
+      "latencyMs": 461,
+      "score": 0,
+      "note": "期望「32514」，实答「3514」",
+      "usage": {
+        "input": 54,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-02",
+      "condition": "plot-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①锁定嫌疑人\n②群众报案\n③案发\n④抓捕归案\n⑤现场勘查取证",
+      "answer": "32514",
+      "target": "32514",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-03",
+      "condition": "plot-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①出发抵达\n②返程回家\n③制定攻略\n④订机票酒店\n⑤游览观光",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-03",
+      "condition": "plot-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①出发抵达\n②返程回家\n③制定攻略\n④订机票酒店\n⑤游览观光",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-03",
+      "condition": "plot-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①出发抵达\n②返程回家\n③制定攻略\n④订机票酒店\n⑤游览观光",
+      "answer": "3412",
+      "target": "34152",
+      "latencyMs": 111,
+      "score": 0,
+      "note": "期望「34152」，实答「3412」",
+      "usage": {
+        "input": 54,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-03",
+      "condition": "plot-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①出发抵达\n②返程回家\n③制定攻略\n④订机票酒店\n⑤游览观光",
+      "answer": "3415",
+      "target": "34152",
+      "latencyMs": 217,
+      "score": 0,
+      "note": "期望「34152」，实答「3415」",
+      "usage": {
+        "input": 54,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-04",
+      "condition": "plot-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①预赛\n②抽签分组\n③颁奖\n④报名参赛\n⑤决赛",
+      "answer": "42153",
+      "target": "42153",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-04",
+      "condition": "plot-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①预赛\n②抽签分组\n③颁奖\n④报名参赛\n⑤决赛",
+      "answer": "421了3",
+      "target": "42153",
+      "latencyMs": 123,
+      "score": 0,
+      "note": "期望「42153」，实答「421了3」",
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-04",
+      "condition": "plot-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①预赛\n②抽签分组\n③颁奖\n④报名参赛\n⑤决赛",
+      "answer": "421",
+      "target": "42153",
+      "latencyMs": 257,
+      "score": 0,
+      "note": "期望「42153」，实答「421」",
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-04",
+      "condition": "plot-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①预赛\n②抽签分组\n③颁奖\n④报名参赛\n⑤决赛",
+      "answer": "42153",
+      "target": "42153",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-05",
+      "condition": "plot-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①赔偿和解\n②动手打人\n③有人报警\n④警方调解\n⑤发生口角",
+      "answer": "52341",
+      "target": "52341",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-05",
+      "condition": "plot-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①赔偿和解\n②动手打人\n③有人报警\n④警方调解\n⑤发生口角",
+      "answer": "523",
+      "target": "52341",
+      "latencyMs": 468,
+      "score": 0,
+      "note": "期望「52341」，实答「523」",
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-05",
+      "condition": "plot-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①赔偿和解\n②动手打人\n③有人报警\n④警方调解\n⑤发生口角",
+      "answer": "52341",
+      "target": "52341",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EO-PL-05",
+      "condition": "plot-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个事件按逻辑顺序（因果/流程/时间）重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个事件按逻辑顺序排列：\n①赔偿和解\n②动手打人\n③有人报警\n④警方调解\n⑤发生口角",
+      "answer": "52341",
+      "target": "52341",
+      "latencyMs": 364,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 3
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "b03ce00be3e6c8d3",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.6.0"
+  }
+}

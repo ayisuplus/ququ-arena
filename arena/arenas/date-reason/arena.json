@@ -1,0 +1,16 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "date-reason",
+  "title": "日期推算擂台",
+  "description": "BBH date understanding 的中文生成器版：周几计算 / 日期偏移 N 天 / 月末天数（含闰年二月陷阱）。JS Date 为权威。测日历算术与月份天数规则。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:date-reason:2026-09-10",
+  "taskPrefix": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "weekday": "某天是星期几",
+    "offset": "日期偏移 N 天",
+    "last-day": "月末天数（含闰年二月）"
+  }
+}

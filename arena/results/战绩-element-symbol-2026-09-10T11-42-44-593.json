@@ -1,0 +1,1504 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "element-symbol",
+    "title": "元素符号擂台",
+    "description": "化学元素符号 ↔ 中文名双向（生成器自建）：前 20 号 + 常见金属（铁铜锌银金汞铅锡碘氙）。周期表权威；契约逐题双向复算。测理科基本功。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:element-symbol:2026-09-10",
+    "taskPrefix": "只输出答案本身（中文名或符号），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "symbol-to-name": "符号→中文名",
+      "name-to-symbol": "中文名→符号"
+    }
+  },
+  "startedAt": "2026-09-10T11:42:44.593Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "ES-fwd-01",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ne 是什么元素？（答中文名）",
+      "answer": "氖",
+      "target": "氖",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-01",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ne 是什么元素？（答中文名）",
+      "answer": "氖",
+      "target": "氖",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-01",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ne 是什么元素？（答中文名）",
+      "answer": "氖",
+      "target": "氖",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-01",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ne 是什么元素？（答中文名）",
+      "answer": "氖",
+      "target": "氖",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-02",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硫」的化学符号是什么？",
+      "answer": "S",
+      "target": "S",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-02",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硫」的化学符号是什么？",
+      "answer": "S",
+      "target": "S",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-02",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硫」的化学符号是什么？",
+      "answer": "S",
+      "target": "S",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-02",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硫」的化学符号是什么？",
+      "answer": "S",
+      "target": "S",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-03",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ca 是什么元素？（答中文名）",
+      "answer": "钙",
+      "target": "钙",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-03",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ca 是什么元素？（答中文名）",
+      "answer": "钙",
+      "target": "钙",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-03",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ca 是什么元素？（答中文名）",
+      "answer": "钙",
+      "target": "钙",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-03",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ca 是什么元素？（答中文名）",
+      "answer": "钙",
+      "target": "钙",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-04",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「镁」的化学符号是什么？",
+      "answer": "Mg",
+      "target": "Mg",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-04",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「镁」的化学符号是什么？",
+      "answer": "M",
+      "target": "Mg",
+      "latencyMs": 287,
+      "score": 0,
+      "note": "期望「Mg」，实答「M」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-04",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「镁」的化学符号是什么？",
+      "answer": "M",
+      "target": "Mg",
+      "latencyMs": 274,
+      "score": 0,
+      "note": "期望「Mg」，实答「M」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-04",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「镁」的化学符号是什么？",
+      "answer": "Mg",
+      "target": "Mg",
+      "latencyMs": 439,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-05",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Li 是什么元素？（答中文名）",
+      "answer": "锂",
+      "target": "锂",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-05",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Li 是什么元素？（答中文名）",
+      "answer": "锂",
+      "target": "锂",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-05",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Li 是什么元素？（答中文名）",
+      "answer": "锂",
+      "target": "锂",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-05",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Li 是什么元素？（答中文名）",
+      "answer": "锂",
+      "target": "锂",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-06",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氯」的化学符号是什么？",
+      "answer": "Cl",
+      "target": "Cl",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-06",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氯」的化学符号是什么？",
+      "answer": "Cl",
+      "target": "Cl",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-06",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氯」的化学符号是什么？",
+      "answer": "C",
+      "target": "Cl",
+      "latencyMs": 372,
+      "score": 0,
+      "note": "期望「Cl」，实答「C」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-rev-06",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氯」的化学符号是什么？",
+      "answer": "Cl",
+      "target": "Cl",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ES-fwd-07",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Mg 是什么元素？（答中文名）",
+      "answer": "镁",
+      "target": "镁",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-07",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Mg 是什么元素？（答中文名）",
+      "answer": "镁",
+      "target": "镁",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-07",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Mg 是什么元素？（答中文名）",
+      "answer": "镁",
+      "target": "镁",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-07",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Mg 是什么元素？（答中文名）",
+      "answer": "镁",
+      "target": "镁",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-08",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锡」的化学符号是什么？",
+      "answer": "Sn",
+      "target": "Sn",
+      "latencyMs": 408,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-08",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锡」的化学符号是什么？",
+      "answer": "S",
+      "target": "Sn",
+      "latencyMs": 362,
+      "score": 0,
+      "note": "期望「Sn」，实答「S」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-08",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锡」的化学符号是什么？",
+      "answer": "S",
+      "target": "Sn",
+      "latencyMs": 163,
+      "score": 0,
+      "note": "期望「Sn」，实答「S」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-08",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锡」的化学符号是什么？",
+      "answer": "S",
+      "target": "Sn",
+      "latencyMs": 255,
+      "score": 0,
+      "note": "期望「Sn」，实答「S」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-09",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ag 是什么元素？（答中文名）",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-09",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ag 是什么元素？（答中文名）",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-09",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ag 是什么元素？（答中文名）",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-09",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Ag 是什么元素？（答中文名）",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-10",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锌」的化学符号是什么？",
+      "answer": "Zn",
+      "target": "Zn",
+      "latencyMs": 201,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-10",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锌」的化学符号是什么？",
+      "answer": "Zn",
+      "target": "Zn",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-10",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锌」的化学符号是什么？",
+      "answer": "Zn",
+      "target": "Zn",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-10",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锌」的化学符号是什么？",
+      "answer": "Z",
+      "target": "Zn",
+      "latencyMs": 104,
+      "score": 0,
+      "note": "期望「Zn」，实答「Z」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-11",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Xe 是什么元素？（答中文名）",
+      "answer": "氙",
+      "target": "氙",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-11",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Xe 是什么元素？（答中文名）",
+      "answer": "氙",
+      "target": "氙",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-11",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Xe 是什么元素？（答中文名）",
+      "answer": "氙",
+      "target": "氙",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-11",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Xe 是什么元素？（答中文名）",
+      "answer": "氙",
+      "target": "氙",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-12",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氙」的化学符号是什么？",
+      "answer": "Xe",
+      "target": "Xe",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-12",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氙」的化学符号是什么？",
+      "answer": "Xe",
+      "target": "Xe",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-12",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氙」的化学符号是什么？",
+      "answer": "Xe",
+      "target": "Xe",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-12",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氙」的化学符号是什么？",
+      "answer": "Xe",
+      "target": "Xe",
+      "latencyMs": 253,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-13",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 H 是什么元素？（答中文名）",
+      "answer": "氢",
+      "target": "氢",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-13",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 H 是什么元素？（答中文名）",
+      "answer": "氢",
+      "target": "氢",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-13",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 H 是什么元素？（答中文名）",
+      "answer": "氢",
+      "target": "氢",
+      "latencyMs": 392,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-13",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 H 是什么元素？（答中文名）",
+      "answer": "氢",
+      "target": "氢",
+      "latencyMs": 97,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-14",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氦」的化学符号是什么？",
+      "answer": "He",
+      "target": "He",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-14",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氦」的化学符号是什么？",
+      "answer": "He",
+      "target": "He",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-14",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氦」的化学符号是什么？",
+      "answer": "H",
+      "target": "He",
+      "latencyMs": 189,
+      "score": 0,
+      "note": "期望「He」，实答「H」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-14",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氦」的化学符号是什么？",
+      "answer": "He",
+      "target": "He",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-15",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 P 是什么元素？（答中文名）",
+      "answer": "磷",
+      "target": "磷",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-15",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 P 是什么元素？（答中文名）",
+      "answer": "磷",
+      "target": "磷",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-15",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 P 是什么元素？（答中文名）",
+      "answer": "磷",
+      "target": "磷",
+      "latencyMs": 291,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-15",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 P 是什么元素？（答中文名）",
+      "answer": "磷",
+      "target": "磷",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-16",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「铜」的化学符号是什么？",
+      "answer": "Cu",
+      "target": "Cu",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-16",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「铜」的化学符号是什么？",
+      "answer": "C",
+      "target": "Cu",
+      "latencyMs": 354,
+      "score": 0,
+      "note": "期望「Cu」，实答「C」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-16",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「铜」的化学符号是什么？",
+      "answer": "C",
+      "target": "Cu",
+      "latencyMs": 329,
+      "score": 0,
+      "note": "期望「Cu」，实答「C」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-16",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「铜」的化学符号是什么？",
+      "answer": "Cu",
+      "target": "Cu",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-17",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 N 是什么元素？（答中文名）",
+      "answer": "氮",
+      "target": "氮",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-17",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 N 是什么元素？（答中文名）",
+      "answer": "氮",
+      "target": "氮",
+      "latencyMs": 287,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-17",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 N 是什么元素？（答中文名）",
+      "answer": "氮",
+      "target": "氮",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-17",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 N 是什么元素？（答中文名）",
+      "answer": "氮",
+      "target": "氮",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-18",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硼」的化学符号是什么？",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-18",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硼」的化学符号是什么？",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-18",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硼」的化学符号是什么？",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 189,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-18",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「硼」的化学符号是什么？",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-19",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 K 是什么元素？（答中文名）",
+      "answer": "钾",
+      "target": "钾",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-19",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 K 是什么元素？（答中文名）",
+      "answer": "钾",
+      "target": "钾",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-19",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 K 是什么元素？（答中文名）",
+      "answer": "钾",
+      "target": "钾",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-19",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 K 是什么元素？（答中文名）",
+      "answer": "钾",
+      "target": "钾",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-20",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氢」的化学符号是什么？",
+      "answer": "H",
+      "target": "H",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-20",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氢」的化学符号是什么？",
+      "answer": "H",
+      "target": "H",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-20",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氢」的化学符号是什么？",
+      "answer": "H",
+      "target": "H",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-20",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氢」的化学符号是什么？",
+      "answer": "H",
+      "target": "H",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-21",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 I 是什么元素？（答中文名）",
+      "answer": "碘",
+      "target": "碘",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-21",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 I 是什么元素？（答中文名）",
+      "answer": "碘",
+      "target": "碘",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-21",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 I 是什么元素？（答中文名）",
+      "answer": "碘",
+      "target": "碘",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-21",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 I 是什么元素？（答中文名）",
+      "answer": "碘",
+      "target": "碘",
+      "latencyMs": 270,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-22",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锂」的化学符号是什么？",
+      "answer": "Li",
+      "target": "Li",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-22",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锂」的化学符号是什么？",
+      "answer": "Li",
+      "target": "Li",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-22",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锂」的化学符号是什么？",
+      "answer": "Li",
+      "target": "Li",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-22",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「锂」的化学符号是什么？",
+      "answer": "L",
+      "target": "Li",
+      "latencyMs": 157,
+      "score": 0,
+      "note": "期望「Li」，实答「L」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-23",
+      "condition": "symbol-to-name",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Si 是什么元素？（答中文名）",
+      "answer": "硅",
+      "target": "硅",
+      "latencyMs": 434,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-23",
+      "condition": "symbol-to-name",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Si 是什么元素？（答中文名）",
+      "answer": "硅",
+      "target": "硅",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-23",
+      "condition": "symbol-to-name",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Si 是什么元素？（答中文名）",
+      "answer": "硅",
+      "target": "硅",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-fwd-23",
+      "condition": "symbol-to-name",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n化学元素符号 Si 是什么元素？（答中文名）",
+      "answer": "硅",
+      "target": "硅",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-24",
+      "condition": "name-to-symbol",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氩」的化学符号是什么？",
+      "answer": "Ar",
+      "target": "Ar",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-24",
+      "condition": "name-to-symbol",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氩」的化学符号是什么？",
+      "answer": "Ar",
+      "target": "Ar",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-24",
+      "condition": "name-to-symbol",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氩」的化学符号是什么？",
+      "answer": "A",
+      "target": "Ar",
+      "latencyMs": 94,
+      "score": 0,
+      "note": "期望「Ar」，实答「A」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ES-rev-24",
+      "condition": "name-to-symbol",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（中文名或符号），不多一个字。\n元素「氩」的化学符号是什么？",
+      "answer": "Ar",
+      "target": "Ar",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "efbd43b66cb1d5e3",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.29.0"
+  }
+}

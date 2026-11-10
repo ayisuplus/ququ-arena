@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nconst string textures=\"Assets/Station/Textures/EcologicalParkV017/\",materials=\"Assets/Station/Materials/EcologicalParkV017/\",assets=\"Assets/Station/Models/EcologicalParkV017/Space/\";\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nforeach(string name in new[]{\"ForestFloor_Base.png\",\"ForestFloor_Normal.exr\",\"ForestFloor_MetallicSmoothness.png\",\"P01_Base_v003.png\"}){\n var p=textures+name;var i=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(p);i.textureType=name.Contains(\"Normal\")?UnityEditor.TextureImporterType.NormalMap:UnityEditor.TextureImporterType.Default;i.sRGBTexture=name.Contains(\"Base\");i.maxTextureSize=name.StartsWith(\"P01\")?2048:1024;i.SaveAndReimport();\n}\nvar earth=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(materials+\"ParkLivingSoil.mat\");earth.SetColor(\"_BaseColor\",UnityEngine.Color.white);earth.SetTexture(\"_BaseMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"ForestFloor_Base.png\"));earth.SetTexture(\"_BumpMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"ForestFloor_Normal.exr\"));earth.SetTexture(\"_MetallicGlossMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"ForestFloor_MetallicSmoothness.png\"));earth.SetFloat(\"_BumpScale\",.5f);earth.SetFloat(\"_Smoothness\",.16f);earth.EnableKeyword(\"_NORMALMAP\");earth.EnableKeyword(\"_METALLICSPECGLOSSMAP\");UnityEditor.EditorUtility.SetDirty(earth);\nvar tree=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(materials+\"P01UnfurlLivingGreen.mat\");tree.SetTexture(\"_BaseMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"P01_Base_v003.png\"));UnityEditor.EditorUtility.SetDirty(tree);\nvar skirt=new UnityEngine.Material(earth){name=\"LivingSoilBank\"};skirt.SetColor(\"_BaseColor\",new UnityEngine.Color(.62f,.60f,.51f));UnityEditor.AssetDatabase.CreateAsset(skirt,materials+\"LivingSoilBank.mat\");\nvar root=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform.Find(\"V017 continuous ecological park\");int count=0;\nforeach(var filter in root.GetComponentsInChildren<UnityEngine.MeshFilter>().Where(f=>f.GetComponent<UnityEngine.MeshRenderer>().sharedMaterial==earth)){\n var mesh=filter.sharedMesh;mesh.uv=mesh.vertices.Select(v=>new UnityEngine.Vector2(v.x/3,v.z/3)).ToArray();mesh.RecalculateTangents();UnityEditor.EditorUtility.SetDirty(mesh);\n var top=mesh.vertices.Skip(1).ToArray();var verts=new System.Collections.Generic.List<UnityEngine.Vector3>();var tris=new System.Collections.Generic.List<int>();\n for(int j=0;j<top.Length;j++){verts.Add(top[j]);verts.Add(new UnityEngine.Vector3(top[j].x,.04f,top[j].z));}\n for(int j=0;j<top.Length;j++){int a=j*2,b=((j+1)%top.Length)*2;tris.AddRange(new[]{a,b,a+1,a+1,b,b+1});}\n var side=new UnityEngine.Mesh{name=filter.name+\" grounded bank\"};side.vertices=verts.ToArray();side.triangles=tris.ToArray();side.uv=verts.Select(v=>new UnityEngine.Vector2(v.x/3,v.z/3)).ToArray();side.RecalculateNormals();side.RecalculateTangents();side.RecalculateBounds();UnityEditor.AssetDatabase.CreateAsset(side,assets+\"bank-\"+(count++)+\".asset\");var go=new UnityEngine.GameObject(side.name);go.transform.SetParent(root,false);go.AddComponent<UnityEngine.MeshFilter>().sharedMesh=side;go.AddComponent<UnityEngine.MeshRenderer>().sharedMaterial=skirt;\n}\nUnityEditor.AssetDatabase.DeleteAsset(textures+\"P01_Distance.png\");\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{soilBanks=count,sourceMaps=\"CC0 forest_leaves_02; unmodified source retained\",p01Correction=\"selective hue; bark excluded\"};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "soilBanks": 7,
+        "sourceMaps": "CC0 forest_leaves_02; unmodified source retained",
+        "p01Correction": "selective hue; bark excluded"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

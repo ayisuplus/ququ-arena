@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nvar root=UnityEngine.GameObject.Find(\"V013 continuous observation gallery\");\nvar invalid=new System.Collections.Generic.List<string>();int meshes=0;\nforeach(var r in root.GetComponentsInChildren<UnityEngine.MeshRenderer>()){meshes++;if(r.lightmapIndex<0||r.lightmapIndex>=UnityEngine.LightmapSettings.lightmaps.Length)invalid.Add(r.name);}\nvar eyes=new System.Collections.Generic.List<object>();\nforeach(float z in new[]{-247f,-246f,-245f}){var eye=new UnityEngine.Vector3(169,1.6f,z);bool hit=UnityEngine.Physics.Raycast(eye,new UnityEngine.Vector3(-1200,-1000,0)-eye,out var h,3);eyes.Add(new{z,firstHit=hit?h.collider.name:\"none\"});}\nreturn new{scene=scene.name,dirty=scene.isDirty,baking=UnityEditor.Lightmapping.isRunning,lightmaps=UnityEngine.LightmapSettings.lightmaps.Length,lightProbes=UnityEngine.LightmapSettings.lightProbes.count,newMeshes=meshes,invalidLightmaps=invalid,eyes};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "BlackHoleStationSereneV013",
+        "dirty": false,
+        "baking": false,
+        "lightmaps": 4,
+        "lightProbes": 186,
+        "newMeshes": 43,
+        "invalidLightmaps": [],
+        "eyes": [
+          {
+            "z": -247,
+            "firstHit": "West observation glass"
+          },
+          {
+            "z": -246,
+            "firstHit": "West observation glass"
+          },
+          {
+            "z": -245,
+            "firstHit": "West observation glass"
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

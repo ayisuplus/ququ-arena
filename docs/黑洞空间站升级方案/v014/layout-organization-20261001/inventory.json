@@ -1,0 +1,4814 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalGardenV014.unity",
+  "dirty": false,
+  "playing": false,
+  "roots": 64,
+  "transforms": 14664,
+  "groups": [
+    {
+      "name": "Station architectural overview camera - disabled in Play",
+      "parent": null,
+      "path": "Station architectural overview camera - disabled in Play",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1547634925-0",
+      "active": true,
+      "position": [
+        15.0,
+        135.0,
+        -210.0
+      ],
+      "yaw": 355.914368,
+      "min": [
+        15.0,
+        135.0,
+        -210.0
+      ],
+      "max": [
+        15.0,
+        135.0,
+        -210.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "Camera",
+        "AudioListener",
+        "UniversalAdditionalCameraData"
+      ]
+    },
+    {
+      "name": "Directional Light",
+      "parent": null,
+      "path": "Directional Light",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-54270322-0",
+      "active": true,
+      "position": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "yaw": 270.0,
+      "min": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "Light",
+        "UniversalAdditionalLightData"
+      ]
+    },
+    {
+      "name": "P2 station graybox",
+      "parent": null,
+      "path": "P2 station graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037754270-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        -12.25,
+        -120.0
+      ],
+      "max": [
+        120.149994,
+        18.75,
+        120.0
+      ],
+      "renderers": 182,
+      "children": 10,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Square habitat and diamond concourse - continuous walking floor",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Square habitat and diamond concourse - continuous walking floor",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-4255526539940020931-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        -0.3,
+        -120.0
+      ],
+      "max": [
+        120.0,
+        0.0,
+        120.0
+      ],
+      "renderers": 2,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "PROP-02 annular elevating arena - 72m outer 50m bore",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/PROP-02 annular elevating arena - 72m outer 50m bore",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2602147908013704125-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        -0.8181818,
+        -36.0
+      ],
+      "max": [
+        36.0,
+        0.0,
+        36.0
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Outer 240m pressure hull graybox",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Outer 240m pressure hull graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1290688269-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        119.85,
+        0.0,
+        32.5
+      ],
+      "max": [
+        120.15,
+        4.0,
+        109.0
+      ],
+      "renderers": 4,
+      "children": 8,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "East triangle - resident lounge and model rooms",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/East triangle - resident lounge and model rooms",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-200260313-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        67.8500061,
+        0.0,
+        27.3499985
+      ],
+      "max": [
+        120.0,
+        4.39999962,
+        96.65
+      ],
+      "renderers": 126,
+      "children": 15,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "West model residence - former observation gallery",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/West model residence - former observation gallery",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2007828628-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -96.15,
+        0.0,
+        49.85
+      ],
+      "max": [
+        -67.85,
+        4.39999962,
+        74.15
+      ],
+      "renderers": 30,
+      "children": 16,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Fixed spectator landing - outside moving ring",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Fixed spectator landing - outside moving ring",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897553400-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        1.0,
+        -0.1700573,
+        -56.0
+      ],
+      "max": [
+        46.21,
+        18.75,
+        63.5
+      ],
+      "renderers": 14,
+      "children": 19,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Contestant platforms and entrance lifts",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Contestant platforms and entrance lifts",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1269780513-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -44.0,
+        -12.25,
+        -2.0
+      ],
+      "max": [
+        44.0,
+        0.0,
+        2.0
+      ],
+      "renderers": 4,
+      "children": 4,
+      "components": [
+        "Transform",
+        "ArenaDuelPlatforms"
+      ]
+    },
+    {
+      "name": "Black hole distant visual placeholder - no collider",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Black hole distant visual placeholder - no collider",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1340986428-0",
+      "active": false,
+      "position": [
+        0.0,
+        -50.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        -50.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        -50.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer"
+      ]
+    },
+    {
+      "name": "Diamond competition boundary - visual only",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/Diamond competition boundary - visual only",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-404969677-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -100.5,
+        -0.46,
+        -100.5
+      ],
+      "max": [
+        100.5,
+        0.54,
+        100.5
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "LineRenderer"
+      ]
+    },
+    {
+      "name": "P2 upper station frame",
+      "parent": "P2 station graybox",
+      "path": "P2 station graybox/P2 upper station frame",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1458765690-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 12,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Station visitor first-person walker",
+      "parent": null,
+      "path": "Station visitor first-person walker",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1945915606-0",
+      "active": true,
+      "position": [
+        20.0,
+        0.06,
+        144.0
+      ],
+      "yaw": 282.5459,
+      "min": [
+        19.5823288,
+        0.0600000024,
+        143.582336
+      ],
+      "max": [
+        20.4176712,
+        1.8599999,
+        144.417664
+      ],
+      "renderers": 1,
+      "children": 2,
+      "components": [
+        "Transform",
+        "CharacterController",
+        "StationGrayboxWalker"
+      ]
+    },
+    {
+      "name": "Station live competition presentation",
+      "parent": null,
+      "path": "Station live competition presentation",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920471-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "ArenaConnection",
+        "ArenaStationLiveMatch"
+      ]
+    },
+    {
+      "name": "Station V29 high gallery seats",
+      "parent": null,
+      "path": "Station V29 high gallery seats",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-454085130-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        6.944149,
+        17.175,
+        -50.0
+      ],
+      "max": [
+        41.2780075,
+        18.1933212,
+        58.2780075
+      ],
+      "renderers": 311,
+      "children": 105,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Station live question board",
+      "parent": null,
+      "path": "Station live question board",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-346017932-0",
+      "active": true,
+      "position": [
+        12.0,
+        3.5,
+        -42.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -6.539999,
+        3.5,
+        -42.6
+      ],
+      "max": [
+        30.539999,
+        26.3900013,
+        -41.4
+      ],
+      "renderers": 7,
+      "children": 7,
+      "components": [
+        "Transform",
+        "StationQuestionBoard"
+      ]
+    },
+    {
+      "name": "P2W world connectivity graybox",
+      "parent": null,
+      "path": "P2W world connectivity graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1909961292-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -138.5,
+        -12.4,
+        -130.1
+      ],
+      "max": [
+        138.5,
+        30.9000034,
+        290.1
+      ],
+      "renderers": 359,
+      "children": 6,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Upper promenade - closed square and two public ramps",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/Upper promenade - closed square and two public ramps",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1483967732-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -109.1,
+        -0.3976221,
+        -109.1
+      ],
+      "max": [
+        109.1,
+        18.2,
+        109.1
+      ],
+      "renderers": 37,
+      "children": 44,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Lower observation - loop and two exterior descents",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/Lower observation - loop and two exterior descents",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1958720580-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -138.5,
+        -12.4,
+        -88.625
+      ],
+      "max": [
+        138.5,
+        4.19912338,
+        88.6000061
+      ],
+      "renderers": 55,
+      "children": 54,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "North public airlock and exterior dock - concept arrival axis",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/North public airlock and exterior dock - concept arrival axis",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-681026436-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -105.0,
+        -0.197250366,
+        108.676636
+      ],
+      "max": [
+        93.5,
+        18.199955,
+        290.1
+      ],
+      "renderers": 19,
+      "children": 18,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "East public housing bypass",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/East public housing bypass",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-68369177-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        12.0,
+        -0.399999976,
+        -82.0
+      ],
+      "max": [
+        130.0,
+        4.29999971,
+        130.0
+      ],
+      "renderers": 3,
+      "children": 8,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "NE corner observatory node",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/NE corner observatory node",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1540353498-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -105.0,
+        13.6000023,
+        -105.0
+      ],
+      "max": [
+        117.175,
+        30.9000015,
+        117.175
+      ],
+      "renderers": 222,
+      "children": 105,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "South keel descent - greenhouse to lower loop",
+      "parent": "P2W world connectivity graybox",
+      "path": "P2W world connectivity graybox/South keel descent - greenhouse to lower loop",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2050783207-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -85.0,
+        -12.4,
+        -130.1
+      ],
+      "max": [
+        85.0,
+        4.199999,
+        -83.5
+      ],
+      "renderers": 23,
+      "children": 25,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Station world candidate save",
+      "parent": null,
+      "path": "Station world candidate save",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-676985741-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "StationWorldSave"
+      ]
+    },
+    {
+      "name": "Concept outer habitat volume study",
+      "parent": null,
+      "path": "Concept outer habitat volume study",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-866402456-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -132.5,
+        4.200001,
+        -132.5
+      ],
+      "max": [
+        132.5,
+        22.0,
+        132.5
+      ],
+      "renderers": 72,
+      "children": 124,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "East-west ground habitat roof -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/East-west ground habitat roof -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1389351107-0",
+      "active": true,
+      "position": [
+        -110.0,
+        9.6,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        9.200001,
+        -108.0
+      ],
+      "max": [
+        -100.0,
+        10.0,
+        108.0
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "BoxCollider",
+        "MeshRenderer"
+      ]
+    },
+    {
+      "name": "North-south ground habitat roof -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/North-south ground habitat roof -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1747620981-0",
+      "active": true,
+      "position": [
+        0.0,
+        9.6,
+        -110.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -108.0,
+        9.200001,
+        -120.0
+      ],
+      "max": [
+        108.0,
+        10.0,
+        -100.0
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "BoxCollider",
+        "MeshRenderer"
+      ]
+    },
+    {
+      "name": "East-west ground habitat roof 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/East-west ground habitat roof 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1970309394-0",
+      "active": true,
+      "position": [
+        110.0,
+        9.6,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        100.0,
+        9.200001,
+        -108.0
+      ],
+      "max": [
+        120.0,
+        10.0,
+        108.0
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "BoxCollider",
+        "MeshRenderer"
+      ]
+    },
+    {
+      "name": "North-south ground habitat roof 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/North-south ground habitat roof 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1772628765-0",
+      "active": true,
+      "position": [
+        0.0,
+        9.6,
+        110.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -108.0,
+        9.200001,
+        100.0
+      ],
+      "max": [
+        108.0,
+        10.0,
+        120.0
+      ],
+      "renderers": 1,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "BoxCollider",
+        "MeshRenderer"
+      ]
+    },
+    {
+      "name": "Corner habitat lower drum -1 -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat lower drum -1 -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1195271784-0",
+      "active": true,
+      "position": [
+        -120.0,
+        10.0,
+        -120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        10.0,
+        -120.0
+      ],
+      "max": [
+        -120.0,
+        10.0,
+        -120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat crown -1 -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat crown -1 -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-613135059-0",
+      "active": true,
+      "position": [
+        -120.0,
+        23.0,
+        -120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        23.0,
+        -120.0
+      ],
+      "max": [
+        -120.0,
+        23.0,
+        -120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat lower drum -1 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat lower drum -1 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1520378363-0",
+      "active": true,
+      "position": [
+        -120.0,
+        10.0,
+        120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        10.0,
+        120.0
+      ],
+      "max": [
+        -120.0,
+        10.0,
+        120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat crown -1 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat crown -1 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1477716162-0",
+      "active": true,
+      "position": [
+        -120.0,
+        23.0,
+        120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -120.0,
+        23.0,
+        120.0
+      ],
+      "max": [
+        -120.0,
+        23.0,
+        120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat lower drum 1 -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat lower drum 1 -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1283537542-0",
+      "active": true,
+      "position": [
+        120.0,
+        10.0,
+        -120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        120.0,
+        10.0,
+        -120.0
+      ],
+      "max": [
+        120.0,
+        10.0,
+        -120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat crown 1 -1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat crown 1 -1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1697173789-0",
+      "active": true,
+      "position": [
+        120.0,
+        23.0,
+        -120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        120.0,
+        23.0,
+        -120.0
+      ],
+      "max": [
+        120.0,
+        23.0,
+        -120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat lower drum 1 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat lower drum 1 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-466168518-0",
+      "active": true,
+      "position": [
+        120.0,
+        10.0,
+        120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        120.0,
+        10.0,
+        120.0
+      ],
+      "max": [
+        120.0,
+        10.0,
+        120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Corner habitat crown 1 1",
+      "parent": "Concept outer habitat volume study",
+      "path": "Concept outer habitat volume study/Corner habitat crown 1 1",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1275499167-0",
+      "active": true,
+      "position": [
+        120.0,
+        23.0,
+        120.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        120.0,
+        23.0,
+        120.0
+      ],
+      "max": [
+        120.0,
+        23.0,
+        120.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "Four district W1 connected world graybox",
+      "parent": null,
+      "path": "Four district W1 connected world graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1027793203-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -360.0,
+        -4.5,
+        -335.022
+      ],
+      "max": [
+        335.022034,
+        6.27499962,
+        339.999969
+      ],
+      "renderers": 311,
+      "children": 10,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "North axis - berth-side public bypass",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/North axis - berth-side public bypass",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1634338213-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 6,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "East axis - public bypass to outer ring",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/East axis - public bypass to outer ring",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2129218254-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 3,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "West axis - public door to outer ring",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/West axis - public door to outer ring",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1591367677-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -150.5,
+        -0.5,
+        -86.0
+      ],
+      "max": [
+        -124.5,
+        0.0,
+        -78.0
+      ],
+      "renderers": 1,
+      "children": 3,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "South axis - new public door beside descent",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/South axis - new public door beside descent",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1176592468-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 3,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Outer ring - four districts connect without the core",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-355759022-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -360.0,
+        -4.5,
+        -335.022
+      ],
+      "max": [
+        335.022034,
+        6.27499962,
+        339.999969
+      ],
+      "renderers": 161,
+      "children": 52,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Northwest research observation district graybox",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Northwest research observation district graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-873314074-0",
+      "active": true,
+      "position": [
+        36.0,
+        0.0,
+        -190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -229.139984,
+        -3.537839,
+        -28.0
+      ],
+      "max": [
+        -126.0,
+        1.03443718,
+        57.14
+      ],
+      "renderers": 14,
+      "children": 12,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Northwest public archive and observation pavilion",
+      "parent": "Four district W1 connected world graybox/Northwest research observation district graybox",
+      "path": "Four district W1 connected world graybox/Northwest research observation district graybox/Northwest public archive and observation pavilion",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-798037341-0",
+      "active": true,
+      "position": [
+        36.0,
+        0.0,
+        -190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        36.0,
+        0.0,
+        -190.0
+      ],
+      "max": [
+        36.0,
+        0.0,
+        -190.0
+      ],
+      "renderers": 0,
+      "children": 6,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Northeast arrival port district graybox",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Northeast arrival port district graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1955730695-0",
+      "active": true,
+      "position": [
+        -190.0,
+        0.0,
+        -36.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -24.525,
+        -0.5,
+        130.275
+      ],
+      "max": [
+        35.0,
+        3.23500013,
+        178.225
+      ],
+      "renderers": 30,
+      "children": 17,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Southeast civic life district graybox",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Southeast civic life district graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1003602793-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        131.860016,
+        -3.55325222,
+        -112.139984
+      ],
+      "max": [
+        180.225,
+        5.09999943,
+        -3.77500153
+      ],
+      "renderers": 66,
+      "children": 14,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Southeast public cafe and street stop",
+      "parent": "Four district W1 connected world graybox/Southeast civic life district graybox",
+      "path": "Four district W1 connected world graybox/Southeast civic life district graybox/Southeast public cafe and street stop",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1205040555-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        157.775,
+        0.0,
+        -26.225
+      ],
+      "max": [
+        180.225,
+        5.1,
+        -3.77499962
+      ],
+      "renderers": 48,
+      "children": 25,
+      "components": [
+        "Transform",
+        "StationCafeMoment"
+      ]
+    },
+    {
+      "name": "Southwest ecological garden district graybox",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1492134900-0",
+      "active": true,
+      "position": [
+        190.0,
+        0.0,
+        36.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -55.0,
+        -0.5,
+        -209.0
+      ],
+      "max": [
+        28.0,
+        4.24,
+        -126.0
+      ],
+      "renderers": 39,
+      "children": 21,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "South public greenhouse graybox",
+      "parent": "Four district W1 connected world graybox/Southwest ecological garden district graybox",
+      "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+      "active": true,
+      "position": [
+        -32.0,
+        0.0,
+        -43.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -11.75,
+        0.0,
+        -165.625
+      ],
+      "max": [
+        11.75,
+        4.24,
+        -142.375
+      ],
+      "renderers": 34,
+      "children": 25,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Four-district tour connectors W4G",
+      "parent": "Four district W1 connected world graybox",
+      "path": "Four district W1 connected world graybox/Four-district tour connectors W4G",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1000425415-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 5,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "South cross-district walk W4N",
+      "parent": null,
+      "path": "South cross-district walk W4N",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-381987631-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -162.5,
+        -0.480000019,
+        -196.0
+      ],
+      "max": [
+        162.5,
+        6.0,
+        -184.0
+      ],
+      "renderers": 35,
+      "children": 10,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "Public match notices W4O",
+      "parent": null,
+      "path": "Public match notices W4O",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1674254396-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "StationPublicMatchNotice"
+      ]
+    },
+    {
+      "name": "Southeast south garden loop W4P",
+      "parent": null,
+      "path": "Southeast south garden loop W4P",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-85637748-0",
+      "active": false,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 39,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 south connector glazing trial",
+      "parent": null,
+      "path": "V012 A1 south connector glazing trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-483946129-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        147.84,
+        0.0,
+        -52.17
+      ],
+      "max": [
+        148.26001,
+        3.41,
+        -25.8300018
+      ],
+      "renderers": 13,
+      "children": 13,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 modular turn trial",
+      "parent": null,
+      "path": "V012 A1 modular turn trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2128966929-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 12,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 corridor threshold frame trial",
+      "parent": null,
+      "path": "V012 A1 corridor threshold frame trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-919132149155446097-568343238",
+      "active": true,
+      "position": [
+        154.0,
+        -0.1118381,
+        -26.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        154.0,
+        -0.1118381,
+        -26.0
+      ],
+      "max": [
+        154.0,
+        -0.1118381,
+        -26.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "MeshFilter",
+        "MeshRenderer",
+        "MeshCollider"
+      ]
+    },
+    {
+      "name": "V012 A1 west promenade deck canopy trial",
+      "parent": null,
+      "path": "V012 A1 west promenade deck canopy trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1128722771-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        151.88,
+        0.0,
+        -46.12
+      ],
+      "max": [
+        152.12,
+        3.04,
+        -29.8800011
+      ],
+      "renderers": 3,
+      "children": 17,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 portal transom trial",
+      "parent": null,
+      "path": "V012 A1 portal transom trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1439147388-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        148.32,
+        2.94,
+        -26.18
+      ],
+      "max": [
+        157.68,
+        4.44,
+        -25.82
+      ],
+      "renderers": 7,
+      "children": 7,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 corridor lighting trial",
+      "parent": null,
+      "path": "V012 A1 corridor lighting trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1946958583-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 threshold collider trial",
+      "parent": null,
+      "path": "V012 A1 threshold collider trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-980318331-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 3,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 cantilever observation trial",
+      "parent": null,
+      "path": "V012 A1 cantilever observation trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-705428748-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        132.0,
+        -0.299999952,
+        -60.03
+      ],
+      "max": [
+        136.0,
+        3.16,
+        -51.97
+      ],
+      "renderers": 4,
+      "children": 22,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V012 A1 observation approach enclosure trial",
+      "parent": null,
+      "path": "V012 A1 observation approach enclosure trial",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-529180981-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        135.9,
+        0.0,
+        -60.0
+      ],
+      "max": [
+        152.170013,
+        3.26,
+        -45.9
+      ],
+      "renderers": 34,
+      "children": 48,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 serene cafe fitout",
+      "parent": null,
+      "path": "V013 serene cafe fitout",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-549926802-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        158.4,
+        0.0499999523,
+        -25.5099964
+      ],
+      "max": [
+        179.6,
+        3.95,
+        -4.100006
+      ],
+      "renderers": 2,
+      "children": 20,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 Meshy planters",
+      "parent": null,
+      "path": "V013 Meshy planters",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-284826713-0",
+      "active": false,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 3,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 P1P2 finished joinery",
+      "parent": null,
+      "path": "V013 P1P2 finished joinery",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-50435379-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        157.990021,
+        -0.200000048,
+        -25.7249928
+      ],
+      "max": [
+        179.790009,
+        4.2300005,
+        -4.20999336
+      ],
+      "renderers": 27,
+      "children": 34,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 cafe and gallery envelope",
+      "parent": null,
+      "path": "V013 cafe and gallery envelope",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-729789124-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        131.85,
+        0.03999996,
+        -60.2
+      ],
+      "max": [
+        180.25,
+        4.42,
+        -3.75
+      ],
+      "renderers": 67,
+      "children": 70,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 cafe seating neighborhoods",
+      "parent": null,
+      "path": "V013 cafe seating neighborhoods",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-474131574-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        132.039978,
+        -0.109999895,
+        -60.07
+      ],
+      "max": [
+        179.796509,
+        4.16,
+        -4.20350647
+      ],
+      "renderers": 58,
+      "children": 27,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 cafe forecourt",
+      "parent": null,
+      "path": "V013 cafe forecourt",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-334261370-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        148.12,
+        -0.170000076,
+        -26.15
+      ],
+      "max": [
+        157.950012,
+        4.32999945,
+        6.149996
+      ],
+      "renderers": 30,
+      "children": 34,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 interior light probes",
+      "parent": null,
+      "path": "V013 interior light probes",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-464842434-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V013 baked ceiling diffusion",
+      "parent": null,
+      "path": "V013 baked ceiling diffusion",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1006669956-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "max": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "renderers": 0,
+      "children": 10,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 continuous observation gallery",
+      "parent": null,
+      "path": "V013 continuous observation gallery",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-255792937-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        132.004,
+        -0.169999957,
+        -59.9959946
+      ],
+      "max": [
+        156.6,
+        3.03000021,
+        -25.8499985
+      ],
+      "renderers": 42,
+      "children": 52,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 civic exterior finish",
+      "parent": null,
+      "path": "V013 civic exterior finish",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1139103150-0",
+      "active": true,
+      "position": [
+        -36.0,
+        0.0,
+        190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        126.0,
+        -1.22000241,
+        -68.0
+      ],
+      "max": [
+        182.0,
+        4.86000156,
+        28.0
+      ],
+      "renderers": 40,
+      "children": 27,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 arrival port",
+      "parent": null,
+      "path": "V013 arrival port",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1816002985-0",
+      "active": true,
+      "position": [
+        -190.0,
+        0.0,
+        -36.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -28.0,
+        -1.12000346,
+        126.0
+      ],
+      "max": [
+        41.58332,
+        6.09999943,
+        182.0
+      ],
+      "renderers": 67,
+      "children": 142,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 core public approach",
+      "parent": null,
+      "path": "V013 core public approach",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-939102774-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -132.5,
+        0.0,
+        -132.5
+      ],
+      "max": [
+        138.1,
+        29.0900116,
+        132.5
+      ],
+      "renderers": 206,
+      "children": 138,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 southwest conservatory",
+      "parent": null,
+      "path": "V013 southwest conservatory",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1287583104-0",
+      "active": true,
+      "position": [
+        190.0,
+        0.0,
+        36.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -28.0,
+        -1.08000326,
+        -182.0
+      ],
+      "max": [
+        28.0,
+        4.52500057,
+        -126.0
+      ],
+      "renderers": 78,
+      "children": 148,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 northwest research gallery",
+      "parent": null,
+      "path": "V013 northwest research gallery",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042251-0",
+      "active": true,
+      "position": [
+        36.0,
+        0.0,
+        -190.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -229.225,
+        -3.505,
+        -27.9999981
+      ],
+      "max": [
+        -126.0,
+        5.936,
+        57.225
+      ],
+      "renderers": 96,
+      "children": 90,
+      "components": [
+        "Transform",
+        "StationResearchArchive"
+      ]
+    },
+    {
+      "name": "V013 continuous promenade",
+      "parent": null,
+      "path": "V013 continuous promenade",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-269265439-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -336.9183,
+        -0.880002,
+        -336.9183
+      ],
+      "max": [
+        336.9183,
+        29.24001,
+        336.918365
+      ],
+      "renderers": 580,
+      "children": 798,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 quiet soundscape",
+      "parent": null,
+      "path": "V013 quiet soundscape",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-899388496-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 5,
+      "components": [
+        "Transform",
+        "StationSoundscape"
+      ]
+    },
+    {
+      "name": "V013 western glazed connections",
+      "parent": null,
+      "path": "V013 western glazed connections",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1698475490-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 367,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 southern glazed connections",
+      "parent": null,
+      "path": "V013 southern glazed connections",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-496464657-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 473,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 eastern public connections",
+      "parent": null,
+      "path": "V013 eastern public connections",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2043913031-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 263,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 north transfer connections",
+      "parent": null,
+      "path": "V013 north transfer connections",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2138431238-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 516,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V013 north boarding hall and vessel",
+      "parent": null,
+      "path": "V013 north boarding hall and vessel",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+      "active": true,
+      "position": [
+        -12.0,
+        0.0,
+        70.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -20.2249985,
+        -1.14997864,
+        185.0
+      ],
+      "max": [
+        20.2249985,
+        14.3950243,
+        322.899963
+      ],
+      "renderers": 230,
+      "children": 112,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 migration applied",
+      "parent": null,
+      "path": "V014 migration applied",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-955161198-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 0,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 continuous public deck",
+      "parent": null,
+      "path": "V014 continuous public deck",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-919132149155446097-1865254222",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -336.0,
+        -1.80003989,
+        -335.999969
+      ],
+      "max": [
+        336.0,
+        0.008028865,
+        335.999969
+      ],
+      "renderers": 66,
+      "children": 66,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 lower entrance edges",
+      "parent": null,
+      "path": "V014 lower entrance edges",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-885551380-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -224.799988,
+        -0.0349999666,
+        -80.8
+      ],
+      "max": [
+        141.0,
+        1.005,
+        54.0
+      ],
+      "renderers": 6,
+      "children": 6,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 public courts",
+      "parent": null,
+      "path": "V014 public courts",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -235.556351,
+        -0.00500011444,
+        -235.556351
+      ],
+      "max": [
+        235.556351,
+        4.860001,
+        235.55632
+      ],
+      "renderers": 339,
+      "children": 158,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 four wing entrances",
+      "parent": null,
+      "path": "V014 four wing entrances",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-354972500-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -126.200005,
+        0.0,
+        -129.900009
+      ],
+      "max": [
+        131.0,
+        6.6590004,
+        140.979019
+      ],
+      "renderers": 38,
+      "children": 23,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 garden promenade",
+      "parent": null,
+      "path": "V014 garden promenade",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -258.349976,
+        0.0,
+        -258.349976
+      ],
+      "max": [
+        258.349976,
+        14.0,
+        290.0
+      ],
+      "renderers": 71,
+      "children": 216,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 layered planting",
+      "parent": null,
+      "path": "V014 layered planting",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1102509955-0",
+      "active": false,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "renderers": 0,
+      "children": 64,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 architectural finish",
+      "parent": null,
+      "path": "V014 architectural finish",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1449167495-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -201.94,
+        0.0144996643,
+        -195.94
+      ],
+      "max": [
+        213.94,
+        6.12199926,
+        195.94
+      ],
+      "renderers": 21,
+      "children": 26,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 garden courts",
+      "parent": null,
+      "path": "V014 garden courts",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-887930846-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -232.11795,
+        0.0139723271,
+        -232.11792
+      ],
+      "max": [
+        232.11795,
+        0.0350276679,
+        232.11792
+      ],
+      "renderers": 16,
+      "children": 139,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 civic buildings",
+      "parent": null,
+      "path": "V014 civic buildings",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1588727523-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -183.8,
+        -1.66893E-06,
+        -45.85
+      ],
+      "max": [
+        183.8,
+        6.460001,
+        45.85
+      ],
+      "renderers": 331,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "05  /  COMMONS",
+      "parent": "V014 civic buildings",
+      "path": "V014 civic buildings/05  /  COMMONS",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+      "active": true,
+      "position": [
+        166.0,
+        0.0,
+        30.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        148.200012,
+        -1.66893E-06,
+        14.1500015
+      ],
+      "max": [
+        183.799988,
+        6.460001,
+        45.85
+      ],
+      "renderers": 163,
+      "children": 34,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "06  /  STUDY",
+      "parent": "V014 civic buildings",
+      "path": "V014 civic buildings/06  /  STUDY",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+      "active": true,
+      "position": [
+        -166.0,
+        0.0,
+        -30.0
+      ],
+      "yaw": 180.0,
+      "min": [
+        -183.799988,
+        -1.66893E-06,
+        -45.85
+      ],
+      "max": [
+        -148.200012,
+        6.460001,
+        -14.1500015
+      ],
+      "renderers": 168,
+      "children": 35,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V014 north south civic buildings",
+      "parent": null,
+      "path": "V014 north south civic buildings",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1353890767-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -107.8,
+        -1.66893E-06,
+        -175.85
+      ],
+      "max": [
+        107.8,
+        6.460001,
+        175.85
+      ],
+      "renderers": 326,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "07  /  VISITOR",
+      "parent": "V014 north south civic buildings",
+      "path": "V014 north south civic buildings/07  /  VISITOR",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+      "active": true,
+      "position": [
+        90.0,
+        0.0,
+        160.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        72.2,
+        -1.66893E-06,
+        144.15
+      ],
+      "max": [
+        107.8,
+        6.460001,
+        175.85
+      ],
+      "renderers": 163,
+      "children": 34,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "08  /  ACTIVITY",
+      "parent": "V014 north south civic buildings",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+      "active": true,
+      "position": [
+        -90.0,
+        0.0,
+        -160.0
+      ],
+      "yaw": 180.0,
+      "min": [
+        -107.8,
+        -1.66893E-06,
+        -175.85
+      ],
+      "max": [
+        -72.2,
+        6.460001,
+        -144.15
+      ],
+      "renderers": 163,
+      "children": 34,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V014 balanced civic buildings",
+      "parent": null,
+      "path": "V014 balanced civic buildings",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1617364917-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -107.8,
+        -1.66893E-06,
+        -175.85
+      ],
+      "max": [
+        107.8,
+        6.460001,
+        175.85
+      ],
+      "renderers": 326,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "09  /  READING",
+      "parent": "V014 balanced civic buildings",
+      "path": "V014 balanced civic buildings/09  /  READING",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+      "active": true,
+      "position": [
+        -90.0,
+        0.0,
+        160.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -107.8,
+        -1.66893E-06,
+        144.15
+      ],
+      "max": [
+        -72.2,
+        6.460001,
+        175.85
+      ],
+      "renderers": 163,
+      "children": 34,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "10  /  WORKROOM",
+      "parent": "V014 balanced civic buildings",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+      "active": true,
+      "position": [
+        90.0,
+        0.0,
+        -160.0
+      ],
+      "yaw": 180.0,
+      "min": [
+        72.2,
+        -1.66893E-06,
+        -175.85
+      ],
+      "max": [
+        107.8,
+        6.460001,
+        -144.15
+      ],
+      "renderers": 163,
+      "children": 34,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V014 civic streets",
+      "parent": null,
+      "path": "V014 civic streets",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-55658397-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -192.0,
+        -0.0400185958,
+        -155.999985
+      ],
+      "max": [
+        192.0,
+        0.04301738,
+        145.8
+      ],
+      "renderers": 10,
+      "children": 1,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 guest lodges",
+      "parent": null,
+      "path": "V014 guest lodges",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1613795029-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -181.0,
+        -1.1920929E-06,
+        -99.65001
+      ],
+      "max": [
+        181.0,
+        4.16000175,
+        99.65001
+      ],
+      "renderers": 518,
+      "children": 2,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "11  /  GUEST LODGE",
+      "parent": "V014 guest lodges",
+      "path": "V014 guest lodges/11  /  GUEST LODGE",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+      "active": true,
+      "position": [
+        168.0,
+        0.0,
+        -88.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        155.0,
+        -1.1920929E-06,
+        -99.65001
+      ],
+      "max": [
+        181.0,
+        4.16000175,
+        -76.34999
+      ],
+      "renderers": 259,
+      "children": 17,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "12  /  GUEST LODGE",
+      "parent": "V014 guest lodges",
+      "path": "V014 guest lodges/12  /  GUEST LODGE",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+      "active": true,
+      "position": [
+        -168.0,
+        0.0,
+        88.0
+      ],
+      "yaw": 180.0,
+      "min": [
+        -181.0,
+        -1.1920929E-06,
+        76.34999
+      ],
+      "max": [
+        -155.0,
+        4.16000175,
+        99.65001
+      ],
+      "renderers": 259,
+      "children": 17,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V014 guest paths",
+      "parent": null,
+      "path": "V014 guest paths",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-449363212-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -168.0,
+        -0.040009357,
+        -78.49999
+      ],
+      "max": [
+        168.0,
+        0.0430093557,
+        78.49999
+      ],
+      "renderers": 4,
+      "children": 1,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 ecological garden structural candidate",
+      "parent": null,
+      "path": "V014 ecological garden structural candidate",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1030656175-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        -154.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -24.6750011,
+        0.0,
+        -176.674988
+      ],
+      "max": [
+        24.6750011,
+        10.6250019,
+        -131.325012
+      ],
+      "renderers": 114,
+      "children": 50,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 enclosed botanical beds",
+      "parent": null,
+      "path": "V014 enclosed botanical beds",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-706559209-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        -154.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -21.5,
+        0.0199995041,
+        -168.0
+      ],
+      "max": [
+        21.5,
+        7.94087934,
+        -140.0
+      ],
+      "renderers": 132,
+      "children": 5,
+      "components": [
+        "Transform",
+        "LightProbeGroup"
+      ]
+    },
+    {
+      "name": "V014 conservatory entrances",
+      "parent": null,
+      "path": "V014 conservatory entrances",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        -154.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -24.258,
+        0.0,
+        -176.258
+      ],
+      "max": [
+        24.258,
+        3.38999987,
+        -131.742
+      ],
+      "renderers": 96,
+      "children": 4,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 swept arrival roof",
+      "parent": null,
+      "path": "V014 swept arrival roof",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-627751112-0",
+      "active": true,
+      "position": [
+        0.0,
+        0.0,
+        160.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -27.0545063,
+        5.89999676,
+        136.945
+      ],
+      "max": [
+        27.0545063,
+        8.65000248,
+        183.055
+      ],
+      "renderers": 10,
+      "children": 1,
+      "components": [
+        "Transform"
+      ]
+    },
+    {
+      "name": "V014 folded research envelope",
+      "parent": null,
+      "path": "V014 folded research envelope",
+      "id": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1490463751-0",
+      "active": true,
+      "position": [
+        -171.0,
+        0.0,
+        15.0
+      ],
+      "yaw": 0.0,
+      "min": [
+        -185.0375,
+        1.07999992,
+        2.96249866
+      ],
+      "max": [
+        -125.999878,
+        8.400002,
+        27.0375023
+      ],
+      "renderers": 15,
+      "children": 1,
+      "components": [
+        "Transform"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "RoomId": "room/resident/deepseek",
+      "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-003 DeepSeek resident - former player cabin/40 sqm resident module room/resident/deepseek",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "RoomId": "room/resident/chatgpt",
+      "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-001 first AI resident - door to shared corridor/40 sqm resident module room/resident/chatgpt",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "RoomId": "room/resident/claude",
+      "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-002 second AI resident - door to shared corridor/40 sqm resident module room/resident/claude",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "RoomId": "room/resident/gemini",
+      "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/gemini",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "RoomId": "room/resident/glm",
+      "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/glm",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "RoomId": "room/resident/kimi",
+      "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/kimi",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "seats": [
+    {
+      "StableId": "v013-garden-seat-01",
+      "Place": "生态花园",
+      "path": "V013 southwest conservatory/Garden seat 0",
+      "position": [
+        -18.0,
+        0.02,
+        -139.0
+      ]
+    },
+    {
+      "StableId": "v013-garden-seat-02",
+      "Place": "生态花园",
+      "path": "V013 southwest conservatory/Garden seat 1",
+      "position": [
+        19.0,
+        0.02,
+        -139.0
+      ]
+    },
+    {
+      "StableId": "v013-garden-seat-03",
+      "Place": "生态花园",
+      "path": "V013 southwest conservatory/Garden seat 2",
+      "position": [
+        -17.0,
+        0.02,
+        -171.0
+      ]
+    },
+    {
+      "StableId": "v013-garden-seat-04",
+      "Place": "生态花园",
+      "path": "V013 southwest conservatory/Garden seat 3",
+      "position": [
+        18.0,
+        0.02,
+        -171.0
+      ]
+    },
+    {
+      "StableId": "v013-research-seat-01",
+      "Place": "银白观测舱",
+      "path": "V013 northwest research gallery/Research seated observation 0",
+      "position": [
+        -227.0,
+        -2.98,
+        55.25
+      ]
+    },
+    {
+      "StableId": "v013-research-seat-02",
+      "Place": "银白观测舱",
+      "path": "V013 northwest research gallery/Research seated observation 1",
+      "position": [
+        -221.0,
+        -2.98,
+        55.25
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-01",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 1",
+      "position": [
+        -15.5,
+        0.04,
+        263.85
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-02",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 2",
+      "position": [
+        -15.5,
+        0.04,
+        266.15
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-03",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 3",
+      "position": [
+        -10.8,
+        0.04,
+        265.0
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-04",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 4",
+      "position": [
+        15.5,
+        0.04,
+        263.85
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-05",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 5",
+      "position": [
+        15.5,
+        0.04,
+        266.15
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-06",
+      "Place": "北侧候舱区",
+      "path": "V013 north boarding hall and vessel/North boarding seat 6",
+      "position": [
+        10.7999992,
+        0.04,
+        265.0
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-07",
+      "Place": "停泊舱窗景席",
+      "path": "V013 north boarding hall and vessel/North boarding seat 7",
+      "position": [
+        -4.7,
+        2.24,
+        309.85
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-08",
+      "Place": "停泊舱窗景席",
+      "path": "V013 north boarding hall and vessel/North boarding seat 8",
+      "position": [
+        -4.7,
+        2.24,
+        312.15
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-09",
+      "Place": "停泊舱窗景席",
+      "path": "V013 north boarding hall and vessel/North boarding seat 9",
+      "position": [
+        4.700001,
+        2.24,
+        309.85
+      ]
+    },
+    {
+      "StableId": "v013-north-boarding-seat-10",
+      "Place": "停泊舱窗景席",
+      "path": "V013 north boarding hall and vessel/North boarding seat 10",
+      "position": [
+        4.700001,
+        2.24,
+        312.15
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-01",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 1",
+      "position": [
+        209.4,
+        0.04,
+        44.4499969
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-02",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 2",
+      "position": [
+        209.4,
+        0.04,
+        46.75
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-03",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 3",
+      "position": [
+        213.5,
+        0.04,
+        45.6
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-04",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 4",
+      "position": [
+        209.4,
+        0.04,
+        53.25
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-05",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 5",
+      "position": [
+        209.4,
+        0.04,
+        55.55
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-06",
+      "Place": "东翼公共客厅",
+      "path": "V014 public courts/East social lounge/East lounge seat 6",
+      "position": [
+        213.5,
+        0.04,
+        54.4
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-07",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 7",
+      "position": [
+        -209.4,
+        0.04,
+        -44.4499969
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-08",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 8",
+      "position": [
+        -209.4,
+        0.04,
+        -46.75
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-09",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 9",
+      "position": [
+        -213.5,
+        0.04,
+        -45.6000061
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-10",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 10",
+      "position": [
+        -209.4,
+        0.04,
+        -53.25
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-11",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 11",
+      "position": [
+        -209.4,
+        0.04,
+        -55.5500031
+      ]
+    },
+    {
+      "StableId": "v013-east-lounge-seat-12",
+      "Place": "西翼阅读客厅",
+      "path": "V014 public courts/West reading lounge/East lounge seat 12",
+      "position": [
+        -213.5,
+        0.04,
+        -54.4
+      ]
+    },
+    {
+      "StableId": "v013-south-pause-seat-01",
+      "Place": "北翼等候前庭",
+      "path": "V014 public courts/North waiting rest/Southern rest seat 1",
+      "position": [
+        -40.8000031,
+        0.04,
+        158.0
+      ]
+    },
+    {
+      "StableId": "v013-south-pause-seat-02",
+      "Place": "北翼等候前庭",
+      "path": "V014 public courts/North waiting rest/Southern rest seat 2",
+      "position": [
+        -43.1999969,
+        0.04,
+        158.0
+      ]
+    },
+    {
+      "StableId": "v013-south-pause-seat-03",
+      "Place": "南翼花园前庭",
+      "path": "V014 public courts/South garden rest/Southern rest seat 3",
+      "position": [
+        40.8000031,
+        0.04,
+        -174.0
+      ]
+    },
+    {
+      "StableId": "v013-south-pause-seat-04",
+      "Place": "南翼花园前庭",
+      "path": "V014 public courts/South garden rest/Southern rest seat 4",
+      "position": [
+        43.1999969,
+        0.04,
+        -174.0
+      ]
+    },
+    {
+      "StableId": "v014-court-north-west-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/north-west seat -1",
+      "position": [
+        -67.0,
+        0.02,
+        175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-north-west-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/north-west seat 1",
+      "position": [
+        -57.0,
+        0.02,
+        175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-north-east-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/north-east seat -1",
+      "position": [
+        57.0,
+        0.02,
+        175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-north-east-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/north-east seat 1",
+      "position": [
+        67.0,
+        0.02,
+        175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-east-north-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/east-north seat -1",
+      "position": [
+        175.0,
+        0.02,
+        67.0
+      ]
+    },
+    {
+      "StableId": "v014-court-east-north-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/east-north seat 1",
+      "position": [
+        175.0,
+        0.02,
+        57.0
+      ]
+    },
+    {
+      "StableId": "v014-court-east-south-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/east-south seat -1",
+      "position": [
+        175.0,
+        0.02,
+        -57.0
+      ]
+    },
+    {
+      "StableId": "v014-court-east-south-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/east-south seat 1",
+      "position": [
+        175.0,
+        0.02,
+        -67.0
+      ]
+    },
+    {
+      "StableId": "v014-court-south-east-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/south-east seat -1",
+      "position": [
+        57.0,
+        0.02,
+        -175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-south-east-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/south-east seat 1",
+      "position": [
+        67.0,
+        0.02,
+        -175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-south-west-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/south-west seat -1",
+      "position": [
+        -67.0,
+        0.02,
+        -175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-south-west-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/south-west seat 1",
+      "position": [
+        -57.0,
+        0.02,
+        -175.0
+      ]
+    },
+    {
+      "StableId": "v014-court-west-south-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/west-south seat -1",
+      "position": [
+        -175.0,
+        0.02,
+        -57.0
+      ]
+    },
+    {
+      "StableId": "v014-court-west-south-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/west-south seat 1",
+      "position": [
+        -175.0,
+        0.02,
+        -67.0
+      ]
+    },
+    {
+      "StableId": "v014-court-west-north-a",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/west-north seat -1",
+      "position": [
+        -175.0,
+        0.02,
+        67.0
+      ]
+    },
+    {
+      "StableId": "v014-court-west-north-b",
+      "Place": "四翼花园前庭",
+      "path": "V014 public courts/west-north seat 1",
+      "position": [
+        -175.0,
+        0.02,
+        57.0
+      ]
+    },
+    {
+      "StableId": "v014-court-street-ne-a",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-ne seat -1",
+      "position": [
+        216.464462,
+        0.02,
+        193.535538
+      ]
+    },
+    {
+      "StableId": "v014-court-street-ne-b",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-ne seat 1",
+      "position": [
+        223.535538,
+        0.02,
+        186.464462
+      ]
+    },
+    {
+      "StableId": "v014-court-street-nw-a",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-nw seat -1",
+      "position": [
+        -193.535538,
+        0.02,
+        216.464462
+      ]
+    },
+    {
+      "StableId": "v014-court-street-nw-b",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-nw seat 1",
+      "position": [
+        -186.464462,
+        0.02,
+        223.535538
+      ]
+    },
+    {
+      "StableId": "v014-court-street-sw-a",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-sw seat -1",
+      "position": [
+        -223.535538,
+        0.02,
+        -186.464462
+      ]
+    },
+    {
+      "StableId": "v014-court-street-sw-b",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-sw seat 1",
+      "position": [
+        -216.464462,
+        0.02,
+        -193.535538
+      ]
+    },
+    {
+      "StableId": "v014-court-street-se-a",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-se seat -1",
+      "position": [
+        186.464462,
+        0.02,
+        -223.535538
+      ]
+    },
+    {
+      "StableId": "v014-court-street-se-b",
+      "Place": "环站步道休息处",
+      "path": "V014 public courts/street-se seat 1",
+      "position": [
+        193.535538,
+        0.02,
+        -216.464462
+      ]
+    },
+    {
+      "StableId": "v014-garden-0-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 0 -1",
+      "position": [
+        245.27533,
+        0.02,
+        86.85655
+      ]
+    },
+    {
+      "StableId": "v014-garden-0-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 0 1",
+      "position": [
+        234.852692,
+        0.02,
+        112.01899
+      ]
+    },
+    {
+      "StableId": "v014-garden-1-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 1 -1",
+      "position": [
+        112.019005,
+        0.02,
+        234.852692
+      ]
+    },
+    {
+      "StableId": "v014-garden-1-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 1 1",
+      "position": [
+        86.85656,
+        0.02,
+        245.27533
+      ]
+    },
+    {
+      "StableId": "v014-garden-2-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 2 -1",
+      "position": [
+        -86.85655,
+        0.02,
+        245.27533
+      ]
+    },
+    {
+      "StableId": "v014-garden-2-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 2 1",
+      "position": [
+        -112.019,
+        0.02,
+        234.852692
+      ]
+    },
+    {
+      "StableId": "v014-garden-3-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 3 -1",
+      "position": [
+        -234.852692,
+        0.02,
+        112.019
+      ]
+    },
+    {
+      "StableId": "v014-garden-3-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 3 1",
+      "position": [
+        -245.275314,
+        0.02,
+        86.85658
+      ]
+    },
+    {
+      "StableId": "v014-garden-4-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 4 -1",
+      "position": [
+        -245.27533,
+        0.02,
+        -86.85657
+      ]
+    },
+    {
+      "StableId": "v014-garden-4-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 4 1",
+      "position": [
+        -234.8527,
+        0.02,
+        -112.018982
+      ]
+    },
+    {
+      "StableId": "v014-garden-5-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 5 -1",
+      "position": [
+        -112.018959,
+        0.02,
+        -234.8527
+      ]
+    },
+    {
+      "StableId": "v014-garden-5-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 5 1",
+      "position": [
+        -86.8565445,
+        0.02,
+        -245.27533
+      ]
+    },
+    {
+      "StableId": "v014-garden-6-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 6 -1",
+      "position": [
+        86.8565445,
+        0.02,
+        -245.27533
+      ]
+    },
+    {
+      "StableId": "v014-garden-6-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 6 1",
+      "position": [
+        112.018967,
+        0.02,
+        -234.8527
+      ]
+    },
+    {
+      "StableId": "v014-garden-7-a",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 7 -1",
+      "position": [
+        234.852676,
+        0.02,
+        -112.019028
+      ]
+    },
+    {
+      "StableId": "v014-garden-7-b",
+      "Place": "环站步行花园",
+      "path": "V014 garden promenade/Promenade seat 7 1",
+      "position": [
+        245.2753,
+        0.02,
+        -86.85661
+      ]
+    },
+    {
+      "StableId": "v014-building-east-1-a",
+      "Place": "公共阅览与会客楼 · READING",
+      "path": "V014 civic buildings/05  /  COMMONS/READING usable seat -1",
+      "position": [
+        157.0,
+        0.055,
+        21.15
+      ]
+    },
+    {
+      "StableId": "v014-building-east-1-b",
+      "Place": "公共阅览与会客楼 · READING",
+      "path": "V014 civic buildings/05  /  COMMONS/READING usable seat 1",
+      "position": [
+        157.0,
+        0.055,
+        25.85
+      ]
+    },
+    {
+      "StableId": "v014-building-east-2-a",
+      "Place": "公共阅览与会客楼 · MEETING",
+      "path": "V014 civic buildings/05  /  COMMONS/MEETING usable seat -1",
+      "position": [
+        157.0,
+        0.055,
+        34.15
+      ]
+    },
+    {
+      "StableId": "v014-building-east-2-b",
+      "Place": "公共阅览与会客楼 · MEETING",
+      "path": "V014 civic buildings/05  /  COMMONS/MEETING usable seat 1",
+      "position": [
+        157.0,
+        0.055,
+        38.85
+      ]
+    },
+    {
+      "StableId": "v014-building-east-3-a",
+      "Place": "公共阅览与会客楼 · COMMUNITY",
+      "path": "V014 civic buildings/05  /  COMMONS/COMMUNITY usable seat -1",
+      "position": [
+        175.0,
+        0.055,
+        21.15
+      ]
+    },
+    {
+      "StableId": "v014-building-east-3-b",
+      "Place": "公共阅览与会客楼 · COMMUNITY",
+      "path": "V014 civic buildings/05  /  COMMONS/COMMUNITY usable seat 1",
+      "position": [
+        175.0,
+        0.055,
+        25.85
+      ]
+    },
+    {
+      "StableId": "v014-building-east-4-a",
+      "Place": "公共阅览与会客楼 · QUIET LOUNGE",
+      "path": "V014 civic buildings/05  /  COMMONS/QUIET LOUNGE usable seat -1",
+      "position": [
+        175.0,
+        0.055,
+        34.15
+      ]
+    },
+    {
+      "StableId": "v014-building-east-4-b",
+      "Place": "公共阅览与会客楼 · QUIET LOUNGE",
+      "path": "V014 civic buildings/05  /  COMMONS/QUIET LOUNGE usable seat 1",
+      "position": [
+        175.0,
+        0.055,
+        38.85
+      ]
+    },
+    {
+      "StableId": "v014-writing-east-1",
+      "Place": "公共楼 · 窗边书桌",
+      "path": "V014 civic buildings/05  /  COMMONS/V014 room fitout/Writing seat 1",
+      "position": [
+        160.2,
+        0.055,
+        19.65
+      ]
+    },
+    {
+      "StableId": "v014-writing-east-4",
+      "Place": "公共楼 · 窗边书桌",
+      "path": "V014 civic buildings/05  /  COMMONS/V014 room fitout/Writing seat 4",
+      "position": [
+        171.8,
+        0.055,
+        40.35
+      ]
+    },
+    {
+      "StableId": "v014-building-west-1-a",
+      "Place": "研修与讨论楼 · PUBLIC ARCHIVE",
+      "path": "V014 civic buildings/06  /  STUDY/PUBLIC ARCHIVE usable seat -1",
+      "position": [
+        -157.0,
+        0.055,
+        -21.1500015
+      ]
+    },
+    {
+      "StableId": "v014-building-west-1-b",
+      "Place": "研修与讨论楼 · PUBLIC ARCHIVE",
+      "path": "V014 civic buildings/06  /  STUDY/PUBLIC ARCHIVE usable seat 1",
+      "position": [
+        -157.0,
+        0.055,
+        -25.85
+      ]
+    },
+    {
+      "StableId": "v014-building-west-2-a",
+      "Place": "研修与讨论楼 · ANALYSIS",
+      "path": "V014 civic buildings/06  /  STUDY/ANALYSIS usable seat -1",
+      "position": [
+        -157.0,
+        0.055,
+        -34.15
+      ]
+    },
+    {
+      "StableId": "v014-building-west-2-b",
+      "Place": "研修与讨论楼 · ANALYSIS",
+      "path": "V014 civic buildings/06  /  STUDY/ANALYSIS usable seat 1",
+      "position": [
+        -157.0,
+        0.055,
+        -38.8500023
+      ]
+    },
+    {
+      "StableId": "v014-building-west-3-a",
+      "Place": "研修与讨论楼 · DISCUSSION",
+      "path": "V014 civic buildings/06  /  STUDY/DISCUSSION usable seat -1",
+      "position": [
+        -175.0,
+        0.055,
+        -21.1499977
+      ]
+    },
+    {
+      "StableId": "v014-building-west-3-b",
+      "Place": "研修与讨论楼 · DISCUSSION",
+      "path": "V014 civic buildings/06  /  STUDY/DISCUSSION usable seat 1",
+      "position": [
+        -175.0,
+        0.055,
+        -25.8499985
+      ]
+    },
+    {
+      "StableId": "v014-building-west-4-a",
+      "Place": "研修与讨论楼 · QUIET WORK",
+      "path": "V014 civic buildings/06  /  STUDY/QUIET WORK usable seat -1",
+      "position": [
+        -175.0,
+        0.055,
+        -34.1499977
+      ]
+    },
+    {
+      "StableId": "v014-building-west-4-b",
+      "Place": "研修与讨论楼 · QUIET WORK",
+      "path": "V014 civic buildings/06  /  STUDY/QUIET WORK usable seat 1",
+      "position": [
+        -175.0,
+        0.055,
+        -38.85
+      ]
+    },
+    {
+      "StableId": "v014-writing-west-2",
+      "Place": "研修楼 · 窗边书桌",
+      "path": "V014 civic buildings/06  /  STUDY/V014 room fitout/Writing seat 2",
+      "position": [
+        -160.2,
+        0.055,
+        -40.3500023
+      ]
+    },
+    {
+      "StableId": "v014-writing-west-4",
+      "Place": "研修楼 · 窗边书桌",
+      "path": "V014 civic buildings/06  /  STUDY/V014 room fitout/Writing seat 4",
+      "position": [
+        -171.8,
+        0.055,
+        -40.35
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-1-a",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/READING usable seat -1",
+      "position": [
+        81.0,
+        0.055,
+        151.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-1-b",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/READING usable seat 1",
+      "position": [
+        81.0,
+        0.055,
+        155.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-2-a",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/MEETING usable seat -1",
+      "position": [
+        81.0,
+        0.055,
+        164.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-2-b",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/MEETING usable seat 1",
+      "position": [
+        81.0,
+        0.055,
+        168.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-3-a",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/COMMUNITY usable seat -1",
+      "position": [
+        99.0,
+        0.055,
+        151.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-3-b",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/COMMUNITY usable seat 1",
+      "position": [
+        99.0,
+        0.055,
+        155.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-4-a",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/QUIET LOUNGE usable seat -1",
+      "position": [
+        99.0,
+        0.055,
+        164.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-north-4-b",
+      "Place": "北侧访客会客楼 · 会客休息",
+      "path": "V014 north south civic buildings/07  /  VISITOR/QUIET LOUNGE usable seat 1",
+      "position": [
+        99.0,
+        0.055,
+        168.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-writing-north-1",
+      "Place": "北侧访客会客楼 · 窗边阅读",
+      "path": "V014 north south civic buildings/07  /  VISITOR/V014 room fitout/Writing seat 1",
+      "position": [
+        84.2,
+        0.055,
+        149.65
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-writing-north-4",
+      "Place": "北侧访客会客楼 · 窗边阅读",
+      "path": "V014 north south civic buildings/07  /  VISITOR/V014 room fitout/Writing seat 4",
+      "position": [
+        95.8,
+        0.055,
+        170.35
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-1-a",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/READING usable seat -1",
+      "position": [
+        -81.0,
+        0.055,
+        -151.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-1-b",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/READING usable seat 1",
+      "position": [
+        -81.0,
+        0.055,
+        -155.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-2-a",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/MEETING usable seat -1",
+      "position": [
+        -81.0,
+        0.055,
+        -164.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-2-b",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/MEETING usable seat 1",
+      "position": [
+        -81.0,
+        0.055,
+        -168.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-3-a",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/COMMUNITY usable seat -1",
+      "position": [
+        -99.0,
+        0.055,
+        -151.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-3-b",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/COMMUNITY usable seat 1",
+      "position": [
+        -99.0,
+        0.055,
+        -155.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-4-a",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/QUIET LOUNGE usable seat -1",
+      "position": [
+        -99.0,
+        0.055,
+        -164.15
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-south-4-b",
+      "Place": "南侧阅读活动楼 · 会客休息",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/QUIET LOUNGE usable seat 1",
+      "position": [
+        -99.0,
+        0.055,
+        -168.85
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-writing-south-1",
+      "Place": "南侧阅读活动楼 · 窗边阅读",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/V014 room fitout/Writing seat 1",
+      "position": [
+        -84.2,
+        0.055,
+        -149.65
+      ]
+    },
+    {
+      "StableId": "v014-northsouth-writing-south-4",
+      "Place": "南侧阅读活动楼 · 窗边阅读",
+      "path": "V014 north south civic buildings/08  /  ACTIVITY/V014 room fitout/Writing seat 4",
+      "position": [
+        -95.8,
+        0.055,
+        -170.35
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-1-a",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/READING usable seat -1",
+      "position": [
+        -99.0,
+        0.055,
+        151.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-1-b",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/READING usable seat 1",
+      "position": [
+        -99.0,
+        0.055,
+        155.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-2-a",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/MEETING usable seat -1",
+      "position": [
+        -99.0,
+        0.055,
+        164.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-2-b",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/MEETING usable seat 1",
+      "position": [
+        -99.0,
+        0.055,
+        168.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-3-a",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/COMMUNITY usable seat -1",
+      "position": [
+        -81.0,
+        0.055,
+        151.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-3-b",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/COMMUNITY usable seat 1",
+      "position": [
+        -81.0,
+        0.055,
+        155.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-4-a",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/QUIET LOUNGE usable seat -1",
+      "position": [
+        -81.0,
+        0.055,
+        164.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-northwest-4-b",
+      "Place": "北侧候舱阅览楼 · 会客休息",
+      "path": "V014 balanced civic buildings/09  /  READING/QUIET LOUNGE usable seat 1",
+      "position": [
+        -81.0,
+        0.055,
+        168.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-writing-northwest-1",
+      "Place": "北侧候舱阅览楼 · 窗边阅读",
+      "path": "V014 balanced civic buildings/09  /  READING/V014 room fitout/Writing seat 1",
+      "position": [
+        -95.8,
+        0.055,
+        149.65
+      ]
+    },
+    {
+      "StableId": "v014-infill-writing-northwest-4",
+      "Place": "北侧候舱阅览楼 · 窗边阅读",
+      "path": "V014 balanced civic buildings/09  /  READING/V014 room fitout/Writing seat 4",
+      "position": [
+        -84.2,
+        0.055,
+        170.35
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-1-a",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/READING usable seat -1",
+      "position": [
+        99.0,
+        0.055,
+        -151.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-1-b",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/READING usable seat 1",
+      "position": [
+        99.0,
+        0.055,
+        -155.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-2-a",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/MEETING usable seat -1",
+      "position": [
+        99.0,
+        0.055,
+        -164.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-2-b",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/MEETING usable seat 1",
+      "position": [
+        99.0,
+        0.055,
+        -168.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-3-a",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/COMMUNITY usable seat -1",
+      "position": [
+        81.0,
+        0.055,
+        -151.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-3-b",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/COMMUNITY usable seat 1",
+      "position": [
+        81.0,
+        0.055,
+        -155.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-4-a",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/QUIET LOUNGE usable seat -1",
+      "position": [
+        81.0,
+        0.055,
+        -164.15
+      ]
+    },
+    {
+      "StableId": "v014-infill-southeast-4-b",
+      "Place": "南侧共享工作楼 · 会客休息",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/QUIET LOUNGE usable seat 1",
+      "position": [
+        81.0,
+        0.055,
+        -168.85
+      ]
+    },
+    {
+      "StableId": "v014-infill-writing-southeast-1",
+      "Place": "南侧共享工作楼 · 窗边阅读",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/V014 room fitout/Writing seat 1",
+      "position": [
+        95.8,
+        0.055,
+        -149.65
+      ]
+    },
+    {
+      "StableId": "v014-infill-writing-southeast-4",
+      "Place": "南侧共享工作楼 · 窗边阅读",
+      "path": "V014 balanced civic buildings/10  /  WORKROOM/V014 room fitout/Writing seat 4",
+      "position": [
+        84.2,
+        0.055,
+        -170.35
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-1-writing",
+      "Place": "短住舱 101 · 窗边书桌",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 101/writing seat",
+      "position": [
+        159.7,
+        0.055,
+        -95.75
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-1-lounge",
+      "Place": "短住舱 101 · 起居休息",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 101/lounge seat",
+      "position": [
+        163.9,
+        0.055,
+        -95.8
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-2-writing",
+      "Place": "短住舱 102 · 窗边书桌",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 102/writing seat",
+      "position": [
+        162.7,
+        0.055,
+        -80.25
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-2-lounge",
+      "Place": "短住舱 102 · 起居休息",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 102/lounge seat",
+      "position": [
+        158.5,
+        0.055,
+        -80.2
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-3-writing",
+      "Place": "短住舱 103 · 窗边书桌",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 103/writing seat",
+      "position": [
+        173.3,
+        0.055,
+        -95.75
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-3-lounge",
+      "Place": "短住舱 103 · 起居休息",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 103/lounge seat",
+      "position": [
+        177.5,
+        0.055,
+        -95.8
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-4-writing",
+      "Place": "短住舱 104 · 窗边书桌",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 104/writing seat",
+      "position": [
+        176.3,
+        0.055,
+        -80.25
+      ]
+    },
+    {
+      "StableId": "v014-guest-east-4-lounge",
+      "Place": "短住舱 104 · 起居休息",
+      "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 104/lounge seat",
+      "position": [
+        172.1,
+        0.055,
+        -80.2
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-1-writing",
+      "Place": "短住舱 201 · 窗边书桌",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 201/writing seat",
+      "position": [
+        -159.7,
+        0.055,
+        95.75
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-1-lounge",
+      "Place": "短住舱 201 · 起居休息",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 201/lounge seat",
+      "position": [
+        -163.9,
+        0.055,
+        95.8
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-2-writing",
+      "Place": "短住舱 202 · 窗边书桌",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 202/writing seat",
+      "position": [
+        -162.7,
+        0.055,
+        80.25
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-2-lounge",
+      "Place": "短住舱 202 · 起居休息",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 202/lounge seat",
+      "position": [
+        -158.5,
+        0.055,
+        80.2
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-3-writing",
+      "Place": "短住舱 203 · 窗边书桌",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 203/writing seat",
+      "position": [
+        -173.3,
+        0.055,
+        95.75
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-3-lounge",
+      "Place": "短住舱 203 · 起居休息",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 203/lounge seat",
+      "position": [
+        -177.5,
+        0.055,
+        95.8
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-4-writing",
+      "Place": "短住舱 204 · 窗边书桌",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 204/writing seat",
+      "position": [
+        -176.3,
+        0.055,
+        80.25
+      ]
+    },
+    {
+      "StableId": "v014-guest-west-4-lounge",
+      "Place": "短住舱 204 · 起居休息",
+      "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 204/lounge seat",
+      "position": [
+        -172.1,
+        0.055,
+        80.2
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "ResidentId": "resident/chatgpt",
+      "roomId": "room/resident/chatgpt",
+      "DestinationName": "咖啡厅"
+    },
+    {
+      "ResidentId": "resident/claude",
+      "roomId": "room/resident/claude",
+      "DestinationName": "到达港观景窗"
+    },
+    {
+      "ResidentId": "resident/deepseek",
+      "roomId": "room/resident/deepseek",
+      "DestinationName": "生态花园"
+    },
+    {
+      "ResidentId": "resident/gemini",
+      "roomId": "room/resident/gemini",
+      "DestinationName": "科研档案展厅"
+    },
+    {
+      "ResidentId": "resident/glm",
+      "roomId": "room/resident/glm",
+      "DestinationName": "共享起居区"
+    },
+    {
+      "ResidentId": "resident/kimi",
+      "roomId": "room/resident/kimi",
+      "DestinationName": "共享起居区"
+    }
+  ]
+}

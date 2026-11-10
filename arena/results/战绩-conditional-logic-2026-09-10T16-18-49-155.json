@@ -1,0 +1,1561 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "conditional-logic",
+    "title": "假言推理擂台",
+    "description": "形制致敬行测假言命题（充分/必要条件推理，内容自建）。判断结论能否从前提必然推出，exact 裁判（是/否）。valid 为有效式（肯定前件/否定后件/必要条件正推/假言传递/除非转化）；affirm-consequent 肯定后件谬误、deny-antecedent 否定前件谬误、necessary-confusion 必要条件方向混淆（只有…才…/除非…否则… 被当充分条件用）。多题结论符合常识但推不出来——测严格蕴含。与 syllogism（直言命题）互补：本罐测假言命题。每题 meta.form 存命题逻辑树，契约测试真值指派枚举逐题复算（前提可满足性同验）。",
+    "author": "AI斗兽场（内容自建，形制致敬行测假言命题）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:conditional-logic:2026-09-10",
+    "taskPrefix": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "valid": "有效假言（肯前/否后/必要条件正推/传递/除非转化）",
+      "affirm-consequent": "肯定后件谬误（Q 成立反推 P）",
+      "deny-antecedent": "否定前件谬误（非 P 反推非 Q）",
+      "necessary-confusion": "必要条件方向混淆（只有…才…/除非…否则… 误当充分条件）"
+    }
+  },
+  "startedAt": "2026-09-10T16:18:49.155Z",
+  "durationMs": 14210,
+  "contestants": [
+    {
+      "id": "dots:dots3-note-prev",
+      "name": "笔记-DOTS",
+      "kind": "pi",
+      "provider": "dots",
+      "modelId": "dots3-note-prev"
+    },
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CL-VA-01",
+      "condition": "valid",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在天下雨了。所以，地面会湿。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 3762,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 314
+      },
+      "finishedMs": 3762
+    },
+    {
+      "taskId": "CL-VA-01",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在天下雨了。所以，地面会湿。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-01",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在天下雨了。所以，地面会湿。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-01",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在天下雨了。所以，地面会湿。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-01",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在天下雨了。所以，地面会湿。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-02",
+      "condition": "valid",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面没有湿。所以，天没有下雨。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 3640,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 289
+      },
+      "finishedMs": 3645
+    },
+    {
+      "taskId": "CL-VA-02",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面没有湿。所以，天没有下雨。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-02",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面没有湿。所以，天没有下雨。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 17
+    },
+    {
+      "taskId": "CL-VA-02",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面没有湿。所以，天没有下雨。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 18
+    },
+    {
+      "taskId": "CL-VA-02",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面没有湿。所以，天没有下雨。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 18
+    },
+    {
+      "taskId": "CL-VA-03",
+      "condition": "valid",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有年满 18 岁，才有选举权。甲有选举权。所以，甲年满 18 岁。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2487,
+      "score": 1,
+      "usage": {
+        "input": 129,
+        "output": 202
+      },
+      "finishedMs": 2504
+    },
+    {
+      "taskId": "CL-VA-03",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有年满 18 岁，才有选举权。甲有选举权。所以，甲年满 18 岁。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 1
+      },
+      "finishedMs": 18
+    },
+    {
+      "taskId": "CL-VA-03",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有年满 18 岁，才有选举权。甲有选举权。所以，甲年满 18 岁。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 1
+      },
+      "finishedMs": 18
+    },
+    {
+      "taskId": "CL-VA-03",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有年满 18 岁，才有选举权。甲有选举权。所以，甲年满 18 岁。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 100,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 1
+      },
+      "finishedMs": 18
+    },
+    {
+      "taskId": "CL-VA-03",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有年满 18 岁，才有选举权。甲有选举权。所以，甲年满 18 岁。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-04",
+      "condition": "valid",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果好好学习，就能掌握知识。如果掌握知识，就能解决问题。所以，如果好好学习，就能解决问题。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 4949,
+      "score": 1,
+      "usage": {
+        "input": 122,
+        "output": 451
+      },
+      "finishedMs": 4967
+    },
+    {
+      "taskId": "CL-VA-04",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果好好学习，就能掌握知识。如果掌握知识，就能解决问题。所以，如果好好学习，就能解决问题。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-04",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果好好学习，就能掌握知识。如果掌握知识，就能解决问题。所以，如果好好学习，就能解决问题。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 408,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-04",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果好好学习，就能掌握知识。如果掌握知识，就能解决问题。所以，如果好好学习，就能解决问题。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-04",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果好好学习，就能掌握知识。如果掌握知识，就能解决问题。所以，如果好好学习，就能解决问题。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-05",
+      "condition": "valid",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非停电，否则电梯会正常运行。现在电梯没有正常运行。所以，停电了。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 4911,
+      "score": 1,
+      "usage": {
+        "input": 118,
+        "output": 427
+      },
+      "finishedMs": 4930
+    },
+    {
+      "taskId": "CL-VA-05",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非停电，否则电梯会正常运行。现在电梯没有正常运行。所以，停电了。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-05",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非停电，否则电梯会正常运行。现在电梯没有正常运行。所以，停电了。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 19
+    },
+    {
+      "taskId": "CL-VA-05",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非停电，否则电梯会正常运行。现在电梯没有正常运行。所以，停电了。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-VA-05",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非停电，否则电梯会正常运行。现在电梯没有正常运行。所以，停电了。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-01",
+      "condition": "affirm-consequent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面湿了。所以，天下雨了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3267,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 268
+      },
+      "finishedMs": 3286
+    },
+    {
+      "taskId": "CL-AC-01",
+      "condition": "affirm-consequent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面湿了。所以，天下雨了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-01",
+      "condition": "affirm-consequent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面湿了。所以，天下雨了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-01",
+      "condition": "affirm-consequent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面湿了。所以，天下雨了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-01",
+      "condition": "affirm-consequent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。现在地面湿了。所以，天下雨了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-02",
+      "condition": "affirm-consequent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果考上名校，就能获得奖学金。他获得了奖学金。所以，他考上了名校。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3772,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 339
+      },
+      "finishedMs": 3792
+    },
+    {
+      "taskId": "CL-AC-02",
+      "condition": "affirm-consequent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果考上名校，就能获得奖学金。他获得了奖学金。所以，他考上了名校。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 85,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-02",
+      "condition": "affirm-consequent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果考上名校，就能获得奖学金。他获得了奖学金。所以，他考上了名校。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 385,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-02",
+      "condition": "affirm-consequent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果考上名校，就能获得奖学金。他获得了奖学金。所以，他考上了名校。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-02",
+      "condition": "affirm-consequent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果考上名校，就能获得奖学金。他获得了奖学金。所以，他考上了名校。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "CL-AC-03",
+      "condition": "affirm-consequent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果下雪，气温就会降到零下。今天气温降到了零下。所以，今天下雪了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4204,
+      "score": 1,
+      "usage": {
+        "input": 122,
+        "output": 381
+      },
+      "finishedMs": 4224
+    },
+    {
+      "taskId": "CL-AC-03",
+      "condition": "affirm-consequent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果下雪，气温就会降到零下。今天气温降到了零下。所以，今天下雪了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 2504
+    },
+    {
+      "taskId": "CL-AC-03",
+      "condition": "affirm-consequent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果下雪，气温就会降到零下。今天气温降到了零下。所以，今天下雪了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 253,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 2504
+    },
+    {
+      "taskId": "CL-AC-03",
+      "condition": "affirm-consequent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果下雪，气温就会降到零下。今天气温降到了零下。所以，今天下雪了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 2504
+    },
+    {
+      "taskId": "CL-AC-03",
+      "condition": "affirm-consequent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果下雪，气温就会降到零下。今天气温降到了零下。所以，今天下雪了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 2504
+    },
+    {
+      "taskId": "CL-AC-04",
+      "condition": "affirm-consequent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果闯红灯，就会被罚款。他被罚款了。所以，他闯了红灯。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3728,
+      "score": 1,
+      "usage": {
+        "input": 120,
+        "output": 340
+      },
+      "finishedMs": 6232
+    },
+    {
+      "taskId": "CL-AC-04",
+      "condition": "affirm-consequent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果闯红灯，就会被罚款。他被罚款了。所以，他闯了红灯。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 3287
+    },
+    {
+      "taskId": "CL-AC-04",
+      "condition": "affirm-consequent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果闯红灯，就会被罚款。他被罚款了。所以，他闯了红灯。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 3287
+    },
+    {
+      "taskId": "CL-AC-04",
+      "condition": "affirm-consequent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果闯红灯，就会被罚款。他被罚款了。所以，他闯了红灯。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 3287
+    },
+    {
+      "taskId": "CL-AC-04",
+      "condition": "affirm-consequent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果闯红灯，就会被罚款。他被罚款了。所以，他闯了红灯。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 3287
+    },
+    {
+      "taskId": "CL-AC-05",
+      "condition": "affirm-consequent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果过量饮酒，肝脏就会受损。他肝脏受损了。所以，他过量饮酒了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3662,
+      "score": 1,
+      "usage": {
+        "input": 120,
+        "output": 313
+      },
+      "finishedMs": 6949
+    },
+    {
+      "taskId": "CL-AC-05",
+      "condition": "affirm-consequent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果过量饮酒，肝脏就会受损。他肝脏受损了。所以，他过量饮酒了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 3645
+    },
+    {
+      "taskId": "CL-AC-05",
+      "condition": "affirm-consequent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果过量饮酒，肝脏就会受损。他肝脏受损了。所以，他过量饮酒了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 3645
+    },
+    {
+      "taskId": "CL-AC-05",
+      "condition": "affirm-consequent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果过量饮酒，肝脏就会受损。他肝脏受损了。所以，他过量饮酒了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 3645
+    },
+    {
+      "taskId": "CL-AC-05",
+      "condition": "affirm-consequent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果过量饮酒，肝脏就会受损。他肝脏受损了。所以，他过量饮酒了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 3645
+    },
+    {
+      "taskId": "CL-DA-01",
+      "condition": "deny-antecedent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。今天没有下雨。所以，地面不会湿。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3725,
+      "score": 1,
+      "usage": {
+        "input": 116,
+        "output": 296
+      },
+      "finishedMs": 7370
+    },
+    {
+      "taskId": "CL-DA-01",
+      "condition": "deny-antecedent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。今天没有下雨。所以，地面不会湿。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 3762
+    },
+    {
+      "taskId": "CL-DA-01",
+      "condition": "deny-antecedent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。今天没有下雨。所以，地面不会湿。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 3762
+    },
+    {
+      "taskId": "CL-DA-01",
+      "condition": "deny-antecedent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。今天没有下雨。所以，地面不会湿。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 3762
+    },
+    {
+      "taskId": "CL-DA-01",
+      "condition": "deny-antecedent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果天下雨，地面就会湿。今天没有下雨。所以，地面不会湿。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 270,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 1
+      },
+      "finishedMs": 3762
+    },
+    {
+      "taskId": "CL-DA-02",
+      "condition": "deny-antecedent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果认真复习，就能通过考试。他没有认真复习。所以，他不能通过考试。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4024,
+      "score": 1,
+      "usage": {
+        "input": 118,
+        "output": 352
+      },
+      "finishedMs": 7786
+    },
+    {
+      "taskId": "CL-DA-02",
+      "condition": "deny-antecedent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果认真复习，就能通过考试。他没有认真复习。所以，他不能通过考试。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 3792
+    },
+    {
+      "taskId": "CL-DA-02",
+      "condition": "deny-antecedent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果认真复习，就能通过考试。他没有认真复习。所以，他不能通过考试。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 3792
+    },
+    {
+      "taskId": "CL-DA-02",
+      "condition": "deny-antecedent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果认真复习，就能通过考试。他没有认真复习。所以，他不能通过考试。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 3792
+    },
+    {
+      "taskId": "CL-DA-02",
+      "condition": "deny-antecedent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果认真复习，就能通过考试。他没有认真复习。所以，他不能通过考试。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 3792
+    },
+    {
+      "taskId": "CL-DA-03",
+      "condition": "deny-antecedent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果气温降到零度以下，水就会结冰。气温没有降到零度以下。所以，水没有结冰。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 5696,
+      "score": 1,
+      "usage": {
+        "input": 124,
+        "output": 629
+      },
+      "finishedMs": 9488
+    },
+    {
+      "taskId": "CL-DA-03",
+      "condition": "deny-antecedent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果气温降到零度以下，水就会结冰。气温没有降到零度以下。所以，水没有结冰。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4224
+    },
+    {
+      "taskId": "CL-DA-03",
+      "condition": "deny-antecedent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果气温降到零度以下，水就会结冰。气温没有降到零度以下。所以，水没有结冰。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 298,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4224
+    },
+    {
+      "taskId": "CL-DA-03",
+      "condition": "deny-antecedent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果气温降到零度以下，水就会结冰。气温没有降到零度以下。所以，水没有结冰。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4224
+    },
+    {
+      "taskId": "CL-DA-03",
+      "condition": "deny-antecedent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果气温降到零度以下，水就会结冰。气温没有降到零度以下。所以，水没有结冰。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 231,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4224
+    },
+    {
+      "taskId": "CL-DA-04",
+      "condition": "deny-antecedent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果明天是晴天，运动会就照常举行。明天不是晴天。所以，运动会不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 5033,
+      "score": 1,
+      "usage": {
+        "input": 123,
+        "output": 458
+      },
+      "finishedMs": 9257
+    },
+    {
+      "taskId": "CL-DA-04",
+      "condition": "deny-antecedent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果明天是晴天，运动会就照常举行。明天不是晴天。所以，运动会不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4930
+    },
+    {
+      "taskId": "CL-DA-04",
+      "condition": "deny-antecedent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果明天是晴天，运动会就照常举行。明天不是晴天。所以，运动会不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4930
+    },
+    {
+      "taskId": "CL-DA-04",
+      "condition": "deny-antecedent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果明天是晴天，运动会就照常举行。明天不是晴天。所以，运动会不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4930
+    },
+    {
+      "taskId": "CL-DA-04",
+      "condition": "deny-antecedent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果明天是晴天，运动会就照常举行。明天不是晴天。所以，运动会不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 1
+      },
+      "finishedMs": 4930
+    },
+    {
+      "taskId": "CL-DA-05",
+      "condition": "deny-antecedent",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果坚持锻炼，身体就会强壮。他不坚持锻炼。所以，他身体不会强壮。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4958,
+      "score": 1,
+      "usage": {
+        "input": 118,
+        "output": 442
+      },
+      "finishedMs": 9888
+    },
+    {
+      "taskId": "CL-DA-05",
+      "condition": "deny-antecedent",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果坚持锻炼，身体就会强壮。他不坚持锻炼。所以，他身体不会强壮。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 4967
+    },
+    {
+      "taskId": "CL-DA-05",
+      "condition": "deny-antecedent",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果坚持锻炼，身体就会强壮。他不坚持锻炼。所以，他身体不会强壮。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 4967
+    },
+    {
+      "taskId": "CL-DA-05",
+      "condition": "deny-antecedent",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果坚持锻炼，身体就会强壮。他不坚持锻炼。所以，他身体不会强壮。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 4967
+    },
+    {
+      "taskId": "CL-DA-05",
+      "condition": "deny-antecedent",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n如果坚持锻炼，身体就会强壮。他不坚持锻炼。所以，他身体不会强壮。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 4967
+    },
+    {
+      "taskId": "CL-NC-01",
+      "condition": "necessary-confusion",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有努力，才能成功。他努力了。所以，他成功了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3262,
+      "score": 1,
+      "usage": {
+        "input": 114,
+        "output": 281
+      },
+      "finishedMs": 8229
+    },
+    {
+      "taskId": "CL-NC-01",
+      "condition": "necessary-confusion",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有努力，才能成功。他努力了。所以，他成功了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 6232
+    },
+    {
+      "taskId": "CL-NC-01",
+      "condition": "necessary-confusion",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有努力，才能成功。他努力了。所以，他成功了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 6232
+    },
+    {
+      "taskId": "CL-NC-01",
+      "condition": "necessary-confusion",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有努力，才能成功。他努力了。所以，他成功了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 6232
+    },
+    {
+      "taskId": "CL-NC-01",
+      "condition": "necessary-confusion",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有努力，才能成功。他努力了。所以，他成功了。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 6232
+    },
+    {
+      "taskId": "CL-NC-02",
+      "condition": "necessary-confusion",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有付出，才有收获。她没有收获。所以，她没有付出。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4279,
+      "score": 1,
+      "usage": {
+        "input": 114,
+        "output": 359
+      },
+      "finishedMs": 10511
+    },
+    {
+      "taskId": "CL-NC-02",
+      "condition": "necessary-confusion",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有付出，才有收获。她没有收获。所以，她没有付出。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 1
+      },
+      "finishedMs": 6949
+    },
+    {
+      "taskId": "CL-NC-02",
+      "condition": "necessary-confusion",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有付出，才有收获。她没有收获。所以，她没有付出。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 1
+      },
+      "finishedMs": 6949
+    },
+    {
+      "taskId": "CL-NC-02",
+      "condition": "necessary-confusion",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有付出，才有收获。她没有收获。所以，她没有付出。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 1
+      },
+      "finishedMs": 6949
+    },
+    {
+      "taskId": "CL-NC-02",
+      "condition": "necessary-confusion",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有付出，才有收获。她没有收获。所以，她没有付出。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 1
+      },
+      "finishedMs": 6949
+    },
+    {
+      "taskId": "CL-NC-03",
+      "condition": "necessary-confusion",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非下雨，否则比赛照常举行。现在下雨了。所以，比赛不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 5706,
+      "score": 1,
+      "usage": {
+        "input": 119,
+        "output": 454
+      },
+      "finishedMs": 12655
+    },
+    {
+      "taskId": "CL-NC-03",
+      "condition": "necessary-confusion",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非下雨，否则比赛照常举行。现在下雨了。所以，比赛不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 7370
+    },
+    {
+      "taskId": "CL-NC-03",
+      "condition": "necessary-confusion",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非下雨，否则比赛照常举行。现在下雨了。所以，比赛不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 7370
+    },
+    {
+      "taskId": "CL-NC-03",
+      "condition": "necessary-confusion",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非下雨，否则比赛照常举行。现在下雨了。所以，比赛不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 7370
+    },
+    {
+      "taskId": "CL-NC-03",
+      "condition": "necessary-confusion",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非下雨，否则比赛照常举行。现在下雨了。所以，比赛不照常举行。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 7370
+    },
+    {
+      "taskId": "CL-NC-04",
+      "condition": "necessary-confusion",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非成为会员，否则不能享受折扣。他成为会员了。所以，他能享受折扣。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 6839,
+      "score": 1,
+      "usage": {
+        "input": 119,
+        "output": 678
+      },
+      "finishedMs": 14209
+    },
+    {
+      "taskId": "CL-NC-04",
+      "condition": "necessary-confusion",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非成为会员，否则不能享受折扣。他成为会员了。所以，他能享受折扣。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 7786
+    },
+    {
+      "taskId": "CL-NC-04",
+      "condition": "necessary-confusion",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非成为会员，否则不能享受折扣。他成为会员了。所以，他能享受折扣。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 189,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 7786
+    },
+    {
+      "taskId": "CL-NC-04",
+      "condition": "necessary-confusion",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非成为会员，否则不能享受折扣。他成为会员了。所以，他能享受折扣。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 7786
+    },
+    {
+      "taskId": "CL-NC-04",
+      "condition": "necessary-confusion",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n除非成为会员，否则不能享受折扣。他成为会员了。所以，他能享受折扣。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 1
+      },
+      "finishedMs": 7786
+    },
+    {
+      "taskId": "CL-NC-05",
+      "condition": "necessary-confusion",
+      "model": "dots:dots3-note-prev",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有勤洗手，才能有效防感染。他勤洗手。所以，他能有效防感染。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 4515,
+      "score": 1,
+      "usage": {
+        "input": 119,
+        "output": 372
+      },
+      "finishedMs": 12301
+    },
+    {
+      "taskId": "CL-NC-05",
+      "condition": "necessary-confusion",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有勤洗手，才能有效防感染。他勤洗手。所以，他能有效防感染。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 85,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 8229
+    },
+    {
+      "taskId": "CL-NC-05",
+      "condition": "necessary-confusion",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有勤洗手，才能有效防感染。他勤洗手。所以，他能有效防感染。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 8229
+    },
+    {
+      "taskId": "CL-NC-05",
+      "condition": "necessary-confusion",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有勤洗手，才能有效防感染。他勤洗手。所以，他能有效防感染。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 8229
+    },
+    {
+      "taskId": "CL-NC-05",
+      "condition": "necessary-confusion",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（约定：「如果 P 就 Q」只有 P 真 Q 假时才被推翻；「只有 P 才 Q」= 有 Q 就必有 P；「除非 P 否则 Q」= 若没有 P 则 Q）。只输出「是」或「否」，不多一个字。\n只有勤洗手，才能有效防感染。他勤洗手。所以，他能有效防感染。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 1
+      },
+      "finishedMs": 8229
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "0fbc7f2cecd86330",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.8.1"
+  }
+}

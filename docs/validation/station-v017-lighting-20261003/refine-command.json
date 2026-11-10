@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"Saved V017 Edit required\");\nvar changes=new System.Collections.Generic.List<object>();\nforeach(var l in UnityEngine.Object.FindObjectsByType<UnityEngine.Light>(UnityEngine.FindObjectsSortMode.None).Where(l=>l.enabled&&l.lightmapBakeType==UnityEngine.LightmapBakeType.Realtime)){\n if(l.type==UnityEngine.LightType.Directional||l.name.StartsWith(\"Soft canopy daylight\")||l.name==\"Cold white grow illumination\"){\n  changes.Add(new{name=l.name,before=l.colorTemperature,after=l.type==UnityEngine.LightType.Directional?5600:5300});\n  l.colorTemperature=l.type==UnityEngine.LightType.Directional?5600:5300;UnityEditor.EditorUtility.SetDirty(l);\n }\n}\nUnityEngine.RenderSettings.ambientSkyColor=new UnityEngine.Color(.76f,.765f,.75f);\nUnityEngine.RenderSettings.ambientEquatorColor=new UnityEngine.Color(.635f,.64f,.63f);\nUnityEngine.RenderSettings.ambientGroundColor=new UnityEngine.Color(.43f,.435f,.43f);\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-lighting-20261003/lighting-v002.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{changes,reason=\"v001 made large white paving too yellow; neutral base refined by actual image review, local 3500K stop lights retained\",exposureAndVolumeUnchanged=true},Newtonsoft.Json.Formatting.Indented));\nreturn new{changes=changes.Count,scene.isDirty};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "changes": 10,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

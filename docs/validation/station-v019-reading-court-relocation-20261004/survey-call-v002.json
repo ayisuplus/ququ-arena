@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\survey-reading-relocation.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "children": 14,
+        "oldGroups": [
+          {
+            "name": "V015 package - 06 study",
+            "min": [
+              -88.1949539,
+              -0.00000190734863,
+              93.71605
+            ],
+            "max": [
+              -45.8050461,
+              6.972427,
+              138.378754
+            ]
+          },
+          {
+            "name": "V015 package - 08 activity",
+            "min": [
+              -28.2435741,
+              -0.00000190734863,
+              114.15432
+            ],
+            "max": [
+              4.88583755,
+              6.972427,
+              152.825867
+            ]
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

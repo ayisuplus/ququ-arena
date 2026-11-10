@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "E:/projects/AI斗兽场/production/blender/verify_claude_skin.cs",
+      "entry": "VerifyClaudeSkin.Main"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 412,
+      "executeMs": 51,
+      "assemblyName": "PipelineRunScript_verify_claude_skin_cb9ca0a6d91b4a58af6d65df60088667",
+      "success": true,
+      "result": {
+        "trianglePositionsIdentical": true,
+        "normalsIdentical": true,
+        "uvIdentical": true,
+        "legWeightsIdentical": true,
+        "changedBindBones": [
+          15,
+          19
+        ],
+        "triangles": 19464,
+        "vertices": 57066
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\36322\\AppData\\Local\\Temp\\ququ-arena3d-build-22dd3ca5"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

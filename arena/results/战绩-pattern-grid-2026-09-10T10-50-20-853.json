@@ -1,0 +1,786 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "pattern-grid",
+    "title": "图形规律擂台",
+    "description": "文本符号矩阵规律推理（生成器自建）：○● 四格行按三规则之一递变（左旋/右旋/黑白反转），给前两行判断规则并写第三行。周期 2 起始行会被三规则同时满足——已剔除（规则不可辨的题不出）；规则可辨识性逐题自检。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:pattern-grid:2026-09-10",
+    "taskPrefix": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "rotate-left": "左旋一格",
+      "rotate-right": "右旋一格",
+      "invert": "黑白反转"
+    }
+  },
+  "startedAt": "2026-09-10T10:50:20.853Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "PG-rotate-left-01",
+      "condition": "rotate-left",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○●\n第 2 行：○○●●",
+      "answer": "○●●○",
+      "target": "○●●○",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-01",
+      "condition": "rotate-left",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○●\n第 2 行：○○●●",
+      "answer": "○●●○",
+      "target": "○●●○",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-01",
+      "condition": "rotate-left",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○●\n第 2 行：○○●●",
+      "answer": "○●●○",
+      "target": "○●●○",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-01",
+      "condition": "rotate-left",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○●\n第 2 行：○○●●",
+      "answer": "○●●○",
+      "target": "○●●○",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-01",
+      "condition": "rotate-right",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●○\n第 2 行：○○●●",
+      "answer": "●○○●",
+      "target": "●○○●",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-01",
+      "condition": "rotate-right",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●○\n第 2 行：○○●●",
+      "answer": "●○○●",
+      "target": "●○○●",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-01",
+      "condition": "rotate-right",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●○\n第 2 行：○○●●",
+      "answer": "●○○●",
+      "target": "●○○●",
+      "latencyMs": 100,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-01",
+      "condition": "rotate-right",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●○\n第 2 行：○○●●",
+      "answer": "●○○●",
+      "target": "●○○●",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-01",
+      "condition": "invert",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○●●\n第 2 行：○●○○",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-01",
+      "condition": "invert",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○●●\n第 2 行：○●○○",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-01",
+      "condition": "invert",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○●●\n第 2 行：○●○○",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-01",
+      "condition": "invert",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○●●\n第 2 行：○●○○",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-02",
+      "condition": "rotate-left",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●●\n第 2 行：○●●○",
+      "answer": "●●○○",
+      "target": "●●○○",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-02",
+      "condition": "rotate-left",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●●\n第 2 行：○●●○",
+      "answer": "●○○",
+      "target": "●●○○",
+      "latencyMs": 326,
+      "score": 0,
+      "note": "期望「●●○○」，实答「●○○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-02",
+      "condition": "rotate-left",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●●\n第 2 行：○●●○",
+      "answer": "●●○",
+      "target": "●●○○",
+      "latencyMs": 182,
+      "score": 0,
+      "note": "期望「●●○○」，实答「●●○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-02",
+      "condition": "rotate-left",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●●\n第 2 行：○●●○",
+      "answer": "●○○",
+      "target": "●●○○",
+      "latencyMs": 403,
+      "score": 0,
+      "note": "期望「●●○○」，实答「●○○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-02",
+      "condition": "rotate-right",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●○○\n第 2 行：○○●○",
+      "answer": "○○○●",
+      "target": "○○○●",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-02",
+      "condition": "rotate-right",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●○○\n第 2 行：○○●○",
+      "answer": "○○○●",
+      "target": "○○○●",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-02",
+      "condition": "rotate-right",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●○○\n第 2 行：○○●○",
+      "answer": "○○",
+      "target": "○○○●",
+      "latencyMs": 227,
+      "score": 0,
+      "note": "期望「○○○●」，实答「○○」",
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-02",
+      "condition": "rotate-right",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●○○\n第 2 行：○○●○",
+      "answer": "○○○●",
+      "target": "○○○●",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-02",
+      "condition": "invert",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○○\n第 2 行：○○●●",
+      "answer": "●人○○",
+      "target": "●●○○",
+      "latencyMs": 188,
+      "score": 0,
+      "note": "期望「●●○○」，实答「●人○○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-02",
+      "condition": "invert",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○○\n第 2 行：○○●●",
+      "answer": "●○○",
+      "target": "●●○○",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "期望「●●○○」，实答「●○○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-02",
+      "condition": "invert",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○○\n第 2 行：○○●●",
+      "answer": "●●○○",
+      "target": "●●○○",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-02",
+      "condition": "invert",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○○\n第 2 行：○○●●",
+      "answer": "●●○○",
+      "target": "●●○○",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-03",
+      "condition": "rotate-left",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○●\n第 2 行：●○●●",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-03",
+      "condition": "rotate-left",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○●\n第 2 行：●○●●",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-03",
+      "condition": "rotate-left",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○●\n第 2 行：●○●●",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-left-03",
+      "condition": "rotate-left",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●○●\n第 2 行：●○●●",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-03",
+      "condition": "rotate-right",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○○\n第 2 行：○●○○",
+      "answer": "○○●○",
+      "target": "○○●○",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-03",
+      "condition": "rotate-right",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○○\n第 2 行：○●○○",
+      "answer": "○○●○",
+      "target": "○○●○",
+      "latencyMs": 382,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-03",
+      "condition": "rotate-right",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○○\n第 2 行：○●○○",
+      "answer": "○○●",
+      "target": "○○●○",
+      "latencyMs": 199,
+      "score": 0,
+      "note": "期望「○○●○」，实答「○○●」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-rotate-right-03",
+      "condition": "rotate-right",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●○○○\n第 2 行：○●○○",
+      "answer": "○○●○",
+      "target": "○○●○",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PG-invert-03",
+      "condition": "invert",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●●\n第 2 行：●○○○",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-03",
+      "condition": "invert",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●●\n第 2 行：●○○○",
+      "answer": "○●●",
+      "target": "○●●●",
+      "latencyMs": 413,
+      "score": 0,
+      "note": "期望「○●●●」，实答「○●●」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-03",
+      "condition": "invert",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●●\n第 2 行：●○○○",
+      "answer": "○人●●",
+      "target": "○●●●",
+      "latencyMs": 453,
+      "score": 0,
+      "note": "期望「○●●●」，实答「○人●●」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-03",
+      "condition": "invert",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○●●●\n第 2 行：●○○○",
+      "answer": "○●●●",
+      "target": "○●●●",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-left-04",
+      "condition": "rotate-left",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○○●\n第 2 行：○○●○",
+      "answer": "○●○○",
+      "target": "○●○○",
+      "latencyMs": 335,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-left-04",
+      "condition": "rotate-left",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○○●\n第 2 行：○○●○",
+      "answer": "○●○○",
+      "target": "○●○○",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-left-04",
+      "condition": "rotate-left",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○○●\n第 2 行：○○●○",
+      "answer": "○●○○",
+      "target": "○●○○",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-left-04",
+      "condition": "rotate-left",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○○●\n第 2 行：○○●○",
+      "answer": "○●○○",
+      "target": "○●○○",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-right-04",
+      "condition": "rotate-right",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●●○\n第 2 行：○●●●",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-right-04",
+      "condition": "rotate-right",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●●○\n第 2 行：○●●●",
+      "answer": "●○",
+      "target": "●○●●",
+      "latencyMs": 126,
+      "score": 0,
+      "note": "期望「●○●●」，实答「●○」",
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-right-04",
+      "condition": "rotate-right",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●●○\n第 2 行：○●●●",
+      "answer": "●●●",
+      "target": "●○●●",
+      "latencyMs": 337,
+      "score": 0,
+      "note": "期望「●○●●」，实答「●●●」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-rotate-right-04",
+      "condition": "rotate-right",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：●●●○\n第 2 行：○●●●",
+      "answer": "●○●●",
+      "target": "●○●●",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-04",
+      "condition": "invert",
+      "model": "mock:xueba-o9",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●○\n第 2 行：●●○●",
+      "answer": "○○●○",
+      "target": "○○●○",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-04",
+      "condition": "invert",
+      "model": "mock:huatou-72b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●○\n第 2 行：●●○●",
+      "answer": "○○●○",
+      "target": "○○●○",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-04",
+      "condition": "invert",
+      "model": "mock:jianglv-7b",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●○\n第 2 行：●●○●",
+      "answer": "○●○",
+      "target": "○○●○",
+      "latencyMs": 398,
+      "score": 0,
+      "note": "期望「○○●○」，实答「○●○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PG-invert-04",
+      "condition": "invert",
+      "model": "mock:laoshi-k2",
+      "prompt": "三行图形按同一规则递变，规则是三者之一：每行整体左旋一格 / 每行整体右旋一格 / 黑白反转（○↔●）。根据前两行判断规则并写出第三行。只输出第三行的四个符号本身（形如 ○●○●），不多一个字。\n第 1 行：○○●○\n第 2 行：●●○●",
+      "answer": "○我●○",
+      "target": "○○●○",
+      "latencyMs": 282,
+      "score": 0,
+      "note": "期望「○○●○」，实答「○我●○」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ffafe68e86a95400",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.23.0"
+  }
+}

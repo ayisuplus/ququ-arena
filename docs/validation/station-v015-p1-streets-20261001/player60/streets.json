@@ -1,0 +1,656 @@
+{
+    "stage": "streets",
+    "mode": "Standalone Player, real frame movement",
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationRingStreetsV015.unity",
+    "error": "",
+    "passed": true,
+    "frames": 4769,
+    "targetFrameRate": 60,
+    "checks": [
+        {
+            "name": "real world save initialized",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street candidate has sixteen physical building envelopes",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street start 0 position stable",
+            "passed": true,
+            "error": 0.0010127814020961524
+        },
+        {
+            "name": "street start 0 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street exit 0 reaches moving destination",
+            "passed": true,
+            "error": 0.0984959751367569
+        },
+        {
+            "name": "inner street exit 0 no drop or step",
+            "passed": true,
+            "error": 0.000001430511474609375
+        },
+        {
+            "name": "inner street exit 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner seam to fixed band 0 reaches moving destination",
+            "passed": true,
+            "error": 0.09910152852535248
+        },
+        {
+            "name": "inner seam to fixed band 0 no drop or step",
+            "passed": true,
+            "error": 0.0000023245811462402345
+        },
+        {
+            "name": "inner seam to fixed band 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner exit on stationary band 0",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street mouths are genuinely offset 0",
+            "passed": true,
+            "error": 24.598634719848634
+        },
+        {
+            "name": "fixed band arc outward 0 reaches moving destination",
+            "passed": true,
+            "error": 0.08213605731725693
+        },
+        {
+            "name": "fixed band arc outward 0 no drop or step",
+            "passed": true,
+            "error": 0.0009840726852416993
+        },
+        {
+            "name": "fixed band arc outward 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc outward 0 stays on fixed band",
+            "passed": true,
+            "error": 0.16178131103515626
+        },
+        {
+            "name": "fixed band pause 0 position stable",
+            "passed": true,
+            "error": 5.960464477539063e-8
+        },
+        {
+            "name": "fixed band pause 0 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam to edge sidewalk 0 reaches moving destination",
+            "passed": true,
+            "error": 0.0025719045661389829
+        },
+        {
+            "name": "outer seam to edge sidewalk 0 no drop or step",
+            "passed": true,
+            "error": 2.384185791015625e-7
+        },
+        {
+            "name": "outer seam to edge sidewalk 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer moving street destination 0 reaches moving destination",
+            "passed": true,
+            "error": 0.09883920848369599
+        },
+        {
+            "name": "outer moving street destination 0 no drop or step",
+            "passed": true,
+            "error": 0.000055849552154541016
+        },
+        {
+            "name": "outer moving street destination 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "destination belongs to outer rotating ring 0",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street carry 0 position stable",
+            "passed": true,
+            "error": 0.0011062358971685172
+        },
+        {
+            "name": "outer street carry 0 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street return 0 reaches moving destination",
+            "passed": true,
+            "error": 0.09358491003513336
+        },
+        {
+            "name": "outer street return 0 no drop or step",
+            "passed": true,
+            "error": 0.00000852346420288086
+        },
+        {
+            "name": "outer street return 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam return 0 reaches moving destination",
+            "passed": true,
+            "error": 0.09067004173994065
+        },
+        {
+            "name": "outer seam return 0 no drop or step",
+            "passed": true,
+            "error": 2.384185791015625e-7
+        },
+        {
+            "name": "outer seam return 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 0 reaches moving destination",
+            "passed": true,
+            "error": 0.0796571746468544
+        },
+        {
+            "name": "fixed band arc home 0 no drop or step",
+            "passed": true,
+            "error": 0.0008130073547363281
+        },
+        {
+            "name": "fixed band arc home 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 0 stays on fixed band",
+            "passed": true,
+            "error": 0.15997314453125
+        },
+        {
+            "name": "inner seam return 0 reaches moving destination",
+            "passed": true,
+            "error": 0.091681107878685
+        },
+        {
+            "name": "inner seam return 0 no drop or step",
+            "passed": true,
+            "error": 0.000007331371307373047
+        },
+        {
+            "name": "inner seam return 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street home 0 reaches moving destination",
+            "passed": true,
+            "error": 0.08686848729848862
+        },
+        {
+            "name": "inner street home 0 no drop or step",
+            "passed": true,
+            "error": 0.000002682209014892578
+        },
+        {
+            "name": "inner street home 0 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "return belongs to original inner ring 0",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street start 47 position stable",
+            "passed": true,
+            "error": 0.0010178814409300686
+        },
+        {
+            "name": "street start 47 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street exit 47 reaches moving destination",
+            "passed": true,
+            "error": 0.09746773540973664
+        },
+        {
+            "name": "inner street exit 47 no drop or step",
+            "passed": true,
+            "error": 0.0000019073486328125
+        },
+        {
+            "name": "inner street exit 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner seam to fixed band 47 reaches moving destination",
+            "passed": true,
+            "error": 0.09207495301961899
+        },
+        {
+            "name": "inner seam to fixed band 47 no drop or step",
+            "passed": true,
+            "error": 0.000002205371856689453
+        },
+        {
+            "name": "inner seam to fixed band 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner exit on stationary band 47",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street mouths are genuinely offset 47",
+            "passed": true,
+            "error": 20.597291946411134
+        },
+        {
+            "name": "fixed band arc outward 47 reaches moving destination",
+            "passed": true,
+            "error": 0.08403030037879944
+        },
+        {
+            "name": "fixed band arc outward 47 no drop or step",
+            "passed": true,
+            "error": 0.0009947419166564942
+        },
+        {
+            "name": "fixed band arc outward 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc outward 47 stays on fixed band",
+            "passed": true,
+            "error": 0.16104888916015626
+        },
+        {
+            "name": "fixed band pause 47 position stable",
+            "passed": true,
+            "error": 5.960464477539063e-8
+        },
+        {
+            "name": "fixed band pause 47 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam to edge sidewalk 47 reaches moving destination",
+            "passed": true,
+            "error": 0.004593484569340944
+        },
+        {
+            "name": "outer seam to edge sidewalk 47 no drop or step",
+            "passed": true,
+            "error": 1.7881393432617188e-7
+        },
+        {
+            "name": "outer seam to edge sidewalk 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer moving street destination 47 reaches moving destination",
+            "passed": true,
+            "error": 0.0006135973380878568
+        },
+        {
+            "name": "outer moving street destination 47 no drop or step",
+            "passed": true,
+            "error": 0.00015556812286376953
+        },
+        {
+            "name": "outer moving street destination 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "destination belongs to outer rotating ring 47",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street carry 47 position stable",
+            "passed": true,
+            "error": 0.0011517922393977643
+        },
+        {
+            "name": "outer street carry 47 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street return 47 reaches moving destination",
+            "passed": true,
+            "error": 0.09268082678318024
+        },
+        {
+            "name": "outer street return 47 no drop or step",
+            "passed": true,
+            "error": 2.384185791015625e-7
+        },
+        {
+            "name": "outer street return 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam return 47 reaches moving destination",
+            "passed": true,
+            "error": 0.09295777231454849
+        },
+        {
+            "name": "outer seam return 47 no drop or step",
+            "passed": true,
+            "error": 1.7881393432617188e-7
+        },
+        {
+            "name": "outer seam return 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 47 reaches moving destination",
+            "passed": true,
+            "error": 0.013660603202879429
+        },
+        {
+            "name": "fixed band arc home 47 no drop or step",
+            "passed": true,
+            "error": 2.384185791015625e-7
+        },
+        {
+            "name": "fixed band arc home 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 47 stays on fixed band",
+            "passed": true,
+            "error": 0.15631103515625
+        },
+        {
+            "name": "inner seam return 47 reaches moving destination",
+            "passed": true,
+            "error": 0.09512002766132355
+        },
+        {
+            "name": "inner seam return 47 no drop or step",
+            "passed": true,
+            "error": 0.0009403824806213379
+        },
+        {
+            "name": "inner seam return 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street home 47 reaches moving destination",
+            "passed": true,
+            "error": 0.0915093943476677
+        },
+        {
+            "name": "inner street home 47 no drop or step",
+            "passed": true,
+            "error": 0.0000016689300537109376
+        },
+        {
+            "name": "inner street home 47 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "return belongs to original inner ring 47",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street start 173 position stable",
+            "passed": true,
+            "error": 0.001668015611357987
+        },
+        {
+            "name": "street start 173 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street exit 173 reaches moving destination",
+            "passed": true,
+            "error": 0.09691126644611359
+        },
+        {
+            "name": "inner street exit 173 no drop or step",
+            "passed": true,
+            "error": 0.0000018477439880371094
+        },
+        {
+            "name": "inner street exit 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner seam to fixed band 173 reaches moving destination",
+            "passed": true,
+            "error": 0.09527125209569931
+        },
+        {
+            "name": "inner seam to fixed band 173 no drop or step",
+            "passed": true,
+            "error": 0.0000023245811462402345
+        },
+        {
+            "name": "inner seam to fixed band 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner exit on stationary band 173",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street mouths are genuinely offset 173",
+            "passed": true,
+            "error": 38.59720993041992
+        },
+        {
+            "name": "fixed band arc outward 173 reaches moving destination",
+            "passed": true,
+            "error": 0.0032073529437184335
+        },
+        {
+            "name": "fixed band arc outward 173 no drop or step",
+            "passed": true,
+            "error": 0.000763237476348877
+        },
+        {
+            "name": "fixed band arc outward 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc outward 173 stays on fixed band",
+            "passed": true,
+            "error": 0.16213226318359376
+        },
+        {
+            "name": "fixed band pause 173 position stable",
+            "passed": true,
+            "error": 5.960464477539063e-8
+        },
+        {
+            "name": "fixed band pause 173 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam to edge sidewalk 173 reaches moving destination",
+            "passed": true,
+            "error": 0.09640812873840332
+        },
+        {
+            "name": "outer seam to edge sidewalk 173 no drop or step",
+            "passed": true,
+            "error": 1.7881393432617188e-7
+        },
+        {
+            "name": "outer seam to edge sidewalk 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer moving street destination 173 reaches moving destination",
+            "passed": true,
+            "error": 0.08515164256095886
+        },
+        {
+            "name": "outer moving street destination 173 no drop or step",
+            "passed": true,
+            "error": 0.0002525448799133301
+        },
+        {
+            "name": "outer moving street destination 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "destination belongs to outer rotating ring 173",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street carry 173 position stable",
+            "passed": true,
+            "error": 0.002812860067933798
+        },
+        {
+            "name": "outer street carry 173 camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer street return 173 reaches moving destination",
+            "passed": true,
+            "error": 0.016193196177482606
+        },
+        {
+            "name": "outer street return 173 no drop or step",
+            "passed": true,
+            "error": 0.0009459257125854492
+        },
+        {
+            "name": "outer street return 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer seam return 173 reaches moving destination",
+            "passed": true,
+            "error": 0.015199259854853154
+        },
+        {
+            "name": "outer seam return 173 no drop or step",
+            "passed": true,
+            "error": 1.7881393432617188e-7
+        },
+        {
+            "name": "outer seam return 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 173 reaches moving destination",
+            "passed": true,
+            "error": 0.07823814451694489
+        },
+        {
+            "name": "fixed band arc home 173 no drop or step",
+            "passed": true,
+            "error": 0.0007668137550354004
+        },
+        {
+            "name": "fixed band arc home 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "fixed band arc home 173 stays on fixed band",
+            "passed": true,
+            "error": 0.16210174560546876
+        },
+        {
+            "name": "inner seam return 173 reaches moving destination",
+            "passed": true,
+            "error": 0.09219292551279068
+        },
+        {
+            "name": "inner seam return 173 no drop or step",
+            "passed": true,
+            "error": 0.0004469752311706543
+        },
+        {
+            "name": "inner seam return 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "inner street home 173 reaches moving destination",
+            "passed": true,
+            "error": 0.08642454445362091
+        },
+        {
+            "name": "inner street home 173 no drop or step",
+            "passed": true,
+            "error": 0.0000025033950805664064
+        },
+        {
+            "name": "inner street home 173 no wall penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "return belongs to original inner ring 173",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "street destination ring-local save written",
+            "passed": true,
+            "error": 0.0
+        }
+    ]
+}

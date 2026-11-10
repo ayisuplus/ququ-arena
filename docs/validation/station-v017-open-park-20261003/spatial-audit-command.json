@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nvar frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;var root=frame.Find(\"V017 continuous ecological park\");\nvar failures=new System.Collections.Generic.List<object>();int checks=0,vertices=0;\nvoid Check(string name,bool ok,object detail=null){checks++;if(!ok)failures.Add(new{name,detail});}\nfloat Width(float z)=>19+UnityEngine.Mathf.Sqrt(UnityEngine.Mathf.Max(0,25-UnityEngine.Mathf.Pow(UnityEngine.Mathf.Max(UnityEngine.Mathf.Abs(z)-17,0),2)));\nCheck(\"park belongs to R3\",root.IsChildOf(frame)&&frame.GetComponentInParent<QuQu.StationRotatingRing>().RingId==\"v015-r3\");\nforeach(var mf in root.GetComponentsInChildren<UnityEngine.MeshFilter>()){\n var points=mf.sharedMesh.vertices.Select(p=>frame.InverseTransformPoint(mf.transform.TransformPoint(p))).ToArray();vertices+=points.Length;var outside=points.Where(p=>UnityEngine.Mathf.Abs(p.z)>21.8f||UnityEngine.Mathf.Abs(p.x)>Width(p.z)-.2f).ToArray();Check(\"bounded mesh \"+mf.name,outside.Length==0,new{outside=outside.Length});Check(\"valid materials \"+mf.name,mf.GetComponent<UnityEngine.MeshRenderer>().sharedMaterials.All(m=>m));\n}\nforeach(var lod in root.GetComponentsInChildren<UnityEngine.LODGroup>()){\n var ls=lod.GetLODs();Check(\"usable LOD \"+lod.name,ls.Length>=2&&ls.All(l=>l.renderers.Length>0&&l.renderers.All(r=>r)));var counts=ls.Select(l=>l.renderers.Sum(r=>r.GetComponent<UnityEngine.MeshFilter>().sharedMesh.triangles.Length/3)).ToArray();Check(\"descending LOD triangles \"+lod.name,Enumerable.Range(1,counts.Length-1).All(i=>counts[i]<counts[i-1]),counts);\n}\nUnityEngine.Physics.SyncTransforms();var pointsRoute=new[]{new UnityEngine.Vector3(0,0,20),new UnityEngine.Vector3(0,0,12.3f),new UnityEngine.Vector3(14.5f,0,12.3f),new UnityEngine.Vector3(14.5f,0,-12.3f),new UnityEngine.Vector3(0,0,-12.3f),new UnityEngine.Vector3(-14.5f,0,-12.3f),new UnityEngine.Vector3(-14.5f,0,12.3f),new UnityEngine.Vector3(0,0,12.3f),new UnityEngine.Vector3(0,0,20)};\nint samples=0;for(int i=1;i<pointsRoute.Length;i++){int count=UnityEngine.Mathf.CeilToInt(UnityEngine.Vector3.Distance(pointsRoute[i-1],pointsRoute[i])/.3f);for(int j=0;j<=count;j++){var local=UnityEngine.Vector3.Lerp(pointsRoute[i-1],pointsRoute[i],(float)j/count);var p=frame.TransformPoint(local);var hits=UnityEngine.Physics.OverlapCapsule(p+UnityEngine.Vector3.up*.5f,p+UnityEngine.Vector3.up*1.5f,.35f,~0,UnityEngine.QueryTriggerInteraction.Ignore);Check(\"whole capsule route \"+samples,hits.Length==0,new{point=local.ToString(\"F3\"),objects=hits.Select(c=>c.name).ToArray()});samples++;}}\nCheck(\"four original garden doors\",frame.GetComponentsInChildren<QuQu.StationConservatoryDoor>().Length==4);Check(\"two original care vestibules\",frame.GetComponentsInChildren<QuQu.StationPressureVestibule>().Length==2);Check(\"four original garden seats\",frame.GetComponentsInChildren<QuQu.StationGardenSeat>().Length==4);\nvar care=UnityEngine.Object.FindFirstObjectByType<QuQu.StationGreenhouseCare>();Check(\"six original living crops\",care.Foliage.Cast<UnityEngine.Transform>().Count(t=>t.name.StartsWith(\"Living crop \")&&t.gameObject.activeInHierarchy)==6);\nvar report=new{passed=failures.Count==0,checks,vertices,samples,failures};System.IO.File.WriteAllText(\"../docs/validation/station-v017-open-park-20261003/spatial-audit.json\",Newtonsoft.Json.JsonConvert.SerializeObject(report,Newtonsoft.Json.Formatting.Indented));return report;\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "checks": 605,
+        "vertices": 1989997,
+        "samples": 420,
+        "failures": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

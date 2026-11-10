@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "poem-match",
+  "title": "诗意配对擂台",
+  "description": "ReLE 诗词匹配的自建版：给现代文描述，四句候选诗里选出语义匹配的那句（干扰项都是同主题名篇——光靠\"都写月\"蒙不对）。测诗意理解与古典文本映射。exact 裁判（选项字母）。",
+  "author": "AI斗兽场（自建，致敬 ReLE 诗词匹配）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:poem-match:2026-09-10",
+  "taskPrefix": "只输出选项字母本身（A/B/C/D），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "match": "现代文描述→诗句配对"
+  }
+}

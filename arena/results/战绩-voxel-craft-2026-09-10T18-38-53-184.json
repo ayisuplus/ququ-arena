@@ -1,0 +1,1396 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "voxel-craft",
+    "title": "合成链路规划擂台",
+    "description": "素材溯源 voxelgym（voxel 因果世界模型平台）的 recipes.toml 七条合成配方与 tasks/__init__.py 的 LADDER 十二里程碑成就链（collect_log→…→mine_diamond），内容照搬源文件。recipe-lookup 读配方描述（shapeless inputs / shaped pattern+key / needs_table）答产物 out；chain-prereq 在题面给出的完整成就链上答某里程碑的直接前驱；chain-count 数链上两里程碑之间经过几个里程碑（含两端）。考结构化配方精读与链式前置推理，exact 裁判。",
+    "author": "AI斗兽场（素材溯源：voxelgym）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:voxel-craft:2026-09-10",
+    "taskPrefix": "只输出答案本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "recipe-lookup": "读配方描述（inputs/pattern+key/needs_table）答产物 out",
+      "chain-prereq": "答成就链上某里程碑的直接前驱",
+      "chain-count": "数链区间经过的里程碑个数（含两端）"
+    }
+  },
+  "startedAt": "2026-09-10T18:38:53.184Z",
+  "durationMs": 6833,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "pla",
+      "target": "planks",
+      "latencyMs": 377,
+      "score": 0,
+      "note": "期望「planks」，实答「pla」",
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 155
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 155
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 310
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 311
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 466
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 467
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 622
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 622
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 778
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "craftin",
+      "target": "crafting_table",
+      "latencyMs": 154,
+      "score": 0,
+      "note": "期望「crafting_table」，实答「craftin」",
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 778
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 933
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_",
+      "target": "wooden_pickaxe",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「wooden_pickaxe」，实答「wooden_」",
+      "usage": {
+        "input": 70,
+        "output": 4
+      },
+      "finishedMs": 933
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 1088
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 1088
+    },
+    {
+      "taskId": "VC-RL-05",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = cobblestone, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stone_pickaxe",
+      "target": "stone_pickaxe",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 7
+      },
+      "finishedMs": 1243
+    },
+    {
+      "taskId": "VC-RL-05",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = cobblestone, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stone_pickaxe",
+      "target": "stone_pickaxe",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 7
+      },
+      "finishedMs": 1243
+    },
+    {
+      "taskId": "VC-RL-05",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = cobblestone, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stone_pickaxe",
+      "target": "stone_pickaxe",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 7
+      },
+      "finishedMs": 1398
+    },
+    {
+      "taskId": "VC-RL-05",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = cobblestone, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stone_pickaxe",
+      "target": "stone_pickaxe",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 7
+      },
+      "finishedMs": 1398
+    },
+    {
+      "taskId": "VC-RL-06",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = iron_ingot, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "iron_picka国e",
+      "target": "iron_pickaxe",
+      "latencyMs": 83,
+      "score": 0,
+      "note": "期望「iron_pickaxe」，实答「iron_picka国e」",
+      "usage": {
+        "input": 72,
+        "output": 6
+      },
+      "finishedMs": 1553
+    },
+    {
+      "taskId": "VC-RL-06",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = iron_ingot, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "iron_pick这xe",
+      "target": "iron_pickaxe",
+      "latencyMs": 145,
+      "score": 0,
+      "note": "期望「iron_pickaxe」，实答「iron_pick这xe」",
+      "usage": {
+        "input": 72,
+        "output": 6
+      },
+      "finishedMs": 1553
+    },
+    {
+      "taskId": "VC-RL-06",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = iron_ingot, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "iron_pickax中",
+      "target": "iron_pickaxe",
+      "latencyMs": 141,
+      "score": 0,
+      "note": "期望「iron_pickaxe」，实答「iron_pickax中」",
+      "usage": {
+        "input": 72,
+        "output": 6
+      },
+      "finishedMs": 1708
+    },
+    {
+      "taskId": "VC-RL-06",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = iron_ingot, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "iron_pickaxe",
+      "target": "iron_pickaxe",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 6
+      },
+      "finishedMs": 1708
+    },
+    {
+      "taskId": "VC-RL-07",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { cobblestone = 8 }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "furnace",
+      "target": "furnace",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 4
+      },
+      "finishedMs": 1863
+    },
+    {
+      "taskId": "VC-RL-07",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { cobblestone = 8 }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "furace",
+      "target": "furnace",
+      "latencyMs": 183,
+      "score": 0,
+      "note": "期望「furnace」，实答「furace」",
+      "usage": {
+        "input": 62,
+        "output": 3
+      },
+      "finishedMs": 1864
+    },
+    {
+      "taskId": "VC-RL-07",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { cobblestone = 8 }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "furnace",
+      "target": "furnace",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 4
+      },
+      "finishedMs": 2019
+    },
+    {
+      "taskId": "VC-RL-07",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { cobblestone = 8 }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "furnace",
+      "target": "furnace",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 4
+      },
+      "finishedMs": 2019
+    },
+    {
+      "taskId": "VC-CP-01",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_table（合成工作台），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_",
+      "target": "craft_planks",
+      "latencyMs": 260,
+      "score": 0,
+      "note": "期望「craft_planks」，实答「craft_」",
+      "usage": {
+        "input": 173,
+        "output": 3
+      },
+      "finishedMs": 2174
+    },
+    {
+      "taskId": "VC-CP-01",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_table（合成工作台），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craf大_planks",
+      "target": "craft_planks",
+      "latencyMs": 145,
+      "score": 0,
+      "note": "期望「craft_planks」，实答「craf大_planks」",
+      "usage": {
+        "input": 173,
+        "output": 6
+      },
+      "finishedMs": 2174
+    },
+    {
+      "taskId": "VC-CP-01",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_table（合成工作台），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_",
+      "target": "craft_planks",
+      "latencyMs": 143,
+      "score": 0,
+      "note": "期望「craft_planks」，实答「craft_」",
+      "usage": {
+        "input": 173,
+        "output": 3
+      },
+      "finishedMs": 2329
+    },
+    {
+      "taskId": "VC-CP-01",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_table（合成工作台），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_planks",
+      "target": "craft_planks",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 173,
+        "output": 6
+      },
+      "finishedMs": 2329
+    },
+    {
+      "taskId": "VC-CP-02",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_wooden_pickaxe（合成木镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_table",
+      "target": "craft_table",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 177,
+        "output": 6
+      },
+      "finishedMs": 2484
+    },
+    {
+      "taskId": "VC-CP-02",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_wooden_pickaxe（合成木镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_table",
+      "target": "craft_table",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 177,
+        "output": 6
+      },
+      "finishedMs": 2484
+    },
+    {
+      "taskId": "VC-CP-02",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_wooden_pickaxe（合成木镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_",
+      "target": "craft_table",
+      "latencyMs": 217,
+      "score": 0,
+      "note": "期望「craft_table」，实答「craft_」",
+      "usage": {
+        "input": 177,
+        "output": 3
+      },
+      "finishedMs": 2639
+    },
+    {
+      "taskId": "VC-CP-02",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_wooden_pickaxe（合成木镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_",
+      "target": "craft_table",
+      "latencyMs": 178,
+      "score": 0,
+      "note": "期望「craft_table」，实答「craft_」",
+      "usage": {
+        "input": 177,
+        "output": 3
+      },
+      "finishedMs": 2639
+    },
+    {
+      "taskId": "VC-CP-03",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_stone（挖掘圆石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_wooden_pickaxe",
+      "target": "craft_wooden_pickaxe",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 10
+      },
+      "finishedMs": 2795
+    },
+    {
+      "taskId": "VC-CP-03",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_stone（挖掘圆石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_woode_pickaxe",
+      "target": "craft_wooden_pickaxe",
+      "latencyMs": 315,
+      "score": 0,
+      "note": "期望「craft_wooden_pickaxe」，实答「craft_woode_pickaxe」",
+      "usage": {
+        "input": 172,
+        "output": 10
+      },
+      "finishedMs": 2795
+    },
+    {
+      "taskId": "VC-CP-03",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_stone（挖掘圆石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_wooden_pickaxe",
+      "target": "craft_wooden_pickaxe",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 10
+      },
+      "finishedMs": 2950
+    },
+    {
+      "taskId": "VC-CP-03",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_stone（挖掘圆石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_wooden_pickaxe",
+      "target": "craft_wooden_pickaxe",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 10
+      },
+      "finishedMs": 2950
+    },
+    {
+      "taskId": "VC-CP-04",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_stone_pickaxe（合成石镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_",
+      "target": "mine_stone",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "期望「mine_stone」，实答「mine_」",
+      "usage": {
+        "input": 176,
+        "output": 3
+      },
+      "finishedMs": 3106
+    },
+    {
+      "taskId": "VC-CP-04",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_stone_pickaxe（合成石镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_",
+      "target": "mine_stone",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「mine_stone」，实答「mine_」",
+      "usage": {
+        "input": 176,
+        "output": 3
+      },
+      "finishedMs": 3106
+    },
+    {
+      "taskId": "VC-CP-04",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_stone_pickaxe（合成石镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mne_stone",
+      "target": "mine_stone",
+      "latencyMs": 362,
+      "score": 0,
+      "note": "期望「mine_stone」，实答「mne_stone」",
+      "usage": {
+        "input": 176,
+        "output": 5
+      },
+      "finishedMs": 3264
+    },
+    {
+      "taskId": "VC-CP-04",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 craft_stone_pickaxe（合成石镐），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_stone",
+      "target": "mine_stone",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 176,
+        "output": 5
+      },
+      "finishedMs": 3264
+    },
+    {
+      "taskId": "VC-CP-05",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 place_furnace（放置熔炉），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_ston",
+      "target": "craft_stone_pickaxe",
+      "latencyMs": 469,
+      "score": 0,
+      "note": "期望「craft_stone_pickaxe」，实答「craft_ston」",
+      "usage": {
+        "input": 173,
+        "output": 5
+      },
+      "finishedMs": 3419
+    },
+    {
+      "taskId": "VC-CP-05",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 place_furnace（放置熔炉），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_stone_pickaxe",
+      "target": "craft_stone_pickaxe",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 173,
+        "output": 10
+      },
+      "finishedMs": 3419
+    },
+    {
+      "taskId": "VC-CP-05",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 place_furnace（放置熔炉），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_ston",
+      "target": "craft_stone_pickaxe",
+      "latencyMs": 257,
+      "score": 0,
+      "note": "期望「craft_stone_pickaxe」，实答「craft_ston」",
+      "usage": {
+        "input": 173,
+        "output": 5
+      },
+      "finishedMs": 3574
+    },
+    {
+      "taskId": "VC-CP-05",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 place_furnace（放置熔炉），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "craft_stone_pickaxe",
+      "target": "craft_stone_pickaxe",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 173,
+        "output": 10
+      },
+      "finishedMs": 3575
+    },
+    {
+      "taskId": "VC-CP-06",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_iron_ore（挖掘铁矿石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "p个ace_furnace",
+      "target": "place_furnace",
+      "latencyMs": 376,
+      "score": 0,
+      "note": "期望「place_furnace」，实答「p个ace_furnace」",
+      "usage": {
+        "input": 174,
+        "output": 7
+      },
+      "finishedMs": 3729
+    },
+    {
+      "taskId": "VC-CP-06",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_iron_ore（挖掘铁矿石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "place_furnace",
+      "target": "place_furnace",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 174,
+        "output": 7
+      },
+      "finishedMs": 3730
+    },
+    {
+      "taskId": "VC-CP-06",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_iron_ore（挖掘铁矿石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "plae_furnace",
+      "target": "place_furnace",
+      "latencyMs": 115,
+      "score": 0,
+      "note": "期望「place_furnace」，实答「plae_furnace」",
+      "usage": {
+        "input": 174,
+        "output": 6
+      },
+      "finishedMs": 3885
+    },
+    {
+      "taskId": "VC-CP-06",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_iron_ore（挖掘铁矿石），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "place_furnace",
+      "target": "place_furnace",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 174,
+        "output": 7
+      },
+      "finishedMs": 3885
+    },
+    {
+      "taskId": "VC-CP-07",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_coal（挖掘煤炭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_iron_ore",
+      "target": "mine_iron_ore",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 171,
+        "output": 7
+      },
+      "finishedMs": 4040
+    },
+    {
+      "taskId": "VC-CP-07",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_coal（挖掘煤炭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_iron_ore",
+      "target": "mine_iron_ore",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 171,
+        "output": 7
+      },
+      "finishedMs": 4040
+    },
+    {
+      "taskId": "VC-CP-07",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_coal（挖掘煤炭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_iron_ore",
+      "target": "mine_iron_ore",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 171,
+        "output": 7
+      },
+      "finishedMs": 4195
+    },
+    {
+      "taskId": "VC-CP-07",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 mine_coal（挖掘煤炭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_iron_ore",
+      "target": "mine_iron_ore",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 171,
+        "output": 7
+      },
+      "finishedMs": 4196
+    },
+    {
+      "taskId": "VC-CP-08",
+      "condition": "chain-prereq",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 smelt_iron（烧炼铁锭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_coal",
+      "target": "mine_coal",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 5
+      },
+      "finishedMs": 4351
+    },
+    {
+      "taskId": "VC-CP-08",
+      "condition": "chain-prereq",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 smelt_iron（烧炼铁锭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_coal",
+      "target": "mine_coal",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 5
+      },
+      "finishedMs": 4351
+    },
+    {
+      "taskId": "VC-CP-08",
+      "condition": "chain-prereq",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 smelt_iron（烧炼铁锭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_coal",
+      "target": "mine_coal",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 5
+      },
+      "finishedMs": 4506
+    },
+    {
+      "taskId": "VC-CP-08",
+      "condition": "chain-prereq",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n要完成 smelt_iron（烧炼铁锭），必须先完成哪个里程碑？答里程碑名（snake_case 英文原名）。",
+      "answer": "mine_coal",
+      "target": "mine_coal",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 172,
+        "output": 5
+      },
+      "finishedMs": 4506
+    },
+    {
+      "taskId": "VC-CC-01",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_table（合成工作台）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 4661
+    },
+    {
+      "taskId": "VC-CC-01",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_table（合成工作台）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 4661
+    },
+    {
+      "taskId": "VC-CC-01",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_table（合成工作台）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 4816
+    },
+    {
+      "taskId": "VC-CC-01",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_table（合成工作台）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 4816
+    },
+    {
+      "taskId": "VC-CC-02",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_wooden_pickaxe（合成木镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 4972
+    },
+    {
+      "taskId": "VC-CC-02",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_wooden_pickaxe（合成木镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 4972
+    },
+    {
+      "taskId": "VC-CC-02",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_wooden_pickaxe（合成木镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5127
+    },
+    {
+      "taskId": "VC-CC-02",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_wooden_pickaxe（合成木镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5127
+    },
+    {
+      "taskId": "VC-CC-03",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 craft_table（合成工作台）到 craft_stone_pickaxe（合成石镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5283
+    },
+    {
+      "taskId": "VC-CC-03",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 craft_table（合成工作台）到 craft_stone_pickaxe（合成石镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5283
+    },
+    {
+      "taskId": "VC-CC-03",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 craft_table（合成工作台）到 craft_stone_pickaxe（合成石镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5438
+    },
+    {
+      "taskId": "VC-CC-03",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 craft_table（合成工作台）到 craft_stone_pickaxe（合成石镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5438
+    },
+    {
+      "taskId": "VC-CC-04",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 mine_stone（挖掘圆石）到 place_furnace（放置熔炉）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 5592
+    },
+    {
+      "taskId": "VC-CC-04",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 mine_stone（挖掘圆石）到 place_furnace（放置熔炉）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 85,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 5592
+    },
+    {
+      "taskId": "VC-CC-04",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 mine_stone（挖掘圆石）到 place_furnace（放置熔炉）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 5747
+    },
+    {
+      "taskId": "VC-CC-04",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 mine_stone（挖掘圆石）到 place_furnace（放置熔炉）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 5747
+    },
+    {
+      "taskId": "VC-CC-05",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 place_furnace（放置熔炉）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5903
+    },
+    {
+      "taskId": "VC-CC-05",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 place_furnace（放置熔炉）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 5903
+    },
+    {
+      "taskId": "VC-CC-05",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 place_furnace（放置熔炉）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 6057
+    },
+    {
+      "taskId": "VC-CC-05",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 place_furnace（放置熔炉）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 179,
+        "output": 1
+      },
+      "finishedMs": 6058
+    },
+    {
+      "taskId": "VC-CC-06",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 178,
+        "output": 1
+      },
+      "finishedMs": 6212
+    },
+    {
+      "taskId": "VC-CC-06",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "1",
+      "target": "11",
+      "latencyMs": 81,
+      "score": 0,
+      "note": "期望「11」，实答「1」",
+      "usage": {
+        "input": 178,
+        "output": 1
+      },
+      "finishedMs": 6213
+    },
+    {
+      "taskId": "VC-CC-06",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "1",
+      "target": "11",
+      "latencyMs": 147,
+      "score": 0,
+      "note": "期望「11」，实答「1」",
+      "usage": {
+        "input": 178,
+        "output": 1
+      },
+      "finishedMs": 6367
+    },
+    {
+      "taskId": "VC-CC-06",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 craft_iron_pickaxe（合成铁镐）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 178,
+        "output": 1
+      },
+      "finishedMs": 6367
+    },
+    {
+      "taskId": "VC-CC-07",
+      "condition": "chain-count",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 mine_diamond（挖掘钻石）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 6522
+    },
+    {
+      "taskId": "VC-CC-07",
+      "condition": "chain-count",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 mine_diamond（挖掘钻石）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 6523
+    },
+    {
+      "taskId": "VC-CC-07",
+      "condition": "chain-count",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 mine_diamond（挖掘钻石）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "1",
+      "target": "12",
+      "latencyMs": 338,
+      "score": 0,
+      "note": "期望「12」，实答「1」",
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 6678
+    },
+    {
+      "taskId": "VC-CC-07",
+      "condition": "chain-count",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n成就链（12 个里程碑，按顺序）：collect_log（收集原木）→ craft_planks（合成木板）→ craft_table（合成工作台）→ craft_wooden_pickaxe（合成木镐）→ mine_stone（挖掘圆石）→ craft_stone_pickaxe（合成石镐）→ place_furnace（放置熔炉）→ mine_iron_ore（挖掘铁矿石）→ mine_coal（挖掘煤炭）→ smelt_iron（烧炼铁锭）→ craft_iron_pickaxe（合成铁镐）→ mine_diamond（挖掘钻石）。\n从 collect_log（收集原木）到 mine_diamond（挖掘钻石）一共经过几个里程碑（含两端）？只答阿拉伯数字。",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 175,
+        "output": 1
+      },
+      "finishedMs": 6678
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ccb16d2581dd48df",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.17.0"
+  }
+}

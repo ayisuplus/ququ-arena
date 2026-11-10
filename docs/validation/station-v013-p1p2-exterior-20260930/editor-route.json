@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle v013 required\");\nvar walker=UnityEngine.Object.FindFirstObjectByType<QuQu.StationGrayboxWalker>();var controller=walker.GetComponent<UnityEngine.CharacterController>();\nvar previous=walker.transform.position;var wasEnabled=controller.enabled;var rows=new System.Collections.Generic.List<object>();\nvar points=new[]{new UnityEngine.Vector3(186,1,-187),new UnityEngine.Vector3(174,1,-187),new UnityEngine.Vector3(174,1,-198),new UnityEngine.Vector3(174,1,-207),new UnityEngine.Vector3(168.5f,1,-207),new UnityEngine.Vector3(168.5f,1,-214),new UnityEngine.Vector3(174,1,-214),new UnityEngine.Vector3(174,1,-217),new UnityEngine.Vector3(182,1,-217),new UnityEngine.Vector3(182,1,-198),new UnityEngine.Vector3(186,1,-198)};\nbool passed=true;\ntry{\n controller.enabled=false;walker.transform.position=points[0];controller.enabled=true;UnityEngine.Physics.SyncTransforms();controller.Move(UnityEngine.Vector3.down*2);\n for(int i=1;i<points.Length;i++){\n  int side=0,ground=0;for(int step=0;step<300;step++){\n   var d=points[i]-walker.transform.position;d.y=0;if(d.magnitude<.06f)break;\n   var flags=controller.Move(d.normalized*UnityEngine.Mathf.Min(.1f,d.magnitude)+UnityEngine.Vector3.down*.02f);\n   if((flags&UnityEngine.CollisionFlags.Sides)!=0)side++;if((flags&UnityEngine.CollisionFlags.Below)!=0)ground++;\n  }\n  var delta=points[i]-walker.transform.position;delta.y=0;bool ok=delta.magnitude<.12f&&side==0&&ground>0;passed&=ok;\n  rows.Add(new{segment=i,target=points[i].ToString(),sideHits=side,groundedSteps=ground,error=delta.magnitude,passed=ok});\n }\n}finally{controller.enabled=false;walker.transform.position=previous;controller.enabled=wasEnabled;UnityEngine.Physics.SyncTransforms();}\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{passed,segments=rows};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "segments": [
+          {
+            "segment": 1,
+            "target": "(174.00, 1.00, -187.00)",
+            "sideHits": 0,
+            "groundedSteps": 120,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 2,
+            "target": "(174.00, 1.00, -198.00)",
+            "sideHits": 0,
+            "groundedSteps": 110,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 3,
+            "target": "(174.00, 1.00, -207.00)",
+            "sideHits": 0,
+            "groundedSteps": 90,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 4,
+            "target": "(168.50, 1.00, -207.00)",
+            "sideHits": 0,
+            "groundedSteps": 55,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 5,
+            "target": "(168.50, 1.00, -214.00)",
+            "sideHits": 0,
+            "groundedSteps": 70,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 6,
+            "target": "(174.00, 1.00, -214.00)",
+            "sideHits": 0,
+            "groundedSteps": 55,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 7,
+            "target": "(174.00, 1.00, -217.00)",
+            "sideHits": 0,
+            "groundedSteps": 30,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 8,
+            "target": "(182.00, 1.00, -217.00)",
+            "sideHits": 0,
+            "groundedSteps": 80,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 9,
+            "target": "(182.00, 1.00, -198.00)",
+            "sideHits": 0,
+            "groundedSteps": 190,
+            "error": 0,
+            "passed": true
+          },
+          {
+            "segment": 10,
+            "target": "(186.00, 1.00, -198.00)",
+            "sideHits": 0,
+            "groundedSteps": 40,
+            "error": 0,
+            "passed": true
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

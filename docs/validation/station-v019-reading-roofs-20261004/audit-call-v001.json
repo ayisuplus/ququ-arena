@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-reading-roofs.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "rays": 70,
+        "arrival": {
+          "eye": [
+            -29.7,
+            1.7,
+            92
+          ],
+          "target": [
+            -40,
+            3,
+            127
+          ],
+          "fov": 65,
+          "aspect": 1.6,
+          "vertices": 675387,
+          "inFrustum": 0,
+          "horizontalCentreAngle": 85.2700653,
+          "horizontalHalfFov": 45.5479546,
+          "note": "Vertex projection checks framing only; not a visibility or route pass"
+        }
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,1629 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "navigate",
+    "title": "指令导航擂台",
+    "description": "BBH navigate 的中文生成器版：一串「前进/后退/左转/右转」指令后，判断是否回到起点（是/否 7:7 均衡）或报终点坐标。指令序列由生成器逐步模拟，答案=模拟结果。测多步空间状态更新。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:navigate:2026-09-10",
+    "taskPrefix": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "return-home": "是否回到起点（是/否均衡）",
+      "endpoint": "终点坐标 (x, y)"
+    }
+  },
+  "startedAt": "2026-09-10T10:01:36.947Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "NAV-HOME-01",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，后退 1 步，前进 2 步，后退 3 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-01",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，后退 1 步，前进 2 步，后退 3 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 100,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-01",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，后退 1 步，前进 2 步，后退 3 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-01",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，后退 1 步，前进 2 步，后退 3 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-02",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，左转，前进 2 步，前进 3 步，前进 2 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-02",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，左转，前进 2 步，前进 3 步，前进 2 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-02",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，左转，前进 2 步，前进 3 步，前进 2 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-02",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，左转，前进 2 步，前进 3 步，前进 2 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-03",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 1 步，前进 3 步，后退 3 步，前进 3 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 97,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-03",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 1 步，前进 3 步，后退 3 步，前进 3 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-03",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 1 步，前进 3 步，后退 3 步，前进 3 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-03",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 1 步，前进 3 步，后退 3 步，前进 3 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-04",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 1 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-04",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 1 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-04",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 1 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-04",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 1 步，右转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-05",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，左转，前进 1 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 264,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-05",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，左转，前进 1 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-05",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，左转，前进 1 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-05",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 4 步，左转，前进 1 步，前进 4 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-06",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：左转，左转，前进 5 步，左转，后退 1 步，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-06",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：左转，左转，前进 5 步，左转，后退 1 步，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-06",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：左转，左转，前进 5 步，左转，后退 1 步，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-06",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：左转，左转，前进 5 步，左转，后退 1 步，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-07",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，右转，右转，前进 4 步，右转，左转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-07",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，右转，右转，前进 4 步，右转，左转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-07",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，右转，右转，前进 4 步，右转，左转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-07",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 5 步，右转，右转，前进 4 步，右转，左转，左转。\n\n问题：执行完是否回到了起点？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-08",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，前进 2 步，前进 2 步，后退 2 步，后退 2 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-08",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，前进 2 步，前进 2 步，后退 2 步，后退 2 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-08",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，前进 2 步，前进 2 步，后退 2 步，后退 2 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-08",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，前进 2 步，前进 2 步，后退 2 步，后退 2 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-09",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，前进 3 步，右转，右转，前进 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-09",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，前进 3 步，右转，右转，前进 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-09",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，前进 3 步，右转，右转，前进 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-09",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，前进 3 步，右转，右转，前进 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-10",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 381,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-10",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-10",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-10",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，左转，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 385,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-11",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，后退 2 步，后退 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-11",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，后退 2 步，后退 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-11",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，后退 2 步，后退 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-11",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：右转，后退 2 步，后退 3 步，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-12",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，右转，右转，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-12",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，右转，右转，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-12",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，右转，右转，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-12",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 2 步，前进 3 步，右转，右转，前进 5 步。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-13",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，后退 3 步，右转，右转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-13",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，后退 3 步，右转，右转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-13",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，后退 3 步，右转，右转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-13",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，后退 3 步，右转，右转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-14",
+      "condition": "return-home",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，左转，左转，前进 3 步，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-14",
+      "condition": "return-home",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，左转，左转，前进 3 步，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-14",
+      "condition": "return-home",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，左转，左转，前进 3 步，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-HOME-14",
+      "condition": "return-home",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点出发，面朝北方。依次执行：前进 3 步，左转，左转，前进 3 步，左转，右转。\n\n问题：执行完是否回到了起点？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NAV-PT-01",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 2 步，左转，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 2)",
+      "target": "(-5, 2)",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-01",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 2 步，左转，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5,",
+      "target": "(-5, 2)",
+      "latencyMs": 238,
+      "score": 0,
+      "note": "期望「(-5, 2)」，实答「(-5,」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-01",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 2 步，左转，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 2)",
+      "target": "(-5, 2)",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-01",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 2 步，左转，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 2)",
+      "target": "(-5, 2)",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-02",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 1 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 1)",
+      "target": "(-4, 1)",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-02",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 1 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 1)",
+      "target": "(-4, 1)",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-02",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 1 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4,",
+      "target": "(-4, 1)",
+      "latencyMs": 127,
+      "score": 0,
+      "note": "期望「(-4, 1)」，实答「(-4,」",
+      "usage": {
+        "input": 60,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-02",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 1 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 1)",
+      "target": "(-4, 1)",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-03",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，前进 2 步，右转，后退 1 步，前进 3 步，右转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(2, 7)",
+      "target": "(2, 7)",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-03",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，前进 2 步，右转，后退 1 步，前进 3 步，右转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(2,7)",
+      "target": "(2, 7)",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-03",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，前进 2 步，右转，后退 1 步，前进 3 步，右转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(2,",
+      "target": "(2, 7)",
+      "latencyMs": 285,
+      "score": 0,
+      "note": "期望「(2, 7)」，实答「(2,」",
+      "usage": {
+        "input": 68,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-03",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，前进 2 步，右转，后退 1 步，前进 3 步，右转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(2 7)",
+      "target": "(2, 7)",
+      "latencyMs": 374,
+      "score": 0,
+      "note": "期望「(2, 7)」，实答「(2 7)」",
+      "usage": {
+        "input": 68,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-04",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 5 步，前进 5 步，前进 3 步，后退 2 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-11, 3)",
+      "target": "(-11, 3)",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-04",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 5 步，前进 5 步，前进 3 步，后退 2 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-11 3)",
+      "target": "(-11, 3)",
+      "latencyMs": 156,
+      "score": 0,
+      "note": "期望「(-11, 3)」，实答「(-11 3)」",
+      "usage": {
+        "input": 70,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-04",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 5 步，前进 5 步，前进 3 步，后退 2 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-11",
+      "target": "(-11, 3)",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「(-11, 3)」，实答「(-11」",
+      "usage": {
+        "input": 70,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-04",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 5 步，前进 5 步，前进 3 步，后退 2 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-11, 3)",
+      "target": "(-11, 3)",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-05",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，左转，前进 5 步，前进 3 步，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-13, 5)",
+      "target": "(-13, 5)",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-05",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，左转，前进 5 步，前进 3 步，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-13",
+      "target": "(-13, 5)",
+      "latencyMs": 347,
+      "score": 0,
+      "note": "期望「(-13, 5)」，实答「(-13」",
+      "usage": {
+        "input": 67,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-05",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，左转，前进 5 步，前进 3 步，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-13",
+      "target": "(-13, 5)",
+      "latencyMs": 325,
+      "score": 0,
+      "note": "期望「(-13, 5)」，实答「(-13」",
+      "usage": {
+        "input": 67,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-05",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 5 步，左转，前进 5 步，前进 3 步，前进 5 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-13, 5)",
+      "target": "(-13, 5)",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-06",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，右转，前进 3 步，前进 3 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(0, 6)",
+      "target": "(0, 6)",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-06",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，右转，前进 3 步，前进 3 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(0, 6)",
+      "target": "(0, 6)",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-06",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，右转，前进 3 步，前进 3 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(0, 6)",
+      "target": "(0, 6)",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-06",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，右转，前进 3 步，前进 3 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(0, 6)",
+      "target": "(0, 6)",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-07",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 3)",
+      "target": "(-4, 3)",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-07",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 3)",
+      "target": "(-4, 3)",
+      "latencyMs": 282,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-07",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 3)",
+      "target": "(-4, 3)",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-07",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，左转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-4, 3)",
+      "target": "(-4, 3)",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-08",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，右转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(4, 4)",
+      "target": "(4, 4)",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-08",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，右转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(4,人4)",
+      "target": "(4, 4)",
+      "latencyMs": 129,
+      "score": 0,
+      "note": "期望「(4, 4)」，实答「(4,人4)」",
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-08",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，右转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(4, 4这",
+      "target": "(4, 4)",
+      "latencyMs": 370,
+      "score": 0,
+      "note": "期望「(4, 4)」，实答「(4, 4这」",
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-08",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，右转，前进 4 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(4, 4)",
+      "target": "(4, 4)",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-09",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，左转，前进 5 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 4)",
+      "target": "(-5, 4)",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-09",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，左转，前进 5 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 4)",
+      "target": "(-5, 4)",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-09",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，左转，前进 5 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5 4)",
+      "target": "(-5, 4)",
+      "latencyMs": 421,
+      "score": 0,
+      "note": "期望「(-5, 4)」，实答「(-5 4)」",
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-09",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 1 步，左转，前进 5 步，左转。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-5, 4)",
+      "target": "(-5, 4)",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-10",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 4 步，右转，后退 1 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-1, 4有",
+      "target": "(-1, 4)",
+      "latencyMs": 295,
+      "score": 0,
+      "note": "期望「(-1, 4)」，实答「(-1, 4有」",
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-10",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 4 步，右转，后退 1 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-1, 4)",
+      "target": "(-1, 4)",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-10",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 4 步，右转，后退 1 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-1,有4)",
+      "target": "(-1, 4)",
+      "latencyMs": 228,
+      "score": 0,
+      "note": "期望「(-1, 4)」，实答「(-1,有4)」",
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-10",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 4 步，右转，后退 1 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-1, 4)",
+      "target": "(-1, 4)",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-11",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 5 步，前进 5 步，左转，后退 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(3, 13)",
+      "target": "(3, 13)",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-11",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 5 步，前进 5 步，左转，后退 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(3 13)",
+      "target": "(3, 13)",
+      "latencyMs": 206,
+      "score": 0,
+      "note": "期望「(3, 13)」，实答「(3 13)」",
+      "usage": {
+        "input": 67,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-11",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 5 步，前进 5 步，左转，后退 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(3, 个3)",
+      "target": "(3, 13)",
+      "latencyMs": 86,
+      "score": 0,
+      "note": "期望「(3, 13)」，实答「(3, 个3)」",
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-11",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：前进 3 步，前进 5 步，前进 5 步，左转，后退 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "3, 13)",
+      "target": "(3, 13)",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-12",
+      "condition": "endpoint",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，前进 1 步，前进 2 步，前进 3 步，前进 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-9, 0)",
+      "target": "(-9, 0)",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-12",
+      "condition": "endpoint",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，前进 1 步，前进 2 步，前进 3 步，前进 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-9上 0)",
+      "target": "(-9, 0)",
+      "latencyMs": 402,
+      "score": 0,
+      "note": "期望「(-9, 0)」，实答「(-9上 0)」",
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-12",
+      "condition": "endpoint",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，前进 1 步，前进 2 步，前进 3 步，前进 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-9, 0)",
+      "target": "(-9, 0)",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NAV-PT-12",
+      "condition": "endpoint",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n从起点 (0, 0) 出发，面朝北方（北为 y 正方向，东为 x 正方向）。依次执行：左转，前进 1 步，前进 2 步，前进 3 步，前进 3 步。\n\n问题：终点坐标是什么？（格式 (x, y)）",
+      "answer": "(-9, 大)",
+      "target": "(-9, 0)",
+      "latencyMs": 478,
+      "score": 0,
+      "note": "期望「(-9, 0)」，实答「(-9, 大)」",
+      "usage": {
+        "input": 67,
+        "output": 4
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "65038926302257fd",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.20.0"
+  }
+}

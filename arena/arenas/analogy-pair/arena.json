@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "analogy-pair",
+  "title": "类比推理擂台",
+  "description": "形制致敬行测/SAT 类比推理（A:B::C:?，内容自建）。题干给一组词的关系，四选项中选关系最相似的一组，exact 裁判（选项字母）。四维度均为单关系可判别：tool-function 工具与用途、person-place 人物与场所、part-whole 部分与整体、degree 程度递进（轻：重）；每题干扰项与题干关系不同类——关系判错即翻车。每题 meta.relation 标关系类型、meta.answerText 锚定正确选项文本，契约测试逐题校验字母↔文本一致性与选项结构。",
+  "author": "AI斗兽场（内容自建，形制致敬行测类比推理）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:analogy-pair:2026-09-10",
+  "taskPrefix": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "tool-function": "工具与用途（牙刷：刷牙）",
+    "person-place": "人物与场所（医生：医院）",
+    "part-whole": "部分与整体（轮胎：汽车）",
+    "degree": "程度递进（冷：严寒）"
+  }
+}

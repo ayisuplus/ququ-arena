@@ -1,0 +1,2410 @@
+{
+  "at": "2026-09-12T07:40:21.366Z",
+  "synthetic": true,
+  "noPreviewBattleRequests": true,
+  "noAgentOrModelCalls": true,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "checks": [
+    {
+      "state": "running",
+      "overlay": "rgb(82, 210, 230)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "对战中 · LIVE",
+      "status": "对战进行中",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 0.801453,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 816.7230000013019
+            },
+            {
+              "name": "arena-entry",
+              "state": "running",
+              "time": 750.0590000177267
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 816.8
+            }
+          ],
+          "transforms": [
+            "matrix(1.00194, 0, 0, 1.00194, -66.8087, 2.94356)",
+            "matrix(0.888205, -0.459447, 0.459447, 0.888205, 0, 0)",
+            "matrix(0.772162, 0.635426, -0.635426, 0.772162, 0, 0)",
+            "matrix(0.999864, 0.0165058, -0.0165058, 0.999864, 0, 0)",
+            "matrix(0.913855, 0.40604, -0.40604, 0.913855, 0, 0)",
+            "matrix(1, 0, 0, 1, -27.3236, 0)",
+            "matrix(1, 0, 0, 1, 1.23022, 6.77154)",
+            "matrix(1, 0, 0, 1, 6.76977, -16.7715)",
+            "matrix(1, 0, 0, 1, 5.41585, -11.0173)",
+            "matrix(1, 0, 0, 1, 2.58415, 1.01735)",
+            "matrix(1, 0, 0, 1, 7.94204, -21.7537)",
+            "matrix(1, 0, 0, 1, 0.0579564, 11.7537)",
+            "matrix(1, 0, -0.404026, 1, 1666.06, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.988077, -0.153958, 0.153958, 0.988077, -46.3929, -0.427493)",
+            "matrix(0.992708, 0.120541, -0.120541, 0.992708, 30.207, 0.247301)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.265942,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1283.2230000013021
+            },
+            {
+              "name": "arena-entry",
+              "state": "running",
+              "time": 1216.559000017727
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 1283.3000000000002
+            }
+          ],
+          "transforms": [
+            "matrix(1.00489, 0, 0, 1.00489, -63.4172, 2.71562)",
+            "matrix(0.89601, -0.444035, 0.444035, 0.89601, 0, 0)",
+            "matrix(0.748578, 0.663047, -0.663047, 0.748578, 0, 0)",
+            "matrix(0.9996, 0.0282984, -0.0282984, 0.9996, 0, 0)",
+            "matrix(0.903364, 0.428874, -0.428874, 0.903364, 0, 0)",
+            "matrix(1, 0, 0, 1, -23.9779, 0)",
+            "matrix(1, 0, 0, 1, 3.01644, -0.819867)",
+            "matrix(1, 0, 0, 1, 4.98356, -9.18013)",
+            "matrix(1, 0, 0, 1, 7.05843, -17.9983)",
+            "matrix(1, 0, 0, 1, 0.941573, 7.99831)",
+            "matrix(1, 0, 0, 1, 7.85969, -21.4037)",
+            "matrix(1, 0, 0, 1, 0.140314, 11.4037)",
+            "matrix(1, 0, -0.404026, 1, 2339.49, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.988655, -0.150206, 0.150206, 0.988655, -44.1853, -1.07473)",
+            "matrix(0.992949, 0.118541, -0.118541, 0.992949, 29.1366, 0.619533)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-running.png"
+    },
+    {
+      "state": "pausing",
+      "overlay": "rgb(242, 191, 103)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "即将暂停 · PAUSING",
+      "status": "本题结束后暂停",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.588187,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1633.2669999912382
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 1633.2669999912382
+            }
+          ],
+          "transforms": [
+            "matrix(1.00802, 0, 0, 1.00802, -59.8102, 2.47318)",
+            "matrix(0.904011, -0.427509, 0.427509, 0.904011, 0, 0)",
+            "matrix(0.731268, 0.68209, -0.68209, 0.731268, 0, 0)",
+            "matrix(0.999449, 0.033203, -0.033203, 0.999449, 0, 0)",
+            "matrix(0.894132, 0.447803, -0.447803, 0.894132, 0, 0)",
+            "matrix(1, 0, 0, 1, -20.4362, 0)",
+            "matrix(1, 0, 0, 1, 4.60965, -7.59102)",
+            "matrix(1, 0, 0, 1, 3.39035, -2.40898)",
+            "matrix(1, 0, 0, 1, 7.76219, -20.9893)",
+            "matrix(1, 0, 0, 1, 0.237813, 10.9893)",
+            "matrix(1, 0, 0, 1, 7.27004, -18.8977)",
+            "matrix(1, 0, 0, 1, 0.729959, 8.89767)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.989253, -0.146216, 0.146216, 0.989253, -41.8391, -1.76262)",
+            "matrix(0.9932, 0.116421, -0.116421, 0.9932, 28.002, 1.01409)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.053754,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2099.966999991238
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 2099.966999991238
+            }
+          ],
+          "transforms": [
+            "matrix(1.01345, 0, 0, 1.01345, -53.5628, 2.05327)",
+            "matrix(0.917042, -0.398791, 0.398791, 0.917042, 0, 0)",
+            "matrix(0.709528, 0.704677, -0.704677, 0.709528, 0, 0)",
+            "matrix(0.999395, 0.0347753, -0.0347753, 0.999395, 0, 0)",
+            "matrix(0.880053, 0.474876, -0.474876, 0.880053, 0, 0)",
+            "matrix(1, 0, 0, 1, -14.4318, 0)",
+            "matrix(1, 0, 0, 1, 6.50072, -15.6281)",
+            "matrix(1, 0, 0, 1, 1.49928, 5.62807)",
+            "matrix(1, 0, 0, 1, 7.98296, -21.9276)",
+            "matrix(1, 0, 0, 1, 0.0170373, 11.9276)",
+            "matrix(1, 0, 0, 1, 5.75913, -12.4763)",
+            "matrix(1, 0, 0, 1, 2.24087, 2.4763)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.990251, -0.139293, 0.139293, 0.990251, -37.7714, -2.95526)",
+            "matrix(0.993624, 0.112746, -0.112746, 0.993624, 26.0357, 1.69789)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-pausing.png"
+    },
+    {
+      "state": "paused",
+      "overlay": "rgb(242, 191, 103)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已暂停 · PAUSED",
+      "status": "已暂停",
+      "transition": "0.8s",
+      "videoPaused": true,
+      "sceneMotion": "paused",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "paused",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "paused",
+          "videoPaused": true,
+          "videoTime": 0.802802,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "aurora-drift",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "laser-travel",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "energy-flow",
+              "state": "paused",
+              "time": 849.9369999896735
+            }
+          ],
+          "transforms": [
+            "matrix(1.00211, 0, 0, 1.00211, -66.6196, 2.93086)",
+            "matrix(0.888646, -0.458593, 0.458593, 0.888646, 0, 0)",
+            "matrix(0.770483, 0.637461, -0.637461, 0.770483, 0, 0)",
+            "matrix(0.999846, 0.0175495, -0.0175495, 0.999846, 0, 0)",
+            "matrix(0.913176, 0.407565, -0.407565, 0.913176, 0, 0)",
+            "matrix(1, 0, 0, 1, -27.1374, 0)",
+            "matrix(1, 0, 0, 1, 1.33446, 6.32852)",
+            "matrix(1, 0, 0, 1, 6.66553, -16.3285)",
+            "matrix(1, 0, 0, 1, 5.55478, -11.6078)",
+            "matrix(1, 0, 0, 1, 2.44522, 1.60783)",
+            "matrix(1, 0, 0, 1, 7.96133, -21.8356)",
+            "matrix(1, 0, 0, 1, 0.0386708, 11.8356)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.98811, -0.153748, 0.153748, 0.98811, -46.2697, -0.463597)",
+            "matrix(0.992722, 0.120429, -0.120429, 0.992722, 30.1471, 0.268113)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "paused",
+          "videoPaused": true,
+          "videoTime": 0.802802,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "aurora-drift",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "beam-sweep",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "laser-travel",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "spark-rise",
+              "state": "paused",
+              "time": 849.9369999896735
+            },
+            {
+              "name": "energy-flow",
+              "state": "paused",
+              "time": 849.9369999896735
+            }
+          ],
+          "transforms": [
+            "matrix(1.00211, 0, 0, 1.00211, -66.6196, 2.93086)",
+            "matrix(0.888646, -0.458593, 0.458593, 0.888646, 0, 0)",
+            "matrix(0.770483, 0.637461, -0.637461, 0.770483, 0, 0)",
+            "matrix(0.999846, 0.0175495, -0.0175495, 0.999846, 0, 0)",
+            "matrix(0.913176, 0.407565, -0.407565, 0.913176, 0, 0)",
+            "matrix(1, 0, 0, 1, -27.1374, 0)",
+            "matrix(1, 0, 0, 1, 1.33446, 6.32852)",
+            "matrix(1, 0, 0, 1, 6.66553, -16.3285)",
+            "matrix(1, 0, 0, 1, 5.55478, -11.6078)",
+            "matrix(1, 0, 0, 1, 2.44522, 1.60783)",
+            "matrix(1, 0, 0, 1, 7.96133, -21.8356)",
+            "matrix(1, 0, 0, 1, 0.0386708, 11.8356)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.98811, -0.153748, 0.153748, 0.98811, -46.2697, -0.463597)",
+            "matrix(0.992722, 0.120429, -0.120429, 0.992722, 30.1471, 0.268113)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-paused.png"
+    },
+    {
+      "state": "completed",
+      "overlay": "rgb(166, 226, 130)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已完成 · COMPLETE",
+      "status": "对战完成",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 60% 80%, rgba(144, 255, 73, 0.627), rgba(0, 0, 0, 0) 48%), radial-gradient(at 87% 40%, rgba(255, 196, 71, 0.69), rgba(0, 0, 0, 0) 42%), radial-gradient(at 40% 15%, rgba(65, 235, 255, 0.565), rgba(0, 0, 0, 0) 40%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.572509,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1599.909000016656
+            },
+            {
+              "name": "arena-victory",
+              "state": "running",
+              "time": 716.6110000160057
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 1599.909000016656
+            }
+          ],
+          "transforms": [
+            "matrix(1.00769, 0, 0, 1.00769, -60.1938, 2.49896)",
+            "matrix(0.903176, -0.42927, 0.42927, 0.903176, 0, 0)",
+            "matrix(0.732889, 0.680348, -0.680348, 0.732889, 0, 0)",
+            "matrix(0.999459, 0.0328766, -0.0328766, 0.999459, 0, 0)",
+            "matrix(0.895062, 0.445941, -0.445941, 0.895062, 0, 0)",
+            "matrix(1, 0, 0, 1, -20.8109, 0)",
+            "matrix(1, 0, 0, 1, 4.45806, -6.94674)",
+            "matrix(1, 0, 0, 1, 3.54194, -3.05326)",
+            "matrix(1, 0, 0, 1, 7.71579, -20.7921)",
+            "matrix(1, 0, 0, 1, 0.284212, 10.7921)",
+            "matrix(1, 0, 0, 1, 7.34692, -19.2244)",
+            "matrix(1, 0, 0, 1, 0.653075, 9.22443)",
+            "matrix(1, 0, -0.404026, 1, 1225.86, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.98919, -0.146641, 0.146641, 0.98919, -42.0886, -1.68947)",
+            "matrix(0.993173, 0.116647, -0.116647, 0.993173, 28.1226, 0.972152)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.029937,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2066.6090000166555
+            },
+            {
+              "name": "arena-victory",
+              "state": "running",
+              "time": 1183.3110000160057
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 2066.6090000166555
+            }
+          ],
+          "transforms": [
+            "matrix(1.01302, 0, 0, 1.01302, -54.0638, 2.08694)",
+            "matrix(0.916038, -0.401092, 0.401092, 0.916038, 0, 0)",
+            "matrix(0.711014, 0.703178, -0.703178, 0.711014, 0, 0)",
+            "matrix(0.999393, 0.0348445, -0.0348445, 0.999393, 0, 0)",
+            "matrix(0.881123, 0.472886, -0.472886, 0.881123, 0, 0)",
+            "matrix(1, 0, 0, 1, -14.9049, 0)",
+            "matrix(1, 0, 0, 1, 6.38605, -15.1407)",
+            "matrix(1, 0, 0, 1, 1.61395, 5.14071)",
+            "matrix(1, 0, 0, 1, 7.99247, -21.968)",
+            "matrix(1, 0, 0, 1, 0.007527, 11.968)",
+            "matrix(1, 0, 0, 1, 5.89143, -13.0386)",
+            "matrix(1, 0, 0, 1, 2.10857, 3.03859)",
+            "matrix(1, 0, -0.404026, 1, 1855.25, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.990173, -0.139849, 0.139849, 0.990173, -38.0979, -2.85952)",
+            "matrix(0.99359, 0.113041, -0.113041, 0.99359, 26.1936, 1.64296)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-completed.png"
+    },
+    {
+      "state": "stopped",
+      "overlay": "rgb(164, 151, 192)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "已中止 · STOPPED",
+      "status": "已中止 · 记录已保存",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.575975,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1616.5520000250544
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 1616.5520000250544
+            }
+          ],
+          "transforms": [
+            "matrix(1.00786, 0, 0, 1.00786, -60.0035, 2.48616)",
+            "matrix(0.903591, -0.428397, 0.428397, 0.903591, 0, 0)",
+            "matrix(0.732079, 0.681219, -0.681219, 0.732079, 0, 0)",
+            "matrix(0.999454, 0.0330431, -0.0330431, 0.999454, 0, 0)",
+            "matrix(0.8946, 0.446869, -0.446869, 0.8946, 0, 0)",
+            "matrix(1, 0, 0, 1, -20.6249, 0)",
+            "matrix(1, 0, 0, 1, 4.53381, -7.26871)",
+            "matrix(1, 0, 0, 1, 3.46618, -2.73129)",
+            "matrix(1, 0, 0, 1, 7.73947, -20.8928)",
+            "matrix(1, 0, 0, 1, 0.260526, 10.8928)",
+            "matrix(1, 0, 0, 1, 7.30911, -19.0637)",
+            "matrix(1, 0, 0, 1, 0.690886, 9.06373)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.989221, -0.14643, 0.14643, 0.989221, -41.9648, -1.72577)",
+            "matrix(0.993187, 0.116535, -0.116535, 0.993187, 28.0628, 0.992958)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.04038,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2083.2520000250547
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 2083.2520000250547
+            }
+          ],
+          "transforms": [
+            "matrix(1.01323, 0, 0, 1.01323, -53.8149, 2.07021)",
+            "matrix(0.916537, -0.399949, 0.399949, 0.916537, 0, 0)",
+            "matrix(0.710271, 0.703928, -0.703928, 0.710271, 0, 0)",
+            "matrix(0.999394, 0.0348134, -0.0348134, 0.999394, 0, 0)",
+            "matrix(0.880591, 0.473878, -0.473878, 0.880591, 0, 0)",
+            "matrix(1, 0, 0, 1, -14.6696, 0)",
+            "matrix(1, 0, 0, 1, 6.44375, -15.3859)",
+            "matrix(1, 0, 0, 1, 1.55625, 5.38592)",
+            "matrix(1, 0, 0, 1, 7.98821, -21.9499)",
+            "matrix(1, 0, 0, 1, 0.0117872, 11.9499)",
+            "matrix(1, 0, 0, 1, 5.82582, -12.7597)",
+            "matrix(1, 0, 0, 1, 2.17418, 2.75971)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.990212, -0.139573, 0.139573, 0.990212, -37.9357, -2.90709)",
+            "matrix(0.993607, 0.112894, -0.112894, 0.993607, 26.1152, 1.67025)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-stopped.png"
+    },
+    {
+      "state": "error",
+      "overlay": "rgb(235, 120, 128)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "运行失败 · ERROR",
+      "status": "赛事运行失败",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "motion": {
+        "mode": "running",
+        "withVideo": true,
+        "before": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 1.627114,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 1683.257000002483
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 1683.257000002483
+            }
+          ],
+          "transforms": [
+            "matrix(1.00854, 0, 0, 1.00854, -59.2197, 2.43349)",
+            "matrix(0.905289, -0.424797, 0.424797, 0.905289, 0, 0)",
+            "matrix(0.728853, 0.68467, -0.68467, 0.728853, 0, 0)",
+            "matrix(0.999434, 0.0336374, -0.0336374, 0.999434, 0, 0)",
+            "matrix(0.892719, 0.450613, -0.450613, 0.892719, 0, 0)",
+            "matrix(1, 0, 0, 1, -19.8603, 0)",
+            "matrix(1, 0, 0, 1, 4.83461, -8.54709)",
+            "matrix(1, 0, 0, 1, 3.16539, -1.45291)",
+            "matrix(1, 0, 0, 1, 7.82373, -21.2509)",
+            "matrix(1, 0, 0, 1, 0.176269, 11.2509)",
+            "matrix(1, 0, 0, 1, 7.14664, -18.3732)",
+            "matrix(1, 0, 0, 1, 0.853361, 8.37321)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.989349, -0.145563, 0.145563, 0.989349, -41.4549, -1.87526)",
+            "matrix(0.993241, 0.116074, -0.116074, 0.993241, 27.8164, 1.07865)"
+          ]
+        },
+        "after": {
+          "sceneMotion": "running",
+          "videoPaused": false,
+          "videoTime": 2.097113,
+          "videoDuration": 9.208008,
+          "animations": [
+            {
+              "name": "arena-ring",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "arena-ring-return",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "aurora-drift",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "beam-sweep",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "laser-travel",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "spark-rise",
+              "state": "running",
+              "time": 2149.991000002483
+            },
+            {
+              "name": "energy-flow",
+              "state": "running",
+              "time": 2149.991000002483
+            }
+          ],
+          "transforms": [
+            "matrix(1.01412, 0, 0, 1.01412, -52.7961, 2.00173)",
+            "matrix(0.918564, -0.395271, 0.395271, 0.918564, 0, 0)",
+            "matrix(0.707322, 0.706891, -0.706891, 0.707322, 0, 0)",
+            "matrix(0.999401, 0.0346191, -0.0346191, 0.999401, 0, 0)",
+            "matrix(0.87843, 0.477871, -0.477871, 0.87843, 0, 0)",
+            "matrix(1, 0, 0, 1, -13.7109, 0)",
+            "matrix(1, 0, 0, 1, 6.6653, -16.3275)",
+            "matrix(1, 0, 0, 1, 1.3347, 6.32755)",
+            "matrix(1, 0, 0, 1, 7.96137, -21.8358)",
+            "matrix(1, 0, 0, 1, 0.0386333, 11.8358)",
+            "matrix(1, 0, 0, 1, 5.55508, -11.6091)",
+            "matrix(1, 0, 0, 1, 2.44492, 1.6091)",
+            "matrix(1, 0, -0.404026, 1, 0, 0)",
+            "none"
+          ],
+          "ribbonTransforms": [
+            "matrix(0.990371, -0.138442, 0.138442, 0.990371, -37.2714, -3.10184)",
+            "matrix(0.993675, 0.112293, -0.112293, 0.993675, 25.7937, 1.78203)"
+          ]
+        }
+      },
+      "snapshotReload": true,
+      "screenshot": "scene-error.png"
+    },
+    {
+      "state": "completed",
+      "overlay": "rgb(166, 226, 130)",
+      "blendMode": "color",
+      "overlayZ": "-4",
+      "shadeZ": "-1",
+      "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+      "overlayOpacity": "0.38",
+      "titleColor": "rgb(231, 241, 245)",
+      "answerColor": "rgb(214, 227, 233)",
+      "promptColor": "rgb(221, 231, 239)",
+      "titleFilter": "none",
+      "stageFilter": "none",
+      "titleBlend": "normal",
+      "badge": "回放结束 · REPLAY END",
+      "status": "回放结束",
+      "transition": "0.8s",
+      "videoPaused": false,
+      "sceneMotion": "running",
+      "layers": {
+        ".scene-atmosphere": 1,
+        ".scene-aurora": 1,
+        ".scene-beam": 4,
+        ".scene-lasers": 1,
+        ".scene-sparks i": 6,
+        ".stage-energy": 1,
+        ".stage-flare": 1
+      },
+      "auroraBackground": "radial-gradient(at 60% 80%, rgba(144, 255, 73, 0.627), rgba(0, 0, 0, 0) 48%), radial-gradient(at 87% 40%, rgba(255, 196, 71, 0.69), rgba(0, 0, 0, 0) 42%), radial-gradient(at 40% 15%, rgba(65, 235, 255, 0.565), rgba(0, 0, 0, 0) 40%)",
+      "energyHeight": "14px",
+      "titleGlowHeight": "5px",
+      "beamWidths": [
+        "380px",
+        "460px",
+        "400px",
+        "280px"
+      ],
+      "ribbons": [
+        {
+          "pseudo": "::before",
+          "content": "\"\"",
+          "animation": "arena-ring",
+          "width": "1559.03px",
+          "height": "509.594px",
+          "background": "none",
+          "borderWidth": "18px"
+        },
+        {
+          "pseudo": "::after",
+          "content": "\"\"",
+          "animation": "arena-ring-return",
+          "width": "1521.91px",
+          "height": "436.797px",
+          "background": "none",
+          "borderWidth": "12px"
+        }
+      ],
+      "replay": true
+    },
+    {
+      "kind": "motion-controls",
+      "passed": [
+        "actual-transform-and-video-advance",
+        "toggle-pauses-lights-and-video",
+        "reload-retains-user-pause",
+        "toggle-resumes",
+        "battle-pause-and-resume",
+        "reduced-motion-dynamic-pause-and-resume",
+        "reduced-motion-preserves-user-pause"
+      ],
+      "reduced": {
+        "state": "running",
+        "overlay": "rgb(82, 210, 230)",
+        "blendMode": "color",
+        "overlayZ": "-4",
+        "shadeZ": "-1",
+        "filter": "grayscale(0.15) contrast(1.15) brightness(1.22) saturate(1.6)",
+        "overlayOpacity": "0.38",
+        "titleColor": "rgb(231, 241, 245)",
+        "answerColor": "rgb(214, 227, 233)",
+        "promptColor": "rgb(221, 231, 239)",
+        "titleFilter": "none",
+        "stageFilter": "none",
+        "titleBlend": "normal",
+        "badge": "对战中 · LIVE",
+        "status": "对战进行中",
+        "transition": "0s",
+        "videoPaused": true,
+        "sceneMotion": "paused",
+        "layers": {
+          ".scene-atmosphere": 1,
+          ".scene-aurora": 1,
+          ".scene-beam": 4,
+          ".scene-lasers": 1,
+          ".scene-sparks i": 6,
+          ".stage-energy": 1,
+          ".stage-flare": 1
+        },
+        "auroraBackground": "radial-gradient(at 35% 80%, rgba(0, 207, 255, 0.667), rgba(0, 0, 0, 0) 48%), radial-gradient(at 63% 10%, rgba(121, 29, 255, 0.816), rgba(0, 0, 0, 0) 43%), radial-gradient(at 91% 80%, rgba(255, 18, 142, 0.733), rgba(0, 0, 0, 0) 43%)",
+        "energyHeight": "14px",
+        "titleGlowHeight": "5px",
+        "beamWidths": [
+          "380px",
+          "460px",
+          "400px",
+          "280px"
+        ],
+        "ribbons": [
+          {
+            "pseudo": "::before",
+            "content": "\"\"",
+            "animation": "none",
+            "width": "1559.03px",
+            "height": "509.594px",
+            "background": "none",
+            "borderWidth": "18px"
+          },
+          {
+            "pseudo": "::after",
+            "content": "\"\"",
+            "animation": "none",
+            "width": "1521.91px",
+            "height": "436.797px",
+            "background": "none",
+            "borderWidth": "12px"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "css-fallback",
+      "passed": [
+        "layers-animate-without-video",
+        "toggle-stays-available",
+        "pause-and-resume"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 2,
+      "minimumSizes": [
+        {
+          "width": 922,
+          "height": 444
+        },
+        {
+          "width": 922,
+          "height": 444
+        },
+        {
+          "width": 1856,
+          "height": 176
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 4,
+      "minimumSizes": [
+        {
+          "width": 813,
+          "height": 444
+        },
+        {
+          "width": 1031,
+          "height": 216
+        },
+        {
+          "width": 509,
+          "height": 216
+        },
+        {
+          "width": 509,
+          "height": 216
+        },
+        {
+          "width": 1856,
+          "height": 176
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 8,
+      "minimumSizes": [
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 1856,
+          "height": 176
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "modelWindows": 16,
+      "minimumSizes": [
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 455,
+          "height": 216
+        },
+        {
+          "width": 1856,
+          "height": 176
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 2,
+      "minimumSizes": [
+        {
+          "width": 1162,
+          "height": 697
+        },
+        {
+          "width": 1162,
+          "height": 697
+        },
+        {
+          "width": 2336,
+          "height": 273
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 4,
+      "minimumSizes": [
+        {
+          "width": 1024,
+          "height": 697
+        },
+        {
+          "width": 1300,
+          "height": 345
+        },
+        {
+          "width": 644,
+          "height": 341
+        },
+        {
+          "width": 644,
+          "height": 341
+        },
+        {
+          "width": 2336,
+          "height": 273
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 8,
+      "minimumSizes": [
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 575,
+          "height": 343
+        },
+        {
+          "width": 2336,
+          "height": 273
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "layout",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "modelWindows": 16,
+      "minimumSizes": [
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 575,
+          "height": 216
+        },
+        {
+          "width": 2336,
+          "height": 176
+        }
+      ],
+      "passed": [
+        "minimum-size",
+        "drag-merge",
+        "drag-split",
+        "layout-reset"
+      ]
+    },
+    {
+      "kind": "natural-motion-recording",
+      "durationSeconds": 4,
+      "file": "scene-motion.webm",
+      "observedTransformsChange": true,
+      "observedScreenshotChange": true,
+      "animationCaptureMode": "natural",
+      "before": {
+        "sceneMotion": "running",
+        "videoPaused": false,
+        "videoTime": 1.58785,
+        "videoDuration": 9.208008,
+        "animations": [
+          {
+            "name": "arena-ring",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "arena-ring-return",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "aurora-drift",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "laser-travel",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 1633.314000004096
+          },
+          {
+            "name": "arena-entry",
+            "state": "running",
+            "time": 1516.6519999891837
+          },
+          {
+            "name": "energy-flow",
+            "state": "running",
+            "time": 1633.314000004096
+          }
+        ],
+        "transforms": [
+          "matrix(1.00802, 0, 0, 1.00802, -59.8097, 2.47314)",
+          "matrix(0.904012, -0.427507, 0.427507, 0.904012, 0, 0)",
+          "matrix(0.731266, 0.682093, -0.682093, 0.731266, 0, 0)",
+          "matrix(0.999449, 0.0332034, -0.0332034, 0.999449, 0, 0)",
+          "matrix(0.894131, 0.447805, -0.447805, 0.894131, 0, 0)",
+          "matrix(1, 0, 0, 1, -20.4356, 0)",
+          "matrix(1, 0, 0, 1, 4.60986, -7.59192)",
+          "matrix(1, 0, 0, 1, 3.39014, -2.40808)",
+          "matrix(1, 0, 0, 1, 7.76225, -20.9896)",
+          "matrix(1, 0, 0, 1, 0.237751, 10.9896)",
+          "matrix(1, 0, 0, 1, 7.26993, -18.8972)",
+          "matrix(1, 0, 0, 1, 0.730071, 8.8972)",
+          "matrix(1, 0, -0.404026, 1, 2548.85, 0)",
+          "none"
+        ],
+        "ribbonTransforms": [
+          "matrix(0.989253, -0.146216, 0.146216, 0.989253, -41.8388, -1.76273)",
+          "matrix(0.9932, 0.116421, -0.116421, 0.9932, 28.0019, 1.01414)"
+        ]
+      },
+      "after": {
+        "sceneMotion": "running",
+        "videoPaused": false,
+        "videoTime": 6.041974,
+        "videoDuration": 9.208008,
+        "animations": [
+          {
+            "name": "arena-ring",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "arena-ring-return",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "aurora-drift",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "beam-sweep",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "laser-travel",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "spark-rise",
+            "state": "running",
+            "time": 6083.048000004096
+          },
+          {
+            "name": "energy-flow",
+            "state": "running",
+            "time": 6083.048000004096
+          }
+        ],
+        "transforms": [
+          "matrix(1.09371, 0, 0, 1.09371, 38.7924, -4.15424)",
+          "matrix(0.996461, -0.0840584, 0.0840584, 0.996461, 0, 0)",
+          "matrix(0.651978, 0.758238, -0.758238, 0.651978, 0, 0)",
+          "matrix(0.983479, -0.181025, 0.181025, 0.983479, 0, 0)",
+          "matrix(0.740759, 0.671771, -0.671771, 0.740759, 0, 0)",
+          "matrix(1, 0, 0, 1, 29.4887, 0)",
+          "matrix(1, 0, 0, 1, 0.0117292, 11.9502)",
+          "matrix(1, 0, 0, 1, 7.98827, -21.9502)",
+          "matrix(1, 0, 0, 1, 2.17338, 2.76315)",
+          "matrix(1, 0, 0, 1, 5.82662, -12.7632)",
+          "matrix(1, 0, 0, 1, 6.44304, -15.3829)",
+          "matrix(1, 0, 0, 1, 1.55696, 5.38294)",
+          "matrix(1, 0, -0.404026, 1, 0, 0)",
+          "none"
+        ],
+        "ribbonTransforms": [
+          "matrix(0.999655, -0.0262775, 0.0262775, 0.999655, 28.217, -22.3026)",
+          "matrix(0.999009, 0.044518, -0.044518, 0.999009, -10.3433, 14.3489)"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "unexpected": []
+}

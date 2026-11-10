@@ -1,0 +1,192 @@
+{
+  "ok": true,
+  "checkedAt": "2026-09-12T08:31:38.111Z",
+  "checks": [
+    {
+      "name": "fresh默认核心48题，73库/2034题，空阵容；规则库无必选裁判",
+      "selected": "core-arena",
+      "count": 48,
+      "title": "73 个题库 · 2,034 道题"
+    },
+    {
+      "name": "5/10/20/全量快捷题数与选中状态准确"
+    },
+    {
+      "name": "搜索通假选中85题，全量随题库更新，规则评分不需要模型裁判"
+    },
+    {
+      "name": "主观库显式必选真实裁判，无mock，已配置目录模型可选且与批量共用",
+      "subjectiveLibrary": {
+        "id": "legal-boundary",
+        "text": "法槌边界 · 妄断诱导擂台 · 52 题",
+        "count": 52,
+        "requiresJudge": true
+      },
+      "judgeCount": 22,
+      "selectedJudge": "inclusionAI: Ling 3.0 Flash VL (free) · 免费"
+    },
+    {
+      "name": "1080p主观裁判+4模型布局已测量，无横溢出",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "scrollWidth": 1920,
+      "scrollX": 0,
+      "scrollY": 0,
+      "launch": {
+        "x": 1391,
+        "y": 952.59375,
+        "width": 310,
+        "height": 50.5,
+        "right": 1701,
+        "bottom": 1003.09375
+      },
+      "summary": {
+        "x": 1391,
+        "y": 546.046875,
+        "width": 310,
+        "height": 41.1875,
+        "right": 1701,
+        "bottom": 587.234375
+      },
+      "judge": {
+        "x": 1391,
+        "y": 752.421875,
+        "width": 310,
+        "height": 105.1875,
+        "right": 1701,
+        "bottom": 857.609375
+      },
+      "popover": null
+    },
+    {
+      "name": "1440p主观裁判+4模型布局已测量，无横溢出",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "scrollWidth": 2560,
+      "scrollX": 0,
+      "scrollY": 0,
+      "launch": {
+        "x": 1711,
+        "y": 952.59375,
+        "width": 310,
+        "height": 50.5,
+        "right": 2021,
+        "bottom": 1003.09375
+      },
+      "summary": {
+        "x": 1711,
+        "y": 546.046875,
+        "width": 310,
+        "height": 41.1875,
+        "right": 2021,
+        "bottom": 587.234375
+      },
+      "judge": {
+        "x": 1711,
+        "y": 752.421875,
+        "width": 310,
+        "height": 105.1875,
+        "right": 2021,
+        "bottom": 857.609375
+      },
+      "popover": null
+    },
+    {
+      "name": "刷新保留单场题库、题数、真实评分模型与参赛阵容"
+    },
+    {
+      "name": "未提交的批量题库与共享裁判刷新后保留，未触发submit或开赛"
+    },
+    {
+      "name": "批量混合主观库共用必选裁判，清空触发原生必填；纯规则批量无需裁判"
+    },
+    {
+      "name": "1080p规则库主按钮首屏且无横溢出",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "scrollWidth": 1920,
+      "scrollX": 0,
+      "scrollY": 0,
+      "launch": {
+        "x": 1391,
+        "y": 837.40625,
+        "width": 310,
+        "height": 50.5,
+        "right": 1701,
+        "bottom": 887.90625
+      },
+      "summary": {
+        "x": 1391,
+        "y": 546.046875,
+        "width": 310,
+        "height": 41.1875,
+        "right": 1701,
+        "bottom": 587.234375
+      },
+      "judge": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "popover": null
+    },
+    {
+      "name": "1440p规则库主按钮首屏且无横溢出",
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "scrollWidth": 2560,
+      "scrollX": 0,
+      "scrollY": 0,
+      "launch": {
+        "x": 1711,
+        "y": 837.40625,
+        "width": 310,
+        "height": 50.5,
+        "right": 2021,
+        "bottom": 887.90625
+      },
+      "summary": {
+        "x": 1711,
+        "y": 546.046875,
+        "width": 310,
+        "height": 41.1875,
+        "right": 2021,
+        "bottom": 587.234375
+      },
+      "judge": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "popover": null
+    },
+    {
+      "name": "无页面错误；仅只读首页/静态资源/模型目录/Agent状态GET，零比赛与配置请求"
+    }
+  ],
+  "requests": [
+    "GET /",
+    "GET /web/home.css",
+    "GET /web/model-picker.css",
+    "GET /web/home.js",
+    "GET /web/model-picker.js",
+    "GET /api/models",
+    "GET /api/agents"
+  ],
+  "blocked": [],
+  "errors": []
+}

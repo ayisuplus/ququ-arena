@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nvar garden=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nif(garden.Find(\"V017 ground supported park lamps\"))throw new System.Exception(\"Open park lamps already installed\");\nvar suspended=garden.Find(\"V014 enclosed botanical beds/Conservatory grow lights\");\nvar fixture=suspended.GetComponentsInChildren<UnityEngine.Transform>(true).First(t=>t.name==\"White suspended grow fixture\");\nvar poleMaterial=new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\")){name=\"ParkLampPearl\"};poleMaterial.SetColor(\"_BaseColor\",new UnityEngine.Color(.93f,.945f,.92f));poleMaterial.SetFloat(\"_Smoothness\",.45f);poleMaterial.SetFloat(\"_Metallic\",.15f);\nUnityEditor.AssetDatabase.CreateAsset(poleMaterial,\"Assets/Station/Materials/EcologicalParkV017/ParkLampPearl.mat\");\nUnityEditor.Undo.RecordObject(suspended.gameObject,\"Remove suspended park fixtures\");suspended.gameObject.SetActive(false);\nvar root=new UnityEngine.GameObject(\"V017 ground supported park lamps\");root.transform.SetParent(garden,false);UnityEditor.Undo.RegisterCreatedObjectUndo(root,\"Support open park lamps from ground\");\nvar rows=new System.Collections.Generic.List<object>();\nforeach(var light in garden.Find(\"V017 park daylight fixtures\").GetComponentsInChildren<UnityEngine.Light>()){\n var old=garden.InverseTransformPoint(light.transform.position);\n var p=new UnityEngine.Vector3(UnityEngine.Mathf.Sign(old.x)*21.5f,3.8f,UnityEngine.Mathf.Sign(old.z)*10);\n light.transform.position=garden.TransformPoint(p);light.transform.LookAt(garden.TransformPoint(new UnityEngine.Vector3(UnityEngine.Mathf.Sign(old.x)*16.5f,.8f,p.z)));light.intensity=18;light.range=10;\n var lamp=new UnityEngine.GameObject(\"Park lamp \"+rows.Count);lamp.transform.SetParent(root.transform,false);lamp.transform.localPosition=new UnityEngine.Vector3(p.x,0,p.z);\n var pole=UnityEngine.GameObject.CreatePrimitive(UnityEngine.PrimitiveType.Cylinder);pole.name=\"Slender pearl mast\";pole.transform.SetParent(lamp.transform,false);pole.transform.localPosition=new UnityEngine.Vector3(0,1.87f,0);pole.transform.localScale=new UnityEngine.Vector3(.09f,1.87f,.09f);pole.GetComponent<UnityEngine.MeshRenderer>().sharedMaterial=poleMaterial;\n var head=UnityEngine.Object.Instantiate(fixture.gameObject,lamp.transform);head.name=\"Reused diffuse grow fixture\";head.SetActive(true);head.transform.localPosition=new UnityEngine.Vector3(-UnityEngine.Mathf.Sign(p.x)*.65f,3.78f,0);head.transform.localRotation=UnityEngine.Quaternion.identity;head.transform.localScale=new UnityEngine.Vector3(2,.1f,.26f);\n foreach(var r in lamp.GetComponentsInChildren<UnityEngine.MeshRenderer>()){r.lightmapIndex=-1;UnityEditor.GameObjectUtility.SetStaticEditorFlags(r.gameObject,0);}\n rows.Add(new{position=p.ToString(\"F3\"),light.colorTemperature,light.intensity,light.range});\n}\nUnityEngine.Physics.SyncTransforms();UnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-open-park-20261003/lamps.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{groundSupportedFixtures=rows,noSuspensionFromRemovedRoof=true,reusedMesh=UnityEditor.AssetDatabase.GetAssetPath(fixture.GetComponent<UnityEngine.MeshFilter>().sharedMesh)},Newtonsoft.Json.Formatting.Indented));\nreturn new{lamps=rows.Count};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "lamps": 4
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

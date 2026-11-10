@@ -1,0 +1,1521 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "roman-num",
+    "title": "罗马数字擂台",
+    "description": "罗马数字 ↔ 阿拉伯数字双向转换（生成器自建）：40% 题偏向减记规则（IV/IX/XC/CD 的减法位）。契约测试用独立的减记规则实现复算。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:roman-num:2026-09-10",
+    "taskPrefix": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "to-roman": "阿拉伯→罗马",
+      "from-roman": "罗马→阿拉伯"
+    }
+  },
+  "startedAt": "2026-09-10T11:24:31.533Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RN-fwd-01",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 44 写成罗马数字是什么？",
+      "answer": "XLIV",
+      "target": "XLIV",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-fwd-01",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 44 写成罗马数字是什么？",
+      "answer": "XL",
+      "target": "XLIV",
+      "latencyMs": 366,
+      "score": 0,
+      "note": "期望「XLIV」，实答「XL」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-fwd-01",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 44 写成罗马数字是什么？",
+      "answer": "XLIV",
+      "target": "XLIV",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-fwd-01",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 44 写成罗马数字是什么？",
+      "answer": "XLIV",
+      "target": "XLIV",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-rev-02",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXXV 等于阿拉伯数字的几？",
+      "answer": "385",
+      "target": "385",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-rev-02",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXXV 等于阿拉伯数字的几？",
+      "answer": "385",
+      "target": "385",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-rev-02",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXXV 等于阿拉伯数字的几？",
+      "answer": "385",
+      "target": "385",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RN-rev-02",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXXV 等于阿拉伯数字的几？",
+      "answer": "385",
+      "target": "385",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-03",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 39 写成罗马数字是什么？",
+      "answer": "XXXIX",
+      "target": "XXXIX",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-03",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 39 写成罗马数字是什么？",
+      "answer": "XXXIX",
+      "target": "XXXIX",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-03",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 39 写成罗马数字是什么？",
+      "answer": "XXXIX",
+      "target": "XXXIX",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-03",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 39 写成罗马数字是什么？",
+      "answer": "XXXIX",
+      "target": "XXXIX",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-04",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCLXXXIV 等于阿拉伯数字的几？",
+      "answer": "784",
+      "target": "784",
+      "latencyMs": 309,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-04",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCLXXXIV 等于阿拉伯数字的几？",
+      "answer": "74",
+      "target": "784",
+      "latencyMs": 87,
+      "score": 0,
+      "note": "期望「784」，实答「74」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-04",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCLXXXIV 等于阿拉伯数字的几？",
+      "answer": "74",
+      "target": "784",
+      "latencyMs": 392,
+      "score": 0,
+      "note": "期望「784」，实答「74」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-04",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCLXXXIV 等于阿拉伯数字的几？",
+      "answer": "784",
+      "target": "784",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-05",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 983 写成罗马数字是什么？",
+      "answer": "CMLXXXIII",
+      "target": "CMLXXXIII",
+      "latencyMs": 434,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-05",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 983 写成罗马数字是什么？",
+      "answer": "CMLXX",
+      "target": "CMLXXXIII",
+      "latencyMs": 171,
+      "score": 0,
+      "note": "期望「CMLXXXIII」，实答「CMLXX」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-05",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 983 写成罗马数字是什么？",
+      "answer": "CMLXXXIII",
+      "target": "CMLXXXIII",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-05",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 983 写成罗马数字是什么？",
+      "answer": "CMLXXIII",
+      "target": "CMLXXXIII",
+      "latencyMs": 286,
+      "score": 0,
+      "note": "期望「CMLXXXIII」，实答「CMLXXIII」",
+      "usage": {
+        "input": 29,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-06",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CMXCV 等于阿拉伯数字的几？",
+      "answer": "99",
+      "target": "995",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「995」，实答「99」",
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-06",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CMXCV 等于阿拉伯数字的几？",
+      "answer": "995",
+      "target": "995",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-06",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CMXCV 等于阿拉伯数字的几？",
+      "answer": "995",
+      "target": "995",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-06",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CMXCV 等于阿拉伯数字的几？",
+      "answer": "在95",
+      "target": "995",
+      "latencyMs": 212,
+      "score": 0,
+      "note": "期望「995」，实答「在95」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-07",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 9 写成罗马数字是什么？",
+      "answer": "IX",
+      "target": "IX",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-07",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 9 写成罗马数字是什么？",
+      "answer": "I",
+      "target": "IX",
+      "latencyMs": 442,
+      "score": 0,
+      "note": "期望「IX」，实答「I」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-07",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 9 写成罗马数字是什么？",
+      "answer": "I",
+      "target": "IX",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「IX」，实答「I」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-07",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 9 写成罗马数字是什么？",
+      "answer": "IX",
+      "target": "IX",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-08",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXVI 等于阿拉伯数字的几？",
+      "answer": "376",
+      "target": "376",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-08",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXVI 等于阿拉伯数字的几？",
+      "answer": "376",
+      "target": "376",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-08",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXVI 等于阿拉伯数字的几？",
+      "answer": "37",
+      "target": "376",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「376」，实答「37」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-rev-08",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCCLXXVI 等于阿拉伯数字的几？",
+      "answer": "376",
+      "target": "376",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RN-fwd-09",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 473 写成罗马数字是什么？",
+      "answer": "CDLXXIII",
+      "target": "CDLXXIII",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-09",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 473 写成罗马数字是什么？",
+      "answer": "CDLXXIII",
+      "target": "CDLXXIII",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-09",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 473 写成罗马数字是什么？",
+      "answer": "CDLXXIII",
+      "target": "CDLXXIII",
+      "latencyMs": 154,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-09",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 473 写成罗马数字是什么？",
+      "answer": "CDLXXIII",
+      "target": "CDLXXIII",
+      "latencyMs": 270,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 4
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-10",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCXX 等于阿拉伯数字的几？",
+      "answer": "220",
+      "target": "220",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-10",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCXX 等于阿拉伯数字的几？",
+      "answer": "220",
+      "target": "220",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-10",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCXX 等于阿拉伯数字的几？",
+      "answer": "20",
+      "target": "220",
+      "latencyMs": 124,
+      "score": 0,
+      "note": "期望「220」，实答「20」",
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-10",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCXX 等于阿拉伯数字的几？",
+      "answer": "20",
+      "target": "220",
+      "latencyMs": 413,
+      "score": 0,
+      "note": "期望「220」，实答「20」",
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-11",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 49 写成罗马数字是什么？",
+      "answer": "XLIX",
+      "target": "XLIX",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-11",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 49 写成罗马数字是什么？",
+      "answer": "XL",
+      "target": "XLIX",
+      "latencyMs": 394,
+      "score": 0,
+      "note": "期望「XLIX」，实答「XL」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-11",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 49 写成罗马数字是什么？",
+      "answer": "XLI为",
+      "target": "XLIX",
+      "latencyMs": 193,
+      "score": 0,
+      "note": "期望「XLIX」，实答「XLI为」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-11",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 49 写成罗马数字是什么？",
+      "answer": "XLIX",
+      "target": "XLIX",
+      "latencyMs": 306,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-12",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XIV 等于阿拉伯数字的几？",
+      "answer": "14",
+      "target": "14",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-12",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XIV 等于阿拉伯数字的几？",
+      "answer": "1",
+      "target": "14",
+      "latencyMs": 415,
+      "score": 0,
+      "note": "期望「14」，实答「1」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-12",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XIV 等于阿拉伯数字的几？",
+      "answer": "1",
+      "target": "14",
+      "latencyMs": 317,
+      "score": 0,
+      "note": "期望「14」，实答「1」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-12",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XIV 等于阿拉伯数字的几？",
+      "answer": "14",
+      "target": "14",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-13",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 999 写成罗马数字是什么？",
+      "answer": "CMXCIX",
+      "target": "CMXCIX",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-13",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 999 写成罗马数字是什么？",
+      "answer": "CMXCIX",
+      "target": "CMXCIX",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-13",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 999 写成罗马数字是什么？",
+      "answer": "CMXCIX",
+      "target": "CMXCIX",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-13",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 999 写成罗马数字是什么？",
+      "answer": "CMX",
+      "target": "CMXCIX",
+      "latencyMs": 177,
+      "score": 0,
+      "note": "期望「CMXCIX」，实答「CMX」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-14",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XL 等于阿拉伯数字的几？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 471,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-14",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XL 等于阿拉伯数字的几？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-14",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XL 等于阿拉伯数字的几？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-14",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XL 等于阿拉伯数字的几？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-15",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 337 写成罗马数字是什么？",
+      "answer": "CCCXXXVII",
+      "target": "CCCXXXVII",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-15",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 337 写成罗马数字是什么？",
+      "answer": "CCCXXXVII",
+      "target": "CCCXXXVII",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-15",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 337 写成罗马数字是什么？",
+      "answer": "CCCXX",
+      "target": "CCCXXXVII",
+      "latencyMs": 350,
+      "score": 0,
+      "note": "期望「CCCXXXVII」，实答「CCCXX」",
+      "usage": {
+        "input": 29,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-15",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 337 写成罗马数字是什么？",
+      "answer": "CCCXXXVII",
+      "target": "CCCXXXVII",
+      "latencyMs": 138,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 5
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-16",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCXXXVIII 等于阿拉伯数字的几？",
+      "answer": "738",
+      "target": "738",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-16",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCXXXVIII 等于阿拉伯数字的几？",
+      "answer": "738",
+      "target": "738",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-16",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCXXXVIII 等于阿拉伯数字的几？",
+      "answer": "是38",
+      "target": "738",
+      "latencyMs": 391,
+      "score": 0,
+      "note": "期望「738」，实答「是38」",
+      "usage": {
+        "input": 32,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-16",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCCXXXVIII 等于阿拉伯数字的几？",
+      "answer": "738",
+      "target": "738",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-17",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 80 写成罗马数字是什么？",
+      "answer": "LXXX",
+      "target": "LXXX",
+      "latencyMs": 355,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-17",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 80 写成罗马数字是什么？",
+      "answer": "LXXX",
+      "target": "LXXX",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-17",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 80 写成罗马数字是什么？",
+      "answer": "LX",
+      "target": "LXXX",
+      "latencyMs": 419,
+      "score": 0,
+      "note": "期望「LXXX」，实答「LX」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-17",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 80 写成罗马数字是什么？",
+      "answer": "LXX",
+      "target": "LXXX",
+      "latencyMs": 405,
+      "score": 0,
+      "note": "期望「LXXX」，实答「LXX」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-18",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCLXXXVII 等于阿拉伯数字的几？",
+      "answer": "287",
+      "target": "287",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-18",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCLXXXVII 等于阿拉伯数字的几？",
+      "answer": "287",
+      "target": "287",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-18",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCLXXXVII 等于阿拉伯数字的几？",
+      "answer": "287",
+      "target": "287",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-18",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CCLXXXVII 等于阿拉伯数字的几？",
+      "answer": "287",
+      "target": "287",
+      "latencyMs": 355,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-19",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 53 写成罗马数字是什么？",
+      "answer": "LIII",
+      "target": "LIII",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-19",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 53 写成罗马数字是什么？",
+      "answer": "大III",
+      "target": "LIII",
+      "latencyMs": 310,
+      "score": 0,
+      "note": "期望「LIII」，实答「大III」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-19",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 53 写成罗马数字是什么？",
+      "answer": "LI大I",
+      "target": "LIII",
+      "latencyMs": 352,
+      "score": 0,
+      "note": "期望「LIII」，实答「LI大I」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-19",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 53 写成罗马数字是什么？",
+      "answer": "LI",
+      "target": "LIII",
+      "latencyMs": 343,
+      "score": 0,
+      "note": "期望「LIII」，实答「LI」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-20",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XC 等于阿拉伯数字的几？",
+      "answer": "90",
+      "target": "90",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-20",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XC 等于阿拉伯数字的几？",
+      "answer": "90",
+      "target": "90",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-20",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XC 等于阿拉伯数字的几？",
+      "answer": "90",
+      "target": "90",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-20",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 XC 等于阿拉伯数字的几？",
+      "answer": "90",
+      "target": "90",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-21",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 79 写成罗马数字是什么？",
+      "answer": "LXXIX",
+      "target": "LXXIX",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-21",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 79 写成罗马数字是什么？",
+      "answer": "LXIX",
+      "target": "LXXIX",
+      "latencyMs": 411,
+      "score": 0,
+      "note": "期望「LXXIX」，实答「LXIX」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-21",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 79 写成罗马数字是什么？",
+      "answer": "L在XIX",
+      "target": "LXXIX",
+      "latencyMs": 345,
+      "score": 0,
+      "note": "期望「LXXIX」，实答「L在XIX」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-21",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 79 写成罗马数字是什么？",
+      "answer": "LXX不X",
+      "target": "LXXIX",
+      "latencyMs": 354,
+      "score": 0,
+      "note": "期望「LXXIX」，实答「LXX不X」",
+      "usage": {
+        "input": 28,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-22",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CXCIX 等于阿拉伯数字的几？",
+      "answer": "199",
+      "target": "199",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-22",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CXCIX 等于阿拉伯数字的几？",
+      "answer": "199",
+      "target": "199",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-22",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CXCIX 等于阿拉伯数字的几？",
+      "answer": "199",
+      "target": "199",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-22",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 CXCIX 等于阿拉伯数字的几？",
+      "answer": "199",
+      "target": "199",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-23",
+      "condition": "to-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 99 写成罗马数字是什么？",
+      "answer": "XCIX",
+      "target": "XCIX",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-23",
+      "condition": "to-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 99 写成罗马数字是什么？",
+      "answer": "XCIX",
+      "target": "XCIX",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-23",
+      "condition": "to-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 99 写成罗马数字是什么？",
+      "answer": "XCI",
+      "target": "XCIX",
+      "latencyMs": 131,
+      "score": 0,
+      "note": "期望「XCIX」，实答「XCI」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-fwd-23",
+      "condition": "to-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：阿拉伯数字 99 写成罗马数字是什么？",
+      "answer": "XCIX",
+      "target": "XCIX",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-24",
+      "condition": "from-roman",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCXLIV 等于阿拉伯数字的几？",
+      "answer": "644",
+      "target": "644",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-24",
+      "condition": "from-roman",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCXLIV 等于阿拉伯数字的几？",
+      "answer": "644",
+      "target": "644",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-24",
+      "condition": "from-roman",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCXLIV 等于阿拉伯数字的几？",
+      "answer": "6不4",
+      "target": "644",
+      "latencyMs": 428,
+      "score": 0,
+      "note": "期望「644」，实答「6不4」",
+      "usage": {
+        "input": 30,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RN-rev-24",
+      "condition": "from-roman",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n罗马数字转换：罗马数字 DCXLIV 等于阿拉伯数字的几？",
+      "answer": "644",
+      "target": "644",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "0eddb7d4c5c86920",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.27.0"
+  }
+}

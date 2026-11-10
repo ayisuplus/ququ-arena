@@ -1,0 +1,1853 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "shuffle-track",
+    "title": "洗牌追踪擂台",
+    "description": "BBH tracking-shuffled-objects 的中文生成器版：N 人各持一物，K 次两两交换，问最后谁拿着某物。交换链程序化执行，生成器即权威；固定种子可复现。目标物必须动过才入题（原地不动的题不考追踪）。测多步状态追踪——LLM 经典弱项。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:shuffle-track:2026-09-10",
+    "taskPrefix": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "swaps-2": "3 人 2 换（入门）",
+      "swaps-4": "4 人 4 换（中等）",
+      "swaps-6": "5 人 6 换（绕晕）"
+    }
+  },
+  "startedAt": "2026-09-10T09:26:08.349Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-02",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🔑 与 甲 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-02",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🔑 与 甲 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-02",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🔑 与 甲 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-02",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🔑 与 甲 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-03",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 🔑 交换\n2. 甲 用手中的 🍎 与 丙 手中的 📱 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-03",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 🔑 交换\n2. 甲 用手中的 🍎 与 丙 手中的 📱 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-03",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 🔑 交换\n2. 甲 用手中的 🍎 与 丙 手中的 📱 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-03",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 🔑 交换\n2. 甲 用手中的 🍎 与 丙 手中的 📱 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-04",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 丙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-04",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 丙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-04",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 丙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-04",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 乙 用手中的 🍎 与 丙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 甲 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-05",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-05",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-05",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-05",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-06",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-06",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-06",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-06",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n2. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-07",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 丙 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丙 用手中的 🍎 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-07",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 丙 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丙 用手中的 🍎 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-07",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 丙 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丙 用手中的 🍎 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-07",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 丙 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丙 用手中的 🍎 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-08",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n2. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 149,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-08",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n2. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-08",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n2. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-08",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n2. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-09",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n2. 甲 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-09",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n2. 甲 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-09",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n2. 甲 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-09",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n2. 甲 用手中的 🍎 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-10",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 丙 用手中的 📱 与 乙 手中的 🍎 交换\n2. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-10",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 丙 用手中的 📱 与 乙 手中的 🍎 交换\n2. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-10",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 丙 用手中的 📱 与 乙 手中的 🍎 交换\n2. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-10",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📱。\n交换过程：\n1. 丙 用手中的 📱 与 乙 手中的 🍎 交换\n2. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-4-01",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🧸。\n交换过程：\n1. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n2. 丁 用手中的 🧸 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-01",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🧸。\n交换过程：\n1. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n2. 丁 用手中的 🧸 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-01",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🧸。\n交换过程：\n1. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n2. 丁 用手中的 🧸 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-01",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🧸。\n交换过程：\n1. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n2. 丁 用手中的 🧸 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🔑 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-02",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n2. 丁 用手中的 🔑 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 乙 用手中的 🔑 与 甲 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-02",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n2. 丁 用手中的 🔑 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 乙 用手中的 🔑 与 甲 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-02",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n2. 丁 用手中的 🔑 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 乙 用手中的 🔑 与 甲 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-02",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n2. 丁 用手中的 🔑 与 丙 手中的 📱 交换\n3. 乙 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 乙 用手中的 🔑 与 甲 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-03",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 乙 手中的 🔑 交换\n2. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n3. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n4. 甲 用手中的 🍎 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-03",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 乙 手中的 🔑 交换\n2. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n3. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n4. 甲 用手中的 🍎 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-03",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 乙 手中的 🔑 交换\n2. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n3. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n4. 甲 用手中的 🍎 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-03",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 乙 手中的 🔑 交换\n2. 乙 用手中的 🍎 与 甲 手中的 📱 交换\n3. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n4. 甲 用手中的 🍎 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-04",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🧸 与 丙 手中的 🍎 交换\n2. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n3. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n4. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-04",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🧸 与 丙 手中的 🍎 交换\n2. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n3. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n4. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 452,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-04",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🧸 与 丙 手中的 🍎 交换\n2. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n3. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n4. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-04",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🧸 与 丙 手中的 🍎 交换\n2. 丁 用手中的 🔑 与 乙 手中的 📱 交换\n3. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n4. 甲 用手中的 📱 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 165,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-05",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n3. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🧸 与 乙 手中的 🍎 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-05",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n3. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🧸 与 乙 手中的 🍎 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-05",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n3. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🧸 与 乙 手中的 🍎 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-05",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 📱 交换\n3. 甲 用手中的 📱 与 丙 手中的 🧸 交换\n4. 甲 用手中的 🧸 与 乙 手中的 🍎 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-06",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n2. 丙 用手中的 📱 与 丁 手中的 🍎 交换\n3. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n4. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-06",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n2. 丙 用手中的 📱 与 丁 手中的 🍎 交换\n3. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n4. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-06",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n2. 丙 用手中的 📱 与 丁 手中的 🍎 交换\n3. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n4. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-06",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n2. 丙 用手中的 📱 与 丁 手中的 🍎 交换\n3. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n4. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-07",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n2. 乙 用手中的 🔑 与 丙 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🍎 交换\n4. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-07",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n2. 乙 用手中的 🔑 与 丙 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🍎 交换\n4. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-07",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n2. 乙 用手中的 🔑 与 丙 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🍎 交换\n4. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 388,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-07",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 🧸，丁 拿着 📱。\n交换过程：\n1. 丁 用手中的 📱 与 甲 手中的 🍎 交换\n2. 乙 用手中的 🔑 与 丙 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🍎 交换\n4. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-08",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🧸，丙 拿着 📱，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n2. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 🧸 交换\n4. 丙 用手中的 🔑 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-08",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🧸，丙 拿着 📱，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n2. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 🧸 交换\n4. 丙 用手中的 🔑 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-08",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🧸，丙 拿着 📱，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n2. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 🧸 交换\n4. 丙 用手中的 🔑 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-08",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🧸，丙 拿着 📱，丁 拿着 🔑。\n交换过程：\n1. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n2. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 🧸 交换\n4. 丙 用手中的 🔑 与 甲 手中的 📱 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-09",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🔑，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 甲 手中的 🧸 交换\n2. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n4. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-09",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🔑，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 甲 手中的 🧸 交换\n2. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n4. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-09",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🔑，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 甲 手中的 🧸 交换\n2. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n4. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-09",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🔑，丁 拿着 🍎。\n交换过程：\n1. 丁 用手中的 🍎 与 甲 手中的 🧸 交换\n2. 丁 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 🍎 与 丁 手中的 🔑 交换\n4. 丙 用手中的 🧸 与 乙 手中的 📱 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-10",
+      "condition": "swaps-4",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 🧸 交换\n2. 乙 用手中的 📱 与 甲 手中的 🧸 交换\n3. 丁 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 甲 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-10",
+      "condition": "swaps-4",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 🧸 交换\n2. 乙 用手中的 📱 与 甲 手中的 🧸 交换\n3. 丁 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 甲 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-10",
+      "condition": "swaps-4",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 🧸 交换\n2. 乙 用手中的 📱 与 甲 手中的 🧸 交换\n3. 丁 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 甲 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-4-10",
+      "condition": "swaps-4",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🧸，丁 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 丙 手中的 🧸 交换\n2. 乙 用手中的 📱 与 甲 手中的 🧸 交换\n3. 丁 用手中的 🍎 与 丙 手中的 🔑 交换\n4. 甲 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 364,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-01",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📱，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 丁 手中的 📱 交换\n2. 甲 用手中的 📖 与 乙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 📖 交换\n4. 乙 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丙 用手中的 🧸 与 甲 手中的 📱 交换\n6. 丁 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-01",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📱，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 丁 手中的 📱 交换\n2. 甲 用手中的 📖 与 乙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 📖 交换\n4. 乙 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丙 用手中的 🧸 与 甲 手中的 📱 交换\n6. 丁 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-01",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📱，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 丁 手中的 📱 交换\n2. 甲 用手中的 📖 与 乙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 📖 交换\n4. 乙 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丙 用手中的 🧸 与 甲 手中的 📱 交换\n6. 丁 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-01",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📱，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 🍎 与 丁 手中的 📱 交换\n2. 甲 用手中的 📖 与 乙 手中的 📱 交换\n3. 丁 用手中的 🍎 与 乙 手中的 📖 交换\n4. 乙 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丙 用手中的 🧸 与 甲 手中的 📱 交换\n6. 丁 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-02",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📖，丁 拿着 📱，戊 拿着 🧸。\n交换过程：\n1. 丙 用手中的 📖 与 甲 手中的 🔑 交换\n2. 戊 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 📖 与 乙 手中的 🍎 交换\n4. 甲 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n6. 乙 用手中的 📖 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-02",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📖，丁 拿着 📱，戊 拿着 🧸。\n交换过程：\n1. 丙 用手中的 📖 与 甲 手中的 🔑 交换\n2. 戊 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 📖 与 乙 手中的 🍎 交换\n4. 甲 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n6. 乙 用手中的 📖 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-02",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📖，丁 拿着 📱，戊 拿着 🧸。\n交换过程：\n1. 丙 用手中的 📖 与 甲 手中的 🔑 交换\n2. 戊 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 📖 与 乙 手中的 🍎 交换\n4. 甲 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n6. 乙 用手中的 📖 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 86,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-02",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🍎，丙 拿着 📖，丁 拿着 📱，戊 拿着 🧸。\n交换过程：\n1. 丙 用手中的 📖 与 甲 手中的 🔑 交换\n2. 戊 用手中的 🧸 与 丙 手中的 🔑 交换\n3. 甲 用手中的 📖 与 乙 手中的 🍎 交换\n4. 甲 用手中的 🍎 与 戊 手中的 🔑 交换\n5. 丁 用手中的 📱 与 甲 手中的 🔑 交换\n6. 乙 用手中的 📖 与 丙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-03",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 丙 用手中的 📖 与 戊 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 🔑 交换\n3. 乙 用手中的 🍎 与 戊 手中的 📖 交换\n4. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n5. 丁 用手中的 🧸 与 甲 手中的 📱 交换\n6. 甲 用手中的 🧸 与 乙 手中的 📖 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-03",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 丙 用手中的 📖 与 戊 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 🔑 交换\n3. 乙 用手中的 🍎 与 戊 手中的 📖 交换\n4. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n5. 丁 用手中的 🧸 与 甲 手中的 📱 交换\n6. 甲 用手中的 🧸 与 乙 手中的 📖 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-03",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 丙 用手中的 📖 与 戊 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 🔑 交换\n3. 乙 用手中的 🍎 与 戊 手中的 📖 交换\n4. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n5. 丁 用手中的 🧸 与 甲 手中的 📱 交换\n6. 甲 用手中的 🧸 与 乙 手中的 📖 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-03",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 丙 用手中的 📖 与 戊 手中的 📱 交换\n2. 甲 用手中的 🍎 与 乙 手中的 🔑 交换\n3. 乙 用手中的 🍎 与 戊 手中的 📖 交换\n4. 甲 用手中的 🔑 与 丙 手中的 📱 交换\n5. 丁 用手中的 🧸 与 甲 手中的 📱 交换\n6. 甲 用手中的 🧸 与 乙 手中的 📖 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-04",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n3. 戊 用手中的 🔑 与 乙 手中的 📖 交换\n4. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n5. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n6. 甲 用手中的 📖 与 戊 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-04",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n3. 戊 用手中的 🔑 与 乙 手中的 📖 交换\n4. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n5. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n6. 甲 用手中的 📖 与 戊 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 443,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-04",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n3. 戊 用手中的 🔑 与 乙 手中的 📖 交换\n4. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n5. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n6. 甲 用手中的 📖 与 戊 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-04",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 📱，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 乙 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n3. 戊 用手中的 🔑 与 乙 手中的 📖 交换\n4. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n5. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n6. 甲 用手中的 📖 与 戊 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-05",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 🧸 交换\n2. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n3. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n4. 戊 用手中的 📱 与 甲 手中的 🧸 交换\n5. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n6. 甲 用手中的 📱 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-05",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 🧸 交换\n2. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n3. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n4. 戊 用手中的 📱 与 甲 手中的 🧸 交换\n5. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n6. 甲 用手中的 📱 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-05",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 🧸 交换\n2. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n3. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n4. 戊 用手中的 📱 与 甲 手中的 🧸 交换\n5. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n6. 甲 用手中的 📱 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-05",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🍎，乙 拿着 🔑，丙 拿着 📖，丁 拿着 🧸，戊 拿着 📱。\n交换过程：\n1. 乙 用手中的 🔑 与 丁 手中的 🧸 交换\n2. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n3. 丙 用手中的 🧸 与 甲 手中的 🍎 交换\n4. 戊 用手中的 📱 与 甲 手中的 🧸 交换\n5. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n6. 甲 用手中的 📱 与 丁 手中的 🔑 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "戊",
+      "target": "戊",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-06",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 戊 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丁 用手中的 📖 与 戊 手中的 🍎 交换\n3. 丙 用手中的 🧸 与 戊 手中的 📖 交换\n4. 甲 用手中的 📱 与 丁 手中的 🍎 交换\n5. 戊 用手中的 🧸 与 乙 手中的 🔑 交换\n6. 甲 用手中的 🍎 与 乙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-06",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 戊 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丁 用手中的 📖 与 戊 手中的 🍎 交换\n3. 丙 用手中的 🧸 与 戊 手中的 📖 交换\n4. 甲 用手中的 📱 与 丁 手中的 🍎 交换\n5. 戊 用手中的 🧸 与 乙 手中的 🔑 交换\n6. 甲 用手中的 🍎 与 乙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-06",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 戊 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丁 用手中的 📖 与 戊 手中的 🍎 交换\n3. 丙 用手中的 🧸 与 戊 手中的 📖 交换\n4. 甲 用手中的 📱 与 丁 手中的 🍎 交换\n5. 戊 用手中的 🧸 与 乙 手中的 🔑 交换\n6. 甲 用手中的 🍎 与 乙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 322,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-06",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 戊 用手中的 🔑 与 乙 手中的 🍎 交换\n2. 丁 用手中的 📖 与 戊 手中的 🍎 交换\n3. 丙 用手中的 🧸 与 戊 手中的 📖 交换\n4. 甲 用手中的 📱 与 丁 手中的 🍎 交换\n5. 戊 用手中的 🧸 与 乙 手中的 🔑 交换\n6. 甲 用手中的 🍎 与 乙 手中的 🧸 交换\n\n问题：全部交换完成后，🧸 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-07",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 🧸。\n交换过程：\n1. 丁 用手中的 🔑 与 甲 手中的 📖 交换\n2. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n3. 丁 用手中的 📖 与 乙 手中的 🍎 交换\n4. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n5. 戊 用手中的 📖 与 甲 手中的 🔑 交换\n6. 乙 用手中的 🧸 与 戊 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-07",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 🧸。\n交换过程：\n1. 丁 用手中的 🔑 与 甲 手中的 📖 交换\n2. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n3. 丁 用手中的 📖 与 乙 手中的 🍎 交换\n4. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n5. 戊 用手中的 📖 与 甲 手中的 🔑 交换\n6. 乙 用手中的 🧸 与 戊 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-07",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 🧸。\n交换过程：\n1. 丁 用手中的 🔑 与 甲 手中的 📖 交换\n2. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n3. 丁 用手中的 📖 与 乙 手中的 🍎 交换\n4. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n5. 戊 用手中的 📖 与 甲 手中的 🔑 交换\n6. 乙 用手中的 🧸 与 戊 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-07",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📖，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 🧸。\n交换过程：\n1. 丁 用手中的 🔑 与 甲 手中的 📖 交换\n2. 丙 用手中的 🍎 与 乙 手中的 📱 交换\n3. 丁 用手中的 📖 与 乙 手中的 🍎 交换\n4. 乙 用手中的 📖 与 戊 手中的 🧸 交换\n5. 戊 用手中的 📖 与 甲 手中的 🔑 交换\n6. 乙 用手中的 🧸 与 戊 手中的 🔑 交换\n\n问题：全部交换完成后，🍎 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-08",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🧸，丙 拿着 📖，丁 拿着 📱，戊 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n2. 戊 用手中的 🍎 与 丙 手中的 🧸 交换\n3. 甲 用手中的 🔑 与 戊 手中的 🧸 交换\n4. 戊 用手中的 🔑 与 丁 手中的 📱 交换\n5. 戊 用手中的 📱 与 乙 手中的 📖 交换\n6. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-08",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🧸，丙 拿着 📖，丁 拿着 📱，戊 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n2. 戊 用手中的 🍎 与 丙 手中的 🧸 交换\n3. 甲 用手中的 🔑 与 戊 手中的 🧸 交换\n4. 戊 用手中的 🔑 与 丁 手中的 📱 交换\n5. 戊 用手中的 📱 与 乙 手中的 📖 交换\n6. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-08",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🧸，丙 拿着 📖，丁 拿着 📱，戊 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n2. 戊 用手中的 🍎 与 丙 手中的 🧸 交换\n3. 甲 用手中的 🔑 与 戊 手中的 🧸 交换\n4. 戊 用手中的 🔑 与 丁 手中的 📱 交换\n5. 戊 用手中的 📱 与 乙 手中的 📖 交换\n6. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-08",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 🧸，丙 拿着 📖，丁 拿着 📱，戊 拿着 🍎。\n交换过程：\n1. 乙 用手中的 🧸 与 丙 手中的 📖 交换\n2. 戊 用手中的 🍎 与 丙 手中的 🧸 交换\n3. 甲 用手中的 🔑 与 戊 手中的 🧸 交换\n4. 戊 用手中的 🔑 与 丁 手中的 📱 交换\n5. 戊 用手中的 📱 与 乙 手中的 📖 交换\n6. 乙 用手中的 📱 与 丙 手中的 🍎 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丁",
+      "target": "丁",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-09",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 丁 手中的 📱 交换\n3. 甲 用手中的 📖 与 戊 手中的 🔑 交换\n4. 乙 用手中的 🍎 与 丁 手中的 🧸 交换\n5. 乙 用手中的 🧸 与 甲 手中的 🔑 交换\n6. 甲 用手中的 🧸 与 戊 手中的 📖 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 112,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-09",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 丁 手中的 📱 交换\n3. 甲 用手中的 📖 与 戊 手中的 🔑 交换\n4. 乙 用手中的 🍎 与 丁 手中的 🧸 交换\n5. 乙 用手中的 🧸 与 甲 手中的 🔑 交换\n6. 甲 用手中的 🧸 与 戊 手中的 📖 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-09",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 丁 手中的 📱 交换\n3. 甲 用手中的 📖 与 戊 手中的 🔑 交换\n4. 乙 用手中的 🍎 与 丁 手中的 🧸 交换\n5. 乙 用手中的 🧸 与 甲 手中的 🔑 交换\n6. 甲 用手中的 🧸 与 戊 手中的 📖 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 311,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-09",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 📱，乙 拿着 🍎，丙 拿着 🧸，丁 拿着 📖，戊 拿着 🔑。\n交换过程：\n1. 甲 用手中的 📱 与 丁 手中的 📖 交换\n2. 丙 用手中的 🧸 与 丁 手中的 📱 交换\n3. 甲 用手中的 📖 与 戊 手中的 🔑 交换\n4. 乙 用手中的 🍎 与 丁 手中的 🧸 交换\n5. 乙 用手中的 🧸 与 甲 手中的 🔑 交换\n6. 甲 用手中的 🧸 与 戊 手中的 📖 交换\n\n问题：全部交换完成后，📖 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-10",
+      "condition": "swaps-6",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 📖。\n交换过程：\n1. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n2. 乙 用手中的 📱 与 戊 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n4. 戊 用手中的 📱 与 甲 手中的 📖 交换\n5. 丙 用手中的 🍎 与 丁 手中的 🧸 交换\n6. 戊 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ST-swaps-6-10",
+      "condition": "swaps-6",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 📖。\n交换过程：\n1. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n2. 乙 用手中的 📱 与 戊 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n4. 戊 用手中的 📱 与 甲 手中的 📖 交换\n5. 丙 用手中的 🍎 与 丁 手中的 🧸 交换\n6. 戊 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "ST-swaps-6-10",
+      "condition": "swaps-6",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 📖。\n交换过程：\n1. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n2. 乙 用手中的 📱 与 戊 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n4. 戊 用手中的 📱 与 甲 手中的 📖 交换\n5. 丙 用手中的 🍎 与 丁 手中的 🧸 交换\n6. 戊 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "ST-swaps-6-10",
+      "condition": "swaps-6",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🧸，乙 拿着 📱，丙 拿着 🍎，丁 拿着 🔑，戊 拿着 📖。\n交换过程：\n1. 戊 用手中的 📖 与 甲 手中的 🧸 交换\n2. 乙 用手中的 📱 与 戊 手中的 🧸 交换\n3. 乙 用手中的 🧸 与 丁 手中的 🔑 交换\n4. 戊 用手中的 📱 与 甲 手中的 📖 交换\n5. 丙 用手中的 🍎 与 丁 手中的 🧸 交换\n6. 戊 用手中的 📖 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，📱 在谁手里？",
+      "answer": "甲",
+      "target": "甲",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 130,
+        "output": 1
+      },
+      "finishedMs": 3
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "d2af89e807bb062f",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.18.0"
+  }
+}

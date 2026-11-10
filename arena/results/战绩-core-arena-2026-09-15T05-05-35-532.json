@@ -1,0 +1,128 @@
+{
+  "id": "b17894487355252",
+  "arena": {
+    "name": "core-arena",
+    "title": "综合竞技 · 推理与数据",
+    "description": "48 道原创确定性题目：逻辑推理、定量计算、文本约束、数据处理各 12 题，基础与进阶交错。题面给出全部条件，无需外部知识。按指定格式输出最终答案；每题等权，使用标准化精确匹配，正确得 1 分，否则 0 分。难度是出题结构标签，尚未用模型成绩标定。前 5 / 10 / 20 题均覆盖四类能力。",
+    "author": "AI斗兽场 · 原创题库",
+    "version": "1.0.0",
+    "canary": "ququ-arena:core-20260912-d749c187",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": false
+    },
+    "taskPrefix": "只输出题目要求的最终结果，不加解释、单位或 Markdown。可使用公开推理通道进行分析。\n",
+    "conditions": {
+      "logic": "逻辑推理",
+      "quantitative": "定量计算",
+      "text": "文本约束",
+      "data": "数据处理"
+    }
+  },
+  "startedAt": "2026-09-15T05:05:35.532Z",
+  "durationMs": 35387,
+  "contestants": [
+    {
+      "id": "custom:df1d472f-d8fc-47ed-bfb0-482586196fbf",
+      "name": "Hy3 · B.AI 活动免费",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "hy3"
+    },
+    {
+      "id": "custom:4338e9e3-2bf4-4dd0-9dd3-c84b2954fbf2",
+      "name": "MiMo-V2.5 · B.AI 活动免费",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "mimo-v2.5"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "logic-01",
+      "condition": "logic",
+      "model": "custom:df1d472f-d8fc-47ed-bfb0-482586196fbf",
+      "prompt": "只输出题目要求的最终结果，不加解释、单位或 Markdown。可使用公开推理通道进行分析。\n四个任务 A、B、C、D 各执行一次，依次排成一列。A 和 B 都必须在 C 之前，C 必须在 D 之前。共有多少种合法排列？只输出整数。",
+      "answer": "",
+      "target": "2",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 35263,
+      "attempts": 3,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "custom:df1d472f-d8fc-47ed-bfb0-482586196fbf",
+        "taskId": "logic-01",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1789448770795
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 35263
+    },
+    {
+      "taskId": "logic-01",
+      "condition": "logic",
+      "model": "custom:4338e9e3-2bf4-4dd0-9dd3-c84b2954fbf2",
+      "prompt": "只输出题目要求的最终结果，不加解释、单位或 Markdown。可使用公开推理通道进行分析。\n四个任务 A、B、C、D 各执行一次，依次排成一列。A 和 B 都必须在 C 之前，C 必须在 D 之前。共有多少种合法排列？只输出整数。",
+      "answer": "",
+      "target": "2",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 35263,
+      "attempts": 3,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "custom:4338e9e3-2bf4-4dd0-9dd3-c84b2954fbf2",
+        "taskId": "logic-01",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1789448770796
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 35264
+    }
+  ],
+  "withdrawals": [
+    {
+      "modelId": "custom:df1d472f-d8fc-47ed-bfb0-482586196fbf",
+      "taskId": "logic-01",
+      "reason": "failures",
+      "message": "本场累计调用失败 3 次，已弃权",
+      "failures": 3,
+      "at": 1789448770795
+    },
+    {
+      "modelId": "custom:4338e9e3-2bf4-4dd0-9dd3-c84b2954fbf2",
+      "taskId": "logic-01",
+      "reason": "failures",
+      "message": "本场累计调用失败 3 次，已弃权",
+      "failures": 3,
+      "at": 1789448770796
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "84d4638598dff4f6",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.29.0",
+    "plannedTasks": 5,
+    "rankingPolicy": "quality-efficiency-v1",
+    "execution": {
+      "schedule": "rounds",
+      "concurrency": 8,
+      "reasoning": "medium",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  },
+  "timelineFile": "timeline-338de957-ade1-4ddb-a2a9-3f3d0be6e9d2.jsonl"
+}

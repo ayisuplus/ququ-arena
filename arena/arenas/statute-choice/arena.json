@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "statute-choice",
+  "title": "法条竞合 · 择一适用擂台",
+  "description": "主题致敬法律AI（请求权基础思维；内容自建，条文为民法典原文）。每题案情同时触及两条真实条文，只有一条支配：special-over-general 考特别/范围条款优先（464 身份协议/496 提示说明/506 人身免责/215 登记分离），election-by-facts 考择一与要件择选（588 定金违约金、311/597 善意取得与无权处分），procedure-timing 考生效时点与程序规定（502 批准/137 电文/682 从合同/486 逾期承诺），general-fallback 是防过度适用的对照（无特别情形时回一般条款）。只输出支配条号，exact 裁判。",
+  "author": "AI斗兽场（主题致敬：法律AI）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:statute-choice:2026-09-10",
+  "taskPrefix": "你是法律适用评审。案情可能同时触及两条条文，但只有一条是支配性规定（特别规定优先于一般规定；明文择一从其规定；程序性规定先行；无特别情形时回到一般条款）。只输出支配条文的阿拉伯数字条号（如 563），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "special-over-general": "特别/范围条款优先于一般条款",
+    "election-by-facts": "择一适用或按要件择选（善意取得/定金违约金）",
+    "procedure-timing": "程序/生效时点规定先行",
+    "general-fallback": "对照：无特别情形时回一般条款（防过度适用特别法）"
+  }
+}

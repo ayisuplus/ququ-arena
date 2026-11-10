@@ -1,0 +1,160 @@
+{
+  "version": "v20",
+  "built": {
+    "status": "completed",
+    "buildId": "build_ef294af11662",
+    "result": "Succeeded",
+    "buildTimeMs": 10242,
+    "totalErrors": 0,
+    "totalWarnings": 1,
+    "warnings": [
+      {
+        "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+      }
+    ]
+  },
+  "recordedAt": "2026-09-21T18:02:49.799953+08:00",
+  "artifacts": [
+    {
+      "path": "Start-Game-v20.cmd",
+      "bytes": 79,
+      "sha256": "29264c9a62b1e48f9646e482923da97813cfd62af36e6c28536de6c71ddaf4da"
+    },
+    {
+      "path": "production/gallery-v20/gallery.blend",
+      "bytes": 249214,
+      "sha256": "7539815bf4f1d900a9deede4e55e9bb5de1247dcd2b36a2ef8c94fd80e13318a"
+    },
+    {
+      "path": "production/gallery-v20/gallery-gray.blend",
+      "bytes": 112415,
+      "sha256": "7ff9918266e14cea78117c342f6800839d1fb17128bc439d7759b4759e3afb1a"
+    },
+    {
+      "path": "production/gallery-v20/build_gallery.py",
+      "bytes": 6949,
+      "sha256": "ffc95063fa1b5fdcbfed732f82546c215424f997ad58a9f251d35ce5a50cdf44"
+    },
+    {
+      "path": "QuQuArena3D/BuildGalleryV20/QuQuArena3D.exe",
+      "bytes": 667136,
+      "sha256": "e1a9d9e062bbcdb91f76983fae8bb1e4fb8036d55289318ef91033f130d38ecc"
+    },
+    {
+      "path": "QuQuArena3D/BuildGalleryV20/QuQuArena3D_Data/Managed/Assembly-CSharp.dll",
+      "bytes": 571392,
+      "sha256": "b0aa28bb123f1a7c6adec6d5a110afbc212a6b2fa64a07cd293102f8deaecee9"
+    },
+    {
+      "path": "docs/validation/gallery-v20/gallery-preview.mp4",
+      "bytes": 12996922,
+      "sha256": "4b67f070cd7b286b8457c34f4a2683b381670825605d94ae8a3563165e888cc7"
+    }
+  ],
+  "validation": {
+    "automatedBuild": "build-03",
+    "finalInputBuild": "build-05",
+    "automatedPassed": true,
+    "soakSeconds": 600.0085,
+    "maximumWalking": 3,
+    "minimumSeparation": 1.282586,
+    "performance": [
+      {
+        "view": "gallery + saved duel playback",
+        "width": 1920,
+        "height": 1080,
+        "fps": 59.9782372,
+        "p95ms": 16.6706982,
+        "seconds": 10
+      },
+      {
+        "view": "inspection",
+        "width": 1920,
+        "height": 1080,
+        "fps": 59.97574,
+        "p95ms": 16.670599,
+        "seconds": 10
+      },
+      {
+        "view": "arena",
+        "width": 1920,
+        "height": 1080,
+        "fps": 59.98411,
+        "p95ms": 16.6702023,
+        "seconds": 10
+      },
+      {
+        "view": "gallery + saved duel playback",
+        "width": 2560,
+        "height": 1440,
+        "fps": 59.9881744,
+        "p95ms": 16.6708984,
+        "seconds": 10
+      },
+      {
+        "view": "inspection",
+        "width": 2560,
+        "height": 1440,
+        "fps": 59.9809341,
+        "p95ms": 16.6699047,
+        "seconds": 10
+      },
+      {
+        "view": "arena",
+        "width": 2560,
+        "height": 1440,
+        "fps": 59.9839172,
+        "p95ms": 16.6705017,
+        "seconds": 10
+      },
+      {
+        "view": "gallery + saved duel playback",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.98365,
+        "p95ms": 16.6708984,
+        "seconds": 10
+      },
+      {
+        "view": "inspection",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.9831429,
+        "p95ms": 16.6709957,
+        "seconds": 10
+      },
+      {
+        "view": "arena",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.98689,
+        "p95ms": 16.6704,
+        "seconds": 10
+      }
+    ],
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "runtimeErrors": [],
+    "lifecycle": {
+      "playerExited": true,
+      "exitCode": 0,
+      "dataLockReleased": true,
+      "backendStopped": true
+    },
+    "competitionEvidence": "Saved competition event fixture; no new model calls",
+    "pendingManual": [],
+    "manualInputPassed": true,
+    "finalLifecycle": {
+      "playerExited": true,
+      "backendStopped": true,
+      "dataLockReleased": true
+    }
+  },
+  "preservation": {
+    "v19Unchanged": true,
+    "userProfileUnchanged": true
+  },
+  "sourceHashes": "source-hashes.json",
+  "meshyCalls": 0,
+  "modelCalls": 0,
+  "credits": 0
+}

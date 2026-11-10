@@ -1,0 +1,1251 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "measure-word",
+    "title": "量词填空擂台",
+    "description": "中文量词填空（自建 canonical 单字答案，20 题）：一匹马/一头牛/一盏灯——量词是中文学习的著名难点，错配即翻车（说\"一只马\"的模型中文没过关）。exact 裁判。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:measure-word:2026-09-10",
+    "taskPrefix": "只输出缺的量词本身（一个字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "blank": "量词填一字"
+    }
+  },
+  "startedAt": "2026-09-10T10:58:20.014Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "MW-01",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__马」缺一个量词，填哪个字？",
+      "answer": "匹",
+      "target": "匹",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-01",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__马」缺一个量词，填哪个字？",
+      "answer": "匹",
+      "target": "匹",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-01",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__马」缺一个量词，填哪个字？",
+      "answer": "匹",
+      "target": "匹",
+      "latencyMs": 297,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-01",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__马」缺一个量词，填哪个字？",
+      "answer": "匹",
+      "target": "匹",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-02",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__牛」缺一个量词，填哪个字？",
+      "answer": "头",
+      "target": "头",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-02",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__牛」缺一个量词，填哪个字？",
+      "answer": "头",
+      "target": "头",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-02",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__牛」缺一个量词，填哪个字？",
+      "answer": "头",
+      "target": "头",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-02",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__牛」缺一个量词，填哪个字？",
+      "answer": "头",
+      "target": "头",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-03",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__狗」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 408,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-03",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__狗」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-03",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__狗」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-03",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__狗」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-04",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__猫」缺一个量词，填哪个字？",
+      "answer": "只",
+      "target": "只",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-04",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__猫」缺一个量词，填哪个字？",
+      "answer": "只",
+      "target": "只",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-04",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__猫」缺一个量词，填哪个字？",
+      "answer": "只",
+      "target": "只",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-04",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__猫」缺一个量词，填哪个字？",
+      "answer": "只",
+      "target": "只",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-05",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鞋」缺一个量词，填哪个字？",
+      "answer": "双",
+      "target": "双",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-05",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鞋」缺一个量词，填哪个字？",
+      "answer": "双",
+      "target": "双",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-05",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鞋」缺一个量词，填哪个字？",
+      "answer": "双",
+      "target": "双",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-05",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鞋」缺一个量词，填哪个字？",
+      "answer": "双",
+      "target": "双",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-06",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__眼镜」缺一个量词，填哪个字？",
+      "answer": "副",
+      "target": "副",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-06",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__眼镜」缺一个量词，填哪个字？",
+      "answer": "副",
+      "target": "副",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-06",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__眼镜」缺一个量词，填哪个字？",
+      "answer": "副",
+      "target": "副",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-06",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__眼镜」缺一个量词，填哪个字？",
+      "answer": "副",
+      "target": "副",
+      "latencyMs": 259,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-07",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__书」缺一个量词，填哪个字？",
+      "answer": "本",
+      "target": "本",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-07",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__书」缺一个量词，填哪个字？",
+      "answer": "本",
+      "target": "本",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-07",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__书」缺一个量词，填哪个字？",
+      "answer": "本",
+      "target": "本",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "MW-07",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__书」缺一个量词，填哪个字？",
+      "answer": "本",
+      "target": "本",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-08",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__桌子」缺一个量词，填哪个字？",
+      "answer": "张",
+      "target": "张",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-08",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__桌子」缺一个量词，填哪个字？",
+      "answer": "张",
+      "target": "张",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-08",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__桌子」缺一个量词，填哪个字？",
+      "answer": "张",
+      "target": "张",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-08",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__桌子」缺一个量词，填哪个字？",
+      "answer": "张",
+      "target": "张",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-09",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__椅子」缺一个量词，填哪个字？",
+      "answer": "把",
+      "target": "把",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-09",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__椅子」缺一个量词，填哪个字？",
+      "answer": "把",
+      "target": "把",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-09",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__椅子」缺一个量词，填哪个字？",
+      "answer": "把",
+      "target": "把",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-09",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__椅子」缺一个量词，填哪个字？",
+      "answer": "把",
+      "target": "把",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-10",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__灯」缺一个量词，填哪个字？",
+      "answer": "盏",
+      "target": "盏",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-10",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__灯」缺一个量词，填哪个字？",
+      "answer": "盏",
+      "target": "盏",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-10",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__灯」缺一个量词，填哪个字？",
+      "answer": "盏",
+      "target": "盏",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-10",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__灯」缺一个量词，填哪个字？",
+      "answer": "盏",
+      "target": "盏",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-11",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__门」缺一个量词，填哪个字？",
+      "answer": "扇",
+      "target": "扇",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-11",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__门」缺一个量词，填哪个字？",
+      "answer": "扇",
+      "target": "扇",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-11",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__门」缺一个量词，填哪个字？",
+      "answer": "扇",
+      "target": "扇",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-11",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__门」缺一个量词，填哪个字？",
+      "answer": "扇",
+      "target": "扇",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-12",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__衣服」缺一个量词，填哪个字？",
+      "answer": "件",
+      "target": "件",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-12",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__衣服」缺一个量词，填哪个字？",
+      "answer": "件",
+      "target": "件",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-12",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__衣服」缺一个量词，填哪个字？",
+      "answer": "件",
+      "target": "件",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-12",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__衣服」缺一个量词，填哪个字？",
+      "answer": "件",
+      "target": "件",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-13",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鱼」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-13",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鱼」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-13",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鱼」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-13",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__鱼」缺一个量词，填哪个字？",
+      "answer": "条",
+      "target": "条",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-14",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__水」缺一个量词，填哪个字？",
+      "answer": "杯",
+      "target": "杯",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-14",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__水」缺一个量词，填哪个字？",
+      "answer": "杯",
+      "target": "杯",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-14",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__水」缺一个量词，填哪个字？",
+      "answer": "杯",
+      "target": "杯",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-14",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__水」缺一个量词，填哪个字？",
+      "answer": "杯",
+      "target": "杯",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-15",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__酒」缺一个量词，填哪个字？",
+      "answer": "瓶",
+      "target": "瓶",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-15",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__酒」缺一个量词，填哪个字？",
+      "answer": "瓶",
+      "target": "瓶",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-15",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__酒」缺一个量词，填哪个字？",
+      "answer": "瓶",
+      "target": "瓶",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-15",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__酒」缺一个量词，填哪个字？",
+      "answer": "瓶",
+      "target": "瓶",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-16",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__花」缺一个量词，填哪个字？",
+      "answer": "朵",
+      "target": "朵",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-16",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__花」缺一个量词，填哪个字？",
+      "answer": "朵",
+      "target": "朵",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-16",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__花」缺一个量词，填哪个字？",
+      "answer": "朵",
+      "target": "朵",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-16",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__花」缺一个量词，填哪个字？",
+      "answer": "朵",
+      "target": "朵",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-17",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__树」缺一个量词，填哪个字？",
+      "answer": "棵",
+      "target": "棵",
+      "latencyMs": 441,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-17",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__树」缺一个量词，填哪个字？",
+      "answer": "棵",
+      "target": "棵",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-17",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__树」缺一个量词，填哪个字？",
+      "answer": "棵",
+      "target": "棵",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-17",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__树」缺一个量词，填哪个字？",
+      "answer": "棵",
+      "target": "棵",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-18",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__叶子」缺一个量词，填哪个字？",
+      "answer": "片",
+      "target": "片",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-18",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__叶子」缺一个量词，填哪个字？",
+      "answer": "片",
+      "target": "片",
+      "latencyMs": 99,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-18",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__叶子」缺一个量词，填哪个字？",
+      "answer": "片",
+      "target": "片",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-18",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__叶子」缺一个量词，填哪个字？",
+      "answer": "片",
+      "target": "片",
+      "latencyMs": 213,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-19",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__米」缺一个量词，填哪个字？",
+      "answer": "粒",
+      "target": "粒",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-19",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__米」缺一个量词，填哪个字？",
+      "answer": "粒",
+      "target": "粒",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-19",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__米」缺一个量词，填哪个字？",
+      "answer": "粒",
+      "target": "粒",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-19",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__米」缺一个量词，填哪个字？",
+      "answer": "粒",
+      "target": "粒",
+      "latencyMs": 382,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-20",
+      "condition": "blank",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__星星」缺一个量词，填哪个字？",
+      "answer": "颗",
+      "target": "颗",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-20",
+      "condition": "blank",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__星星」缺一个量词，填哪个字？",
+      "answer": "颗",
+      "target": "颗",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-20",
+      "condition": "blank",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__星星」缺一个量词，填哪个字？",
+      "answer": "颗",
+      "target": "颗",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MW-20",
+      "condition": "blank",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出缺的量词本身（一个字），不多一个字。\n量词填空：「一__星星」缺一个量词，填哪个字？",
+      "answer": "颗",
+      "target": "颗",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "d8ec6de6be6ca46c",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.24.0"
+  }
+}

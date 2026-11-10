@@ -1,0 +1,133 @@
+{
+  "scene": "BlackHoleStationVisualSampleV012A1",
+  "controller_radius": 0.32,
+  "controller_height": 1.8,
+  "segments": [
+    {
+      "from": "cafe center",
+      "to": "cafe aisle",
+      "steps": 40,
+      "horizontal_error": 0.0,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 40,
+      "end_x": 205.0,
+      "end_y": 0.07999998,
+      "end_z": -209.0
+    },
+    {
+      "from": "cafe aisle",
+      "to": "door inside",
+      "steps": 92,
+      "horizontal_error": 0.0195394978,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 92,
+      "end_x": 196.019073,
+      "end_y": 0.07999992,
+      "end_z": -207.004242
+    },
+    {
+      "from": "door inside",
+      "to": "door",
+      "steps": 28,
+      "horizontal_error": 0.044938948,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 28,
+      "end_x": 194.031891,
+      "end_y": 0.07999992,
+      "end_z": -205.031662
+    },
+    {
+      "from": "door",
+      "to": "street",
+      "steps": 40,
+      "horizontal_error": 0.03202913,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 40,
+      "end_x": 190.032028,
+      "end_y": 0.07999992,
+      "end_z": -205.000244
+    },
+    {
+      "from": "street",
+      "to": "south turn",
+      "steps": 111,
+      "horizontal_error": 0.0425110832,
+      "side_hits": 4,
+      "side_hit_positions": [
+        "(190.001, 0.080, -215.495)",
+        "(190.001, 0.080, -215.532)",
+        "(190.001, 0.080, -215.576)",
+        "(190.001, 0.080, -215.658)"
+      ],
+      "grounded_steps": 111,
+      "end_x": 190.000092,
+      "end_y": 0.07999998,
+      "end_z": -215.957489
+    },
+    {
+      "from": "south turn",
+      "to": "corridor entry",
+      "steps": 40,
+      "horizontal_error": 0.0425109863,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 40,
+      "end_x": 190.0,
+      "end_y": 0.07999992,
+      "end_z": -219.957489
+    },
+    {
+      "from": "corridor entry",
+      "to": "inside turn",
+      "steps": 20,
+      "horizontal_error": 0.0425109863,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 20,
+      "end_x": 190.0,
+      "end_y": 0.07999992,
+      "end_z": -221.957489
+    },
+    {
+      "from": "inside turn",
+      "to": "west exit",
+      "steps": 40,
+      "horizontal_error": 0.000228881836,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 40,
+      "end_x": 186.000229,
+      "end_y": 0.07999992,
+      "end_z": -222.0
+    },
+    {
+      "from": "west exit",
+      "to": "glass approach",
+      "steps": 32,
+      "horizontal_error": 0.0,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 32,
+      "end_x": 185.0,
+      "end_y": 0.07999992,
+      "end_z": -225.0
+    },
+    {
+      "from": "glass approach",
+      "to": "window stop",
+      "steps": 50,
+      "horizontal_error": 0.009003281,
+      "side_hits": 0,
+      "side_hit_positions": [],
+      "grounded_steps": 50,
+      "end_x": 184.700531,
+      "end_y": 0.07999992,
+      "end_z": -229.991013
+    }
+  ],
+  "complete": true
+}

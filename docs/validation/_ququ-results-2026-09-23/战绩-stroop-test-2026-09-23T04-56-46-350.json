@@ -1,0 +1,569 @@
+{
+  "id": "57831ea0-d793-4538-81a7-86d9687fc878",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "stroop-test",
+    "title": "斯特鲁普效应擂台",
+    "description": "心理学最著名的冲突范式的 LLM 版（生成器自建）：颜色词用另一种颜色印刷，conflict-ink 问印刷色（答字义即翻车）、conflict-word 问字义（答墨色即翻车）、congruent 一致对照（防逢题必反）。测认知冲突下的指令跟随——LLM 的 Stroop 效应是真实研究热点。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:stroop-test:2026-09-10",
+    "taskPrefix": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "conflict-ink": "冲突问墨色（字义≠墨色，答字义即翻车）",
+      "conflict-word": "冲突问字义（答墨色即翻车）",
+      "congruent": "一致对照（字义=墨色，防逢题必反）"
+    }
+  },
+  "startedAt": "2026-09-23T04:56:46.350Z",
+  "durationMs": 5557,
+  "contestants": [
+    {
+      "id": "openrouter:qwen/qwen3.8-27b:free",
+      "name": "qwen/qwen3.8-27b:free",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "qwen/qwen3.8-27b:free"
+    },
+    {
+      "id": "openrouter:z-ai/glm-5.2:free",
+      "name": "z-ai/glm-5.2:free",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "z-ai/glm-5.2:free"
+    },
+    {
+      "id": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "name": "liquid/lfm-2.5-2.6b:free",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "liquid/lfm-2.5-2.6b:free"
+    },
+    {
+      "id": "custom:673ec651-bab4-433a-9530-22db507908d0",
+      "name": "673ec651-bab4-433a-9530-22db507908d0",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "673ec651-bab4-433a-9530-22db507908d0"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "openrouter:qwen/qwen3.8-27b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2745,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:qwen/qwen3.8-27b:free",
+        "taskId": "STROOP-INK-04",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139409095
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2745
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "openrouter:z-ai/glm-5.2:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2148,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:z-ai/glm-5.2:free",
+        "taskId": "STROOP-INK-01",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139408498
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2148
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 4085,
+      "solveMs": 4085,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用黄色墨水印刷的汉字「绿」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The user wants the answer to be only the color word (like \"黄色\" or \"黄\")? Actually they say \"颜色词如「红色」/汉字如「红」\". So they want either a color name in Chinese like \"红色\" or \"黄\". But also could be \"黄色\". They specifically mention \"颜色词如「红色」/汉字如「红」\". That suggests we can output either \"红色\" or \"黄\". However, the question: \"这个字的印刷颜色是什么颜色？\" The screen has a character \"绿\" printed with yellow ink. So the printing color is yellow. So answer should be \"黄色\" or \"黄\". Which one matches the pattern? Both are acceptable. The instruction: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" Means only output the answer itself, no extra words. So just \"黄色\" or \"黄\". Which is more appropriate? The phrase \"黄色墨水\" indicates the color of the ink used is yellow. So answer \"黄色\". That's a color word. It's two characters. That satisfies \"不多一个字\"? Wait \"不多一个字\" means not add any other characters beyond the answer. So we must output exactly the answer string, nothing else. So \"黄色\". That is three characters: 黄 + 色. That's fine.\n\nThus final answer: 黄色",
+      "score": 1,
+      "usage": {
+        "input": 61,
+        "output": 370,
+        "cachedInput": 32,
+        "cacheWrite": 0,
+        "reasoning": 367
+      },
+      "finishedMs": 5063
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "custom:673ec651-bab4-433a-9530-22db507908d0",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 264,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "withdrawal": {
+        "modelId": "custom:673ec651-bab4-433a-9530-22db507908d0",
+        "taskId": "STROOP-INK-02",
+        "reason": "unavailable",
+        "message": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+        "failures": 1,
+        "at": 1790139406614
+      },
+      "note": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "finishedMs": 265
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "openrouter:qwen/qwen3.8-27b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "蓝色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2744,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:qwen/qwen3.8-27b:free",
+        "taskId": "STROOP-INK-04",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139409095
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2745
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "openrouter:z-ai/glm-5.2:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "蓝色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2147,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:z-ai/glm-5.2:free",
+        "taskId": "STROOP-INK-01",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139408498
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2148
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 3792,
+      "solveMs": 3792,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用蓝色墨水印刷的汉字「黄」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The user wants the answer to be only the color word (like \"red\" or \"红\") and no extra characters. They specifically say \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" So we must output exactly one word that is the color of the printed character. The screen has a Chinese character \"黄\" printed with blue ink. The question: \"这个字的印刷颜色是什么颜色？\" Means \"What is the printing color of this character?\" Since it's printed in blue ink, the printing color is blue. In Chinese, \"蓝色\". But they said \"颜色词如「红色」/汉字如「红」\". That suggests we can output either the English phrase \"blue\" or Chinese \"蓝色\"? The example includes both \"红色\" (Chinese) and \"红\" (character). For \"红色\", it's a color word; for \"红\", it's also a color term but more specific. Which one should we output? The instruction: \"只输出答案本身（颜色词如「红色」/汉字如「红」）\". So any valid color word is acceptable. Probably \"蓝色\" is appropriate because it's the printing color. However, note that the original text uses Chinese quotes around \"红色\" and \"红\". It might expect Chinese answer. The question is about a Chinese character printed with blue ink. So answer likely \"蓝色\". Or maybe \"蓝\". But \"蓝色\" is a full color name. Could also be \"蓝\". But \"蓝色\" is more explicit.\n\nWe need to ensure we output only that word, no punctuation, no extra spaces. So just \"蓝色\". Let's double-check if there are any hidden constraints: The user explicitly says \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" So we must not include any other characters, including newline? Usually a single line with the word is fine. No extra whitespace before or after? Possibly okay. We'll output \"蓝色\".",
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 511,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 507
+      },
+      "finishedMs": 4770
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "custom:673ec651-bab4-433a-9530-22db507908d0",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "蓝色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 264,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "withdrawal": {
+        "modelId": "custom:673ec651-bab4-433a-9530-22db507908d0",
+        "taskId": "STROOP-INK-02",
+        "reason": "unavailable",
+        "message": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+        "failures": 1,
+        "at": 1790139406614
+      },
+      "note": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "finishedMs": 265
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "openrouter:qwen/qwen3.8-27b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2480,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:qwen/qwen3.8-27b:free",
+        "taskId": "STROOP-INK-04",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139409095
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2745
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "openrouter:z-ai/glm-5.2:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 1883,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:z-ai/glm-5.2:free",
+        "taskId": "STROOP-INK-01",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139408498
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2148
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 0,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用黄色墨水印刷的汉字「红」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The screen has a Chinese character \"红\" printed with yellow ink. The question asks: what is the printing color of this character? So answer should be the color of the ink used to print it, which is \"黄色\". However they want only the answer itself (color word like \"红色\" or \"黄\") and no extra characters. They specifically say \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" Means output only the answer, not any extra words. So we need to output either \"黄色\" (the color of the ink) or maybe \"黄\". But the instruction says \"颜色词如「红色」/汉字如「红」\". That suggests they accept either \"红色\" for red, but here the ink is yellow, so \"黄色\" is appropriate. Or could also be \"黄\". Which one is more correct? The phrase \"颜色词如「红色」/汉字如「红」\" indicates examples: \"red\" can be expressed as \"红色\" (color word) or \"红\" (character). For yellow, analogous would be \"黄色\" (color adjective) or \"黄\". Both are acceptable. But they said \"只输出答案本身（颜色词如「红色」/汉字如「红」）\". So likely they expect \"黄色\". Because that's the direct translation of \"yellow\". Also note that the original text uses \"黄色墨水\". So answer \"黄色\". No punctuation? Probably just \"黄色\". Ensure no extra whitespace or newline? Usually okay.\n\nThus final answer: 黄色",
+      "solveMs": 3408,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5557
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "openrouter:qwen/qwen3.8-27b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "紫色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 597,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:qwen/qwen3.8-27b:free",
+        "taskId": "STROOP-INK-04",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139409095
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 2745
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 2320,
+      "solveMs": 2320,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用紫色墨水印刷的汉字「橙」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The screen has a character \"橙\" printed with purple ink. The question asks: what is the printing color of this character? So answer should be the color used to print it, which is \"紫色\". However they want only the answer itself (color word like \"红色\" or \"红\") and no extra characters. So we must output exactly \"紫色\". But note that the instruction says \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" Means \"Only output the answer itself (color word such as 'red' / Chinese character like '红'), do not add any more characters.\" So we must output just \"紫色\". That's one word in Chinese. Should we include punctuation? Probably not. Just \"紫色\". Ensure no extra whitespace or newline? Usually okay to have newline after but better not. So final answer: 紫色",
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 261,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 257
+      },
+      "finishedMs": 4471
+    },
+    {
+      "taskId": "STROOP-INK-05",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "橙色",
+      "latencyMs": 0,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用橙色墨水印刷的汉字「紫」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The screen has a Chinese character \"紫\" printed with orange ink. The question asks: what is the printing color of this character? So answer should be the color used for printing, which is orange. But they want only the answer itself (color word like \"红色\" or \"橙\") and no extra characters. They specifically say \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\" Means output only the answer itself, not more than one character. Actually \"不多一个字\" means do not add any other words; just output the color word. Since the printing color is orange, we need to output \"橙\". However note that they said \"颜色词如「红色」/汉字如「红」\". That suggests they accept either \"红色\" or \"橙\". But the actual color is orange. In Chinese, \"橙色\" is the term for orange. Could also be \"橙\". Which is more appropriate? The instruction says \"颜色词如「红色」/汉字如「红」\". So they allow both \"红色\" and \"红\". For orange, likely \"橙色\" or \"橙\". Both are acceptable. But we must ensure it's exactly one word? It says \"不多一个字\", meaning don't add any extra characters beyond the answer. If we output \"橙色\", that's two characters (or three if counting punctuation). But maybe they consider each Chinese character as a \"字\". \"橙色\" is two characters, but it's a phrase. However they might count each Chinese character as a \"字\". The instruction says \"不多一个字\" - \"do not add more than one character\". This could be interpreted as you can only output a single character (like \"橙\"). Because \"橙色\" is two characters. To be safe, output a single character representing the color: \"橙\". That is one character. Or \"红\"? No",
+      "solveMs": 2810,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5557
+    },
+    {
+      "taskId": "STROOP-INK-06",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "蓝色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 2810,
+      "attempts": 2,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5556
+    },
+    {
+      "taskId": "STROOP-INK-07",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "绿色",
+      "latencyMs": 0,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用绿色墨水印刷的汉字「紫」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The user wants the answer to be only the color word (like \"red\" or \"红\") and no extra characters. They say \"只输出答案本身（颜色词",
+      "solveMs": 2810,
+      "attempts": 2,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5557
+    },
+    {
+      "taskId": "STROOP-INK-08",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 2262,
+      "solveMs": 2262,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用橙色墨水印刷的汉字「红」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The screen has a Chinese character \"红\" printed with orange ink. The question asks: what is the printing color of this character? The answer should be just the color word, either in Chinese or English? They say \"颜色词如「红色」/汉字如「红」\". So they want the color name. Since the ink used is orange, but the question might be about the printed color (the actual color of the ink). However, the phrase \"屏幕上有一个用橙色墨水印刷的汉字「红」\" means there is a character \"红\" printed on the screen using orange ink. So the printed color is orange. But they ask \"这个字的印刷颜色是什么颜色？\" which translates to \"What is the printing color of this character?\" The answer could be \"橙色\" (orange) or \"红色\"? Wait, careful: The character itself is \"红\", which means red. But it's printed with orange ink. So the printed color is orange. The question likely expects \"橙色\". Because they explicitly mention that the ink is orange. So answer: 橙色.\n\nBut we must output only the answer, no extra characters. So just \"橙色\". That is one word. Should we include any punctuation? Probably not. Just \"橙色\". Ensure no extra whitespace or newline? Usually fine.\n\nThus final answer: 橙色",
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 364,
+        "cachedInput": 32,
+        "cacheWrite": 0,
+        "reasoning": 359
+      },
+      "finishedMs": 5010
+    },
+    {
+      "taskId": "STROOP-INK-09",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "蓝色",
+      "latencyMs": 0,
+      "reasoning": "The user says: \"只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。 屏幕上有一个用蓝色墨水印刷的汉字「红」。 问题：这个字的印刷颜色是什么颜色？\"\n\nInterpretation: The screen has a Chinese character \"红\" printed with blue ink. The question asks: what is the printing color of this character? So answer should be the color of the ink used to print the character, which is blue",
+      "solveMs": 1085,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5557
+    },
+    {
+      "taskId": "STROOP-INK-10",
+      "condition": "conflict-ink",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "",
+      "target": "红色",
+      "latencyMs": 0,
+      "reasoning": "",
+      "solveMs": 786,
+      "attempts": 1,
+      "usageComplete": false,
+      "score": 0,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "STROOP-INK-06",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1790139411905
+      },
+      "note": "本场累计调用失败 3 次，已弃权",
+      "finishedMs": 5557
+    }
+  ],
+  "withdrawals": [
+    {
+      "modelId": "openrouter:qwen/qwen3.8-27b:free",
+      "taskId": "STROOP-INK-04",
+      "reason": "failures",
+      "message": "本场累计调用失败 3 次，已弃权",
+      "failures": 3,
+      "at": 1790139409095
+    },
+    {
+      "modelId": "openrouter:z-ai/glm-5.2:free",
+      "taskId": "STROOP-INK-01",
+      "reason": "failures",
+      "message": "本场累计调用失败 3 次，已弃权",
+      "failures": 3,
+      "at": 1790139408498
+    },
+    {
+      "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "taskId": "STROOP-INK-06",
+      "reason": "failures",
+      "message": "本场累计调用失败 3 次，已弃权",
+      "failures": 3,
+      "at": 1790139411905
+    },
+    {
+      "modelId": "custom:673ec651-bab4-433a-9530-22db507908d0",
+      "taskId": "STROOP-INK-02",
+      "reason": "unavailable",
+      "message": "接口不可用，已退赛：673ec651-bab4-433a-9530-22db507908d0 HTTP 403：{\"error\":{\"message\":\"Forbidden\"}}",
+      "failures": 1,
+      "at": 1790139406614
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ce0ddcf8ab1d828d",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.35.0",
+    "plannedTasks": 10,
+    "rankingPolicy": "quality-ci-v1",
+    "execution": {
+      "schedule": "pool",
+      "concurrency": 8,
+      "reasoning": "provider-default",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "evidence": "Windows player, isolated backend, saved fixtures; no paid model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "entrance": {
+    "modes": [
+      "standard",
+      "chibi"
+    ],
+    "count": 4,
+    "escape": true,
+    "homeInterrupt": true,
+    "staticMode": true,
+    "floorFlush": true,
+    "healthUnchanged": true
+  },
+  "lateralLifts": true,
+  "error": "System.Exception: Transport camera restore\r\n  at QuQu.ArenaArchitectureCheck+<Check>d__4.MoveNext () [0x00703] in <bc930e2a494f47eca165eb9b3c818560>:0 \r\n  at QuQu.ArenaArchitectureCheck+<Run>d__3.MoveNext () [0x00129] in <bc930e2a494f47eca165eb9b3c818560>:0 ",
+  "runtimeErrors": [
+    "Exception: Transport camera restore"
+  ],
+  "backendPid": 75432,
+  "passed": false
+}

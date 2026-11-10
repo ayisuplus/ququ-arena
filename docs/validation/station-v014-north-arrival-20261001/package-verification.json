@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v014\\north-arrival\\package-0.1.0",
+    "manifest": {
+      "assetId": "black_hole_station_arrival_roof_v014",
+      "description": "Original low swept arrival roof draft; not installed in Unity. 54.11 x 46.11 m, elevation 5.9 to 8.65 m.",
+      "displayName": "black-hole-station-arrival-roof-v014",
+      "files": [
+        {
+          "bytes": 1160020,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "4ebc051663e867caf10773887198c58ffacd793c31182bd34e4e70ee56082e70"
+        },
+        {
+          "bytes": 1570,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "2d4a9cb4e59cb904c728a62f53fb2a03fb030b54a2a1c2cdc54bd2bd731c4835"
+        },
+        {
+          "bytes": 619,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "72aeb20894cc4e7b2ce1db9b04abf54dd64b6df9a281b22a7c539cc4ce493958"
+        },
+        {
+          "bytes": 2790,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "c2fa499d89658f08393a204e477d986e5a561fe903471b05705a1afefcd7feca"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_90994a501dd118f707b6d2fd",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

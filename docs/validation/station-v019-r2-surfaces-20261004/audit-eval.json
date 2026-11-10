@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-r2-surfaces.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "count": 20,
+        "errors": [],
+        "missing": [],
+        "probes": [
+          "V015 reflection - 06 study",
+          "V015 reflection - cafe",
+          "V015 reflection - research",
+          "V019 reflection - research low",
+          "V019 reflection - cafe rear",
+          "V019 reflection - reading main",
+          "V019 reflection - cafe loggia",
+          "V019 reflection - research main"
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

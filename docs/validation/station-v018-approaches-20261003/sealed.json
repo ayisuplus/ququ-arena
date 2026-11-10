@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "checks": {
+    "buildSucceeded": true,
+    "noEvalAssemblies": true,
+    "allEightRoutes": true,
+    "visibleRendering": true,
+    "sourcePreserved": true,
+    "clearance": true,
+    "nativeNoRegression": true,
+    "matchedComparisonCameras": true
+  },
+  "buildId": "build_c9a31b842a4b",
+  "buildTimeMs": 55318,
+  "errors": 0,
+  "warnings": [
+    {
+      "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+    },
+    {
+      "message": "warning CS0109: The member 'ArenaGame.AddComponent<T>()' does not hide an accessible member. The new keyword is not required.",
+      "file": "Assets\\Scripts\\App\\ArenaGame.cs"
+    }
+  ],
+  "cases": [
+    {
+      "building": "B01",
+      "phase": 0,
+      "passed": true,
+      "checks": 141,
+      "distance": 121.85492706298828,
+      "seconds": 62.98564529418945,
+      "seatedViaE": 7,
+      "reportHash": "2c1d0eabeba491dc346f8617d5f0c7fe49de973d1f99ed2614181025f80422d5"
+    },
+    {
+      "building": "B02",
+      "phase": 0,
+      "passed": true,
+      "checks": 229,
+      "distance": 190.43252563476562,
+      "seconds": 92.46382904052734,
+      "seatedViaE": 10,
+      "reportHash": "7de52c9c3c01e29df82464048f22067d77fb99b6533be301527c71653c6af293"
+    },
+    {
+      "building": "B03",
+      "phase": 0,
+      "passed": true,
+      "checks": 43,
+      "distance": 65.91664123535156,
+      "seconds": 30.019330978393555,
+      "seatedViaE": 0,
+      "reportHash": "c6d8e2c703d9b5b2bb7e24f9c4521d60dda62d91ac53af163ee169cdd77c2e09"
+    },
+    {
+      "building": "B04",
+      "phase": 0,
+      "passed": true,
+      "checks": 376,
+      "distance": 331.3553161621094,
+      "seconds": 156.67782592773438,
+      "seatedViaE": 17,
+      "reportHash": "072f92a226f5f1c5be96db94ddd5f646a5f19f8527ac7b7855004e0bd75a8e22"
+    },
+    {
+      "building": "B01",
+      "phase": 97,
+      "passed": true,
+      "checks": 141,
+      "distance": 121.85250854492188,
+      "seconds": 62.98575973510742,
+      "seatedViaE": 7,
+      "reportHash": "d8897af281b9a17a7ddc1f83250a45f100093e3007446d34c8561a09b8d0c3e9"
+    },
+    {
+      "building": "B02",
+      "phase": 97,
+      "passed": true,
+      "checks": 229,
+      "distance": 190.45547485351562,
+      "seconds": 92.4727554321289,
+      "seatedViaE": 10,
+      "reportHash": "5b9364fbdebd0ac5d96eba7ef96b90d2d4cd7b49f030d190234cd4a44f52d763"
+    },
+    {
+      "building": "B03",
+      "phase": 97,
+      "passed": true,
+      "checks": 43,
+      "distance": 65.91825866699219,
+      "seconds": 30.021785736083984,
+      "seatedViaE": 0,
+      "reportHash": "a81ee8e10120bb8a7c57f7dc872ced303171327415b45ff59a6b10b1bc9f09f8"
+    },
+    {
+      "building": "B04",
+      "phase": 97,
+      "passed": true,
+      "checks": 376,
+      "distance": 331.2703552246094,
+      "seconds": 156.6294708251953,
+      "seatedViaE": 17,
+      "reportHash": "c8f48ce47285f35f12a57afe4505cb45c5f5badf59a8ee41873cde7aa7582f13"
+    }
+  ],
+  "totalChecks": 1578,
+  "totalDistance": 1419.056007385254,
+  "visible": {
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationAnnexInteriorsV018.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "views": [
+      {
+        "name": "b01-approach",
+        "frames": 2089,
+        "renderedFrames": 2089,
+        "p95Ms": 4.871294021606445,
+        "drawCalls": 5128.712781235041
+      },
+      {
+        "name": "b02-approach",
+        "frames": 2318,
+        "renderedFrames": 2318,
+        "p95Ms": 4.5074968338012695,
+        "drawCalls": 3867.823554788611
+      },
+      {
+        "name": "b03-approach",
+        "frames": 2529,
+        "renderedFrames": 2529,
+        "p95Ms": 4.223299026489258,
+        "drawCalls": 1923.1178331356268
+      },
+      {
+        "name": "b04-approach",
+        "frames": 1848,
+        "renderedFrames": 1848,
+        "p95Ms": 5.748299598693848,
+        "drawCalls": 6125.417207792208
+      }
+    ],
+    "errors": []
+  },
+  "originalDocuments": 40829,
+  "clearanceChecks": 2055,
+  "sources": [
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationAnnexInteriorsV018.unity",
+      "sha256": "92795cbe369e76951fa000d3f3fc5a9b8bc3c425b1bcae16e59a8454ed132bd3"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexRenderProbeV018.cs",
+      "sha256": "05453c1797cdb0ae8aff6d5c4fc73a51493c797869e8690bf28aaa92ecd51653"
+    },
+    {
+      "path": "production/black-hole-station/v018/approaches/routes.json",
+      "sha256": "63fbd7d4def0b62d1c9808cc93812c10fcc8a7243e009c6d8e8883462a94eb8c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B01.asset",
+      "sha256": "874ecd85eacca80cff52801d6483a63db6f8c096a5de27776a9db725da97394c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B01.asset.meta",
+      "sha256": "4a408df6e4ffb112725c8bdd058eaf2bfe4c0b98ccd7c8a95b3a11cc83d26808"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B02.asset",
+      "sha256": "ff6349c31d4ecd0af2739d8e122c8e11905aeedf85a0e5fac596f52705119d81"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B02.asset.meta",
+      "sha256": "2e2e56dff184327a0db4d730264b9912d62a370c6cb1ea58e2b975c6d4321be0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B03.asset",
+      "sha256": "62bb81476a34cbed74fbdc88d065988fb7ca9bd82d70521c0d10c2fd22e48b15"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B03.asset.meta",
+      "sha256": "d41609b94fb54b1386ae2260b97d9f6dc62d8ad12a26d7e1b4f4717737f3fd63"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B04.asset",
+      "sha256": "710519d015dc0582c2e8a14cd43f9ff5af2f94c55401fec78c7b788e4ddb739d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/AnnexApproachesV018/B04.asset.meta",
+      "sha256": "519a8a9f96f3925e58dc93eab6606666dfa5e75aedd4494d7a6ce35fb461f5bd"
+    }
+  ],
+  "executableSha256": "30d4b41a85303abf83c686f06b75ab1681471c79b9dc7fe530ead09099fdf63d"
+}

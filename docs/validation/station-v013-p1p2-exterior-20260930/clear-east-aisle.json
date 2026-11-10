@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Bake busy\");\nvar root=UnityEngine.GameObject.Find(\"V013 civic exterior finish\");int moved=0;\nforeach(UnityEngine.Transform t in root.transform)if((t.name==\"Pavilion planting island\"||t.name==\"Pavilion reused Meshy foliage\")&&t.position.x>180&&t.position.z< -210){t.position+=new UnityEngine.Vector3(-3.3f,0,-2.4f);moved++;}\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{moved,started=UnityEditor.Lightmapping.BakeAsync()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "moved": 4,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

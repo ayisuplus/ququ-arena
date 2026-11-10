@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "if(UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Bake busy\");\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nvar sources=new System.Collections.Generic.Dictionary<string,UnityEngine.Mesh>();\nforeach(var file in System.IO.Directory.GetFiles(\"Assets/Station/Models/SereneExteriorV013\",\"*.fbx\"))foreach(var a in UnityEditor.AssetDatabase.LoadAllAssetsAtPath(file))if(a is UnityEngine.Mesh mesh)sources[mesh.name]=mesh;\nint count=0;var updated=new System.Collections.Generic.HashSet<UnityEngine.Mesh>();\nforeach(var mf in UnityEngine.GameObject.Find(\"V013 civic exterior finish\").GetComponentsInChildren<UnityEngine.MeshFilter>()){\n var mesh=mf.sharedMesh;var name=mesh.name;\n if(!UnityEditor.AssetDatabase.GetAssetPath(mesh).StartsWith(\"Assets/Station/Models/SereneExteriorLightmapMeshesV013/\")||!sources.TryGetValue(mf.name,out var source)||!updated.Add(mesh))continue;\n UnityEditor.EditorUtility.CopySerialized(source,mesh);mesh.name=name;\n if(!UnityEditor.Unwrapping.GenerateSecondaryUVSet(mesh))throw new System.Exception(name);\n UnityEditor.EditorUtility.SetDirty(mesh);count++;\n}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());return new{updatedMeshes=count,started=UnityEditor.Lightmapping.BakeAsync()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "updatedMeshes": 28,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

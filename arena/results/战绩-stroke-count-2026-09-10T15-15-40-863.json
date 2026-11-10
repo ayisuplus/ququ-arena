@@ -1,0 +1,111 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "stroke-count",
+    "title": "笔画数擂台",
+    "description": "汉字笔画数（自建 canonical，20 题）：人 2 画、马 3 画、田 5 画——\"马有几画\"答错的模型汉字基本功欠费。exact 裁判。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:stroke-count:2026-09-10",
+    "taskPrefix": "只输出笔画数的数字本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "strokes": "汉字笔画数"
+    }
+  },
+  "startedAt": "2026-09-10T15:15:40.863Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 337,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "fee6af7e9ffbd9a8",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.5.0"
+  }
+}

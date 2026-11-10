@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b03-tidal-seed\\package-v002",
+    "manifest": {
+      "assetId": "v016_b03_tidal_seed_open_shell",
+      "description": "Version 002 geometry: 18 separate glazing panes, actual front opening and hollow entrance canopy. Runtime glass, door, ramp, walkways and reused CC0 planting authored separately in the Unity candidate. This GLB carries modeling-stage materials; use the Unity material overrides for transparent glazing.",
+      "displayName": "V016 B03 Tidal Seed Open Shell",
+      "files": [
+        {
+          "bytes": 419436,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "f908c061b7dd82c0f77427c16b30ed80ea918ba193edaa600ee83910a9e4a334"
+        },
+        {
+          "bytes": 1819,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "3441946e6346197a73f7846aebf7feefe057b34ae69dadc5aea476cfde81868b"
+        },
+        {
+          "bytes": 820,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "53126b49104ff56f58036f328eb484349a8abcaf45a8c23b092f3cee8bc918e8"
+        },
+        {
+          "bytes": 2693,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "da959bdd76ea40dc74a63841d3ed0b10fdc93701c38437d00a1f3f3de4fb5426"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_e5b41551dfe260b2bb256a4c",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

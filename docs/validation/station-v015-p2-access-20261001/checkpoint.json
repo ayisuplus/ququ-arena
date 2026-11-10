@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-01",
+  "parentCommit": "58739be75530be06e861de62d631d946bd3b8e69",
+  "scope": "12 moving doors, six public interiors and nearest walkable support fix",
+  "goalComplete": false,
+  "p2Complete": false,
+  "hashes": [
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationGrayboxWalker.cs",
+      "sha256": "45E3614606B96C2727CB70C20474A4F03EE947DFE880C7236030CB5BED2913BC"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingAccessProbe.cs",
+      "sha256": "DF79DFADBC8D57C5821F06DDAE84602890D55B28A4DDAABE1A7A45D205DED512"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingBuildingsV015.unity",
+      "sha256": "FE6D3024CB994981DCCE57E91802C367DBEB0F062B5CE3ED9E2A7C4E147A7FF5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalGardenV014.unity",
+      "sha256": "0FC1A6EBD2E536762D1E5CF42CC8A8590B1BDB11E7B7DF6DA39223E68B93134B"
+    },
+    {
+      "path": ".cache/v015-p2-access-player/StationRingPrototype.exe",
+      "sha256": "30D4B41A85303ABF83C686F06B75AB1681471C79B9DC7FE530EAD09099FDF63D"
+    },
+    {
+      "path": ".cache/v015-p2-access-player/StationRingPrototype_Data/Managed/QuQu.Presentation.dll",
+      "sha256": "68DC9C5D3003FBCDF1810477998F97777DEBFA4C5DB07C5A15942BA5FBCB776D"
+    },
+    {
+      "path": ".cache/v015-p2-access-player/StationRingPrototype_Data/Managed/QuQu.Validation.dll",
+      "sha256": "702B7DEC383E01E8EBA767A9643B0D8AF5EDB9DB846AE06B886C143D01B56961"
+    }
+  ],
+  "runs": [
+    {
+      "file": "player-fixed-phase0/access.json",
+      "passed": true,
+      "checks": 899,
+      "failed": 0
+    },
+    {
+      "file": "player-fixed-phase97/access.json",
+      "passed": true,
+      "checks": 899,
+      "failed": 0
+    },
+    {
+      "file": "editor-fixed-phase0/access.json",
+      "passed": true,
+      "checks": 899,
+      "failed": 0
+    },
+    {
+      "file": "daily-phase0/daily.json",
+      "passed": true,
+      "checks": 131,
+      "failed": 0
+    },
+    {
+      "file": "daily-phase97/daily.json",
+      "passed": true,
+      "checks": 131,
+      "failed": 0
+    },
+    {
+      "file": "streets-30/streets.json",
+      "passed": true,
+      "checks": 129,
+      "failed": 0
+    },
+    {
+      "file": "streets-144/streets.json",
+      "passed": true,
+      "checks": 129,
+      "failed": 0
+    },
+    {
+      "file": "streets-30/read.json",
+      "passed": true,
+      "checks": 7,
+      "failed": 0
+    },
+    {
+      "file": "streets-144/read.json",
+      "passed": true,
+      "checks": 7,
+      "failed": 0
+    }
+  ],
+  "sourceV014Unchanged": true,
+  "remainingDisabledBehaviours": 202
+}

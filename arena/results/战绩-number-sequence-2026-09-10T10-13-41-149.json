@@ -1,0 +1,1036 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "number-sequence",
+    "title": "数列推理擂台",
+    "description": "经典 IQ 数列题（生成器自建）：素数/斐波那契/平方/三角/等差/等比/交错差/平方±1 八族，给前 5 项问第 6 项。数列由公式生成，答案=公式下一项，零手写。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:number-sequence:2026-09-10",
+    "taskPrefix": "只输出下一项的数字本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "primes": "素数列",
+      "fib": "斐波那契",
+      "squares": "平方数",
+      "triangular": "三角数",
+      "arithmetic": "等差",
+      "geometric": "等比",
+      "alt-diff": "交错差",
+      "squares-pm1": "平方±1"
+    }
+  },
+  "startedAt": "2026-09-10T10:13:41.149Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "NS-01",
+      "condition": "primes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，5，7，11，？\n\n问题：下一项是什么？",
+      "answer": "13",
+      "target": "13",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-01",
+      "condition": "primes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，5，7，11，？\n\n问题：下一项是什么？",
+      "answer": "1",
+      "target": "13",
+      "latencyMs": 147,
+      "score": 0,
+      "note": "期望「13」，实答「1」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-01",
+      "condition": "primes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，5，7，11，？\n\n问题：下一项是什么？",
+      "answer": "1",
+      "target": "13",
+      "latencyMs": 104,
+      "score": 0,
+      "note": "期望「13」，实答「1」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-01",
+      "condition": "primes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，5，7，11，？\n\n问题：下一项是什么？",
+      "answer": "13",
+      "target": "13",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-02",
+      "condition": "fib",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，1，2，3，5，？\n\n问题：下一项是什么？",
+      "answer": "8",
+      "target": "8",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-02",
+      "condition": "fib",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，1，2，3，5，？\n\n问题：下一项是什么？",
+      "answer": "8",
+      "target": "8",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-02",
+      "condition": "fib",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，1，2，3，5，？\n\n问题：下一项是什么？",
+      "answer": "8",
+      "target": "8",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-02",
+      "condition": "fib",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，1，2，3，5，？\n\n问题：下一项是什么？",
+      "answer": "8",
+      "target": "8",
+      "latencyMs": 283,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-03",
+      "condition": "squares",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，4，9，16，25，？\n\n问题：下一项是什么？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-03",
+      "condition": "squares",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，4，9，16，25，？\n\n问题：下一项是什么？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-03",
+      "condition": "squares",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，4，9，16，25，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "36",
+      "latencyMs": 174,
+      "score": 0,
+      "note": "期望「36」，实答「3」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-03",
+      "condition": "squares",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，4，9，16，25，？\n\n问题：下一项是什么？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-04",
+      "condition": "triangular",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，3，6，10，15，？\n\n问题：下一项是什么？",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-04",
+      "condition": "triangular",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，3，6，10，15，？\n\n问题：下一项是什么？",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 315,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-04",
+      "condition": "triangular",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，3，6，10，15，？\n\n问题：下一项是什么？",
+      "answer": "2",
+      "target": "21",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「21」，实答「2」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-04",
+      "condition": "triangular",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，3，6，10，15，？\n\n问题：下一项是什么？",
+      "answer": "21",
+      "target": "21",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-05",
+      "condition": "arithmetic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，10，15，20，25，？\n\n问题：下一项是什么？",
+      "answer": "30",
+      "target": "30",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-05",
+      "condition": "arithmetic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，10，15，20，25，？\n\n问题：下一项是什么？",
+      "answer": "30",
+      "target": "30",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-05",
+      "condition": "arithmetic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，10，15，20，25，？\n\n问题：下一项是什么？",
+      "answer": "30",
+      "target": "30",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-05",
+      "condition": "arithmetic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，10，15，20，25，？\n\n问题：下一项是什么？",
+      "answer": "30",
+      "target": "30",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-06",
+      "condition": "geometric",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，4，8，16，32，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 154,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-06",
+      "condition": "geometric",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，4，8，16，32，？\n\n问题：下一项是什么？",
+      "answer": "6",
+      "target": "64",
+      "latencyMs": 476,
+      "score": 0,
+      "note": "期望「64」，实答「6」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-06",
+      "condition": "geometric",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，4，8，16，32，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-06",
+      "condition": "geometric",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，4，8，16，32，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-07",
+      "condition": "alt-diff",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，8，12，14，18，？\n\n问题：下一项是什么？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-07",
+      "condition": "alt-diff",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，8，12，14，18，？\n\n问题：下一项是什么？",
+      "answer": "2",
+      "target": "20",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「20」，实答「2」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-07",
+      "condition": "alt-diff",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，8，12，14，18，？\n\n问题：下一项是什么？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-07",
+      "condition": "alt-diff",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，8，12，14，18，？\n\n问题：下一项是什么？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-08",
+      "condition": "squares-pm1",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：0，3，8，15，24，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-08",
+      "condition": "squares-pm1",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：0，3，8，15，24，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-08",
+      "condition": "squares-pm1",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：0，3，8，15，24，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-08",
+      "condition": "squares-pm1",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：0，3，8，15，24，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-09",
+      "condition": "squares",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：9，16，25，36，49，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 315,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-09",
+      "condition": "squares",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：9，16，25，36，49，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-09",
+      "condition": "squares",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：9，16，25，36，49，？\n\n问题：下一项是什么？",
+      "answer": "6",
+      "target": "64",
+      "latencyMs": 107,
+      "score": 0,
+      "note": "期望「64」，实答「6」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-09",
+      "condition": "squares",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：9，16，25，36，49，？\n\n问题：下一项是什么？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-10",
+      "condition": "arithmetic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：7，14，21，28，35，？\n\n问题：下一项是什么？",
+      "answer": "42",
+      "target": "42",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-10",
+      "condition": "arithmetic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：7，14，21，28，35，？\n\n问题：下一项是什么？",
+      "answer": "42",
+      "target": "42",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-10",
+      "condition": "arithmetic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：7，14，21，28，35，？\n\n问题：下一项是什么？",
+      "answer": "4",
+      "target": "42",
+      "latencyMs": 222,
+      "score": 0,
+      "note": "期望「42」，实答「4」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-10",
+      "condition": "arithmetic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：7，14，21，28，35，？\n\n问题：下一项是什么？",
+      "answer": "42",
+      "target": "42",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-11",
+      "condition": "geometric",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：3，9，27，81，243，？\n\n问题：下一项是什么？",
+      "answer": "729",
+      "target": "729",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-11",
+      "condition": "geometric",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：3，9，27，81，243，？\n\n问题：下一项是什么？",
+      "answer": "72",
+      "target": "729",
+      "latencyMs": 408,
+      "score": 0,
+      "note": "期望「729」，实答「72」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-11",
+      "condition": "geometric",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：3，9，27，81，243，？\n\n问题：下一项是什么？",
+      "answer": "79",
+      "target": "729",
+      "latencyMs": 249,
+      "score": 0,
+      "note": "期望「729」，实答「79」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-11",
+      "condition": "geometric",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：3，9，27，81，243，？\n\n问题：下一项是什么？",
+      "answer": "729",
+      "target": "729",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-12",
+      "condition": "alt-diff",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，9，10，16，？\n\n问题：下一项是什么？",
+      "answer": "17",
+      "target": "17",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-12",
+      "condition": "alt-diff",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，9，10，16，？\n\n问题：下一项是什么？",
+      "answer": "17",
+      "target": "17",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-12",
+      "condition": "alt-diff",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，9，10，16，？\n\n问题：下一项是什么？",
+      "answer": "1",
+      "target": "17",
+      "latencyMs": 283,
+      "score": 0,
+      "note": "期望「17」，实答「1」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-12",
+      "condition": "alt-diff",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，3，9，10，16，？\n\n问题：下一项是什么？",
+      "answer": "17",
+      "target": "17",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "NS-13",
+      "condition": "squares-pm1",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，5，10，17，26，？\n\n问题：下一项是什么？",
+      "answer": "37",
+      "target": "37",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-13",
+      "condition": "squares-pm1",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，5，10，17，26，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "37",
+      "latencyMs": 403,
+      "score": 0,
+      "note": "期望「37」，实答「3」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-13",
+      "condition": "squares-pm1",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，5，10，17，26，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "37",
+      "latencyMs": 193,
+      "score": 0,
+      "note": "期望「37」，实答「3」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-13",
+      "condition": "squares-pm1",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：2，5，10，17，26，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "37",
+      "latencyMs": 138,
+      "score": 0,
+      "note": "期望「37」，实答「3」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-14",
+      "condition": "arithmetic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，11，17，23，29，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-14",
+      "condition": "arithmetic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，11，17，23，29，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "35",
+      "latencyMs": 206,
+      "score": 0,
+      "note": "期望「35」，实答「3」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-14",
+      "condition": "arithmetic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，11，17，23，29，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-14",
+      "condition": "arithmetic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：5，11，17，23，29，？\n\n问题：下一项是什么？",
+      "answer": "35",
+      "target": "35",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-15",
+      "condition": "geometric",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，2，4，8，16，？\n\n问题：下一项是什么？",
+      "answer": "32",
+      "target": "32",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-15",
+      "condition": "geometric",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，2，4，8，16，？\n\n问题：下一项是什么？",
+      "answer": "32",
+      "target": "32",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-15",
+      "condition": "geometric",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，2，4，8，16，？\n\n问题：下一项是什么？",
+      "answer": "3",
+      "target": "32",
+      "latencyMs": 346,
+      "score": 0,
+      "note": "期望「32」，实答「3」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-15",
+      "condition": "geometric",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：1，2，4，8，16，？\n\n问题：下一项是什么？",
+      "answer": "32",
+      "target": "32",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-16",
+      "condition": "alt-diff",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，7，10，11，14，？\n\n问题：下一项是什么？",
+      "answer": "15",
+      "target": "15",
+      "latencyMs": 277,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-16",
+      "condition": "alt-diff",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，7，10，11，14，？\n\n问题：下一项是什么？",
+      "answer": "1",
+      "target": "15",
+      "latencyMs": 124,
+      "score": 0,
+      "note": "期望「15」，实答「1」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-16",
+      "condition": "alt-diff",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，7，10，11，14，？\n\n问题：下一项是什么？",
+      "answer": "1",
+      "target": "15",
+      "latencyMs": 277,
+      "score": 0,
+      "note": "期望「15」，实答「1」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "NS-16",
+      "condition": "alt-diff",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一项的数字本身，不多一个字。\n数列：6，7，10，11，14，？\n\n问题：下一项是什么？",
+      "answer": "15",
+      "target": "15",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "6c1c5cddf11a1705",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.21.0"
+  }
+}

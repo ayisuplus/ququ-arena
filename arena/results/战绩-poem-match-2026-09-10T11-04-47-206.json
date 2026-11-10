@@ -1,0 +1,1011 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "poem-match",
+    "title": "诗意配对擂台",
+    "description": "ReLE 诗词匹配的自建版：给现代文描述，四句候选诗里选出语义匹配的那句（干扰项都是同主题名篇——光靠\"都写月\"蒙不对）。测诗意理解与古典文本映射。exact 裁判（选项字母）。",
+    "author": "AI斗兽场（自建，致敬 ReLE 诗词匹配）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:poem-match:2026-09-10",
+    "taskPrefix": "只输出选项字母本身（A/B/C/D），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "match": "现代文描述→诗句配对"
+    }
+  },
+  "startedAt": "2026-09-10T11:04:47.206Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "PM-01",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：感叹人生短暂、应及时行乐，把黄河之水奔流不回比作岁月不返\nA. 大漠孤烟直，长河落日圆\nB. 君不见黄河之水天上来，奔流到海不复回\nC. 春蚕到死丝方尽，蜡炬成灰泪始干\nD. 欲穷千里目，更上一层楼",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-01",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：感叹人生短暂、应及时行乐，把黄河之水奔流不回比作岁月不返\nA. 大漠孤烟直，长河落日圆\nB. 君不见黄河之水天上来，奔流到海不复回\nC. 春蚕到死丝方尽，蜡炬成灰泪始干\nD. 欲穷千里目，更上一层楼",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-01",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：感叹人生短暂、应及时行乐，把黄河之水奔流不回比作岁月不返\nA. 大漠孤烟直，长河落日圆\nB. 君不见黄河之水天上来，奔流到海不复回\nC. 春蚕到死丝方尽，蜡炬成灰泪始干\nD. 欲穷千里目，更上一层楼",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-01",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：感叹人生短暂、应及时行乐，把黄河之水奔流不回比作岁月不返\nA. 大漠孤烟直，长河落日圆\nB. 君不见黄河之水天上来，奔流到海不复回\nC. 春蚕到死丝方尽，蜡炬成灰泪始干\nD. 欲穷千里目，更上一层楼",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-02",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：站在异乡月夜下思念故乡\nA. 举头望明月，低头思故乡\nB. 海上生明月，天涯共此时\nC. 窗含西岭千秋雪，门泊东吴万里船\nD. 野火烧不尽，春风吹又生",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-02",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：站在异乡月夜下思念故乡\nA. 举头望明月，低头思故乡\nB. 海上生明月，天涯共此时\nC. 窗含西岭千秋雪，门泊东吴万里船\nD. 野火烧不尽，春风吹又生",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-02",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：站在异乡月夜下思念故乡\nA. 举头望明月，低头思故乡\nB. 海上生明月，天涯共此时\nC. 窗含西岭千秋雪，门泊东吴万里船\nD. 野火烧不尽，春风吹又生",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-02",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：站在异乡月夜下思念故乡\nA. 举头望明月，低头思故乡\nB. 海上生明月，天涯共此时\nC. 窗含西岭千秋雪，门泊东吴万里船\nD. 野火烧不尽，春风吹又生",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-03",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：边塞壮丽景象：大漠、孤烟、长河、落日\nA. 两个黄鹂鸣翠柳，一行白鹭上青天\nB. 海内存知己，天涯若比邻\nC. 大漠孤烟直，长河落日圆\nD. 会当凌绝顶，一览众山小",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 231,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-03",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：边塞壮丽景象：大漠、孤烟、长河、落日\nA. 两个黄鹂鸣翠柳，一行白鹭上青天\nB. 海内存知己，天涯若比邻\nC. 大漠孤烟直，长河落日圆\nD. 会当凌绝顶，一览众山小",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-03",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：边塞壮丽景象：大漠、孤烟、长河、落日\nA. 两个黄鹂鸣翠柳，一行白鹭上青天\nB. 海内存知己，天涯若比邻\nC. 大漠孤烟直，长河落日圆\nD. 会当凌绝顶，一览众山小",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-03",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：边塞壮丽景象：大漠、孤烟、长河、落日\nA. 两个黄鹂鸣翠柳，一行白鹭上青天\nB. 海内存知己，天涯若比邻\nC. 大漠孤烟直，长河落日圆\nD. 会当凌绝顶，一览众山小",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-04",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：真挚的知己之情可以跨越天涯海角的距离\nA. 海内存知己，天涯若比邻\nB. 劝君更尽一杯酒，西出阳关无故人\nC. 桃花潭水深千尺，不及汪伦送我情\nD. 孤帆远影碧空尽，唯见长江天际流",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-04",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：真挚的知己之情可以跨越天涯海角的距离\nA. 海内存知己，天涯若比邻\nB. 劝君更尽一杯酒，西出阳关无故人\nC. 桃花潭水深千尺，不及汪伦送我情\nD. 孤帆远影碧空尽，唯见长江天际流",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 309,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-04",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：真挚的知己之情可以跨越天涯海角的距离\nA. 海内存知己，天涯若比邻\nB. 劝君更尽一杯酒，西出阳关无故人\nC. 桃花潭水深千尺，不及汪伦送我情\nD. 孤帆远影碧空尽，唯见长江天际流",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-04",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：真挚的知己之情可以跨越天涯海角的距离\nA. 海内存知己，天涯若比邻\nB. 劝君更尽一杯酒，西出阳关无故人\nC. 桃花潭水深千尺，不及汪伦送我情\nD. 孤帆远影碧空尽，唯见长江天际流",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-05",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：看似无路可走的困境中忽然出现转机\nA. 春风又绿江南岸，明月何时照我还\nB. 山重水复疑无路，柳暗花明又一村\nC. 沉舟侧畔千帆过，病树前头万木春\nD. 纸上得来终觉浅，绝知此事要躬行",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-05",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：看似无路可走的困境中忽然出现转机\nA. 春风又绿江南岸，明月何时照我还\nB. 山重水复疑无路，柳暗花明又一村\nC. 沉舟侧畔千帆过，病树前头万木春\nD. 纸上得来终觉浅，绝知此事要躬行",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-05",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：看似无路可走的困境中忽然出现转机\nA. 春风又绿江南岸，明月何时照我还\nB. 山重水复疑无路，柳暗花明又一村\nC. 沉舟侧畔千帆过，病树前头万木春\nD. 纸上得来终觉浅，绝知此事要躬行",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-05",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：看似无路可走的困境中忽然出现转机\nA. 春风又绿江南岸，明月何时照我还\nB. 山重水复疑无路，柳暗花明又一村\nC. 沉舟侧畔千帆过，病树前头万木春\nD. 纸上得来终觉浅，绝知此事要躬行",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-06",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：新陈代谢：旧事物消逝处新事物蓬勃生长\nA. 沉舟侧畔千帆过，病树前头万木春\nB. 野火烧不尽，春风吹又生\nC. 欲穷千里目，更上一层楼\nD. 横眉冷对千夫指，俯首甘为孺子牛",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-06",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：新陈代谢：旧事物消逝处新事物蓬勃生长\nA. 沉舟侧畔千帆过，病树前头万木春\nB. 野火烧不尽，春风吹又生\nC. 欲穷千里目，更上一层楼\nD. 横眉冷对千夫指，俯首甘为孺子牛",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-06",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：新陈代谢：旧事物消逝处新事物蓬勃生长\nA. 沉舟侧畔千帆过，病树前头万木春\nB. 野火烧不尽，春风吹又生\nC. 欲穷千里目，更上一层楼\nD. 横眉冷对千夫指，俯首甘为孺子牛",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 154,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-06",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：新陈代谢：旧事物消逝处新事物蓬勃生长\nA. 沉舟侧畔千帆过，病树前头万木春\nB. 野火烧不尽，春风吹又生\nC. 欲穷千里目，更上一层楼\nD. 横眉冷对千夫指，俯首甘为孺子牛",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-07",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：登上顶峰俯瞰一切的豪情\nA. 不识庐山真面目，只缘身在此山中\nB. 欲穷千里目，更上一层楼\nC. 会当凌绝顶，一览众山小\nD. 采菊东篱下，悠然见南山",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 287,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-07",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：登上顶峰俯瞰一切的豪情\nA. 不识庐山真面目，只缘身在此山中\nB. 欲穷千里目，更上一层楼\nC. 会当凌绝顶，一览众山小\nD. 采菊东篱下，悠然见南山",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-07",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：登上顶峰俯瞰一切的豪情\nA. 不识庐山真面目，只缘身在此山中\nB. 欲穷千里目，更上一层楼\nC. 会当凌绝顶，一览众山小\nD. 采菊东篱下，悠然见南山",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-07",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：登上顶峰俯瞰一切的豪情\nA. 不识庐山真面目，只缘身在此山中\nB. 欲穷千里目，更上一层楼\nC. 会当凌绝顶，一览众山小\nD. 采菊东篱下，悠然见南山",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-08",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：实践出真知：书本知识不如亲身经历\nA. 读书破万卷，下笔如有神\nB. 问渠那得清如许，为有源头活水来\nC. 纸上得来终觉浅，绝知此事要躬行\nD. 黑发不知勤学早，白首方悔读书迟",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 165,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-08",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：实践出真知：书本知识不如亲身经历\nA. 读书破万卷，下笔如有神\nB. 问渠那得清如许，为有源头活水来\nC. 纸上得来终觉浅，绝知此事要躬行\nD. 黑发不知勤学早，白首方悔读书迟",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-08",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：实践出真知：书本知识不如亲身经历\nA. 读书破万卷，下笔如有神\nB. 问渠那得清如许，为有源头活水来\nC. 纸上得来终觉浅，绝知此事要躬行\nD. 黑发不知勤学早，白首方悔读书迟",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-08",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：实践出真知：书本知识不如亲身经历\nA. 读书破万卷，下笔如有神\nB. 问渠那得清如许，为有源头活水来\nC. 纸上得来终觉浅，绝知此事要躬行\nD. 黑发不知勤学早，白首方悔读书迟",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-09",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：情侣间至死不渝的思念，以春蚕吐丝作比\nA. 春蚕到死丝方尽，蜡炬成灰泪始干\nB. 衣带渐宽终不悔，为伊消得人憔悴\nC. 两情若是久长时，又岂在朝朝暮暮\nD. 相见时难别亦难，东风无力百花残",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 282,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-09",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：情侣间至死不渝的思念，以春蚕吐丝作比\nA. 春蚕到死丝方尽，蜡炬成灰泪始干\nB. 衣带渐宽终不悔，为伊消得人憔悴\nC. 两情若是久长时，又岂在朝朝暮暮\nD. 相见时难别亦难，东风无力百花残",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 443,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-09",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：情侣间至死不渝的思念，以春蚕吐丝作比\nA. 春蚕到死丝方尽，蜡炬成灰泪始干\nB. 衣带渐宽终不悔，为伊消得人憔悴\nC. 两情若是久长时，又岂在朝朝暮暮\nD. 相见时难别亦难，东风无力百花残",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-09",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：情侣间至死不渝的思念，以春蚕吐丝作比\nA. 春蚕到死丝方尽，蜡炬成灰泪始干\nB. 衣带渐宽终不悔，为伊消得人憔悴\nC. 两情若是久长时，又岂在朝朝暮暮\nD. 相见时难别亦难，东风无力百花残",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-10",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：小草烧不尽，春风一吹又遍地生长，赞颂顽强生命力\nA. 离离原上草，一岁一枯荣\nB. 野火烧不尽，春风吹又生\nC. 天街小雨润如酥，草色遥看近却无\nD. 国破山河在，城春草木深",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-10",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：小草烧不尽，春风一吹又遍地生长，赞颂顽强生命力\nA. 离离原上草，一岁一枯荣\nB. 野火烧不尽，春风吹又生\nC. 天街小雨润如酥，草色遥看近却无\nD. 国破山河在，城春草木深",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-10",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：小草烧不尽，春风一吹又遍地生长，赞颂顽强生命力\nA. 离离原上草，一岁一枯荣\nB. 野火烧不尽，春风吹又生\nC. 天街小雨润如酥，草色遥看近却无\nD. 国破山河在，城春草木深",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-10",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：小草烧不尽，春风一吹又遍地生长，赞颂顽强生命力\nA. 离离原上草，一岁一枯荣\nB. 野火烧不尽，春风吹又生\nC. 天街小雨润如酥，草色遥看近却无\nD. 国破山河在，城春草木深",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-11",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：春光里两只黄鹂在翠柳间鸣叫，白鹭排成一线飞向天空\nA. 泥融飞燕子，沙暖睡鸳鸯\nB. 两个黄鹂鸣翠柳，一行白鹭上青天\nC. 几处早莺争暖树，谁家新燕啄春泥\nD. 竹外桃花三两枝，春江水暖鸭先知",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-11",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：春光里两只黄鹂在翠柳间鸣叫，白鹭排成一线飞向天空\nA. 泥融飞燕子，沙暖睡鸳鸯\nB. 两个黄鹂鸣翠柳，一行白鹭上青天\nC. 几处早莺争暖树，谁家新燕啄春泥\nD. 竹外桃花三两枝，春江水暖鸭先知",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-11",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：春光里两只黄鹂在翠柳间鸣叫，白鹭排成一线飞向天空\nA. 泥融飞燕子，沙暖睡鸳鸯\nB. 两个黄鹂鸣翠柳，一行白鹭上青天\nC. 几处早莺争暖树，谁家新燕啄春泥\nD. 竹外桃花三两枝，春江水暖鸭先知",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-11",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：春光里两只黄鹂在翠柳间鸣叫，白鹭排成一线飞向天空\nA. 泥融飞燕子，沙暖睡鸳鸯\nB. 两个黄鹂鸣翠柳，一行白鹭上青天\nC. 几处早莺争暖树，谁家新燕啄春泥\nD. 竹外桃花三两枝，春江水暖鸭先知",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-12",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：从窗户望见西岭千年积雪，门前停泊着远行东吴的船只\nA. 窗含西岭千秋雪，门泊东吴万里船\nB. 窗间梅熟落蒂，墙下笋成出林\nC. 小轩窗，正梳妆\nD. 何当共剪西窗烛，却话巴山夜雨时",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-12",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：从窗户望见西岭千年积雪，门前停泊着远行东吴的船只\nA. 窗含西岭千秋雪，门泊东吴万里船\nB. 窗间梅熟落蒂，墙下笋成出林\nC. 小轩窗，正梳妆\nD. 何当共剪西窗烛，却话巴山夜雨时",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-12",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：从窗户望见西岭千年积雪，门前停泊着远行东吴的船只\nA. 窗含西岭千秋雪，门泊东吴万里船\nB. 窗间梅熟落蒂，墙下笋成出林\nC. 小轩窗，正梳妆\nD. 何当共剪西窗烛，却话巴山夜雨时",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-12",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：从窗户望见西岭千年积雪，门前停泊着远行东吴的船只\nA. 窗含西岭千秋雪，门泊东吴万里船\nB. 窗间梅熟落蒂，墙下笋成出林\nC. 小轩窗，正梳妆\nD. 何当共剪西窗烛，却话巴山夜雨时",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-13",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：想看得更远就必须登上更高一层楼\nA. 会当凌绝顶，一览众山小\nB. 欲穷千里目，更上一层楼\nC. 不畏浮云遮望眼，自缘身在最高层\nD. 山登绝顶我为峰",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-13",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：想看得更远就必须登上更高一层楼\nA. 会当凌绝顶，一览众山小\nB. 欲穷千里目，更上一层楼\nC. 不畏浮云遮望眼，自缘身在最高层\nD. 山登绝顶我为峰",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-13",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：想看得更远就必须登上更高一层楼\nA. 会当凌绝顶，一览众山小\nB. 欲穷千里目，更上一层楼\nC. 不畏浮云遮望眼，自缘身在最高层\nD. 山登绝顶我为峰",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-13",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：想看得更远就必须登上更高一层楼\nA. 会当凌绝顶，一览众山小\nB. 欲穷千里目，更上一层楼\nC. 不畏浮云遮望眼，自缘身在最高层\nD. 山登绝顶我为峰",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-14",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：杭州西湖如美女西施，淡妆浓抹都相宜\nA. 接天莲叶无穷碧，映日荷花别样红\nB. 欲把西湖比西子，淡妆浓抹总相宜\nC. 毕竟西湖六月中，风光不与四时同\nD. 水光潋滟晴方好，山色空蒙雨亦奇",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 196,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-14",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：杭州西湖如美女西施，淡妆浓抹都相宜\nA. 接天莲叶无穷碧，映日荷花别样红\nB. 欲把西湖比西子，淡妆浓抹总相宜\nC. 毕竟西湖六月中，风光不与四时同\nD. 水光潋滟晴方好，山色空蒙雨亦奇",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-14",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：杭州西湖如美女西施，淡妆浓抹都相宜\nA. 接天莲叶无穷碧，映日荷花别样红\nB. 欲把西湖比西子，淡妆浓抹总相宜\nC. 毕竟西湖六月中，风光不与四时同\nD. 水光潋滟晴方好，山色空蒙雨亦奇",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 189,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-14",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：杭州西湖如美女西施，淡妆浓抹都相宜\nA. 接天莲叶无穷碧，映日荷花别样红\nB. 欲把西湖比西子，淡妆浓抹总相宜\nC. 毕竟西湖六月中，风光不与四时同\nD. 水光潋滟晴方好，山色空蒙雨亦奇",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-15",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：庐山看不清真面目只因为身处其中\nA. 横看成岭侧成峰，远近高低各不同\nB. 不识庐山真面目，只缘身在此山中\nC. 日照香炉生紫烟，遥看瀑布挂前川\nD. 飞流直下三千尺，疑是银河落九天",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-15",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：庐山看不清真面目只因为身处其中\nA. 横看成岭侧成峰，远近高低各不同\nB. 不识庐山真面目，只缘身在此山中\nC. 日照香炉生紫烟，遥看瀑布挂前川\nD. 飞流直下三千尺，疑是银河落九天",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-15",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：庐山看不清真面目只因为身处其中\nA. 横看成岭侧成峰，远近高低各不同\nB. 不识庐山真面目，只缘身在此山中\nC. 日照香炉生紫烟，遥看瀑布挂前川\nD. 飞流直下三千尺，疑是银河落九天",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 99,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-15",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：庐山看不清真面目只因为身处其中\nA. 横看成岭侧成峰，远近高低各不同\nB. 不识庐山真面目，只缘身在此山中\nC. 日照香炉生紫烟，遥看瀑布挂前川\nD. 飞流直下三千尺，疑是银河落九天",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-16",
+      "condition": "match",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：中秋望月怀远，愿远方亲人共赏这轮明月\nA. 明月几时有，把酒问青天\nB. 海上生明月，天涯共此时\nC. 但愿人长久，千里共婵娟\nD. 举头望明月，低头思故乡",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 61,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-16",
+      "condition": "match",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：中秋望月怀远，愿远方亲人共赏这轮明月\nA. 明月几时有，把酒问青天\nB. 海上生明月，天涯共此时\nC. 但愿人长久，千里共婵娟\nD. 举头望明月，低头思故乡",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 61,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-16",
+      "condition": "match",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：中秋望月怀远，愿远方亲人共赏这轮明月\nA. 明月几时有，把酒问青天\nB. 海上生明月，天涯共此时\nC. 但愿人长久，千里共婵娟\nD. 举头望明月，低头思故乡",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 61,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PM-16",
+      "condition": "match",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出选项字母本身（A/B/C/D），不多一个字。\n这段现代文描述最匹配哪句诗？\n描述：中秋望月怀远，愿远方亲人共赏这轮明月\nA. 明月几时有，把酒问青天\nB. 海上生明月，天涯共此时\nC. 但愿人长久，千里共婵娟\nD. 举头望明月，低头思故乡",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 61,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "86380e0cbe205acb",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.25.0"
+  }
+}

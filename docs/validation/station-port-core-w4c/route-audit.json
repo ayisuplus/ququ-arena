@@ -1,0 +1,46 @@
+{
+  "scene": "Assets/Station/Scenes/BlackHoleStationModelHomesW4A.unity",
+  "firstPerson": true,
+  "routes": [
+    {
+      "route": "port via east axis to core public gate",
+      "plannedMeters": 265.0,
+      "walkedMeters": 265.0,
+      "complete": true,
+      "failure": "",
+      "end": "(125.00, 0.08, 0.00)"
+    },
+    {
+      "route": "east public gate to arena-side public floor",
+      "plannedMeters": 65.0,
+      "walkedMeters": 4.6,
+      "complete": false,
+      "failure": "blocked near (120.55, 0.08, 0.00) toward (120.20, 0.06, 0.00)",
+      "end": "(120.55, 0.08, 0.00)"
+    },
+    {
+      "route": "east public gate to DeepSeek corridor",
+      "plannedMeters": 75.0,
+      "walkedMeters": 4.6,
+      "complete": false,
+      "failure": "blocked near (120.55, 0.08, 0.00) toward (120.20, 0.06, 0.00)",
+      "end": "(120.55, 0.08, 0.00)"
+    },
+    {
+      "route": "port via north cross street and dock to core north gate",
+      "plannedMeters": 435.5,
+      "walkedMeters": 371.0,
+      "complete": false,
+      "failure": "blocked near (12.00, 0.08, 174.60) toward (12.00, 0.06, 174.40)",
+      "end": "(12.00, 0.08, 174.60)"
+    },
+    {
+      "route": "port direct diagonal toward northeast core edge",
+      "plannedMeters": 108.5,
+      "walkedMeters": 46.4,
+      "complete": false,
+      "failure": "no floor near (170.49, 0.08, 161.99)",
+      "end": "(170.49, 0.08, 161.99)"
+    }
+  ]
+}

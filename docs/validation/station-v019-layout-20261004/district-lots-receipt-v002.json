@@ -1,0 +1,82 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\check-district-lots.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "id": "cafe-court-wing",
+          "root": "V015 package - cafe and observation gallery",
+          "x0": -27,
+          "x1": -10,
+          "z0": 10,
+          "z1": 28,
+          "h": 14,
+          "overlaps": [],
+          "minRadius": 105.475113,
+          "maxRadius": 125.171875,
+          "insideRing": true,
+          "promenadesClear": true
+        },
+        {
+          "id": "study-court-wing",
+          "root": "V015 package - 06 study",
+          "x0": -16,
+          "x1": 6,
+          "z0": 22,
+          "z1": 36,
+          "h": 12,
+          "overlaps": [],
+          "minRadius": 120.033325,
+          "maxRadius": 144.554489,
+          "insideRing": true,
+          "promenadesClear": true
+        },
+        {
+          "id": "homes-shared-wing",
+          "root": "V015 package - existing shared resident lounge",
+          "x0": -14,
+          "x1": 4,
+          "z0": -43,
+          "z1": -20,
+          "h": 14,
+          "overlaps": [],
+          "minRadius": 205.9733,
+          "maxRadius": 227.10788,
+          "insideRing": true,
+          "promenadesClear": true
+        },
+        {
+          "id": "guest-court-wing",
+          "root": "V015 package - 11 guest lodge",
+          "x0": -24,
+          "x1": -7,
+          "z0": -40,
+          "z1": -22,
+          "h": 17.5,
+          "overlaps": [],
+          "minRadius": 196.237122,
+          "maxRadius": 215.740585,
+          "insideRing": true,
+          "promenadesClear": true
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

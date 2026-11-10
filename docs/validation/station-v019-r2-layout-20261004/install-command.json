@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\install-reading-boundary.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "frameId": "445338514",
+        "newChildId": "1378444694",
+        "filterId": "1255938842",
+        "oldMesh": "{fileID: 4300000, guid: 8a5436fe89032de45be43974af250361, type: 2}",
+        "newMesh": "{fileID: 4300000, guid: 8fc7653f35ccfa848a0d5560355a644d, type: 2}",
+        "disabled": [
+          {
+            "fileId": "817631914",
+            "name": "Original hall court connection"
+          },
+          {
+            "fileId": "679044130",
+            "name": "Reading court transverse connection"
+          }
+        ],
+        "newColliders": 2,
+        "newSeats": 0,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

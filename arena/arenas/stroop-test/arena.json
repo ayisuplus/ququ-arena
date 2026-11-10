@@ -1,0 +1,16 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "stroop-test",
+  "title": "斯特鲁普效应擂台",
+  "description": "心理学最著名的冲突范式的 LLM 版（生成器自建）：颜色词用另一种颜色印刷，conflict-ink 问印刷色（答字义即翻车）、conflict-word 问字义（答墨色即翻车）、congruent 一致对照（防逢题必反）。测认知冲突下的指令跟随——LLM 的 Stroop 效应是真实研究热点。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:stroop-test:2026-09-10",
+  "taskPrefix": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "conflict-ink": "冲突问墨色（字义≠墨色，答字义即翻车）",
+    "conflict-word": "冲突问字义（答墨色即翻车）",
+    "congruent": "一致对照（字义=墨色，防逢题必反）"
+  }
+}

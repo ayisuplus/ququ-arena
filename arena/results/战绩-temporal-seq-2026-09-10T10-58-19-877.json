@@ -1,0 +1,1519 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "temporal-seq",
+    "title": "日程推算擂台",
+    "description": "BBH temporal_sequences 的中文生成器版：一天若干不重叠时间块，问某时刻在进行什么活动（查询时刻必落在块中间——边界两可不问）。生成器铺设时间轴，答案=覆盖查询时刻的活动。测时间区间归属推理。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:temporal-seq:2026-09-10",
+    "taskPrefix": "只输出活动名称本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "schedule": "日程块归属"
+    }
+  },
+  "startedAt": "2026-09-10T10:58:19.877Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "TS-01",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n12:14-12:44 浇花\n13:40-15:10 做饭\n16:37-18:37 游泳\n\n问题：12:29 他在做什么？",
+      "answer": "浇",
+      "target": "浇花",
+      "latencyMs": 258,
+      "score": 0,
+      "note": "期望「浇花」，实答「浇」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-01",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n12:14-12:44 浇花\n13:40-15:10 做饭\n16:37-18:37 游泳\n\n问题：12:29 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-01",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n12:14-12:44 浇花\n13:40-15:10 做饭\n16:37-18:37 游泳\n\n问题：12:29 他在做什么？",
+      "answer": "浇",
+      "target": "浇花",
+      "latencyMs": 424,
+      "score": 0,
+      "note": "期望「浇花」，实答「浇」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-01",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n12:14-12:44 浇花\n13:40-15:10 做饭\n16:37-18:37 游泳\n\n问题：12:29 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-02",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:41-10:11 看书\n12:54-14:24 做饭\n18:32-19:02 打电话\n\n问题：9:56 他在做什么？",
+      "answer": "看书",
+      "target": "看书",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-02",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:41-10:11 看书\n12:54-14:24 做饭\n18:32-19:02 打电话\n\n问题：9:56 他在做什么？",
+      "answer": "看书",
+      "target": "看书",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-02",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:41-10:11 看书\n12:54-14:24 做饭\n18:32-19:02 打电话\n\n问题：9:56 他在做什么？",
+      "answer": "看书",
+      "target": "看书",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-02",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:41-10:11 看书\n12:54-14:24 做饭\n18:32-19:02 打电话\n\n问题：9:56 他在做什么？",
+      "answer": "看书",
+      "target": "看书",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-03",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:17-8:47 遛狗\n8:52-9:22 打电话\n14:48-16:48 游泳\n\n问题：15:03 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-03",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:17-8:47 遛狗\n8:52-9:22 打电话\n14:48-16:48 游泳\n\n问题：15:03 他在做什么？",
+      "answer": "游",
+      "target": "游泳",
+      "latencyMs": 470,
+      "score": 0,
+      "note": "期望「游泳」，实答「游」",
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-03",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:17-8:47 遛狗\n8:52-9:22 打电话\n14:48-16:48 游泳\n\n问题：15:03 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-03",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:17-8:47 遛狗\n8:52-9:22 打电话\n14:48-16:48 游泳\n\n问题：15:03 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-04",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:27-8:57 吃午饭\n9:14-10:44 跑步\n10:45-11:45 看书\n14:14-15:44 写代码\n\n问题：9:44 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-04",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:27-8:57 吃午饭\n9:14-10:44 跑步\n10:45-11:45 看书\n14:14-15:44 写代码\n\n问题：9:44 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-04",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:27-8:57 吃午饭\n9:14-10:44 跑步\n10:45-11:45 看书\n14:14-15:44 写代码\n\n问题：9:44 他在做什么？",
+      "answer": "跑",
+      "target": "跑步",
+      "latencyMs": 461,
+      "score": 0,
+      "note": "期望「跑步」，实答「跑」",
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-04",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:27-8:57 吃午饭\n9:14-10:44 跑步\n10:45-11:45 看书\n14:14-15:44 写代码\n\n问题：9:44 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-05",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:52-10:52 吃午饭\n14:14-15:14 做饭\n16:43-18:13 跑步\n\n问题：14:29 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-05",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:52-10:52 吃午饭\n14:14-15:14 做饭\n16:43-18:13 跑步\n\n问题：14:29 他在做什么？",
+      "answer": "做",
+      "target": "做饭",
+      "latencyMs": 339,
+      "score": 0,
+      "note": "期望「做饭」，实答「做」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-05",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:52-10:52 吃午饭\n14:14-15:14 做饭\n16:43-18:13 跑步\n\n问题：14:29 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-05",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:52-10:52 吃午饭\n14:14-15:14 做饭\n16:43-18:13 跑步\n\n问题：14:29 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-06",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:44-10:14 浇花\n11:57-13:27 吃午饭\n13:56-15:26 睡午觉\n\n问题：14:11 他在做什么？",
+      "answer": "睡午",
+      "target": "睡午觉",
+      "latencyMs": 314,
+      "score": 0,
+      "note": "期望「睡午觉」，实答「睡午」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-06",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:44-10:14 浇花\n11:57-13:27 吃午饭\n13:56-15:26 睡午觉\n\n问题：14:11 他在做什么？",
+      "answer": "睡午",
+      "target": "睡午觉",
+      "latencyMs": 191,
+      "score": 0,
+      "note": "期望「睡午觉」，实答「睡午」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-06",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:44-10:14 浇花\n11:57-13:27 吃午饭\n13:56-15:26 睡午觉\n\n问题：14:11 他在做什么？",
+      "answer": "睡午觉",
+      "target": "睡午觉",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-06",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:44-10:14 浇花\n11:57-13:27 吃午饭\n13:56-15:26 睡午觉\n\n问题：14:11 他在做什么？",
+      "answer": "睡午觉",
+      "target": "睡午觉",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-07",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:06-8:36 遛狗\n9:17-10:47 跑步\n11:58-13:28 睡午觉\n17:32-18:32 做饭\n\n问题：18:02 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-07",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:06-8:36 遛狗\n9:17-10:47 跑步\n11:58-13:28 睡午觉\n17:32-18:32 做饭\n\n问题：18:02 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-07",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:06-8:36 遛狗\n9:17-10:47 跑步\n11:58-13:28 睡午觉\n17:32-18:32 做饭\n\n问题：18:02 他在做什么？",
+      "answer": "做",
+      "target": "做饭",
+      "latencyMs": 365,
+      "score": 0,
+      "note": "期望「做饭」，实答「做」",
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-07",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:06-8:36 遛狗\n9:17-10:47 跑步\n11:58-13:28 睡午觉\n17:32-18:32 做饭\n\n问题：18:02 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-08",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:24-10:54 吃午饭\n11:03-11:33 写代码\n11:36-12:06 游泳\n18:39-19:39 做饭\n\n问题：10:39 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 259,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-08",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:24-10:54 吃午饭\n11:03-11:33 写代码\n11:36-12:06 游泳\n18:39-19:39 做饭\n\n问题：10:39 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-08",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:24-10:54 吃午饭\n11:03-11:33 写代码\n11:36-12:06 游泳\n18:39-19:39 做饭\n\n问题：10:39 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-08",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:24-10:54 吃午饭\n11:03-11:33 写代码\n11:36-12:06 游泳\n18:39-19:39 做饭\n\n问题：10:39 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 86,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "TS-09",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:41-10:11 做饭\n11:05-11:35 遛狗\n12:02-13:32 写代码\n16:47-18:47 睡午觉\n\n问题：11:20 他在做什么？",
+      "answer": "遛狗",
+      "target": "遛狗",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-09",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:41-10:11 做饭\n11:05-11:35 遛狗\n12:02-13:32 写代码\n16:47-18:47 睡午觉\n\n问题：11:20 他在做什么？",
+      "answer": "遛狗",
+      "target": "遛狗",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-09",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:41-10:11 做饭\n11:05-11:35 遛狗\n12:02-13:32 写代码\n16:47-18:47 睡午觉\n\n问题：11:20 他在做什么？",
+      "answer": "遛",
+      "target": "遛狗",
+      "latencyMs": 254,
+      "score": 0,
+      "note": "期望「遛狗」，实答「遛」",
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-09",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:41-10:11 做饭\n11:05-11:35 遛狗\n12:02-13:32 写代码\n16:47-18:47 睡午觉\n\n问题：11:20 他在做什么？",
+      "answer": "遛狗",
+      "target": "遛狗",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-10",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:33-10:33 写代码\n11:41-12:41 看书\n12:54-14:54 吃午饭\n\n问题：13:54 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-10",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:33-10:33 写代码\n11:41-12:41 看书\n12:54-14:54 吃午饭\n\n问题：13:54 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-10",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:33-10:33 写代码\n11:41-12:41 看书\n12:54-14:54 吃午饭\n\n问题：13:54 他在做什么？",
+      "answer": "吃饭",
+      "target": "吃午饭",
+      "latencyMs": 365,
+      "score": 0,
+      "note": "期望「吃午饭」，实答「吃饭」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-10",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:33-10:33 写代码\n11:41-12:41 看书\n12:54-14:54 吃午饭\n\n问题：13:54 他在做什么？",
+      "answer": "吃午饭",
+      "target": "吃午饭",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-11",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:47-12:47 做饭\n13:37-15:07 写代码\n15:21-17:21 睡午觉\n\n问题：14:37 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-11",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:47-12:47 做饭\n13:37-15:07 写代码\n15:21-17:21 睡午觉\n\n问题：14:37 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-11",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:47-12:47 做饭\n13:37-15:07 写代码\n15:21-17:21 睡午觉\n\n问题：14:37 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-11",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:47-12:47 做饭\n13:37-15:07 写代码\n15:21-17:21 睡午觉\n\n问题：14:37 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-12",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:18-10:48 睡午觉\n11:43-13:13 开会\n13:57-14:27 游泳\n15:21-16:51 看书\n\n问题：14:12 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-12",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:18-10:48 睡午觉\n11:43-13:13 开会\n13:57-14:27 游泳\n15:21-16:51 看书\n\n问题：14:12 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-12",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:18-10:48 睡午觉\n11:43-13:13 开会\n13:57-14:27 游泳\n15:21-16:51 看书\n\n问题：14:12 他在做什么？",
+      "answer": "游",
+      "target": "游泳",
+      "latencyMs": 218,
+      "score": 0,
+      "note": "期望「游泳」，实答「游」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-12",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:18-10:48 睡午觉\n11:43-13:13 开会\n13:57-14:27 游泳\n15:21-16:51 看书\n\n问题：14:12 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 471,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-13",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:14-9:44 看书\n11:23-13:23 跑步\n14:59-16:29 打电话\n18:50-19:20 遛狗\n\n问题：12:38 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-13",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:14-9:44 看书\n11:23-13:23 跑步\n14:59-16:29 打电话\n18:50-19:20 遛狗\n\n问题：12:38 他在做什么？",
+      "answer": "跑",
+      "target": "跑步",
+      "latencyMs": 107,
+      "score": 0,
+      "note": "期望「跑步」，实答「跑」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-13",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:14-9:44 看书\n11:23-13:23 跑步\n14:59-16:29 打电话\n18:50-19:20 遛狗\n\n问题：12:38 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 310,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-13",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:14-9:44 看书\n11:23-13:23 跑步\n14:59-16:29 打电话\n18:50-19:20 遛狗\n\n问题：12:38 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 365,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-14",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:02-12:32 做饭\n13:00-13:30 遛狗\n18:28-19:28 跑步\n\n问题：11:32 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-14",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:02-12:32 做饭\n13:00-13:30 遛狗\n18:28-19:28 跑步\n\n问题：11:32 他在做什么？",
+      "answer": "做饭",
+      "target": "做饭",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-14",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:02-12:32 做饭\n13:00-13:30 遛狗\n18:28-19:28 跑步\n\n问题：11:32 他在做什么？",
+      "answer": "做",
+      "target": "做饭",
+      "latencyMs": 190,
+      "score": 0,
+      "note": "期望「做饭」，实答「做」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-14",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:02-12:32 做饭\n13:00-13:30 遛狗\n18:28-19:28 跑步\n\n问题：11:32 他在做什么？",
+      "answer": "做",
+      "target": "做饭",
+      "latencyMs": 242,
+      "score": 0,
+      "note": "期望「做饭」，实答「做」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-15",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:54-10:54 跑步\n13:35-14:05 游泳\n18:04-20:04 睡午觉\n\n问题：13:50 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-15",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:54-10:54 跑步\n13:35-14:05 游泳\n18:04-20:04 睡午觉\n\n问题：13:50 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-15",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:54-10:54 跑步\n13:35-14:05 游泳\n18:04-20:04 睡午觉\n\n问题：13:50 他在做什么？",
+      "answer": "游",
+      "target": "游泳",
+      "latencyMs": 334,
+      "score": 0,
+      "note": "期望「游泳」，实答「游」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-15",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:54-10:54 跑步\n13:35-14:05 游泳\n18:04-20:04 睡午觉\n\n问题：13:50 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-16",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:48-12:48 浇花\n14:24-14:54 遛狗\n18:08-20:08 看书\n\n问题：12:03 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-16",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:48-12:48 浇花\n14:24-14:54 遛狗\n18:08-20:08 看书\n\n问题：12:03 他在做什么？",
+      "answer": "浇",
+      "target": "浇花",
+      "latencyMs": 315,
+      "score": 0,
+      "note": "期望「浇花」，实答「浇」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-16",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:48-12:48 浇花\n14:24-14:54 遛狗\n18:08-20:08 看书\n\n问题：12:03 他在做什么？",
+      "answer": "浇",
+      "target": "浇花",
+      "latencyMs": 296,
+      "score": 0,
+      "note": "期望「浇花」，实答「浇」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-16",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n11:48-12:48 浇花\n14:24-14:54 遛狗\n18:08-20:08 看书\n\n问题：12:03 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-17",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:20-11:50 打电话\n13:30-15:00 开会\n17:09-18:39 游泳\n\n问题：13:45 他在做什么？",
+      "answer": "开会",
+      "target": "开会",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-17",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:20-11:50 打电话\n13:30-15:00 开会\n17:09-18:39 游泳\n\n问题：13:45 他在做什么？",
+      "answer": "开",
+      "target": "开会",
+      "latencyMs": 404,
+      "score": 0,
+      "note": "期望「开会」，实答「开」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-17",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:20-11:50 打电话\n13:30-15:00 开会\n17:09-18:39 游泳\n\n问题：13:45 他在做什么？",
+      "answer": "开",
+      "target": "开会",
+      "latencyMs": 366,
+      "score": 0,
+      "note": "期望「开会」，实答「开」",
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-17",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:20-11:50 打电话\n13:30-15:00 开会\n17:09-18:39 游泳\n\n问题：13:45 他在做什么？",
+      "answer": "开会",
+      "target": "开会",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-18",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-11:03 睡午觉\n11:21-13:21 游泳\n14:43-15:43 看书\n17:21-18:51 浇花\n\n问题：17:36 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-18",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-11:03 睡午觉\n11:21-13:21 游泳\n14:43-15:43 看书\n17:21-18:51 浇花\n\n问题：17:36 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-18",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-11:03 睡午觉\n11:21-13:21 游泳\n14:43-15:43 看书\n17:21-18:51 浇花\n\n问题：17:36 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-18",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-11:03 睡午觉\n11:21-13:21 游泳\n14:43-15:43 看书\n17:21-18:51 浇花\n\n问题：17:36 他在做什么？",
+      "answer": "浇花",
+      "target": "浇花",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-19",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:07-11:07 看书\n14:43-16:13 睡午觉\n16:52-18:52 吃午饭\n\n问题：10:22 他在做什么？",
+      "answer": "看书",
+      "target": "看书",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-19",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:07-11:07 看书\n14:43-16:13 睡午觉\n16:52-18:52 吃午饭\n\n问题：10:22 他在做什么？",
+      "answer": "看",
+      "target": "看书",
+      "latencyMs": 144,
+      "score": 0,
+      "note": "期望「看书」，实答「看」",
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-19",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:07-11:07 看书\n14:43-16:13 睡午觉\n16:52-18:52 吃午饭\n\n问题：10:22 他在做什么？",
+      "answer": "看",
+      "target": "看书",
+      "latencyMs": 277,
+      "score": 0,
+      "note": "期望「看书」，实答「看」",
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-19",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n10:07-11:07 看书\n14:43-16:13 睡午觉\n16:52-18:52 吃午饭\n\n问题：10:22 他在做什么？",
+      "answer": "看",
+      "target": "看书",
+      "latencyMs": 236,
+      "score": 0,
+      "note": "期望「看书」，实答「看」",
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-20",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:19-10:19 游泳\n10:57-12:57 喝咖啡\n17:25-18:25 浇花\n\n问题：9:19 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-20",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:19-10:19 游泳\n10:57-12:57 喝咖啡\n17:25-18:25 浇花\n\n问题：9:19 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-20",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:19-10:19 游泳\n10:57-12:57 喝咖啡\n17:25-18:25 浇花\n\n问题：9:19 他在做什么？",
+      "answer": "游",
+      "target": "游泳",
+      "latencyMs": 243,
+      "score": 0,
+      "note": "期望「游泳」，实答「游」",
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-20",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:19-10:19 游泳\n10:57-12:57 喝咖啡\n17:25-18:25 浇花\n\n问题：9:19 他在做什么？",
+      "answer": "游泳",
+      "target": "游泳",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-21",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:02-9:02 跑步\n13:15-13:45 游泳\n16:21-17:51 睡午觉\n18:24-18:54 开会\n\n问题：8:32 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-21",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:02-9:02 跑步\n13:15-13:45 游泳\n16:21-17:51 睡午觉\n18:24-18:54 开会\n\n问题：8:32 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-21",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:02-9:02 跑步\n13:15-13:45 游泳\n16:21-17:51 睡午觉\n18:24-18:54 开会\n\n问题：8:32 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-21",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:02-9:02 跑步\n13:15-13:45 游泳\n16:21-17:51 睡午觉\n18:24-18:54 开会\n\n问题：8:32 他在做什么？",
+      "answer": "跑步",
+      "target": "跑步",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-22",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:52-9:22 看书\n9:51-11:51 喝咖啡\n13:45-15:15 开会\n17:00-18:30 游泳\n\n问题：10:36 他在做什么？",
+      "answer": "喝咖啡",
+      "target": "喝咖啡",
+      "latencyMs": 231,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-22",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:52-9:22 看书\n9:51-11:51 喝咖啡\n13:45-15:15 开会\n17:00-18:30 游泳\n\n问题：10:36 他在做什么？",
+      "answer": "喝咖啡",
+      "target": "喝咖啡",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-22",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:52-9:22 看书\n9:51-11:51 喝咖啡\n13:45-15:15 开会\n17:00-18:30 游泳\n\n问题：10:36 他在做什么？",
+      "answer": "喝啡",
+      "target": "喝咖啡",
+      "latencyMs": 118,
+      "score": 0,
+      "note": "期望「喝咖啡」，实答「喝啡」",
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-22",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:52-9:22 看书\n9:51-11:51 喝咖啡\n13:45-15:15 开会\n17:00-18:30 游泳\n\n问题：10:36 他在做什么？",
+      "answer": "喝咖啡",
+      "target": "喝咖啡",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-23",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:26-10:26 游泳\n11:57-13:27 写代码\n16:06-17:06 做饭\n17:31-19:31 吃午饭\n\n问题：12:42 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-23",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:26-10:26 游泳\n11:57-13:27 写代码\n16:06-17:06 做饭\n17:31-19:31 吃午饭\n\n问题：12:42 他在做什么？",
+      "answer": "写代个",
+      "target": "写代码",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "期望「写代码」，实答「写代个」",
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-23",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:26-10:26 游泳\n11:57-13:27 写代码\n16:06-17:06 做饭\n17:31-19:31 吃午饭\n\n问题：12:42 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-23",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n8:26-10:26 游泳\n11:57-13:27 写代码\n16:06-17:06 做饭\n17:31-19:31 吃午饭\n\n问题：12:42 他在做什么？",
+      "answer": "写代码",
+      "target": "写代码",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-24",
+      "condition": "schedule",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-9:33 游泳\n16:11-17:41 看书\n17:42-19:42 开会\n\n问题：18:27 他在做什么？",
+      "answer": "开会",
+      "target": "开会",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-24",
+      "condition": "schedule",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-9:33 游泳\n16:11-17:41 看书\n17:42-19:42 开会\n\n问题：18:27 他在做什么？",
+      "answer": "开",
+      "target": "开会",
+      "latencyMs": 169,
+      "score": 0,
+      "note": "期望「开会」，实答「开」",
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-24",
+      "condition": "schedule",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-9:33 游泳\n16:11-17:41 看书\n17:42-19:42 开会\n\n问题：18:27 他在做什么？",
+      "answer": "开",
+      "target": "开会",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「开会」，实答「开」",
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "TS-24",
+      "condition": "schedule",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出活动名称本身，不多一个字。\n某人今天的日程：\n9:03-9:33 游泳\n16:11-17:41 看书\n17:42-19:42 开会\n\n问题：18:27 他在做什么？",
+      "answer": "开",
+      "target": "开会",
+      "latencyMs": 360,
+      "score": 0,
+      "note": "期望「开会」，实答「开」",
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "b4b3d7e09c5dd1e8",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.24.0"
+  }
+}

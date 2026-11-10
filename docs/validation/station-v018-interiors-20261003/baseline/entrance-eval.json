@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v018\\check-baseline-entrances.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "b01-main",
+          "passed": false,
+          "collider": "B01 simplified collision",
+          "distance": 2.87841487
+        },
+        {
+          "name": "b01-small",
+          "passed": false,
+          "collider": "B01 simplified collision",
+          "distance": 2.92593646
+        },
+        {
+          "name": "b02-core",
+          "passed": false,
+          "collider": "B02_Porcelain.001",
+          "distance": 0.334679842
+        },
+        {
+          "name": "b04-core",
+          "passed": false,
+          "collider": "B04 simplified collision",
+          "distance": 2.40894413
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

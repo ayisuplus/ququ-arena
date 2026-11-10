@@ -1,0 +1,1491 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "zodiac-year",
+    "title": "生肖年份擂台",
+    "description": "出生年份→生肖（生成器自建）：按公历年份粗算，立春/春节边界不出题（防农历边界两可）。锚定 2020 鼠 / 2024 龙 / 2025 蛇入契约。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:zodiac-year:2026-09-10",
+    "taskPrefix": "只输出生肖本身（一个字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "zodiac-year": "公历年份→生肖"
+    }
+  },
+  "startedAt": "2026-09-10T11:59:19.816Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "ZY-01",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1954 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-01",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1954 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-01",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1954 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-01",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1954 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-02",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1975 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-02",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1975 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-02",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1975 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-02",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1975 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "ZY-03",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1990 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-03",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1990 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-03",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1990 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-03",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1990 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-04",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1962 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-04",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1962 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-04",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1962 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-04",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1962 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-05",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1933 年出生属什么？",
+      "answer": "鸡",
+      "target": "鸡",
+      "latencyMs": 424,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-05",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1933 年出生属什么？",
+      "answer": "鸡",
+      "target": "鸡",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-05",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1933 年出生属什么？",
+      "answer": "鸡",
+      "target": "鸡",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-05",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1933 年出生属什么？",
+      "answer": "鸡",
+      "target": "鸡",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-06",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1980 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-06",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1980 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-06",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1980 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-06",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1980 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-07",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1963 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 101,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-07",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1963 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 320,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-07",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1963 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-07",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1963 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-08",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1961 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-08",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1961 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-08",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1961 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-08",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1961 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-09",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2015 年出生属什么？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-09",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2015 年出生属什么？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-09",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2015 年出生属什么？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 381,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-09",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2015 年出生属什么？",
+      "answer": "羊",
+      "target": "羊",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-10",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2002 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-10",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2002 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-10",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2002 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-10",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2002 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 434,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-11",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1999 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-11",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1999 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-11",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1999 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-11",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1999 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-12",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2022 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-12",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2022 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-12",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2022 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-12",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2022 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-13",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2023 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-13",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2023 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-13",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2023 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-13",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2023 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-14",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1926 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-14",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1926 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-14",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1926 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-14",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1926 年出生属什么？",
+      "answer": "虎",
+      "target": "虎",
+      "latencyMs": 149,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-15",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1930 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-15",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1930 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-15",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1930 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-15",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1930 年出生属什么？",
+      "answer": "马",
+      "target": "马",
+      "latencyMs": 365,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-16",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1988 年出生属什么？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-16",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1988 年出生属什么？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-16",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1988 年出生属什么？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-16",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1988 年出生属什么？",
+      "answer": "龙",
+      "target": "龙",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-17",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2020 年出生属什么？",
+      "answer": "鼠",
+      "target": "鼠",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-17",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2020 年出生属什么？",
+      "answer": "鼠",
+      "target": "鼠",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-17",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2020 年出生属什么？",
+      "answer": "鼠",
+      "target": "鼠",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-17",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2020 年出生属什么？",
+      "answer": "鼠",
+      "target": "鼠",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-18",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1971 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-18",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1971 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-18",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1971 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-18",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1971 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-19",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1995 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-19",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1995 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-19",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1995 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-19",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1995 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-20",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1946 年出生属什么？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-20",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1946 年出生属什么？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-20",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1946 年出生属什么？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-20",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1946 年出生属什么？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-21",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1939 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-21",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1939 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-21",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1939 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-21",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1939 年出生属什么？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-22",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1985 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 287,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-22",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1985 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-22",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1985 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-22",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1985 年出生属什么？",
+      "answer": "牛",
+      "target": "牛",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-23",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2019 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-23",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2019 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-23",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2019 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-23",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：2019 年出生属什么？",
+      "answer": "猪",
+      "target": "猪",
+      "latencyMs": 364,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-24",
+      "condition": "zodiac-year",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1968 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-24",
+      "condition": "zodiac-year",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1968 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-24",
+      "condition": "zodiac-year",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1968 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ZY-24",
+      "condition": "zodiac-year",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出生肖本身（一个字），不多一个字。\n按公历年份粗算生肖（不考虑立春/春节边界）：1968 年出生属什么？",
+      "answer": "猴",
+      "target": "猴",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "0729c15db2e9b57c",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.30.0"
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "baseCommit": "7359960e9afec3267b55dca18102477d2f693577",
+  "candidate": {
+    "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+    "bytes": 33101662,
+    "sha256": "93d4e0d8e9e0dfda5d360f5391682244d47f1fdb67c47484071fe85e0a869b5c"
+  },
+  "baseline": {
+    "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationCreativeBuildingsV016.unity",
+    "bytes": 32353379,
+    "sha256": "22ead44324bd2e8fa42318d6cb97d28e3a6b4553857c546599deb27471a203bb"
+  },
+  "finalBuildId": "build_ce5960423447",
+  "sourceFiles": [
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+      "bytes": 33101662,
+      "sha256": "93d4e0d8e9e0dfda5d360f5391682244d47f1fdb67c47484071fe85e0a869b5c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationCreativeBuildingsV016.unity",
+      "bytes": 32353379,
+      "sha256": "22ead44324bd2e8fa42318d6cb97d28e3a6b4553857c546599deb27471a203bb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalGuidePlayerProbe.cs",
+      "bytes": 8899,
+      "sha256": "261020b8c21df4e91dc1bf9ad38aa443f95a00b00e6bd88a88cb1b1a8f1dfb5e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalPlayerProbe.cs",
+      "bytes": 12104,
+      "sha256": "99b4458724c035aeab2d6045cce078ec937dae64b576d2fe51c443e2845db36e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalSpinePlayerProbe.cs",
+      "bytes": 24469,
+      "sha256": "46c22abdd09798d343b2f25b9749161948193f93249ec265b255e4b5f7267bfd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCafePlayerProbe.cs",
+      "bytes": 7747,
+      "sha256": "ee1b6822177bd9f0e70624a2246d5729f67ac99fcf240ca2ad1cb36c253ae530"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCircularStandProbe.cs",
+      "bytes": 11921,
+      "sha256": "48681f225d29d4bf87a239c90f3e5f5a0b89a72a15ed9cf16d325b9590e13f92"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationContinuousWorldPlayerProbe.cs",
+      "bytes": 16275,
+      "sha256": "56be498cb69189afba597f2afc27edd53db18e92bca7625660c84f01d59b3c44"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCreativeBuildingProbeV016.cs",
+      "bytes": 9965,
+      "sha256": "5c7ed98110f810f76d752432d70ded2fd8b747cf2f8ebb3f5e3824af86d80e85"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationEastPublicGatePlayerProbe.cs",
+      "bytes": 9484,
+      "sha256": "143b5d2f74d8231e8ef43f326e59087c1bf95327fddf1b6510105f4840113969"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationEcologicalParkProbeV017.cs",
+      "bytes": 9548,
+      "sha256": "2eedb9ee1dbe047d58c42f436295e0d452b5ac5e2d6dd8c5d43a9d8cc4a95a8b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationFourDistrictPlayerProbe.cs",
+      "bytes": 8245,
+      "sha256": "6512f9d84bd17c7b991d8f51e9267785120b1ea01aa4ebe74f215fed23629b74"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationFourDistrictTourPlayerProbe.cs",
+      "bytes": 46688,
+      "sha256": "374e6929d319c2a8f0e7baf01c5c5e454c354377d504bdf96e673c12bdc3a9ae"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationGardenPlayerProbe.cs",
+      "bytes": 11104,
+      "sha256": "bd6dbb67b8f620527a2d0f7a292e3439a7150cbe3091ad900f332cf197577f44"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationGreenhousePlayerProbe.cs",
+      "bytes": 7982,
+      "sha256": "96eb5c7b6e645c3cb49680a2438e7df4e65c1b824b0244590f0c7e9f90704394"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationModelHomesPlayerProbe.cs",
+      "bytes": 6086,
+      "sha256": "54e9543c1ceb1ad065bff5d30ea0a8775d98dc31ea0b80cdaefe8f8f7327b378"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationNorthResidencePlayerProbe.cs",
+      "bytes": 9919,
+      "sha256": "19933c0d56bdf6a99d9d1a5944a7fefef5bd76ab24fb2387f7d1272a8da55045"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPromenadePlayerProbe.cs",
+      "bytes": 7434,
+      "sha256": "dd154654ee42caa74705f17ca81ccb282c58ed38d4cedd607e7758871ed4b92c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicCourtProbe.cs",
+      "bytes": 4659,
+      "sha256": "8a4f82e69dea5bd40f078985ae3b99659972593492d0e5c7f89e4d381ee8f725"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicGroupsProbe.cs",
+      "bytes": 5766,
+      "sha256": "67f193b142314004a2b90554e4b44d0bc1b4151ed577779a7d5d494a430fe2cc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicMatchNoticePlayerProbe.cs",
+      "bytes": 9819,
+      "sha256": "2478c5a3d439e7b269d01838446a9b51c92b4113b581d1ba54b40202add5f295"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationReflectionControlProbe.cs",
+      "bytes": 6106,
+      "sha256": "5bf33c502a7486642810e41f01e01c69152967bb0f37a0b3c04397708d476176"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchFacadeProbe.cs",
+      "bytes": 6831,
+      "sha256": "d75f984c885c5b40e404e91ba6ce95a0c85c3cb63d292f411c564d3975e1b5b0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchGalleryPlayerProbe.cs",
+      "bytes": 11522,
+      "sha256": "4200c2c9e14ae63a9ac462582076df801ed8edc23f713771ce91454aa315a749"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchPlayerProbe.cs",
+      "bytes": 5032,
+      "sha256": "45f73f8e1a32cc0d18dc3be062a52061d23ec628a9fceeda94d1fdd66e9da06d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResidentialGroupsProbe.cs",
+      "bytes": 7969,
+      "sha256": "6e07d7041af829a8e94626e9f5288d4735bfdc1d10c8630b8a24557774b4317c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResidentPlayerProbe.cs",
+      "bytes": 9148,
+      "sha256": "0a1b061086cfffe5d8164b02c353a81518f07300ac13e1e2327e371bc17c03c9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingAccessProbe.cs",
+      "bytes": 13386,
+      "sha256": "8a5cb662d110a0a8c11a8fd8209ad40d3c71140dc92e8e64ea44b664244bea73"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingArenaSafetyProbe.cs",
+      "bytes": 16377,
+      "sha256": "a517709f911f24a19280f6cd220153f7939c44f1f23f3c34841d10f7711c329b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingCargoProbe.cs",
+      "bytes": 16842,
+      "sha256": "29f6ef21954ad869497377372ec271632ad1c8b7793092f753e5964239e5d227"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingDailyProbe.cs",
+      "bytes": 18609,
+      "sha256": "517b4b50d3c41077d15e58c9861e2430d1fd381f04b0da0d5cedf6fa4d7cf006"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingDockProbe.cs",
+      "bytes": 11302,
+      "sha256": "9022b0b653ad2b6c76aadf0cdff42672b7721115af16165ddd5173b95d164598"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingEdgeProbe.cs",
+      "bytes": 7557,
+      "sha256": "20b697c6cebbeb135f69a1d7aacb7ed21e96de8608f6cc13416ebd7cd7da5479"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingHomeProbe.cs",
+      "bytes": 8016,
+      "sha256": "5aa0d2ad1b279f5c5db595b8ae089dc7224d29b0a67bde6b6d549ff4fd85cb4b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingLayoutProbe.cs",
+      "bytes": 11081,
+      "sha256": "1f1ba6beb20aeecc8cda925c0274b485625310b5a3bd668b8c1a859b771c8b61"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingLevelProbe.cs",
+      "bytes": 9061,
+      "sha256": "28f8e0db72948ce6ff3df323f807b3fd10b322e47352697ada137cf073f4bb15"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingPrototypeProbe.cs",
+      "bytes": 15104,
+      "sha256": "66c07fd61eb38b1f3de27cdc6d25f0868c2a9cad3e546ce306dc22f8a8bb5e2f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingReadingProbe.cs",
+      "bytes": 12648,
+      "sha256": "be902805ac4cf52f95ca773aa9d33e0f68267138ce20bb676cb815f83f96cad0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingReflectionProbe.cs",
+      "bytes": 16343,
+      "sha256": "6dd9a6eeb465210da7e9d7f15e007ae5d06e789a0300cdf4d44d33f540ed66ff"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingResidentProbe.cs",
+      "bytes": 8419,
+      "sha256": "04a4ef01f74f62d655b44ea0988931ca62bd73f8b3f6717506090c2797863e86"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingSeatProbe.cs",
+      "bytes": 12489,
+      "sha256": "403d393d0f6f9711ff0b742f4af0d58008279a10aa04c59c05fc911dc2722b60"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingSpectatorProbe.cs",
+      "bytes": 15847,
+      "sha256": "c026985a36f617967103515bc5fe02f7ed4b0b229e265329896c85caaf17fb13"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingUpperGuardProbe.cs",
+      "bytes": 9883,
+      "sha256": "c01c26df027266f4ef67d72ae4994c07276e97704849256b8ed8cdd74e583b5a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingUpperProbe.cs",
+      "bytes": 10234,
+      "sha256": "69f0524fbab5fdcf0c48d1dc7e3c43be04a9652c3293a282c9af540abf795212"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSeedConservatoryProbeV016.cs",
+      "bytes": 8839,
+      "sha256": "9420b91316e7421cf61e67a493cd82433f3d2fbff7cb7106e80eff23b4cdee15"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSingularityPlayerProbe.cs",
+      "bytes": 3587,
+      "sha256": "6d0da7407887518679b8029a60db4f030ee1019bdfeb37e65335d6c232149f2e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSouthDescentPlayerProbe.cs",
+      "bytes": 8509,
+      "sha256": "24ad51b88c1718e934c79739a2031cb030fe75088d20eb16f0fa5e94e0f7cdd3"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSouthGardenLoopPlayerProbe.cs",
+      "bytes": 7227,
+      "sha256": "cbdbfd0c0b093a8a1791e66ea540dde16008d63805c5f6952b85deb24438c675"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationThreeDestinationsPlayerProbe.cs",
+      "bytes": 7690,
+      "sha256": "b6e6f28c53d86908f476c22b5853fcab278c38424683775702baaf6af80db5fa"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationVisualSamplePerformanceProbe.cs",
+      "bytes": 7203,
+      "sha256": "e445866d44aaedc1d35fd4f9591a3ad08a8ad3dc7abe0485353b921e498e4172"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationVisualSamplePlayerProbe.cs",
+      "bytes": 25826,
+      "sha256": "9ca2650262db7a2f8fa6770120424146d5d8ca9566987be63a49b0e3ab3fb4fe"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldMigrationPlayerProbe.cs",
+      "bytes": 5728,
+      "sha256": "9adf4e8630bd06811bbf588f7b9e27ea5de773eca2c7399408fcc17f927c70e2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldPlayerProbe.cs",
+      "bytes": 16756,
+      "sha256": "b76372459eeb2c7b1723424e5e3cda604638a630e3392383e09270611fe4a751"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldSaveProbe.cs",
+      "bytes": 10217,
+      "sha256": "b832887aca744870fe9f2d894cf0e358279bb2438b70acaed98cb4b7efee50ac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Shaders/StationParkInheritedGlass.shader",
+      "bytes": 3458,
+      "sha256": "ce2c8c39cddd7f40a92a7a074b69ef6c7376617e82605b808c723fc5012b5980"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Shaders/StationParkWater.shader",
+      "bytes": 4142,
+      "sha256": "7ebb65c05704ea018ee2db75678809b9198ac5b7d92895e8ca75f7d7349490a6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/EcologicalParkV017/ParkOakContact.mat",
+      "bytes": 4090,
+      "sha256": "bc316d7d0cb5881bfd27d35e3f112aa21ca14becbcbe030812b571b33f215d01"
+    }
+  ],
+  "localBuildArtifacts": [
+    {
+      "path": ".cache/v017-player/StationV017.exe",
+      "bytes": 667136,
+      "sha256": "30d4b41a85303abf83c686f06b75ab1681471c79b9dc7fe530ead09099fdf63d"
+    },
+    {
+      "path": ".cache/v017-player/StationV017_Data/level0",
+      "bytes": 6941532,
+      "sha256": "5111bb20021eec8f0175453a56f1c14470485c4ef968fbaf33df86a638ef5474"
+    },
+    {
+      "path": ".cache/v017-player/StationV017_Data/globalgamemanagers",
+      "bytes": 418548,
+      "sha256": "2e0721caad1cf0aec5c57d9c93eb32235e9bdfc6ed839b94c02b2dbd7300dbee"
+    },
+    {
+      "path": ".cache/v017-player/StationV017_Data/Managed/QuQu.Validation.dll",
+      "bytes": 883200,
+      "sha256": "8b32366542604dc5cfe0e7232afbef4c100d0a9f6e0b884625f6748da41c1f34"
+    },
+    {
+      "path": ".cache/v017-player/StationV017_Data/Managed/QuQu.Presentation.dll",
+      "bytes": 511488,
+      "sha256": "f351fdf72aca51bcccfee97529779012ff6136b226cde040eced93290b4f994c"
+    },
+    {
+      "path": ".cache/v017-baseline-player/StationV016Baseline.exe",
+      "bytes": 667136,
+      "sha256": "30d4b41a85303abf83c686f06b75ab1681471c79b9dc7fe530ead09099fdf63d"
+    },
+    {
+      "path": ".cache/v017-baseline-player/StationV016Baseline_Data/Managed/QuQu.Validation.dll",
+      "bytes": 883200,
+      "sha256": "8b32366542604dc5cfe0e7232afbef4c100d0a9f6e0b884625f6748da41c1f34"
+    }
+  ],
+  "reports": [
+    {
+      "path": "docs/validation/station-v017-player-20261003/evaluation.json",
+      "bytes": 7063,
+      "sha256": "1c23e9e9104386c885a27b725a91827120e502548aca8b3f83a6531e6a9a46fd"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/final-asset-audit.json",
+      "bytes": 107499,
+      "sha256": "c40805e4e6d4063372b4d2f5f619588b321fd120e8beed1dbcc9eeda3ccca972"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/preservation-status.json",
+      "bytes": 425,
+      "sha256": "cadf32fb44aefeb9760325fe48d8e2380a02b12a90012299e446765769d0c6ff"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/performance-contract.json",
+      "bytes": 827,
+      "sha256": "6db03f02add1ef86323d684682d9cfafd2e41804739af5e40cb334a1e251f586"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/metrics-final-candidate-build-report.json",
+      "bytes": 3230865,
+      "sha256": "4eb0d4588304a436221a528a3794f02d8a444b068b18d480b1a4bf214152e192"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/metrics-final-baseline-build-report.json",
+      "bytes": 3149188,
+      "sha256": "67598af23cc34473264fbf2138b9c21991a04c61d4efd69ae311ac89f382dee2"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/b03-rooting-build-report.json",
+      "bytes": 2255199,
+      "sha256": "cd7dd9f2fe5c58d61e52ae12009e2a6f62c74f43239e0a3e9cffdfda5a961c82"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/completion-state.json",
+      "bytes": 65295,
+      "sha256": "dcb410f2bf86377d19a51d94aff0e717e8acaedc142da55446d3e3bd237b945a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/stable-identities.json",
+      "bytes": 604,
+      "sha256": "480ec3c337a9a9b3628755a485d381dd5669aea848597f6eb8fa5529b96b9543"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/oak-contact-install.json",
+      "bytes": 833,
+      "sha256": "b7a35adc38b8c04f2590b95c0d7cc8a4895adae351e536c402628cfce88dae7f"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/spatial-audit.json",
+      "bytes": 102,
+      "sha256": "452ad649d5654766550c37d593fc17c85a2bb2599c2cf3078ce769232178c98a"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-cameras.json",
+      "bytes": 8166,
+      "sha256": "eb198b26ef77f7050fccab388af1a40965177454185dcb02e86b708bb6baf725"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase0/daily.json",
+      "bytes": 68231,
+      "sha256": "a017829738bab06014dc56b863271ffdf7aaa94eed1508eee0102081544af3d9"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase0/exit.json",
+      "bytes": 88,
+      "sha256": "f3c54d7fcffb74d4d206ff1963ac73269856f1adeb49bcded1452634fffca00d"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase97/daily.json",
+      "bytes": 68483,
+      "sha256": "87e4bd260e6191456ab2308a7cebae0c0226d72f66e2266a1e133b963fd24e98"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase97/exit.json",
+      "bytes": 88,
+      "sha256": "9a9858f49596a7fbfe6fab1bb26afc1ad630e03ae4e3b793018fb50f257ac2aa"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/interior-phase0/route.json",
+      "bytes": 8768,
+      "sha256": "fafd6b4fc519612c528e1b417cc7721b535ac397a1b9b72f56b1e1484f17286b"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/interior-phase0/exit.json",
+      "bytes": 88,
+      "sha256": "21e19a7ca2426eef64f6d05ef1033aa9634b997c3ecc48216ce3ebd48d069328"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/interior-phase97/route.json",
+      "bytes": 8769,
+      "sha256": "62be07fbd31e154da678655b43a364baabbf432cebee9b4a211015587848e57f"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/interior-phase97/exit.json",
+      "bytes": 88,
+      "sha256": "bfcf7a377668aa19f51b48345e65f8f1cba122a688ba28f350bc1efe6e9dfd6a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/performance.json",
+      "bytes": 3239,
+      "sha256": "75e38e1ecffc205e5e9e64d1a8d03a5a7ff99c5c9f4666ebc47f2b984f4bd443"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/exit.json",
+      "bytes": 87,
+      "sha256": "f510bce96228cf7660bf0d7b488448d0c9440c45ed5458eccd13871270f0430a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/performance.json",
+      "bytes": 4650,
+      "sha256": "e6821f8dd949fd7a261d697ba49b65f0c2a2177444c8b39606768b995c76f504"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/exit.json",
+      "bytes": 88,
+      "sha256": "87c69f559b7c9d8a3a809acb2ebd1800d502bfbd1f6828bedb83af38ae4879d6"
+    }
+  ],
+  "images": [
+    {
+      "path": "docs/validation/station-v017-baseline-20261003/before-garden-entry.png",
+      "bytes": 1405925,
+      "sha256": "d48882fb1f2e695f1019ebd3e7f30a2b7c79b8ba726a2bc5466fb37fd0f5e2cb"
+    },
+    {
+      "path": "docs/validation/station-v017-baseline-20261003/before-garden-interior.png",
+      "bytes": 1640596,
+      "sha256": "ee540b234de699fe047f2c4523f98aebe6815f25149c6a84022a6e6376d391ca"
+    },
+    {
+      "path": "docs/validation/station-v017-baseline-20261003/before-garden-overview.png",
+      "bytes": 1340905,
+      "sha256": "dd7e609c7eaaaafeb0a4da09ccc6ec2a33ff11de653b8f8c2ab80741627f980b"
+    },
+    {
+      "path": "docs/validation/station-v017-baseline-20261003/before-garden-rest.png",
+      "bytes": 1308749,
+      "sha256": "7421fcba6d7613596a73a62ffc107389d37cf4f26f1351d783ad980c013bb820"
+    },
+    {
+      "path": "docs/validation/station-v017-baseline-20261003/before-garden-waterbay.png",
+      "bytes": 1801199,
+      "sha256": "fdea9781abd5bee27f01870cf1a6e04ec6298d33101f3b0bde919dc82b381c31"
+    },
+    {
+      "path": "docs/validation/station-v017-lighting-20261003/lighting-only-garden-entry.png",
+      "bytes": 1456107,
+      "sha256": "b4729745645976d824f194cb1b9745e03b024847c5e7ab7694eb699f9e92aafd"
+    },
+    {
+      "path": "docs/validation/station-v017-lighting-20261003/lighting-only-garden-interior.png",
+      "bytes": 1700924,
+      "sha256": "6160f6dce9814d743c9503086fbfb70784cf2d3b26e45a7459a1f88d67b7d0fa"
+    },
+    {
+      "path": "docs/validation/station-v017-lighting-20261003/lighting-only-garden-overview.png",
+      "bytes": 1357870,
+      "sha256": "f11c4f4314aa5a0fd35ce8dc45fb54c2d347b52d97c4e2deaf6bd88170130591"
+    },
+    {
+      "path": "docs/validation/station-v017-lighting-20261003/lighting-only-garden-rest.png",
+      "bytes": 1414989,
+      "sha256": "78fc9b64f129b929b0483a0d353118d2dc675ab4d419e8b1b8b5b7525a7703cc"
+    },
+    {
+      "path": "docs/validation/station-v017-lighting-20261003/lighting-only-garden-waterbay.png",
+      "bytes": 1926931,
+      "sha256": "d765409fce1ccb95f1b88ba47044e63207d2af478ddd95aef2d0e229118250f7"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-garden-entry.png",
+      "bytes": 1381133,
+      "sha256": "9c6053fc1da42cf4009a1c81058192dc5c300cf40aa74c7b6c07a2e990baf1b6"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-garden-interior.png",
+      "bytes": 1632019,
+      "sha256": "8fde304716a235caa040b4e6093d92f30a0511ddd722bfa1de59166e7dc31a15"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-garden-overview.png",
+      "bytes": 1254449,
+      "sha256": "673397050e136aa1177e8bc8e67b6832b2be32fd57330339d7645aa5948b3f9a"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-garden-rest.png",
+      "bytes": 1384390,
+      "sha256": "5c7abba6d0cbf93732bf9f06f9c4e297522df6c76a1ff7b7c3603d9b6e6fff10"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-garden-waterbay.png",
+      "bytes": 1891395,
+      "sha256": "6844946eb168819b0b4a7a5214cf0b830ae18f0b8812a8b722195b1ad3628fd4"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-v003-garden-entry.png",
+      "bytes": 1118327,
+      "sha256": "f0097dceaa7b0b43b60d2685056df239439011f857b08c1f532161ae13e7f0d7"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-v003-garden-interior.png",
+      "bytes": 1588846,
+      "sha256": "0f37696d587d9345435d9d22d269991937e6587bbfeac8f74e08402448e9b043"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-v003-garden-overview.png",
+      "bytes": 1153880,
+      "sha256": "b0946e9ac823f01cd70749158a2fe0c6cedcf7ff516f9e793fd03dcf7a8ac98e"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-v003-garden-rest.png",
+      "bytes": 809700,
+      "sha256": "f80031c32bd5235bc100e80d19ba80f549852bf082c883338bb787812e5c683d"
+    },
+    {
+      "path": "docs/validation/station-v017-open-park-20261003/open-v003-garden-waterbay.png",
+      "bytes": 1014475,
+      "sha256": "286336e526c49b1edfa7c5f4dcf8ad22f0abd6d8fbffbc18ad67e502e6bbaf89"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/detail-p01-canopy.png",
+      "bytes": 1521839,
+      "sha256": "ccb97347dd9885f480d1c155a1c5381dcb1d901c6b8c946d4d7142323e2c539f"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/detail-p03-collection.png",
+      "bytes": 1510398,
+      "sha256": "10ae8cc9cbb8989d242494347d6b163e563c189412499103be233d2eaa74605a"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-garden-entry.png",
+      "bytes": 1116796,
+      "sha256": "c44bc423c406c1294f1beba14589b3c8781633151dbec4c32d0bb24eca52ad5a"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-garden-interior.png",
+      "bytes": 1849580,
+      "sha256": "6e943072b36c477ceb3e1eb9808a255174095b5a8e1fdb79f38949550ae695f4"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-garden-overview.png",
+      "bytes": 1204626,
+      "sha256": "dceb0b0b60b977595d8b36f9b2c1e5e01d119d44f7a84ab198108583ef4eb946"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-garden-rest.png",
+      "bytes": 815286,
+      "sha256": "a6c8e1026c39f8f4207939fcc60299eec06605de3672a2e5e7b0f58650795fe6"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-garden-waterbay.png",
+      "bytes": 1091142,
+      "sha256": "99ffd5df8b91577a772f58621591138f012d796d87d2fa0842541357044dd00f"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/final-v007-seat-wood-contact.png",
+      "bytes": 2027003,
+      "sha256": "7ed974fa99d67ea97d64bc0d98114dcdeecb6e05dcea8c99e55f124408745fea"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/full-kit-v005-garden-entry.png",
+      "bytes": 1129906,
+      "sha256": "b9bea2970caf6154be19c69199454845404a149d2354d6d3232574388aa73697"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/full-kit-v005-garden-interior.png",
+      "bytes": 1831624,
+      "sha256": "baeb9664df508155694fadfd402d6fbc57a60c66ab0e4bbb814dcf747e35ac9e"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/full-kit-v005-garden-overview.png",
+      "bytes": 1209461,
+      "sha256": "5271ee1337474a8d39494533d27aebc49d379e5991aab48df54649766bff4972"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/full-kit-v005-garden-rest.png",
+      "bytes": 819241,
+      "sha256": "d3ce27172a72381b7ae3c8a1cd1fd6d7f35dab9d2f8c490e52957ad16b3c6a20"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/full-kit-v005-garden-waterbay.png",
+      "bytes": 1063405,
+      "sha256": "5348e80e984da9e02d728cc631ab8d1b0f1b923423c76b5f3ac7727db2717469"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/layers-garden-entry.png",
+      "bytes": 1118550,
+      "sha256": "f8b2f09fc01563d4f82f0d626ef2de0de305ee79a91b9a91aa54ee8f418bbbf2"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/layers-garden-interior.png",
+      "bytes": 1590273,
+      "sha256": "b708f0fc3f8e5642fc7929028a7ef5829d263af802a42df2a323255bc60434d2"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/layers-garden-overview.png",
+      "bytes": 1159960,
+      "sha256": "d021a7f44e0450dd3cc756d7fa1ddeb2a5e3c86c69d0567423c16af030d2ce67"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/layers-garden-rest.png",
+      "bytes": 808570,
+      "sha256": "d241de47f877fe6f9f8e7714b6be55582b714de4d7aa2343017ccf040b55ad84"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/layers-garden-waterbay.png",
+      "bytes": 1013244,
+      "sha256": "b2a933d1559ed3e2ff4c2ede07ae35c18eb65f28c6c66c8234e0b82970036593"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/p01-v002-garden-overview.png",
+      "bytes": 1202091,
+      "sha256": "7eb3aacc8d7eaad9f3ef9bc69c5ad0a1ceac752d895af5d7d76d33161640a3d0"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/p01-v002-garden-rest.png",
+      "bytes": 809700,
+      "sha256": "f80031c32bd5235bc100e80d19ba80f549852bf082c883338bb787812e5c683d"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/p01-v002-garden-waterbay.png",
+      "bytes": 1015919,
+      "sha256": "c3cf372ff7ba2cad7940a0192de09a56ca1dc07d9ab93bd28532da07ccb4b695"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/p01-v002-p01-front.png",
+      "bytes": 1601377,
+      "sha256": "b99a33de890cee611b0e9f84c6cccb6cc8dd3a56e8c5c61d3d14eebb8adceaa9"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/p01-v002-p01-side.png",
+      "bytes": 1806357,
+      "sha256": "12b6ae35ee69b10cde2285bbb00bf38e1d76d1d386c9f47dcf9748e439c4e6b0"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/reflection-v006-garden-entry.png",
+      "bytes": 1131210,
+      "sha256": "39b06e40a5556a4478aab30613f2515a634ad376e21a4f4f1c4cc9e273bc56e6"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/reflection-v006-garden-interior.png",
+      "bytes": 1842838,
+      "sha256": "d81c3334e9b96c451577e204bedac6bb316b624d215a74f3970e557354c3f253"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/reflection-v006-garden-overview.png",
+      "bytes": 1216695,
+      "sha256": "a3e3a3a9f4618bdb75bf57f85c0351fd237ad968e0c2e97d7f7763dcd948ddc1"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/reflection-v006-garden-rest.png",
+      "bytes": 818295,
+      "sha256": "db0b2c39b8493c91068142dbaf6f141cc7cb6d7afa197f2b1aa51e0f6dd7fe56"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/reflection-v006-garden-waterbay.png",
+      "bytes": 1094824,
+      "sha256": "36011184deec115f3b850f459f8769e3d7cc357e84d2d172b81aa8cd57a54b11"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/rejected-b03-unrooted-v001.png",
+      "bytes": 1157319,
+      "sha256": "eb496f1b125a14d4ff4444adabc93a07af241c4a60623596f29a71b51b03dc76"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/water-density-v004-garden-entry.png",
+      "bytes": 1069364,
+      "sha256": "4732356ff2ad9cbbba3cf664ef7523f52a1e8679fb6e1cd5aadb3eeca0c5e8bc"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/water-density-v004-garden-interior.png",
+      "bytes": 1831363,
+      "sha256": "594290c8974133f34779c67928a1da86b2b597a3eda31fc0efa8511766cf427e"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/water-density-v004-garden-overview.png",
+      "bytes": 1198203,
+      "sha256": "b273feffc686aa9c4f9cfe7fcfbbf505fd8c777c5485bc6d55ab4613cfc81916"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/water-density-v004-garden-rest.png",
+      "bytes": 804733,
+      "sha256": "fe68abcc099da90a1e6cf69681c10ae679b195de3a1354a43491c22d1398b550"
+    },
+    {
+      "path": "docs/validation/station-v017-plants-20261003/water-density-v004-garden-waterbay.png",
+      "bytes": 1017255,
+      "sha256": "fcbf580aa5070b59d3251b9319aaf1874f1253301f6cbd84babd4bbbe3fe39c6"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase0/cafe-seated.png",
+      "bytes": 790859,
+      "sha256": "2ebcac922c611d37a85f3128b6cf69b1c0a657483a7a4af3f41081ccfc270fb3"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase0/garden-care.png",
+      "bytes": 731846,
+      "sha256": "8769a15ce41bebae27d511e50cb1c91940c0646b57cdb4b705930cf74967e257"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase97/cafe-seated.png",
+      "bytes": 766857,
+      "sha256": "b2ac3953fe932b798da4c68db2be8a9d394eee3635f875bfd7563e58ac5d77b7"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/daily-phase97/garden-care.png",
+      "bytes": 728945,
+      "sha256": "b961e0225a3d820536425e0c8abbfe99aca2818e90ae255dfbb936b6b4109f88"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-baseline/b03-collection.png",
+      "bytes": 1375613,
+      "sha256": "87a740d613ad985b65cfe382f0e89e25e1f3232e01ca0535f1274e3d49066735"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-baseline/entry.png",
+      "bytes": 1399560,
+      "sha256": "d9a868dde7e8068133b0f6a8cf97c696011aa0d59a95539ddfc90c5dc490170b"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-baseline/fountain.png",
+      "bytes": 1321652,
+      "sha256": "e0b0c829aafa1a54a4b4a786c6809da2b362f681815fb3217644a2f664ab9003"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-baseline/plant-layers.png",
+      "bytes": 1634061,
+      "sha256": "14221f7fd8ff0e7cc1ce86963dc5175ec2412b0c2314fa2b2a656a7a3cd2fe79"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-baseline/water.png",
+      "bytes": 1783477,
+      "sha256": "1a863d49dd3cab5615dc377b623a17bcbb0dc3ced1032f75ab47954864765db3"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/b03-collection.png",
+      "bytes": 1365776,
+      "sha256": "aaa57d05ca55aaaee171e0a4aa0330d054490b745152561b4f5323251440cb0d"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/entry.png",
+      "bytes": 1418234,
+      "sha256": "bd212d926150dc7dcb8a985c494dabb1e977fc7db237c0a6f9073c1243f5b2a6"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/fountain.png",
+      "bytes": 1339766,
+      "sha256": "3305bd8c1a8a2a8d6c6d52e929fa9a0de736e3b709aee7ebd2116387800b6587"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/plant-layers.png",
+      "bytes": 1653755,
+      "sha256": "1771e0efbfb33cf5b60725271093066aa7d705c0c2f1b5e1eba792c2b35b75c3"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline/water.png",
+      "bytes": 1771068,
+      "sha256": "9ed082197de0251b5a2ee6e9911e66205b8707631f3e915fb7b716df730759aa"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline-before-metrics/b03-collection.png",
+      "bytes": 1364065,
+      "sha256": "9f3f35f3853ebcdfcf858593a8b5868ae20a832394e699318eb042a160743ec6"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline-before-metrics/entry.png",
+      "bytes": 1415407,
+      "sha256": "1d36f0f65049db13a3abbfca5c89af6db948b3d3571112d87a3ba2ff29cf9baa"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline-before-metrics/fountain.png",
+      "bytes": 1336934,
+      "sha256": "afcc358882aa9205a4b8a06801a6a876d40c196c538a43dc93732ab7c8cc0ff3"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline-before-metrics/plant-layers.png",
+      "bytes": 1647926,
+      "sha256": "280dffaeb57bcdcf4f35ebe1ab564d5a45733938d7a4506fe67201955acfcc05"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-baseline-before-metrics/water.png",
+      "bytes": 1771024,
+      "sha256": "b15ae367eb63ec46e9113882127ed0adfa964cffeb10e88f3dad60ab80312829"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/b03-collection.png",
+      "bytes": 1337453,
+      "sha256": "6fef2f74534f2cadc79cf49b154d39f47b774c99e1063553ff2ef3048c2012a5"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/entry.png",
+      "bytes": 1147712,
+      "sha256": "672c0ceb1b83c508e1e0b8a308d766cf797aba52a0a21d682f98e7d1eed8cf12"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/fountain.png",
+      "bytes": 827068,
+      "sha256": "5804cc7d35b00c626993357396a5e4da700f60f0c8d9929690a72e6f46b64b01"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/lod-transition-0-far.png",
+      "bytes": 1335553,
+      "sha256": "2680c6187190c56a9123a7a76167ace9aad4520e1fe7637a24dc2c83bc2a07d9"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/lod-transition-0-near.png",
+      "bytes": 1275194,
+      "sha256": "ad4a004bec33e49daa5204d63792289ac7bd1f099677dc43779616176d8ac371"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/lod-transition-1-far.png",
+      "bytes": 1179668,
+      "sha256": "4bc196b11e50957af56b13cece6f91865fec364fb4ae5275257c09669e126a07"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/lod-transition-1-near.png",
+      "bytes": 1197856,
+      "sha256": "3d5b553829686d70d0ffdc40e0f9783e232ec749b0d9ee6ca3c839d4a6857846"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/plant-layers.png",
+      "bytes": 1839350,
+      "sha256": "897c875158aa487b337a2f1b209fdfd241ec4b06687785e7d4da4532752a81bd"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/water-motion-a.png",
+      "bytes": 1095527,
+      "sha256": "8149a6695e12c9ce8f6dec603f2f6cc239f21c898214a32d71aa3a8a985554c8"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/water-motion-b.png",
+      "bytes": 1096837,
+      "sha256": "b9f89d2af12227ede13ec0b8347aa9e175d39facbefd01f367b9af6cac975cfe"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate/water.png",
+      "bytes": 1107222,
+      "sha256": "9e38b7baeea1b28c758ad8e6ae53dc9a6f2a062f6582e0a3ccfb581c7a9d07dd"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/b03-collection.png",
+      "bytes": 1343677,
+      "sha256": "13efbd9636fb325b88643590f3339d4f0b532279a84635e5957c7d666e0a9cde"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/entry.png",
+      "bytes": 1147425,
+      "sha256": "557de089ab9b8dcb1e52b61e36fc5c9c8848381eac78dc70fc0026fadd0ae20f"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/fountain.png",
+      "bytes": 830453,
+      "sha256": "3dd49dd08f121f5681ac94bf03e153610d8ea510e26e2c90af831ec02967a6b2"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/plant-layers.png",
+      "bytes": 1838591,
+      "sha256": "2d2c5ea8630d4386e9a7c42175837be57cf96622d67a778903a32a21198d2664"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/water-motion-a.png",
+      "bytes": 1098083,
+      "sha256": "d5a07681faaeeea1350fa85da1d2fbf15c69de4aedc64e3d22534433c70ff1e8"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/water-motion-b.png",
+      "bytes": 1098489,
+      "sha256": "f2bae4f23caee419be6edef177561958b43646d1159be562265500635affafc6"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-b03-fix/water.png",
+      "bytes": 1110612,
+      "sha256": "96098bb168aa2bc7ef92be6abfd2e76f46f45e19f04c948bec3b14f9a1e16e09"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/b03-collection.png",
+      "bytes": 1338274,
+      "sha256": "f5fca790dc22b4dc4728364ea07d5da3e053dc2c6f66fce5318f0413839d0658"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/entry.png",
+      "bytes": 1145337,
+      "sha256": "9395360742f9a6748a50bf8eb1dfbd1e9da493a9c5f1e0c17d34e286e8f2a65a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/fountain.png",
+      "bytes": 828324,
+      "sha256": "a8b5d2ebd5394b1a46280858fd00fba4609145d96f3758120d3b93569863a9f3"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/plant-layers.png",
+      "bytes": 1840846,
+      "sha256": "58aad50e4fe1292adbf850ab24e4b3f7fb8f0637fe2adff6ec95b7265d4ae316"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/water-motion-a.png",
+      "bytes": 1097915,
+      "sha256": "70721ae0ec5f67c009dcb0919543ff3f06d47b269b4384eb05be134dc167d0c5"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/water-motion-b.png",
+      "bytes": 1098945,
+      "sha256": "4d6d27ee64a11dda70e64dd26147cf1b924a9fe967be73eb69083bb0275cf479"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-metrics/water.png",
+      "bytes": 1107189,
+      "sha256": "7c11e3e23525328403e7f279d0343635d404cd3d6e750f3f4618d4c6aee8d88a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/b03-collection.png",
+      "bytes": 1337777,
+      "sha256": "4d3e0edb94c86ff102da84ae4490a106c10f0ed5e9fa934fcaf9206d34de6909"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/entry.png",
+      "bytes": 1147580,
+      "sha256": "8bd91f3bd9a332001389202ee9e66556bcda5927f2fd1a68bed4d8d611790902"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/fountain.png",
+      "bytes": 825837,
+      "sha256": "11916567ac0a0bdc613dac489bbcb389a5e83bfb6a3af9ec84dc8d2d6ca50535"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/plant-layers.png",
+      "bytes": 1839908,
+      "sha256": "7160dd1c1f8f1a36a10ba8eaa4d48b35f36afc480f2569f2e4990c8ba6115528"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/water-motion-a.png",
+      "bytes": 1097828,
+      "sha256": "36e3ce074de442b397d738f39311f03184cc91b0a2935b5c0c6faa70ec6b6b8a"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/water-motion-b.png",
+      "bytes": 1098535,
+      "sha256": "f6919613fc1e0a48b7a91917008e46bf387e7c225d8eb2797da4d5c808881626"
+    },
+    {
+      "path": "docs/validation/station-v017-player-20261003/perf-visible-candidate-before-wood/water.png",
+      "bytes": 1110059,
+      "sha256": "df8e122a82ffb96aba462f180cdaded7f912ab3191f60a19cb1f1bc11b2a79d1"
+    }
+  ],
+  "bindingNotes": [
+    "Final candidate build_ce5960423447 and baseline build_04eaa618415f use the identical render-counter/LOD probe assembly. Final normal-render performance uses these builds, including eight non-collider oak strips in the candidate.",
+    "Daily checks used an earlier V017 build. Later B03 changes reparented two collection plants into original beds and refreshed its cubemap; final B03 functional runs use build_590fb8e5fd15. The eight later main-park oak strips have no colliders or interaction changes. Native 871 spatial checks and all158 serialized StableIds pass on the final scene; functional reports are not misrepresented as final-build runs.",
+    "Native v007 overview/interior/rest/wood views record the final oak candidate. Main park v006 views precede those eight strips; current detail-p03-collection.png records corrected B03 planting, unchanged by oak work.",
+    "LOD pair views retain actual elevated diagnostic-camera positions and the original lodBias=2. They are separate from the four normal-player timing samples; no forced LOD is used and user visual acceptance is not inferred.",
+    "Image filenames explicitly retain historical and rejected stages; final evaluation uses perf-visible-candidate, never retired hidden, before-wood or before-metrics runs. Local binary builds are excluded from Git.",
+    "Hashes describe local bytes; Git may normalize text line endings. Original Unity scene bytes are also archived as a lossless gzip snapshot.",
+    "Original font dirty cache changed during the first build. It is excluded from this commit; exact original font byte preservation is not claimed."
+  ],
+  "preservedBuildSideEffectFiles": 6,
+  "technicalPassed": true,
+  "visualAcceptance": "pending user review"
+}

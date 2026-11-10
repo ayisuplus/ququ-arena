@@ -1,0 +1,388 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var root=UnityEngine.GameObject.Find(\"V013 civic exterior finish\");var rows=new System.Collections.Generic.List<object>();\nforeach(var t in root.GetComponentsInChildren<UnityEngine.Transform>()){\n var c=t.GetComponent<UnityEngine.BoxCollider>();var r=t.GetComponent<UnityEngine.Renderer>();\n if(c)rows.Add(new{name=t.name,rotation=t.eulerAngles.ToString(),collider=c.bounds.ToString()});\n if(r&&(!t.parent||t.parent.name!=\"Pavilion reused Meshy foliage\"))rows.Add(new{name=t.name,bounds=r.bounds.ToString(),materials=System.Array.ConvertAll(r.sharedMaterials,m=>m?m.name:\"MISSING\")});\n}return rows;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "Civic paving panel",
+          "bounds": "Center: (190.00, -0.04, -190.00), Extents: (27.99, 0.04, 27.99)",
+          "materials": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Civic pearl hull",
+          "bounds": "Center: (190.00, -0.52, -190.00), Extents: (28.00, 0.49, 28.00)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Civic shadow plinth",
+          "bounds": "Center: (190.00, -1.02, -190.00), Extents: (27.83, 0.10, 27.83)",
+          "materials": [
+            "V013-P1P2-Inset"
+          ]
+        },
+        {
+          "name": "Apron fine joint",
+          "bounds": "Center: (204.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.001",
+          "bounds": "Center: (200.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.002",
+          "bounds": "Center: (196.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.003",
+          "bounds": "Center: (192.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.004",
+          "bounds": "Center: (188.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.005",
+          "bounds": "Center: (184.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.006",
+          "bounds": "Center: (180.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron fine joint.007",
+          "bounds": "Center: (176.00, 0.01, -247.00), Extents: (0.01, 0.00, 10.90)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron transverse joint",
+          "bounds": "Center: (190.00, 0.01, -240.00), Extents: (17.85, 0.00, 0.01)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron transverse joint.001",
+          "bounds": "Center: (190.00, 0.01, -244.00), Extents: (17.85, 0.00, 0.01)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron transverse joint.002",
+          "bounds": "Center: (190.00, 0.01, -248.00), Extents: (17.85, 0.00, 0.01)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron transverse joint.003",
+          "bounds": "Center: (190.00, 0.01, -252.00), Extents: (17.85, 0.00, 0.01)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Apron transverse joint.004",
+          "bounds": "Center: (190.00, 0.01, -256.00), Extents: (17.85, 0.00, 0.01)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Continuous pearl hull",
+          "bounds": "Center: (190.00, -0.57, -237.00), Extents: (18.00, 0.48, 21.00)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Inset walking deck",
+          "bounds": "Center: (190.00, -0.04, -237.00), Extents: (18.00, 0.05, 21.00)",
+          "materials": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Recessed lower keel",
+          "bounds": "Center: (190.00, -1.11, -237.00), Extents: (17.73, 0.11, 20.79)",
+          "materials": [
+            "V013-P1P2-Inset"
+          ]
+        },
+        {
+          "name": "Pavilion integrated roof",
+          "rotation": "(0.00, 0.00, 0.00)",
+          "collider": "Center: (174.00, 4.65, -209.00), Extents: (7.10, 7.10, 0.21)"
+        },
+        {
+          "name": "Pavilion ceiling ribbon",
+          "bounds": "Center: (174.00, 4.31, -203.10), Extents: (5.90, 0.01, 0.04)",
+          "materials": [
+            "V013-SoftArchitecturalLight"
+          ]
+        },
+        {
+          "name": "Pavilion ceiling ribbon.001",
+          "bounds": "Center: (174.00, 4.31, -214.90), Extents: (5.90, 0.01, 0.04)",
+          "materials": [
+            "V013-SoftArchitecturalLight"
+          ]
+        },
+        {
+          "name": "Pavilion diffuse ceiling",
+          "bounds": "Center: (174.00, 4.38, -209.00), Extents: (6.48, 0.05, 6.47)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Pavilion recessed underside",
+          "bounds": "Center: (174.00, 4.43, -209.00), Extents: (6.73, 0.04, 6.72)",
+          "materials": [
+            "V013-P1P2-Inset"
+          ]
+        },
+        {
+          "name": "Rounded pavilion crown",
+          "bounds": "Center: (174.00, 4.65, -209.00), Extents: (7.10, 0.21, 7.10)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Continuous pearl column",
+          "bounds": "Center: (167.50, 2.17, -202.50), Extents: (0.21, 2.17, 0.21)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Satin foot",
+          "bounds": "Center: (167.50, 0.08, -202.50), Extents: (0.22, 0.08, 0.22)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Rounded seat shell",
+          "bounds": "Center: (170.50, 0.27, -211.00), Extents: (1.00, 0.15, 0.35)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Silver recessed foot",
+          "bounds": "Center: (170.50, 0.09, -211.00), Extents: (0.86, 0.05, 0.27)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Tailored seat cushion",
+          "bounds": "Center: (170.50, 0.47, -211.01), Extents: (0.92, 0.07, 0.33)",
+          "materials": [
+            "V013-BanquetteFabric"
+          ]
+        },
+        {
+          "name": "Upholstered back",
+          "bounds": "Center: (170.50, 0.74, -210.74), Extents: (0.93, 0.25, 0.08)",
+          "materials": [
+            "V013-BanquetteFabric"
+          ]
+        },
+        {
+          "name": "Continuous pearl column",
+          "bounds": "Center: (167.50, 2.17, -215.50), Extents: (0.21, 2.17, 0.21)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Satin foot",
+          "bounds": "Center: (167.50, 0.08, -215.50), Extents: (0.22, 0.08, 0.22)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Continuous pearl column",
+          "bounds": "Center: (180.50, 2.17, -202.50), Extents: (0.21, 2.17, 0.21)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Satin foot",
+          "bounds": "Center: (180.50, 0.08, -202.50), Extents: (0.22, 0.08, 0.22)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Rounded seat shell",
+          "bounds": "Center: (177.50, 0.27, -211.00), Extents: (1.00, 0.15, 0.35)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Silver recessed foot",
+          "bounds": "Center: (177.50, 0.09, -211.00), Extents: (0.86, 0.05, 0.27)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Tailored seat cushion",
+          "bounds": "Center: (177.50, 0.47, -211.01), Extents: (0.92, 0.07, 0.33)",
+          "materials": [
+            "V013-BanquetteFabric"
+          ]
+        },
+        {
+          "name": "Upholstered back",
+          "bounds": "Center: (177.50, 0.74, -210.74), Extents: (0.93, 0.25, 0.08)",
+          "materials": [
+            "V013-BanquetteFabric"
+          ]
+        },
+        {
+          "name": "Continuous pearl column",
+          "bounds": "Center: (180.50, 2.17, -215.50), Extents: (0.21, 2.17, 0.21)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Satin foot",
+          "bounds": "Center: (180.50, 0.08, -215.50), Extents: (0.22, 0.08, 0.22)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Pavilion planting island",
+          "rotation": "(0.00, 0.00, 0.00)",
+          "collider": "Center: (169.00, 0.00, -200.70), Extents: (1.60, 0.68, 0.30)"
+        },
+        {
+          "name": "Pearl planting vessel",
+          "bounds": "Center: (169.00, 0.30, -201.00), Extents: (1.60, 0.25, 0.68)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Recessed soil",
+          "bounds": "Center: (169.00, 0.55, -201.00), Extents: (1.44, 0.03, 0.51)",
+          "materials": [
+            "MISSING"
+          ]
+        },
+        {
+          "name": "Satin silver plinth",
+          "bounds": "Center: (169.00, 0.06, -201.00), Extents: (1.40, 0.06, 0.52)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Pavilion planting island",
+          "rotation": "(0.00, 0.00, 0.00)",
+          "collider": "Center: (179.00, 0.00, -200.70), Extents: (1.60, 0.68, 0.30)"
+        },
+        {
+          "name": "Pearl planting vessel",
+          "bounds": "Center: (179.00, 0.30, -201.00), Extents: (1.60, 0.25, 0.68)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Recessed soil",
+          "bounds": "Center: (179.00, 0.55, -201.00), Extents: (1.44, 0.03, 0.51)",
+          "materials": [
+            "MISSING"
+          ]
+        },
+        {
+          "name": "Satin silver plinth",
+          "bounds": "Center: (179.00, 0.06, -201.00), Extents: (1.40, 0.06, 0.52)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Pavilion planting island",
+          "rotation": "(0.00, 0.00, 0.00)",
+          "collider": "Center: (182.00, 0.00, -211.70), Extents: (1.60, 0.68, 0.30)"
+        },
+        {
+          "name": "Pearl planting vessel",
+          "bounds": "Center: (182.00, 0.30, -212.00), Extents: (1.60, 0.25, 0.68)",
+          "materials": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Recessed soil",
+          "bounds": "Center: (182.00, 0.55, -212.00), Extents: (1.44, 0.03, 0.51)",
+          "materials": [
+            "MISSING"
+          ]
+        },
+        {
+          "name": "Satin silver plinth",
+          "bounds": "Center: (182.00, 0.06, -212.00), Extents: (1.40, 0.06, 0.52)",
+          "materials": [
+            "V013-P1P2-Silver"
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

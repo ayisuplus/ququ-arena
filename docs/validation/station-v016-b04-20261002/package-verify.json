@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b04-terraced-lounge\\package-v001",
+    "manifest": {
+      "assetId": "v016_b04_terraced_lounge_exterior_trial",
+      "description": "Five independently editable stepped shell modules with central core, rear supports, pearl walls, sage glazing and walnut reveals. Concept/Meshy-guided local reconstruction. Inferred rear, no playable interior or terrace access.",
+      "displayName": "V016 B04 Terraced Lounge Exterior Trial",
+      "files": [
+        {
+          "bytes": 2174520,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "4bcb536248e040967bbc12bad77913ac9a40880b64ad82aef7290db197048aea"
+        },
+        {
+          "bytes": 1689,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "562d2c1dc968f7c5be83f3ccb33c11b411ebb73609973dbf3f2a0f02edfa76e1"
+        },
+        {
+          "bytes": 780,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "23e5c23fe7592d10700bd86ce615ecfedd63a808a69729462337e395f12d2a8d"
+        },
+        {
+          "bytes": 2577,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "8ae0b120ef85011f7f72f674d3b48dea64e994f3b15a0f728d5716a1ab55ca79"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_d048c0fc431dcc7eaf8c8fa5",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

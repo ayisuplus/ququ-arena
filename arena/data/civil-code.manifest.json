@@ -1,0 +1,10 @@
+{
+  "name": "civil-code-1260",
+  "description": "《中华人民共和国民法典》全量条文（第一条至第一千二百六十条），从法律AI项目抓取的官方 HTML（.scratch/civil_code_12371.html）抽取：段落级锚点（全角空格+第X条+全角空格），剥离句尾裸标题（编/分编/章/节），条内引用（如“本法第一编”）不误切。",
+  "source": "E:/projects/法律AI/.scratch/civil_code_12371.html",
+  "format": "jsonl，每行 { article: \"第X条\", text: \"条文原文（去全角空格）\" }",
+  "count": 1260,
+  "sha256_16": "0fe3a88b1a546772",
+  "consumers": ["arenas/statute-reading", "arenas/statute-choice", "arenas/legal-math"],
+  "verified": "三罐 130 处条文引用与本资产逐字一致（v2.15 交叉对账）"
+}

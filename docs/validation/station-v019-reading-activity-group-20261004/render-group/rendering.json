@@ -1,0 +1,58 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 142,
+    "reflectionCycles": 3,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=8",
+        "V019 reflection - research low runtime updates=6"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [],
+    "homesReflectionTextures": [],
+    "views": [
+        {
+            "name": "street-arrival",
+            "frames": 2062,
+            "renderedFrames": 2062,
+            "p95Ms": 4.927402496337891,
+            "drawCalls": 3545.69592628516
+        },
+        {
+            "name": "reading-door",
+            "frames": 2192,
+            "renderedFrames": 2192,
+            "p95Ms": 4.7642998695373539,
+            "drawCalls": 2134.306113138686
+        },
+        {
+            "name": "activity-door",
+            "frames": 2260,
+            "renderedFrames": 2260,
+            "p95Ms": 4.539399147033691,
+            "drawCalls": 1858.546460176991
+        },
+        {
+            "name": "reading-street-turn",
+            "frames": 2082,
+            "renderedFrames": 2082,
+            "p95Ms": 4.864101409912109,
+            "drawCalls": 3128.4702209414027
+        },
+        {
+            "name": "reading-corner",
+            "frames": 2127,
+            "renderedFrames": 2127,
+            "p95Ms": 4.752104759216309,
+            "drawCalls": 2277.652092148566
+        }
+    ],
+    "errors": []
+}

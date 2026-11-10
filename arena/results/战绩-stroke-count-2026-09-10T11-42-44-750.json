@@ -1,0 +1,1251 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "stroke-count",
+    "title": "笔画数擂台",
+    "description": "汉字笔画数（自建 canonical，20 题）：人 2 画、马 3 画、田 5 画——\"马有几画\"答错的模型汉字基本功欠费。exact 裁判。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:stroke-count:2026-09-10",
+    "taskPrefix": "只输出笔画数的数字本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "strokes": "汉字笔画数"
+    }
+  },
+  "startedAt": "2026-09-10T11:42:44.750Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 337,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-01",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「人」一共有几画？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-02",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「口」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-02",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「口」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 231,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-02",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「口」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-02",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「口」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 334,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-03",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「山」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SC-03",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「山」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-03",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「山」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-03",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「山」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-04",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「大」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-04",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「大」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-04",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「大」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-04",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「大」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-05",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「马」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-05",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「马」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-05",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「马」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-05",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「马」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-06",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「小」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-06",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「小」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-06",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「小」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-06",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「小」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-07",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「土」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-07",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「土」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-07",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「土」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-07",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「土」一共有几画？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-08",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「王」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-08",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「王」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-08",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「王」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-08",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「王」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-09",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「水」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-09",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「水」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-09",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「水」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-09",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「水」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-10",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「火」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-10",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「火」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-10",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「火」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-10",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「火」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-11",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「木」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-11",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「木」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-11",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「木」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-11",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「木」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-12",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「天」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-12",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「天」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-12",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「天」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-12",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「天」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-13",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「中」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-13",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「中」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-13",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「中」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-13",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「中」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-14",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「心」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 149,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-14",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「心」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-14",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「心」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-14",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「心」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-15",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「手」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-15",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「手」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-15",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「手」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-15",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「手」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-16",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「月」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-16",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「月」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-16",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「月」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-16",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「月」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-17",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「日」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 399,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-17",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「日」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-17",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「日」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 115,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-17",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「日」一共有几画？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-18",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「石」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-18",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「石」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-18",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「石」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-18",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「石」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-19",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「田」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-19",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「田」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-19",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「田」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-19",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「田」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-20",
+      "condition": "strokes",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「目」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-20",
+      "condition": "strokes",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「目」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-20",
+      "condition": "strokes",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「目」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SC-20",
+      "condition": "strokes",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出笔画数的数字本身，不多一个字。\n汉字「目」一共有几画？",
+      "answer": "5",
+      "target": "5",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "fee6af7e9ffbd9a8",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.29.0"
+  }
+}

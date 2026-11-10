@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "count": 27,
+  "materials": [
+    {
+      "name": "Pearl fine roof coating",
+      "shader": "Universal Render Pipeline/Lit",
+      "color": [
+        0.96,
+        0.974999964,
+        1.0
+      ],
+      "tiling": [
+        0.5,
+        0.5
+      ],
+      "normal": 0.22,
+      "smoothness": 0.4,
+      "clearCoat": 0.0
+    },
+    {
+      "name": "Research blue stone paving",
+      "shader": "Universal Render Pipeline/Lit",
+      "color": [
+        0.23999995,
+        0.429999977,
+        0.76
+      ],
+      "tiling": [
+        0.6666667,
+        0.6666667
+      ],
+      "normal": 0.2,
+      "smoothness": 0.32,
+      "clearCoat": 0.0
+    },
+    {
+      "name": "Reading satin ink sill",
+      "shader": "Universal Render Pipeline/Complex Lit",
+      "color": [
+        0.025,
+        0.0719999745,
+        0.144999951
+      ],
+      "tiling": [
+        1.0,
+        1.0
+      ],
+      "normal": 1.0,
+      "smoothness": 0.32,
+      "clearCoat": 0.08
+    }
+  ],
+  "textures": [
+    {
+      "file": "model_albedo.png",
+      "valid": true,
+      "sRGB": true,
+      "type": "Default"
+    },
+    {
+      "file": "model_normal.png",
+      "valid": true,
+      "sRGB": false,
+      "type": "NormalMap"
+    },
+    {
+      "file": "model_roughness.png",
+      "valid": true,
+      "sRGB": false,
+      "type": "Default"
+    },
+    {
+      "file": "StuccoMetallicSmoothness.png",
+      "valid": true,
+      "sRGB": false,
+      "type": "Default"
+    }
+  ],
+  "errors": []
+}

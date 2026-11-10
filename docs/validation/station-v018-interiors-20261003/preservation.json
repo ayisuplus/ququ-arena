@@ -1,0 +1,93 @@
+{
+  "identities": [
+    {
+      "field": "StableId",
+      "before": 158,
+      "after": 192,
+      "missing": [],
+      "added": [
+        "v018-B02-east-1",
+        "v018-B04-crown-terrace",
+        "v018-B04-ground-west-desk",
+        "v018-B01-desk",
+        "v018-B01-reading-sofa--1",
+        "v018-B04-upper-west-sofa-1",
+        "v018-B02-east-3",
+        "v018-B04-ground-east-1",
+        "v018-B01-meeting-2",
+        "v018-B01-meeting-4",
+        "v018-B01-meeting-3",
+        "v018-B02-gallery-1",
+        "v018-B04-ground-west--1",
+        "v018-B04-upper-east-1",
+        "v018-B04-ground-east--1",
+        "v018-B04-ground-west-1",
+        "v018-B04-upper-west-sofa--1",
+        "v018-B02-east-2",
+        "v018-B01-reading-sofa-1",
+        "v018-B02-gallery--1",
+        "v018-B02-west-3",
+        "v018-B04-upper-east-2",
+        "v018-B02-west-2",
+        "v018-B02-west-1",
+        "v018-B04-west-terrace",
+        "v018-B04-ground-east-desk",
+        "v018-B04-crown-1",
+        "v018-B01-meeting-1",
+        "v018-B02-west-4",
+        "v018-B04-upper-west-1",
+        "v018-B04-upper-west-2",
+        "v018-B04-crown--1",
+        "v018-B02-east-4",
+        "v018-B04-east-terrace"
+      ],
+      "passed": true
+    },
+    {
+      "field": "ResidentId",
+      "before": 12,
+      "after": 12,
+      "missing": [],
+      "added": [],
+      "passed": true
+    },
+    {
+      "field": "RoomId",
+      "before": 6,
+      "after": 6,
+      "missing": [],
+      "added": [],
+      "passed": true
+    },
+    {
+      "field": "RingId",
+      "before": 3,
+      "after": 3,
+      "missing": [],
+      "added": [],
+      "passed": true
+    }
+  ],
+  "protected_files": [
+    {
+      "path": "Assets/Resources/ArenaFont.asset",
+      "expected": "637AA5584274FD482F275C3B268785974A2E5F07E988FFED07B5C6857278CA72",
+      "actual": "637AA5584274FD482F275C3B268785974A2E5F07E988FFED07B5C6857278CA72",
+      "passed": true
+    },
+    {
+      "path": "Assets/Station/Scenes/Candidates/BlackHoleStationCreativeBuildingsV016.unity",
+      "expected": "22EAD44324BD2E8FA42318D6CB97D28E3A6B4553857C546599DEB27471A203BB",
+      "actual": "22EAD44324BD2E8FA42318D6CB97D28E3A6B4553857C546599DEB27471A203BB",
+      "passed": true
+    },
+    {
+      "path": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+      "expected": "93D4E0D8E9E0DFDA5D360F5391682244D47F1FDB67C47484071FE85E0A869B5C",
+      "actual": "93D4E0D8E9E0DFDA5D360F5391682244D47F1FDB67C47484071FE85E0A869B5C",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Serialized identities and protected bytes. Not a backend or full save-migration test."
+}

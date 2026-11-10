@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nconst string models=\"Assets/Station/Models/EcologicalParkV017/Papyrus/\",mats=\"Assets/Station/Materials/EcologicalParkV017/\";System.IO.Directory.CreateDirectory(models);foreach(var f in System.IO.Directory.GetFiles(\"../production/black-hole-station/v017/plant-kit/Papyrus\",\"*.fbx\"))System.IO.File.Copy(f,models+System.IO.Path.GetFileName(f),false);UnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nforeach(var p in System.IO.Directory.GetFiles(models,\"*.fbx\")){var i=(UnityEditor.ModelImporter)UnityEditor.AssetImporter.GetAtPath(p.Replace('\\\\','/'));i.materialImportMode=UnityEditor.ModelImporterMaterialImportMode.None;i.isReadable=true;i.SaveAndReimport();}\nvar mat=new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\")){name=\"PapyrusFreshGreen\"};mat.SetColor(\"_BaseColor\",new UnityEngine.Color(.28f,.49f,.17f));mat.SetFloat(\"_Smoothness\",.2f);mat.SetFloat(\"_Cull\",0);UnityEditor.AssetDatabase.CreateAsset(mat,mats+mat.name+\".mat\");var go=new UnityEngine.GameObject(\"Papyrus umbel clump\");var lod=go.AddComponent<UnityEngine.LODGroup>();var ls=new System.Collections.Generic.List<UnityEngine.LOD>();for(int level=0;level<2;level++){var child=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(models+\"Papyrus_LOD\"+level+\".fbx\"));child.transform.SetParent(go.transform,false);var rs=child.GetComponentsInChildren<UnityEngine.MeshRenderer>();foreach(var r in rs){r.sharedMaterial=mat;r.lightmapIndex=-1;r.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;}ls.Add(new UnityEngine.LOD(level==0?.12f:.002f,rs));}lod.SetLODs(ls.ToArray());lod.RecalculateBounds();var prefab=UnityEditor.PrefabUtility.SaveAsPrefabAsset(go,\"Assets/Station/Prefabs/EcologicalParkV017/PapyrusUmbel.prefab\");UnityEngine.Object.DestroyImmediate(go);\nvar frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;var park=frame.Find(\"V017 continuous ecological park\");int iPlant=0;foreach(var p in new[]{new UnityEngine.Vector3(-15.6f,.21f,16.2f),new UnityEngine.Vector3(-15.6f,.21f,17.6f),new UnityEngine.Vector3(-13.1f,.21f,18.3f),new UnityEngine.Vector3(-11.9f,.21f,18.7f)}){var instance=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);instance.transform.SetParent(park,false);instance.transform.localPosition=p;instance.transform.localRotation=UnityEngine.Quaternion.Euler(0,iPlant++*127,0);instance.transform.localScale=UnityEngine.Vector3.one*.85f;}\nvar trees=frame.GetComponentsInChildren<UnityEngine.LODGroup>().Where(g=>g.name.StartsWith(\"Pachira\")&&!g.transform.IsChildOf(park)).ToArray();if(trees.Length==0)throw new System.Exception(\"Existing natural canopy missing\");int iTree=0;foreach(var p in new[]{new UnityEngine.Vector3(7.3f,.21f,-16.3f),new UnityEngine.Vector3(12.1f,.21f,-16.2f)}){var tree=UnityEngine.Object.Instantiate(trees[iTree%trees.Length].gameObject,park);tree.name=\"Natural flowering-glade canopy \"+iTree;tree.transform.localPosition=p;tree.transform.localRotation=UnityEngine.Quaternion.Euler(0,70+iTree*131,0);tree.transform.localScale*=.72f;iTree++;}\nforeach(var filter in park.GetComponentsInChildren<UnityEngine.MeshFilter>().Where(f=>f.name==\"Main pond pearl bank\"||f.name==\"Low fountain pearl basin\")){var tris=filter.sharedMesh.triangles;for(int j=0;j<tris.Length;j+=3){int swap=tris[j+1];tris[j+1]=tris[j+2];tris[j+2]=swap;}filter.sharedMesh.triangles=tris;filter.sharedMesh.RecalculateNormals();UnityEditor.EditorUtility.SetDirty(filter.sharedMesh);filter.GetComponent<UnityEngine.MeshCollider>().sharedMesh=null;filter.GetComponent<UnityEngine.MeshCollider>().sharedMesh=filter.sharedMesh;}\nvar lights=new System.Collections.Generic.List<object>();foreach(var seat in frame.GetComponentsInChildren<QuQu.StationGardenSeat>()){var lamp=new UnityEngine.GameObject(\"Warm garden seat contact light\");lamp.transform.SetParent(park,false);lamp.transform.position=seat.transform.position+UnityEngine.Vector3.up*.55f;var light=lamp.AddComponent<UnityEngine.Light>();light.type=UnityEngine.LightType.Point;light.lightmapBakeType=UnityEngine.LightmapBakeType.Realtime;light.useColorTemperature=true;light.colorTemperature=3500;light.color=UnityEngine.Color.white;light.intensity=1.5f;light.range=4;light.shadows=UnityEngine.LightShadows.None;lights.Add(new{position=frame.InverseTransformPoint(lamp.transform.position).ToString(),light.colorTemperature,light.intensity});}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{wetlandClumps=iPlant,naturalGladeTrees=iTree,seatLights=lights,basinNormalsCorrected=true,visiblePlantTypes=10};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "wetlandClumps": 4,
+        "naturalGladeTrees": 2,
+        "seatLights": [
+          {
+            "position": "(-18.00, 0.57, 15.00)",
+            "colorTemperature": 3500,
+            "intensity": 1.5
+          },
+          {
+            "position": "(19.00, 0.57, 15.00)",
+            "colorTemperature": 3500,
+            "intensity": 1.5
+          },
+          {
+            "position": "(-17.00, 0.57, -17.00)",
+            "colorTemperature": 3500,
+            "intensity": 1.5
+          },
+          {
+            "position": "(18.00, 0.57, -17.00)",
+            "colorTemperature": 3500,
+            "intensity": 1.5
+          }
+        ],
+        "basinNormalsCorrected": true,
+        "visiblePlantTypes": 10
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

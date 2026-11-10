@@ -1,0 +1,604 @@
+{
+  "mode": "Editor Play lifetimes, not separate Player processes",
+  "stages": [
+    {
+      "source": "fresh",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(20.000, 0.060, 144.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 0,
+        "drunk": 0,
+        "holding": false
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 0,
+        "careCount": 0
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 20,
+        "y": 0.06,
+        "z": 144
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "fresh",
+      "passed": true
+    },
+    {
+      "source": "primary",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(220.000, 0.052, 190.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 8,
+        "drunk": 7,
+        "holding": true
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 2,
+        "careCount": 4
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": true,
+          "completed": true
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": true,
+          "completed": true
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 220,
+        "y": 0.0519999824,
+        "z": 190
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "primary",
+      "passed": true
+    },
+    {
+      "source": "backup",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(220.000, 0.052, 190.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 8,
+        "drunk": 7,
+        "holding": true
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 2,
+        "careCount": 4
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": true,
+          "completed": true
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": true,
+          "completed": true
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 220,
+        "y": 0.0519999824,
+        "z": 190
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "backup",
+      "passed": true
+    },
+    {
+      "source": "fresh",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(20.000, 0.060, 144.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 0,
+        "drunk": 0,
+        "holding": false
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 0,
+        "careCount": 0
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 20,
+        "y": 0.06,
+        "z": 144
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "wrong-scene",
+      "passed": true
+    },
+    {
+      "source": "fresh",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(20.000, 0.060, 144.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 0,
+        "drunk": 0,
+        "holding": false
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 0,
+        "careCount": 0
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 20,
+        "y": 0.06,
+        "z": 144
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "unsafe-position",
+      "passed": true
+    },
+    {
+      "source": "fresh",
+      "file": "C:/Users/36322/AppData/Local/Temp/QuQuArena/QuQu Arena 3D\\StationWorldEditor\\BlackHoleStationFourWingsV014\\world-v1.json",
+      "ready": true,
+      "position": "(20.000, 0.060, 144.000)",
+      "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 0,
+        "drunk": 0,
+        "holding": false
+      },
+      "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 0,
+        "careCount": 0
+      },
+      "cargo": [
+        {
+          "id": "north-dock-right",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        },
+        {
+          "id": "north-dock-left",
+          "z": 166,
+          "atInspection": false,
+          "moving": false,
+          "towardInspection": false,
+          "inspected": false,
+          "completed": false
+        }
+      ],
+      "safePositions": [
+        {
+          "position": "(20.000, 0.060, 144.000)",
+          "safe": true
+        },
+        {
+          "position": "(125.000, 0.060, -15.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, -125.000)",
+          "safe": true
+        },
+        {
+          "position": "(-123.000, 0.060, 15.000)",
+          "safe": true
+        },
+        {
+          "position": "(220.000, 0.060, 190.000)",
+          "safe": true
+        },
+        {
+          "position": "(0.000, 0.060, 0.000)",
+          "safe": false
+        },
+        {
+          "position": "(400.000, 0.060, 0.000)",
+          "safe": false
+        }
+      ],
+      "cargoLanes": [
+        {
+          "id": "north-dock-right",
+          "position": "(15.000, 0.060, 160.000)",
+          "safe": false
+        },
+        {
+          "id": "north-dock-left",
+          "position": "(-15.000, 0.060, 160.000)",
+          "safe": false
+        }
+      ],
+      "loadedPosition": {
+        "x": 20,
+        "y": 0.06,
+        "z": 144
+      },
+      "laneChecks": [
+        {
+          "id": "north-dock-right",
+          "fullLaneAfterMove": true
+        },
+        {
+          "id": "north-dock-left",
+          "fullLaneAfterMove": true
+        }
+      ],
+      "unsafeSaveRetainsPreviousSafePosition": true,
+      "spatialChecksPassed": true,
+      "stage": "cargo-lane",
+      "passed": true
+    }
+  ],
+  "originalSaveRestored": true,
+  "originalHashes": {
+    "world-v1.json": "7e36fda8bbf8b03fd3292a5353916b48ee3ebce36fc99591726388c5bd50af9d",
+    "world-v1.json.bak": "e22cfee2611d3a6ea1de8069cbcf835b65f7170f53ec236052ba8d32e1de97c3",
+    "world-v1.json.tmp": null
+  },
+  "restoredHashes": {
+    "world-v1.json": "7e36fda8bbf8b03fd3292a5353916b48ee3ebce36fc99591726388c5bd50af9d",
+    "world-v1.json.bak": "e22cfee2611d3a6ea1de8069cbcf835b65f7170f53ec236052ba8d32e1de97c3",
+    "world-v1.json.tmp": null
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "date-reason",
+    "title": "日期推算擂台",
+    "description": "BBH date understanding 的中文生成器版：周几计算 / 日期偏移 N 天 / 月末天数（含闰年二月陷阱）。JS Date 为权威。测日历算术与月份天数规则。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:date-reason:2026-09-10",
+    "taskPrefix": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "weekday": "某天是星期几",
+      "offset": "日期偏移 N 天",
+      "last-day": "月末天数（含闰年二月）"
+    }
+  },
+  "startedAt": "2026-09-10T12:47:07.128Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期六",
+      "target": "星期六",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期六",
+      "target": "星期六",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "了期六",
+      "target": "星期六",
+      "latencyMs": 360,
+      "score": 0,
+      "note": "期望「星期六」，实答「了期六」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期",
+      "target": "星期六",
+      "latencyMs": 234,
+      "score": 0,
+      "note": "期望「星期六」，实答「星期」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "76a66609da672a57",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.0.0"
+  }
+}

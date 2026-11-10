@@ -1,0 +1,117 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "doctor",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.doctor.v1",
+    "version": "1.0.2",
+    "healthy": true,
+    "checks": [
+      {
+        "id": "platform",
+        "status": "warning",
+        "detail": "win32 x64"
+      },
+      {
+        "id": "node-runtime",
+        "status": "pass",
+        "detail": "v24.15.0",
+        "evidence": {
+          "executable": "C:\\Program Files\\nodejs\\node.exe",
+          "minimum": "22.5.0 (node:sqlite catalog)"
+        }
+      },
+      {
+        "id": "workspace",
+        "status": "pass",
+        "detail": "E:\\projects\\黑洞空间站\\assets\\generated",
+        "evidence": {
+          "jobsDir": "E:\\projects\\黑洞空间站\\assets\\generated\\.jobs",
+          "durableJobsDir": "E:\\projects\\黑洞空间站\\assets\\generated\\.game-dev\\jobs",
+          "packagesDir": "E:\\projects\\黑洞空间站\\assets\\generated\\.game-dev\\packages",
+          "catalogPath": "E:\\projects\\黑洞空间站\\assets\\generated\\.game-dev\\catalog.sqlite3",
+          "runsDir": "E:\\projects\\黑洞空间站\\assets\\generated\\.game-dev\\runs"
+        }
+      },
+      {
+        "id": "tripo-credential",
+        "status": "unavailable",
+        "detail": "not configured"
+      },
+      {
+        "id": "leonardo-credential",
+        "status": "unavailable",
+        "detail": "not configured"
+      },
+      {
+        "id": "blender",
+        "status": "pass",
+        "detail": "D:\\blender\\blender.exe"
+      },
+      {
+        "id": "blender-normalizer",
+        "status": "pass",
+        "detail": "C:\\Users\\36322\\.codex\\tools\\game-development-studio-source-1.0.2\\theisegoria-game-development-studio-944a4c4\\scripts\\blender_normalize.py"
+      },
+      {
+        "id": "blender-usd-exporter",
+        "status": "pass",
+        "detail": "C:\\Users\\36322\\.codex\\tools\\game-development-studio-source-1.0.2\\theisegoria-game-development-studio-944a4c4\\scripts\\blender_usd_export.py"
+      },
+      {
+        "id": "usdzip",
+        "status": "unavailable",
+        "detail": "not present on this platform"
+      },
+      {
+        "id": "sqlite-catalog-runtime",
+        "status": "pass",
+        "detail": "node:sqlite is available"
+      },
+      {
+        "id": "codex-skills",
+        "status": "warning",
+        "detail": ".codex\\skills",
+        "evidence": {
+          "skills": [
+            {
+              "name": "game-development-studio",
+              "installed": false
+            },
+            {
+              "name": "game-asset-authoring",
+              "installed": false
+            },
+            {
+              "name": "game-asset-vendoring",
+              "installed": false
+            },
+            {
+              "name": "game-visual-debug",
+              "installed": false
+            },
+            {
+              "name": "game-performance-optimize",
+              "installed": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "helper-version",
+        "status": "pass",
+        "detail": "1.0.2",
+        "evidence": {
+          "executable": "C:\\Users\\36322\\.codex\\tools\\game-development-studio-source-1.0.2\\theisegoria-game-development-studio-944a4c4\\dist\\cli.js",
+          "appVersion": "not supplied"
+        }
+      },
+      {
+        "id": "metal-evidence",
+        "status": "unavailable",
+        "detail": "Metal capture requires macOS"
+      }
+    ],
+    "evidenceCeiling": "Doctor proves local configuration and file/tool discovery only. It does not prove provider authentication, paid generation, Blender output, GPU capture, pixels, signing, notarization, or human review."
+  }
+}

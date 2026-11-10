@@ -1,0 +1,126 @@
+{
+    "version": 1,
+    "sceneId": "BlackHoleStationSereneV013",
+    "safePosition": {
+        "x": 210.0,
+        "y": 0.07999998331069946,
+        "z": 180.0
+    },
+    "cargo": [
+        {
+            "id": "north-dock-right",
+            "z": 202.0,
+            "atInspection": false,
+            "moving": false,
+            "towardInspection": false,
+            "inspected": false,
+            "completed": false
+        },
+        {
+            "id": "north-dock-left",
+            "z": 202.0,
+            "atInspection": false,
+            "moving": false,
+            "towardInspection": false,
+            "inspected": false,
+            "completed": false
+        }
+    ],
+    "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 0,
+        "careCount": 0
+    },
+    "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 1,
+        "drunk": 0,
+        "holding": true
+    },
+    "residents": [
+        {
+            "id": "resident/claude",
+            "position": {
+                "x": 94.00031280517578,
+                "y": 0.07999992370605469,
+                "z": 72.83130645751953
+            },
+            "targetIndex": 4,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        },
+        {
+            "id": "resident/deepseek",
+            "position": {
+                "x": 94.0343246459961,
+                "y": 0.07999980449676514,
+                "z": 52.01019287109375
+            },
+            "targetIndex": 3,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        },
+        {
+            "id": "resident/chatgpt",
+            "position": {
+                "x": 106.54867553710938,
+                "y": 0.07999998331069946,
+                "z": 62.0
+            },
+            "targetIndex": 1,
+            "visits": 1,
+            "returns": 1,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        },
+        {
+            "id": "resident/gemini",
+            "position": {
+                "x": -84.15877532958985,
+                "y": 0.07999992370605469,
+                "z": 62.050987243652347
+            },
+            "targetIndex": 2,
+            "visits": 1,
+            "returns": 1,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        },
+        {
+            "id": "resident/kimi",
+            "position": {
+                "x": -78.91572570800781,
+                "y": 0.07999992370605469,
+                "z": 63.00132369995117
+            },
+            "targetIndex": 1,
+            "visits": 2,
+            "returns": 1,
+            "outbound": false,
+            "inLounge": true,
+            "waitRemaining": 16.239784240722658
+        },
+        {
+            "id": "resident/glm",
+            "position": {
+                "x": -73.5482177734375,
+                "y": 0.07999992370605469,
+                "z": 58.322017669677737
+            },
+            "targetIndex": 0,
+            "visits": 2,
+            "returns": 1,
+            "outbound": false,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        }
+    ]
+}

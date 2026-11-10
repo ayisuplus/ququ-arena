@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "idiom-blank",
+  "title": "成语填字擂台",
+  "description": "高频成语空一字填字（自建 canonical 单字答案，20 题）。与 emoji-quiz（表情→成语整猜）互补：本罐考最后一粒字的精准。exact 裁判，错一字翻车。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:idiom-blank:2026-09-10",
+  "taskPrefix": "只输出缺的这一个字本身，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "blank": "成语填一字" }
+}

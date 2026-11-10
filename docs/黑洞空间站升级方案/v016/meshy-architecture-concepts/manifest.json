@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "version": "v001",
+  "created_date": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "baseline_git_head": "306739c1ec0223540a84418c1676b02cfa62af50",
+  "status": "proposal awaiting user review",
+  "scope": "documents and images only; existing buildings retained",
+  "generator": "built-in image_gen",
+  "generation_calls": 4,
+  "reference_photos_uploaded": false,
+  "prompt_file": "prompts.json",
+  "prompt_sha256": "65b331b922dbe692a03b6d4f79f14fdbbd804cc0ff2aa78196f361b1ed6535f4",
+  "meshy_tasks_submitted": 0,
+  "meshy_credits_consumed_by_this_turn": 0,
+  "meshy_future_estimate": null,
+  "image_generation_cost": null,
+  "unity_version_read_from_project": "6000.3.24f1",
+  "urp_version_read_from_manifest": "17.3.0",
+  "assets": [
+    {
+      "id": "B01",
+      "image": "images/B01_月帆会客馆_v001.png",
+      "kind": "AI single-building concept, not Unity render",
+      "source_generated_file": "exec-85d478e9-9141-44e6-9515-0d01dacf33a4.png",
+      "reference_ids": [
+        "REF-01"
+      ],
+      "bytes": 1436283,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "69a17cc0531e94de6e943ee1975598b02b5186d9479292b276d0e902b6450b86",
+      "source_copy_verified": true,
+      "image_visually_reviewed": true,
+      "proposed_ring": "R2",
+      "exploration_dimensions_m": [
+        32,
+        22,
+        16
+      ],
+      "exploration_site_envelope_m": [
+        40,
+        30
+      ],
+      "dimensions_measured": false,
+      "placement_verified": false,
+      "back_view_defined": false,
+      "user_approved": false,
+      "meshy_task_id": null,
+      "unity_imported": false
+    },
+    {
+      "id": "B02",
+      "image": "images/B02_棱晶档案亭_v001.png",
+      "kind": "AI single-building concept, not Unity render",
+      "source_generated_file": "exec-a6aaeac6-cfec-4de3-9304-70002828f065.png",
+      "reference_ids": [
+        "REF-02"
+      ],
+      "bytes": 1567301,
+      "width": 1374,
+      "height": 1145,
+      "mode": "RGB",
+      "sha256": "71c2dc3f1643d20858bbaeaebb7ab3b9473ebee7572819ed444f2243f087f262",
+      "source_copy_verified": true,
+      "image_visually_reviewed": true,
+      "proposed_ring": "R2",
+      "exploration_dimensions_m": [
+        24,
+        20,
+        22
+      ],
+      "exploration_site_envelope_m": [
+        32,
+        28
+      ],
+      "dimensions_measured": false,
+      "placement_verified": false,
+      "back_view_defined": false,
+      "user_approved": false,
+      "meshy_task_id": null,
+      "unity_imported": false
+    },
+    {
+      "id": "B03",
+      "image": "images/B03_潮汐种子舱_v001.png",
+      "kind": "AI single-building concept, not Unity render",
+      "source_generated_file": "exec-81659dc4-db96-4402-b6f4-b9073bbc219b.png",
+      "reference_ids": [
+        "REF-03"
+      ],
+      "bytes": 1547905,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "b175cd4c158e86bd7776a18a3ea446c240484575b14702dc616b96ffb25e835b",
+      "source_copy_verified": true,
+      "image_visually_reviewed": true,
+      "proposed_ring": "R3",
+      "exploration_dimensions_m": [
+        30,
+        18,
+        14
+      ],
+      "exploration_site_envelope_m": [
+        38,
+        26
+      ],
+      "dimensions_measured": false,
+      "placement_verified": false,
+      "back_view_defined": false,
+      "user_approved": false,
+      "meshy_task_id": null,
+      "unity_imported": false
+    },
+    {
+      "id": "B04",
+      "image": "images/B04_叠庭休憩馆_v001.png",
+      "kind": "AI single-building concept, not Unity render",
+      "source_generated_file": "exec-9c2cd835-3f0f-4862-9288-c9a80918cae1.png",
+      "reference_ids": [
+        "REF-04"
+      ],
+      "bytes": 1622214,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "3da0d5c35937f52ff40fcf73fef0c5717e2c36556a11a952cb19f5576464ea4d",
+      "source_copy_verified": true,
+      "image_visually_reviewed": true,
+      "proposed_ring": "R3",
+      "exploration_dimensions_m": [
+        28,
+        22,
+        15
+      ],
+      "exploration_site_envelope_m": [
+        36,
+        30
+      ],
+      "dimensions_measured": false,
+      "placement_verified": false,
+      "back_view_defined": false,
+      "user_approved": false,
+      "meshy_task_id": null,
+      "unity_imported": false
+    }
+  ],
+  "package_validation": {
+    "png_decode_passed": 4,
+    "original_copy_hash_matches": 4,
+    "local_links_checked": 28,
+    "broken_local_links": 0,
+    "unity_tests_run": false,
+    "visual_approval": "pending user review"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationCreativeBuildingsV016.unity",
+  "glazingPanels": 18,
+  "beds": 4,
+  "trees": 4,
+  "plants": 40,
+  "doorReuse": "StationConservatoryDoor unchanged; scaled panel width and existing pocket protection",
+  "records": [
+    {
+      "bed": "Enclosed B03 bed 1",
+      "position": [
+        6,
+        0.633,
+        -3.35
+      ],
+      "width": 5.4,
+      "depth": 2.8,
+      "trees": 1,
+      "lowPlants": 10
+    },
+    {
+      "bed": "Enclosed B03 bed 2",
+      "position": [
+        6,
+        0.633,
+        3.35
+      ],
+      "width": 5.4,
+      "depth": 2.8,
+      "trees": 1,
+      "lowPlants": 10
+    },
+    {
+      "bed": "Enclosed B03 bed 3",
+      "position": [
+        0,
+        0.633,
+        -2.55
+      ],
+      "width": 4.6,
+      "depth": 2.4,
+      "trees": 1,
+      "lowPlants": 10
+    },
+    {
+      "bed": "Enclosed B03 bed 4",
+      "position": [
+        0,
+        0.633,
+        2.55
+      ],
+      "width": 4.6,
+      "depth": 2.4,
+      "trees": 1,
+      "lowPlants": 10
+    }
+  ],
+  "rootPosition": "(-10.7812, 0.0200, 205.7177)",
+  "rootRotation": "(0.0000, 357.0000, 0.0000)",
+  "junctionCollision": "8 thin MeshColliders, 80 triangles each; no primitive CapsuleCollider",
+  "bedCollision": "One conservative box per bed; cloned redundant mesh colliders removed",
+  "glass": "18 independent URP transparent panes, alpha 0.10; new B03-only initial reflection texture; original cubemap preserved"
+}

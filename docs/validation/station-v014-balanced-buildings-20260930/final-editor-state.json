@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new{running=UnityEditor.Lightmapping.isRunning,playing=UnityEditor.EditorApplication.isPlaying,scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,maps=UnityEngine.LightmapSettings.lightmaps.Length,dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty};\r\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "running": false,
+        "playing": false,
+        "scene": "BlackHoleStationFourWingsV014",
+        "maps": 10,
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

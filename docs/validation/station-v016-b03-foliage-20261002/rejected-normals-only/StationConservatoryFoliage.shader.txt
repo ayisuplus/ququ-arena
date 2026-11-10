@@ -1,0 +1,113 @@
+Shader "QuQu/Conservatory Foliage"
+{
+    Properties
+    {
+        [MainTexture] _BaseMap("Leaf color and cutout", 2D) = "white" {}
+        [MainColor] _BaseColor("Tint", Color) = (1,1,1,1)
+        [Normal] _BumpMap("Leaf normal", 2D) = "bump" {}
+        _BumpScale("Normal strength", Range(0,1)) = .55
+        _Cutoff("Alpha cutoff", Range(0,1)) = .42
+        _Smoothness("Smoothness", Range(0,1)) = .22
+        _Metallic("Metallic", Range(0,1)) = 0
+        _OcclusionMap("Occlusion", 2D) = "white" {}
+        _OcclusionStrength("Occlusion strength", Range(0,1)) = 1
+        [HideInInspector] _Surface("Surface", Float) = 0
+        [HideInInspector] _Cull("Cull", Float) = 0
+        [HideInInspector] _AlphaClip("Alpha clip", Float) = 1
+        [HideInInspector] _AlphaToMask("Alpha to coverage", Float) = 1
+    }
+    SubShader
+    {
+        Tags { "RenderPipeline"="UniversalPipeline" "RenderType"="TransparentCutout" "Queue"="AlphaTest" "UniversalMaterialType"="Lit" }
+        Pass
+        {
+            Name "FoliageForward"
+            Tags { "LightMode"="UniversalForwardOnly" }
+            Cull Off
+            ZWrite On
+            AlphaToMask [_AlphaToMask]
+            HLSLPROGRAM
+            #pragma target 3.0
+            #pragma vertex LitPassVertex
+            #pragma fragment FoliageFragment
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local_fragment _ALPHATEST_ON
+            #pragma shader_feature_local_fragment _OCCLUSIONMAP
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+            #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+            #pragma multi_compile_fragment _ _REFLECTION_PROBE_BLENDING
+            #pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
+            #pragma multi_compile_fragment _ _REFLECTION_PROBE_ATLAS
+            #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
+            #pragma multi_compile _ _LIGHT_LAYERS
+            #pragma multi_compile _ _CLUSTER_LIGHT_LOOP
+            #pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile_instancing
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Fog.hlsl"
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitForwardPass.hlsl"
+            void FoliageFragment(Varyings input, FRONT_FACE_TYPE face : FRONT_FACE_SEMANTIC,
+                out half4 color : SV_Target0
+                #ifdef _WRITE_RENDERING_LAYERS
+                , out uint layers : SV_Target1
+                #endif
+            )
+            {
+                // A leaf's reverse side needs its own outward normal, including tangent handedness.
+                half side = IS_FRONT_VFACE(face, 1, -1);
+                input.normalWS *= side;
+                #if defined(REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR)
+                input.tangentWS.w *= side;
+                #endif
+                LitPassFragment(input, color
+                    #ifdef _WRITE_RENDERING_LAYERS
+                    , layers
+                    #endif
+                );
+            }
+            ENDHLSL
+        }
+        Pass
+        {
+            Name "FoliageDepthNormals"
+            Tags { "LightMode"="DepthNormalsOnly" }
+            Cull Off
+            ZWrite On
+            HLSLPROGRAM
+            #pragma target 3.0
+            #pragma vertex DepthNormalsVertex
+            #pragma fragment FoliageDepthNormals
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local_fragment _ALPHATEST_ON
+            #pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile_instancing
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitDepthNormalsPass.hlsl"
+            void FoliageDepthNormals(Varyings input, FRONT_FACE_TYPE face : FRONT_FACE_SEMANTIC,
+                out half4 normal : SV_Target0
+                #ifdef _WRITE_RENDERING_LAYERS
+                , out uint layers : SV_Target1
+                #endif
+            )
+            {
+                half side = IS_FRONT_VFACE(face, 1, -1);
+                input.normalWS *= side;
+                #if defined(REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR)
+                input.tangentWS.w *= side;
+                #endif
+                DepthNormalsFragment(input, normal
+                    #ifdef _WRITE_RENDERING_LAYERS
+                    , layers
+                    #endif
+                );
+            }
+            ENDHLSL
+        }
+        UsePass "Universal Render Pipeline/Lit/ShadowCaster"
+        UsePass "Universal Render Pipeline/Lit/DepthOnly"
+    }
+}

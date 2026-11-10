@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var m=new UnityEngine.Mesh();try{m.vertices=new[]{new UnityEngine.Vector3(-1,-1,0),new UnityEngine.Vector3(1,-1,0),new UnityEngine.Vector3(0,1,0)};m.triangles=new[]{0,1,2};m.RecalculateBounds();var f=typeof(UnityEditor.HandleUtility).GetMethod(\"IntersectRayMesh\",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic);return new[]{1f,-1f}.Select(z=>{object[] a={new UnityEngine.Ray(new UnityEngine.Vector3(0,0,z),new UnityEngine.Vector3(0,0,-z)),m,UnityEngine.Matrix4x4.identity,null};bool ok=(bool)f.Invoke(null,a);var h=(UnityEngine.RaycastHit)a[3];return new{z,ok,h.distance,h.triangleIndex};}).ToArray();}finally{UnityEngine.Object.DestroyImmediate(m);}"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "z": 1,
+          "ok": true,
+          "distance": 1,
+          "triangleIndex": 0
+        },
+        {
+          "z": -1,
+          "ok": true,
+          "distance": 1,
+          "triangleIndex": 0
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

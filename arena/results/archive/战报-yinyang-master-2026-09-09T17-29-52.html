@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="tJpZNjO3A7GYBSfN0eDDCz"><head data-page-node-id="00GGCBxOQwjvzML9QfdO7O"><meta charset="utf-8" data-page-node-id="WAlRgOrpyDaQVlQ2rG7fSK">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="Kt3FPj5rgIf8zkerwvzBy8">
+<title>战报 · 阴阳怪气大师赛 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:#f3ece1; color:#7a6a52; font-size:11px; padding:2px 8px; border-radius:6px; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:#fff; }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:#fbf8f3; border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:#4c453d; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; }
+</style></head>
+<body data-page-node-id="V29UbkNJuZZuIwODVUC1Hb"><div class="wrap" data-page-node-id="XvGBbGCmFdjs1iPBrEXbHk">
+<header data-page-node-id="SjWhTAjsDNhrEoYf6E0BNa">
+  <div class="badge" data-page-node-id="qHFqOPxssOSfNfMpf9i9wW">电 子 蛐 蛐 · 战 报</div>
+  <h1 data-page-node-id="D1D8tZ1EH2TEJq1wFzILZI">🦗 阴阳怪气大师赛</h1>
+  <div class="sub" data-page-node-id="BLw15GkJZ04CIPzGCsUJoN">测大模型能不能听懂中文互联网的正话反说：识别反讽、判断语气强度、给出得体回应。LLM 裁判按 rubric 打分。</div>
+  <div class="sub" style="margin-top:6px" data-page-node-id="qZcrjB0mlYZeXc0fQFL4HU">开赛时间 2026-09-09T17:29:52.852Z · 用时 0.0s · 4 只蛐蛐 × 8 道题</div>
+</header>
+
+<h2 data-page-node-id="FoVmRqz4KyKrtPWdrP0IrL">🏆 排行榜</h2>
+<div class="card" data-page-node-id="pdJl9E6vUf8nYSJZkwMu5Y"><table data-page-node-id="gEkFbjyOhae2cc3FXuEIG4">
+<thead data-page-node-id="F1RuAHIrH69AVcYaOB4LKC"><tr data-page-node-id="D4YrJqGYFV5akCOG5XpPmN"><th data-page-node-id="GAXTGYGI18s2dHZ87i1Cvk">名次</th><th data-page-node-id="iOOkYOF0EF7ogc5hP4yXC1">蛐蛐</th><th data-page-node-id="uv63E1Z9EDsfSQlRgvmRC6">模型</th><th data-page-node-id="iStD9sxLsCpgWgTJAtHloY">总分</th><th data-page-node-id="WNalnRL9AG6m6pBiQjEEfu">反讽识别：听出正话反说</th><th data-page-node-id="aHN2VXByU02jEkXpJ5y4F2">语气强度：判断阴阳怪气的浓度</th><th data-page-node-id="w7cmHmpInxQu7Fa2rEvwmT">得体回应：被阴阳之后怎么接话</th><th data-page-node-id="CXDMBmwxqjYQrvtC4Y1AWz">Elo</th><th data-page-node-id="x0tGyY0b6HhcIiv7BbFrJE">完赛</th><th data-page-node-id="nNnCuqPRD6Bt8kKYxlNQYC">备注</th></tr></thead>
+<tbody data-page-node-id="0eXCdbL2kp9bzep1RsQKdz">
+<tr data-page-node-id="4kRzUsTrIT9jGQhZFmEKK8">
+      <td data-page-node-id="NDGtQq8ZltxQdXj3ZpvQXy">🥇</td><td class="name" data-page-node-id="TYxXasD3wC5DyoQmOrRj60">学霸-o9</td><td class="muted" data-page-node-id="J6Yx59qqetVxjCSGV6tstZ">mock:xueba-o9</td>
+      <td class="score" data-page-node-id="j6OqhH9Rznl8Q5qhaGEKPQ">90.1%</td>
+      <td data-page-node-id="ItMYOkLnlOUsej4GY4vVXE">80.3%</td><td data-page-node-id="GIk87HmHoiJyqIRCLI7XJ0">100.0%</td><td data-page-node-id="DlEvooKs2lwgGEc9KwPrft">100.0%</td>
+      <td data-page-node-id="P3t5QpOjUjxPbc9ZLDheXc">1565</td><td data-page-node-id="B5ASpMYQpWtEC3zxosqRFC">8</td>
+      <td data-page-node-id="1szuO53ZicHDiOtdOO0nZW">—</td>
+    </tr>
+<tr data-page-node-id="UafkO5seCS8A6CBnUbg9Cp">
+      <td data-page-node-id="mouET76uEtLqDEJ76WyQvi">🥈</td><td class="name" data-page-node-id="IpIotUBMQ7I2mjOnxphd19">老实-k2</td><td class="muted" data-page-node-id="YqzXcxpaDHlG3UixXYk8VU">mock:laoshi-k2</td>
+      <td class="score" data-page-node-id="GwYD0zpfE23qlBd15sKDkQ">89.9%</td>
+      <td data-page-node-id="BH2Pzc9aLSyeuhBEEqLLD7">100.0%</td><td data-page-node-id="LF2iqfF5wZrsh46TpPmztQ">59.5%</td><td data-page-node-id="ap2Act5h1K0JuIiQJjt9oT">100.0%</td>
+      <td data-page-node-id="SBw4YntDytdt3bgnatXioA">1556</td><td data-page-node-id="TuRXUBFgiL7GahWGBAoQ9H">8</td>
+      <td data-page-node-id="ZJLAmCVZUJIXTKzOwUkmOf">—</td>
+    </tr>
+<tr data-page-node-id="e8DrIZwNupt0OXL2p2GniT">
+      <td data-page-node-id="Q94V3lSKJ2Yp0v04xPmEou">🥉</td><td class="name" data-page-node-id="9ogFrRER39RivQ6RGNdHNL">滑头-72B</td><td class="muted" data-page-node-id="MdHmnulmVjYJtQ8wlLFmCe">mock:huatou-72b</td>
+      <td class="score" data-page-node-id="qmQo2k6vvptoenaMRmgFJp">79.6%</td>
+      <td data-page-node-id="CqCbUj50CBpaTrB0Yys6q3">59.3%</td><td data-page-node-id="na2JQqH5eN7yoiB7F8cgPg">100.0%</td><td data-page-node-id="5ic9brIyFV0N5VyP9IBIgP">100.0%</td>
+      <td data-page-node-id="DsNHJdrttdv29Jaq3SVcDu">1519</td><td data-page-node-id="cDpUEF9y0Sp82L6AmGaGbn">8</td>
+      <td data-page-node-id="rUPQ8KQdH4KGbd23Skgv9g">—</td>
+    </tr>
+<tr data-page-node-id="g9Afrpuu3d4TWuVBxN5wmD">
+      <td data-page-node-id="rB3zgek4qWBz5KZFEZyE6k">4.</td><td class="name" data-page-node-id="vmTqZFUAVyOY4hRTLyomXC">犟驴-7B</td><td class="muted" data-page-node-id="fIBmnfZN3zJ0enpfzTXWAJ">mock:jianglv-7b</td>
+      <td class="score" data-page-node-id="yvY3DzX1YhEnCmrOnXOtGC">36.9%</td>
+      <td data-page-node-id="W2KC7maHeLqlUUddvQPVDJ">38.7%</td><td data-page-node-id="YRpbTmM6kunfHeYMTF6Uwx">13.5%</td><td data-page-node-id="Ao7GgUxLp7yBMhyBIqMqoA">56.5%</td>
+      <td data-page-node-id="waaMniVS36SuQfeHDGH1a6">1360</td><td data-page-node-id="jpfSRfSEjARzp7pW2Nxh98">8</td>
+      <td data-page-node-id="MF8RL212fSFKsNUbcbqTMQ">—</td>
+    </tr>
+</tbody></table></div>
+
+<h2 data-page-node-id="c4HyKpSDIV5FUpN6CzRXrW">🩸 名场面（集体翻车题）</h2>
+<p class="muted" data-page-node-id="jSVwtyJ8oTpMEZ4kVLArf5">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2 data-page-node-id="PABDP3mhS96dcYNfutC0fK">🧾 逐题明细</h2>
+<details data-page-node-id="kbwb7sgq97suVbqXgO9wNL"><summary data-page-node-id="iB4HR3GGCCJH8gd31Yk7va">展开全部 32 条交战记录</summary>
+<div class="card" style="margin-top:12px" data-page-node-id="MjxOQxXg1WK9MI0WZBGa5a"><table data-page-node-id="6DbICfIYO088EdlgJPegYE">
+<thead data-page-node-id="SZf0xZ3IQao3Opr7VZzQBO"><tr data-page-node-id="UH7wwZ5TR0R1XgO7XqgHXB"><th data-page-node-id="9C9wzCs21FKSYOQQ55VWkz">题目</th><th data-page-node-id="Qpl7I8OE10289ZJl1F1BD8">维度</th><th data-page-node-id="jlG0fkWib6YP3qCbmOY3Pl">蛐蛐</th><th data-page-node-id="A9GrFrikT13UW5skZzticF">得分</th><th data-page-node-id="BrwrXwh5iK9eJ3PKI8OCiB">回答</th><th data-page-node-id="kXxuwC3pcG5DaRFyaszDoN">裁判备注</th></tr></thead>
+<tbody data-page-node-id="hAjt26B5F2PbeCvzDYaEgz">
+<tr data-page-node-id="MaRc54q0yU5o1pehc3zY8K">
+      <td data-page-node-id="qvgveRzAkKHJc2Q6gQNkCC">yygq-001</td><td data-page-node-id="I5Rll4tRyZrS1nYfhTgwpW"><span class="tag" data-page-node-id="7HT0ItLj4nLmLEUkwwCUSV">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="PTxM4wdP75TLDH8JCDsJaY">学霸-o9</td>
+      <td class="win" data-page-node-id="la1AxaMogJnX6iNXlREJCF">100.0%</td>
+      <td class="answer" data-page-node-id="LQNLUbfbYWF4JYajAktR9z">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted" data-page-node-id="rYOetVFGOgHPLA1cHzQ67Z">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="6AsqEXBS6M64lowFWsIr3Y">
+      <td data-page-node-id="G2zul6iGMOIWrkLzNwQHRK">yygq-001</td><td data-page-node-id="BGY7MKDKo5eVDdJ0IFUu0H"><span class="tag" data-page-node-id="PACAgJ4sNNuO6gRWj4kbby">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="Kps6XHqBfLEpAS09gHDRAe">滑头-72B</td>
+      <td class="win" data-page-node-id="gNxwHmoMHbTbVXOut85V94">100.0%</td>
+      <td class="answer" data-page-node-id="cnkF5i2foyPtOIhVfK3nkX">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted" data-page-node-id="5IO0aEjsC2p2eAaKA5wSTv">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="TfSAMHUxLvAQ5MMcX4u7kI">
+      <td data-page-node-id="iF6AlnIUTacAAzTwp4d0J5">yygq-001</td><td data-page-node-id="t4uRVJCemhcwjzLknNpuTu"><span class="tag" data-page-node-id="4nMlROEJwIgHWWxQsLBdiG">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="S7qMK04Ou4RVvvbBQgdYmU">犟驴-7B</td>
+      <td class="win" data-page-node-id="vpBooTTAiE3BjTlVkZgNz0">100.0%</td>
+      <td class="answer" data-page-node-id="uYCOI0bXXC9BOf1SOCC9Ha">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted" data-page-node-id="DS7jbFmK1sHQc7hGHGJ32Y">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="IIgu9ckCfTcyvGNgGqy5cX">
+      <td data-page-node-id="rZptirzR3U28VRTOSWUOhc">yygq-001</td><td data-page-node-id="y889NnbOqHaXYfS5DEGLT8"><span class="tag" data-page-node-id="KTxC2YiWYviyydKCJQLgUb">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="oc52NpNFyRUeOcvnIdY0hG">老实-k2</td>
+      <td class="win" data-page-node-id="5uANlDenHrk0Z87vH8Iv57">100.0%</td>
+      <td class="answer" data-page-node-id="9n5Kgpwew8zwFaPh9gURbz">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted" data-page-node-id="P9uKK5bZLaLhyvEx16ZPIN">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="3TzVbdER1jT7j2ERfhQrDk">
+      <td data-page-node-id="gOoNYmHVZeQ9YdvLo2NlZJ">yygq-002</td><td data-page-node-id="bxfaXwAL8cGdBAb32uB5Gu"><span class="tag" data-page-node-id="lIOmWwQDAHwx0HQFzQkaYI">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="LlErStgtpcJIFifpALiOMA">学霸-o9</td>
+      <td class="win" data-page-node-id="PWMIB2D8b2t1hmoq4W4SFR">100.0%</td>
+      <td class="answer" data-page-node-id="N7yUwpLn9dQ87boCMnmobq">这句话表面是在夸赞，实际是反讽。这是明褒实贬：前半句&quot;拍得真好&quot;是幌子，后半句&quot;下次别拍了&quot;直接点破真实态度——觉得拍得难看。属于包袱式阴阳怪气，笑点就在反转上。。说话人通过正话反说表达不满，属于典型</td>
+      <td class="muted" data-page-node-id="WgqdbA67v01OdI8WU5sk6e">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="AtCePCRdSWH3pvdAXL4Gez">
+      <td data-page-node-id="dG0Nt3h5WQqKRQ87IvHBlF">yygq-002</td><td data-page-node-id="1DsJQIIcikVZ25T3gZAkXp"><span class="tag" data-page-node-id="BAFEYHdNvnGVYD4iRYmM6z">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="flBT8cIv2nXCMHYbEcyYHJ">滑头-72B</td>
+      <td class="" data-page-node-id="bkf962NAkrfZSr9DWb9nWw">19.0%</td>
+      <td class="answer" data-page-node-id="5EgHtqwvZwVpZCUrHy7h2e">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="DUsigXXeJlAOCnsPiEHt0S">mock 裁判：语义重合度 19%，给 1.9/10</td>
+    </tr>
+<tr data-page-node-id="izt9z11Rb2BRJX76SPoG5j">
+      <td data-page-node-id="gM7gGAMKhFQzYI83dgYSre">yygq-002</td><td data-page-node-id="6KYgzdBLjJdKN0qTugC21W"><span class="tag" data-page-node-id="ehM6RwQnUxTH7fiQHqe6OF">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="ANIjM3C4SwbwHIHn1NSWZo">犟驴-7B</td>
+      <td class="" data-page-node-id="Y84DoII2JnmOw9IxSgTRzj">19.0%</td>
+      <td class="answer" data-page-node-id="xQ676awU32kZBmfLXRnFdz">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="2iWO2n2QPUlx0VvjSMEmff">mock 裁判：语义重合度 19%，给 1.9/10</td>
+    </tr>
+<tr data-page-node-id="DafxZl7gU4KfMzARxoHaA2">
+      <td data-page-node-id="F4C9RJofGWN8KOjPKskqmA">yygq-002</td><td data-page-node-id="LZl9es5TTQjxAMGaGuYyxQ"><span class="tag" data-page-node-id="JQkiFxVX3hzg7dVDGtH5td">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="fonO5QicKQW5gZ9TXoFD5E">老实-k2</td>
+      <td class="win" data-page-node-id="25Bf1AG2UCAZBD09DWhNRX">100.0%</td>
+      <td class="answer" data-page-node-id="1qAbREg2PvR4IZWuy4YA1t">这句话表面是在夸赞，实际是反讽。这是明褒实贬：前半句&quot;拍得真好&quot;是幌子，后半句&quot;下次别拍了&quot;直接点破真实态度——觉得拍得难看。属于包袱式阴阳怪气，笑点就在反转上。。说话人通过正话反说表达不满，属于典型</td>
+      <td class="muted" data-page-node-id="pzJ4P4fGvDxy0ILWkvw0nh">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="W5W5FaVyCoUnPbJGt0fb2q">
+      <td data-page-node-id="gebFiXyFFjndcLsyMXkGmN">yygq-003</td><td data-page-node-id="sxKrDz2UtpH4zmeuRIKc7I"><span class="tag" data-page-node-id="JWDFwiFYLOVqHLFANzpfb3">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="EceSVqhnggjmXW2Djy2Ooh">学霸-o9</td>
+      <td class="" data-page-node-id="JTANSGfHMO5sWueOODwZbm">21.0%</td>
+      <td class="answer" data-page-node-id="C5JJhTZwjsHiDjNiZk9Rcr">这句话是在真诚地赞美对方，表达了说话人的认可与欣赏之情。</td>
+      <td class="muted" data-page-node-id="RkVJOC22yUjJjYOvDdjLRK">mock 裁判：语义重合度 21%，给 2.1/10</td>
+    </tr>
+<tr data-page-node-id="17b4nYyDS2bzwXgHBRGOiC">
+      <td data-page-node-id="3G4sqMN9Di8QVkbYWDKt3a">yygq-003</td><td data-page-node-id="PDgznwXBBKUVkk4sNITDzc"><span class="tag" data-page-node-id="irhMgnyliV8WMhKnF3due3">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="BTggZ3fEa6SWJjAFNSBd7N">滑头-72B</td>
+      <td class="win" data-page-node-id="84wNWncgDBOxi2sPaNximC">100.0%</td>
+      <td class="answer" data-page-node-id="frlufdyBE3wCTxOOfAIfiA">这句话表面是在夸赞，实际是反讽。不是夸奖。&quot;熟了&quot;只肯定了最低标准（没做生），回避了对味道的任何评价，属于委婉的差评。真实评价是味道不怎么样，但不忍心直说。。说话人通过正话反说表达不满，属于典型的阴阳</td>
+      <td class="muted" data-page-node-id="WDBlPaqU9H84UEP88y6Otn">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="j4YpLEpU8NiIDJJqHxaTtL">
+      <td data-page-node-id="oS3WYT6ZOAF4AJB4dfmaxe">yygq-003</td><td data-page-node-id="suJWvlWiowtk79RegNPGCW"><span class="tag" data-page-node-id="4iHctHKyBrJdXYvEABtjji">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="0W4GiLpDe734nooYA4U1Rm">犟驴-7B</td>
+      <td class="" data-page-node-id="SHUgNoTURuoC4eLQCQo6l5">18.0%</td>
+      <td class="answer" data-page-node-id="7SiMsS48AVZznaC8mDJsZ0">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="rWFX4CGKP5YQUQfEoSz48v">mock 裁判：语义重合度 18%，给 1.8/10</td>
+    </tr>
+<tr data-page-node-id="szjrsW6ibkbfCtAtvU7jXU">
+      <td data-page-node-id="HVxnl3l29oA0dccSkY5BPd">yygq-003</td><td data-page-node-id="YoITVFu4WNMLdKAAjvdvr0"><span class="tag" data-page-node-id="w1Qs6ex6N8BABobT7RRQeO">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="73fHLBEhGCIXE7Uacs0I5j">老实-k2</td>
+      <td class="win" data-page-node-id="RDMTAjye2GjwQ7Y9GSoflU">100.0%</td>
+      <td class="answer" data-page-node-id="No72SBlbq3medeeyW7BERA">这句话表面是在夸赞，实际是反讽。不是夸奖。&quot;熟了&quot;只肯定了最低标准（没做生），回避了对味道的任何评价，属于委婉的差评。真实评价是味道不怎么样，但不忍心直说。。说话人通过正话反说表达不满，属于典型的阴阳</td>
+      <td class="muted" data-page-node-id="eO7pYqCicX3uKv5oDYAp1q">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="cjSEpW1IPeTb45YZTQDPl6">
+      <td data-page-node-id="4JAbA10qBsCByPOP6XKtEX">yygq-004</td><td data-page-node-id="vz3164DI2KB11K6hq3QoAr"><span class="tag" data-page-node-id="fVgJraguN9cO3oGp1jo3zw">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="LnPrANFFpnPXlxADfjitO0">学霸-o9</td>
+      <td class="win" data-page-node-id="qnSSodX2bFw8O3eznWqCIN">100.0%</td>
+      <td class="answer" data-page-node-id="FXgNMGEz6cZS8CCguQyv9N">这句话表面是在夸赞，实际是反讽。大概率是反讽。深夜加班打卡语境下，&quot;是公司的福气&quot;暗讽内卷/表演式加班，真实情绪可能是嘲讽或不认同这种加班文化。但也存在真诚佩服的可能，需结合双方关系判断；关键在于&quot;福</td>
+      <td class="muted" data-page-node-id="3J7uVHAacEGJXW0vpdc8pE">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="dmRhbBVjTBKrq7R2Tz4rkV">
+      <td data-page-node-id="UC6WZj6EGt7z3ILU45H5Zs">yygq-004</td><td data-page-node-id="YDaiTI0moR9UqBkaZTAoPz"><span class="tag" data-page-node-id="0PRDH1g8GYRFpBgCCcut1u">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="4EQMVyxgDtOom5hqmKDOyC">滑头-72B</td>
+      <td class="" data-page-node-id="acLg3MTBnWNGo6kwwUFZzo">18.0%</td>
+      <td class="answer" data-page-node-id="269DLKuvsZBPqEs1sn8XSh">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="8oHQOAr087HrBfE7bY0lKJ">mock 裁判：语义重合度 18%，给 1.8/10</td>
+    </tr>
+<tr data-page-node-id="Y1pRVimL8X01UPooXMDtLt">
+      <td data-page-node-id="FqJsZapgcWSkeWSH5PJg6p">yygq-004</td><td data-page-node-id="2NFNsDtDfEKo9DjNb7aAC6"><span class="tag" data-page-node-id="j1rPAYxzklN2M3rFkxCmOU">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="wSRqgm5PuBi0p0rIaR6OFz">犟驴-7B</td>
+      <td class="" data-page-node-id="vjarN7y2MLftQ0EjZ1x0RD">18.0%</td>
+      <td class="answer" data-page-node-id="2PBrwjLYEDaCQhoasNiMmD">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="yFl2PDV1ZdKuGONGDIyNrv">mock 裁判：语义重合度 18%，给 1.8/10</td>
+    </tr>
+<tr data-page-node-id="Ak4Pxka6BIPdIzE9vhMUaj">
+      <td data-page-node-id="xsFuBYD5VrXDHYVsEyONQf">yygq-004</td><td data-page-node-id="b05u0UJfNYIw3veN6w0j0e"><span class="tag" data-page-node-id="OXSwVoJPUf73gBuQEpAfWi">反讽识别：听出正话反说</span></td>
+      <td data-page-node-id="f18ycNRE9qx021oCAmHMMv">老实-k2</td>
+      <td class="win" data-page-node-id="IfOtGlXd4PfpTsupQjbaWt">100.0%</td>
+      <td class="answer" data-page-node-id="wNvqGdo57Z9IT75X6jUCcx">这句话表面是在夸赞，实际是反讽。大概率是反讽。深夜加班打卡语境下，&quot;是公司的福气&quot;暗讽内卷/表演式加班，真实情绪可能是嘲讽或不认同这种加班文化。但也存在真诚佩服的可能，需结合双方关系判断；关键在于&quot;福</td>
+      <td class="muted" data-page-node-id="tngkGMEBqe6cNWxUdEfr8i">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="O5NiCgR0z7yHdCSbZkG87O">
+      <td data-page-node-id="xoyveHdmuS6Nb9rpqOI1ZM">yygq-005</td><td data-page-node-id="tz8GMC1gMKs1V18OD0OBPv"><span class="tag" data-page-node-id="qgtwlhlt31kXdNKpG5Zbut">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="P12NsgM1JRETp1bfOMwYYE">学霸-o9</td>
+      <td class="win" data-page-node-id="FwIkkfLDJ6GNNbeFdwTTEq">100.0%</td>
+      <td class="answer" data-page-node-id="P2a5Yq78JHv4H2VjCT4HsE">这句话表面是在夸赞，实际是反讽。浓度从低到高：A &lt; B &lt; C。A 可能是真诚也可能是敷衍，信号最弱；B 用夸张（&quot;太对了&quot;&quot;无法反驳&quot;）明确表示不耐烦，反讽明确；C &quot;啊对对对&quot;是网络流行梗，叠词</td>
+      <td class="muted" data-page-node-id="EL7pVTq7LMnMz94af968QK">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="isT3KCTdNYAEcv8aaVGyXa">
+      <td data-page-node-id="YVO3WeoBIoq9TFGkxw7hZB">yygq-005</td><td data-page-node-id="ghDsWNV5T7yoLzwODektXV"><span class="tag" data-page-node-id="iNhF2aY1mpaCrDx1g3IkFB">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="x02cIIopG8ZTOqtyH4EacM">滑头-72B</td>
+      <td class="win" data-page-node-id="HXmRlDQz56VC00dnlHb4Wt">100.0%</td>
+      <td class="answer" data-page-node-id="C4UbxfoI8WMhdh4IJWxU7i">这句话表面是在夸赞，实际是反讽。浓度从低到高：A &lt; B &lt; C。A 可能是真诚也可能是敷衍，信号最弱；B 用夸张（&quot;太对了&quot;&quot;无法反驳&quot;）明确表示不耐烦，反讽明确；C &quot;啊对对对&quot;是网络流行梗，叠词</td>
+      <td class="muted" data-page-node-id="Rf8VPZdAzOKFoQB4zI9jRQ">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="5bwZSq7ZVBE34akE0XnXKf">
+      <td data-page-node-id="EPHwHkQay6xvwQZY5eGbxO">yygq-005</td><td data-page-node-id="O5uMFbNxeP7H9HwlHBOIax"><span class="tag" data-page-node-id="i0ODeQoVLjsIbzTeNu3mrL">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="CdJNCsTcNrdic8slEC7uE7">犟驴-7B</td>
+      <td class="" data-page-node-id="ZA6fW0HcDuAve0egt17qjE">13.0%</td>
+      <td class="answer" data-page-node-id="FXKuLhY9Srh0ObHYjX0jkp">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="TMYT42wn2HOEkta4PzMqVU">mock 裁判：语义重合度 13%，给 1.3/10</td>
+    </tr>
+<tr data-page-node-id="WF5e8nfXH2UUDRAazFrg60">
+      <td data-page-node-id="5omRHFvNlBrLnpoNfDZ675">yygq-005</td><td data-page-node-id="A4gPELIhbRvSG8PLX2PAv6"><span class="tag" data-page-node-id="cKDJrVSbuvFEnUNfKLGZyA">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="zJXfvBCxO4cautef5WYCTU">老实-k2</td>
+      <td class="" data-page-node-id="j0VDpDxFIh83g4tBAC6qKt">19.0%</td>
+      <td class="answer" data-page-node-id="jRwhCCxDkeaczIdKSVxPWz">这句话是在真诚地赞美对方，表达了说话人的认可与欣赏之情。</td>
+      <td class="muted" data-page-node-id="MP072739xc1Z6G4RjsXGTk">mock 裁判：语义重合度 19%，给 1.9/10</td>
+    </tr>
+<tr data-page-node-id="GdSuIlNdPqVDT8veDZc66E">
+      <td data-page-node-id="qcGZLjLphpMGEjxHMhaBA7">yygq-006</td><td data-page-node-id="9Z6fhopVfwlytK5gP59di6"><span class="tag" data-page-node-id="R2vrKbTs1VvDRbcIfQ8oBY">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="a3k8M2923uqsRugpMqY8mu">学霸-o9</td>
+      <td class="win" data-page-node-id="ChXneUgdKeNT92GqBcuu1b">100.0%</td>
+      <td class="answer" data-page-node-id="evzEHQYoRIdjeVVv5T9fB6">这句话表面是在夸赞，实际是反讽。浓度中等。&quot;充实&quot;只夸了&quot;量多/内容多&quot;，刻意避开了&quot;好&quot;&quot;扎实&quot;&quot;有创见&quot;等质量评价，是典型的避重就轻式差评。和&quot;写得很好&quot;的差别在于：好是质量判断，充实是数量描述—</td>
+      <td class="muted" data-page-node-id="D6h5hveEbhXA0bKMNe6iQr">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="3gLOkfqUc1Ujkg7zZeZFND">
+      <td data-page-node-id="r7XoxIAWrZnBiexCugmLHO">yygq-006</td><td data-page-node-id="PiqtaAYHyPtrvrgFQ5Rnxg"><span class="tag" data-page-node-id="4H2eaeMXBQkg5TrG9RA8s2">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="AnldQkWD0gfnSJE24YCd0G">滑头-72B</td>
+      <td class="win" data-page-node-id="IQerQdhwFutUaghkBEAptz">100.0%</td>
+      <td class="answer" data-page-node-id="XSqh5MdSoySR6LYW8ehRwC">这句话表面是在夸赞，实际是反讽。浓度中等。&quot;充实&quot;只夸了&quot;量多/内容多&quot;，刻意避开了&quot;好&quot;&quot;扎实&quot;&quot;有创见&quot;等质量评价，是典型的避重就轻式差评。和&quot;写得很好&quot;的差别在于：好是质量判断，充实是数量描述—</td>
+      <td class="muted" data-page-node-id="PHlVFIu1ssYtCZVxdZIJcA">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="QUgNVZaECGgdBDlpSE8hHb">
+      <td data-page-node-id="YEj2InPLQOZUJQJuCxIsnO">yygq-006</td><td data-page-node-id="osFSJxMJzIjqDKEzDfCBAI"><span class="tag" data-page-node-id="V4YJD8r5zFa4jwoWFoRWnz">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="zbYE3gOITUfVBdYOAeV2s4">犟驴-7B</td>
+      <td class="" data-page-node-id="YzaSBwZuF1PQxyyqeqHI7c">14.0%</td>
+      <td class="answer" data-page-node-id="A1BM5Qfcl1egfpZ35l87YA">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="YOkN2m0nYESr5lGot2wjqF">mock 裁判：语义重合度 14%，给 1.4/10</td>
+    </tr>
+<tr data-page-node-id="8q6HgJDP6Zzcw1k5qf1Ub3">
+      <td data-page-node-id="XfYbgKt4koIOBL1c0yxdsB">yygq-006</td><td data-page-node-id="WXPECBSmRcNNJeicm4pMYQ"><span class="tag" data-page-node-id="qgoDABX5PmMAZYTVCRvjhP">语气强度：判断阴阳怪气的浓度</span></td>
+      <td data-page-node-id="vxMHotgKVDux9HFsE8dqg4">老实-k2</td>
+      <td class="win" data-page-node-id="KRosYKc9swQXcU7MapgxUf">100.0%</td>
+      <td class="answer" data-page-node-id="7g1j4CxHpTHsjioeMg8kEY">这句话表面是在夸赞，实际是反讽。浓度中等。&quot;充实&quot;只夸了&quot;量多/内容多&quot;，刻意避开了&quot;好&quot;&quot;扎实&quot;&quot;有创见&quot;等质量评价，是典型的避重就轻式差评。和&quot;写得很好&quot;的差别在于：好是质量判断，充实是数量描述—</td>
+      <td class="muted" data-page-node-id="yD07Yf9FPnsiikXxtkLrYx">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="ZA3nRdPoxEnDpBT0kpbGoc">
+      <td data-page-node-id="rVZNqFT1Ei4gBeDzcGHRpk">yygq-007</td><td data-page-node-id="TbDLohnpFsgQfrllxdAihn"><span class="tag" data-page-node-id="iABN1HUgebdsifVaV0M17F">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="TFDCbM2NQXY0SLcD2t04Dj">学霸-o9</td>
+      <td class="win" data-page-node-id="WbIpZxzgDFIynHa8VYjZAH">100.0%</td>
+      <td class="answer" data-page-node-id="shrE713chbsYojTiWWV67J">这句话表面是在夸赞，实际是反讽。好的回应应先接住情绪再柔化对立，例如：&quot;叔，您那时候是真不容易，我们现在压力其实也不小，就是发愁的事儿不一样了——您那会儿愁吃饱，我们这会儿愁房贷。&quot; 策略：不硬顶（避</td>
+      <td class="muted" data-page-node-id="MpaJynpi2BceZ3AV6wqPK7">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="3CI3znqDBcAKQZkdJ8Cvff">
+      <td data-page-node-id="0sJdFGR89AMAwf8HJX5PCQ">yygq-007</td><td data-page-node-id="IClWzXCJhH9SiUbGQ2wpqZ"><span class="tag" data-page-node-id="3XbYeyuFPIpYIpS00gbE0g">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="jGs7u8YBGTrhTYgMr6Beh0">滑头-72B</td>
+      <td class="win" data-page-node-id="wGECUzKEt9qbPkhnyAjBby">100.0%</td>
+      <td class="answer" data-page-node-id="0PD3AXhvHg6CYHAbgmBQdj">这句话表面是在夸赞，实际是反讽。好的回应应先接住情绪再柔化对立，例如：&quot;叔，您那时候是真不容易，我们现在压力其实也不小，就是发愁的事儿不一样了——您那会儿愁吃饱，我们这会儿愁房贷。&quot; 策略：不硬顶（避</td>
+      <td class="muted" data-page-node-id="5MtCWgJUqQH6AmVcw8ZEUp">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="BhnmMkNOH0e2TY9RzTgAL1">
+      <td data-page-node-id="H5wBSefESBuXQfOZqfr15k">yygq-007</td><td data-page-node-id="t3q4NaKGnC3yIAnmH3G0bF"><span class="tag" data-page-node-id="eAGv4iUFSeTSVmP5GLsuso">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="XjAmaq8ykkFFfNp487YYBs">犟驴-7B</td>
+      <td class="win" data-page-node-id="UBB0PHbTl1uNOqTHSamGPJ">100.0%</td>
+      <td class="answer" data-page-node-id="vdSa7WpoKF2kCEgLceVOHU">这句话表面是在夸赞，实际是反讽。好的回应应先接住情绪再柔化对立，例如：&quot;叔，您那时候是真不容易，我们现在压力其实也不小，就是发愁的事儿不一样了——您那会儿愁吃饱，我们这会儿愁房贷。&quot; 策略：不硬顶（避</td>
+      <td class="muted" data-page-node-id="BOZ6xO8bCApQTruEaTAPdE">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="fLkoOXh2shkX1XylDOnDOw">
+      <td data-page-node-id="cFkGZAFCkp4hd9SAADB5Sj">yygq-007</td><td data-page-node-id="D3rraxkGASz9d7mLmfKltR"><span class="tag" data-page-node-id="BQHD2c942c5sa3Qm6VI7Ws">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="MZQJQ3ZK8a1jEix43Zyd7d">老实-k2</td>
+      <td class="win" data-page-node-id="0uDyfpAT22QHI7NgknqL1W">100.0%</td>
+      <td class="answer" data-page-node-id="5npwAGMl1E1IcQ3iDl0pU9">这句话表面是在夸赞，实际是反讽。好的回应应先接住情绪再柔化对立，例如：&quot;叔，您那时候是真不容易，我们现在压力其实也不小，就是发愁的事儿不一样了——您那会儿愁吃饱，我们这会儿愁房贷。&quot; 策略：不硬顶（避</td>
+      <td class="muted" data-page-node-id="9cbHVKc33LrG4o0MO8rK8F">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="8mCjau32d0kEWL4KUnhy6u">
+      <td data-page-node-id="1Zcv5KUYVa7NGLojEw4Fl2">yygq-008</td><td data-page-node-id="MlMU8YyQPMzpPXQ0v1Ilbp"><span class="tag" data-page-node-id="2nuopbAywnH91aX5sEAgra">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="MmvibitOzRAr3YiwxDnCGC">学霸-o9</td>
+      <td class="win" data-page-node-id="DyAkiprkquuvu9VOCWCwRS">100.0%</td>
+      <td class="answer" data-page-node-id="G0TVvAr5gBb3adf7KJfmSr">这句话表面是在夸赞，实际是反讽。得体策略是自嘲化解或选择性接梗，例如：&quot;谢谢坚持日更这四个字，烂不烂的咱慢慢进步。&quot; 把褒义部分当真接住、对贬义部分不接招，既显大度又避免引战；直接对骂或写小作文反驳都</td>
+      <td class="muted" data-page-node-id="4G6GGtE1QgMDpU9lP4CfpV">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="oFFhv8SrkFKSwJnlIU3hM7">
+      <td data-page-node-id="ioj6wknwIkFWBJztmmR7vK">yygq-008</td><td data-page-node-id="2xnkN3GbCbNlPT5RlPec2L"><span class="tag" data-page-node-id="mIFmp2b2lKMMgqNFTXF1Nb">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="XAJtNwVPgeiT1bC44oH7ga">滑头-72B</td>
+      <td class="win" data-page-node-id="3g3Au5KOBbwzfMYshJWAfu">100.0%</td>
+      <td class="answer" data-page-node-id="Z3wV1ts41gUhruRv0V7iEr">这句话表面是在夸赞，实际是反讽。得体策略是自嘲化解或选择性接梗，例如：&quot;谢谢坚持日更这四个字，烂不烂的咱慢慢进步。&quot; 把褒义部分当真接住、对贬义部分不接招，既显大度又避免引战；直接对骂或写小作文反驳都</td>
+      <td class="muted" data-page-node-id="3bpSwaaKk15vtzJojP6bvn">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr data-page-node-id="4ZYrFn8jGD6H2BS0mDWzKy">
+      <td data-page-node-id="8FcHWmPC3FXGfDfGyuMVqt">yygq-008</td><td data-page-node-id="VBLa8V1BJPKpWPcPjVC38s"><span class="tag" data-page-node-id="7eWYu3oEMVd25W6nLFJaWS">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="9HdMvMYCoazqSQnmGV628n">犟驴-7B</td>
+      <td class="" data-page-node-id="mdGb58WPl3uIdc5r6MxPPE">13.0%</td>
+      <td class="answer" data-page-node-id="Akwj1KTUfHVeE6REXCZy62">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted" data-page-node-id="j0BayyvyuBjojG1wVifRXn">mock 裁判：语义重合度 13%，给 1.3/10</td>
+    </tr>
+<tr data-page-node-id="CBtNeYYYdfi9KGgqjtbXZD">
+      <td data-page-node-id="llsLdYALTbDznPAExucH8j">yygq-008</td><td data-page-node-id="1yp9mIRqaUbkyddd7iUwqK"><span class="tag" data-page-node-id="GC6mjfjQUXOPpgWsgFfj65">得体回应：被阴阳之后怎么接话</span></td>
+      <td data-page-node-id="9i9H2zk6JbNeksSxUFtAXk">老实-k2</td>
+      <td class="win" data-page-node-id="5Xzdn3FEqKV1S9tI1Y695Y">100.0%</td>
+      <td class="answer" data-page-node-id="h0QVOw1NHSizW94gidpNmh">这句话表面是在夸赞，实际是反讽。得体策略是自嘲化解或选择性接梗，例如：&quot;谢谢坚持日更这四个字，烂不烂的咱慢慢进步。&quot; 把褒义部分当真接住、对贬义部分不接招，既显大度又避免引战；直接对骂或写小作文反驳都</td>
+      <td class="muted" data-page-node-id="dTJMPcUFYI79Z8vyK0cNQx">mock 裁判：语义重合度 100%，给 10/10</td>
+    </tr>
+</tbody></table></div></details>
+
+<footer data-page-node-id="5ic249OcJAOodCeiCXy5LR">
+  AI斗兽场 QuQuArena · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2
+  <br data-page-node-id="pigJD2qoZNYu9ePre19rxW">Token 用量：学霸-o9 240+525，滑头-72B 240+460，犟驴-7B 240+228，老实-k2 240+492
+</footer>
+</div></body></html>

@@ -1,0 +1,133 @@
+{
+  "agents": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "status": "ready",
+      "message": "本机已连接；模型来自官方程序",
+      "remaining": 66,
+      "resetsAt": 1790263227
+    },
+    {
+      "id": "claude",
+      "name": "Claude Code",
+      "version": "2.1.274 (Claude Code)",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "status": "ready",
+      "message": "本机已连接；模型来自官方程序"
+    }
+  ],
+  "models": [
+    {
+      "id": "agent:codex/gpt-6-astra",
+      "name": "Codex · gpt-6-astra",
+      "agent": "codex",
+      "model": "gpt-6-astra",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:codex/gpt-5.6-sol",
+      "name": "Codex · gpt-5.6-sol",
+      "agent": "codex",
+      "model": "gpt-5.6-sol",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:codex/gpt-5.6-terra",
+      "name": "Codex · gpt-5.6-terra",
+      "agent": "codex",
+      "model": "gpt-5.6-terra",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:codex/gpt-5.6-luna",
+      "name": "Codex · gpt-5.6-luna",
+      "agent": "codex",
+      "model": "gpt-5.6-luna",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:codex/gpt-5.5",
+      "name": "Codex · gpt-5.5",
+      "agent": "codex",
+      "model": "gpt-5.5",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "codex-cli 0.155.0-alpha.2.6",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:claude/claude-sonnet-5",
+      "name": "Claude Code · claude-sonnet-5",
+      "agent": "claude",
+      "model": "claude-sonnet-5",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "2.1.274 (Claude Code)",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:claude/claude-fable-5-1",
+      "name": "Claude Code · claude-fable-5-1",
+      "agent": "claude",
+      "model": "claude-fable-5-1",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": false,
+      "message": "该模型要求额外额度，本机订阅入口不自动启用",
+      "version": "2.1.274 (Claude Code)",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:claude/claude-opus-5",
+      "name": "Claude Code · claude-opus-5",
+      "agent": "claude",
+      "model": "claude-opus-5",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "2.1.274 (Claude Code)",
+      "effort": "medium"
+    },
+    {
+      "id": "agent:claude/claude-haiku-4-5-20251001",
+      "name": "Claude Code · claude-haiku-4-5-20251001",
+      "agent": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "billing": "subscription",
+      "billingLabel": "订阅额度 · 额外用量按官方账户设置",
+      "ready": true,
+      "message": "本机已连接；模型来自官方程序",
+      "version": "2.1.274 (Claude Code)"
+    }
+  ]
+}

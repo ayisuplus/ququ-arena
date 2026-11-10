@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 找不同擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 24 道题 · 冠军 学霸-o9 95.8%">
+<title>战报 · 找不同擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 找不同擂台</h1>
+  <div class="sub">四个词里挑出不属于同一类的那个（生成器自建）：十个人工审清边界的类别池（水果/动物/交通工具/乐器/颜色/球类/蔬菜/家具/天体/电器），3 同类 + 1 异类打乱顺序。测类别归纳与常识边界。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T10:26:48.472Z · 用时 0.0s · 4 只蛐蛐 × 24 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>找不同（3 同类 + 1 异类）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">95.8%<div class="ci">±6.3%</div></td>
+      <td>95.8%</td>
+      <td class="nw">1587</td><td class="nw">🐲 虫王</td><td class="nw win">11486 (+87)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">79.2%<div class="ci">±16.7%</div></td>
+      <td>79.2%</td>
+      <td class="nw">1531</td><td class="nw">🐲 虫王</td><td class="nw win">37380 (+31)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">66.7%<div class="ci">±18.8%</div></td>
+      <td>66.7%</td>
+      <td class="nw">1488</td><td class="nw">🐲 虫王</td><td class="nw lose">16383 (-12)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">37.5%<div class="ci">±18.8%</div></td>
+      <td>37.5%</td>
+      <td class="nw">1394</td><td class="nw">🐣 雏虫</td><td class="nw lose">-59541 (-106)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 37.5%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.87（k=24 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 与 老实-k2 的分差 95% CI 为 [0.0%, 37.5%]，含 0——谁是冠军纯属运气。</li><li>🩸 屠杀局：首尾 58.3% 的鸿沟——犟驴-7B 今晚不宜出门。</li><li>🎬 名场面：「OO-20」全员翻车（均分 25.0%）——只输出那个异类词本身，不多一个字。
+四个词：椅子、衣柜、桌子、葡萄。
+
+问题：哪一个不属于同一类？</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">找不同（3 同类 + 1 异类）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:95.8%"></span></span>
+        <span class="dim-val">95.8%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:79.2%"></span></span>
+        <span class="dim-val">79.2%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:66.7%"></span></span>
+        <span class="dim-val">66.7%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:37.5%"></span></span>
+        <span class="dim-val">37.5%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.12)">58.3%</td><td style="background:rgba(26,127,75,0.20)">64.6%</td><td style="background:rgba(26,127,75,0.41)">79.2%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.12)">41.7%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.09)">56.3%</td><td style="background:rgba(26,127,75,0.29)">70.8%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.20)">35.4%</td><td style="background:rgba(193,68,30,0.09)">43.8%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.20)">64.6%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.41)">20.8%</td><td style="background:rgba(193,68,30,0.29)">29.2%</td><td style="background:rgba(193,68,30,0.20)">35.4%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">找不同（3 同类 + 1 异类）</span> 全场平均仅 <b>25.0%</b> —— OO-20</div>
+      <div class="prompt">只输出那个异类词本身，不多一个字。
+四个词：椅子、衣柜、桌子、葡萄。
+
+问题：哪一个不属于同一类？</div>
+      <div class="target">参考答案：葡萄</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：葡</li><li><b>犟驴-7B</b>（0.0%）：葡</li><li><b>老实-k2</b>（0.0%）：葡</li><li><b>学霸-o9</b>（100.0%）：葡萄</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 96 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>OO-01</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">棒球</td>
+      <td class="muted">209ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-01</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">棒</td>
+      <td class="muted">423ms</td>
+      <td class="muted">期望「棒球」，实答「棒」</td>
+    </tr>
+<tr>
+      <td>OO-01</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">棒球</td>
+      <td class="muted">176ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-01</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">棒球</td>
+      <td class="muted">438ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-02</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">103ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-02</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">306ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-02</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">香</td>
+      <td class="muted">108ms</td>
+      <td class="muted">期望「香蕉」，实答「香」</td>
+    </tr>
+<tr>
+      <td>OO-02</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">87ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-03</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">冰箱</td>
+      <td class="muted">91ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-03</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">冰箱</td>
+      <td class="muted">227ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-03</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">冰</td>
+      <td class="muted">142ms</td>
+      <td class="muted">期望「冰箱」，实答「冰」</td>
+    </tr>
+<tr>
+      <td>OO-03</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">冰箱</td>
+      <td class="muted">326ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-04</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">火车</td>
+      <td class="muted">329ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-04</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">火车</td>
+      <td class="muted">129ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-04</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">火车</td>
+      <td class="muted">303ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-04</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">火车</td>
+      <td class="muted">429ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-05</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">乒乓球</td>
+      <td class="muted">295ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-05</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">乒乓</td>
+      <td class="muted">310ms</td>
+      <td class="muted">期望「乒乓球」，实答「乒乓」</td>
+    </tr>
+<tr>
+      <td>OO-05</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">乒乓</td>
+      <td class="muted">392ms</td>
+      <td class="muted">期望「乒乓球」，实答「乒乓」</td>
+    </tr>
+<tr>
+      <td>OO-05</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">乒乓球</td>
+      <td class="muted">442ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-06</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茶几</td>
+      <td class="muted">286ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-06</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茶几</td>
+      <td class="muted">444ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-06</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">茶</td>
+      <td class="muted">395ms</td>
+      <td class="muted">期望「茶几」，实答「茶」</td>
+    </tr>
+<tr>
+      <td>OO-06</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茶几</td>
+      <td class="muted">349ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-07</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">自行车</td>
+      <td class="muted">327ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-07</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">自行车</td>
+      <td class="muted">411ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-07</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">自行这</td>
+      <td class="muted">363ms</td>
+      <td class="muted">期望「自行车」，实答「自行这」</td>
+    </tr>
+<tr>
+      <td>OO-07</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">自行车</td>
+      <td class="muted">377ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-08</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茄子</td>
+      <td class="muted">94ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-08</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茄子</td>
+      <td class="muted">245ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-08</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">茄子</td>
+      <td class="muted">386ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-08</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">茄</td>
+      <td class="muted">411ms</td>
+      <td class="muted">期望「茄子」，实答「茄」</td>
+    </tr>
+<tr>
+      <td>OO-09</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">白菜</td>
+      <td class="muted">376ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-09</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">白</td>
+      <td class="muted">122ms</td>
+      <td class="muted">期望「白菜」，实答「白」</td>
+    </tr>
+<tr>
+      <td>OO-09</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">白</td>
+      <td class="muted">192ms</td>
+      <td class="muted">期望「白菜」，实答「白」</td>
+    </tr>
+<tr>
+      <td>OO-09</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">白菜</td>
+      <td class="muted">435ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-10</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">紫色</td>
+      <td class="muted">166ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-10</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">紫色</td>
+      <td class="muted">96ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-10</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">紫</td>
+      <td class="muted">179ms</td>
+      <td class="muted">期望「紫色」，实答「紫」</td>
+    </tr>
+<tr>
+      <td>OO-10</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">紫色</td>
+      <td class="muted">146ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-11</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">热水器</td>
+      <td class="muted">387ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-11</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">热水器</td>
+      <td class="muted">457ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-11</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">热水</td>
+      <td class="muted">220ms</td>
+      <td class="muted">期望「热水器」，实答「热水」</td>
+    </tr>
+<tr>
+      <td>OO-11</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">热水器</td>
+      <td class="muted">297ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-12</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">羽毛球</td>
+      <td class="muted">150ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-12</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">羽球</td>
+      <td class="muted">302ms</td>
+      <td class="muted">期望「羽毛球」，实答「羽球」</td>
+    </tr>
+<tr>
+      <td>OO-12</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">羽个球</td>
+      <td class="muted">84ms</td>
+      <td class="muted">期望「羽毛球」，实答「羽个球」</td>
+    </tr>
+<tr>
+      <td>OO-12</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">羽毛球</td>
+      <td class="muted">429ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-13</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">月亮</td>
+      <td class="muted">329ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-13</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">月</td>
+      <td class="muted">259ms</td>
+      <td class="muted">期望「月亮」，实答「月」</td>
+    </tr>
+<tr>
+      <td>OO-13</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">月亮</td>
+      <td class="muted">382ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-13</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">月</td>
+      <td class="muted">224ms</td>
+      <td class="muted">期望「月亮」，实答「月」</td>
+    </tr>
+<tr>
+      <td>OO-14</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">346ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-14</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">398ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-14</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">香</td>
+      <td class="muted">137ms</td>
+      <td class="muted">期望「香蕉」，实答「香」</td>
+    </tr>
+<tr>
+      <td>OO-14</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">88ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-15</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">沙发</td>
+      <td class="muted">413ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-15</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">沙发</td>
+      <td class="muted">83ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-15</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">沙</td>
+      <td class="muted">245ms</td>
+      <td class="muted">期望「沙发」，实答「沙」</td>
+    </tr>
+<tr>
+      <td>OO-15</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">沙发</td>
+      <td class="muted">453ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-16</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">芹菜</td>
+      <td class="muted">290ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-16</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">芹菜</td>
+      <td class="muted">449ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-16</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">芹菜</td>
+      <td class="muted">358ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-16</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">芹菜</td>
+      <td class="muted">436ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-17</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">床</td>
+      <td class="muted">271ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-17</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">床</td>
+      <td class="muted">411ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-17</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">床</td>
+      <td class="muted">444ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-17</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">床</td>
+      <td class="muted">275ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-18</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">飞机</td>
+      <td class="muted">363ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-18</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">飞机</td>
+      <td class="muted">186ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-18</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">飞机</td>
+      <td class="muted">132ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-18</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">飞</td>
+      <td class="muted">256ms</td>
+      <td class="muted">期望「飞机」，实答「飞」</td>
+    </tr>
+<tr>
+      <td>OO-19</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">葡萄</td>
+      <td class="muted">218ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-19</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">葡萄</td>
+      <td class="muted">352ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-19</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">葡萄</td>
+      <td class="muted">313ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-19</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">葡</td>
+      <td class="muted">273ms</td>
+      <td class="muted">期望「葡萄」，实答「葡」</td>
+    </tr>
+<tr>
+      <td>OO-20</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">葡萄</td>
+      <td class="muted">256ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-20</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">葡</td>
+      <td class="muted">167ms</td>
+      <td class="muted">期望「葡萄」，实答「葡」</td>
+    </tr>
+<tr>
+      <td>OO-20</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">葡</td>
+      <td class="muted">173ms</td>
+      <td class="muted">期望「葡萄」，实答「葡」</td>
+    </tr>
+<tr>
+      <td>OO-20</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">葡</td>
+      <td class="muted">295ms</td>
+      <td class="muted">期望「葡萄」，实答「葡」</td>
+    </tr>
+<tr>
+      <td>OO-21</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">长</td>
+      <td class="muted">445ms</td>
+      <td class="muted">期望「长笛」，实答「长」</td>
+    </tr>
+<tr>
+      <td>OO-21</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">长</td>
+      <td class="muted">153ms</td>
+      <td class="muted">期望「长笛」，实答「长」</td>
+    </tr>
+<tr>
+      <td>OO-21</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">长笛</td>
+      <td class="muted">170ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-21</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">长笛</td>
+      <td class="muted">412ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-22</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">衣柜</td>
+      <td class="muted">382ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-22</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">衣柜</td>
+      <td class="muted">393ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-22</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">衣</td>
+      <td class="muted">441ms</td>
+      <td class="muted">期望「衣柜」，实答「衣」</td>
+    </tr>
+<tr>
+      <td>OO-22</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">衣柜</td>
+      <td class="muted">199ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-23</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">热水器</td>
+      <td class="muted">123ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-23</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">热器</td>
+      <td class="muted">281ms</td>
+      <td class="muted">期望「热水器」，实答「热器」</td>
+    </tr>
+<tr>
+      <td>OO-23</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">水器</td>
+      <td class="muted">367ms</td>
+      <td class="muted">期望「热水器」，实答「水器」</td>
+    </tr>
+<tr>
+      <td>OO-23</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">热水器</td>
+      <td class="muted">266ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-24</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">书架</td>
+      <td class="muted">366ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-24</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">书架</td>
+      <td class="muted">105ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>OO-24</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">书</td>
+      <td class="muted">248ms</td>
+      <td class="muted">期望「书架」，实答「书」</td>
+    </tr>
+<tr>
+      <td>OO-24</td><td><span class="tag">找不同（3 同类 + 1 异类）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">书架</td>
+      <td class="muted">322ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v2.22.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>66bc850084e7fc60</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:odd-one-out:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 602+29，滑头-72B 602+26，犟驴-7B 602+26，老实-k2 602+29
+</footer>
+</div></body></html>

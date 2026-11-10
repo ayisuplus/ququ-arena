@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new { version = UnityEngine.Application.unityVersion, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, playing = UnityEditor.EditorApplication.isPlaying };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "version": "6000.3.24f1",
+        "scene": "Assets/Station/Scenes/BlackHoleStationSereneV013.unity",
+        "playing": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

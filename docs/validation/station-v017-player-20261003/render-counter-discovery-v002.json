@@ -1,0 +1,146 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v017\\discover-render-counters.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "Name": "Canvas.PrepareBatchesJob",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "UGUI.Rendering.UpdateBatches",
+          "category": "UI Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "Canvas.PrepareBatches",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "GizmoRenderer.RenderBatches",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "Material.SetPassFast",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "StaticBatching.CollectBatches",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "BatchRendererGroup.InvalidateStaleBatches",
+          "category": "Render",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "NavMesh.MeshTriangles",
+          "category": "Ai",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "NavMesh.Recast.RasterizeTriangles",
+          "category": "Ai",
+          "unit": "TimeNanoseconds"
+        },
+        {
+          "Name": "Batches Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Draw Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Indirect Draw Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Triangles Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "SetPass Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Shadow Casters Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Dynamic Batches Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Dynamic Batched Draw Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Dynamic Batched Triangles Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Static Batches Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Static Batched Draw Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Static Batched Triangles Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Instanced Batches Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Instanced Batched Draw Calls Count",
+          "category": "Render",
+          "unit": "Count"
+        },
+        {
+          "Name": "Instanced Batched Triangles Count",
+          "category": "Render",
+          "unit": "Count"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var deps=UnityEditor.AssetDatabase.GetDependencies(\"Assets/Station/Scenes/BlackHoleStationSereneV013.unity\",true);\nSystem.IO.File.WriteAllLines(\"Temp/v013-dependencies.txt\",deps);\nreturn new {count=deps.Length};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "count": 299
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

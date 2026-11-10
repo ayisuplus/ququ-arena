@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var rows=new System.Collections.Generic.List<object>();foreach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.Renderer>(UnityEngine.FindObjectsSortMode.None)){var b=r.bounds;var p=b.center;if(p.x<166||p.x>193||p.z> -215.9f||p.z< -251)continue;rows.Add(new{name=r.name,parent=r.transform.parent?r.transform.parent.name:null,root=r.transform.root.name,pos=r.transform.position.ToString(),center=p.ToString(),size=b.size.ToString(),enabled=r.enabled,collider=r.GetComponent<UnityEngine.Collider>()!=null});}System.IO.File.WriteAllText(\"../production/black-hole-station/v013/p2-gallery/survey.json\",Newtonsoft.Json.JsonConvert.SerializeObject(rows,Newtonsoft.Json.Formatting.Indented));return new{count=rows.Count};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "count": 186
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

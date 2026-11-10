@@ -1,0 +1,204 @@
+{
+  "label": "trial-v001",
+  "installed": false,
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+  "views": [
+    {
+      "name": "deepseek-entry",
+      "frame": "V015 package - resident deepseek home package",
+      "eye": [
+        -25.0,
+        1.7,
+        10.0
+      ],
+      "target": [
+        -12.0,
+        1.7,
+        0.0
+      ]
+    },
+    {
+      "name": "chatgpt-entry",
+      "frame": "V015 package - resident chatgpt home package",
+      "eye": [
+        -25.0,
+        1.7,
+        10.0
+      ],
+      "target": [
+        -12.0,
+        1.7,
+        0.0
+      ]
+    },
+    {
+      "name": "claude-entry",
+      "frame": "V015 package - resident claude home package",
+      "eye": [
+        -25.0,
+        1.7,
+        10.0
+      ],
+      "target": [
+        -12.0,
+        1.7,
+        0.0
+      ]
+    },
+    {
+      "name": "crossing-55",
+      "frame": "R3 homes and ecology planning deck",
+      "eye": [
+        111.273834,
+        1.7,
+        -158.9155
+      ],
+      "target": [
+        121.598206,
+        2.0,
+        -173.660233
+      ]
+    },
+    {
+      "name": "crossing-65",
+      "frame": "R3 homes and ecology planning deck",
+      "eye": [
+        81.98794,
+        1.7,
+        -175.823715
+      ],
+      "target": [
+        89.59507,
+        2.0,
+        -192.137253
+      ]
+    },
+    {
+      "name": "street-sequence",
+      "frame": "V015 package - existing shared resident lounge",
+      "eye": [
+        -43.0,
+        1.7,
+        80.0
+      ],
+      "target": [
+        -10.0,
+        4.0,
+        20.0
+      ]
+    },
+    {
+      "name": "overview",
+      "frame": "V015 package - existing shared resident lounge",
+      "eye": [
+        -95.0,
+        90.0,
+        70.0
+      ],
+      "target": [
+        -20.0,
+        0.0,
+        65.0
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "name": "Veranda porcelain canopy and columns",
+      "filter": "1324041150",
+      "renderer": "1324041149",
+      "oldMesh": "{fileID: 4300000, guid: b469f355418b28d4494f8b29475f2ce8, type: 2}",
+      "oldMaterials": [
+        "{fileID: 2100000, guid: 2a5ce2a41e51c1544913ca8ff0815897, type: 2}",
+        "{fileID: 2100000, guid: 5f3ac6df659210448ac5b8de976825db, type: 2}",
+        "{fileID: 2100000, guid: 6bcd54a3ccf3dfe4ca772ba14e267efc, type: 2}"
+      ],
+      "colliders": [
+        {
+          "id": "1324041148",
+          "oldMesh": "{fileID: 4300000, guid: ee9bca593363bec45982e586f909ff6d, type: 2}"
+        }
+      ]
+    },
+    {
+      "name": "Veranda silver details",
+      "filter": "1733761336",
+      "renderer": "1733761335",
+      "oldMesh": "{fileID: 4300000, guid: 539e2e5b3c0cb1c4e9f9133310bc9f70, type: 2}",
+      "oldMaterials": [
+        "{fileID: 2100000, guid: b9780938db346fb4387666215265f9d6, type: 2}"
+      ],
+      "colliders": []
+    },
+    {
+      "name": "Permanent homes shared sage court",
+      "filter": "1699757591",
+      "renderer": "1699757590",
+      "oldMesh": "{fileID: 4300000, guid: 3fe96b9be278cf542983908925fcecb4, type: 2}",
+      "oldMaterials": [
+        "{fileID: 2100000, guid: 51b5c83acd81bcd4e8b95c74698b3a6b, type: 2}"
+      ],
+      "colliders": []
+    }
+  ],
+  "disabled": [
+    "36691513",
+    "36691512"
+  ],
+  "assets": [
+    {
+      "name": "Veranda porcelain canopy and columns segmented",
+      "path": ""
+    },
+    {
+      "name": "Veranda silver details segmented",
+      "path": ""
+    },
+    {
+      "name": "Homes court private thresholds",
+      "path": ""
+    }
+  ],
+  "newRoots": [
+    {
+      "id": "318036437",
+      "name": "V019 private entrance screens",
+      "parent": "384972180"
+    },
+    {
+      "id": "1017204131",
+      "name": "V019 private entrance screens",
+      "parent": "743609187"
+    },
+    {
+      "id": "538085931",
+      "name": "V019 private entrance screens",
+      "parent": "1720961334"
+    }
+  ],
+  "spans": [
+    [
+      47.4,
+      53.0
+    ],
+    [
+      55.8,
+      64.2
+    ],
+    [
+      67.0,
+      72.6
+    ]
+  ],
+  "columns": [
+    48.7,
+    52.0,
+    56.0,
+    58.0,
+    62.0,
+    64.0,
+    68.0,
+    71.3
+  ],
+  "note": "Original skylight object and source mesh retained; renderer and collider disabled at open passages."
+}

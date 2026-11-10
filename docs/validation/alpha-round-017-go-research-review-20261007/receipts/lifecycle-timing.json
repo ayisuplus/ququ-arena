@@ -1,0 +1,21 @@
+{
+  "times": {
+    "requestStarted": "2026-10-07T04:34:06.877Z",
+    "accepted": "2026-10-07T04:37:57.933Z",
+    "agentStart": "2026-10-07T04:37:58.290Z",
+    "firstTool": "2026-10-07T04:38:05.117Z",
+    "nativeSettled": "2026-10-07T04:44:47.557Z",
+    "hostSnapshot": "2026-10-07T04:45:53.262Z",
+    "observedIdle": "2026-10-07T04:45:53.988Z"
+  },
+  "seconds": {
+    "requestToAcceptance": 231.056,
+    "agentStartToFirstTool": 6.827,
+    "agentStartToNativeSettled": 409.267,
+    "nativeSettledToHostSnapshot": 65.705,
+    "requestToObservedIdle": 707.111
+  },
+  "scope": "One Alpha prompt task; native agent interval includes five assistant responses and eight read tool calls. Not provider request count, time to first token, pure decode speed, or comparable benchmark.",
+  "beforeAcceptanceSamples": 91,
+  "allBeforeAcceptanceBusy": true
+}

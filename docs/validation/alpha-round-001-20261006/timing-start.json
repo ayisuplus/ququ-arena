@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:/projects/黑洞空间站/.cache/alpha-round-001/question-timing-check.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "mode": "start",
+        "passed": true,
+        "failed": 0,
+        "checks": [
+          "mode.file-readable | passed=True | actual=start | expected=a stage word from timing-mode.txt",
+          "start.board-ready | passed=True | actual=ready | expected=ready",
+          "start.question-label-found | passed=True | actual=found | expected=found",
+          "start.long-text-paginates | passed=True | actual=72 | expected=> 1",
+          "start.settles-on-page-1 | passed=True | actual=1 | expected=1"
+        ],
+        "pageCount": 72,
+        "startedAt": 49.38574,
+        "elapsedSeconds": 0,
+        "unity": "6000.3.24f1",
+        "playMode": true,
+        "scene": "",
+        "reusedExistingBoard": false,
+        "note": "one short synchronous stage per call; the 8s rotation is observed between calls, never awaited here"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,113 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "tongjia-typo",
+    "title": "错字归正 · 语境对照擂台",
+    "description": "复用 TongJia-Bench T3 机制归因 pilot 142 题（源数据 20 条退化题——perturbedChar=distractorChar 扰动未生效——已剔除，属上游 pilot 生成器缺陷）（同音字替换的成语/词语归正：「一劳永遗」→「一劳永逸」）。受控语境设计：C0 中性语境（71）/ C+ 强语境（71）/ C- 误导语境（20）——同词不同语境成组（meta.family=group_id），测语境对归正的助益与干扰。exact 裁判，与 tongjia-pinyin（拼音剖面）互为姊妹罐。另按题面+答案去重 2 条（源成语表重复条目，如 idiom-0003≡0034）。",
+    "author": "AI斗兽场（素材：TongJia-Bench T3 pilot）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:tongjia-typo:2026-09-10",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "C0": "中性语境（无语境助益）",
+      "C+": "强语境（语境有助归正）",
+      "C-": "误导语境（语境可能带偏）"
+    }
+  },
+  "startedAt": "2026-09-10T17:46:48.279Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳",
+      "target": "一劳永逸",
+      "latencyMs": 86,
+      "score": 0,
+      "note": "期望「一劳永逸」，实答「一劳」",
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "71c75c839f630eee",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.13.0"
+  }
+}

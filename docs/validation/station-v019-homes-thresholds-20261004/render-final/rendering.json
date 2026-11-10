@@ -1,0 +1,78 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 182,
+    "reflectionCycles": 4,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=10",
+        "V019 reflection - research low runtime updates=10"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [],
+    "homesReflectionTextures": [
+        "V019 reflection - homes ground runtime updates=8",
+        "V019 reflection - homes upper runtime updates=8",
+        "V015 reflection - resident deepseek home package runtime updates=10",
+        "V015 reflection - resident chatgpt home package runtime updates=10",
+        "V015 reflection - resident claude home package runtime updates=10"
+    ],
+    "views": [
+        {
+            "name": "deepseek-entry",
+            "frames": 2113,
+            "renderedFrames": 2113,
+            "p95Ms": 5.137995719909668,
+            "drawCalls": 686.1197349739707
+        },
+        {
+            "name": "chatgpt-entry",
+            "frames": 2194,
+            "renderedFrames": 2194,
+            "p95Ms": 4.895599365234375,
+            "drawCalls": 677.5870556061988
+        },
+        {
+            "name": "claude-entry",
+            "frames": 2182,
+            "renderedFrames": 2182,
+            "p95Ms": 4.814101219177246,
+            "drawCalls": 758.3134738771769
+        },
+        {
+            "name": "crossing-55",
+            "frames": 2233,
+            "renderedFrames": 2233,
+            "p95Ms": 4.825000286102295,
+            "drawCalls": 555.7411553963278
+        },
+        {
+            "name": "crossing-65",
+            "frames": 2275,
+            "renderedFrames": 2275,
+            "p95Ms": 4.65179967880249,
+            "drawCalls": 566.3424175824176
+        },
+        {
+            "name": "street-sequence",
+            "frames": 2074,
+            "renderedFrames": 2074,
+            "p95Ms": 4.98970365524292,
+            "drawCalls": 1411.5318225650917
+        },
+        {
+            "name": "overview",
+            "frames": 2155,
+            "renderedFrames": 2155,
+            "p95Ms": 4.870492935180664,
+            "drawCalls": 954.5044083526682
+        }
+    ],
+    "errors": []
+}

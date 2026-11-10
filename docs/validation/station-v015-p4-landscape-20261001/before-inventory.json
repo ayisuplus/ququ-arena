@@ -1,0 +1,3747 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingBuildingsV015.unity",
+  "settings": {
+    "ambient": "Trilight",
+    "sky": "Assets/Station/Materials/V014-HorizonSun.mat",
+    "ambientColor": "7A828C",
+    "ambientSky": "7A828C",
+    "ambientEquator": "54595E",
+    "ambientGround": "1F2124",
+    "ambientIntensity": 1.0,
+    "reflectionIntensity": 1.0,
+    "reflection": "Skybox",
+    "fog": false
+  },
+  "materials": [
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/PearlIvory.mat",
+      "name": "PearlIvory",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1072,
+      "color": "F5F3EAFF",
+      "metal": 0.1,
+      "smooth": 0.65
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/InkMetal.mat",
+      "name": "InkMetal",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 722,
+      "color": "0B1428FF",
+      "metal": 0.8,
+      "smooth": 0.82
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/PowderBlueFabric.mat",
+      "name": "PowderBlueFabric",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 296,
+      "color": "3279C4FF",
+      "metal": 0.0,
+      "smooth": 0.26
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/PorcelainWhite.mat",
+      "name": "PorcelainWhite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 182,
+      "color": "F0F6FBFF",
+      "metal": 0.0,
+      "smooth": 0.28
+    },
+    {
+      "path": "Assets/Station/Materials/CoolClearV014/V013-SoftArchitecturalLight-Cool.mat",
+      "name": "V013-SoftArchitecturalLight-Cool",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 157,
+      "color": "F2FFFFFF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/PorcelainCream.mat",
+      "name": "PorcelainCream",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 151,
+      "color": "F4F0DFFF",
+      "metal": 0.02,
+      "smooth": 0.54
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/BlueArchitecturalGlass.mat",
+      "name": "BlueArchitecturalGlass",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 134,
+      "color": "367BD424",
+      "metal": 0.12,
+      "smooth": 0.88
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/InkInset.mat",
+      "name": "InkInset",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 118,
+      "color": "080F19FF",
+      "metal": 0.12,
+      "smooth": 0.48
+    },
+    {
+      "path": "Assets/Art/PropsV29/SeatUnit.fbx",
+      "name": "PropTrim",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 107,
+      "color": "6FC4D7FF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Art/PropsV29/SeatUnit.fbx",
+      "name": "PropAlloy",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 107,
+      "color": "EAEDF1FF",
+      "metal": 0.0,
+      "smooth": 0.449999958
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/ArenaBlueUpholstery.mat",
+      "name": "ArenaBlueUpholstery",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 107,
+      "color": "426B91FF",
+      "metal": 0.0,
+      "smooth": 0.2
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/CeramicWhite.mat",
+      "name": "CeramicWhite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 100,
+      "color": "F7F9FFFF",
+      "metal": 0.02,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/AnthuriumLeaves.mat",
+      "name": "AnthuriumLeaves",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 96,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.22
+    },
+    {
+      "path": "Assets/Station/Materials/P3-pressure-window.mat",
+      "name": "P3-pressure-window",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 78,
+      "color": "386E7D38",
+      "metal": 0.6,
+      "smooth": 0.75
+    },
+    {
+      "path": "Assets/Station/Materials/V014-NeutralFacadeLight.mat",
+      "name": "V014-NeutralFacadeLight",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 59,
+      "color": "FFFFFFFF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Resources/ArenaFont.asset",
+      "name": "Noto Sans CJK SC - Regular Material",
+      "shader": "TextMeshPro/Mobile/Distance Field",
+      "uses": 55,
+      "color": "",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/ClearGlazing.mat",
+      "name": "ClearGlazing",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 52,
+      "color": "2E476103",
+      "metal": 0.0,
+      "smooth": 0.82
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "name": "LiberationSans SDF Material",
+      "shader": "TextMeshPro/Mobile/Distance Field",
+      "uses": 50,
+      "color": "",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/BrightSilver.mat",
+      "name": "BrightSilver",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 46,
+      "color": "E8F1F9FF",
+      "metal": 0.92,
+      "smooth": 0.82
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/CottonIvory.mat",
+      "name": "CottonIvory",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 40,
+      "color": "F8F3E6FF",
+      "metal": 0.0,
+      "smooth": 0.16
+    },
+    {
+      "path": "Assets/Art/ObservatoryV13/StationGraphite.mat",
+      "name": "StationGraphite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 37,
+      "color": "0B1114FF",
+      "metal": 0.6,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/CabinSoftWhite.mat",
+      "name": "CabinSoftWhite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 35,
+      "color": "F5F0E5FF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/V013-MeshySoftChair.mat",
+      "name": "V013-MeshySoftChair",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 32,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 1.0
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/MistBlueTextile.mat",
+      "name": "MistBlueTextile",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 32,
+      "color": "68A2E0FF",
+      "metal": 0.0,
+      "smooth": 0.22
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/EntranceGlazing.mat",
+      "name": "EntranceGlazing",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 24,
+      "color": "33526B11",
+      "metal": 0.0,
+      "smooth": 0.82
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/StationSoftWhite.mat",
+      "name": "StationSoftWhite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 20,
+      "color": "F3F7FFFF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/ArenaDeepBlue.mat",
+      "name": "ArenaDeepBlue",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 20,
+      "color": "0E2945FF",
+      "metal": 0.08,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/PressureShellWhite.mat",
+      "name": "PressureShellWhite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 19,
+      "color": "F4F7FCFF",
+      "metal": 0.0,
+      "smooth": 0.32
+    },
+    {
+      "path": "Assets/Station/Materials/CoolClearV014/V013-diffused-neutral-light-Cool.mat",
+      "name": "V013-diffused-neutral-light-Cool",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 19,
+      "color": "D9EBFFFF",
+      "metal": 0.0,
+      "smooth": 0.25
+    },
+    {
+      "path": "Assets/Station/Materials/P4-veggie-foliage-graybox.mat",
+      "name": "P4-veggie-foliage-graybox",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 18,
+      "color": "337D47FF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/Station/Materials/P2-diamond-wayfinding.mat",
+      "name": "P2-diamond-wayfinding",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 17,
+      "color": "2BBFC7FF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/CoolClearV014/V013-P1P2-Light-Cool.mat",
+      "name": "V013-P1P2-Light-Cool",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 13,
+      "color": "ADD6FFFF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/V012CafeOakTableTrial.mat",
+      "name": "V012CafeOakTableTrial",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 12,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.32
+    },
+    {
+      "path": "Assets/Art/ObservatoryV13/StationGold.mat",
+      "name": "StationGold",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 11,
+      "color": "C77A29FF",
+      "metal": 0.6,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Art/GalaxyV10/GalaxyAlloy.mat",
+      "name": "GalaxyAlloy",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "DBE0E6FF",
+      "metal": 0.6,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Art/PropsV28/Console.fbx",
+      "name": "PropSilver",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "B6C4CAFF",
+      "metal": 0.0,
+      "smooth": 0.350000024
+    },
+    {
+      "path": "Assets/Station/Materials/WestResearchV014/ResearchClerestoryGlass.mat",
+      "name": "ResearchClerestoryGlass",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "367BD411",
+      "metal": 0.0,
+      "smooth": 0.96
+    },
+    {
+      "path": "Assets/Art/PropsV28/Console.fbx",
+      "name": "PropGraphite",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "354249FF",
+      "metal": 0.0,
+      "smooth": 0.65
+    },
+    {
+      "path": "Assets/Art/PropsV28/Console.fbx",
+      "name": "PropMarkings",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "B8D3D4FF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Art/PropsV28/Console.fbx",
+      "name": "PropCeramic",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 10,
+      "color": "DDE6E8FF",
+      "metal": 0.0,
+      "smooth": 0.55
+    },
+    {
+      "path": "Assets/Station/Materials/WestResearchV014/ResearchCoatedWhite.mat",
+      "name": "ResearchCoatedWhite",
+      "shader": "Universal Render Pipeline/Complex Lit",
+      "uses": 8,
+      "color": "FAFBFFFF",
+      "metal": 0.0,
+      "smooth": 0.66
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/PachiraBark.mat",
+      "name": "PachiraBark",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 8,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.12
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/PachiraLeaves.mat",
+      "name": "PachiraLeaves",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 8,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.22
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/SageFabric.mat",
+      "name": "SageFabric",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 8,
+      "color": "B5D5B8FF",
+      "metal": 0.0,
+      "smooth": 0.2
+    },
+    {
+      "path": "Assets/Station/Materials/V013-pearl-shell.mat",
+      "name": "V013-pearl-shell",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 7,
+      "color": "D1D6D9FF",
+      "metal": 0.12,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Station/Materials/RingPrototypeV015/Porcelain.mat",
+      "name": "Porcelain",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 7,
+      "color": "EBF2FAFF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/LoungeInkBlue.mat",
+      "name": "LoungeInkBlue",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 6,
+      "color": "0A1D30FF",
+      "metal": 0.0,
+      "smooth": 0.26
+    },
+    {
+      "path": "Assets/Station/Materials/SoftFuturismV014/IceBluePromenade.mat",
+      "name": "IceBluePromenade",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 6,
+      "color": "91B9E6FF",
+      "metal": 0.04,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/GameProduction/v013-serene-planter/v013-serene-planter-60k-20260929/Material.mat",
+      "name": "Material",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 6,
+      "color": "FFFFFFFF",
+      "metal": 1.0,
+      "smooth": 0.35
+    },
+    {
+      "path": "Assets/Station/Materials/V014-ArchitecturalJoints.mat",
+      "name": "V014-ArchitecturalJoints",
+      "shader": "QuQu/Architectural Joint",
+      "uses": 6,
+      "color": "",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Art/ObservatoryV13/StationIce.mat",
+      "name": "StationIce",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 5,
+      "color": "75DBEBFF",
+      "metal": 0.6,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Station/Materials/P3-claude-room-accent.mat",
+      "name": "P3-claude-room-accent",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 5,
+      "color": "EEA36CFF",
+      "metal": 0.3,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Station/Materials/EcologicalGardenV014/ConservatorySoil.mat",
+      "name": "ConservatorySoil",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 4,
+      "color": "526359FF",
+      "metal": 0.0,
+      "smooth": 0.05
+    },
+    {
+      "path": "Assets/ThirdParty/PolyHavenModernArmChair01/Original/modern_arm_chair_01_1k.fbx",
+      "name": "modern_arm_chair_01_legs",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 4,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/ThirdParty/PolyHavenModernArmChair01/Original/modern_arm_chair_01_1k.fbx",
+      "name": "modern_arm_chair_01_pillow",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 4,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/Station/Materials/V013-RoundOakSurface.mat",
+      "name": "V013-RoundOakSurface",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 4,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.8
+    },
+    {
+      "path": "Assets/Station/Materials/V013-OakSurface.mat",
+      "name": "V013-OakSurface",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 3,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.8
+    },
+    {
+      "path": "Assets/Station/Materials/P3-chatgpt-room-accent.mat",
+      "name": "P3-chatgpt-room-accent",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 3,
+      "color": "B5A5F5FF",
+      "metal": 0.3,
+      "smooth": 0.4
+    },
+    {
+      "path": "Assets/Art/GalaxyV10/GalaxyScreen.mat",
+      "name": "GalaxyScreen",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 2,
+      "color": "020407FF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/V012CafeFloorPanelsTrial.mat",
+      "name": "V012CafeFloorPanelsTrial",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "6E6963FF",
+      "metal": 0.05,
+      "smooth": 0.25
+    },
+    {
+      "path": "Assets/Station/Materials/P3-chatgpt-room-portrait.mat",
+      "name": "P3-chatgpt-room-portrait",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/V013-CivilianShuttle.mat",
+      "name": "V013-CivilianShuttle",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.7
+    },
+    {
+      "path": "",
+      "name": "P2 contestant A cyan",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "47C4DEFF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/Station/Materials/CoolClearV014/P3-lounge-bronze-trim-Cool.mat",
+      "name": "P3-lounge-bronze-trim-Cool",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "8CA6C7FF",
+      "metal": 0.0,
+      "smooth": 0.3
+    },
+    {
+      "path": "Assets/ThirdParty/PolyHavenCoffeeCart01/Original/CoffeeCart_01_1k.fbx",
+      "name": "CoffeeCart_01_cart",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "",
+      "name": "P2 contestant B amber",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "E89147FF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/ThirdParty/PolyHavenCoffeeCart01/Original/CoffeeCart_01_1k.fbx",
+      "name": "CoffeeCart_01_mugs",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "E7E7E7FF",
+      "metal": 0.0,
+      "smooth": 0.8454545
+    },
+    {
+      "path": "Assets/Station/Materials/V013-ResearchInstrument.mat",
+      "name": "V013-ResearchInstrument",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "B8BFC7FF",
+      "metal": 0.78,
+      "smooth": 0.58
+    },
+    {
+      "path": "Assets/ThirdParty/PolyHavenCoffeeCart01/Original/CoffeeCart_01_1k.fbx",
+      "name": "CoffeeCart_01_props",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/Station/Materials/CoolClearV014/V013-P1P2-Lounge-Cool.mat",
+      "name": "V013-P1P2-Lounge-Cool",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "404F66FF",
+      "metal": 0.0,
+      "smooth": 0.1
+    },
+    {
+      "path": "Assets/Station/Materials/WestResearchV014/ResearchBlueEnamel.mat",
+      "name": "ResearchBlueEnamel",
+      "shader": "Universal Render Pipeline/Complex Lit",
+      "uses": 1,
+      "color": "176FD3FF",
+      "metal": 0.0,
+      "smooth": 0.7
+    },
+    {
+      "path": "Assets/Station/Materials/P4-cafe-planter-cutout.mat",
+      "name": "P4-cafe-planter-cutout",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "Assets/Station/Materials/P3-claude-room-portrait.mat",
+      "name": "P3-claude-room-portrait",
+      "shader": "Universal Render Pipeline/Unlit",
+      "uses": 1,
+      "color": "FFFFFFFF",
+      "metal": -1.0,
+      "smooth": -1.0
+    },
+    {
+      "path": "",
+      "name": "P2 graybox functional furniture",
+      "shader": "Universal Render Pipeline/Lit",
+      "uses": 1,
+      "color": "5E6E75FF",
+      "metal": 0.0,
+      "smooth": 0.5
+    },
+    {
+      "path": "Assets/Station/Materials/NorthArrivalFinishV014/ArrivalCoatedPearl.mat",
+      "name": "ArrivalCoatedPearl",
+      "shader": "Universal Render Pipeline/Complex Lit",
+      "uses": 1,
+      "color": "FAFBFFFF",
+      "metal": 0.0,
+      "smooth": 0.66
+    }
+  ],
+  "lights": [
+    {
+      "name": "Cold white grow illumination",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "E0F2FF",
+      "range": 9.0,
+      "shadow": "None",
+      "position": "(-107.73, 5.68, 167.59)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-167.18, 3.52, -132.45)",
+      "rotation": "(90.00, 140.00, 0.00)"
+    },
+    {
+      "name": "READING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-18.94, 5.34, 141.89)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Vessel neutral ceiling light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 6.38, 447.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.4,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(120.00, 2.97, -36.00)",
+      "rotation": "(90.00, 90.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-215.17, 3.52, -71.93)",
+      "rotation": "(90.00, 160.00, 0.00)"
+    },
+    {
+      "name": "QUIET LOUNGE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-66.58, 5.34, 288.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-201.47, 3.20, -75.67)",
+      "rotation": "(90.00, 340.00, 0.00)"
+    },
+    {
+      "name": "Research ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 0.9,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-50.27, 5.66, -117.07)",
+      "rotation": "(90.00, 120.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-22.79, 6.04, 293.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "QUIET LOUNGE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-122.42, 5.34, -26.07)",
+      "rotation": "(90.00, 345.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-129.43, 5.30, -34.68)",
+      "rotation": "(90.00, 345.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.4,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(116.00, 2.97, -36.00)",
+      "rotation": "(90.00, 90.00, 0.00)"
+    },
+    {
+      "name": "MEETING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-5.99, 5.34, 143.02)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -28.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Greenhouse ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-113.50, 3.95, 196.59)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(23.21, 4.25, 279.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -36.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 229.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Directional Light",
+      "enabled": true,
+      "type": "Directional",
+      "intensity": 1.15,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(0.00, 3.00, 0.00)",
+      "rotation": "(20.56, 270.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-210.12, 3.20, -74.13)",
+      "rotation": "(90.00, 160.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-91.34, 6.80, 178.21)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-167.76, 3.50, -140.77)",
+      "rotation": "(90.00, 140.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 149.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Broad ceiling wash",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 12.0,
+      "color": "E0F0FF",
+      "range": 13.0,
+      "shadow": "Soft",
+      "position": "(152.40, 3.80, 10.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-205.79, 3.50, -74.90)",
+      "rotation": "(90.00, 340.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(154.40, 3.70, 10.50)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Broad ceiling wash",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 12.0,
+      "color": "E0F0FF",
+      "range": 13.0,
+      "shadow": "Soft",
+      "position": "(141.60, 3.80, 10.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Dock vessel forward light",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 3.0,
+      "color": "B8E3FF",
+      "range": 18.0,
+      "shadow": "None",
+      "position": "(-6.79, 8.00, 452.47)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 4.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(141.60, 3.97, 10.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "DISCUSSION ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-68.13, 5.34, 105.00)",
+      "rotation": "(90.00, 60.00, 0.00)"
+    },
+    {
+      "name": "Quiet room light",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 2.7,
+      "color": "E0F0FF",
+      "range": 6.0,
+      "shadow": "None",
+      "position": "(145.96, 3.55, -173.95)",
+      "rotation": "(0.00, 50.00, 0.00)"
+    },
+    {
+      "name": "Research ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 0.9,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-46.27, 5.66, -110.14)",
+      "rotation": "(90.00, 120.00, 0.00)"
+    },
+    {
+      "name": "QUIET LOUNGE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-4.42, 5.34, 125.09)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 3",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, 7.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "V012 A1 counter bar warm light west",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 24.0,
+      "color": "FFCFA3",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(150.40, 4.55, 0.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 365.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Dock area light 212",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 3.0,
+      "color": "B8E3FF",
+      "range": 22.0,
+      "shadow": "None",
+      "position": "(-6.79, 12.30, 417.47)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "READING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(66.58, 5.34, 275.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, 7.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Boarding hall broad diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 13.12, 391.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-157.93, 3.52, -140.35)",
+      "rotation": "(90.00, 320.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-196.41, 3.52, -77.87)",
+      "rotation": "(90.00, 340.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 5",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, -3.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Lookout approach fill",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 1.1,
+      "color": "E0F0FF",
+      "range": 6.0,
+      "shadow": "None",
+      "position": "(114.00, 2.85, -36.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Vessel neutral ceiling light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 6.38, 441.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(9.21, 6.04, 307.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Quiet room light",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 2.7,
+      "color": "E0F0FF",
+      "range": 6.0,
+      "shadow": "None",
+      "position": "(113.54, 3.55, -196.65)",
+      "rotation": "(0.00, 60.00, 0.00)"
+    },
+    {
+      "name": "PUBLIC ARCHIVE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-77.13, 5.34, 120.59)",
+      "rotation": "(90.00, 60.00, 0.00)"
+    },
+    {
+      "name": "Interior reflected fill",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 5.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(152.00, 2.55, -2.00)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 4.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(152.40, 3.97, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Veggie LED glow",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 1.5,
+      "color": "CC5CAD",
+      "range": 8.0,
+      "shadow": "None",
+      "position": "(-108.13, 3.10, 189.29)",
+      "rotation": "(0.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Research ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 0.9,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-42.27, 5.66, -103.21)",
+      "rotation": "(90.00, 120.00, 0.00)"
+    },
+    {
+      "name": "Boarding hall broad diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 13.12, 421.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-67.00, 5.30, 116.05)",
+      "rotation": "(90.00, 60.00, 0.00)"
+    },
+    {
+      "name": "QUIET LOUNGE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(110.62, 5.34, -90.86)",
+      "rotation": "(90.00, 42.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, -3.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "QUIET LOUNGE ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(84.58, 5.34, 288.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Warm lounge light 57",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(32.91, 3.45, -214.54)",
+      "rotation": "(0.00, 80.00, 0.00)"
+    },
+    {
+      "name": "Boarding waiting soft light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-19.79, 4.10, 400.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(132.00, 2.97, -12.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Research approach diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-56.77, 5.70, -128.33)",
+      "rotation": "(90.00, 120.00, 0.00)"
+    },
+    {
+      "name": "Vessel adapter soft light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 6.38, 428.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -12.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "MEETING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(97.24, 5.34, -78.81)",
+      "rotation": "(90.00, 42.00, 0.00)"
+    },
+    {
+      "name": "Boarding hall broad diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 13.12, 401.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-173.86, 3.20, -148.76)",
+      "rotation": "(90.00, 320.00, 0.00)"
+    },
+    {
+      "name": "MEETING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(66.58, 5.34, 288.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Dock area light 188",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 3.0,
+      "color": "B8E3FF",
+      "range": 22.0,
+      "shadow": "None",
+      "position": "(-6.79, 12.30, 393.47)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 385.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Observation cabin gentle diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 0.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-108.92, 3.72, -68.08)",
+      "rotation": "(90.00, 148.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-11.68, 5.30, 133.49)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Boarding waiting soft light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(6.21, 4.10, 400.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 335.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-22.79, 6.04, 281.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.4,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(124.00, 2.97, -36.00)",
+      "rotation": "(90.00, 90.00, 0.00)"
+    },
+    {
+      "name": "Dock vessel cabin light",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 3.0,
+      "color": "B8E3FF",
+      "range": 24.0,
+      "shadow": "None",
+      "position": "(-6.79, 9.00, 444.47)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(9.21, 6.04, 281.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "COMMUNITY ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(101.92, 5.34, -100.52)",
+      "rotation": "(90.00, 42.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.6,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(112.00, 2.97, -34.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "READING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-136.45, 5.34, -43.29)",
+      "rotation": "(90.00, 345.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-100.00, 6.80, 173.21)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Greenhouse ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-104.50, 3.95, 181.00)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, 18.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Broad ceiling wash",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 12.0,
+      "color": "E0F0FF",
+      "range": 13.0,
+      "shadow": "Soft",
+      "position": "(152.40, 3.80, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "QUIET WORK ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-56.87, 5.34, 111.50)",
+      "rotation": "(90.00, 60.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-75.58, 5.30, 282.05)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "E0F2FF",
+      "range": 9.0,
+      "shadow": "None",
+      "position": "(-91.27, 5.68, 177.09)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "East lounge soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-129.73, 4.10, 6.93)",
+      "rotation": "(90.00, 5.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.6,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(112.00, 2.97, -38.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(139.40, 3.70, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(154.40, 3.70, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 169.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-177.60, 3.52, -141.19)",
+      "rotation": "(90.00, 140.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 189.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -20.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-202.39, 3.52, -67.28)",
+      "rotation": "(90.00, 160.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 0",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, 23.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Dock area light 200",
+      "enabled": false,
+      "type": "Point",
+      "intensity": 3.0,
+      "color": "B8E3FF",
+      "range": 22.0,
+      "shadow": "None",
+      "position": "(-6.79, 12.30, 405.47)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-172.09, 3.20, -141.53)",
+      "rotation": "(90.00, 140.00, 0.00)"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "E0F2FF",
+      "range": 9.0,
+      "shadow": "None",
+      "position": "(-110.27, 5.68, 210.00)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-197.34, 3.20, -69.48)",
+      "rotation": "(90.00, 160.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.04, 281.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 269.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "East lounge soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(7.66, 4.10, -138.02)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "V012 A1 table bar warm light",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 24.0,
+      "color": "FFCFA3",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(146.00, 4.55, 8.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Warm lounge light 68",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(43.74, 3.45, -212.63)",
+      "rotation": "(0.00, 80.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 209.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Boarding hall broad diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 13.12, 411.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-161.67, 3.20, -132.79)",
+      "rotation": "(90.00, 140.00, 0.00)"
+    },
+    {
+      "name": "Vessel neutral ceiling light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 6.38, 435.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, 23.33)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-214.25, 3.20, -80.32)",
+      "rotation": "(90.00, 340.00, 0.00)"
+    },
+    {
+      "name": "Pavilion baked ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(119.20, 4.28, 4.20)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.04, 293.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Washroom soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.8,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-163.44, 3.20, -140.01)",
+      "rotation": "(90.00, 320.00, 0.00)"
+    },
+    {
+      "name": "East lounge soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-128.96, 4.10, 15.70)",
+      "rotation": "(90.00, 5.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 345.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Lookout approach fill",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 1.1,
+      "color": "E0F0FF",
+      "range": 6.0,
+      "shadow": "None",
+      "position": "(122.00, 2.85, -36.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Cold white grow illumination",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 45.0,
+      "color": "E0F2FF",
+      "range": 9.0,
+      "shadow": "None",
+      "position": "(-126.73, 5.68, 200.50)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 249.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 1",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, 18.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "East lounge approach diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-139.31, 4.10, 12.19)",
+      "rotation": "(90.00, 5.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -8.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 325.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-22.79, 6.04, 307.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-126.66, 6.80, 199.38)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.20, 129.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, 12.67)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery concealed fill",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 1.3,
+      "color": "E0F0FF",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(128.00, 2.85, -30.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "ANALYSIS ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-65.87, 5.34, 127.09)",
+      "rotation": "(90.00, 60.00, 0.00)"
+    },
+    {
+      "name": "Vessel neutral ceiling light",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 6.38, 453.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Pavilion baked ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(112.80, 4.28, 4.20)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 4.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(152.40, 3.97, 10.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "COMMUNITY ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(84.58, 5.34, 275.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(9.21, 6.04, 293.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(131.15, 4.04, 2.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "COMMUNITY ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-119.06, 5.34, -38.63)",
+      "rotation": "(90.00, 345.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -32.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "East lounge approach diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(11.17, 4.10, -127.67)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "READING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(88.54, 5.34, -88.47)",
+      "rotation": "(90.00, 42.00, 0.00)"
+    },
+    {
+      "name": "READING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-84.58, 5.34, 275.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Broad ceiling wash",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 12.0,
+      "color": "E0F0FF",
+      "range": 13.0,
+      "shadow": "Soft",
+      "position": "(141.60, 3.80, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "COMMUNITY ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-66.58, 5.34, 275.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-108.66, 6.80, 168.21)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "MEETING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-139.81, 5.34, -30.73)",
+      "rotation": "(90.00, 345.00, 0.00)"
+    },
+    {
+      "name": "Quiet room light",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 2.7,
+      "color": "E0F0FF",
+      "range": 6.0,
+      "shadow": "None",
+      "position": "(173.95, 3.55, -145.96)",
+      "rotation": "(0.00, 40.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -24.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Interior reflected fill",
+      "enabled": true,
+      "type": "Point",
+      "intensity": 5.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(146.00, 2.65, 8.00)",
+      "rotation": "(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(75.58, 5.30, 282.05)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "V012 A1 counter bar warm light east",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 24.0,
+      "color": "FFCFA3",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(153.60, 4.55, 0.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(139.40, 3.70, 10.50)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(146.90, 3.70, 10.50)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Pavilion baked ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(119.20, 4.28, -2.20)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "East lounge soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.3,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(16.42, 4.10, -137.25)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(128.00, 2.97, -16.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-168.35, 3.52, -149.09)",
+      "rotation": "(90.00, 320.00, 0.00)"
+    },
+    {
+      "name": "Baked ceiling panel emitter",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 4.0,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(141.60, 3.97, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Pavilion baked ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.5,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(112.80, 4.28, -2.20)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Ceiling diffuse fill",
+      "enabled": false,
+      "type": "Spot",
+      "intensity": 3.0,
+      "color": "FFF2E0",
+      "range": 11.0,
+      "shadow": "None",
+      "position": "(146.90, 3.70, -0.40)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery concealed fill",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 1.3,
+      "color": "E0F0FF",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(128.00, 2.85, -14.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(132.00, 2.97, -8.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Hall ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(99.58, 5.30, -89.66)",
+      "rotation": "(90.00, 42.00, 0.00)"
+    },
+    {
+      "name": "Research approach diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.2,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-64.77, 5.70, -142.18)",
+      "rotation": "(90.00, 120.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-109.34, 6.80, 209.38)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "Suite soft ceiling",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 3.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-209.19, 3.52, -82.52)",
+      "rotation": "(90.00, 340.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 4",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, 2.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 375.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Forecourt ceiling wash 2",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 7.0,
+      "color": "E0F0FF",
+      "range": 9.0,
+      "shadow": "Soft",
+      "position": "(131.15, 3.86, 12.67)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Arrival baked diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.5,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "Soft",
+      "position": "(-6.79, 6.04, 307.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "COMMUNITY ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-17.37, 5.34, 123.96)",
+      "rotation": "(90.00, 85.00, 0.00)"
+    },
+    {
+      "name": "Cool indirect fill",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 1.4,
+      "color": "E0F0FF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-118.00, 6.80, 204.38)",
+      "rotation": "(90.00, 240.00, 0.00)"
+    },
+    {
+      "name": "North approach ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.7,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-6.79, 4.82, 355.47)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "MEETING ceiling diffusion",
+      "enabled": true,
+      "type": "Rectangle",
+      "intensity": 2.1,
+      "color": "F7FBFF",
+      "range": 10.0,
+      "shadow": "None",
+      "position": "(-84.58, 5.34, 288.55)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    },
+    {
+      "name": "Gallery concealed fill",
+      "enabled": true,
+      "type": "Spot",
+      "intensity": 1.3,
+      "color": "E0F0FF",
+      "range": 7.0,
+      "shadow": "None",
+      "position": "(128.00, 2.85, -22.00)",
+      "rotation": "(90.00, 0.00, 0.00)"
+    }
+  ],
+  "probes": [],
+  "behaviours": [
+    {
+      "name": "west-north seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-nw seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "R3 homes and ecology planning deck",
+      "type": "StationRotatingRing",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/gemini",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "South conservatory entry",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "MEETING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "east-north seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "生活街赛事观察湾状态台",
+      "type": "StationDistrictStatusBoard",
+      "enabled": true
+    },
+    {
+      "name": "north-west seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 104",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/claude",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 2",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 11",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "ANALYSIS usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East arcade live match information console",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "south-west seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET WORK usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station world candidate save",
+      "type": "StationWorldSave",
+      "enabled": false
+    },
+    {
+      "name": "Garden seat 0",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Player eye camera",
+      "type": "StationSpectatorCamera",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Dock vessel berth hatch control",
+      "type": "StationDockedVesselHatch",
+      "enabled": true
+    },
+    {
+      "name": "South conservatory entry",
+      "type": "StationConservatoryDoor",
+      "enabled": true
+    },
+    {
+      "name": "street-sw seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "V013 northwest research gallery",
+      "type": "StationResearchArchive",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 101",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "ANALYSIS usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Port side-bay visitor guide",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 4 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "West conservatory entry",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "Garden seat 3",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 203",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Southern rest seat 3",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 5 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "科研公开答卷观察湾状态台",
+      "type": "StationDistrictStatusBoard",
+      "enabled": true
+    },
+    {
+      "name": "Dock cargo control console -1",
+      "type": "StationDockCargoService",
+      "enabled": true
+    },
+    {
+      "name": "Station live competition presentation",
+      "type": "ArenaConnection",
+      "enabled": false
+    },
+    {
+      "name": "North boarding seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 103",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/claude",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "North ring junction route console",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 2 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Southern rest seat 2",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 102",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station live question board",
+      "type": "StationQuestionBoard",
+      "enabled": false
+    },
+    {
+      "name": "North boarding seat 8",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "温室南入口",
+      "type": "StationPressureVestibule",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "west-north seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "V015 arena safety",
+      "type": "StationArenaSafety",
+      "enabled": true
+    },
+    {
+      "name": "street-se seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 4 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Dock cargo control console 25",
+      "type": "StationDockCargoService",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 2",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 3 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "DISCUSSION usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/kimi",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 5 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "温室南入口",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "COMMUNITY usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "south-east seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Room information wall 2",
+      "type": "StationResearchArchive",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 204",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "North dock double hatch and sealed berth",
+      "type": "StationDockAirlock",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Contestant platforms and entrance lifts",
+      "type": "ArenaDuelPlatforms",
+      "enabled": true
+    },
+    {
+      "name": "Research seated observation 0",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 1 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Model home room/resident/kimi",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "PUBLIC ARCHIVE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/glm",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "east-south seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "South crossroad guide",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "40 sqm resident module room/resident/chatgpt",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 0 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "V013 quiet soundscape",
+      "type": "StationSoundscape",
+      "enabled": false
+    },
+    {
+      "name": "MEETING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "40 sqm resident module room/resident/claude",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "north-east seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Garden seat 2",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/kimi",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station live competition presentation",
+      "type": "ArenaStationLiveMatch",
+      "enabled": false
+    },
+    {
+      "name": "Promenade seat 3 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "温室北入口",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "East lounge seat 2",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/chatgpt",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-se seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East public core entrance W4C graybox",
+      "type": "StationCoreEastGate",
+      "enabled": true
+    },
+    {
+      "name": "south-west seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 7",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "40 sqm resident module room/resident/deepseek",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East gate no-save threshold",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "Model home room/resident/glm",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "DISCUSSION usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 5",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "east-south seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 0 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 10",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-ne seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "north-east seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 6 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET WORK usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "west-south seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 201",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "north-west seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/glm",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 9",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 7",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "P3 lounge arena broadcast",
+      "type": "StationLoungeBroadcast",
+      "enabled": false
+    },
+    {
+      "name": "Research seated observation 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "west-south seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "West conservatory entry",
+      "type": "StationConservatoryDoor",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 7 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 3",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 8",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Guest door 202",
+      "type": "StationGuestDoor",
+      "enabled": true
+    },
+    {
+      "name": "Southeast civic match board",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "港区货运观察湾状态台",
+      "type": "StationDistrictStatusBoard",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Southern rest seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Garden seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North conservatory entry",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "QUIET LOUNGE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-nw seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Cafe south walk guide",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 7 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 6",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "South greenhouse care console",
+      "type": "StationGreenhouseCare",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/gemini",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 5",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-ne seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/deepseek",
+      "type": "StationResidentRoutine",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 1 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "NE observatory operations console",
+      "type": "StationObservationPoint",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 3",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "花园温室观察湾状态台",
+      "type": "StationDistrictStatusBoard",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 2 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "street-sw seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 10",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "R2 public planning deck",
+      "type": "StationRotatingRing",
+      "enabled": true
+    },
+    {
+      "name": "Promenade seat 6 -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Public match notices W4O",
+      "type": "StationPublicMatchNotice",
+      "enabled": false
+    },
+    {
+      "name": "COMMUNITY usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East conservatory entry",
+      "type": "StationConservatoryDoor",
+      "enabled": true
+    },
+    {
+      "name": "MEETING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "east-north seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "lounge seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "writing seat",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Southeast public cafe and street stop",
+      "type": "StationCafeMoment",
+      "enabled": true
+    },
+    {
+      "name": "R1 events deck",
+      "type": "StationRotatingRing",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 6",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Civic public archive console",
+      "type": "StationResearchDesk",
+      "enabled": true
+    },
+    {
+      "name": "Model home room/resident/gemini",
+      "type": "StationRoomIdentity",
+      "enabled": true
+    },
+    {
+      "name": "East lounge seat 12",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "East conservatory entry",
+      "type": "StationUnsafeSaveZone",
+      "enabled": false
+    },
+    {
+      "name": "Station visitor first-person walker",
+      "type": "StationGrayboxWalker",
+      "enabled": true
+    },
+    {
+      "name": "Garden south walk guide",
+      "type": "StationArrivalGuide",
+      "enabled": true
+    },
+    {
+      "name": "south-east seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North boarding seat 9",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/deepseek",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "温室北入口",
+      "type": "StationPressureVestibule",
+      "enabled": true
+    },
+    {
+      "name": "Southern rest seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Station resident resident/chatgpt",
+      "type": "StationResidentPath",
+      "enabled": true
+    },
+    {
+      "name": "COMMUNITY usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "North conservatory entry",
+      "type": "StationConservatoryDoor",
+      "enabled": true
+    },
+    {
+      "name": "QUIET LOUNGE usable seat -1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "PUBLIC ARCHIVE usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "READING usable seat 1",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Graybox spectator seat 1-3",
+      "type": "StationSpectatorSeat",
+      "enabled": true
+    },
+    {
+      "name": "Writing seat 4",
+      "type": "StationGardenSeat",
+      "enabled": true
+    },
+    {
+      "name": "Observation instrument plinth 2",
+      "type": "StationResearchDesk",
+      "enabled": true
+    }
+  ]
+}

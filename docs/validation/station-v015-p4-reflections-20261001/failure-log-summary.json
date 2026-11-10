@@ -1,0 +1,80 @@
+{
+  "player": {
+    "bytes": 57865,
+    "sha256": "1cbb6d64843772a4603e3f6b5494ac0041f40a136e92cdbcc05d25c01ac2f5c0",
+    "first64KiBErrorExcerpts": [
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)",
+      "NullReferenceException: Object reference not set to an instance of an object\n  at UnityEngine.Rendering.Universal.ReflectionProbeManager.UpdateGpuData (UnityEngine.Rendering.CommandBuffer cmd, UnityEngine.Rendering.CullingResults& cullResults) [0x0025e] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ReflectionProbeManager.cs:162 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLights (UnityEngine.Rendering.UnsafeCommandBuffer cmd, UnityEngine.Rendering.Universal.UniversalRenderingData renderingData, UnityEngine.Rendering.Universal.UniversalCameraData cameraData, UnityEngine.Rendering.Universal.UniversalLightData lightData) [0x0003c] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:503 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights+<>c.<SetupRenderGraphLights>b__45_0 (UnityEngine.Rendering.Universal.Internal.ForwardLights+SetupLightPassData data, UnityEngine.Rendering.RenderGraphModule.UnsafeGraphContext rgContext) [0x00001] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:488 \n  at UnityEngine.Rendering.RenderGraphModule.UnsafeRenderGraphPass`1[PassData].Execute (UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext renderGraphContext) [0x0000d] in .\\Library\\PackageCache\\com.unity.render-pipelines.core@0bb36005e9ba\\Runtime\\RenderGraph\\RenderGraphPass.cs:732 ",
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)"
+    ],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-continuous-camera": {
+    "bytes": 2596,
+    "sha256": "6ab7cf71bf4b7ed25bc3d332831e7b772580e6465be251134c0b6d9387fcbd75",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-custom-target": {
+    "bytes": 1895,
+    "sha256": "78ff50aa8325cbbc774c01590a3600f005a6237be7def9f00573c0be8b60521e",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-explicit-render": {
+    "bytes": 259005637,
+    "sha256": "2ad25a5abeeb9ffe0aa504517bb84306b0d8b9c5cbf2ee9de0871213baead14c",
+    "first64KiBErrorExcerpts": [
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)",
+      "NullReferenceException: Object reference not set to an instance of an object\n  at UnityEngine.Rendering.Universal.ReflectionProbeManager.UpdateGpuData (UnityEngine.Rendering.CommandBuffer cmd, UnityEngine.Rendering.CullingResults& cullResults) [0x0025e] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ReflectionProbeManager.cs:162 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLights (UnityEngine.Rendering.UnsafeCommandBuffer cmd, UnityEngine.Rendering.Universal.UniversalRenderingData renderingData, UnityEngine.Rendering.Universal.UniversalCameraData cameraData, UnityEngine.Rendering.Universal.UniversalLightData lightData) [0x0003c] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:503 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights+<>c.<SetupRenderGraphLights>b__45_0 (UnityEngine.Rendering.Universal.Internal.ForwardLights+SetupLightPassData data, UnityEngine.Rendering.RenderGraphModule.UnsafeGraphContext rgContext) [0x00001] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:488 \n  at UnityEngine.Rendering.RenderGraphModule.UnsafeRenderGraphPass`1[PassData].Execute (UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext renderGraphContext) [0x0000d] in .\\Library\\PackageCache\\com.unity.render-pipelines.core@0bb36005e9ba\\Runtime\\RenderGraph\\RenderGraphPass.cs:732 ",
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)"
+    ],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-native-capture": {
+    "bytes": 11227,
+    "sha256": "ee910d1040047fee45cc59d612f87a047f7c7513e0f2bb145707d2f085a8ecf2",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-native-fallback": {
+    "bytes": 23613581,
+    "sha256": "29bc55ee5912f39ba842f84acd212f2c81e5002193cdf5ea49fc7a02d22732ee",
+    "first64KiBErrorExcerpts": [
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)",
+      "NullReferenceException: Object reference not set to an instance of an object\n  at UnityEngine.Rendering.Universal.ReflectionProbeManager.UpdateGpuData (UnityEngine.Rendering.CommandBuffer cmd, UnityEngine.Rendering.CullingResults& cullResults) [0x0025e] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ReflectionProbeManager.cs:162 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights.SetupLights (UnityEngine.Rendering.UnsafeCommandBuffer cmd, UnityEngine.Rendering.Universal.UniversalRenderingData renderingData, UnityEngine.Rendering.Universal.UniversalCameraData cameraData, UnityEngine.Rendering.Universal.UniversalLightData lightData) [0x0003c] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:503 \n  at UnityEngine.Rendering.Universal.Internal.ForwardLights+<>c.<SetupRenderGraphLights>b__45_0 (UnityEngine.Rendering.Universal.Internal.ForwardLights+SetupLightPassData data, UnityEngine.Rendering.RenderGraphModule.UnsafeGraphContext rgContext) [0x00001] in .\\Library\\PackageCache\\com.unity.render-pipelines.universal@a8b4b2fc3560\\Runtime\\ForwardLights.cs:488 \n  at UnityEngine.Rendering.RenderGraphModule.UnsafeRenderGraphPass`1[PassData].Execute (UnityEngine.Rendering.RenderGraphModule.InternalRenderGraphContext renderGraphContext) [0x0000d] in .\\Library\\PackageCache\\com.unity.render-pipelines.core@0bb36005e9ba\\Runtime\\RenderGraph\\RenderGraphPass.cs:732 ",
+      "Render Graph Execution error\nUnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)\nUnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)\nUnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)\nUnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)"
+    ],
+    "note": "Original retained locally; invalid pre-build launch"
+  },
+  "player-native-fallback-02": {
+    "bytes": 11229,
+    "sha256": "8ac50a3ce1665e668727d50c872f1dfaa73965e4170cda5c9467cd6fac566a5a",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-normal-camera": {
+    "bytes": 2597,
+    "sha256": "11207743a7e19ce44e95584323b7687ff0c36ad288b29759c45b8853d1eb207f",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-rebind": {
+    "bytes": 2593,
+    "sha256": "a28f6bc220422b774faf5fc15b3d4a8f315df462e4a5cf636744d489e270e226",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-rendered": {
+    "bytes": 2638,
+    "sha256": "3982d02c9cb0da998321e461182ecc197a15053b085994b1d2708f27ddfa3ac5",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  },
+  "player-separated-capture": {
+    "bytes": 2597,
+    "sha256": "83af43b8bb00c5545afe903d1bf2cf0ffe323316de7ad465dcdcedcd3707c830",
+    "first64KiBErrorExcerpts": [],
+    "note": "Original retained locally; consult reflections.json and diagnosis.md for outcome"
+  }
+}

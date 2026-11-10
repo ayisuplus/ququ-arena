@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var g=UnityEngine.Object.FindFirstObjectByType<QuQu.ArenaGame>(); if(g.IsSpectating || !g.UI.Root.gameObject.activeSelf) throw new Exception(\"Esc failed\"); UnityEngine.InputSystem.InputSystem.QueueStateEvent(UnityEngine.InputSystem.Keyboard.current,new UnityEngine.InputSystem.LowLevel.KeyboardState()); return \"InputSystem F10 enter and Esc return both passed\";"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "InputSystem F10 enter and Esc return both passed"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

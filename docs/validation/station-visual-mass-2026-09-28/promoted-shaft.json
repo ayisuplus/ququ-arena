@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\AI斗兽场\\production\\black-hole-station\\verify_world_singularity.cs",
+      "timeout": "60000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\r\n  \"reopenedFromDisk\": true,\r\n  \"shaftOpenToMinus200\": true,\r\n  \"lowerFloorSamples\": 9,\r\n  \"singularityColliderCount\": 0,\r\n  \"glassFloorCollider\": true\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

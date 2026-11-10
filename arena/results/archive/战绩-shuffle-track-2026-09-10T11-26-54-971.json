@@ -1,0 +1,113 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "shuffle-track",
+    "title": "洗牌追踪擂台",
+    "description": "BBH tracking-shuffled-objects 的中文生成器版：N 人各持一物，K 次两两交换，问最后谁拿着某物。交换链程序化执行，生成器即权威；固定种子可复现。目标物必须动过才入题（原地不动的题不考追踪）。测多步状态追踪——LLM 经典弱项。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:shuffle-track:2026-09-10",
+    "taskPrefix": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "swaps-2": "3 人 2 换（入门）",
+      "swaps-4": "4 人 4 换（中等）",
+      "swaps-6": "5 人 6 换（绕晕）"
+    }
+  },
+  "startedAt": "2026-09-10T11:26:54.971Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ST-swaps-2-01",
+      "condition": "swaps-2",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n初始：甲 拿着 🔑，乙 拿着 📱，丙 拿着 🍎。\n交换过程：\n1. 甲 用手中的 🔑 与 乙 手中的 📱 交换\n2. 丙 用手中的 🍎 与 乙 手中的 🔑 交换\n\n问题：全部交换完成后，🔑 在谁手里？",
+      "answer": "丙",
+      "target": "丙",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "3d38d2ac8b2df6ed",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.27.0"
+  }
+}

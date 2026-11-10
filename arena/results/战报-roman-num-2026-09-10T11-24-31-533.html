@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 罗马数字擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 24 道题 · 冠军 学霸-o9 95.8%">
+<title>战报 · 罗马数字擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 罗马数字擂台</h1>
+  <div class="sub">罗马数字 ↔ 阿拉伯数字双向转换（生成器自建）：40% 题偏向减记规则（IV/IX/XC/CD 的减法位）。契约测试用独立的减记规则实现复算。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T11:24:31.533Z · 用时 0.0s · 4 只蛐蛐 × 24 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>阿拉伯→罗马</th><th>罗马→阿拉伯</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">95.8%<div class="ci">±6.3%</div></td>
+      <td>100.0%</td><td>91.7%</td>
+      <td class="nw">1599</td><td class="nw">🐲 虫王</td><td class="nw win">12650 (+99)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">70.8%<div class="ci">±16.7%</div></td>
+      <td>58.3%</td><td>83.3%</td>
+      <td class="nw">1506</td><td class="nw">🐲 虫王</td><td class="nw win">40645 (+6)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">66.7%<div class="ci">±18.8%</div></td>
+      <td>50.0%</td><td>83.3%</td>
+      <td class="nw">1518</td><td class="nw">🐲 虫王</td><td class="nw win">17598 (+18)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">45.8%<div class="ci">±20.8%</div></td>
+      <td>41.7%</td><td>50.0%</td>
+      <td class="nw">1377</td><td class="nw">🐣 雏虫</td><td class="nw lose">-65209 (-123)</td><td class="nw">24</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[8.3%, 41.7%] —— 不含 0，冠军优势统计显著。</p><p class="muted">本卷信度 Cronbach's α = 0.83（k=24 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 学霸-o9 以 95.8% 的恐怖战绩夺冠——这罐子对它来说像自家后院。</li><li>🩸 屠杀局：首尾 50.0% 的鸿沟——犟驴-7B 今晚不宜出门。</li><li>🎬 名场面：「RN-fwd-19」全员翻车（均分 25.0%）——只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。
+罗马数字转换：阿拉伯数字 53 写成罗马…</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">阿拉伯→罗马</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:58.3%"></span></span>
+        <span class="dim-val">58.3%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:50.0%"></span></span>
+        <span class="dim-val">50.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:41.7%"></span></span>
+        <span class="dim-val">41.7%</span></div></div>
+<div class="dim-block"><div class="dim-title">罗马→阿拉伯</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:91.7%"></span></span>
+        <span class="dim-val">91.7%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:83.3%"></span></span>
+        <span class="dim-val">83.3%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:83.3%"></span></span>
+        <span class="dim-val">83.3%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:50.0%"></span></span>
+        <span class="dim-val">50.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.20)">64.6%</td><td style="background:rgba(26,127,75,0.35)">75.0%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.03)">52.1%</td><td style="background:rgba(26,127,75,0.17)">62.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.20)">35.4%</td><td style="background:rgba(193,68,30,0.03)">47.9%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.15)">60.4%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td style="background:rgba(193,68,30,0.15)">39.6%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">阿拉伯→罗马</span> 全场平均仅 <b>25.0%</b> —— RN-fwd-19</div>
+      <div class="prompt">只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。
+罗马数字转换：阿拉伯数字 53 写成罗马数字是什么？</div>
+      <div class="target">参考答案：LIII</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：大III</li><li><b>犟驴-7B</b>（0.0%）：LI大I</li><li><b>老实-k2</b>（0.0%）：LI</li><li><b>学霸-o9</b>（100.0%）：LIII</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">阿拉伯→罗马</span> 全场平均仅 <b>25.0%</b> —— RN-fwd-21</div>
+      <div class="prompt">只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。
+罗马数字转换：阿拉伯数字 79 写成罗马数字是什么？</div>
+      <div class="target">参考答案：LXXIX</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：LXIX</li><li><b>犟驴-7B</b>（0.0%）：L在XIX</li><li><b>老实-k2</b>（0.0%）：LXX不X</li><li><b>学霸-o9</b>（100.0%）：LXXIX</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 96 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>RN-fwd-01</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XLIV</td>
+      <td class="muted">141ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-01</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">XL</td>
+      <td class="muted">366ms</td>
+      <td class="muted">期望「XLIV」，实答「XL」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-01</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XLIV</td>
+      <td class="muted">137ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-01</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XLIV</td>
+      <td class="muted">194ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-02</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">385</td>
+      <td class="muted">123ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-02</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">385</td>
+      <td class="muted">105ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-02</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">385</td>
+      <td class="muted">397ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-02</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">385</td>
+      <td class="muted">318ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-03</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XXXIX</td>
+      <td class="muted">120ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-03</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XXXIX</td>
+      <td class="muted">176ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-03</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XXXIX</td>
+      <td class="muted">451ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-03</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XXXIX</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-04</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">784</td>
+      <td class="muted">309ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-04</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">74</td>
+      <td class="muted">87ms</td>
+      <td class="muted">期望「784」，实答「74」</td>
+    </tr>
+<tr>
+      <td>RN-rev-04</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">74</td>
+      <td class="muted">392ms</td>
+      <td class="muted">期望「784」，实答「74」</td>
+    </tr>
+<tr>
+      <td>RN-rev-04</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">784</td>
+      <td class="muted">135ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-05</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CMLXXXIII</td>
+      <td class="muted">434ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-05</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">CMLXX</td>
+      <td class="muted">171ms</td>
+      <td class="muted">期望「CMLXXXIII」，实答「CMLXX」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-05</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CMLXXXIII</td>
+      <td class="muted">367ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-05</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">CMLXXIII</td>
+      <td class="muted">286ms</td>
+      <td class="muted">期望「CMLXXXIII」，实答「CMLXXIII」</td>
+    </tr>
+<tr>
+      <td>RN-rev-06</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">99</td>
+      <td class="muted">153ms</td>
+      <td class="muted">期望「995」，实答「99」</td>
+    </tr>
+<tr>
+      <td>RN-rev-06</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">995</td>
+      <td class="muted">199ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-06</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">995</td>
+      <td class="muted">227ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-06</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">在95</td>
+      <td class="muted">212ms</td>
+      <td class="muted">期望「995」，实答「在95」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-07</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">IX</td>
+      <td class="muted">444ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-07</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">I</td>
+      <td class="muted">442ms</td>
+      <td class="muted">期望「IX」，实答「I」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-07</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">I</td>
+      <td class="muted">136ms</td>
+      <td class="muted">期望「IX」，实答「I」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-07</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">IX</td>
+      <td class="muted">249ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-08</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">376</td>
+      <td class="muted">460ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-08</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">376</td>
+      <td class="muted">280ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-08</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">37</td>
+      <td class="muted">101ms</td>
+      <td class="muted">期望「376」，实答「37」</td>
+    </tr>
+<tr>
+      <td>RN-rev-08</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">376</td>
+      <td class="muted">192ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-09</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CDLXXIII</td>
+      <td class="muted">475ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-09</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CDLXXIII</td>
+      <td class="muted">197ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-09</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CDLXXIII</td>
+      <td class="muted">154ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-09</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CDLXXIII</td>
+      <td class="muted">270ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-10</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">220</td>
+      <td class="muted">374ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-10</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">220</td>
+      <td class="muted">279ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-10</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">124ms</td>
+      <td class="muted">期望「220」，实答「20」</td>
+    </tr>
+<tr>
+      <td>RN-rev-10</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">20</td>
+      <td class="muted">413ms</td>
+      <td class="muted">期望「220」，实答「20」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-11</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XLIX</td>
+      <td class="muted">94ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-11</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">XL</td>
+      <td class="muted">394ms</td>
+      <td class="muted">期望「XLIX」，实答「XL」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-11</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">XLI为</td>
+      <td class="muted">193ms</td>
+      <td class="muted">期望「XLIX」，实答「XLI为」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-11</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XLIX</td>
+      <td class="muted">306ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-12</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">14</td>
+      <td class="muted">164ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-12</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">415ms</td>
+      <td class="muted">期望「14」，实答「1」</td>
+    </tr>
+<tr>
+      <td>RN-rev-12</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">1</td>
+      <td class="muted">317ms</td>
+      <td class="muted">期望「14」，实答「1」</td>
+    </tr>
+<tr>
+      <td>RN-rev-12</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">14</td>
+      <td class="muted">399ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-13</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CMXCIX</td>
+      <td class="muted">327ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-13</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CMXCIX</td>
+      <td class="muted">326ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-13</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CMXCIX</td>
+      <td class="muted">261ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-13</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">CMX</td>
+      <td class="muted">177ms</td>
+      <td class="muted">期望「CMXCIX」，实答「CMX」</td>
+    </tr>
+<tr>
+      <td>RN-rev-14</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">471ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-14</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">405ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-14</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">290ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-14</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">40</td>
+      <td class="muted">223ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-15</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CCCXXXVII</td>
+      <td class="muted">325ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-15</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CCCXXXVII</td>
+      <td class="muted">379ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-15</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">CCCXX</td>
+      <td class="muted">350ms</td>
+      <td class="muted">期望「CCCXXXVII」，实答「CCCXX」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-15</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">CCCXXXVII</td>
+      <td class="muted">138ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-16</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">738</td>
+      <td class="muted">405ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-16</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">738</td>
+      <td class="muted">230ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-16</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">是38</td>
+      <td class="muted">391ms</td>
+      <td class="muted">期望「738」，实答「是38」</td>
+    </tr>
+<tr>
+      <td>RN-rev-16</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">738</td>
+      <td class="muted">435ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-17</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">LXXX</td>
+      <td class="muted">355ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-17</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">LXXX</td>
+      <td class="muted">421ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-17</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LX</td>
+      <td class="muted">419ms</td>
+      <td class="muted">期望「LXXX」，实答「LX」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-17</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LXX</td>
+      <td class="muted">405ms</td>
+      <td class="muted">期望「LXXX」，实答「LXX」</td>
+    </tr>
+<tr>
+      <td>RN-rev-18</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">287</td>
+      <td class="muted">444ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-18</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">287</td>
+      <td class="muted">293ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-18</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">287</td>
+      <td class="muted">458ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-18</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">287</td>
+      <td class="muted">355ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-19</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">LIII</td>
+      <td class="muted">204ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-19</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">大III</td>
+      <td class="muted">310ms</td>
+      <td class="muted">期望「LIII」，实答「大III」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-19</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LI大I</td>
+      <td class="muted">352ms</td>
+      <td class="muted">期望「LIII」，实答「LI大I」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-19</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LI</td>
+      <td class="muted">343ms</td>
+      <td class="muted">期望「LIII」，实答「LI」</td>
+    </tr>
+<tr>
+      <td>RN-rev-20</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">90</td>
+      <td class="muted">84ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-20</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">90</td>
+      <td class="muted">464ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-20</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">90</td>
+      <td class="muted">263ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-20</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">90</td>
+      <td class="muted">265ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-21</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">LXXIX</td>
+      <td class="muted">351ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-21</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LXIX</td>
+      <td class="muted">411ms</td>
+      <td class="muted">期望「LXXIX」，实答「LXIX」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-21</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">L在XIX</td>
+      <td class="muted">345ms</td>
+      <td class="muted">期望「LXXIX」，实答「L在XIX」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-21</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">LXX不X</td>
+      <td class="muted">354ms</td>
+      <td class="muted">期望「LXXIX」，实答「LXX不X」</td>
+    </tr>
+<tr>
+      <td>RN-rev-22</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">199</td>
+      <td class="muted">380ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-22</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">199</td>
+      <td class="muted">106ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-22</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">199</td>
+      <td class="muted">181ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-22</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">199</td>
+      <td class="muted">119ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-23</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XCIX</td>
+      <td class="muted">436ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-23</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XCIX</td>
+      <td class="muted">426ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-fwd-23</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">XCI</td>
+      <td class="muted">131ms</td>
+      <td class="muted">期望「XCIX」，实答「XCI」</td>
+    </tr>
+<tr>
+      <td>RN-fwd-23</td><td><span class="tag">阿拉伯→罗马</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">XCIX</td>
+      <td class="muted">318ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-24</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">644</td>
+      <td class="muted">427ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-24</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">644</td>
+      <td class="muted">168ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>RN-rev-24</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">6不4</td>
+      <td class="muted">428ms</td>
+      <td class="muted">期望「644」，实答「6不4」</td>
+    </tr>
+<tr>
+      <td>RN-rev-24</td><td><span class="tag">罗马→阿拉伯</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">644</td>
+      <td class="muted">477ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v2.27.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>0eddb7d4c5c86920</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:roman-num:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 697+54，滑头-72B 697+49，犟驴-7B 697+49，老实-k2 697+51
+</footer>
+</div></body></html>

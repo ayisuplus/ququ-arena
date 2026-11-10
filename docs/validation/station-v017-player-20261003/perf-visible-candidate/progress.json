@@ -1,0 +1,68 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": false,
+    "waterMotionCaptured": true,
+    "normalRenderingVerified": false,
+    "renderCountersVerified": false,
+    "views": [
+        {
+            "name": "entry",
+            "frames": 3080,
+            "renderedFrames": 3080,
+            "medianMs": 2.4902989864349367,
+            "p95Ms": 3.4111039638519289,
+            "maximumMs": 7.428996562957764,
+            "batches": 1911.5496753246753,
+            "drawCalls": 1911.5496753246753,
+            "setPasses": 125.45584415584416,
+            "triangles": 5044094.662337663,
+            "shadowCasters": 427.07435064935069
+        },
+        {
+            "name": "plant-layers",
+            "frames": 3080,
+            "renderedFrames": 3080,
+            "medianMs": 2.490901470184326,
+            "p95Ms": 3.3820011615753176,
+            "maximumMs": 6.690596580505371,
+            "batches": 1848.0224025974026,
+            "drawCalls": 1848.0224025974026,
+            "setPasses": 132.37305194805195,
+            "triangles": 4078288.955844156,
+            "shadowCasters": 176.44415584415584
+        },
+        {
+            "name": "water",
+            "frames": 3428,
+            "renderedFrames": 3428,
+            "medianMs": 2.236302375793457,
+            "p95Ms": 3.084899425506592,
+            "maximumMs": 8.184098243713379,
+            "batches": 871.1514002333722,
+            "drawCalls": 871.1514002333722,
+            "setPasses": 92.02508751458577,
+            "triangles": 2847605.9638273047,
+            "shadowCasters": 511.73833138856477
+        },
+        {
+            "name": "fountain",
+            "frames": 2563,
+            "renderedFrames": 2563,
+            "medianMs": 3.029698133468628,
+            "p95Ms": 4.034800052642822,
+            "maximumMs": 6.56510066986084,
+            "batches": 3307.8509559110416,
+            "drawCalls": 3307.8509559110416,
+            "setPasses": 232.5458447132267,
+            "triangles": 5098365.243074522,
+            "shadowCasters": 373.4436207569255
+        }
+    ],
+    "errors": [],
+    "lodViews": []
+}

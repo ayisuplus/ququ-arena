@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "unit-convert",
+  "title": "单位换算擂台",
+  "description": "形制致敬小学单位换算与数据计量（内容自建）。传统基本功：length-area 长度面积（含公顷↔平方米 10000 进制）、weight-volume 重量与体积容积（含 1升=1立方分米、1毫升=1立方厘米）、time 时间（含世纪=100年、2.5小时=150分）、data-binary 数据单位二进制约定（1 KB=1024 B，题面逐题声明——1024 与 1000 之争在本罐没有借口）。答案均为整数，exact 裁判；每题 meta.expr 存换算式，契约测试逐题复算。",
+  "author": "AI斗兽场（内容自建，形制致敬传统单位换算题）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:unit-convert:2026-09-10",
+  "taskPrefix": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "length-area": "长度与面积（含公顷/平方千米）",
+    "weight-volume": "重量与体积容积（含升/毫升与立方单位互化）",
+    "time": "时间单位（时/分/秒/天/周/世纪）",
+    "data-binary": "数据单位（二进制约定 1 KB = 1024 B）"
+  }
+}

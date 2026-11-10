@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:/projects/黑洞空间站/.cache/alpha-round-001/question-page-check.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "failed": 0,
+        "checks": [
+          "premise.play-mode | passed=True | actual=True | expected=True",
+          "premise.tmp-labels-found | passed=True | actual=question=True, heading=True | expected=question=True, heading=True",
+          "premise.long-ascii-text-paginates | passed=True | actual=72 | expected=> 1",
+          "setup.first-show-settles-on-page-1 | passed=True | actual=1 | expected=1",
+          "1-same-duel.same-text.new-round-keeps-page-2 | passed=True | actual=2 | expected=2",
+          "1-same-duel.heading-follows-round-and-status | passed=True | actual=第 2 题  /  STATUS_TWO | expected=contains STATUS_TWO and not STATUS_ONE",
+          "2-same-round.status-and-names-only-keeps-page-2 | passed=True | actual=2 | expected=2",
+          "2-same-round.heading-follows-new-status | passed=True | actual=第 2 题  /  STATUS_THREE | expected=contains STATUS_THREE",
+          "3-placeholder.null-resets-to-page-1 | passed=True | actual=1 | expected=1",
+          "3-placeholder.null-shows-placeholder-text | passed=True | actual=等待赛题 | expected=等待赛题",
+          "4-placeholder.empty-normalizes-like-null | passed=True | actual=text=等待赛题, page=1 | expected=text=等待赛题, page=1",
+          "5-back-to-long-text.resets-to-page-1 | passed=True | actual=1 | expected=1",
+          "5-back-to-long-text.body-restored | passed=True | actual=PRIMARYLINE001 QUQU  | expected=PRIMARYLINE001 QUQU A RE",
+          "6-new-duel.same-text.resets-to-page-1 | passed=True | actual=1 | expected=1",
+          "7-new-question-text.resets-to-page-1 | passed=True | actual=1 | expected=1",
+          "7-new-question-text.body-replaced | passed=True | actual=SECONDLINE001 QUQU A | expected=SECONDLINE001 QUQU ARE",
+          "cleanup.test-object-removed | passed=True | actual=null | expected=null"
+        ],
+        "deferred": [
+          "footer VS line | observed= | reason=written by LateUpdate, which cannot run inside one blocking eval_file call",
+          "8 second auto rotation | reason=needs a frame-yielding run longer than 8s",
+          "elapsed=0.000s | the 8s LateUpdate rotation could not have fired during this check"
+        ],
+        "unity": "6000.3.24f1",
+        "scene": "",
+        "sceneDirtyBefore": false,
+        "sceneDirtyAfter": false,
+        "elapsedSeconds": 0,
+        "questionPageCount": 72,
+        "note": "old source must fail only 1-same-duel.same-text.new-round-keeps-page-2; no scene save, no asset edits, test object destroyed"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

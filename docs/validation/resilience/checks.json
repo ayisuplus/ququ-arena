@@ -1,0 +1,27 @@
+{
+  "at": "2026-09-12T18:05:33.908Z",
+  "synthetic": true,
+  "realLocalHttp": true,
+  "fullProductionDeadline": true,
+  "deadlineElapsedMs": 59995,
+  "calls": {
+    "failing": 3,
+    "thinking": 1,
+    "healthy": 2
+  },
+  "thinkingConnectionClosed": true,
+  "withdrawals": [
+    {
+      "reason": "failures",
+      "failures": 3
+    },
+    {
+      "reason": "timeout",
+      "failures": 1
+    }
+  ],
+  "records": 4,
+  "healthyWinner": true,
+  "timelineAndSnapshotAndReplay": true,
+  "isolatedResults": "E:\\projects\\AI斗兽场\\arena\\.local\\resilience-validation\\1789236272476\\results"
+}

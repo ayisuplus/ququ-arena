@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "cipher-decode",
+  "title": "密码破译擂台",
+  "description": "经典密码破译（生成器自建）：caesar 凯撒位移 / a1z26 数字密码 / morse 摩斯电码 / reverse 倒序。密文由生成器从明文编码，答案即明文——编码权威零手写。测规则解码与字符级细心。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:cipher-decode:2026-09-10",
+  "taskPrefix": "只输出明文单词本身（英文小写），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "caesar": "凯撒位移（1-5 位）",
+    "a1z26": "数字密码 a=1…z=26",
+    "morse": "摩斯电码",
+    "reverse": "倒序密码"
+  }
+}

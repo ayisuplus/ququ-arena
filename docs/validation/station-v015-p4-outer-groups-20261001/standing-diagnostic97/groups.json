@@ -1,0 +1,124 @@
+{
+    "phase": 97.0,
+    "distance": 22.76746368408203,
+    "passed": false,
+    "scope": "Three local standing diagnostics",
+    "standing": [
+        {
+            "start": {
+                "x": 154.71441650390626,
+                "y": 0.08000005781650543,
+                "z": -125.15899658203125
+            },
+            "finish": {
+                "x": 154.77230834960938,
+                "y": 0.07999999821186066,
+                "z": -125.20341491699219
+            },
+            "horizontal": 0.07296323776245117,
+            "vertical": 2.384185791015625e-7,
+            "fps": 765.6414184570313,
+            "seconds": 3.000098943710327,
+            "ringAngle": 0.0,
+            "supported": true
+        },
+        {
+            "start": {
+                "x": -32.88597869873047,
+                "y": 0.07999993860721588,
+                "z": -234.709228515625
+            },
+            "finish": {
+                "x": -32.89884948730469,
+                "y": 0.07999993860721588,
+                "z": -234.80227661132813
+            },
+            "horizontal": 0.09391893446445465,
+            "vertical": 1.1920928955078126e-7,
+            "fps": 827.7159423828125,
+            "seconds": 3.0010294914245607,
+            "ringAngle": 0.0,
+            "supported": true
+        },
+        {
+            "start": {
+                "x": -179.34129333496095,
+                "y": 0.07999999821186066,
+                "z": -125.69125366210938
+            },
+            "finish": {
+                "x": -179.40789794921876,
+                "y": 0.07999993860721588,
+                "z": -125.73709869384766
+            },
+            "horizontal": 0.08085674047470093,
+            "vertical": 1.7881393432617188e-7,
+            "fps": 748.4456176757813,
+            "seconds": 3.0008859634399416,
+            "ringAngle": 0.0,
+            "supported": true
+        }
+    ],
+    "checks": [
+        {
+            "name": "Court arc 37 to 39 point 1 reached",
+            "passed": true,
+            "error": 0.09812040627002716
+        },
+        {
+            "name": "Court arc 37 to 39 point 1 supported",
+            "passed": true,
+            "error": 0.0008020401000976563
+        },
+        {
+            "name": "Court arc 37 to 39 point 1 clear",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "Standing follows outer ring",
+            "passed": false,
+            "error": 0.07296323776245117
+        },
+        {
+            "name": "Court arc 96 to 98 point 1 reached",
+            "passed": true,
+            "error": 0.09927025437355042
+        },
+        {
+            "name": "Court arc 96 to 98 point 1 supported",
+            "passed": true,
+            "error": 0.0009085536003112793
+        },
+        {
+            "name": "Court arc 96 to 98 point 1 clear",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "Standing follows outer ring",
+            "passed": false,
+            "error": 0.09391893446445465
+        },
+        {
+            "name": "Court arc 143 to 145 point 1 reached",
+            "passed": true,
+            "error": 0.09431115537881851
+        },
+        {
+            "name": "Court arc 143 to 145 point 1 supported",
+            "passed": true,
+            "error": 0.0009418725967407227
+        },
+        {
+            "name": "Court arc 143 to 145 point 1 clear",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "Standing follows outer ring",
+            "passed": false,
+            "error": 0.08085674047470093
+        }
+    ]
+}

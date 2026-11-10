@@ -1,0 +1,1022 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "couplet-chain",
+    "title": "名句接龙擂台",
+    "description": "16 条名联/古诗名句，出上联/上句答下联/下句（自建，canonical 答案）。测中文经典文本库存——「海阔凭鱼跃」接不出「天高任鸟飞」的模型，中文文学常识欠费。exact 裁判（归一化去标点）。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:couplet-chain:2026-09-10",
+    "taskPrefix": "只输出下联/下句本身，不多一个字、不加标点。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "classic": "名联/古诗接下句"
+    }
+  },
+  "startedAt": "2026-09-10T10:13:41.291Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "期望「天高任鸟飞」，实答「天高鸟飞」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-01",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海阔凭鱼跃」的下一句是什么？",
+      "answer": "天高任鸟飞",
+      "target": "天高任鸟飞",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-02",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「书山有路勤为径」的下一句是什么？",
+      "answer": "学海无涯苦作舟",
+      "target": "学海无涯苦作舟",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-02",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「书山有路勤为径」的下一句是什么？",
+      "answer": "学海无涯苦作舟",
+      "target": "学海无涯苦作舟",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-02",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「书山有路勤为径」的下一句是什么？",
+      "answer": "学海无涯苦作舟",
+      "target": "学海无涯苦作舟",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-02",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「书山有路勤为径」的下一句是什么？",
+      "answer": "学海无涯苦作舟",
+      "target": "学海无涯苦作舟",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-03",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「横眉冷对千夫指」的下一句是什么？",
+      "answer": "俯首甘为孺子牛",
+      "target": "俯首甘为孺子牛",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-03",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「横眉冷对千夫指」的下一句是什么？",
+      "answer": "俯首甘为孺子牛",
+      "target": "俯首甘为孺子牛",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-03",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「横眉冷对千夫指」的下一句是什么？",
+      "answer": "俯首甘孺子牛",
+      "target": "俯首甘为孺子牛",
+      "latencyMs": 262,
+      "score": 0,
+      "note": "期望「俯首甘为孺子牛」，实答「俯首甘孺子牛」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-03",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「横眉冷对千夫指」的下一句是什么？",
+      "answer": "俯首甘为孺子牛",
+      "target": "俯首甘为孺子牛",
+      "latencyMs": 452,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-04",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「两个黄鹂鸣翠柳」的下一句是什么？",
+      "answer": "一行白鹭上青天",
+      "target": "一行白鹭上青天",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-04",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「两个黄鹂鸣翠柳」的下一句是什么？",
+      "answer": "一行白鹭上青天",
+      "target": "一行白鹭上青天",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-04",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「两个黄鹂鸣翠柳」的下一句是什么？",
+      "answer": "一行白鹭上青天",
+      "target": "一行白鹭上青天",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-04",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「两个黄鹂鸣翠柳」的下一句是什么？",
+      "answer": "一行白鹭上青一",
+      "target": "一行白鹭上青天",
+      "latencyMs": 138,
+      "score": 0,
+      "note": "期望「一行白鹭上青天」，实答「一行白鹭上青一」",
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-05",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「窗含西岭千秋雪」的下一句是什么？",
+      "answer": "门泊东吴万里船",
+      "target": "门泊东吴万里船",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-05",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「窗含西岭千秋雪」的下一句是什么？",
+      "answer": "门泊东吴万里船",
+      "target": "门泊东吴万里船",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-05",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「窗含西岭千秋雪」的下一句是什么？",
+      "answer": "门泊东吴万里船",
+      "target": "门泊东吴万里船",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-05",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「窗含西岭千秋雪」的下一句是什么？",
+      "answer": "门泊东吴万里船",
+      "target": "门泊东吴万里船",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-06",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「沉舟侧畔千帆过」的下一句是什么？",
+      "answer": "病树前头万木春",
+      "target": "病树前头万木春",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-06",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「沉舟侧畔千帆过」的下一句是什么？",
+      "answer": "病树前头万木春",
+      "target": "病树前头万木春",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CP-06",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「沉舟侧畔千帆过」的下一句是什么？",
+      "answer": "病树前头万木春",
+      "target": "病树前头万木春",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-06",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「沉舟侧畔千帆过」的下一句是什么？",
+      "answer": "病树前头万木春",
+      "target": "病树前头万木春",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-07",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「山重水复疑无路」的下一句是什么？",
+      "answer": "柳暗花明又一村",
+      "target": "柳暗花明又一村",
+      "latencyMs": 217,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-07",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「山重水复疑无路」的下一句是什么？",
+      "answer": "柳暗花明又一村",
+      "target": "柳暗花明又一村",
+      "latencyMs": 305,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-07",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「山重水复疑无路」的下一句是什么？",
+      "answer": "柳暗花明又一村",
+      "target": "柳暗花明又一村",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-07",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「山重水复疑无路」的下一句是什么？",
+      "answer": "柳暗花明又一村",
+      "target": "柳暗花明又一村",
+      "latencyMs": 381,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-08",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「野火烧不尽」的下一句是什么？",
+      "answer": "春风吹又生",
+      "target": "春风吹又生",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-08",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「野火烧不尽」的下一句是什么？",
+      "answer": "春风吹又生",
+      "target": "春风吹又生",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-08",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「野火烧不尽」的下一句是什么？",
+      "answer": "春风吹又生",
+      "target": "春风吹又生",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-08",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「野火烧不尽」的下一句是什么？",
+      "answer": "春风吹又生",
+      "target": "春风吹又生",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-09",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「欲穷千里目」的下一句是什么？",
+      "answer": "更上一层楼",
+      "target": "更上一层楼",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-09",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「欲穷千里目」的下一句是什么？",
+      "answer": "更上一层楼",
+      "target": "更上一层楼",
+      "latencyMs": 465,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-09",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「欲穷千里目」的下一句是什么？",
+      "answer": "更上一层楼",
+      "target": "更上一层楼",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-09",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「欲穷千里目」的下一句是什么？",
+      "answer": "更上一层楼",
+      "target": "更上一层楼",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-10",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「会当凌绝顶」的下一句是什么？",
+      "answer": "一览众山小",
+      "target": "一览众山小",
+      "latencyMs": 151,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-10",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「会当凌绝顶」的下一句是什么？",
+      "answer": "一览众山小",
+      "target": "一览众山小",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-10",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「会当凌绝顶」的下一句是什么？",
+      "answer": "一览众",
+      "target": "一览众山小",
+      "latencyMs": 100,
+      "score": 0,
+      "note": "期望「一览众山小」，实答「一览众」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-10",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「会当凌绝顶」的下一句是什么？",
+      "answer": "一览众小",
+      "target": "一览众山小",
+      "latencyMs": 256,
+      "score": 0,
+      "note": "期望「一览众山小」，实答「一览众小」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-11",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海内存知己」的下一句是什么？",
+      "answer": "天涯若比邻",
+      "target": "天涯若比邻",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-11",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海内存知己」的下一句是什么？",
+      "answer": "天涯若比邻",
+      "target": "天涯若比邻",
+      "latencyMs": 364,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-11",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海内存知己」的下一句是什么？",
+      "answer": "天涯若",
+      "target": "天涯若比邻",
+      "latencyMs": 373,
+      "score": 0,
+      "note": "期望「天涯若比邻」，实答「天涯若」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-11",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「海内存知己」的下一句是什么？",
+      "answer": "了涯若比邻",
+      "target": "天涯若比邻",
+      "latencyMs": 307,
+      "score": 0,
+      "note": "期望「天涯若比邻」，实答「了涯若比邻」",
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-12",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「大漠孤烟直」的下一句是什么？",
+      "answer": "长河落日圆",
+      "target": "长河落日圆",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-12",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「大漠孤烟直」的下一句是什么？",
+      "answer": "长河落日",
+      "target": "长河落日圆",
+      "latencyMs": 115,
+      "score": 0,
+      "note": "期望「长河落日圆」，实答「长河落日」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-12",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「大漠孤烟直」的下一句是什么？",
+      "answer": "长河落",
+      "target": "长河落日圆",
+      "latencyMs": 205,
+      "score": 0,
+      "note": "期望「长河落日圆」，实答「长河落」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-12",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「大漠孤烟直」的下一句是什么？",
+      "answer": "长河落日圆",
+      "target": "长河落日圆",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-13",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「春蚕到死丝方尽」的下一句是什么？",
+      "answer": "蜡炬成灰泪始干",
+      "target": "蜡炬成灰泪始干",
+      "latencyMs": 439,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-13",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「春蚕到死丝方尽」的下一句是什么？",
+      "answer": "蜡炬成灰泪始干",
+      "target": "蜡炬成灰泪始干",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-13",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「春蚕到死丝方尽」的下一句是什么？",
+      "answer": "蜡炬成灰",
+      "target": "蜡炬成灰泪始干",
+      "latencyMs": 302,
+      "score": 0,
+      "note": "期望「蜡炬成灰泪始干」，实答「蜡炬成灰」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-13",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「春蚕到死丝方尽」的下一句是什么？",
+      "answer": "蜡炬成灰泪始干",
+      "target": "蜡炬成灰泪始干",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-14",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「纸上得来终觉浅」的下一句是什么？",
+      "answer": "绝知此事要躬行",
+      "target": "绝知此事要躬行",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-14",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「纸上得来终觉浅」的下一句是什么？",
+      "answer": "绝知此事要躬行",
+      "target": "绝知此事要躬行",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-14",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「纸上得来终觉浅」的下一句是什么？",
+      "answer": "绝知此事要躬行",
+      "target": "绝知此事要躬行",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-14",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「纸上得来终觉浅」的下一句是什么？",
+      "answer": "绝知此事要躬行",
+      "target": "绝知此事要躬行",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-15",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「天增岁月人增寿」的下一句是什么？",
+      "answer": "春满乾坤福满门",
+      "target": "春满乾坤福满门",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-15",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「天增岁月人增寿」的下一句是什么？",
+      "answer": "春满乾坤福满门",
+      "target": "春满乾坤福满门",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-15",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「天增岁月人增寿」的下一句是什么？",
+      "answer": "春满乾坤福满门",
+      "target": "春满乾坤福满门",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-15",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「天增岁月人增寿」的下一句是什么？",
+      "answer": "春满乾坤福满门",
+      "target": "春满乾坤福满门",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-16",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「一帆风顺年年好」的下一句是什么？",
+      "answer": "万事如意步步高",
+      "target": "万事如意步步高",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-16",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「一帆风顺年年好」的下一句是什么？",
+      "answer": "万事如意",
+      "target": "万事如意步步高",
+      "latencyMs": 354,
+      "score": 0,
+      "note": "期望「万事如意步步高」，实答「万事如意」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-16",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「一帆风顺年年好」的下一句是什么？",
+      "answer": "万事如意步步高",
+      "target": "万事如意步步高",
+      "latencyMs": 295,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CP-16",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下联/下句本身，不多一个字、不加标点。\n名句接龙：「一帆风顺年年好」的下一句是什么？",
+      "answer": "万事如意步步高",
+      "target": "万事如意步步高",
+      "latencyMs": 465,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "f8e74ecfdc905f0e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.21.0"
+  }
+}

@@ -1,0 +1,1506 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "logical-deduction",
+    "title": "逻辑排位擂台",
+    "description": "BBH logical_deduction 中文生成器版：四种物品排一列，给若干约束，问某位是谁。关键工程：约束先加到唯一解再做反向消元最小化（冗余约束=水题），24 种排列暴力校验唯一性。生成器即权威。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:logical-deduction:2026-09-10",
+    "taskPrefix": "只输出物品名本身（如「仓鼠」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "unique-solve": "约束排位（唯一解已暴力校验）"
+    }
+  },
+  "startedAt": "2026-09-10T10:13:41.007Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 213,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 126,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 138,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 221,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 408,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢",
+      "target": "钢琴",
+      "latencyMs": 189,
+      "score": 0,
+      "note": "期望「钢琴」，实答「钢」",
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 298,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢",
+      "target": "钢琴",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "期望「钢琴」，实答「钢」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢",
+      "target": "钢琴",
+      "latencyMs": 399,
+      "score": 0,
+      "note": "期望「钢琴」，实答「钢」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 127,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹",
+      "target": "苹果",
+      "latencyMs": 237,
+      "score": 0,
+      "note": "期望「苹果」，实答「苹」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹",
+      "target": "苹果",
+      "latencyMs": 82,
+      "score": 0,
+      "note": "期望「苹果」，实答「苹」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西",
+      "target": "西瓜",
+      "latencyMs": 151,
+      "score": 0,
+      "note": "期望「西瓜」，实答「西」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 309,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢",
+      "target": "钢琴",
+      "latencyMs": 412,
+      "score": 0,
+      "note": "期望「钢琴」，实答「钢」",
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 439,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香",
+      "target": "香蕉",
+      "latencyMs": 391,
+      "score": 0,
+      "note": "期望「香蕉」，实答「香」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西",
+      "target": "西瓜",
+      "latencyMs": 282,
+      "score": 0,
+      "note": "期望「西瓜」，实答「西」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提",
+      "target": "小提琴",
+      "latencyMs": 82,
+      "score": 0,
+      "note": "期望「小提琴」，实答「小提」",
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提个",
+      "target": "小提琴",
+      "latencyMs": 398,
+      "score": 0,
+      "note": "期望「小提琴」，实答「小提个」",
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香",
+      "target": "香蕉",
+      "latencyMs": 448,
+      "score": 0,
+      "note": "期望「香蕉」，实答「香」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹",
+      "target": "苹果",
+      "latencyMs": 225,
+      "score": 0,
+      "note": "期望「苹果」，实答「苹」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 297,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 171,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 97,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-21",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 吉他 在 小提琴 左边\n2. 小提琴 不在最右\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-21",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 吉他 在 小提琴 左边\n2. 小提琴 不在最右\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 100,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-21",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 吉他 在 小提琴 左边\n2. 小提琴 不在最右\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢",
+      "target": "钢琴",
+      "latencyMs": 348,
+      "score": 0,
+      "note": "期望「钢琴」，实答「钢」",
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-21",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 吉他 在 小提琴 左边\n2. 小提琴 不在最右\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-22",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 香蕉 不在最右\n2. 西瓜 在 香蕉 左边\n3. 苹果 紧邻 橙子 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-22",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 香蕉 不在最右\n2. 西瓜 在 香蕉 左边\n3. 苹果 紧邻 橙子 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-22",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 香蕉 不在最右\n2. 西瓜 在 香蕉 左边\n3. 苹果 紧邻 橙子 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西",
+      "target": "西瓜",
+      "latencyMs": 184,
+      "score": 0,
+      "note": "期望「西瓜」，实答「西」",
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-22",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 香蕉 不在最右\n2. 西瓜 在 香蕉 左边\n3. 苹果 紧邻 橙子 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 381,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-23",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 不在最左\n2. 钢琴 紧邻 架子鼓 左边\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-23",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 不在最左\n2. 钢琴 紧邻 架子鼓 左边\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-23",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 不在最左\n2. 钢琴 紧邻 架子鼓 左边\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-23",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 不在最左\n2. 钢琴 紧邻 架子鼓 左边\n3. 钢琴 在 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-24",
+      "condition": "unique-solve",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 不在最右\n2. 橙子 在 西瓜 左边\n3. 橙子 紧邻 苹果 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "橙子",
+      "target": "橙子",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-24",
+      "condition": "unique-solve",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 不在最右\n2. 橙子 在 西瓜 左边\n3. 橙子 紧邻 苹果 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "橙子",
+      "target": "橙子",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-24",
+      "condition": "unique-solve",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 不在最右\n2. 橙子 在 西瓜 左边\n3. 橙子 紧邻 苹果 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "橙子",
+      "target": "橙子",
+      "latencyMs": 92,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "LD-24",
+      "condition": "unique-solve",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 不在最右\n2. 橙子 在 西瓜 左边\n3. 橙子 紧邻 苹果 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "橙子",
+      "target": "橙子",
+      "latencyMs": 282,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "bfa52af2af5380fd",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.21.0"
+  }
+}

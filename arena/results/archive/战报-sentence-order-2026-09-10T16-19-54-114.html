@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 语句排序擂台 · AI斗兽场">
+<meta property="og:description" content="5 只蛐蛐 × 20 道题 · 冠军 学霸-o9 95.0%">
+<title>战报 · 语句排序擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 语句排序擂台</h1>
+  <div class="sub">形制致敬行测语句排序（内容自建）。把一段连贯文字的 5 个句子打乱，按行文逻辑重排，exact 裁判（序号数字串）。reference-chain 考指代衔接（「它/这些/在他的带领下」必须后指）、conjunction-chain 考关联词与论证衔接（首先/其次/然后/最后、因为/因此、不但/而且/更）、general-detail 考总分结构（总起→分述→总结）、time-space 考时空顺序（参观路线/四季/登山/村庄一天）。每题只设唯一连贯顺序；meta.sentences 存正确序、meta.order 存数字串，契约测试三方映射复算（展示序按 order 重排 ≡ 正确序，展示序≠正确序防送分，20 串互不相同）。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T16:19:54.114Z · 用时 66.7s · 5 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>指代衔接（它/这些/其 必须后指）</th><th>关联词与论证衔接（首先/因为/不但/所以）</th><th>总分结构（总起→分述→总结）</th><th>时空顺序（路线/四季/一天）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">95.0%<div class="ci">±7.5%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>80.0%</td><td>100.0%</td>
+      <td class="nw">1590</td><td class="nw">🐲 虫王</td><td class="nw win">16587 (+90)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">75.0%<div class="ci">±17.5%</div></td>
+      <td>40.0%</td><td>60.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1577</td><td class="nw">🐲 虫王</td><td class="nw win">49794 (+77)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">笔记-DOTS<span class="badge-ach" title="本场解锁：站台专业户">🍾</span><div class="muted">dots:dots3-note-prev</div></td>
+      <td class="score">75.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>100.0%</td><td>40.0%</td><td>100.0%</td>
+      <td class="nw">1540</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1609 (+40)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">60.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>40.0%</td><td>80.0%</td><td>60.0%</td>
+      <td class="nw">1486</td><td class="nw">🐲 虫王</td><td class="nw lose">22537 (-14)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>5.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">30.0%<div class="ci">±20.0%</div></td>
+      <td>60.0%</td><td>20.0%</td><td>20.0%</td><td>20.0%</td>
+      <td class="nw">1307</td><td class="nw">🐣 雏虫</td><td class="nw lose">-83419 (-193)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 40.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.84（k=20 题 × m=5 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 跟 老实-k2 杀到分差进了噪声（95% CI [0.0%, 40.0%] 含 0）——冠军归属等于掷硬币。</li><li>🩸 屠杀局：首尾差距 65.0%，犟驴-7B 基本是被按在地上摩擦完整场的。</li><li>🎬 集体翻车现场：「SO-RC-02」全场均分仅 40.0%——把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字…</li><li>   本场共 4 道&quot;团灭题&quot;，这罐子的出题人是个狠角色。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">指代衔接（它/这些/其 必须后指）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">关联词与论证衔接（首先/因为/不但/所以）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">总分结构（总起→分述→总结）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">时空顺序（路线/四季/一天）</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:20.0%"></span></span>
+        <span class="dim-val">20.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>笔记-DOTS</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.14)">60.0%</td><td style="background:rgba(26,127,75,0.14)">60.0%</td><td style="background:rgba(26,127,75,0.25)">67.5%</td><td style="background:rgba(26,127,75,0.45)">82.5%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.31)">72.5%</td></tr>
+<tr><td class="name">笔记-DOTS</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.10)">57.5%</td><td style="background:rgba(26,127,75,0.31)">72.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.24)">32.5%</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td style="background:rgba(193,68,30,0.11)">42.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.21)">65.0%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.45)">17.5%</td><td style="background:rgba(193,68,30,0.31)">27.5%</td><td style="background:rgba(193,68,30,0.31)">27.5%</td><td style="background:rgba(193,68,30,0.21)">35.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">指代衔接（它/这些/其 必须后指）</span> 全场平均仅 <b>40.0%</b> —— SO-RC-02</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①同学们都喜欢听她的课。
+②大家都十分尊敬她。
+③李老师教我们语文。
+④她讲课生动有趣。
+⑤在她的带领下，我们班的语文成绩不断提高。</div>
+      <div class="target">参考答案：34152</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：34125</li><li><b>滑头-72B</b>（0.0%）：341</li><li><b>老实-k2</b>（0.0%）：341</li><li><b>学霸-o9</b>（100.0%）：34152</li><li><b>犟驴-7B</b>（100.0%）：34152</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span> 全场平均仅 <b>40.0%</b> —— SO-CJ-01</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①其次，同学们分头准备节目。
+②最后，班会在热烈的掌声中开始。
+③首先，班干部们商量确定了主题。
+④班会的准备工作有条不紊。
+⑤然后，大家一起布置教室。</div>
+      <div class="target">参考答案：43152</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：431不2</li><li><b>犟驴-7B</b>（0.0%）：431</li><li><b>老实-k2</b>（0.0%）：4352</li><li><b>笔记-DOTS</b>（100.0%）：43152</li><li><b>学霸-o9</b>（100.0%）：43152</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">总分结构（总起→分述→总结）</span> 全场平均仅 <b>40.0%</b> —— SO-GD-01</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①柳树抽出了嫩绿的枝条。
+②春天的公园真美。
+③到处是一派生机勃勃的景象。
+④桃花笑红了脸。
+⑤小草也从土里探出了头。</div>
+      <div class="target">参考答案：24153</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：23145</li><li><b>学霸-o9</b>（0.0%）：2453</li><li><b>犟驴-7B</b>（0.0%）：2不153</li><li><b>滑头-72B</b>（100.0%）：24153</li><li><b>老实-k2</b>（100.0%）：24153</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">总分结构（总起→分述→总结）</span> 全场平均仅 <b>40.0%</b> —— SO-GD-03</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①游泳能锻炼全身肌肉。
+②打球能提高反应能力。
+③让我们都动起来，享受运动的快乐。
+④跑步能增强心肺功能。
+⑤运动对身体益处多多。</div>
+      <div class="target">参考答案：54123</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：51423</li><li><b>滑头-72B</b>（0.0%）：541</li><li><b>犟驴-7B</b>（0.0%）：541</li><li><b>学霸-o9</b>（100.0%）：54123</li><li><b>老实-k2</b>（100.0%）：54123</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 100 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">5.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">379ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">102ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">351</td>
+      <td class="muted">435ms</td>
+      <td class="muted">期望「35142」，实答「351」</td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">156ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">10.8s</td>
+      <td class="muted">期望「34152」，实答「34125」</td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34152</td>
+      <td class="muted">211ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">341</td>
+      <td class="muted">379ms</td>
+      <td class="muted">期望「34152」，实答「341」</td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34152</td>
+      <td class="muted">461ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">341</td>
+      <td class="muted">456ms</td>
+      <td class="muted">期望「34152」，实答「341」</td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">9.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">257ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">447ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">317ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3145</td>
+      <td class="muted">453ms</td>
+      <td class="muted">期望「32145」，实答「3145」</td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">25413</td>
+      <td class="muted">4.6s</td>
+      <td class="muted">期望「25143」，实答「25413」</td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">377ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">458ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">是5143</td>
+      <td class="muted">261ms</td>
+      <td class="muted">期望「25143」，实答「是5143」</td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">265ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">11.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">226ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2153</td>
+      <td class="muted">408ms</td>
+      <td class="muted">期望「42153」，实答「2153」</td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">114ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4215了</td>
+      <td class="muted">393ms</td>
+      <td class="muted">期望「42153」，实答「4215了」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">14.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">96ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">431不2</td>
+      <td class="muted">453ms</td>
+      <td class="muted">期望「43152」，实答「431不2」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">431</td>
+      <td class="muted">170ms</td>
+      <td class="muted">期望「43152」，实答「431」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4352</td>
+      <td class="muted">139ms</td>
+      <td class="muted">期望「43152」，实答「4352」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">5.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">271ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4251是</td>
+      <td class="muted">192ms</td>
+      <td class="muted">期望「42513」，实答「4251是」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">395ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">179ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">13.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">82ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">370ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">241是5</td>
+      <td class="muted">414ms</td>
+      <td class="muted">期望「24135」，实答「241是5」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">426ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">4.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">293ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3的512</td>
+      <td class="muted">389ms</td>
+      <td class="muted">期望「34512」，实答「3的512」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3412</td>
+      <td class="muted">448ms</td>
+      <td class="muted">期望「34512」，实答「3412」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">267ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">13.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">164ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">398ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">451</td>
+      <td class="muted">101ms</td>
+      <td class="muted">期望「45123」，实答「451」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4123</td>
+      <td class="muted">281ms</td>
+      <td class="muted">期望「45123」，实答「4123」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">23145</td>
+      <td class="muted">34.9s</td>
+      <td class="muted">期望「24153」，实答「23145」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2453</td>
+      <td class="muted">420ms</td>
+      <td class="muted">期望「24153」，实答「2453」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24153</td>
+      <td class="muted">137ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2不153</td>
+      <td class="muted">130ms</td>
+      <td class="muted">期望「24153」，实答「2不153」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24153</td>
+      <td class="muted">218ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">22.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">396ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">152ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">349ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">166ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51423</td>
+      <td class="muted">38.9s</td>
+      <td class="muted">期望「54123」，实答「51423」</td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54123</td>
+      <td class="muted">293ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">541</td>
+      <td class="muted">388ms</td>
+      <td class="muted">期望「54123」，实答「541」</td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">541</td>
+      <td class="muted">111ms</td>
+      <td class="muted">期望「54123」，实答「541」</td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54123</td>
+      <td class="muted">137ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">9.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">168ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">261ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">我3142</td>
+      <td class="muted">443ms</td>
+      <td class="muted">期望「53142」，实答「我3142」</td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">250ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">21345</td>
+      <td class="muted">46.8s</td>
+      <td class="muted">期望「54132」，实答「21345」</td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54132</td>
+      <td class="muted">362ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54132</td>
+      <td class="muted">283ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">5412</td>
+      <td class="muted">277ms</td>
+      <td class="muted">期望「54132」，实答「5412」</td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54132</td>
+      <td class="muted">348ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">5.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">390ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">5214</td>
+      <td class="muted">107ms</td>
+      <td class="muted">期望「52143」，实答「5214」</td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">521</td>
+      <td class="muted">388ms</td>
+      <td class="muted">期望「52143」，实答「521」</td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">366ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">23.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">368ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">168ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">267ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">351ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">6.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">277ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">341</td>
+      <td class="muted">348ms</td>
+      <td class="muted">期望「34125」，实答「341」</td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">341是5</td>
+      <td class="muted">463ms</td>
+      <td class="muted">期望「34125」，实答「341是5」</td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">276ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">4.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">352ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">226ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">2341</td>
+      <td class="muted">234ms</td>
+      <td class="muted">期望「25341」，实答「2341」</td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">220ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">46.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">327ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">211ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">25这34</td>
+      <td class="muted">108ms</td>
+      <td class="muted">期望「25134」，实答「25这34」</td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">379ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.8.1 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：笔记-DOTS / 学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>3b4e54bdecef7500</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:sentence-order:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：笔记-DOTS 2415+29756，学霸-o9 1436+59，滑头-72B 1436+55，犟驴-7B 1436+52，老实-k2 1436+56
+</footer>
+</div></body></html>

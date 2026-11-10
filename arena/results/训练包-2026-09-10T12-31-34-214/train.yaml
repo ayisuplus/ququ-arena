@@ -1,0 +1,32 @@
+# AI斗兽场 LoRA 训练配置（DPO 偏好优化）
+# schema 对齐 cerebellum training/qlora-24gb 契约
+base_model: Qwen/Qwen2.5-1.5B-Instruct
+data:
+  path: dataset.jsonl          # DPO 偏好对（prompt/chosen/rejected）
+  manifest: manifest.json      # sha256 + 条数，加载前校验防篡改
+quantization:
+  bits: 4
+  quant_type: nf4
+  double_quant: true
+  compute_dtype: bfloat16
+lora:
+  rank: 32
+  alpha: 64
+  dropout: 0.05
+optimization:
+  micro_batch_size: 2
+  gradient_accumulation_steps: 16
+  gradient_checkpointing: true
+  sequence_length: 2048
+  optimizer: paged_adamw_8bit
+  max_epochs: 3
+hardware:
+  gpus: 1
+  minimum_vram_gb: 24
+export:
+  target: safetensors
+  include_dataset_manifest_hash: true
+release_gates:
+  require_task_success_uplift: true   # 训完必须回斗兽场复测证明提升
+  max_gate_violation_delta: 0
+  require_human_approval: true

@@ -1,0 +1,264 @@
+{
+  "format": "ququ-arena-pack/1",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "anagram-check",
+    "title": "变位词擂台",
+    "description": "两词是否互为变位（listen↔silent，字母完全相同仅顺序不同）。是=洗牌生成、否=改一字母且保底不成变位；生成器即权威，契约测试重排复算。测字符级细心。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:anagram-check:2026-09-10",
+    "taskPrefix": "只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "is-anagram": "互为变位（答「是」）",
+      "not-anagram": "不互为变位（答「否」）"
+    }
+  },
+  "tasks": [
+    {
+      "id": "AG-01",
+      "condition": "not-anagram",
+      "input": "「alter」和「altkr」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-02",
+      "condition": "not-anagram",
+      "input": "「enlist」和「enjist」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-03",
+      "condition": "not-anagram",
+      "input": "「ward」和「warz」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-04",
+      "condition": "not-anagram",
+      "input": "「bard」和「bajd」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-05",
+      "condition": "is-anagram",
+      "input": "「drab」和「rbda」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-06",
+      "condition": "is-anagram",
+      "input": "「earth」和「atrhe」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-07",
+      "condition": "not-anagram",
+      "input": "「stone」和「syone」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-08",
+      "condition": "is-anagram",
+      "input": "「rathe」和「haetr」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-09",
+      "condition": "is-anagram",
+      "input": "「silent」和「lestin」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-10",
+      "condition": "is-anagram",
+      "input": "「thing」和「ihgnt」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-11",
+      "condition": "not-anagram",
+      "input": "「night」和「naght」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-12",
+      "condition": "is-anagram",
+      "input": "「listen」和「snilet」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-13",
+      "condition": "is-anagram",
+      "input": "「alter」和「atrel」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-14",
+      "condition": "not-anagram",
+      "input": "「triangle」和「sriangle」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-15",
+      "condition": "not-anagram",
+      "input": "「tones」和「pones」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-16",
+      "condition": "is-anagram",
+      "input": "「listen」和「tsleni」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-17",
+      "condition": "is-anagram",
+      "input": "「silent」和「stnlei」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-18",
+      "condition": "not-anagram",
+      "input": "「stone」和「ktone」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-19",
+      "condition": "is-anagram",
+      "input": "「ratel」和「lrate」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-20",
+      "condition": "is-anagram",
+      "input": "「rathe」和「rateh」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-21",
+      "condition": "is-anagram",
+      "input": "「tones」和「nesot」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-22",
+      "condition": "not-anagram",
+      "input": "「listen」和「yisten」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "否",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-23",
+      "condition": "is-anagram",
+      "input": "「rathe」和「rehta」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    },
+    {
+      "id": "AG-24",
+      "condition": "is-anagram",
+      "input": "「stone」和「nesot」互为变位词（字母完全相同、仅顺序不同）吗？",
+      "target": "是",
+      "meta": {
+        "source": "生成器 arenas/anagram-check/generate.mjs（seed 20260910）",
+        "family": "anagram-check"
+      }
+    }
+  ],
+  "fingerprint": "36ae3fb79c0b0fa0",
+  "packedAt": "2026-09-21T07:01:46.061Z"
+}

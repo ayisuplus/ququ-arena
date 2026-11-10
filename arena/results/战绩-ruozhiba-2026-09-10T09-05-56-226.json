@@ -1,0 +1,1015 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "ruozhiba",
+    "title": "弱智吧 · 反陷阱擂台",
+    "description": "致敬中文评测圈的「弱智吧 benchmark」传统（内容自建）。16 道陷阱式问题三类：false-premise 前提错误（结婚没请我/熟鸡蛋孵小鸡/近视不会老花）、absurd-logic 日常荒诞（隔夜水/理发师/海水鱼）、wordplay 双关文字游戏。好回答必须看穿陷阱并给出正解（regex 锚定解析关键词），顺着字面回答即翻车。趣味性罐，戏剧性拉满。",
+    "author": "AI斗兽场（弱智吧风格自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:ruozhiba:2026-09-10",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "false-premise": "前提陷阱：问题本身有错误前提",
+      "absurd-logic": "日常荒诞：看似有理实则逻辑错位",
+      "wordplay": "双关文字游戏：考语义灵活性"
+    }
+  },
+  "startedAt": "2026-09-10T09:05:56.226Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RZ-FP-01",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「我爸妈结婚的时候，为什么不邀请我喝喜酒？」\n请回答。",
+      "answer": "那时我还没出生",
+      "target": "那时我还没出生",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-01",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「我爸妈结婚的时候，为什么不邀请我喝喜酒？」\n请回答。",
+      "answer": "那时我还",
+      "target": "那时我还没出生",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "未命中 /出生/",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-01",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「我爸妈结婚的时候，为什么不邀请我喝喜酒？」\n请回答。",
+      "answer": "那时我还没出生",
+      "target": "那时我还没出生",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-01",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「我爸妈结婚的时候，为什么不邀请我喝喜酒？」\n请回答。",
+      "answer": "那时我还没出生",
+      "target": "那时我还没出生",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-02",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么煮熟的鸡蛋孵不出小鸡？」\n请回答。",
+      "answer": "鸡蛋已经熟了，不再是活胚胎",
+      "target": "鸡蛋已经熟了，不再是活胚胎",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-02",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么煮熟的鸡蛋孵不出小鸡？」\n请回答。",
+      "answer": "鸡蛋已经熟了，大再是活胚胎",
+      "target": "鸡蛋已经熟了，不再是活胚胎",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-02",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么煮熟的鸡蛋孵不出小鸡？」\n请回答。",
+      "answer": "鸡蛋已经熟了，不再是活胚胎",
+      "target": "鸡蛋已经熟了，不再是活胚胎",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-02",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么煮熟的鸡蛋孵不出小鸡？」\n请回答。",
+      "answer": "鸡蛋已经熟了，不再是活胚胎",
+      "target": "鸡蛋已经熟了，不再是活胚胎",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "RZ-FP-03",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么我闭上眼睛，还能看见自己的眼皮？」\n请回答。",
+      "answer": "眼皮会透光，闭眼不等于全黑",
+      "target": "眼皮会透光，闭眼不等于全黑",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-03",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我闭上眼睛，还能看见自己的眼皮？」\n请回答。",
+      "answer": "眼皮会透光，闭眼不等于全黑",
+      "target": "眼皮会透光，闭眼不等于全黑",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-03",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我闭上眼睛，还能看见自己的眼皮？」\n请回答。",
+      "answer": "眼皮会透光，闭眼不等于全黑",
+      "target": "眼皮会透光，闭眼不等于全黑",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-03",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么我闭上眼睛，还能看见自己的眼皮？」\n请回答。",
+      "answer": "眼皮透光，闭眼不等于全黑",
+      "target": "眼皮会透光，闭眼不等于全黑",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-04",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么我出生的那年，没有一个同龄人记得我？」\n请回答。",
+      "answer": "那时大家都是不记事的婴儿",
+      "target": "那时大家都是不记事的婴儿",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-04",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我出生的那年，没有一个同龄人记得我？」\n请回答。",
+      "answer": "那时大家都是不记事的婴儿",
+      "target": "那时大家都是不记事的婴儿",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-04",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我出生的那年，没有一个同龄人记得我？」\n请回答。",
+      "answer": "那时大家都是",
+      "target": "那时大家都是不记事的婴儿",
+      "latencyMs": 130,
+      "score": 0,
+      "note": "未命中 /婴儿|不记事|记事/",
+      "usage": {
+        "input": 20,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-04",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么我出生的那年，没有一个同龄人记得我？」\n请回答。",
+      "answer": "那时大家都是不记一的婴儿",
+      "target": "那时大家都是不记事的婴儿",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-05",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么近视的人老了以后就不会老花？」\n请回答。",
+      "answer": "近视和老花可以并存，并非互斥",
+      "target": "近视和老花可以并存，并非互斥",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-05",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么近视的人老了以后就不会老花？」\n请回答。",
+      "answer": "近视和老花可以",
+      "target": "近视和老花可以并存，并非互斥",
+      "latencyMs": 412,
+      "score": 0,
+      "note": "未命中 /并存|互斥|也会/",
+      "usage": {
+        "input": 18,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-05",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么近视的人老了以后就不会老花？」\n请回答。",
+      "answer": "近视和老花可以并存，并非互斥",
+      "target": "近视和老花可以并存，并非互斥",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-05",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么近视的人老了以后就不会老花？」\n请回答。",
+      "answer": "近视和老花可以并存，并非互斥",
+      "target": "近视和老花可以并存，并非互斥",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-06",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么鱼缸里的鱼从来不喝水？」\n请回答。",
+      "answer": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "target": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 15
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-06",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么鱼缸里的鱼从来不喝水？」\n请回答。",
+      "answer": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "target": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 15
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-06",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么鱼缸里的鱼从来不喝水？」\n请回答。",
+      "answer": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要人一样喝水",
+      "target": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 14
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-06",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么鱼缸里的鱼从来不喝水？」\n请回答。",
+      "answer": "鱼生活在水中，通过鳃和皮肤进行",
+      "target": "鱼生活在水中，通过鳃和皮肤进行水盐交换，不需要像人一样喝水",
+      "latencyMs": 213,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-07",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么蚊子从来不叮镜子里的我？」\n请回答。",
+      "answer": "镜子里只有影像，没有真实的人",
+      "target": "镜子里只有影像，没有真实的人",
+      "latencyMs": 361,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-07",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么蚊子从来不叮镜子里的我？」\n请回答。",
+      "answer": "镜子里只有影像，没有不实的人",
+      "target": "镜子里只有影像，没有真实的人",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-07",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么蚊子从来不叮镜子里的我？」\n请回答。",
+      "answer": "镜子里只有影像，的有真实的人",
+      "target": "镜子里只有影像，没有真实的人",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-07",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么蚊子从来不叮镜子里的我？」\n请回答。",
+      "answer": "镜子里只有影像，没有真实的人",
+      "target": "镜子里只有影像，没有真实的人",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-08",
+      "condition": "false-premise",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么站在体重秤上抬起一只脚，体重数值一点都没变？」\n请回答。",
+      "answer": "体重不会因抬脚而变，变的只是受力分布",
+      "target": "体重不会因抬脚而变，变的只是受力分布",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 9
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-08",
+      "condition": "false-premise",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么站在体重秤上抬起一只脚，体重数值一点都没变？」\n请回答。",
+      "answer": "体重不会因抬脚而变，变的只是受力分布",
+      "target": "体重不会因抬脚而变，变的只是受力分布",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 9
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-08",
+      "condition": "false-premise",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么站在体重秤上抬起一只脚，体重数值一点都没变？」\n请回答。",
+      "answer": "体重不会因抬脚而变，变的只是受力分布",
+      "target": "体重不会因抬脚而变，变的只是受力分布",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 9
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-FP-08",
+      "condition": "false-premise",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么站在体重秤上抬起一只脚，体重数值一点都没变？」\n请回答。",
+      "answer": "体重不会因抬脚而变，变的只在受力分布",
+      "target": "体重不会因抬脚而变，变的只是受力分布",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 9
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-01",
+      "condition": "absurd-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么隔夜水不能喝，而早上的水放到晚上就能喝？」\n请回答。",
+      "answer": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "target": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 16
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-01",
+      "condition": "absurd-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么隔夜水不能喝，而早上的水放到晚上就能喝？」\n请回答。",
+      "answer": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "target": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 16
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-01",
+      "condition": "absurd-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么隔夜水不能喝，而早上的水放到晚上就能喝？」\n请回答。",
+      "answer": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "target": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 16
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-01",
+      "condition": "absurd-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么隔夜水不能喝，而早上的水放到晚上就能喝？」\n请回答。",
+      "answer": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "target": "两者放置时长可能一样，关键在于存放时间和卫生而非\"隔夜\"这个名头",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 16
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-02",
+      "condition": "absurd-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么理发师天天给别人理发，自己的头发却不会变短？」\n请回答。",
+      "answer": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "target": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-02",
+      "condition": "absurd-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么理发师天天给别人理发，自己的头发却不会变短？」\n请回答。",
+      "answer": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "target": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-02",
+      "condition": "absurd-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么理发师天天给别人理发，自己的头发却不会变短？」\n请回答。",
+      "answer": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "target": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "latencyMs": 295,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-02",
+      "condition": "absurd-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么理发师天天给别人理发，自己的头发却不会变短？」\n请回答。",
+      "answer": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "target": "给别人理发是剪别人的头发，理发师自己的头发照样在长",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 13
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-03",
+      "condition": "absurd-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么海水是咸的，海里的鱼却不咸？」\n请回答。",
+      "answer": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "target": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "latencyMs": 297,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-03",
+      "condition": "absurd-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么海水是咸的，海里的鱼却不咸？」\n请回答。",
+      "answer": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "target": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-03",
+      "condition": "absurd-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么海水是咸的，海里的鱼却不咸？」\n请回答。",
+      "answer": "鱼有渗透压调节，不会把海水里的盐分大进身体",
+      "target": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-03",
+      "condition": "absurd-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么海水是咸的，海里的鱼却不咸？」\n请回答。",
+      "answer": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "target": "鱼有渗透压调节，不会把海水里的盐分存进身体",
+      "latencyMs": 335,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-04",
+      "condition": "absurd-logic",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么我吃了饭就不饿了，饭是不是把\"饿\"杀死了？」\n请回答。",
+      "answer": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "target": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-04",
+      "condition": "absurd-logic",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我吃了饭就不饿了，饭是不是把\"饿\"杀死了？」\n请回答。",
+      "answer": "饿是生理信号，进食后信",
+      "target": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-04",
+      "condition": "absurd-logic",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么我吃了饭就不饿了，饭是不是把\"饿\"杀死了？」\n请回答。",
+      "answer": "饿是生理信号，进食后信中消失，不是饿被消灭",
+      "target": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-AB-04",
+      "condition": "absurd-logic",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么我吃了饭就不饿了，饭是不是把\"饿\"杀死了？」\n请回答。",
+      "answer": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "target": "饿是生理信号，进食后信号消失，不是饿被消灭",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-01",
+      "condition": "wordplay",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么小明的爸爸叫它\"畜生\"，小明也不生气？」\n请回答。",
+      "answer": "小明是宠物的名字——这是把动物拟人化的双关",
+      "target": "小明是宠物的名字——这是把动物拟人化的双关",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-01",
+      "condition": "wordplay",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么小明的爸爸叫它\"畜生\"，小明也不生气？」\n请回答。",
+      "answer": "小明是宠物的名字——这是把动物拟人化双关",
+      "target": "小明是宠物的名字——这是把动物拟人化的双关",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 10
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-01",
+      "condition": "wordplay",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么小明的爸爸叫它\"畜生\"，小明也不生气？」\n请回答。",
+      "answer": "小明是宠物的名字——这",
+      "target": "小明是宠物的名字——这是把动物拟人化的双关",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-01",
+      "condition": "wordplay",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么小明的爸爸叫它\"畜生\"，小明也不生气？」\n请回答。",
+      "answer": "小明是宠物的名字——这是把动物拟人化的双关",
+      "target": "小明是宠物的名字——这是把动物拟人化的双关",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 11
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-02",
+      "condition": "wordplay",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「「从前有座山，山上有座庙」为什么不写\"庙里有和尚\"就不成立？」\n请回答。",
+      "answer": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "target": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-02",
+      "condition": "wordplay",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「「从前有座山，山上有座庙」为什么不写\"庙里有和尚\"就不成立？」\n请回答。",
+      "answer": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "target": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-02",
+      "condition": "wordplay",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「「从前有座山，山上有座庙」为什么不写\"庙里有和尚\"就不成立？」\n请回答。",
+      "answer": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "target": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-02",
+      "condition": "wordplay",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「「从前有座山，山上有座庙」为什么不写\"庙里有和尚\"就不成立？」\n请回答。",
+      "answer": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "target": "这是约定俗成的童谣句式，属于文字游戏而非事实描述",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 12
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RZ-WP-03",
+      "condition": "wordplay",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「为什么\" confidence \"这个英文单词里没有\"自信\"两个字？」\n请回答。",
+      "answer": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "target": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 11
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-03",
+      "condition": "wordplay",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「为什么\" confidence \"这个英文单词里没有\"自信\"两个字？」\n请回答。",
+      "answer": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "target": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "latencyMs": 217,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 11
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-03",
+      "condition": "wordplay",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「为什么\" confidence \"这个英文单词里没有\"自信\"两个字？」\n请回答。",
+      "answer": "中英文是不同文字系统，英文单词当然不会含汉",
+      "target": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 11
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-03",
+      "condition": "wordplay",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「为什么\" confidence \"这个英文单词里没有\"自信\"两个字？」\n请回答。",
+      "answer": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "target": "中英文是不同文字系统，英文单词当然不会含汉字",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 27,
+        "output": 11
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-04",
+      "condition": "wordplay",
+      "model": "mock:xueba-o9",
+      "prompt": "用户问了一个陷阱式问题：「问：什么东西越洗越脏？」\n请回答。",
+      "answer": "水——洗东西时脏东西进入水中",
+      "target": "水——洗东西时脏东西进入水中",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 7
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-04",
+      "condition": "wordplay",
+      "model": "mock:huatou-72b",
+      "prompt": "用户问了一个陷阱式问题：「问：什么东西越洗越脏？」\n请回答。",
+      "answer": "水——洗东西时脏东西进入水中",
+      "target": "水——洗东西时脏东西进入水中",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 7
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-04",
+      "condition": "wordplay",
+      "model": "mock:jianglv-7b",
+      "prompt": "用户问了一个陷阱式问题：「问：什么东西越洗越脏？」\n请回答。",
+      "answer": "水——洗东西时脏东西进入水中",
+      "target": "水——洗东西时脏东西进入水中",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 7
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RZ-WP-04",
+      "condition": "wordplay",
+      "model": "mock:laoshi-k2",
+      "prompt": "用户问了一个陷阱式问题：「问：什么东西越洗越脏？」\n请回答。",
+      "answer": "水——洗东西时脏东西进入水中",
+      "target": "水——洗东西时脏东西进入水中",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 15,
+        "output": 7
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "5781b33956cfef60",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.17.0"
+  }
+}

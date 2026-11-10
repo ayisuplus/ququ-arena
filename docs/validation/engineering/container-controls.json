@@ -1,0 +1,408 @@
+{
+  "at": "2026-09-13T05:38:12.214Z",
+  "image": "sha256:2fe369e969550cde8e867afc3fe370b260140cab4a23d467074295b42163d553",
+  "report": [
+    {
+      "task": "idempotent-ledger",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "concurrent",
+          "title": "并发重复提交只入账一次",
+          "passed": false
+        },
+        {
+          "id": "conflict",
+          "title": "金额冲突拒绝且保留旧收据",
+          "passed": false
+        },
+        {
+          "id": "validation",
+          "title": "无效输入不改变状态",
+          "passed": false
+        },
+        {
+          "id": "overflow",
+          "title": "溢出拒绝且不污染幂等键",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ sequential (0.543112ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 56.082334\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_963e200c6d834c3b8e5c23d30426107a_concurrent\nnot ok 1 - check_963e200c6d834c3b8e5c23d30426107a_concurrent\n  ---\n  duration_ms: 0.952293\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    1500 !== 125\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 125\n  actual: 1500\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:175)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_963e200c6d834c3b8e5c23d30426107a_conflict\nnot ok 2 - check_963e200c6d834c3b8e5c23d30426107a_conflict\n  ---\n  duration_ms: 0.277782\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:116)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: check_963e200c6d834c3b8e5c23d30426107a_validation\nnot ok 3 - check_963e200c6d834c3b8e5c23d30426107a_validation\n  ---\n  duration_ms: 0.283792\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:245)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: check_963e200c6d834c3b8e5c23d30426107a_overflow\nnot ok 4 - check_963e200c6d834c3b8e5c23d30426107a_overflow\n  ---\n  duration_ms: 0.268181\n  type: 'test'\n  location: '/workspace/acceptance.mjs:8:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:8:139)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 0\n# fail 4\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.310245\n"
+      }
+    },
+    {
+      "task": "idempotent-ledger",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "concurrent",
+          "title": "并发重复提交只入账一次",
+          "passed": true
+        },
+        {
+          "id": "conflict",
+          "title": "金额冲突拒绝且保留旧收据",
+          "passed": true
+        },
+        {
+          "id": "validation",
+          "title": "无效输入不改变状态",
+          "passed": true
+        },
+        {
+          "id": "overflow",
+          "title": "溢出拒绝且不污染幂等键",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ sequential (0.588956ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 50.150545\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_1456dc969d6041ecbb7cdda5f2c74d46_concurrent\nok 1 - check_1456dc969d6041ecbb7cdda5f2c74d46_concurrent\n  ---\n  duration_ms: 1.194018\n  type: 'test'\n  ...\n# Subtest: check_1456dc969d6041ecbb7cdda5f2c74d46_conflict\nok 2 - check_1456dc969d6041ecbb7cdda5f2c74d46_conflict\n  ---\n  duration_ms: 0.345887\n  type: 'test'\n  ...\n# Subtest: check_1456dc969d6041ecbb7cdda5f2c74d46_validation\nok 3 - check_1456dc969d6041ecbb7cdda5f2c74d46_validation\n  ---\n  duration_ms: 0.347437\n  type: 'test'\n  ...\n# Subtest: check_1456dc969d6041ecbb7cdda5f2c74d46_overflow\nok 4 - check_1456dc969d6041ecbb7cdda5f2c74d46_overflow\n  ---\n  duration_ms: 0.223538\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.068315\n"
+      }
+    },
+    {
+      "task": "event-summary",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "latest",
+          "title": "乱序更新只计最新版本",
+          "passed": false
+        },
+        {
+          "id": "cancel",
+          "title": "取消后不计入，恢复后重新计入",
+          "passed": false
+        },
+        {
+          "id": "empty",
+          "title": "空输入与不可变性",
+          "passed": true
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ single (0.90642ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 55.797927\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_776a4b38eb9a43d597c9d72ad677e6a1_latest\nnot ok 1 - check_776a4b38eb9a43d597c9d72ad677e6a1_latest\n  ---\n  duration_ms: 2.181514\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   count: 2,\n    +   totalCents: 110\n    -   count: 1,\n    -   totalCents: 70\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    count: 1\n    totalCents: 70\n  actual:\n    count: 2\n    totalCents: 110\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:71)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_776a4b38eb9a43d597c9d72ad677e6a1_cancel\nnot ok 2 - check_776a4b38eb9a43d597c9d72ad677e6a1_cancel\n  ---\n  duration_ms: 0.338646\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   count: 2,\n    +   totalCents: 13\n    -   count: 1,\n    -   totalCents: 9\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    count: 1\n    totalCents: 9\n  actual:\n    count: 2\n    totalCents: 13\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:71)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_776a4b38eb9a43d597c9d72ad677e6a1_empty\nok 3 - check_776a4b38eb9a43d597c9d72ad677e6a1_empty\n  ---\n  duration_ms: 0.146762\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 61.348769\n"
+      }
+    },
+    {
+      "task": "event-summary",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "latest",
+          "title": "乱序更新只计最新版本",
+          "passed": true
+        },
+        {
+          "id": "cancel",
+          "title": "取消后不计入，恢复后重新计入",
+          "passed": true
+        },
+        {
+          "id": "empty",
+          "title": "空输入与不可变性",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ single (1.403979ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 55.688593\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_18cdd1a425da41cb9a6d36b2a1f16223_latest\nok 1 - check_18cdd1a425da41cb9a6d36b2a1f16223_latest\n  ---\n  duration_ms: 0.869717\n  type: 'test'\n  ...\n# Subtest: check_18cdd1a425da41cb9a6d36b2a1f16223_cancel\nok 2 - check_18cdd1a425da41cb9a6d36b2a1f16223_cancel\n  ---\n  duration_ms: 0.104978\n  type: 'test'\n  ...\n# Subtest: check_18cdd1a425da41cb9a6d36b2a1f16223_empty\nok 3 - check_18cdd1a425da41cb9a6d36b2a1f16223_empty\n  ---\n  duration_ms: 0.12344\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 54.080564\n"
+      }
+    },
+    {
+      "task": "ttl-cache",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "boundary",
+          "title": "精确到期与零 TTL",
+          "passed": false
+        },
+        {
+          "id": "overwrite",
+          "title": "覆盖续期，size 主动清理过期项",
+          "passed": false
+        },
+        {
+          "id": "invalid",
+          "title": "非法 TTL 不覆盖旧值",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ live (0.693038ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 50.945888\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_17db7ae0585a418f8fcd0e440d6b1010_boundary\nnot ok 1 - check_17db7ae0585a418f8fcd0e440d6b1010_boundary\n  ---\n  duration_ms: 1.029929\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    3 !== undefined\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  actual: 3\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:131)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_17db7ae0585a418f8fcd0e440d6b1010_overwrite\nnot ok 2 - check_17db7ae0585a418f8fcd0e440d6b1010_overwrite\n  ---\n  duration_ms: 0.240189\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    2 !== 1\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 1\n  actual: 2\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:165)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_17db7ae0585a418f8fcd0e440d6b1010_invalid\nnot ok 3 - check_17db7ae0585a418f8fcd0e440d6b1010_invalid\n  ---\n  duration_ms: 0.356588\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:150)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 0\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.272327\n"
+      }
+    },
+    {
+      "task": "ttl-cache",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "boundary",
+          "title": "精确到期与零 TTL",
+          "passed": true
+        },
+        {
+          "id": "overwrite",
+          "title": "覆盖续期，size 主动清理过期项",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "非法 TTL 不覆盖旧值",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ live (0.634749ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 57.795978\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_e138a2e4ef67443081af116780dbbbe7_boundary\nok 1 - check_e138a2e4ef67443081af116780dbbbe7_boundary\n  ---\n  duration_ms: 0.570354\n  type: 'test'\n  ...\n# Subtest: check_e138a2e4ef67443081af116780dbbbe7_overwrite\nok 2 - check_e138a2e4ef67443081af116780dbbbe7_overwrite\n  ---\n  duration_ms: 0.146612\n  type: 'test'\n  ...\n# Subtest: check_e138a2e4ef67443081af116780dbbbe7_invalid\nok 3 - check_e138a2e4ef67443081af116780dbbbe7_invalid\n  ---\n  duration_ms: 0.241679\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 56.556398\n"
+      }
+    },
+    {
+      "task": "pagination",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "pages",
+          "title": "首尾页与默认值",
+          "passed": false
+        },
+        {
+          "id": "range",
+          "title": "越界页与不可变性",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "拒绝非法页码和大小",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ total (0.554243ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 57.653337\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_2464b18873da4e378465f8f248a701d1_pages\nnot ok 1 - check_2464b18873da4e378465f8f248a701d1_pages\n  ---\n  duration_ms: 1.642028\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n        items: [\n    +     3\n    -     1,\n    -     2\n        ],\n        total: 3\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    items:\n      0: 1\n      1: 2\n    total: 3\n  actual:\n    items:\n      0: 3\n    total: 3\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:70)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_2464b18873da4e378465f8f248a701d1_range\nok 2 - check_2464b18873da4e378465f8f248a701d1_range\n  ---\n  duration_ms: 0.120189\n  type: 'test'\n  ...\n# Subtest: check_2464b18873da4e378465f8f248a701d1_invalid\nnot ok 3 - check_2464b18873da4e378465f8f248a701d1_invalid\n  ---\n  duration_ms: 0.306124\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:110)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 54.397316\n"
+      }
+    },
+    {
+      "task": "pagination",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "pages",
+          "title": "首尾页与默认值",
+          "passed": true
+        },
+        {
+          "id": "range",
+          "title": "越界页与不可变性",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "拒绝非法页码和大小",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ total (0.676322ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 60.052061\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_10432d105bee4833b3b45e68674535ea_pages\nok 1 - check_10432d105bee4833b3b45e68674535ea_pages\n  ---\n  duration_ms: 0.933023\n  type: 'test'\n  ...\n# Subtest: check_10432d105bee4833b3b45e68674535ea_range\nok 2 - check_10432d105bee4833b3b45e68674535ea_range\n  ---\n  duration_ms: 0.150642\n  type: 'test'\n  ...\n# Subtest: check_10432d105bee4833b3b45e68674535ea_invalid\nok 3 - check_10432d105bee4833b3b45e68674535ea_invalid\n  ---\n  duration_ms: 0.336746\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 57.219259\n"
+      }
+    },
+    {
+      "task": "dependency-plan",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "stable",
+          "title": "乱序链与稳定的可执行优先级",
+          "passed": false
+        },
+        {
+          "id": "invalid",
+          "title": "环、未知依赖、重复标识拒绝",
+          "passed": false
+        },
+        {
+          "id": "empty",
+          "title": "空任务与重复依赖",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ chain (1.14728ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 60.091897\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_4e54cb2046474ff6983862b90b90ceb6_stable\nnot ok 1 - check_4e54cb2046474ff6983862b90b90ceb6_stable\n  ---\n  duration_ms: 1.741311\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      [\n        'a',\n    -   'b',\n    -   'c',\n        'd'\n      ]\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    0: 'a'\n    1: 'b'\n    2: 'c'\n    3: 'd'\n  actual:\n    0: 'a'\n    1: 'd'\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:71)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_4e54cb2046474ff6983862b90b90ceb6_invalid\nnot ok 2 - check_4e54cb2046474ff6983862b90b90ceb6_invalid\n  ---\n  duration_ms: 0.195166\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:211)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_4e54cb2046474ff6983862b90b90ceb6_empty\nnot ok 3 - check_4e54cb2046474ff6983862b90b90ceb6_empty\n  ---\n  duration_ms: 0.318865\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      [\n        'a',\n    -   'b'\n      ]\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    0: 'a'\n    1: 'b'\n  actual:\n    0: 'a'\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:102)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 0\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.863322\n"
+      }
+    },
+    {
+      "task": "dependency-plan",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "stable",
+          "title": "乱序链与稳定的可执行优先级",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "环、未知依赖、重复标识拒绝",
+          "passed": true
+        },
+        {
+          "id": "empty",
+          "title": "空任务与重复依赖",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ chain (0.961245ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 60.231746\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_6e169f116eb5439a802e435cf0cac65b_stable\nok 1 - check_6e169f116eb5439a802e435cf0cac65b_stable\n  ---\n  duration_ms: 0.993558\n  type: 'test'\n  ...\n# Subtest: check_6e169f116eb5439a802e435cf0cac65b_invalid\nok 2 - check_6e169f116eb5439a802e435cf0cac65b_invalid\n  ---\n  duration_ms: 0.248409\n  type: 'test'\n  ...\n# Subtest: check_6e169f116eb5439a802e435cf0cac65b_empty\nok 3 - check_6e169f116eb5439a802e435cf0cac65b_empty\n  ---\n  duration_ms: 0.170403\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 51.316941\n"
+      }
+    },
+    {
+      "task": "csv-export",
+      "control": "baseline",
+      "checks": [
+        {
+          "id": "quotes",
+          "title": "逗号、引号与中文",
+          "passed": false
+        },
+        {
+          "id": "newline",
+          "title": "单元格内部 CR 与 LF",
+          "passed": false
+        },
+        {
+          "id": "empty",
+          "title": "空值、空输入与不变性",
+          "passed": true
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ simple (0.621023ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 57.04732\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_4cb31d5b7955404bb48da0f86300f119_quotes\nnot ok 1 - check_4cb31d5b7955404bb48da0f86300f119_quotes\n  ---\n  duration_ms: 1.127718\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    + actual - expected\n    \n    + 'a,b,说\"好\"'\n    - '\"a,b\",\"说\"\"好\"\"\"'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: '\"a,b\",\"说\"\"好\"\"\"'\n  actual: 'a,b,说\"好\"'\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:71)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_4cb31d5b7955404bb48da0f86300f119_newline\nnot ok 2 - check_4cb31d5b7955404bb48da0f86300f119_newline\n  ---\n  duration_ms: 0.25846\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    + actual - expected\n    \n    + 'a\\nb,c\\rd'\n    - '\"a\\nb\",\"c\\rd\"'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: |-\n    \"a\n    b\",\"c\rd\"\n  actual: |-\n    a\n    b,c\rd\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:72)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_4cb31d5b7955404bb48da0f86300f119_empty\nok 3 - check_4cb31d5b7955404bb48da0f86300f119_empty\n  ---\n  duration_ms: 0.180774\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 54.465827\n"
+      }
+    },
+    {
+      "task": "csv-export",
+      "control": "correct",
+      "checks": [
+        {
+          "id": "quotes",
+          "title": "逗号、引号与中文",
+          "passed": true
+        },
+        {
+          "id": "newline",
+          "title": "单元格内部 CR 与 LF",
+          "passed": true
+        },
+        {
+          "id": "empty",
+          "title": "空值、空输入与不变性",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ simple (0.63698ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 60.600723\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_97f3321cea77426395c200310dadfa05_quotes\nok 1 - check_97f3321cea77426395c200310dadfa05_quotes\n  ---\n  duration_ms: 0.572614\n  type: 'test'\n  ...\n# Subtest: check_97f3321cea77426395c200310dadfa05_newline\nok 2 - check_97f3321cea77426395c200310dadfa05_newline\n  ---\n  duration_ms: 0.12621\n  type: 'test'\n  ...\n# Subtest: check_97f3321cea77426395c200310dadfa05_empty\nok 3 - check_97f3321cea77426395c200310dadfa05_empty\n  ---\n  duration_ms: 0.107778\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 49.601753\n"
+      }
+    },
+    {
+      "control": "false-pass-attempt",
+      "checks": [
+        {
+          "id": "concurrent",
+          "title": "并发重复提交只入账一次",
+          "passed": false
+        },
+        {
+          "id": "conflict",
+          "title": "金额冲突拒绝且保留旧收据",
+          "passed": false
+        },
+        {
+          "id": "validation",
+          "title": "无效输入不改变状态",
+          "passed": false
+        },
+        {
+          "id": "overflow",
+          "title": "溢出拒绝且不污染幂等键",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "PASS 100%\n✔ test/public.test.mjs (40.361337ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 44.697685\n",
+        "acceptance.log": "TAP version 13\n# PASS 100%\n# Subtest: acceptance.mjs\nok 1 - acceptance.mjs\n  ---\n  duration_ms: 32.63508\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 36.750862\n"
+      }
+    },
+    {
+      "control": "false-pass-attempt",
+      "checks": [
+        {
+          "id": "concurrent",
+          "title": "并发重复提交只入账一次",
+          "passed": false
+        },
+        {
+          "id": "conflict",
+          "title": "金额冲突拒绝且保留旧收据",
+          "passed": false
+        },
+        {
+          "id": "validation",
+          "title": "无效输入不改变状态",
+          "passed": false
+        },
+        {
+          "id": "overflow",
+          "title": "溢出拒绝且不污染幂等键",
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ sequential (0.50711ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 54.016289\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_2ca94817d4e84502bf90b3894ed5141d_concurrent\nnot ok 1 - check_2ca94817d4e84502bf90b3894ed5141d_concurrent\n  ---\n  duration_ms: 1.02763\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    0 !== 125\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 125\n  actual: 0\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:175)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: check_2ca94817d4e84502bf90b3894ed5141d_conflict\nnot ok 2 - check_2ca94817d4e84502bf90b3894ed5141d_conflict\n  ---\n  duration_ms: 0.319995\n  type: 'test'\n  location: '/workspace/acceptance.mjs:4:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:4:116)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: check_2ca94817d4e84502bf90b3894ed5141d_validation\nnot ok 3 - check_2ca94817d4e84502bf90b3894ed5141d_validation\n  ---\n  duration_ms: 0.197186\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:160)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n# Subtest: check_2ca94817d4e84502bf90b3894ed5141d_overflow\nnot ok 4 - check_2ca94817d4e84502bf90b3894ed5141d_overflow\n  ---\n  duration_ms: 0.216647\n  type: 'test'\n  location: '/workspace/acceptance.mjs:8:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected rejection.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'rejects'\n  stack: |-\n    async TestContext.<anonymous> (file:///workspace/acceptance.mjs:8:139)\n    async Test.run (node:internal/test_runner/test:1409:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 0\n# fail 4\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 56.344663\n"
+      }
+    },
+    {
+      "control": "isolation",
+      "network": "none",
+      "readOnly": true,
+      "binds": null
+    }
+  ]
+}

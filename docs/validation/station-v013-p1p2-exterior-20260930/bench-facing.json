@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "if(UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Bake busy\");\nvar src=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(\"Assets/Station/Models/SereneExteriorV013/PavilionBench.fbx\");int count=0;\nforeach(UnityEngine.Transform t in UnityEngine.GameObject.Find(\"V013 civic exterior finish\").transform)if(t.name==\"Pavilion upholstered bench\"){t.rotation=src.transform.localRotation;count++;}\nvar scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{turnedBenches=count,started=UnityEditor.Lightmapping.BakeAsync()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "turnedBenches": 2,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

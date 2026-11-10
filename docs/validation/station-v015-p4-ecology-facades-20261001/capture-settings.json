@@ -1,0 +1,33 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingBuildingsV015.unity",
+  "isDirty": false,
+  "playing": false,
+  "detailsActive": true,
+  "camera": "Player eye camera",
+  "cameraData": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData\",\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}}",
+  "renderers": [
+    {
+      "index": 0,
+      "path": "Assets/Settings/PC_Renderer.asset",
+      "features": [
+        {
+          "name": "ScreenSpaceAmbientOcclusion",
+          "isActive": true,
+          "serialized": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"ScreenSpaceAmbientOcclusion\",\"m_EditorClassIdentifier\":\"\",\"m_Active\":true,\"m_Settings\":{\"AOMethod\":0,\"Downsample\":true,\"AfterOpaque\":false,\"Source\":0,\"NormalSamples\":1,\"Intensity\":1.2999999523162842,\"DirectLightingStrength\":0.25,\"Radius\":1.2000000476837159,\"Samples\":1,\"BlurQuality\":0,\"Falloff\":100.0,\"SampleCount\":-1}}}"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "path": "Assets/Station/Materials/V013-SereneRenderer.asset",
+      "features": [
+        {
+          "name": "ScreenSpaceAmbientOcclusion",
+          "isActive": true,
+          "serialized": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"ScreenSpaceAmbientOcclusion\",\"m_EditorClassIdentifier\":\"\",\"m_Active\":true,\"m_Settings\":{\"AOMethod\":0,\"Downsample\":false,\"AfterOpaque\":false,\"Source\":1,\"NormalSamples\":1,\"Intensity\":0.6000000238418579,\"DirectLightingStrength\":0.07999999821186066,\"Radius\":0.2800000011920929,\"Samples\":0,\"BlurQuality\":0,\"Falloff\":100.0,\"SampleCount\":-1}}}"
+        }
+      ]
+    }
+  ],
+  "note": "Final and before-corrected cameras copy the player's AdditionalCameraData. before/after/diagnostic-no-shadows images used renderer 0; retained as superseded evidence. Lighting and renderer assets unchanged."
+}

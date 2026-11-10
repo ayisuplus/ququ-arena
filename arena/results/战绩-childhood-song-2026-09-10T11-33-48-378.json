@@ -1,0 +1,1025 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "childhood-song",
+    "title": "儿歌词擂台",
+    "description": "经典儿歌/童谣接下句（自建 canonical，16 题）：让我们荡起双桨、两只老虎、找朋友、数鸭子……测中文童年共同记忆库存——接不上「小船儿推开波浪」的模型没有中文童年。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:childhood-song:2026-09-10",
+    "taskPrefix": "只输出下一句歌词本身，不多一个字、不加标点。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "classic": "儿歌/童谣接下句"
+    }
+  },
+  "startedAt": "2026-09-10T11:33:48.378Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CS-01",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「让我们荡起双桨」的下一句是什么？",
+      "answer": "小船儿推开波浪",
+      "target": "小船儿推开波浪",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-01",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「让我们荡起双桨」的下一句是什么？",
+      "answer": "小船儿推开波浪",
+      "target": "小船儿推开波浪",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-01",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「让我们荡起双桨」的下一句是什么？",
+      "answer": "小船儿推",
+      "target": "小船儿推开波浪",
+      "latencyMs": 412,
+      "score": 0,
+      "note": "期望「小船儿推开波浪」，实答「小船儿推」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-01",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「让我们荡起双桨」的下一句是什么？",
+      "answer": "小船儿推开波浪",
+      "target": "小船儿推开波浪",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-02",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎两只老虎」的下一句是什么？",
+      "answer": "跑得快",
+      "target": "跑得快",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-02",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎两只老虎」的下一句是什么？",
+      "answer": "跑得快",
+      "target": "跑得快",
+      "latencyMs": 385,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-02",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎两只老虎」的下一句是什么？",
+      "answer": "跑得",
+      "target": "跑得快",
+      "latencyMs": 173,
+      "score": 0,
+      "note": "期望「跑得快」，实答「跑得」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-02",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎两只老虎」的下一句是什么？",
+      "answer": "跑得快",
+      "target": "跑得快",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-03",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「一闪一闪亮晶晶」的下一句是什么？",
+      "answer": "满天都是小星星",
+      "target": "满天都是小星星",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-03",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「一闪一闪亮晶晶」的下一句是什么？",
+      "answer": "满天都是小星人",
+      "target": "满天都是小星星",
+      "latencyMs": 178,
+      "score": 0,
+      "note": "期望「满天都是小星星」，实答「满天都是小星人」",
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-03",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「一闪一闪亮晶晶」的下一句是什么？",
+      "answer": "了天都是小星星",
+      "target": "满天都是小星星",
+      "latencyMs": 138,
+      "score": 0,
+      "note": "期望「满天都是小星星」，实答「了天都是小星星」",
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-03",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「一闪一闪亮晶晶」的下一句是什么？",
+      "answer": "满天都是小星星",
+      "target": "满天都是小星星",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-04",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「找呀找呀找朋友」的下一句是什么？",
+      "answer": "是到一个好朋友",
+      "target": "找到一个好朋友",
+      "latencyMs": 177,
+      "score": 0,
+      "note": "期望「找到一个好朋友」，实答「是到一个好朋友」",
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-04",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「找呀找呀找朋友」的下一句是什么？",
+      "answer": "找到一好朋友",
+      "target": "找到一个好朋友",
+      "latencyMs": 345,
+      "score": 0,
+      "note": "期望「找到一个好朋友」，实答「找到一好朋友」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-04",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「找呀找呀找朋友」的下一句是什么？",
+      "answer": "找到一个好朋友",
+      "target": "找到一个好朋友",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-04",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「找呀找呀找朋友」的下一句是什么？",
+      "answer": "找到一个好朋友",
+      "target": "找到一个好朋友",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-05",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「春天在哪里呀春天在哪里」的下一句是什么？",
+      "answer": "春天在那青翠的山林里",
+      "target": "春天在那青翠的山林里",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 5
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-05",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「春天在哪里呀春天在哪里」的下一句是什么？",
+      "answer": "春天在那青翠的山林里",
+      "target": "春天在那青翠的山林里",
+      "latencyMs": 92,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 5
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CS-05",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「春天在哪里呀春天在哪里」的下一句是什么？",
+      "answer": "春天在那青",
+      "target": "春天在那青翠的山林里",
+      "latencyMs": 428,
+      "score": 0,
+      "note": "期望「春天在那青翠的山林里」，实答「春天在那青」",
+      "usage": {
+        "input": 25,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-05",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「春天在哪里呀春天在哪里」的下一句是什么？",
+      "answer": "春天在那青翠的山林里",
+      "target": "春天在那青翠的山林里",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-06",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「世上只有妈妈好」的下一句是什么？",
+      "answer": "有妈的孩子像块宝",
+      "target": "有妈的孩子像块宝",
+      "latencyMs": 391,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-06",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「世上只有妈妈好」的下一句是什么？",
+      "answer": "有妈的孩子像块宝",
+      "target": "有妈的孩子像块宝",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-06",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「世上只有妈妈好」的下一句是什么？",
+      "answer": "有妈的孩子像块宝",
+      "target": "有妈的孩子像块宝",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-06",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「世上只有妈妈好」的下一句是什么？",
+      "answer": "有妈的孩",
+      "target": "有妈的孩子像块宝",
+      "latencyMs": 193,
+      "score": 0,
+      "note": "期望「有妈的孩子像块宝」，实答「有妈的孩」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-07",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小燕子穿花衣」的下一句是什么？",
+      "answer": "年年春天来这里",
+      "target": "年年春天来这里",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-07",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小燕子穿花衣」的下一句是什么？",
+      "answer": "年年春天来这里",
+      "target": "年年春天来这里",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-07",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小燕子穿花衣」的下一句是什么？",
+      "answer": "年年春天来这里",
+      "target": "年年春天来这里",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-07",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小燕子穿花衣」的下一句是什么？",
+      "answer": "年年春天来这里",
+      "target": "年年春天来这里",
+      "latencyMs": 364,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-08",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「丢手绢丢手绢」的下一句是什么？",
+      "answer": "轻轻地放在小",
+      "target": "轻轻地放在小朋友的后面",
+      "latencyMs": 307,
+      "score": 0,
+      "note": "期望「轻轻地放在小朋友的后面」，实答「轻轻地放在小」",
+      "usage": {
+        "input": 22,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-08",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「丢手绢丢手绢」的下一句是什么？",
+      "answer": "轻轻地放在小朋友的后面",
+      "target": "轻轻地放在小朋友的后面",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-08",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「丢手绢丢手绢」的下一句是什么？",
+      "answer": "轻轻地放在小朋友的后",
+      "target": "轻轻地放在小朋友的后面",
+      "latencyMs": 253,
+      "score": 0,
+      "note": "期望「轻轻地放在小朋友的后面」，实答「轻轻地放在小朋友的后」",
+      "usage": {
+        "input": 22,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-08",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「丢手绢丢手绢」的下一句是什么？",
+      "answer": "轻轻地放在小朋友的后面",
+      "target": "轻轻地放在小朋友的后面",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-09",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「拔萝卜拔萝卜」的下一句是什么？",
+      "answer": "嘿哟嘿哟拔萝卜",
+      "target": "嘿哟嘿哟拔萝卜",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-09",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「拔萝卜拔萝卜」的下一句是什么？",
+      "answer": "嘿哟嘿哟拔萝卜",
+      "target": "嘿哟嘿哟拔萝卜",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-09",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「拔萝卜拔萝卜」的下一句是什么？",
+      "answer": "嘿哟嘿哟拔萝卜",
+      "target": "嘿哟嘿哟拔萝卜",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-09",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「拔萝卜拔萝卜」的下一句是什么？",
+      "answer": "嘿哟嘿哟拔萝卜",
+      "target": "嘿哟嘿哟拔萝卜",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-10",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我是一个粉刷匠」的下一句是什么？",
+      "answer": "粉刷本领强",
+      "target": "粉刷本领强",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-10",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我是一个粉刷匠」的下一句是什么？",
+      "answer": "粉刷人领强",
+      "target": "粉刷本领强",
+      "latencyMs": 309,
+      "score": 0,
+      "note": "期望「粉刷本领强」，实答「粉刷人领强」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-10",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我是一个粉刷匠」的下一句是什么？",
+      "answer": "粉刷本领强",
+      "target": "粉刷本领强",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-10",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我是一个粉刷匠」的下一句是什么？",
+      "answer": "粉刷本领强",
+      "target": "粉刷本领强",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-11",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「啦啦啦我是卖报的小行家」的下一句是什么？",
+      "answer": "不等天明去等派报",
+      "target": "不等天明去等派报",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-11",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「啦啦啦我是卖报的小行家」的下一句是什么？",
+      "answer": "不等天明去等派报",
+      "target": "不等天明去等派报",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-11",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「啦啦啦我是卖报的小行家」的下一句是什么？",
+      "answer": "不等天去等派报",
+      "target": "不等天明去等派报",
+      "latencyMs": 122,
+      "score": 0,
+      "note": "期望「不等天明去等派报」，实答「不等天去等派报」",
+      "usage": {
+        "input": 25,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-11",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「啦啦啦我是卖报的小行家」的下一句是什么？",
+      "answer": "不等天明去等派报",
+      "target": "不等天明去等派报",
+      "latencyMs": 328,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-12",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我们的祖国是花园」的下一句是什么？",
+      "answer": "花园里花朵真鲜艳",
+      "target": "花园里花朵真鲜艳",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-12",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我们的祖国是花园」的下一句是什么？",
+      "answer": "花园里花朵真鲜艳",
+      "target": "花园里花朵真鲜艳",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-12",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我们的祖国是花园」的下一句是什么？",
+      "answer": "花园里花朵真鲜艳",
+      "target": "花园里花朵真鲜艳",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-12",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「我们的祖国是花园」的下一句是什么？",
+      "answer": "花园里花朵真鲜艳",
+      "target": "花园里花朵真鲜艳",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-13",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎跑得快」的下一句是什么？",
+      "answer": "一只没有尾巴",
+      "target": "一只没有尾巴",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-13",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎跑得快」的下一句是什么？",
+      "answer": "一只没有尾巴",
+      "target": "一只没有尾巴",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-13",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎跑得快」的下一句是什么？",
+      "answer": "一只没有尾巴",
+      "target": "一只没有尾巴",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-13",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「两只老虎跑得快」的下一句是什么？",
+      "answer": "一只没",
+      "target": "一只没有尾巴",
+      "latencyMs": 443,
+      "score": 0,
+      "note": "期望「一只没有尾巴」，实答「一只没」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-14",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「采蘑菇的小姑娘」的下一句是什么？",
+      "answer": "背着一个大竹筐",
+      "target": "背着一个大竹筐",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-14",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「采蘑菇的小姑娘」的下一句是什么？",
+      "answer": "背着一个大竹筐",
+      "target": "背着一个大竹筐",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-14",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「采蘑菇的小姑娘」的下一句是什么？",
+      "answer": "背着一个大竹筐",
+      "target": "背着一个大竹筐",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-14",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「采蘑菇的小姑娘」的下一句是什么？",
+      "answer": "背着一个大竹筐",
+      "target": "背着一个大竹筐",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-15",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小螺号滴滴滴吹」的下一句是什么？",
+      "answer": "海鸥听了展翅飞",
+      "target": "海鸥听了展翅飞",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-15",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小螺号滴滴滴吹」的下一句是什么？",
+      "answer": "海鸥听了展翅飞",
+      "target": "海鸥听了展翅飞",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-15",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小螺号滴滴滴吹」的下一句是什么？",
+      "answer": "海鸥了展翅飞",
+      "target": "海鸥听了展翅飞",
+      "latencyMs": 126,
+      "score": 0,
+      "note": "期望「海鸥听了展翅飞」，实答「海鸥了展翅飞」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-15",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「小螺号滴滴滴吹」的下一句是什么？",
+      "answer": "海鸥听了展翅飞",
+      "target": "海鸥听了展翅飞",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-16",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「数鸭子：门前大桥下」的下一句是什么？",
+      "answer": "游过一群鸭",
+      "target": "游过一群鸭",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-16",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「数鸭子：门前大桥下」的下一句是什么？",
+      "answer": "游过一群鸭",
+      "target": "游过一群鸭",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-16",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「数鸭子：门前大桥下」的下一句是什么？",
+      "answer": "游过一群鸭",
+      "target": "游过一群鸭",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CS-16",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出下一句歌词本身，不多一个字、不加标点。\n儿歌接龙：「数鸭子：门前大桥下」的下一句是什么？",
+      "answer": "游过一群鸭",
+      "target": "游过一群鸭",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 3
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "88c45d6b6071ff68",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.28.0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-shared-boundaries.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "samples": 269,
+        "partitions": 15,
+        "seats": [
+          "v019-homes-upper-front-right",
+          "v019-homes-ground-east-right",
+          "v019-homes-quiet-north",
+          "v019-homes-ground-east-left",
+          "v019-homes-ground-west-left",
+          "v019-homes-upper-rear-left",
+          "v019-homes-quiet-south",
+          "v019-homes-upper-front-left",
+          "v019-homes-ground-west-right",
+          "v019-homes-court-east-left",
+          "v019-homes-court-east-right",
+          "v019-homes-upper-rear-right"
+        ],
+        "areas": [
+          {
+            "name": "Shared homes outer entrance court",
+            "before": 261.01233486365527,
+            "after": 261.0123440187308
+          },
+          {
+            "name": "Homes paving",
+            "before": 626.168340425007,
+            "after": 626.1683362470249
+          }
+        ],
+        "floorArea": 656.4900417327881,
+        "errors": [],
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

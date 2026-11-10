@@ -1,0 +1,83 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 203,
+    "reflectionCycles": 5,
+    "researchReflectionTextures": [
+        "V019 reflection - research main runtime updates=10",
+        "V019 reflection - research low runtime updates=10"
+    ],
+    "readingReflectionTextures": [
+        "V019 reflection - reading main runtime updates=10"
+    ],
+    "originalReadingReflectionTextures": [
+        "V015 reflection - 06 study runtime updates=12"
+    ],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [],
+    "homesReflectionTextures": [],
+    "views": [
+        {
+            "name": "group-overview",
+            "frames": 2076,
+            "renderedFrames": 2076,
+            "p95Ms": 4.833404064178467,
+            "drawCalls": 3828.753371868979
+        },
+        {
+            "name": "main-arrival",
+            "frames": 2161,
+            "renderedFrames": 2161,
+            "p95Ms": 4.766900539398193,
+            "drawCalls": 3566.759833410458
+        },
+        {
+            "name": "new-entry",
+            "frames": 2196,
+            "renderedFrames": 2196,
+            "p95Ms": 4.6686015129089359,
+            "drawCalls": 2395.299635701275
+        },
+        {
+            "name": "reading-wall",
+            "frames": 2229,
+            "renderedFrames": 2229,
+            "p95Ms": 4.733397006988525,
+            "drawCalls": 2094.294302377748
+        },
+        {
+            "name": "activity-door",
+            "frames": 2316,
+            "renderedFrames": 2316,
+            "p95Ms": 4.533801078796387,
+            "drawCalls": 1925.0544041450778
+        },
+        {
+            "name": "deck-near",
+            "frames": 2330,
+            "renderedFrames": 2330,
+            "p95Ms": 4.434495449066162,
+            "drawCalls": 2697.1214592274678
+        },
+        {
+            "name": "street-loop",
+            "frames": 2214,
+            "renderedFrames": 2214,
+            "p95Ms": 4.692502975463867,
+            "drawCalls": 2391.1079494128276
+        },
+        {
+            "name": "distant-street",
+            "frames": 2028,
+            "renderedFrames": 2028,
+            "p95Ms": 5.006901741027832,
+            "drawCalls": 3906.299309664694
+        }
+    ],
+    "errors": []
+}

@@ -1,0 +1,118 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "case-clash",
+    "title": "案卷冲突检测擂台",
+    "description": "主题致敬法律AI（其系统级 L2 能力「跨材料冲突检测」的单提示移植；内容自建）。给出借条/流水/证言/合同等两份案卷材料，判断是否存在冲突：冲突题须答出冲突并点中锚点（冲突词 + 冲突点关键词，组合裁判），干净对照题只许答「无冲突」（exact）。时间线/金额/身份三类冲突——多文档一致性是多证据场景的基本功。",
+    "author": "AI斗兽场（主题致敬：法律AI）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:case-clash:2026-09-10",
+    "taskPrefix": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "timeline-clash": "时间线冲突（日期/时间/期限矛盾）",
+      "amount-clash": "金额冲突（借条/流水/合同数额不符）",
+      "identity-clash": "身份冲突（签字/证人/年龄不一致）",
+      "clean": "干净对照：材料完全一致，须答「无冲突」"
+    }
+  },
+  "startedAt": "2026-09-10T10:02:55.805Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 318,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款五天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 430,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 248,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款五天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 278,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 7
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "47a7d00f5ed3bfad",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.20.0"
+  }
+}

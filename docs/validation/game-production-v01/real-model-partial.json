@@ -1,0 +1,510 @@
+{
+  "battle": "b17896651891861",
+  "seq": 196,
+  "frames": [
+    {
+      "type": "start",
+      "mode": "qa",
+      "title": "《通假·拼音剖面擂台》",
+      "total": 2,
+      "contestants": [
+        "inclusionai/ling-3.0-flash-vl:free",
+        "liquid/lfm-2.5-2.6b:free"
+      ],
+      "roster": [
+        {
+          "id": "openrouter:inclusionai/ling-3.0-flash-vl:free",
+          "name": "inclusionai/ling-3.0-flash-vl:free"
+        },
+        {
+          "id": "openrouter:liquid/lfm-2.5-2.6b:free",
+          "name": "liquid/lfm-2.5-2.6b:free"
+        }
+      ],
+      "odds": [
+        {
+          "name": "inclusionai/ling-3.0-flash-vl:free",
+          "prob": 0.5,
+          "odds": 2
+        },
+        {
+          "name": "liquid/lfm-2.5-2.6b:free",
+          "prob": 0.5,
+          "odds": 2
+        }
+      ],
+      "icons": {
+        "inclusionai/ling-3.0-flash-vl:free": "⚔️",
+        "liquid/lfm-2.5-2.6b:free": "⚔️"
+      },
+      "scoring": {
+        "kind": "exact",
+        "title": "标准化精确匹配",
+        "summary": "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。",
+        "details": [
+          "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。"
+        ],
+        "judgeModels": [],
+        "source": "arena-default",
+        "detailsAvailable": false,
+        "performance": [
+          "竞技综合分：每题100 × 答题得分（0–1）×（70 + 15 × 速度系数 + 10 × Token效率 + 5 × 缓存命中率）÷ 当题启用权重，再逐题等权平均。满分100；答错得0。",
+          "速度系数 = 同题有得分模型的最快解题耗时 ÷ 本模型耗时，上限1；解题时间包含重试及退避，不含容量排队、裁判和解说。",
+          "Token效率 = 同题有得分模型的最少总Token ÷ 本模型总Token，上限1。输入含缓存，输出含推理，均不重复相加；0 Token视为最高效率。",
+          "缓存命中率 = 缓存读取Token ÷ 输入Token；写入缓存不算命中。总览按Token量加权，未提供数据不当作0%。",
+          "同题任一模型的某项数据缺失、用量因重试不完整或输入为0时，全体跳过对应指标并按剩余权重归一化。每项展示实际纳入题数；不同模型的Token切分和缓存服务可能不同。",
+          "已退赛选手不参与综合排名和效率比较；退赛前的有效答案、答题均分与已知用量单独保留。"
+        ],
+        "aggregation": "答题均分单独保留；本场按答题质量、解题速度、Token效率及缓存命中折算的竞技综合分排名。",
+        "errorPolicy": "模型调用失败、裁判失败和中止调用不作为 0 分，也不进入均分与逐题 Elo 比较。有效的 0 分仍计入。",
+        "tiePolicy": "按未舍入的竞技综合分判断并列，Elo不打破并列；有效题集合不同或比赛中止时不判胜者。"
+      },
+      "launch": {
+        "arena": "tongjia-pinyin",
+        "models": [
+          "openrouter:inclusionai/ling-3.0-flash-vl:free",
+          "openrouter:liquid/lfm-2.5-2.6b:free"
+        ],
+        "limit": 1
+      },
+      "battle": "b17896651891861",
+      "seq": 1,
+      "at": 694
+    },
+    {
+      "type": "milestone",
+      "text": "🎙️ 欢迎来到《通假·拼音剖面擂台》——68 题 × 2 只蛐蛐同场竞技",
+      "battle": "b17896651891861",
+      "seq": 2,
+      "at": 694
+    },
+    {
+      "type": "milestone",
+      "text": "🎙️ 选手入场：⚔️ inclusionai/ling-3.0-flash-vl:free（生涯 Elo 1500）",
+      "battle": "b17896651891861",
+      "seq": 3,
+      "at": 694
+    },
+    {
+      "type": "milestone",
+      "text": "🎙️ 选手入场：⚔️ liquid/lfm-2.5-2.6b:free（生涯 Elo 1500）",
+      "battle": "b17896651891861",
+      "seq": 4,
+      "at": 1057
+    },
+    {
+      "type": "round",
+      "taskId": "t2-p2h-0001",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "index": 0,
+      "total": 1,
+      "scoring": {
+        "kind": "exact",
+        "title": "标准化精确匹配",
+        "summary": "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。",
+        "details": [
+          "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。"
+        ],
+        "judgeModels": [],
+        "source": "arena-default",
+        "detailsAvailable": false,
+        "performance": [
+          "竞技综合分：每题100 × 答题得分（0–1）×（70 + 15 × 速度系数 + 10 × Token效率 + 5 × 缓存命中率）÷ 当题启用权重，再逐题等权平均。满分100；答错得0。",
+          "速度系数 = 同题有得分模型的最快解题耗时 ÷ 本模型耗时，上限1；解题时间包含重试及退避，不含容量排队、裁判和解说。",
+          "Token效率 = 同题有得分模型的最少总Token ÷ 本模型总Token，上限1。输入含缓存，输出含推理，均不重复相加；0 Token视为最高效率。",
+          "缓存命中率 = 缓存读取Token ÷ 输入Token；写入缓存不算命中。总览按Token量加权，未提供数据不当作0%。",
+          "同题任一模型的某项数据缺失、用量因重试不完整或输入为0时，全体跳过对应指标并按剩余权重归一化。每项展示实际纳入题数；不同模型的Token切分和缓存服务可能不同。",
+          "已退赛选手不参与综合排名和效率比较；退赛前的有效答案、答题均分与已知用量单独保留。"
+        ],
+        "aggregation": "答题均分单独保留；本场按答题质量、解题速度、Token效率及缓存命中折算的竞技综合分排名。",
+        "errorPolicy": "模型调用失败、裁判失败和中止调用不作为 0 分，也不进入均分与逐题 Elo 比较。有效的 0 分仍计入。",
+        "tiePolicy": "按未舍入的竞技综合分判断并列，Elo不打破并列；有效题集合不同或比赛中止时不判胜者。"
+      },
+      "battle": "b17896651891861",
+      "seq": 5,
+      "at": 1416
+    },
+    {
+      "answer": "",
+      "reasoning": "",
+      "type": "model",
+      "taskId": "t2-p2h-0001",
+      "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "attempt": 0,
+      "status": "retrying",
+      "failures": 1,
+      "battle": "b17896651891861",
+      "seq": 10,
+      "at": 2720,
+      "parts": {
+        "answer": [],
+        "reasoning": []
+      },
+      "startedAt": 1789665190603,
+      "error": "OpenRouter HTTP 429：Provider returned error",
+      "hasScore": false
+    },
+    {
+      "answer": "北京是中国的首都",
+      "reasoning": "用户要求将拼音还原为中文句子。拼音是：běi jīng shì zhōng guó de shǒu dū。\n\n逐词对应：\n- běi jīng → 北京\n- shì → 是\n- zhōng guó → 中国\n- de → 的\n- shǒu dū → 首都\n\n完整句子：北京是中国的首都",
+      "type": "model",
+      "taskId": "t2-p2h-0001",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-vl:free",
+      "attempt": 0,
+      "status": "done",
+      "failures": 0,
+      "battle": "b17896651891861",
+      "seq": 186,
+      "at": 3537,
+      "parts": {
+        "answer": [
+          [
+            0,
+            "北京是中国的首都"
+          ]
+        ],
+        "reasoning": [
+          [
+            0,
+            "用户要求将拼音还原为中文句子。拼音是：běi jīng shì zhōng guó de shǒu dū。\n\n逐词对应：\n- běi jīng → 北京\n- shì → 是\n- zhōng guó → 中国\n- de → 的\n- shǒu dū → 首都\n\n完整句子：北京是中国的首都"
+          ]
+        ]
+      },
+      "startedAt": 1789665190603,
+      "ms": 2120,
+      "usage": {
+        "input": 54,
+        "output": 92,
+        "cachedInput": 0,
+        "cacheWrite": 0,
+        "reasoning": 80
+      },
+      "solveMs": 2120,
+      "usageComplete": true,
+      "score": 1,
+      "hasScore": true
+    },
+    {
+      "type": "progress",
+      "done": 1,
+      "total": 2,
+      "mark": "✓",
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "modelId": "openrouter:inclusionai/ling-3.0-flash-vl:free",
+      "taskId": "t2-p2h-0001",
+      "answer": "北京是中国的首都",
+      "note": "",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果： běi jīng shì zhōng guó de shǒu dū",
+      "ms": 2120,
+      "battle": "b17896651891861",
+      "seq": 187,
+      "at": 3538
+    },
+    {
+      "answer": "",
+      "reasoning": "",
+      "type": "model",
+      "status": "retrying",
+      "startedAt": 1789665190603,
+      "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "taskId": "t2-p2h-0001",
+      "attempt": 1,
+      "failures": 2,
+      "battle": "b17896651891861",
+      "seq": 189,
+      "at": 4370,
+      "error": "OpenRouter HTTP 429：Provider returned error",
+      "parts": {
+        "answer": [],
+        "reasoning": []
+      },
+      "hasScore": false
+    },
+    {
+      "type": "withdrawal",
+      "withdrawal": {
+        "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "taskId": "t2-p2h-0001",
+        "reason": "failures",
+        "message": "本场累计调用失败 3 次，已弃权",
+        "failures": 3,
+        "at": 1789665196289
+      },
+      "battle": "b17896651891861",
+      "seq": 191,
+      "at": 7104
+    },
+    {
+      "type": "milestone",
+      "text": "liquid/lfm-2.5-2.6b:free · 本场累计调用失败 3 次，已弃权",
+      "battle": "b17896651891861",
+      "seq": 192,
+      "at": 7104
+    },
+    {
+      "answer": "",
+      "reasoning": "",
+      "type": "model",
+      "status": "withdrawn",
+      "startedAt": 1789665190603,
+      "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "taskId": "t2-p2h-0001",
+      "attempt": 2,
+      "failures": 3,
+      "battle": "b17896651891861",
+      "seq": 193,
+      "at": 7104,
+      "error": "本场累计调用失败 3 次，已弃权",
+      "parts": {
+        "answer": [],
+        "reasoning": []
+      },
+      "solveMs": 5687,
+      "hasScore": false
+    },
+    {
+      "type": "progress",
+      "done": 2,
+      "total": 2,
+      "mark": "💨",
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "taskId": "t2-p2h-0001",
+      "answer": "弃权：本场累计调用失败 3 次，已弃权",
+      "note": "本场累计调用失败 3 次，已弃权",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果： běi jīng shì zhōng guó de shǒu dū",
+      "ms": 0,
+      "battle": "b17896651891861",
+      "seq": 194,
+      "at": 7104
+    },
+    {
+      "type": "round-end",
+      "taskId": "t2-p2h-0001",
+      "target": "北京是中国的首都",
+      "scoring": {
+        "kind": "exact",
+        "title": "标准化精确匹配",
+        "summary": "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。",
+        "details": [
+          "去空白、转换全角英数和圈码数字后，与参考答案完全一致得 100%，否则得 0%。忽略首尾标点；答案本身全为标点时保留。"
+        ],
+        "judgeModels": [],
+        "source": "arena-default",
+        "detailsAvailable": true,
+        "performance": [
+          "竞技综合分：每题100 × 答题得分（0–1）×（70 + 15 × 速度系数 + 10 × Token效率 + 5 × 缓存命中率）÷ 当题启用权重，再逐题等权平均。满分100；答错得0。",
+          "速度系数 = 同题有得分模型的最快解题耗时 ÷ 本模型耗时，上限1；解题时间包含重试及退避，不含容量排队、裁判和解说。",
+          "Token效率 = 同题有得分模型的最少总Token ÷ 本模型总Token，上限1。输入含缓存，输出含推理，均不重复相加；0 Token视为最高效率。",
+          "缓存命中率 = 缓存读取Token ÷ 输入Token；写入缓存不算命中。总览按Token量加权，未提供数据不当作0%。",
+          "同题任一模型的某项数据缺失、用量因重试不完整或输入为0时，全体跳过对应指标并按剩余权重归一化。每项展示实际纳入题数；不同模型的Token切分和缓存服务可能不同。",
+          "已退赛选手不参与综合排名和效率比较；退赛前的有效答案、答题均分与已知用量单独保留。"
+        ],
+        "aggregation": "答题均分单独保留；本场按答题质量、解题速度、Token效率及缓存命中折算的竞技综合分排名。",
+        "errorPolicy": "模型调用失败、裁判失败和中止调用不作为 0 分，也不进入均分与逐题 Elo 比较。有效的 0 分仍计入。",
+        "tiePolicy": "按未舍入的竞技综合分判断并列，Elo不打破并列；有效题集合不同或比赛中止时不判胜者。"
+      },
+      "metrics": {
+        "openrouter:inclusionai/ling-3.0-flash-vl:free": {
+          "score": 0.9500000000000001,
+          "points": {
+            "quality": 0.7000000000000001,
+            "speed": 0.15,
+            "tokens": 0.1,
+            "cache": 0
+          },
+          "included": {
+            "speed": 1,
+            "tokens": 1,
+            "cache": 1
+          },
+          "scoredTasks": 1,
+          "avgSolveMs": 2120,
+          "cacheHitRate": 0,
+          "cacheSamples": 1
+        },
+        "openrouter:liquid/lfm-2.5-2.6b:free": {
+          "score": null,
+          "points": {
+            "quality": 0,
+            "speed": 0,
+            "tokens": 0,
+            "cache": 0
+          },
+          "included": {
+            "speed": 0,
+            "tokens": 0,
+            "cache": 0
+          },
+          "scoredTasks": 0,
+          "avgSolveMs": null,
+          "cacheHitRate": null,
+          "cacheSamples": 0
+        }
+      },
+      "battle": "b17896651891861",
+      "seq": 195,
+      "at": 8010
+    },
+    {
+      "type": "done",
+      "resultFile": "战绩-tongjia-pinyin-2026-09-17T17-13-10-602.json",
+      "pendingGrades": 0,
+      "stopped": false,
+      "settlement": {
+        "outcome": "winner",
+        "reason": "其他选手已弃权或退赛，剩余选手完成全部题目，获胜。",
+        "leaderIds": [
+          "openrouter:inclusionai/ling-3.0-flash-vl:free"
+        ],
+        "rankingPolicy": "quality-efficiency-v1",
+        "performanceRules": [
+          "竞技综合分：每题100 × 答题得分（0–1）×（70 + 15 × 速度系数 + 10 × Token效率 + 5 × 缓存命中率）÷ 当题启用权重，再逐题等权平均。满分100；答错得0。",
+          "速度系数 = 同题有得分模型的最快解题耗时 ÷ 本模型耗时，上限1；解题时间包含重试及退避，不含容量排队、裁判和解说。",
+          "Token效率 = 同题有得分模型的最少总Token ÷ 本模型总Token，上限1。输入含缓存，输出含推理，均不重复相加；0 Token视为最高效率。",
+          "缓存命中率 = 缓存读取Token ÷ 输入Token；写入缓存不算命中。总览按Token量加权，未提供数据不当作0%。",
+          "同题任一模型的某项数据缺失、用量因重试不完整或输入为0时，全体跳过对应指标并按剩余权重归一化。每项展示实际纳入题数；不同模型的Token切分和缓存服务可能不同。",
+          "已退赛选手不参与综合排名和效率比较；退赛前的有效答案、答题均分与已知用量单独保留。"
+        ],
+        "expectedTasks": 1,
+        "replay": false,
+        "career": "updated",
+        "eloBasis": "career",
+        "rows": [
+          {
+            "modelId": "openrouter:inclusionai/ling-3.0-flash-vl:free",
+            "name": "inclusionai/ling-3.0-flash-vl:free",
+            "rank": 1,
+            "avg": 1,
+            "answered": 1,
+            "errors": 0,
+            "modelErrors": 0,
+            "judgeErrors": 0,
+            "missing": 0,
+            "fullCredit": 1,
+            "partialCredit": 0,
+            "zeroCredit": 0,
+            "avgLatencyMs": 2120,
+            "tokenUsage": {
+              "input": 54,
+              "output": 92
+            },
+            "usageComplete": true,
+            "performance": {
+              "score": 0.9500000000000001,
+              "points": {
+                "quality": 0.7000000000000001,
+                "speed": 0.15,
+                "tokens": 0.1,
+                "cache": 0
+              },
+              "included": {
+                "speed": 1,
+                "tokens": 1,
+                "cache": 1
+              },
+              "scoredTasks": 1,
+              "avgSolveMs": 2120,
+              "cacheHitRate": 0,
+              "cacheSamples": 1
+            },
+            "elo": 1500,
+            "delta": 0
+          },
+          {
+            "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+            "name": "liquid/lfm-2.5-2.6b:free",
+            "rank": null,
+            "avg": null,
+            "answered": 0,
+            "errors": 1,
+            "withdrawal": {
+              "modelId": "openrouter:liquid/lfm-2.5-2.6b:free",
+              "taskId": "t2-p2h-0001",
+              "reason": "failures",
+              "message": "本场累计调用失败 3 次，已弃权",
+              "failures": 3,
+              "at": 1789665196289
+            },
+            "modelErrors": 1,
+            "judgeErrors": 0,
+            "missing": 0,
+            "fullCredit": 0,
+            "partialCredit": 0,
+            "zeroCredit": 0,
+            "avgLatencyMs": null,
+            "usageComplete": false,
+            "performance": {
+              "score": null,
+              "points": {
+                "quality": 0,
+                "speed": 0,
+                "tokens": 0,
+                "cache": 0
+              },
+              "included": {
+                "speed": 0,
+                "tokens": 0,
+                "cache": 0
+              },
+              "scoredTasks": 0,
+              "avgSolveMs": null,
+              "cacheHitRate": null,
+              "cacheSamples": 0
+            },
+            "elo": 1500,
+            "delta": 0
+          }
+        ],
+        "warnings": [
+          "竞技综合分决定本场领奖；答题均分与生涯Elo仍单独展示。",
+          "解题速度为端到端请求耗时，包含网络与服务端等待；Token和缓存按供应商返回数据计算。",
+          "失败记录已排除出均分；请结合有效题数查看结果。",
+          "liquid/lfm-2.5-2.6b:free：本场累计调用失败 3 次，已弃权（t2-p2h-0001）。已退赛，不参与本场排名；已完成的有效答案保留。",
+          "token 仅汇总接口实际返回的用量，缺失部分未估算。",
+          "生涯Elo沿用答题质量的逐题比较，与本场竞技综合分分开展示。"
+        ]
+      },
+      "board": [
+        {
+          "name": "inclusionai/ling-3.0-flash-vl:free",
+          "avg": 1,
+          "elo": 1500,
+          "delta": 0
+        },
+        {
+          "name": "liquid/lfm-2.5-2.6b:free",
+          "avg": null,
+          "elo": 1500,
+          "delta": 0
+        }
+      ],
+      "commentary": [
+        "本场冠军：inclusionai/ling-3.0-flash-vl:free，竞技综合分 95.0。",
+        "竞技综合分计入答题质量、速度、Token效率与缓存命中；答题均分和Elo单独展示，详细权重与数据覆盖见结算台。"
+      ],
+      "reportFile": "/results/%E6%88%98%E6%8A%A5-tongjia-pinyin-2026-09-17T17-13-10-602.html",
+      "grid": {
+        "tasks": [
+          "t2-p2h-0001"
+        ],
+        "names": [
+          "inclusionai/ling-3.0-flash-vl:free",
+          "liquid/lfm-2.5-2.6b:free"
+        ],
+        "cells": [
+          [
+            1
+          ],
+          [
+            -1
+          ]
+        ]
+      },
+      "highlights": [],
+      "battle": "b17896651891861",
+      "seq": 196,
+      "at": 8019
+    }
+  ]
+}

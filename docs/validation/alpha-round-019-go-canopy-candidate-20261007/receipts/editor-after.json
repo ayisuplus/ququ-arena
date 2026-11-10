@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var s=UnityEngine.SceneManagement.SceneManager.GetActiveScene();return new{project=UnityEngine.Application.dataPath,s.path,s.isDirty,roots=s.rootCount,playing=UnityEditor.EditorApplication.isPlaying,compiling=UnityEditor.EditorApplication.isCompiling};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "project": "E:/projects/黑洞空间站/QuQuArena3D/Assets",
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false,
+        "roots": 12,
+        "playing": false,
+        "compiling": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,45 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "Two sided glass supported without compiler errors",
+      "passed": true
+    },
+    {
+      "name": "Preserved specular alpha blend",
+      "passed": true
+    },
+    {
+      "name": "Transparent queue and no depth write",
+      "passed": true
+    },
+    {
+      "name": "Nonmetallic glass and unchanged smoothness",
+      "passed": true
+    },
+    {
+      "name": "Original seafoam hue with alpha 0.28",
+      "passed": false
+    },
+    {
+      "name": "Only 24 B03 pane and door renderers use variant",
+      "passed": true
+    },
+    {
+      "name": "18 independent transparent enclosure panels retained",
+      "passed": true
+    },
+    {
+      "name": "Six automatic door glass surfaces retained",
+      "passed": true
+    },
+    {
+      "name": "Both face render and GI retained",
+      "passed": true
+    },
+    {
+      "name": "Shader has no shadow or depth-only passes",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "SessionState.SetBool(\"QuQu.VisualValidation\",false); SessionState.SetBool(\"QuQu.OrbitalGray\",false); return Newtonsoft.Json.JsonConvert.SerializeObject(new {play=EditorApplication.isPlaying, compiling=EditorApplication.isCompiling, dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty, validation=SessionState.GetBool(\"QuQu.VisualValidation\",false), automatic=PlayerSettings.GetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64), apis=PlayerSettings.GetGraphicsAPIs(BuildTarget.StandaloneWindows64).Select(x=>x.ToString()).ToArray()});"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\"play\":false,\"compiling\":false,\"dirty\":false,\"validation\":false,\"automatic\":true,\"apis\":[\"Direct3D12\",\"Direct3D11\"]}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\tmp\\ququ-native-v16-20260920"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

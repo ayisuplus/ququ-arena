@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Clean idle v013 required\");\nif(UnityEngine.GameObject.Find(\"V013 interior light probes\"))throw new System.Exception(\"Lighting already prepared\");\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nvar mapPath=\"Assets/Station/Textures/SereneSurfacesV013/OakMetallicSmoothness.png\";\nvar ti=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(mapPath);ti.sRGBTexture=false;ti.alphaSource=UnityEditor.TextureImporterAlphaSource.FromInput;ti.alphaIsTransparency=false;ti.SaveAndReimport();\nvar rough=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(mapPath);\nvar original=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/V012CafeOakTableTrial.mat\");\nUnityEngine.Material Oak(string name,UnityEngine.Vector2 tiling){\n var m=new UnityEngine.Material(original);m.name=name;m.SetTexture(\"_MetallicGlossMap\",rough);m.SetFloat(\"_Smoothness\",.8f);m.EnableKeyword(\"_METALLICSPECGLOSSMAP\");\n foreach(var key in new[]{\"_BaseMap\",\"_MainTex\",\"_BumpMap\",\"_MetallicGlossMap\"})m.SetTextureScale(key,tiling);\n UnityEditor.AssetDatabase.CreateAsset(m,\"Assets/Station/Materials/\"+name+\".mat\");return m;\n}\nvar oak=Oak(\"V013-OakSurface\",new UnityEngine.Vector2(3,2.2f));var roundOak=Oak(\"V013-RoundOakSurface\",new UnityEngine.Vector2(1.44f,1.44f));\nint woodRenderers=0;\nforeach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.Renderer>(UnityEngine.FindObjectsSortMode.None)){\n var b=r.bounds;if(b.center.x<194||b.center.x>216||b.center.z< -216||b.center.z> -194)continue;\n var mats=r.sharedMaterials;bool changed=false;\n for(int i=0;i<mats.Length;i++)if(mats[i]==original){mats[i]=r.name==\"Soft oak top\"?roundOak:oak;changed=true;}\n if(changed){r.sharedMaterials=mats;woodRenderers++;}\n}\nvar folder=\"Assets/Station/Models/SereneLightmapMeshesV013\";\nUnityEditor.AssetDatabase.CreateFolder(\"Assets/Station/Models\",\"SereneLightmapMeshesV013\");\nvar meshCopies=new System.Collections.Generic.Dictionary<UnityEngine.Mesh,UnityEngine.Mesh>();\nint contributors=0;\nforeach(var r in UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None)){\n var b=r.bounds;var c=b.center;\n bool local=(c.x>183.7f&&c.x<217&&c.z> -216.5f&&c.z< -183.5f)||(c.x>166.8f&&c.x<193&&c.z>= -251&&c.z<= -216);\n if(!local||!r.enabled||!r.gameObject.activeInHierarchy||b.size.x>35||b.size.z>35||b.max.y>4.6f||b.min.y< -1||r.GetComponentInParent<QuQu.StationGrayboxWalker>())continue;\n if(System.Array.Exists(r.sharedMaterials,m=>!m||m.renderQueue>=3000||m.shader.name.Contains(\"Unlit\")))continue;\n var mf=r.GetComponent<UnityEngine.MeshFilter>();if(!mf||!mf.sharedMesh||mf.sharedMesh.vertexCount>10000)continue;\n var mesh=mf.sharedMesh;\n if(mesh.uv2.Length!=mesh.vertexCount){\n  if(!meshCopies.TryGetValue(mesh,out var copy)){\n   copy=UnityEngine.Object.Instantiate(mesh);copy.name=mesh.name+\" lightmap UV\";\n   if(!UnityEditor.Unwrapping.GenerateSecondaryUVSet(copy))throw new System.Exception(\"Unwrap failed: \"+mesh.name);\n   UnityEditor.AssetDatabase.CreateAsset(copy,folder+\"/Mesh-\"+meshCopies.Count.ToString(\"D3\")+\".asset\");meshCopies.Add(mesh,copy);\n  }\n  mf.sharedMesh=copy;\n }\n UnityEditor.GameObjectUtility.SetStaticEditorFlags(r.gameObject,UnityEditor.GameObjectUtility.GetStaticEditorFlags(r.gameObject)|UnityEditor.StaticEditorFlags.ContributeGI);\n r.receiveGI=UnityEngine.ReceiveGI.Lightmaps;r.scaleInLightmap=1;contributors++;\n}\nvar lights=new System.Collections.Generic.List<string>();\nforeach(var l in UnityEngine.Object.FindObjectsByType<UnityEngine.Light>(UnityEngine.FindObjectsSortMode.None)){\n var p=l.transform.position;\n if(p.x<166||p.x>217||p.z< -251||p.z> -183)continue;\n if(l.name.StartsWith(\"V012 A1 table bar warm light\")||l.name.StartsWith(\"V012 A1 counter bar warm light\")){l.enabled=false;continue;}\n if(!l.enabled)continue;l.lightmapBakeType=UnityEngine.LightmapBakeType.Mixed;lights.Add(l.name);\n}\nvar positions=new System.Collections.Generic.List<UnityEngine.Vector3>();\nforeach(float y in new[]{.6f,1.6f,3.3f}){\n for(float x=196;x<=214;x+=4)for(float z=-196;z>= -214;z-=4)positions.Add(new UnityEngine.Vector3(x,y,z));\n foreach(float x in new[]{186f,190f,193f})for(float z=-186;z>= -214;z-=4)positions.Add(new UnityEngine.Vector3(x,y,z));\n}\nforeach(float y in new[]{.7f,1.8f,2.7f}){\n for(float z=-219;z>= -245;z-=4)positions.Add(new UnityEngine.Vector3(186,y,z));\n for(float x=169;x<=185;x+=4)positions.Add(new UnityEngine.Vector3(x,y,-246));\n positions.Add(new UnityEngine.Vector3(190,y,-220));\n}\nvar go=new UnityEngine.GameObject(\"V013 interior light probes\");var group=go.AddComponent<UnityEngine.LightProbeGroup>();group.probePositions=positions.ToArray();\nvar settings=new UnityEngine.LightingSettings();settings.name=\"V013-SoutheastLighting\";settings.bakedGI=true;settings.realtimeGI=false;\nsettings.lightmapper=UnityEngine.LightingSettings.Lightmapper.ProgressiveGPU;settings.mixedBakeMode=UnityEngine.MixedLightingMode.IndirectOnly;\nsettings.lightmapResolution=12;settings.lightmapMaxSize=1024;settings.lightmapPadding=4;settings.directSampleCount=64;settings.indirectSampleCount=256;settings.environmentSampleCount=128;settings.maxBounces=4;settings.filteringMode=UnityEngine.LightingSettings.FilterMode.Auto;settings.ao=false;\nUnityEditor.AssetDatabase.CreateAsset(settings,\"Assets/Station/Materials/V013-SoutheastLighting.lighting\");UnityEditor.Lightmapping.lightingSettings=settings;\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{woodRenderers,contributors,unwrappedMeshes=meshCopies.Count,probes=positions.Count,mixedLights=lights};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "woodRenderers": 6,
+        "contributors": 281,
+        "unwrappedMeshes": 60,
+        "probes": 186,
+        "mixedLights": [
+          "Interior reflected fill",
+          "Broad ceiling wash",
+          "Forecourt ceiling wash 3",
+          "Gallery concealed fill",
+          "Gallery concealed fill",
+          "Broad ceiling wash",
+          "Interior reflected fill",
+          "Broad ceiling wash",
+          "Broad ceiling wash",
+          "Forecourt ceiling wash 2",
+          "Gallery concealed fill",
+          "Corridor wall fill -218",
+          "Forecourt ceiling wash 4",
+          "Corridor wall fill -222",
+          "Forecourt ceiling wash 5",
+          "Forecourt ceiling wash 1",
+          "Forecourt ceiling wash 0",
+          "Lookout approach fill",
+          "Lookout approach fill"
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

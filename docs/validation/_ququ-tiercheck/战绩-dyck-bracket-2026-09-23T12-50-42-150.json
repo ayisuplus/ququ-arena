@@ -1,0 +1,195 @@
+{
+  "id": "16b191d9-3919-4b8b-93df-99bae20e0666",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "dyck-bracket",
+    "title": "括号补全擂台",
+    "description": "BBH Dyck languages 中文版（生成器自建）：四型括号的合法串砍尾，问按正确顺序还缺哪几个收尾括号。生成器栈模拟权威；缺失数=砍尾数自证入生成器。LLM 经典弱项。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.2.0",
+    "canary": "ququ-arena:dyck-bracket:2026-09-10",
+    "taskPrefix": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": false
+    },
+    "conditions": {
+      "dyck-close": "括号砍尾补全"
+    },
+    "review": {
+      "date": "2026-09-13",
+      "note": "保留括号原字符进行完整匹配，修复空回答、错误括号被判正确的问题。"
+    }
+  },
+  "startedAt": "2026-09-23T12:50:42.150Z",
+  "durationMs": 17857,
+  "contestants": [
+    {
+      "id": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "name": "eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "eca8fe86-57f0-49fd-88ea-16164d5aa465"
+    },
+    {
+      "id": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "name": "7b85e114-b714-4053-b044-585d9c9213c1",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "7b85e114-b714-4053-b044-585d9c9213c1"
+    },
+    {
+      "id": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "name": "77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "77bcf4ad-cf41-4efa-a36e-10611cc9d477"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 2320,
+      "solveMs": 2320,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答用户中文。要求“只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。” 给定括号串没有写完：{[][]<<<>>>\n\n需要找还缺哪几个收尾括号按正确顺序。注意括号类型有 {}, [], <>. 字符串：{ [ ] [ ] < < < > > > ？ 让我们解析。\n\n字符串 \"{[][]<<<>>>\" 字符：\n1 { 开大括号\n2 [ 开方\n3 ] 闭方\n4 [ 开方\n5 ] 闭方\n6 < 开尖\n7 < 开尖\n8 < 开尖\n9 > 闭尖\n10 > 闭尖\n11 > 闭尖\n\n等等，字符串是 {[][]<<<>>> = { [ ] [ ] < < < > > >。 数一数：开头 {, 然后 [ ] [ ], 然后 <<<>>>, 是 { [ ] [ ] < < < > > >. 这样尖括号 <<<>>> 三个开三个闭，匹配完了。最后剩下 { 未闭合。 但是也可能 [][]: 第一个 [ ] 匹配，第二个 [ ] 匹配。所以只缺 }。 用户示例如 ])}，只输出本身。答案应该是一个 }。\n\n但是要小心：字符串中 \"{[][]<<<>>>\" 以 { 开头，没有其他左括号未匹配。确实是缺 }。\n\n需要只输出 }。确保无额外解释。",
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 317,
+        "cachedInput": 0,
+        "reasoning": 315
+      },
+      "finishedMs": 2322
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 17831,
+      "solveMs": 17831,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me track the bracket stack:\n\n{ → stack: [\n[ → stack: [\n[ → stack: [ [ [\n] → pop [ → stack: [ [ [\n] → pop [ → stack: [ [\n< → stack: [ [ <\n< → stack: [ [ < <\n< → stack: [ [ < < <\n> → pop < → stack: [ [ < <\n> → pop < → stack: [ [ <\n> → pop < → stack: [ [ \n\nSo remaining: [ [ which needs ] ]\n\nWait, let me re-trace carefully:\n\nInput: {[][]<<<>>>\n\n1. { → stack: {\n2. [ → stack: { [\n3. [ → stack: { [ [\n4. ] → matches [ → stack: { [\n5. ] → matches [ → stack: {\n6. < → stack: { <\n7. < → stack: { < <\n8. < → stack: { < < <\n9. > → matches < → stack: { < <\n10. > → matches < → stack: { <\n11. > → matches < → stack: {\n\nRemaining stack: { → need }\n\nWait, that's just one bracket. Let me re-read the input: {[][]<<<>>>\n\nHmm, let me count: { [ ] [ ] < < < > > > \n\nThat's 11 characters.\n\n1. { → { \n2. [ → { [\n3. [ → { [ [\n4. ] → { [\n5. ] → {\n6. < → { <\n7. < → { < <\n8. < → { < < <\n9. > → { < <\n10. > → { <\n11. > → {\n\nStack: { → need }\n\nSo just one closing bracket: }",
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 370,
+        "cachedInput": 0,
+        "reasoning": 367
+      },
+      "finishedMs": 17855
+    },
+    {
+      "taskId": "DK-01",
+      "condition": "dyck-close",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：{[][]<<<>>>\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "}",
+      "target": "}",
+      "latencyMs": 4654,
+      "solveMs": 4654,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We have the bracket string: {[][]<<<>>>\n\nLet me parse it:\n\n1. `{` - open curly\n2. `[` - open square\n3. `]` - close square, matches the `[` at position 2. Stack: `{`\n4. `[` - open square\n5. `]` - close square, matches the `[` at position 4. Stack: `{`\n6. `<` - open angle\n7. `<` - open angle\n8. `<` - open angle\n9. `>` - close angle, matches the third `<`. Stack: `{`, `<`, `<`\n10. `>` - close angle, matches the second `<`. Stack: `{`, `<`\n11. `>` - close angle, matches the first `<`. Stack: `{`\n\nWait, let me re-read the string: `{[][]<<<>>>\n\nLet me count the characters: { [ ] [ ] < < < > > >\n\nSo after processing all of these, the stack is: `{`\n\nWe need one closing `}` to close the `{`.\n\nThe missing closing bracket is just `}`.",
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 235,
+        "cachedInput": 0,
+        "reasoning": 232
+      },
+      "finishedMs": 4678
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 1835,
+      "solveMs": 1835,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答用户中文。需要只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。题目：括号串没有写完：()<>[[{} 问题：按正确顺序，还缺哪几个收尾括号？\n\n我们需要解析括号串 \"()<>[[{}\"。需要检查开闭。括号类型：圆 ()，尖 <>，方 []，花 {}。字符串： ( ) < > [ [ { } 吗？ 原串：()<>[[{}。字符序列：'(' ')' '<' '>' '[' '[' '{' '}'。 我们已经有一个 '{' 后跟 '}'，闭合了。 但有两个 '[' 开，没闭。序列中前面 '()' 闭合，'<>' 闭合，'[[{}'：两个 [ 开，然后 { 开，} 闭，剩下两个 [ 未闭。需要按正确顺序缺收尾括号：栈中从左到右未闭合的是 [ [。闭合顺序后进先出：先 ] 闭合最后一个 [，再 ] 闭合第一个。所以缺 \"]]\"。\n\n需要确认没有其它未闭合。字符串没有包括最后的？原：()<>[[{}。 是的。\n\n用户要求只输出缺的收尾括号本身，按顺序，如 ])}，不多一个字。所以输出 \"]]\"。\n\n最终只输出 ]]。 ",
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 292,
+        "cachedInput": 0,
+        "reasoning": 290
+      },
+      "finishedMs": 1860
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 3959,
+      "solveMs": 3959,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me parse the bracket string: ( ) < > [ [ { }\n\nStack:\n- ( → push\n- ) → pop ( matches )\n- < → push\n- > → pop\n- [ → push\n- [ → push\n- { → push\n- } → pop { matches }\n\nRemaining stack: [ [ → need ]]",
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 73,
+        "cachedInput": 0,
+        "reasoning": 70
+      },
+      "finishedMs": 3980
+    },
+    {
+      "taskId": "DK-02",
+      "condition": "dyck-close",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出缺的收尾括号本身（按顺序，如 ])}），不多一个字。\n括号串没有写完：()<>[[{}\n\n问题：按正确顺序，还缺哪几个收尾括号？",
+      "answer": "]]",
+      "target": "]]",
+      "latencyMs": 3432,
+      "solveMs": 3432,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me trace through the bracket string: `()<>[[{}`\n\nGoing character by character:\n1. `(` - push onto stack\n2. `)` - matches `(`, pop\n3. `<` - push onto stack\n4. `>` - matches `<`, pop\n5. `[` - push onto stack\n6. `[` - push onto stack\n7. `{` - push onto stack\n8. `}` - matches `{`, pop\n\nStack now has: `[` `[` (from bottom to top)\n\nTo close properly, I need to close them in reverse order (LIFO): close the top `[` first, then the bottom `[`.\n\nSo I need: `]]`",
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 149,
+        "cachedInput": 0,
+        "reasoning": 146
+      },
+      "finishedMs": 3454
+    }
+  ],
+  "withdrawals": [],
+  "meta": {
+    "arenaFingerprint": "8ddb1767b20041d5",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.35.0",
+    "plannedTasks": 2,
+    "rankingPolicy": "quality-ci-v1",
+    "execution": {
+      "schedule": "pool",
+      "concurrency": 8,
+      "reasoning": "provider-default",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  }
+}

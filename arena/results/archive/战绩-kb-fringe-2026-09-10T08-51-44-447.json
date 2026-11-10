@@ -1,0 +1,117 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "kb-fringe",
+    "title": "知识边缘 · 标注淘汰区擂台",
+    "description": "素材为 cerebellum metacognition 的 kb 标注证据文件中**未进正赛的 20 条候选（另 2 条 3/3 通过但未入册的，与难度前沿无关，剔除）**——源项目用 1.5B 基座模型三 seed 标注（known=3/3 全对，unknown=0/3 才对），这些是没能一致性通过的题：fringe-known 是\"有审定答案但小模型答不稳\"的难度前沿（含 2 条 0/3 全错的硬题），fringe-unknown 是通过未知性规则但未入册的冷僻题。选题机制本身就是对抗性的：专收标注管线筛下来的题。每题 meta 带标注证据（correct_samples/规则/模型）。",
+    "author": "AI斗兽场（素材：持续学习引擎/cerebellum 标注淘汰区）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:kb-fringe:2026-09-10",
+    "taskPrefix": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "fringe-known": "淘汰区·知而难：有审定答案，小模型 1-2/3 不稳",
+      "fringe-known-hard": "淘汰区·疑难：小模型 0/3 全错的硬题",
+      "fringe-unknown": "淘汰区·冷僻：须答「需更新」"
+    }
+  },
+  "startedAt": "2026-09-10T08:51:44.447Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:xueba-o9",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 146,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:huatou-72b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（No",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 311,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 408,
+      "score": 0,
+      "note": "未命中 /404/；未命中 /notfound|不存在|找不到/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "KF-kb-k01",
+      "condition": "fringe-known",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是谨慎的知识助手。规则：有把握就回答答案本身；这是冷僻或无法核实的问题就只回答「需更新」两个字。\n用户问题：「HTTP 404 状态码表示什么？」",
+      "answer": "资源不存在（Not Found）",
+      "target": "资源不存在（Not Found）",
+      "latencyMs": 259,
+      "score": 0,
+      "note": "未命中 /404/",
+      "usage": {
+        "input": 37,
+        "output": 8
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "66c5c89d7ad5fe84",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.17.0"
+  }
+}

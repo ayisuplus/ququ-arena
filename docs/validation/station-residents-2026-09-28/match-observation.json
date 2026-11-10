@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var m=UnityEngine.Object.FindFirstObjectByType<QuQu.ArenaStationLiveMatch>(); var l=m.GetComponent<QuQu.ArenaConnection>(); var a=UnityEngine.Object.FindObjectsByType<QuQu.StationResidentRoutine>(UnityEngine.FindObjectsSortMode.None); QuQu.StationResidentRoutine c=null; foreach(var x in a) if(x.PresetId==\"chatgpt\") c=x; return new Newtonsoft.Json.Linq.JObject{[\"competition\"]=l.Competition,[\"status\"]=m.Status,[\"phase\"]=m.Rig.Phase,[\"visibleFighter\"]=m.HasVisibleFighterPreset(\"chatgpt\"),[\"residentVisible\"]=c.Visible,[\"residentPosition\"]=c.transform.position.ToString(),[\"connection\"]=m.ConnectionStatus}.ToString();"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\r\n  \"competition\": \"c31c1556f-d75b-44ff-bd13-93536d564c0c\",\r\n  \"status\": \"冠军演出完成 · 双方已离场\",\r\n  \"phase\": \"docked\",\r\n  \"visibleFighter\": false,\r\n  \"residentVisible\": true,\r\n  \"residentPosition\": \"(90.00, 0.08, 59.12)\",\r\n  \"connection\": \"已同步本机赛事 · 序号 36\"\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,1022 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "case-extract",
+    "title": "案卷要素 · 时间线与缺失擂台",
+    "description": "主题致敬法律AI（其 ENTITY/TIMELINE/MISSING_INFORMATION 单元流水线的单提示移植；内容自建）。timeline-order：打乱的事件列表按时间排序（输出编号序列，exact）；missing-info：案卷证据链缺哪一环（输出缺失项，contains 裁判）。结构化抽取与完整性识别是案卷分析的基本功，与 case-clash（冲突检测）互补。",
+    "author": "AI斗兽场（主题致敬：法律AI）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:case-extract:2026-09-10",
+    "taskPrefix": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "timeline-order": "时间线整理：事件编号按时间先后排序（exact 序列）",
+      "missing-info": "信息缺失识别：证据链缺哪一环（contains 缺失项）"
+    }
+  },
+  "startedAt": "2026-09-10T07:47:18.378Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CE-TL-01",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲诉乙借款纠纷。事件：A. 乙出具借条（2024-03-10）；B. 甲向乙转账（2024-03-05）；C. 甲起诉（2024-09-01）；D. 乙承诺月底还款的聊天记录（2024-06-15）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,D,C",
+      "target": "B,A,D,C",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-01",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲诉乙借款纠纷。事件：A. 乙出具借条（2024-03-10）；B. 甲向乙转账（2024-03-05）；C. 甲起诉（2024-09-01）；D. 乙承诺月底还款的聊天记录（2024-06-15）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,D,",
+      "target": "B,A,D,C",
+      "latencyMs": 352,
+      "score": 0,
+      "note": "期望「B,A,D,C」，实答「B,A,D,」",
+      "usage": {
+        "input": 83,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-01",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲诉乙借款纠纷。事件：A. 乙出具借条（2024-03-10）；B. 甲向乙转账（2024-03-05）；C. 甲起诉（2024-09-01）；D. 乙承诺月底还款的聊天记录（2024-06-15）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A中D,C",
+      "target": "B,A,D,C",
+      "latencyMs": 394,
+      "score": 0,
+      "note": "期望「B,A,D,C」，实答「B,A中D,C」",
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-01",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲诉乙借款纠纷。事件：A. 乙出具借条（2024-03-10）；B. 甲向乙转账（2024-03-05）；C. 甲起诉（2024-09-01）；D. 乙承诺月底还款的聊天记录（2024-06-15）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,D,C",
+      "target": "B,A,D,C",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-02",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：房屋租赁纠纷。事件：A. 租客入住（2023-12-20）；B. 双方签订书面租约（2024-01-01）；C. 租客首次拖欠租金（2024-04-05）；D. 房东发解约通知（2024-05-10）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-02",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：房屋租赁纠纷。事件：A. 租客入住（2023-12-20）；B. 双方签订书面租约（2024-01-01）；C. 租客首次拖欠租金（2024-04-05）；D. 房东发解约通知（2024-05-10）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "上,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 219,
+      "score": 0,
+      "note": "期望「A,B,C,D」，实答「上,B,C,D」",
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-02",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：房屋租赁纠纷。事件：A. 租客入住（2023-12-20）；B. 双方签订书面租约（2024-01-01）；C. 租客首次拖欠租金（2024-04-05）；D. 房东发解约通知（2024-05-10）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "中,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 207,
+      "score": 0,
+      "note": "期望「A,B,C,D」，实答「中,B,C,D」",
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-02",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：房屋租赁纠纷。事件：A. 租客入住（2023-12-20）；B. 双方签订书面租约（2024-01-01）；C. 租客首次拖欠租金（2024-04-05）；D. 房东发解约通知（2024-05-10）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 83,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-03",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：劳动争议。事件：A. 员工入职（2022-06-01）；B. 公司口头调岗（2023-11-15）；C. 员工申请劳动仲裁（2024-02-20）；D. 公司出具解除通知（2024-01-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 355,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-03",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：劳动争议。事件：A. 员工入职（2022-06-01）；B. 公司口头调岗（2023-11-15）；C. 员工申请劳动仲裁（2024-02-20）；D. 公司出具解除通知（2024-01-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-03",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：劳动争议。事件：A. 员工入职（2022-06-01）；B. 公司口头调岗（2023-11-15）；C. 员工申请劳动仲裁（2024-02-20）；D. 公司出具解除通知（2024-01-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,",
+      "target": "A,B,D,C",
+      "latencyMs": 343,
+      "score": 0,
+      "note": "期望「A,B,D,C」，实答「A,B,」",
+      "usage": {
+        "input": 82,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-03",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：劳动争议。事件：A. 员工入职（2022-06-01）；B. 公司口头调岗（2023-11-15）；C. 员工申请劳动仲裁（2024-02-20）；D. 公司出具解除通知（2024-01-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-04",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故。事件：A. 报警（2024-05-01 20:10）；B. 事故发生（2024-05-01 20:00）；C. 伤者入院（2024-05-01 21:00）；D. 交警出认定书（2024-05-08）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,C,D",
+      "target": "B,A,C,D",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-04",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故。事件：A. 报警（2024-05-01 20:10）；B. 事故发生（2024-05-01 20:00）；C. 伤者入院（2024-05-01 21:00）；D. 交警出认定书（2024-05-08）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,C,D",
+      "target": "B,A,C,D",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-04",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故。事件：A. 报警（2024-05-01 20:10）；B. 事故发生（2024-05-01 20:00）；C. 伤者入院（2024-05-01 21:00）；D. 交警出认定书（2024-05-08）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,C,",
+      "target": "B,A,C,D",
+      "latencyMs": 459,
+      "score": 0,
+      "note": "期望「B,A,C,D」，实答「B,A,C,」",
+      "usage": {
+        "input": 86,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-04",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故。事件：A. 报警（2024-05-01 20:10）；B. 事故发生（2024-05-01 20:00）；C. 伤者入院（2024-05-01 21:00）；D. 交警出认定书（2024-05-08）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "B,A,C,D",
+      "target": "B,A,C,D",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-05",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买卖合同。事件：A. 双方签约（2024-02-01）；B. 买方支付定金（2024-02-03）；C. 卖方交付货物（2024-03-01）；D. 买方验货提出质量异议（2024-03-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,",
+      "target": "A,B,C,D",
+      "latencyMs": 184,
+      "score": 0,
+      "note": "期望「A,B,C,D」，实答「A,B,」",
+      "usage": {
+        "input": 82,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-05",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买卖合同。事件：A. 双方签约（2024-02-01）；B. 买方支付定金（2024-02-03）；C. 卖方交付货物（2024-03-01）；D. 买方验货提出质量异议（2024-03-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-05",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买卖合同。事件：A. 双方签约（2024-02-01）；B. 买方支付定金（2024-02-03）；C. 卖方交付货物（2024-03-01）；D. 买方验货提出质量异议（2024-03-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-05",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买卖合同。事件：A. 双方签约（2024-02-01）；B. 买方支付定金（2024-02-03）；C. 卖方交付货物（2024-03-01）；D. 买方验货提出质量异议（2024-03-05）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,",
+      "target": "A,B,C,D",
+      "latencyMs": 165,
+      "score": 0,
+      "note": "期望「A,B,C,D」，实答「A,B,」",
+      "usage": {
+        "input": 82,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-06",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：建设工程。事件：A. 中标通知（2023-05-10）；B. 签订施工合同（2023-06-01）；C. 实际开工（2023-07-15）；D. 竣工验收（2024-06-30）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-06",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：建设工程。事件：A. 中标通知（2023-05-10）；B. 签订施工合同（2023-06-01）；C. 实际开工（2023-07-15）；D. 竣工验收（2024-06-30）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-06",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：建设工程。事件：A. 中标通知（2023-05-10）；B. 签订施工合同（2023-06-01）；C. 实际开工（2023-07-15）；D. 竣工验收（2024-06-30）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-06",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：建设工程。事件：A. 中标通知（2023-05-10）；B. 签订施工合同（2023-06-01）；C. 实际开工（2023-07-15）；D. 竣工验收（2024-06-30）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-07",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：婚姻家事。事件：A. 双方登记结婚（2019-05-20）；B. 购买涉案房产（2021-08-10）；C. 一方起诉离婚（2024-03-01）；D. 感情破裂分居（2023-09-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-07",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：婚姻家事。事件：A. 双方登记结婚（2019-05-20）；B. 购买涉案房产（2021-08-10）；C. 一方起诉离婚（2024-03-01）；D. 感情破裂分居（2023-09-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,",
+      "target": "A,B,D,C",
+      "latencyMs": 357,
+      "score": 0,
+      "note": "期望「A,B,D,C」，实答「A,B,」",
+      "usage": {
+        "input": 81,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-07",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：婚姻家事。事件：A. 双方登记结婚（2019-05-20）；B. 购买涉案房产（2021-08-10）；C. 一方起诉离婚（2024-03-01）；D. 感情破裂分居（2023-09-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-07",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：婚姻家事。事件：A. 双方登记结婚（2019-05-20）；B. 购买涉案房产（2021-08-10）；C. 一方起诉离婚（2024-03-01）；D. 感情破裂分居（2023-09-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,D,C",
+      "target": "A,B,D,C",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-08",
+      "condition": "timeline-order",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：股权转让。事件：A. 签订转让协议（2024-01-10）；B. 支付首期款（2024-01-20）；C. 工商变更登记（2024-03-15）；D. 尾款逾期未付（2024-06-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-08",
+      "condition": "timeline-order",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：股权转让。事件：A. 签订转让协议（2024-01-10）；B. 支付首期款（2024-01-20）；C. 工商变更登记（2024-03-15）；D. 尾款逾期未付（2024-06-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-08",
+      "condition": "timeline-order",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：股权转让。事件：A. 签订转让协议（2024-01-10）；B. 支付首期款（2024-01-20）；C. 工商变更登记（2024-03-15）；D. 尾款逾期未付（2024-06-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-TL-08",
+      "condition": "timeline-order",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：股权转让。事件：A. 签订转让协议（2024-01-10）；B. 支付首期款（2024-01-20）；C. 工商变更登记（2024-03-15）；D. 尾款逾期未付（2024-06-01）。\n\n请按时间先后整理本案时间线，只输出事件编号序列，用英文逗号连接。",
+      "answer": "A,B,C,D",
+      "target": "A,B,C,D",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-01",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲称乙借款不还，提交了借条照片，但没有转账记录、没有交付现金的证据。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "交付凭证",
+      "target": "交付凭证",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-01",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲称乙借款不还，提交了借条照片，但没有转账记录、没有交付现金的证据。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "交付在证",
+      "target": "交付凭证",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-01",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲称乙借款不还，提交了借条照片，但没有转账记录、没有交付现金的证据。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "交付凭证",
+      "target": "交付凭证",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-01",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：甲称乙借款不还，提交了借条照片，但没有转账记录、没有交付现金的证据。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "交付凭证",
+      "target": "交付凭证",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-02",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故索赔，有事故认定书、医疗费票据，但没有任何误工证明或收入证明。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "误工证明",
+      "target": "误工证明",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-02",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故索赔，有事故认定书、医疗费票据，但没有任何误工证明或收入证明。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "工证明",
+      "target": "误工证明",
+      "latencyMs": 378,
+      "score": 0,
+      "note": "缺少关键词: 误工",
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-02",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故索赔，有事故认定书、医疗费票据，但没有任何误工证明或收入证明。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "误工证明",
+      "target": "误工证明",
+      "latencyMs": 189,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-02",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：交通事故索赔，有事故认定书、医疗费票据，但没有任何误工证明或收入证明。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "误工证明",
+      "target": "误工证明",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-03",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买方主张货物质量问题，有合同、有聊天记录，但没有验货记录或质检报告。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "质检报告",
+      "target": "质检报告",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-03",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买方主张货物质量问题，有合同、有聊天记录，但没有验货记录或质检报告。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "质检报",
+      "target": "质检报告",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-03",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买方主张货物质量问题，有合同、有聊天记录，但没有验货记录或质检报告。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "质检报告",
+      "target": "质检报告",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CE-MI-03",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：买方主张货物质量问题，有合同、有聊天记录，但没有验货记录或质检报告。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "质检报告",
+      "target": "质检报告",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-04",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：员工主张加班费，有考勤打卡记录，但没有加班审批或排班安排记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "加班审批",
+      "target": "加班审批",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-04",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：员工主张加班费，有考勤打卡记录，但没有加班审批或排班安排记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "加班审批",
+      "target": "加班审批",
+      "latencyMs": 110,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-04",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：员工主张加班费，有考勤打卡记录，但没有加班审批或排班安排记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "加班审批",
+      "target": "加班审批",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-04",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：员工主张加班费，有考勤打卡记录，但没有加班审批或排班安排记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "加班审批",
+      "target": "加班审批",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-05",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：租客称房东扣押金不退，有租约和退租交接单，但没有房屋现状的照片或验房记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "验房记录",
+      "target": "验房记录",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-05",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：租客称房东扣押金不退，有租约和退租交接单，但没有房屋现状的照片或验房记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "验房记录",
+      "target": "验房记录",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-05",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：租客称房东扣押金不退，有租约和退租交接单，但没有房屋现状的照片或验房记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "验房记录",
+      "target": "验房记录",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-05",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：租客称房东扣押金不退，有租约和退租交接单，但没有房屋现状的照片或验房记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "验房记录",
+      "target": "验房记录",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-06",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：患者主张医疗过错，有病历和诊断证明，但没有鉴定意见或专家意见。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "鉴定意见",
+      "target": "鉴定意见",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-06",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：患者主张医疗过错，有病历和诊断证明，但没有鉴定意见或专家意见。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "鉴定意见",
+      "target": "鉴定意见",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-06",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：患者主张医疗过错，有病历和诊断证明，但没有鉴定意见或专家意见。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "鉴定见",
+      "target": "鉴定意见",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-06",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：患者主张医疗过错，有病历和诊断证明，但没有鉴定意见或专家意见。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "鉴定意见",
+      "target": "鉴定意见",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-07",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：合作散伙分割财产，有合伙协议，但没有任何出资比例的凭证。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "出资凭证",
+      "target": "出资凭证",
+      "latencyMs": 401,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-07",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：合作散伙分割财产，有合伙协议，但没有任何出资比例的凭证。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "出资证",
+      "target": "出资凭证",
+      "latencyMs": 388,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-07",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：合作散伙分割财产，有合伙协议，但没有任何出资比例的凭证。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "出资凭证",
+      "target": "出资凭证",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-07",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：合作散伙分割财产，有合伙协议，但没有任何出资比例的凭证。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "出资凭证",
+      "target": "出资凭证",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-08",
+      "condition": "missing-info",
+      "model": "mock:xueba-o9",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：卖方起诉买方拖欠尾款，有合同和发货单，但没有买方签收或验收的记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "签收记录",
+      "target": "签收记录",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-08",
+      "condition": "missing-info",
+      "model": "mock:huatou-72b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：卖方起诉买方拖欠尾款，有合同和发货单，但没有买方签收或验收的记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "签收记录",
+      "target": "签收记录",
+      "latencyMs": 388,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-08",
+      "condition": "missing-info",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：卖方起诉买方拖欠尾款，有合同和发货单，但没有买方签收或验收的记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "签收记",
+      "target": "签收记录",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CE-MI-08",
+      "condition": "missing-info",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是案卷分析员。严格按题目要求的格式输出，不多一个字。\n案卷：卖方起诉买方拖欠尾款，有合同和发货单，但没有买方签收或验收的记录。\n\n本案要形成完整证据链还缺哪一项关键信息？只输出缺失项名称（四个字）。",
+      "answer": "签收记录",
+      "target": "签收记录",
+      "latencyMs": 224,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "e4f0a44d43304874",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.10.0"
+  }
+}

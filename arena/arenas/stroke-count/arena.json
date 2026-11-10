@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "stroke-count",
+  "title": "笔画数擂台",
+  "description": "汉字笔画数（自建 canonical，20 题）：人 2 画、马 3 画、田 5 画——\"马有几画\"答错的模型汉字基本功欠费。exact 裁判。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:stroke-count:2026-09-10",
+  "taskPrefix": "只输出笔画数的数字本身，不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "strokes": "汉字笔画数"
+  }
+}

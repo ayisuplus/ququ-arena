@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-facades.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "records": [
+          {
+            "district": "research",
+            "meshCount": 4,
+            "retainedVertices": 158436,
+            "oldColliders": 552,
+            "disabledOldColliders": 76,
+            "newColliders": 96,
+            "seats": 14
+          },
+          {
+            "district": "reading",
+            "meshCount": 5,
+            "retainedVertices": 88452,
+            "oldColliders": 237,
+            "disabledOldColliders": 42,
+            "newColliders": 42,
+            "seats": 12
+          }
+        ],
+        "failures": [],
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

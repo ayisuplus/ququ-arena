@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle V017 required\");\nconst string folder=\"Assets/Station/Textures/ReflectionsV017\";System.IO.Directory.CreateDirectory(folder);UnityEditor.AssetDatabase.Refresh();\nvar probes=UnityEngine.GameObject.Find(\"V015 landscape reflections\").GetComponent<QuQu.StationLandscapeReflections>().Probes;var avatar=UnityEngine.Object.FindFirstObjectByType<QuQu.StationGrayboxWalker>().VisibleAvatar;bool active=avatar.activeSelf;avatar.SetActive(false);int i=0;var completed=new System.Collections.Generic.List<string>();\nvoid Save(bool done,string error=\"\"){System.IO.File.WriteAllText(\"../docs/validation/station-v017-lighting-20261003/bake-state.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{complete=done,total=probes.Length,baked=completed,error,updated=System.DateTime.UtcNow.ToString(\"o\")},Newtonsoft.Json.Formatting.Indented));}\nUnityEditor.EditorApplication.CallbackFunction work=null;work=()=>{try{if(i<probes.Length){var probe=probes[i];string path=folder+\"/V017-\"+i.ToString(\"D2\")+\".exr\";if(!UnityEditor.Lightmapping.BakeReflectionProbe(probe,path))throw new System.Exception(\"Bake failed \"+probe.name);UnityEditor.AssetDatabase.ImportAsset(path,UnityEditor.ImportAssetOptions.ForceSynchronousImport);var cube=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Cubemap>(path);if(!cube||cube.width!=128)throw new System.Exception(\"Invalid cubemap\");probe.customBakedTexture=cube;completed.Add(probe.name);i++;Save(false);}else{UnityEditor.EditorApplication.update-=work;avatar.SetActive(active);UnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);Save(true);}}catch(System.Exception ex){UnityEditor.EditorApplication.update-=work;avatar.SetActive(active);Save(false,ex.ToString());}};Save(false);UnityEditor.EditorApplication.update+=work;return new{scheduled=probes.Length};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scheduled": 30
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

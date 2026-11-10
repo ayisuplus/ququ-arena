@@ -1,0 +1,137 @@
+{
+  "mode": "Editor Play accelerated CharacterController regression",
+  "complete": false,
+  "steps": 60000,
+  "roundTrips": 3,
+  "legacyRestores": 6,
+  "supportSamples": 21542,
+  "hidden": true,
+  "reappeared": true,
+  "failures": [
+    "chatgpt capture cannot restore at 11 outbound=False",
+    "deepseek capture cannot restore at 13 outbound=False",
+    "Incomplete round trips"
+  ],
+  "residents": [
+    {
+      "PresetId": "kimi",
+      "LoungeVisits": 1,
+      "HomeReturns": 1,
+      "position": "(-73.501, 0.080, 68.915)",
+      "state": {
+        "id": "resident/kimi",
+        "position": {
+          "x": -73.50091552734375,
+          "y": 0.079999983310699463,
+          "z": 68.914665222167969
+        },
+        "targetIndex": 1,
+        "visits": 1,
+        "returns": 1,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 18.0
+      }
+    },
+    {
+      "PresetId": "chatgpt",
+      "LoungeVisits": 1,
+      "HomeReturns": 0,
+      "position": "(125.000, 0.080, -4.455)",
+      "state": {
+        "id": "resident/chatgpt",
+        "position": {
+          "x": 125.0,
+          "y": 0.079999983310699463,
+          "z": -4.4553842544555664
+        },
+        "targetIndex": 9,
+        "visits": 1,
+        "returns": 0,
+        "outbound": false,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "PresetId": "gemini",
+      "LoungeVisits": 0,
+      "HomeReturns": 0,
+      "position": "(124.997, 0.080, -5.235)",
+      "state": {
+        "id": "resident/gemini",
+        "position": {
+          "x": 124.99646759033203,
+          "y": 0.079999983310699463,
+          "z": -5.2353534698486328
+        },
+        "targetIndex": 18,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "PresetId": "glm",
+      "LoungeVisits": 1,
+      "HomeReturns": 1,
+      "position": "(-73.501, 0.080, 55.085)",
+      "state": {
+        "id": "resident/glm",
+        "position": {
+          "x": -73.500907897949219,
+          "y": 0.080000162124633789,
+          "z": 55.085311889648438
+        },
+        "targetIndex": 1,
+        "visits": 1,
+        "returns": 1,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 18.0
+      }
+    },
+    {
+      "PresetId": "claude",
+      "LoungeVisits": 0,
+      "HomeReturns": 0,
+      "position": "(216.948, 0.080, 175.520)",
+      "state": {
+        "id": "resident/claude",
+        "position": {
+          "x": 216.94821166992188,
+          "y": 0.079999923706054688,
+          "z": 175.52000427246094
+        },
+        "targetIndex": 19,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "PresetId": "deepseek",
+      "LoungeVisits": 1,
+      "HomeReturns": 1,
+      "position": "(115.970, 0.080, 35.000)",
+      "state": {
+        "id": "resident/deepseek",
+        "position": {
+          "x": 115.96952819824219,
+          "y": 0.079999923706054688,
+          "z": 35.0
+        },
+        "targetIndex": 1,
+        "visits": 1,
+        "returns": 1,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 18.0
+      }
+    }
+  ]
+}

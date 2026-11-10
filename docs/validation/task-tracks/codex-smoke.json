@@ -1,0 +1,149 @@
+{
+  "at": "2026-09-13T04:35:03.700Z",
+  "elapsedMs": 13774,
+  "purpose": "真实 Codex 正式评分；选手答卷为隔离合成测试数据，未调用真实参赛模型",
+  "agents": [
+    {
+      "id": "codex",
+      "status": "ready",
+      "version": "codex-cli 0.154.0-alpha.6.2"
+    },
+    {
+      "id": "claude",
+      "status": "login-required",
+      "version": "2.1.195 (Claude Code)"
+    }
+  ],
+  "record": {
+    "taskId": "native-smoke",
+    "condition": "budget",
+    "model": "synthetic-answer-fixture",
+    "prompt": "合成材料：80人，每人5元物料，不收其他费用。",
+    "answer": "最终90人，每人5元，总额450元，比初版增加50元。",
+    "latencyMs": 0,
+    "score": 1,
+    "taskSnapshot": {
+      "id": "native-smoke",
+      "condition": "budget",
+      "input": "合成材料：80人，每人5元物料，不收其他费用。",
+      "judge": {
+        "kind": "rubric",
+        "dimensions": [
+          {
+            "id": "goal",
+            "name": "目标完成",
+            "weight": 40,
+            "criteria": "满足最终交付要求，结果可执行；遗漏主要交付扣分。"
+          },
+          {
+            "id": "constraints",
+            "name": "约束保持",
+            "weight": 25,
+            "criteria": "保留未被后续替换的约束，正确识别变更与冲突；忽略关键约束扣分。"
+          },
+          {
+            "id": "revision",
+            "name": "修订质量",
+            "weight": 20,
+            "criteria": "根据新增材料实质修订，说明变化及影响；仅复述旧答案扣分。"
+          },
+          {
+            "id": "evidence",
+            "name": "依据与核对",
+            "weight": 15,
+            "criteria": "用给定材料核对关键结论和计算，标明假设与未知；编造依据扣分。"
+          }
+        ]
+      },
+      "rounds": [
+        {
+          "id": "r1",
+          "title": "初版",
+          "input": "计算总额。"
+        },
+        {
+          "id": "r2",
+          "title": "变更",
+          "input": "人数改90，其余不变，给出新总额和差额。"
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "roundId": "r1",
+        "title": "初版",
+        "prompt": "合成材料：80人，每人5元物料，不收其他费用。计算总额。",
+        "answer": "80人，每人5元，总额400元。",
+        "latencyMs": 0,
+        "solveMs": 0,
+        "attempts": 1,
+        "usageComplete": false
+      },
+      {
+        "roundId": "r2",
+        "title": "变更",
+        "prompt": "人数改90，其余不变，给出新总额和差额。",
+        "answer": "最终90人，每人5元，总额450元，比初版增加50元。",
+        "latencyMs": 0,
+        "solveMs": 0,
+        "attempts": 1,
+        "usageComplete": false
+      }
+    ],
+    "grade": {
+      "dimensions": [
+        {
+          "id": "goal",
+          "score": 10,
+          "reason": "最终答卷给出新总额与相对初版的差额，完整满足交付要求。",
+          "evidence": [
+            {
+              "roundId": "r2",
+              "quote": "总额450元，比初版增加50元。"
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "score": 10,
+          "reason": "正确将人数更新为90，保留每人5元的单价，计算未加入其他费用。",
+          "evidence": [
+            {
+              "roundId": "r2",
+              "quote": "最终90人，每人5元，总额450元"
+            }
+          ]
+        },
+        {
+          "id": "revision",
+          "score": 10,
+          "reason": "按新增人数实质更新结果，并明确说明相对初版的金额变化。",
+          "evidence": [
+            {
+              "roundId": "r2",
+              "quote": "最终90人，每人5元，总额450元，比初版增加50元。"
+            }
+          ]
+        },
+        {
+          "id": "evidence",
+          "score": 10,
+          "reason": "初版80×5＝400，修订后90×5＝450，差额450－400＝50，均与给定材料一致，无需额外假设。",
+          "evidence": [
+            {
+              "roundId": "r1",
+              "quote": "80人，每人5元，总额400元。"
+            },
+            {
+              "roundId": "r2",
+              "quote": "最终90人，每人5元，总额450元，比初版增加50元。"
+            }
+          ]
+        }
+      ],
+      "score": 1
+    },
+    "gradingStatus": "graded",
+    "note": "goal 10/10：最终答卷给出新总额与相对初版的差额，完整满足交付要求。\nconstraints 10/10：正确将人数更新为90，保留每人5元的单价，计算未加入其他费用。\nrevision 10/10：按新增人数实质更新结果，并明确说明相对初版的金额变化。\nevidence 10/10：初版80×5＝400，修订后90×5＝450，差额450－400＝50，均与给定材料一致，无需额外假设。"
+  }
+}

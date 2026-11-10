@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command eval_file",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Runtime Error\n  Self referencing loop detected for property 'normalized' with type 'UnityEngine.Vector3'. Path '[0].hits[0].localPosition.normalized.normalized'."
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,22 @@
+{
+  "groundTruth": {
+    "sampledUtc": "2026-09-30T16:58:05.9770772Z",
+    "ageMs": 207,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 1,
+    "consoleWarnings": 0,
+    "consoleLogs": 3,
+    "seeded": true
+  },
+  "errors": [
+    {
+      "timestampUtc": "2026-09-30T16:55:02.4397573Z",
+      "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input."
+    },
+    {
+      "timestampUtc": "2026-09-30T16:57:15.0667192Z",
+      "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "Meshy task 01a0faa0-3f16-7334-b36b-f6c895b5c629",
+  "revision": "v003: real rear apertures and 0.16m inner walls, separate core spandrel slot, no new generation",
+  "triangles": 3514,
+  "renderers": 4,
+  "materials": 5,
+  "size_m_blender_xyz": [
+    24.000431060791016,
+    11.231579780578613,
+    18.114322662353516
+  ],
+  "checks": [
+    {
+      "name": "B02_UpperLantern front cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "B02_UpperLantern rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "B02_LeftCrystal front cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "B02_LeftCrystal rear cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "B02_RightCrystal front cavity",
+      "passed": false,
+      "depth_m": null
+    },
+    {
+      "name": "B02_RightCrystal rear cavity",
+      "passed": false,
+      "depth_m": null
+    }
+  ],
+  "passed": false,
+  "interior": "Three enclosed empty crystal cavities. Original collision and central core remain closed. Unity derived materials supply transparent panes; GLB modeling materials are opaque.",
+  "rear": "Inferred from original one-image Meshy draft, pending visual review"
+}

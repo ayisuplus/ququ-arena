@@ -1,0 +1,21 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "idiom-fix",
+  "title": "成语纠错擂台",
+  "description": "高频错写成语改正（自建 canonical，20 题）：再接再励→再接再厉、世外桃园→世外桃源、默守成规→墨守成规。与 tongjia-typo（题面单字归正）互补：本罐考高频错写习惯的识别。exact 裁判（输出正确成语）。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:idiom-fix:2026-09-10",
+  "taskPrefix": "只输出改正后的成语本身，不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "fix": "错写成语改正"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "替换把词语异形写法直接认定为错字的题面；如“惹事生非”在教育部词典中有独立词条。"
+  }
+}

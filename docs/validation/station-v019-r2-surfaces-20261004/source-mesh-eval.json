@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\inspect-r2-source-meshes.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "Assets/Station/Models/ResearchEnvelopeV014/ResearchEnvelope.fbx",
+          "meshes": [
+            "Shell folded roof 0",
+            "Shell folded roof 1",
+            "Shell folded roof 2",
+            "Shell folded roof 3"
+          ]
+        },
+        {
+          "path": "Assets/Station/Models/CivicBuildingsV014/CivicBuilding.fbx",
+          "meshes": [
+            "Solid entry canopy -1",
+            "Solid entry canopy 1",
+            "Solid floating roof"
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

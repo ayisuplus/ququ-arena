@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 三段论擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 20 道题 · 冠军 小快-LFM 100.0%">
+<title>战报 · 三段论擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 三段论擂台</h1>
+  <div class="sub">古典直言三段论（传统逻辑题库形制，内容自建）。给两个前提一个结论，判断结论能否从前提必然推出——现代一阶语义（『有些』=至少一个、全称无存在含义），题面前缀已声明。valid 为有效式（Barbara/Celarent/Darii/E 换位/链式）；invalid-converse 为换位与肯定后件谬误；invalid-negative 为否定前提谬误；invalid-particular 为特称误推（双特称前提、特称推全称、『有些』不当蕴含『有些不』）。多题结论在现实世界为真但推不出来——测严格蕴含不是测朴素直觉。exact 裁判（是/否）；每题 meta.form 存结构化命题，契约测试区域枚举模型检验逐题复算。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T16:03:41.288Z · 用时 27.4s · 4 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>有效式（前提真则结论必然真）</th><th>换位与肯定后件谬误</th><th>否定前提谬误</th><th>特称误推（双特称/特称推全称）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">小快-LFM <span class="tag">首秀</span><span class="badge-ach" title="本场解锁：新王登基">👑</span><span class="badge-ach" title="本场解锁：天降神兵">⚡</span><span class="badge-ach" title="本场解锁：处刑人">🩸</span><span class="badge-ach" title="本场解锁：零失误">✨</span><div class="muted">openrouter:liquid/lfm-2.5-2.6b:free</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td><td>100.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1616</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1616 (+116)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">巨兽-NV120 <span class="tag">首秀</span><div class="muted">openrouter:nvidia/nemotron-3-super-120b-a12b:free</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>40.0%</td><td>80.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1594</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1594 (+94)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">闪电-NV35 <span class="tag">首秀</span><div class="muted">openrouter:nvidia/nemotron-3.5-lightning:free</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>60.0%</td><td>100.0%</td><td>80.0%</td><td>80.0%</td>
+      <td class="nw">1557</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1557 (+57)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">笔记-DOTS <span class="tag">首秀</span><div class="muted">openrouter:dots-studio/dots-3-note-preview:free</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td><td>0.0%</td><td>0.0%</td><td>0.0%</td>
+      <td class="nw">1233</td><td class="nw">🛡️ 老卒</td><td class="nw lose">1233 (-267)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[5.0%, 40.0%] —— 不含 0，冠军优势统计显著。</p><p class="muted">本卷信度 Cronbach's α = 0.98（k=20 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 小快-LFM 100.0% 横扫夺冠——这罐子对它没有秘密。</li><li>🩸 屠杀局：首尾差距 100.0%，笔记-DOTS 基本是被按在地上摩擦完整场的。</li><li>🎬 集体翻车现场：「SY-VA-02」全场均分仅 25.0%——判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，…</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">有效式（前提真则结论必然真）</div><div class="dim-row"><span class="dim-name">小快-LFM</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">巨兽-NV120</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">闪电-NV35</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">换位与肯定后件谬误</div><div class="dim-row"><span class="dim-name">小快-LFM</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">巨兽-NV120</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">闪电-NV35</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">否定前提谬误</div><div class="dim-row"><span class="dim-name">小快-LFM</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">巨兽-NV120</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">闪电-NV35</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">特称误推（双特称/特称推全称）</div><div class="dim-row"><span class="dim-name">小快-LFM</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">巨兽-NV120</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">闪电-NV35</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>小快-LFM</th><th>巨兽-NV120</th><th>闪电-NV35</th><th>笔记-DOTS</th></tr></thead>
+<tbody><tr><td class="name">小快-LFM</td><td class="self">—</td><td style="background:rgba(26,127,75,0.14)">60.0%</td><td style="background:rgba(26,127,75,0.14)">60.0%</td><td style="background:rgba(26,127,75,0.70)">100.0%</td></tr>
+<tr><td class="name">巨兽-NV120</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.56)">90.0%</td></tr>
+<tr><td class="name">闪电-NV35</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.56)">90.0%</td></tr>
+<tr><td class="name">笔记-DOTS</td><td style="background:rgba(193,68,30,0.70)">0.0%</td><td style="background:rgba(193,68,30,0.56)">10.0%</td><td style="background:rgba(193,68,30,0.56)">10.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">有效式（前提真则结论必然真）</span> 全场平均仅 <b>25.0%</b> —— SY-VA-02</div>
+      <div class="prompt">判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。
+没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？</div>
+      <div class="target">参考答案：是</div>
+      <ul><li><b>闪电-NV35</b>（0.0%）：否</li><li><b>巨兽-NV120</b>（0.0%）：否</li><li><b>笔记-DOTS</b>（0.0%）：<i>（空白）</i></li><li><b>小快-LFM</b>（100.0%）：是</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 80 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>SY-VA-01</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">1.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-01</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.8s</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-VA-01</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">3.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-01</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.4s</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-VA-02</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>闪电-NV35</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.0s</td>
+      <td class="muted">期望「是」，实答「否」</td>
+    </tr>
+<tr>
+      <td>SY-VA-02</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.0s</td>
+      <td class="muted">期望「是」，实答「否」</td>
+    </tr>
+<tr>
+      <td>SY-VA-02</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">4.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-02</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.5s</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-VA-03</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">1.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-03</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">636ms</td>
+      <td class="muted">期望「是」，实答「否」</td>
+    </tr>
+<tr>
+      <td>SY-VA-03</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">2.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-03</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">995ms</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-VA-04</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>闪电-NV35</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">788ms</td>
+      <td class="muted">期望「是」，实答「否」</td>
+    </tr>
+<tr>
+      <td>SY-VA-04</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">1.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-04</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">3.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-04</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.8s</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-VA-05</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">790ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-05</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-05</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">4.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-VA-05</td><td><span class="tag">有效式（前提真则结论必然真）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.1s</td>
+      <td class="muted">期望「是」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-01</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-01</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">641ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-01</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-01</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.1s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-02</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">694ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-02</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">520ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-02</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-02</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">899ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-03</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-03</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">775ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-03</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">6.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-03</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">886ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-04</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">798ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-04</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">767ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-04</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">12.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-04</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">963ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IC-05</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">617ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-05</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">991ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-05</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">7.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IC-05</td><td><span class="tag">换位与肯定后件谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.2s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IN-01</td><td><span class="tag">否定前提谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">842ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-01</td><td><span class="tag">否定前提谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">13.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-01</td><td><span class="tag">否定前提谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">9.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-01</td><td><span class="tag">否定前提谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.2s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IN-02</td><td><span class="tag">否定前提谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">996ms</td>
+      <td class="muted">期望「否」，实答「是」</td>
+    </tr>
+<tr>
+      <td>SY-IN-02</td><td><span class="tag">否定前提谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">816ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-02</td><td><span class="tag">否定前提谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">7.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-02</td><td><span class="tag">否定前提谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.0s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IN-03</td><td><span class="tag">否定前提谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">861ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-03</td><td><span class="tag">否定前提谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-03</td><td><span class="tag">否定前提谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">7.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-03</td><td><span class="tag">否定前提谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">995ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IN-04</td><td><span class="tag">否定前提谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-04</td><td><span class="tag">否定前提谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">940ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-04</td><td><span class="tag">否定前提谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">5.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-04</td><td><span class="tag">否定前提谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.0s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IN-05</td><td><span class="tag">否定前提谬误</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">798ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-05</td><td><span class="tag">否定前提谬误</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">790ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-05</td><td><span class="tag">否定前提谬误</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">7.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IN-05</td><td><span class="tag">否定前提谬误</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">910ms</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IP-01</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-01</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-01</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">10.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-01</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.0s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IP-02</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>闪电-NV35</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">是</td>
+      <td class="muted">1.3s</td>
+      <td class="muted">期望「否」，实答「是」</td>
+    </tr>
+<tr>
+      <td>SY-IP-02</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-02</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-02</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.2s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IP-03</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">745ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-03</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">710ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-03</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">3.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-03</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.0s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IP-04</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">610ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-04</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">1.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-04</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-04</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.1s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+<tr>
+      <td>SY-IP-05</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>闪电-NV35</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">2.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-05</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>巨兽-NV120</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">953ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-05</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>小快-LFM</td>
+      <td class="win">100.0%</td>
+      <td class="answer">否</td>
+      <td class="muted">3.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SY-IP-05</td><td><span class="tag">特称误推（双特称/特称推全称）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer"></td>
+      <td class="muted">1.2s</td>
+      <td class="muted">期望「否」，实答「」</td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.8.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：闪电-NV35 / 巨兽-NV120 / 小快-LFM / 笔记-DOTS<br>
+  题库指纹 <code>1279f9c33dff8c08</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:syllogism:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：闪电-NV35 2263+40，巨兽-NV120 2033+36，小快-LFM 960+11039，笔记-DOTS 0+0
+</footer>
+</div></body></html>

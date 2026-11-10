@@ -1,0 +1,285 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var rows=new System.Collections.Generic.List<object>();\nforeach(var file in System.IO.Directory.GetFiles(\"Assets/Station/Models/SereneExteriorV013\",\"*.fbx\"))foreach(var a in UnityEditor.AssetDatabase.LoadAllAssetsAtPath(file))if(a is UnityEngine.Mesh m)rows.Add(new{type=\"source\",name=m.name});\nforeach(var guid in UnityEditor.AssetDatabase.FindAssets(\"t:Mesh\",new[]{\"Assets/Station/Models/SereneExteriorLightmapMeshesV013\"})){var m=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Mesh>(UnityEditor.AssetDatabase.GUIDToAssetPath(guid));rows.Add(new{type=\"copy\",name=m.name});}return rows;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "type": "source",
+          "name": "Civic paving panel"
+        },
+        {
+          "type": "source",
+          "name": "Civic pearl hull"
+        },
+        {
+          "type": "source",
+          "name": "Civic shadow plinth"
+        },
+        {
+          "type": "source",
+          "name": "Rounded seat shell"
+        },
+        {
+          "type": "source",
+          "name": "Silver recessed foot"
+        },
+        {
+          "type": "source",
+          "name": "Tailored seat cushion"
+        },
+        {
+          "type": "source",
+          "name": "Upholstered back"
+        },
+        {
+          "type": "source",
+          "name": "Continuous pearl column"
+        },
+        {
+          "type": "source",
+          "name": "Satin foot"
+        },
+        {
+          "type": "source",
+          "name": "Pavilion ceiling ribbon"
+        },
+        {
+          "type": "source",
+          "name": "Pavilion ceiling ribbon.001"
+        },
+        {
+          "type": "source",
+          "name": "Pavilion diffuse ceiling"
+        },
+        {
+          "type": "source",
+          "name": "Pavilion recessed underside"
+        },
+        {
+          "type": "source",
+          "name": "Rounded pavilion crown"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.001"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.002"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.003"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.004"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.005"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.006"
+        },
+        {
+          "type": "source",
+          "name": "Apron fine joint.007"
+        },
+        {
+          "type": "source",
+          "name": "Apron transverse joint"
+        },
+        {
+          "type": "source",
+          "name": "Apron transverse joint.001"
+        },
+        {
+          "type": "source",
+          "name": "Apron transverse joint.002"
+        },
+        {
+          "type": "source",
+          "name": "Apron transverse joint.003"
+        },
+        {
+          "type": "source",
+          "name": "Apron transverse joint.004"
+        },
+        {
+          "type": "source",
+          "name": "Continuous pearl hull"
+        },
+        {
+          "type": "source",
+          "name": "Inset walking deck"
+        },
+        {
+          "type": "source",
+          "name": "Recessed lower keel"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-000"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-001"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-002"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-003"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-004"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-005"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-006"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-007"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-008"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-009"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-010"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-011"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-012"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-013"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-014"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-015"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-016"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-017"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-018"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-019"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-020"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-021"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-022"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-023"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-024"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-025"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-026"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-027"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-028"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-029"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-030"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-031"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-032"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-033"
+        },
+        {
+          "type": "copy",
+          "name": "Mesh-034"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

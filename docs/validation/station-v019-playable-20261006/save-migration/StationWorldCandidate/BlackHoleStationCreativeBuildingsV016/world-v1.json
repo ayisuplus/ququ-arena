@@ -1,0 +1,151 @@
+{
+    "version": 2,
+    "sceneId": "BlackHoleStationCreativeBuildingsV016",
+    "safePosition": {
+        "x": 80.00052642822266,
+        "y": 0.07999993860721588,
+        "z": 9.995805740356446
+    },
+    "ringLocation": {
+        "ringId": "v015-r1",
+        "localPosition": {
+            "x": 79.99982452392578,
+            "y": 0.07999993860721588,
+            "z": 10.001423835754395
+        },
+        "localYaw": 89.99897766113281
+    },
+    "cargo": [
+        {
+            "id": "north-dock-right",
+            "version": 1,
+            "progress": 0.0,
+            "z": 301.4725036621094,
+            "atInspection": false,
+            "moving": false,
+            "towardInspection": false,
+            "inspected": false,
+            "completed": false
+        },
+        {
+            "id": "north-dock-left",
+            "version": 1,
+            "progress": 0.0,
+            "z": 301.4725036621094,
+            "atInspection": false,
+            "moving": false,
+            "towardInspection": false,
+            "inspected": false,
+            "completed": false
+        }
+    ],
+    "greenhouse": {
+        "id": "south-greenhouse-veggie-01",
+        "stage": 2,
+        "careCount": 1
+    },
+    "cafe": {
+        "id": "east-lounge-cafe-01",
+        "served": 0,
+        "drunk": 0,
+        "holding": false
+    },
+    "residents": [
+        {
+            "id": "resident/kimi",
+            "version": 1,
+            "segmentFraction": 0.0,
+            "position": {
+                "x": -32.61480712890625,
+                "y": 0.07999992370605469,
+                "z": -225.25880432128907
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 31.9612979888916
+        },
+        {
+            "id": "resident/chatgpt",
+            "version": 1,
+            "segmentFraction": 0.016770372167229654,
+            "position": {
+                "x": 113.48413848876953,
+                "y": 0.07999998331069946,
+                "z": -196.5673370361328
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 0.0
+        },
+        {
+            "id": "resident/claude",
+            "version": 1,
+            "segmentFraction": 4.3488296341820389e-7,
+            "position": {
+                "x": 77.66090393066406,
+                "y": 0.07999992370605469,
+                "z": -213.38189697265626
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 19.9612979888916
+        },
+        {
+            "id": "resident/glm",
+            "version": 1,
+            "segmentFraction": 0.0,
+            "position": {
+                "x": -46.402076721191409,
+                "y": 0.07999992370605469,
+                "z": -222.8275146484375
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 22.9612979888916
+        },
+        {
+            "id": "resident/deepseek",
+            "version": 1,
+            "segmentFraction": 0.0,
+            "position": {
+                "x": 145.9582977294922,
+                "y": 0.07999986410140991,
+                "z": -173.95181274414063
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 7.961297512054443
+        },
+        {
+            "id": "resident/gemini",
+            "version": 1,
+            "segmentFraction": 0.0,
+            "position": {
+                "x": -29.662527084350587,
+                "y": 0.07999992370605469,
+                "z": -208.51710510253907
+            },
+            "targetIndex": 1,
+            "visits": 0,
+            "returns": 0,
+            "outbound": true,
+            "inLounge": false,
+            "waitRemaining": 13.961297035217286
+        }
+    ]
+}

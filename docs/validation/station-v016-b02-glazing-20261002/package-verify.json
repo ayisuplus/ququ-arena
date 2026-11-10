@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b02-crystal\\package-v003",
+    "manifest": {
+      "assetId": "v016_b02_crystal_archive_window_cavities",
+      "description": "Three crystal front/rear cavities with 0.16m wall thickness and separate core spandrel. 3514 triangles, modeling materials; Unity derived blue glass supplies transparency. Original collider/core remain closed; no new spend.",
+      "displayName": "V016 B02 Crystal Archive Window Cavities",
+      "files": [
+        {
+          "bytes": 211972,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "d1f743f4fa3c6f6a9bc5d0c9fc3a6847db3d2f0637b7b5b2739f29876e842beb"
+        },
+        {
+          "bytes": 1821,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "a4226a9d590f505841f11fd53c05ec1d5e423595dc95e77f3380078938c892e0"
+        },
+        {
+          "bytes": 785,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "4ad747b2fa1fea41e6f53616ccad6bfd5f87e1f3c89cda5e9df71b5dd7c2b186"
+        },
+        {
+          "bytes": 2689,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "031b26d039f4681bb362455fefaa76fb472a9a04f4fe4aafbfec929790073977"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_963e1e530ea54510244c2497",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.3.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

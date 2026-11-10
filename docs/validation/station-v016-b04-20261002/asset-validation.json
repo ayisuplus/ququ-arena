@@ -1,0 +1,31 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b04-terraced-lounge\\refined-v001\\B04_TerracedLounge_v001.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 30268,
+      "materials": 5,
+      "textures": 0,
+      "hasUVs": true,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        25.40000057220459,
+        14.889999389648438,
+        15.43000054359436
+      ]
+    },
+    "failures": [],
+    "checksRun": 7,
+    "inspectorWarnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

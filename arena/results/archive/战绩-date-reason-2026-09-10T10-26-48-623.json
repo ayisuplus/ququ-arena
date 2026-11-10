@@ -1,0 +1,1528 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "date-reason",
+    "title": "日期推算擂台",
+    "description": "BBH date understanding 的中文生成器版：周几计算 / 日期偏移 N 天 / 月末天数（含闰年二月陷阱）。JS Date 为权威。测日历算术与月份天数规则。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:date-reason:2026-09-10",
+    "taskPrefix": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "weekday": "某天是星期几",
+      "offset": "日期偏移 N 天",
+      "last-day": "月末天数（含闰年二月）"
+    }
+  },
+  "startedAt": "2026-09-10T10:26:48.623Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期六",
+      "target": "星期六",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期六",
+      "target": "星期六",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "了期六",
+      "target": "星期六",
+      "latencyMs": 360,
+      "score": 0,
+      "note": "期望「星期六」，实答「了期六」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-01",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 7 月 19 日是星期几？",
+      "answer": "星期",
+      "target": "星期六",
+      "latencyMs": 234,
+      "score": 0,
+      "note": "期望「星期六」，实答「星期」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-02",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月 16 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-02",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月 16 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-02",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月 16 日是星期几？",
+      "answer": "星日",
+      "target": "星期日",
+      "latencyMs": 89,
+      "score": 0,
+      "note": "期望「星期日」，实答「星日」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-02",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月 16 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-03",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 5 月 26 日是星期几？",
+      "answer": "星期一",
+      "target": "星期一",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-03",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 5 月 26 日是星期几？",
+      "answer": "星期一",
+      "target": "星期一",
+      "latencyMs": 274,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-03",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 5 月 26 日是星期几？",
+      "answer": "星期",
+      "target": "星期一",
+      "latencyMs": 242,
+      "score": 0,
+      "note": "期望「星期一」，实答「星期」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-03",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 5 月 26 日是星期几？",
+      "answer": "星期一",
+      "target": "星期一",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-04",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 10 月 28 日是星期几？",
+      "answer": "星期四",
+      "target": "星期四",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-04",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 10 月 28 日是星期几？",
+      "answer": "星在四",
+      "target": "星期四",
+      "latencyMs": 362,
+      "score": 0,
+      "note": "期望「星期四」，实答「星在四」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-04",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 10 月 28 日是星期几？",
+      "answer": "星为四",
+      "target": "星期四",
+      "latencyMs": 288,
+      "score": 0,
+      "note": "期望「星期四」，实答「星为四」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-04",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 10 月 28 日是星期几？",
+      "answer": "星期",
+      "target": "星期四",
+      "latencyMs": 322,
+      "score": 0,
+      "note": "期望「星期四」，实答「星期」",
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "DR-WD-05",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 12 月 1 日是星期几？",
+      "answer": "星期",
+      "target": "星期三",
+      "latencyMs": 206,
+      "score": 0,
+      "note": "期望「星期三」，实答「星期」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-05",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 12 月 1 日是星期几？",
+      "answer": "星期三",
+      "target": "星期三",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-05",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 12 月 1 日是星期几？",
+      "answer": "星期三",
+      "target": "星期三",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-05",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 12 月 1 日是星期几？",
+      "answer": "星期三",
+      "target": "星期三",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-06",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 11 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-06",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 11 日是星期几？",
+      "answer": "星期人",
+      "target": "星期日",
+      "latencyMs": 356,
+      "score": 0,
+      "note": "期望「星期日」，实答「星期人」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-06",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 11 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-06",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 11 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-07",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 6 月 21 日是星期几？",
+      "answer": "星期一",
+      "target": "星期一",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-07",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 6 月 21 日是星期几？",
+      "answer": "期一",
+      "target": "星期一",
+      "latencyMs": 405,
+      "score": 0,
+      "note": "期望「星期一」，实答「期一」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-07",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 6 月 21 日是星期几？",
+      "answer": "星期",
+      "target": "星期一",
+      "latencyMs": 246,
+      "score": 0,
+      "note": "期望「星期一」，实答「星期」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-07",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 6 月 21 日是星期几？",
+      "answer": "星期一",
+      "target": "星期一",
+      "latencyMs": 196,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-08",
+      "condition": "weekday",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 18 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-08",
+      "condition": "weekday",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 18 日是星期几？",
+      "answer": "的期日",
+      "target": "星期日",
+      "latencyMs": 344,
+      "score": 0,
+      "note": "期望「星期日」，实答「的期日」",
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-08",
+      "condition": "weekday",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 18 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-WD-08",
+      "condition": "weekday",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 18 日是星期几？",
+      "answer": "星期日",
+      "target": "星期日",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-01",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 1 日之后第 192 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-8-11",
+      "target": "2024-8-11",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-01",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 1 日之后第 192 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-8-11",
+      "target": "2024-8-11",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-01",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 1 日之后第 192 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-8-11",
+      "target": "2024-8-11",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-01",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 2 月 1 日之后第 192 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-8-11",
+      "target": "2024-8-11",
+      "latencyMs": 253,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-02",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 6 月 17 日之后第 87 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "20不4-9-12",
+      "target": "2024-9-12",
+      "latencyMs": 143,
+      "score": 0,
+      "note": "期望「2024-9-12」，实答「20不4-9-12」",
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-02",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 6 月 17 日之后第 87 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-9-12",
+      "target": "2024-9-12",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-02",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 6 月 17 日之后第 87 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-9-12",
+      "target": "2024-9-12",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-02",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 6 月 17 日之后第 87 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-",
+      "target": "2024-9-12",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "期望「2024-9-12」，实答「2024-」",
+      "usage": {
+        "input": 41,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-03",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 9 月 13 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-10-26",
+      "target": "2026-10-26",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-03",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 9 月 13 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-10-26",
+      "target": "2026-10-26",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-03",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 9 月 13 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-",
+      "target": "2026-10-26",
+      "latencyMs": 195,
+      "score": 0,
+      "note": "期望「2026-10-26」，实答「2026-」",
+      "usage": {
+        "input": 41,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-03",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 9 月 13 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-10-26",
+      "target": "2026-10-26",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-04",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 4 月 15 日之后第 38 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "这025-5-23",
+      "target": "2025-5-23",
+      "latencyMs": 289,
+      "score": 0,
+      "note": "期望「2025-5-23」，实答「这025-5-23」",
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-04",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 4 月 15 日之后第 38 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2025-5-23",
+      "target": "2025-5-23",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-04",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 4 月 15 日之后第 38 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2是25-5-23",
+      "target": "2025-5-23",
+      "latencyMs": 292,
+      "score": 0,
+      "note": "期望「2025-5-23」，实答「2是25-5-23」",
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-04",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 4 月 15 日之后第 38 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "20大5-5-23",
+      "target": "2025-5-23",
+      "latencyMs": 106,
+      "score": 0,
+      "note": "期望「2025-5-23」，实答「20大5-5-23」",
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-05",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 9 月 7 日之后第 101 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-12-17",
+      "target": "2024-12-17",
+      "latencyMs": 369,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-05",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 9 月 7 日之后第 101 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-12-17",
+      "target": "2024-12-17",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-05",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 9 月 7 日之后第 101 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "224-12-17",
+      "target": "2024-12-17",
+      "latencyMs": 388,
+      "score": 0,
+      "note": "期望「2024-12-17」，实答「224-12-17」",
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-05",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 9 月 7 日之后第 101 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-12-17",
+      "target": "2024-12-17",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-06",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 23 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-10-5",
+      "target": "2024-10-5",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-06",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 23 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-10-5",
+      "target": "2024-10-5",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-06",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 23 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-10-5",
+      "target": "2024-10-5",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-06",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 8 月 23 日之后第 43 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2024-10-5",
+      "target": "2024-10-5",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-07",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月 1 日之后第 156 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2025-3-6",
+      "target": "2025-3-6",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-07",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月 1 日之后第 156 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2025-3-6",
+      "target": "2025-3-6",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-07",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月 1 日之后第 156 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2025-3-6",
+      "target": "2025-3-6",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-07",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月 1 日之后第 156 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2025-3-6",
+      "target": "2025-3-6",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-08",
+      "condition": "offset",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 8 月 8 日之后第 34 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-",
+      "target": "2026-9-11",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "期望「2026-9-11」，实答「2026-」",
+      "usage": {
+        "input": 40,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-08",
+      "condition": "offset",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 8 月 8 日之后第 34 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "20上6-9-11",
+      "target": "2026-9-11",
+      "latencyMs": 110,
+      "score": 0,
+      "note": "期望「2026-9-11」，实答「20上6-9-11」",
+      "usage": {
+        "input": 40,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-08",
+      "condition": "offset",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 8 月 8 日之后第 34 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-9-11",
+      "target": "2026-9-11",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-OF-08",
+      "condition": "offset",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 8 月 8 日之后第 34 天是几几年几月几日？（格式 YYYY-M-D）",
+      "answer": "2026-",
+      "target": "2026-9-11",
+      "latencyMs": 213,
+      "score": 0,
+      "note": "期望「2026-9-11」，实答「2026-」",
+      "usage": {
+        "input": 40,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-01",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2023 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-01",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2023 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 397,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-01",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2023 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-01",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2023 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-02",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-02",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-02",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 122,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-02",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-03",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-03",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 191,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-03",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 276,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-03",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2026 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 98,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-04",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-04",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 2 月的最后一天是几号？",
+      "answer": "28",
+      "target": "28",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-04",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 406,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-04",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2027 年 2 月的最后一天是几号？",
+      "answer": "2",
+      "target": "28",
+      "latencyMs": 238,
+      "score": 0,
+      "note": "期望「28」，实答「2」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-05",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 5 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "DR-LD-05",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 5 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-05",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 5 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 317,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-05",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 5 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 378,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-06",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 1 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-06",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 1 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-06",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 1 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 477,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-06",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 1 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-07",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-07",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 403,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-07",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 460,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-07",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2024 年 10 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-08",
+      "condition": "last-day",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 10 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-08",
+      "condition": "last-day",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 10 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-08",
+      "condition": "last-day",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 10 月的最后一天是几号？",
+      "answer": "3",
+      "target": "31",
+      "latencyMs": 191,
+      "score": 0,
+      "note": "期望「31」，实答「3」",
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "DR-LD-08",
+      "condition": "last-day",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（星期几 / YYYY-M-D / 数字），不多一个字。\n2025 年 10 月的最后一天是几号？",
+      "answer": "31",
+      "target": "31",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 28,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "76a66609da672a57",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.22.0"
+  }
+}

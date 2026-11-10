@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();var frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nreturn UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None).Where(r=>r.gameObject.scene==scene&&!r.transform.IsChildOf(frame)).Select(r=>new{r,p=frame.InverseTransformPoint(r.bounds.center)}).Where(x=>UnityEngine.Mathf.Abs(x.p.x)<28&&UnityEngine.Mathf.Abs(x.p.z)<27&&x.p.y>2.8f&&x.p.y<9).Select(x=>new{path=UnityEditor.AnimationUtility.CalculateTransformPath(x.r.transform,null),position=x.p.ToString(\"F2\"),size=x.r.bounds.size.ToString(\"F2\")}).ToArray();\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "R3 homes and ecology planning deck/V015 ecology entrances and residential facades/East conservatory entry bowed entry canopy",
+          "position": "(25.68, 3.85, 0.00)",
+          "size": "(10.84, 0.70, 7.95)"
+        },
+        {
+          "path": "R3 homes and ecology planning deck/V015 ecology entrances and residential facades/South conservatory entry bowed entry canopy",
+          "position": "(0.00, 3.85, -23.68)",
+          "size": "(7.95, 0.70, 10.84)"
+        },
+        {
+          "path": "R3 homes and ecology planning deck/V015 ecology entrances and residential facades/Ecology entrance sage fascia",
+          "position": "(0.00, 3.43, 0.00)",
+          "size": "(43.37, 0.14, 46.83)"
+        },
+        {
+          "path": "R3 homes and ecology planning deck/V015 ecology entrances and residential facades/West conservatory entry bowed entry canopy",
+          "position": "(-25.68, 3.85, 0.00)",
+          "size": "(10.84, 0.70, 7.95)"
+        },
+        {
+          "path": "R3 homes and ecology planning deck/V015 ecology entrances and residential facades/North conservatory entry bowed entry canopy",
+          "position": "(0.00, 3.85, 22.68)",
+          "size": "(6.54, 0.70, 10.15)"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

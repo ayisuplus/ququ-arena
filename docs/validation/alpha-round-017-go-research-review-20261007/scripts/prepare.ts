@@ -1,0 +1,24 @@
+import { access, readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { join, resolve } from "node:path";
+const here=import.meta.dir,source=resolve(here,"../.."),game="E:/projects/黑洞空间站";
+for(const file of ["session.json","readiness.json","dispatch-started.json"])if(await access(join(here,file)).then(()=>true,()=>false))throw new Error("Existing preparation/task; inspect instead");
+const host=JSON.parse(await readFile(join(source,".alpha/alpha-round-013-tool-selection/host.private.json"),"utf8"));
+const api=async(path:string,input?:any)=>{const r=await fetch(`http://127.0.0.1:${host.port}${path}`,{method:input===undefined?"GET":"POST",headers:{"x-alpha-token":host.token,"content-type":"application/json"},...(input===undefined?{}:{body:JSON.stringify(input)}),signal:AbortSignal.timeout(120000)});if(!r.ok)throw new Error(`HTTP ${r.status} ${path}`);return await r.json() as any;};
+const idle=(s:any)=>s.isSettled&&!s.isStreaming&&!s.hasPendingAsyncWork&&!s.queuedMessageCount;
+const list=await api("/api/native/sessions");
+for(const s of list.sessions){const r=await fetch(`http://127.0.0.1:${host.port}/api/native/sessions/${s.id}/state`,{headers:{"x-alpha-token":host.token},signal:AbortSignal.timeout(30000)});if(r.status===409)continue;if(!r.ok||!idle(await r.json()))throw new Error("Other work active");}
+const configPath="C:/Users/36322/.omp/agent/config.yml",configSha256=createHash("sha256").update(await readFile(configPath)).digest("hex");
+const reusable=list.sessions.find((s:any)=>s.id==="48b45572-e154-439a-b620-a2ebeb947018" && s.cwd.replaceAll("\\","/")===game); if(!reusable)throw new Error("R16 session missing; inspect before creating another"); const created={session:reusable};
+await writeFile(join(here,"session.json"),JSON.stringify(created.session,null,2)+"\n",{flag:"wx"});
+const id=created.session.id,base=`/api/native/sessions/${id}`;
+await api(base+"/open",{});
+const selected=await api(base+"/command",{type:"set_model",provider:"opencode-go",modelId:"mimo-v2.6-pro"});
+const retry=await api(base+"/command",{type:"set_auto_retry",enabled:false});
+const state=await api(base+"/state");
+if(!selected.success||!retry.success||!idle(state)||state.messageCount||state.model?.provider!=="opencode-go"||state.model?.id!=="mimo-v2.6-pro")throw new Error("Session readiness gate failed");
+const previousTools=await api(base+"/host/tools"),restricted=await api(base+"/host/tools",{action:"set",names:["read"],mounted:[]});
+if(JSON.stringify(restricted)!==JSON.stringify({enabled:["read"],active:["read"],mounted:[]}))throw new Error("Tool selection gate failed");
+const safeState={ompSessionId:state.sessionId,provider:state.model.provider,model:state.model.id,messageCount:state.messageCount,isSettled:state.isSettled,isStreaming:state.isStreaming,hasPendingAsyncWork:state.hasPendingAsyncWork,queuedMessageCount:state.queuedMessageCount};
+await writeFile(join(here,"readiness.json"),JSON.stringify({atUtc:new Date().toISOString(),sessionId:id,backendPid:host.pid,cwd:game,retryDisabled:true,state:safeState,previousTools,restricted,configPath,configSha256,requests:0},null,2)+"\n",{flag:"wx"});
+console.log(JSON.stringify({ready:true,sessionId:id,model:"opencode-go/mimo-v2.6-pro",retry:false,activeTools:restricted.active,requests:0}));

@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"Saved V017 Edit required\");\nconst string folder=\"Assets/Station/Materials/EcologicalParkV017\";\nif(!UnityEditor.AssetDatabase.IsValidFolder(folder))UnityEditor.AssetDatabase.CreateFolder(\"Assets/Station/Materials\",\"EcologicalParkV017\");\nvar original=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/EcologicalGardenV014/PachiraLeaves.mat\");\nvar corrected=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Models/CreativeBuildingsV016/B03/B03_PachiraLeaves_v003.mat\");\nif(!corrected)throw new System.Exception(\"Corrected B03 source material unavailable\");\nvar material=new UnityEngine.Material(corrected){name=\"ParkPachiraLeaves_v001\"};UnityEditor.AssetDatabase.CreateAsset(material,folder+\"/ParkPachiraLeaves_v001.mat\");\nvar root=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\");int slots=0;\nforeach(var r in root.GetComponentsInChildren<UnityEngine.MeshRenderer>(true)){\n var ms=r.sharedMaterials;bool changed=false;\n for(int i=0;i<ms.Length;i++)if(ms[i]==original){ms[i]=material;changed=true;slots++;}\n if(changed){UnityEditor.Undo.RecordObject(r,\"Correct park leaf source color\");r.sharedMaterials=ms;UnityEditor.EditorUtility.SetDirty(r);}\n}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nvar importer=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(UnityEditor.AssetDatabase.GetAssetPath(material.GetTexture(\"_BaseMap\")));\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-lighting-20261003/leaf-color.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{slots,material=UnityEditor.AssetDatabase.GetAssetPath(material),texture=UnityEditor.AssetDatabase.GetAssetPath(material.GetTexture(\"_BaseMap\")),importer.sRGBTexture,sourceMaterialAndTextureUnchanged=true},Newtonsoft.Json.Formatting.Indented));\nreturn new{slots,importer.sRGBTexture};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "slots": 40,
+        "sRGBTexture": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

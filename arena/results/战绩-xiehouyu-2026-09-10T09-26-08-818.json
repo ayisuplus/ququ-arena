@@ -1,0 +1,1277 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "xiehouyu",
+    "title": "歇后语接龙擂台",
+    "description": "20 条通行歇后语，出前半答后半（内容自建，canonical 答案）。测中文民间语言库存量——\"泥菩萨过河\"之后接不出\"自身难保\"的模型不配谈中文。exact 裁判（归一化去标点）。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:xiehouyu:2026-09-10",
+    "taskPrefix": "只输出歇后语的后半句本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "classic": "通行歇后语接龙"
+    }
+  },
+  "startedAt": "2026-09-10T09:26:08.818Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "XH-01",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「泥菩萨过河——」",
+      "answer": "自不难保",
+      "target": "自身难保",
+      "latencyMs": 301,
+      "score": 0,
+      "note": "期望「自身难保」，实答「自不难保」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-01",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「泥菩萨过河——」",
+      "answer": "的身难保",
+      "target": "自身难保",
+      "latencyMs": 90,
+      "score": 0,
+      "note": "期望「自身难保」，实答「的身难保」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-01",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「泥菩萨过河——」",
+      "answer": "自身难",
+      "target": "自身难保",
+      "latencyMs": 458,
+      "score": 0,
+      "note": "期望「自身难保」，实答「自身难」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-01",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「泥菩萨过河——」",
+      "answer": "自身难保",
+      "target": "自身难保",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-02",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「芝麻开花——」",
+      "answer": "节节高",
+      "target": "节节高",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-02",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「芝麻开花——」",
+      "answer": "节节高",
+      "target": "节节高",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-02",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「芝麻开花——」",
+      "answer": "节有高",
+      "target": "节节高",
+      "latencyMs": 320,
+      "score": 0,
+      "note": "期望「节节高」，实答「节有高」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-02",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「芝麻开花——」",
+      "answer": "节节高",
+      "target": "节节高",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-03",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「小葱拌豆腐——」",
+      "answer": "一清二白",
+      "target": "一清二白",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-03",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「小葱拌豆腐——」",
+      "answer": "一了二白",
+      "target": "一清二白",
+      "latencyMs": 283,
+      "score": 0,
+      "note": "期望「一清二白」，实答「一了二白」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-03",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「小葱拌豆腐——」",
+      "answer": "一清二白",
+      "target": "一清二白",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-03",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「小葱拌豆腐——」",
+      "answer": "一清二白",
+      "target": "一清二白",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-04",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「擀面杖吹火——」",
+      "answer": "一窍不通",
+      "target": "一窍不通",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-04",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「擀面杖吹火——」",
+      "answer": "一窍不通",
+      "target": "一窍不通",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-04",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「擀面杖吹火——」",
+      "answer": "有窍不通",
+      "target": "一窍不通",
+      "latencyMs": 212,
+      "score": 0,
+      "note": "期望「一窍不通」，实答「有窍不通」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-04",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「擀面杖吹火——」",
+      "answer": "一窍不通",
+      "target": "一窍不通",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-05",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「哑巴吃黄连——」",
+      "answer": "有苦说不出",
+      "target": "有苦说不出",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-05",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「哑巴吃黄连——」",
+      "answer": "有苦说不出",
+      "target": "有苦说不出",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-05",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「哑巴吃黄连——」",
+      "answer": "有苦说不出",
+      "target": "有苦说不出",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-05",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「哑巴吃黄连——」",
+      "answer": "有苦说不出",
+      "target": "有苦说不出",
+      "latencyMs": 396,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-06",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「周瑜打黄盖——」",
+      "answer": "一个愿打一个愿挨",
+      "target": "一个愿打一个愿挨",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-06",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「周瑜打黄盖——」",
+      "answer": "一个愿打一个愿挨",
+      "target": "一个愿打一个愿挨",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-06",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「周瑜打黄盖——」",
+      "answer": "一个愿打",
+      "target": "一个愿打一个愿挨",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「一个愿打一个愿挨」，实答「一个愿打」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-06",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「周瑜打黄盖——」",
+      "answer": "一个愿打一个愿挨",
+      "target": "一个愿打一个愿挨",
+      "latencyMs": 322,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-07",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猪八戒照镜子——」",
+      "answer": "里外不是人",
+      "target": "里外不是人",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-07",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猪八戒照镜子——」",
+      "answer": "里外不是人",
+      "target": "里外不是人",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-07",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猪八戒照镜子——」",
+      "answer": "里外不是人",
+      "target": "里外不是人",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "XH-07",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猪八戒照镜子——」",
+      "answer": "里外不是人",
+      "target": "里外不是人",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-08",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「狗拿耗子——」",
+      "answer": "多管闲事",
+      "target": "多管闲事",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-08",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「狗拿耗子——」",
+      "answer": "多管闲事",
+      "target": "多管闲事",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-08",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「狗拿耗子——」",
+      "answer": "了管闲事",
+      "target": "多管闲事",
+      "latencyMs": 226,
+      "score": 0,
+      "note": "期望「多管闲事」，实答「了管闲事」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-08",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「狗拿耗子——」",
+      "answer": "多管闲事",
+      "target": "多管闲事",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-09",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猫哭耗子——」",
+      "answer": "假慈",
+      "target": "假慈悲",
+      "latencyMs": 339,
+      "score": 0,
+      "note": "期望「假慈悲」，实答「假慈」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-09",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猫哭耗子——」",
+      "answer": "假慈悲",
+      "target": "假慈悲",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-09",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猫哭耗子——」",
+      "answer": "假慈悲",
+      "target": "假慈悲",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-09",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「猫哭耗子——」",
+      "answer": "假一悲",
+      "target": "假慈悲",
+      "latencyMs": 304,
+      "score": 0,
+      "note": "期望「假慈悲」，实答「假一悲」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-10",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「老虎屁股——」",
+      "answer": "摸不得",
+      "target": "摸不得",
+      "latencyMs": 144,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-10",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「老虎屁股——」",
+      "answer": "摸不我",
+      "target": "摸不得",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「摸不得」，实答「摸不我」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-10",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「老虎屁股——」",
+      "answer": "摸不",
+      "target": "摸不得",
+      "latencyMs": 475,
+      "score": 0,
+      "note": "期望「摸不得」，实答「摸不」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-10",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「老虎屁股——」",
+      "answer": "摸不得",
+      "target": "摸不得",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-11",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「八仙过海——」",
+      "answer": "各显神通",
+      "target": "各显神通",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-11",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「八仙过海——」",
+      "answer": "各显神通",
+      "target": "各显神通",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-11",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「八仙过海——」",
+      "answer": "各显神通",
+      "target": "各显神通",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-11",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「八仙过海——」",
+      "answer": "各显",
+      "target": "各显神通",
+      "latencyMs": 125,
+      "score": 0,
+      "note": "期望「各显神通」，实答「各显」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-12",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「门缝里看人——」",
+      "answer": "把人看扁了",
+      "target": "把人看扁了",
+      "latencyMs": 391,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-12",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「门缝里看人——」",
+      "answer": "把人看扁了",
+      "target": "把人看扁了",
+      "latencyMs": 193,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-12",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「门缝里看人——」",
+      "answer": "把人中扁了",
+      "target": "把人看扁了",
+      "latencyMs": 238,
+      "score": 0,
+      "note": "期望「把人看扁了」，实答「把人中扁了」",
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-12",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「门缝里看人——」",
+      "answer": "把人看扁了",
+      "target": "把人看扁了",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-13",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「王婆卖瓜——」",
+      "answer": "自卖自夸",
+      "target": "自卖自夸",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-13",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「王婆卖瓜——」",
+      "answer": "自卖自夸",
+      "target": "自卖自夸",
+      "latencyMs": 111,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-13",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「王婆卖瓜——」",
+      "answer": "自卖自夸",
+      "target": "自卖自夸",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-13",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「王婆卖瓜——」",
+      "answer": "自卖自",
+      "target": "自卖自夸",
+      "latencyMs": 237,
+      "score": 0,
+      "note": "期望「自卖自夸」，实答「自卖自」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-14",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「飞蛾扑火——」",
+      "answer": "取灭亡",
+      "target": "自取灭亡",
+      "latencyMs": 283,
+      "score": 0,
+      "note": "期望「自取灭亡」，实答「取灭亡」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-14",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「飞蛾扑火——」",
+      "answer": "自取灭亡",
+      "target": "自取灭亡",
+      "latencyMs": 445,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-14",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「飞蛾扑火——」",
+      "answer": "自取不亡",
+      "target": "自取灭亡",
+      "latencyMs": 424,
+      "score": 0,
+      "note": "期望「自取灭亡」，实答「自取不亡」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-14",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「飞蛾扑火——」",
+      "answer": "自取灭亡",
+      "target": "自取灭亡",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-15",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「兔子尾巴——」",
+      "answer": "长不了",
+      "target": "长不了",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-15",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「兔子尾巴——」",
+      "answer": "长不了",
+      "target": "长不了",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-15",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「兔子尾巴——」",
+      "answer": "长不了",
+      "target": "长不了",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-15",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「兔子尾巴——」",
+      "answer": "长不了",
+      "target": "长不了",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-16",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「十五个吊桶打水——」",
+      "answer": "七上为下",
+      "target": "七上八下",
+      "latencyMs": 341,
+      "score": 0,
+      "note": "期望「七上八下」，实答「七上为下」",
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-16",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「十五个吊桶打水——」",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-16",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「十五个吊桶打水——」",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-16",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「十五个吊桶打水——」",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-17",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「骑驴看唱本——」",
+      "answer": "走着瞧",
+      "target": "走着瞧",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-17",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「骑驴看唱本——」",
+      "answer": "走着瞧",
+      "target": "走着瞧",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-17",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「骑驴看唱本——」",
+      "answer": "走着瞧",
+      "target": "走着瞧",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-17",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「骑驴看唱本——」",
+      "answer": "走着",
+      "target": "走着瞧",
+      "latencyMs": 162,
+      "score": 0,
+      "note": "期望「走着瞧」，实答「走着」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-18",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「肉包子打狗——」",
+      "answer": "有去无回",
+      "target": "有去无回",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-18",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「肉包子打狗——」",
+      "answer": "有去无",
+      "target": "有去无回",
+      "latencyMs": 155,
+      "score": 0,
+      "note": "期望「有去无回」，实答「有去无」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-18",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「肉包子打狗——」",
+      "answer": "有去",
+      "target": "有去无回",
+      "latencyMs": 362,
+      "score": 0,
+      "note": "期望「有去无回」，实答「有去」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-18",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「肉包子打狗——」",
+      "answer": "有无回",
+      "target": "有去无回",
+      "latencyMs": 366,
+      "score": 0,
+      "note": "期望「有去无回」，实答「有无回」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-19",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「竹篮打水——」",
+      "answer": "一场空",
+      "target": "一场空",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-19",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「竹篮打水——」",
+      "answer": "一空",
+      "target": "一场空",
+      "latencyMs": 255,
+      "score": 0,
+      "note": "期望「一场空」，实答「一空」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-19",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「竹篮打水——」",
+      "answer": "一场",
+      "target": "一场空",
+      "latencyMs": 390,
+      "score": 0,
+      "note": "期望「一场空」，实答「一场」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-19",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「竹篮打水——」",
+      "answer": "一场空",
+      "target": "一场空",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-20",
+      "condition": "classic",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「外甥打灯笼——」",
+      "answer": "照旧",
+      "target": "照旧",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-20",
+      "condition": "classic",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「外甥打灯笼——」",
+      "answer": "照",
+      "target": "照旧",
+      "latencyMs": 437,
+      "score": 0,
+      "note": "期望「照旧」，实答「照」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-20",
+      "condition": "classic",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「外甥打灯笼——」",
+      "answer": "照",
+      "target": "照旧",
+      "latencyMs": 375,
+      "score": 0,
+      "note": "期望「照旧」，实答「照」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "XH-20",
+      "condition": "classic",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出歇后语的后半句本身，不多一个字。\n歇后语接龙：「外甥打灯笼——」",
+      "answer": "照旧",
+      "target": "照旧",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "5bd8bf054dca3e35",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.18.0"
+  }
+}

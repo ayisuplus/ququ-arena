@@ -1,0 +1,392 @@
+{
+  "status": "Temporary P2 massing, not constructed buildings",
+  "lots": {
+    "status": "Exploratory massing lots; native clearance and visual review required",
+    "lots": [
+      {
+        "id": "cafe-court-wing",
+        "district": "C",
+        "root": "V015 package - cafe and observation gallery",
+        "x0": -27,
+        "x1": -10,
+        "z0": 10,
+        "z1": 28,
+        "height": 14,
+        "tiers": [
+          [
+            -27,
+            -10,
+            0,
+            8,
+            10,
+            28
+          ],
+          [
+            -27,
+            -16,
+            8,
+            11.5,
+            12,
+            26
+          ],
+          [
+            -27,
+            -21,
+            11.5,
+            14,
+            14,
+            24
+          ]
+        ],
+        "intent": "Existing east cafe and new west wing face one common forecourt; low entrance kept visible"
+      },
+      {
+        "id": "study-court-wing",
+        "district": "L",
+        "root": "V015 package - 06 study",
+        "x0": -16,
+        "x1": 6,
+        "z0": 22,
+        "z1": 36,
+        "height": 12,
+        "tiers": [
+          [
+            -16,
+            6,
+            0,
+            7.5,
+            22,
+            36
+          ],
+          [
+            -16,
+            6,
+            7.5,
+            12,
+            28,
+            36
+          ]
+        ],
+        "intent": "Low courtyard edge and recessed upper reading volume behind the original study entrance"
+      },
+      {
+        "id": "homes-shared-wing",
+        "district": "H",
+        "root": "V015 package - existing shared resident lounge",
+        "x0": -14,
+        "x1": 4,
+        "z0": -43,
+        "z1": -20,
+        "height": 14,
+        "tiers": [
+          [
+            -14,
+            4,
+            0,
+            7,
+            -43,
+            -20
+          ],
+          [
+            -14,
+            -2,
+            7,
+            10.5,
+            -41,
+            -22
+          ],
+          [
+            -14,
+            -7,
+            10.5,
+            14,
+            -39,
+            -24
+          ]
+        ],
+        "intent": "Stepped shared building beside original lounge, between retained housing groups; no new rooms or residents"
+      },
+      {
+        "id": "guest-court-wing",
+        "district": "G",
+        "root": "V015 package - 11 guest lodge",
+        "x0": -24,
+        "x1": -9,
+        "z0": -28,
+        "z1": -18,
+        "height": 14.5,
+        "tiers": [
+          [
+            -24,
+            -9,
+            0,
+            7,
+            -28,
+            -18
+          ],
+          [
+            -24,
+            -13,
+            7,
+            11,
+            -28,
+            -20
+          ],
+          [
+            -24,
+            -18,
+            11,
+            14.5,
+            -28,
+            -23
+          ]
+        ],
+        "intent": "Terraced shared lookout wing beside retained lodge; B04 stays an independent same-ring annex"
+      }
+    ]
+  },
+  "views": [
+    {
+      "id": "station",
+      "frame": "",
+      "eye": [
+        -390.0,
+        350.0,
+        -460.0
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fov": 60.0,
+      "world": [
+        -390.0,
+        350.0,
+        -460.0
+      ]
+    },
+    {
+      "id": "research-overview",
+      "frame": "V015 package - research main and entry canopy",
+      "eye": [
+        56.0,
+        38.0,
+        60.0
+      ],
+      "target": [
+        0.0,
+        3.0,
+        7.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -43.0384827,
+        38.0,
+        -194.54483
+      ]
+    },
+    {
+      "id": "research-eye",
+      "frame": "V015 package - research main and entry canopy",
+      "eye": [
+        16.0,
+        1.7,
+        15.0
+      ],
+      "target": [
+        -8.0,
+        3.0,
+        15.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -62.00962,
+        1.7,
+        -137.403809
+      ]
+    },
+    {
+      "id": "cafe-eye",
+      "frame": "V015 package - cafe and observation gallery",
+      "eye": [
+        -15.0,
+        1.7,
+        5.0
+      ],
+      "target": [
+        10.0,
+        2.0,
+        5.0
+      ],
+      "fov": 65.0,
+      "world": [
+        117.0,
+        1.7,
+        5.0
+      ]
+    },
+    {
+      "id": "reading-eye",
+      "frame": "V016 B02 crystal archive exterior trial",
+      "eye": [
+        -1.2,
+        1.7,
+        27.0
+      ],
+      "target": [
+        0.0,
+        7.0,
+        0.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -163.00148,
+        1.72,
+        51.7006378
+      ]
+    },
+    {
+      "id": "homes-eye",
+      "frame": "V015 package - resident chatgpt home package",
+      "eye": [
+        18.0,
+        1.7,
+        0.0
+      ],
+      "target": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "fov": 65.0,
+      "world": [
+        152.340668,
+        1.7,
+        -181.552536
+      ]
+    },
+    {
+      "id": "guest-eye",
+      "frame": "V016 B04 terraced lounge exterior trial",
+      "eye": [
+        0.5,
+        1.7,
+        26.0
+      ],
+      "target": [
+        0.0,
+        6.0,
+        0.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -244.319153,
+        1.72,
+        -42.5723419
+      ]
+    },
+    {
+      "id": "garden-eye",
+      "frame": "V015 package - glass ecology garden",
+      "eye": [
+        -14.5,
+        1.7,
+        11.5
+      ],
+      "target": [
+        -8.0,
+        1.0,
+        17.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -111.70929,
+        1.7,
+        170.48616
+      ]
+    },
+    {
+      "id": "arrival-eye",
+      "frame": "V015 package - arrival port",
+      "eye": [
+        -6.8,
+        1.7,
+        -30.0
+      ],
+      "target": [
+        -6.8,
+        3.0,
+        0.0
+      ],
+      "fov": 65.0,
+      "world": [
+        -6.8,
+        1.7,
+        260.0
+      ]
+    },
+    {
+      "id": "cafe-massing",
+      "frame": "V015 package - cafe and observation gallery",
+      "eye": [
+        -38.0,
+        22.0,
+        40.0
+      ],
+      "target": [
+        0.0,
+        5.0,
+        7.0
+      ],
+      "fov": 65.0
+    },
+    {
+      "id": "study-massing",
+      "frame": "V015 package - 06 study",
+      "eye": [
+        30.0,
+        28.0,
+        47.0
+      ],
+      "target": [
+        0.0,
+        6.0,
+        10.0
+      ],
+      "fov": 65.0
+    },
+    {
+      "id": "homes-massing",
+      "frame": "V015 package - existing shared resident lounge",
+      "eye": [
+        -38.0,
+        27.0,
+        -54.0
+      ],
+      "target": [
+        -1.0,
+        6.0,
+        -13.0
+      ],
+      "fov": 65.0
+    },
+    {
+      "id": "guest-massing",
+      "frame": "V015 package - 11 guest lodge",
+      "eye": [
+        -43.0,
+        30.0,
+        -50.0
+      ],
+      "target": [
+        -7.0,
+        6.0,
+        -20.0
+      ],
+      "fov": 65.0
+    }
+  ],
+  "isDirty": false,
+  "urp": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"\",\"m_EditorClassIdentifier\":\"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData\",\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}}"
+}

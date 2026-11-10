@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-01",
+  "baseline_commit": "29aeee0e84c477282e877de57ed0b49a408b3fd6",
+  "tool": "built-in imagegen",
+  "calls": 3,
+  "prompts": "prompts.md",
+  "reference": "ZHA KAPSARC official page, Hufton+Crow real photograph viewed in built-in browser this turn",
+  "images": [
+    {
+      "id": "IMG-V015-001",
+      "file": "history/birdseye-outdoor-plants-rejected.png",
+      "source_filename": "exec-65a63c32-a976-481a-a3c4-4160d52536ff.png",
+      "status": "rejected-outdoor-plants",
+      "edit_target": "../visual-direction-20261001/birdseye-v002.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2491768,
+      "sha256": "d422865b813cb4be85203fcf9fc14f3384eb652913df6b45ac8478504a570630"
+    },
+    {
+      "id": "IMG-V015-001",
+      "file": "birdseye-v003.png",
+      "source_filename": "exec-bdd46f3d-81ed-4559-bd02-ad28aa6b6b70.png",
+      "status": "current-concept",
+      "edit_target": "history/birdseye-outdoor-plants-rejected.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2358546,
+      "sha256": "722d6b88c06d1a1f22c75cdd8a6c40a9ff1c313e656887be25686c153169987b"
+    },
+    {
+      "id": "IMG-V015-002",
+      "file": "pedestrian-v003.png",
+      "source_filename": "exec-cc0a2caf-01de-430f-a3d0-745482491157.png",
+      "status": "current-concept",
+      "edit_target": "../visual-direction-20261001/pedestrian-v002.png",
+      "width": 1672,
+      "height": 940,
+      "bytes": 2235419,
+      "sha256": "85b0ccadfd4de0a7816e20337c4cb165a808ef33016997a8ada40d33642de7ec"
+    }
+  ],
+  "review": {
+    "remaining_limits": "Garden extent, exact building footprints, door offsets and mechanical joint detail are illustrative. Pedestrian floor still needs runtime roughness review.",
+    "construction_goal": "ongoing; not marked complete",
+    "runtime_changes_this_update": "none",
+    "user_visual_approval": "pending",
+    "visual_inspection": "Both final images viewed; circular core, flush solid transfer bands, enclosed vegetation, cool lighting retained. Exact dimensions and building counts are not image evidence."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "reference-cn",
+  "title": "中文指代擂台",
+  "description": "20 道有明确背景约束的中文指代消解题；根据背景与句子判断指代对象，不要求猜测作者未写出的意图。",
+  "author": "AI斗兽场（自建，Winograd 式最小对）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:reference-cn:2026-09-10",
+  "taskPrefix": "只输出代词指代的那个人名本身，不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "winograd": "最小对指代消解"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "为代词指代补充可区分的背景，不再仅靠人物职业、因果猜测或性别刻板印象确定答案。"
+  }
+}

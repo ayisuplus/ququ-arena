@@ -1,0 +1,46 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "waterMotionCaptured": true,
+    "normalRenderingVerified": true,
+    "views": [
+        {
+            "name": "entry",
+            "frames": 2824,
+            "renderedFrames": 2824,
+            "medianMs": 2.7241992950439455,
+            "p95Ms": 3.6598992347717287,
+            "maximumMs": 7.6694016456604
+        },
+        {
+            "name": "plant-layers",
+            "frames": 2776,
+            "renderedFrames": 2776,
+            "medianMs": 2.7821004390716554,
+            "p95Ms": 3.74920654296875,
+            "maximumMs": 7.121400356292725
+        },
+        {
+            "name": "water",
+            "frames": 3108,
+            "renderedFrames": 3108,
+            "medianMs": 2.470599412918091,
+            "p95Ms": 3.4403982162475588,
+            "maximumMs": 8.847696304321289
+        },
+        {
+            "name": "fountain",
+            "frames": 2375,
+            "renderedFrames": 2375,
+            "medianMs": 3.284296989440918,
+            "p95Ms": 4.303599834442139,
+            "maximumMs": 6.503798007965088
+        }
+    ],
+    "errors": []
+}

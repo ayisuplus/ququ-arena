@@ -1,0 +1,115 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\diagnose-lounge-resident.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "seconds": 700.4106,
+        "local": [
+          30.0528259,
+          0.07999998,
+          20.3829517
+        ],
+        "rings": [
+          {
+            "RingId": "v015-r1",
+            "DegreesPerSecond": 0.05115695,
+            "yaw": 0
+          },
+          {
+            "RingId": "v015-r2",
+            "DegreesPerSecond": -0.0244158171,
+            "yaw": 0
+          },
+          {
+            "RingId": "v015-r3",
+            "DegreesPerSecond": 0.0112786973,
+            "yaw": 0
+          }
+        ],
+        "near": [
+          {
+            "name": "Solid side pier 1 0",
+            "distance": 0,
+            "position": [
+              91.41516,
+              282.050354
+            ]
+          },
+          {
+            "name": "Solid washroom front -4.1",
+            "distance": 0,
+            "position": [
+              -100.965637,
+              206.5778
+            ]
+          },
+          {
+            "name": "Circular stand outer ascent ramps",
+            "distance": 0,
+            "position": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "08 activity silver window edges",
+            "distance": 0,
+            "position": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Solid front pier 1 2.18",
+            "distance": 0,
+            "position": [
+              -87.69464,
+              -99.2523346
+            ]
+          },
+          {
+            "name": "Solid low storage 1 6.5",
+            "distance": 0,
+            "position": [
+              39.51583,
+              143.500641
+            ]
+          },
+          {
+            "name": "resident chatgpt home package silver joints",
+            "distance": 0,
+            "position": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Solid window pier 1 1 4.86",
+            "distance": 0,
+            "position": [
+              -8.611404,
+              207.3956
+            ]
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

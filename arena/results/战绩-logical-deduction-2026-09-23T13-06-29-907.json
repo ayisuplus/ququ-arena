@@ -1,0 +1,1325 @@
+{
+  "id": "10f2bff9-c9eb-49f0-9bb8-a3a704327a1f",
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "logical-deduction",
+    "title": "逻辑排位擂台",
+    "description": "BBH logical_deduction 中文生成器版：四种物品排一列，给若干约束，问某位是谁。关键工程：约束先加到唯一解再做反向消元最小化（冗余约束=水题），24 种排列暴力校验唯一性。生成器即权威。",
+    "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:logical-deduction:2026-09-10",
+    "taskPrefix": "只输出物品名本身（如「仓鼠」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "unique-solve": "约束排位（唯一解已暴力校验）"
+    }
+  },
+  "startedAt": "2026-09-23T13:06:29.907Z",
+  "durationMs": 71354,
+  "contestants": [
+    {
+      "id": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "name": "DeepSeek-Flash",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "eca8fe86-57f0-49fd-88ea-16164d5aa465"
+    },
+    {
+      "id": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "name": "MiMo-V2.6-Flash",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "7b85e114-b714-4053-b044-585d9c9213c1"
+    },
+    {
+      "id": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "name": "MiMo-V2.6-Pro",
+      "kind": "pi",
+      "provider": "custom",
+      "modelId": "77bcf4ad-cf41-4efa-a36e-10611cc9d477"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 1724,
+      "solveMs": 1725,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身。需要解题。题目：四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1 狗在兔左边\n2 猫不在最左\n3 猫紧邻狗左边（即猫 immediately left of 狗）。问第1位是哪一种？\n\n需要推理。排列四个位置1-4。条件3：猫在狗左边紧邻：猫狗相邻，猫位置 = 狗位置-1。条件2 猫不在最左，所以猫不能位置1。因此猫位置至少2，狗位置至少3。条件1 狗在兔左边，狗位置 < 兔位置。若猫位置2，狗3，兔必须 >3 => 位置4。剩仓鼠位置1。排列：仓鼠、猫、狗、兔。第1位仓鼠。若猫位置3，狗4，兔必须 >4 impossible。所以唯一。答案“仓鼠”。用户要求只输出物品名本身，不多一个字。最终只输出 仓鼠。",
+      "score": 1,
+      "usage": {
+        "input": 104,
+        "output": 225,
+        "cachedInput": 0,
+        "reasoning": 222
+      },
+      "finishedMs": 1727
+    },
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 5399,
+      "solveMs": 5399,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nPets: 猫, 狗, 兔, 仓鼠Conditions:\n1. 狗 in兔 left (dog left of rabbit)\n2. 猫 not in leftmost\n3. 猫 immediately left of 狗\n\nFrom condition 3: 猫 狗 must be adjacent with cat immediately left of dog: [猫][狗]\n\nFrom condition 2: cat not in leftmost → so [猫][狗] cannot start at position 1.\n\nPossible placements of [猫][狗]:\n- positions 2-3: _猫 狗 _\n- positions 3-4: _ _ 猫 狗\n\nIf positions 2-3: remaining: pos1, pos4 for 兔, 仓鼠. Dog at pos3, rabbit must be right of dog → pos4 = 兔, pos1 = 仓鼠.\nCheck cat not leftmost: cat at pos2 ✓. So: 仓鼠 猫 狗 兔. All conditions:\n1. dog left of rabbit: pos3 < pos4 ✓\n2. cat not leftmost ✓\n3. cat immediately left of dog ✓\n\nIf positions 3-4: dog at pos4, rabbit must be right of dog — impossible. So invalid.\n\nSo first = 仓鼠.",
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 294,
+        "cachedInput": 0,
+        "reasoning": 290
+      },
+      "finishedMs": 5428
+    },
+    {
+      "taskId": "LD-01",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 狗 在 兔 左边\n2. 猫 不在最左\n3. 猫 紧邻 狗 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 6077,
+      "solveMs": 6077,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nPositions: 1, 2, 3, 4 (left to right)\n\n1. 狗 is left of 兔\n2. 猫 is not at position 1\n3. 猫 is immediately left of 狗 (猫 is directly to the left of 狗)\n\nFrom constraint 3: 猫 immediately left of 狗, so they form the pair 猫狗.\n\nPossible positions for 猫狗 pair: (1,2) or (2,3) or (3,4)\n\nConstraint 2: 猫 not at position 1, so the pair can be (2,3) or (3,4).\n\nIf pair is at (2,3): 猫=2, 狗=3. From constraint 1: 狗 is left of 兔, so 兔=4. Position 1 = 仓鼠.\n\nIf pair is at (3,4): 猫=3, 狗=4. From constraint 1: 狗 is left of 兔... but 狗 is at position 4 (rightmost), so 兔 can't be to the right of 狗. Contradiction.\n\nSo the only solution: position 1 = 仓鼠.",
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 284,
+        "cachedInput": 0,
+        "reasoning": 280
+      },
+      "finishedMs": 6105
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 1871,
+      "solveMs": 1871,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。需要只输出答案，可能格式不要引号？题目：四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1. 仓鼠在猫左边\n2. 狗紧邻兔左边\n3. 狗在仓鼠左边\n问第2位是哪种？\n\n排列 4 个 distinct。狗紧邻兔左边 => 狗兔连续块。狗在仓鼠左边，仓鼠在猫左边 => 狗 < 仓鼠 < 猫。兔呢？狗紧邻兔左边，所以兔紧跟狗右侧。因此顺序片段 狗兔... 且狗 < 仓鼠 < 猫。但兔在狗右边紧邻。四种都排：狗、兔、仓鼠、猫？检查：狗在仓鼠左，仓鼠在猫左。狗紧邻兔左，所以第1狗第2兔。然后剩余仓鼠猫，仓鼠在猫左 => 第3仓鼠第4猫。所以第2位是兔。只输出「兔」。需要确保无其他字。最终只输出 兔。 ",
+      "score": 1,
+      "usage": {
+        "input": 108,
+        "output": 256,
+        "cachedInput": 0,
+        "reasoning": 254
+      },
+      "finishedMs": 1901
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 8257,
+      "solveMs": 8257,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nPositions1, 2, 3, 4 from left to right.\n\nItems: 猫, 狗, 兔, 仓鼠\n\nConstraints:\n1. 仓鼠 在 猫 左边: hamster is left of cat\n2. 狗 紧邻 兔 左边: dog is immediately left of rabbit (dog...rabbit, adjacent)\n3. 狗 在 仓鼠 左边: dog is left of hamster\n\nFrom2: the pair (狗, 兔) must be adjacent with dog immediately left. Possible positions: (1,2) or (2,3) or (3,4).\n\nFrom 1 & 3: dog < hamster < cat (in position order, left to right).\n\nSo order: 狗 ... 仓鼠 ... 猫, and 兔 immediately right of 狗.\n\nLet's enumerate:\n\nCase A: 狗=1, 兔=2. Then 仓鼠 and 猫 in positions 3,4. Need 仓鼠 < 猫, so 仓鼠=3, 猫=4. Check: dog(1) < hamster(3) ✓, hamster(3) < cat(4) ✓. Valid! Second position: 兔.\n\nCase B: 狗=2, 兔=3. Then positions 1 and 4 for 仓鼠, 猫. Need dog(2) < hamster, so hamster must be 4, then cat must be... cat needs to be right of hamster(4) but no position. Or hamster=1? No, dog(2) < hamster fails. So invalid.\n\nCase C: 狗=3, 兔=4. Then positions 1,2 for 仓鼠, 猫. Need dog(3) < hamster: hamster > 3, but only positions 1,2 left. Invalid.\n\nSo answer: 兔",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 437,
+        "cachedInput": 0,
+        "reasoning": 434
+      },
+      "finishedMs": 9986
+    },
+    {
+      "taskId": "LD-02",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 在 猫 左边\n2. 狗 紧邻 兔 左边\n3. 狗 在 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 8486,
+      "solveMs": 8486,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through the constraints.\n\nPositions 1, 2, 3, 4 from left to right.\n\n1. 仓鼠 is to the left of 猫:仓鼠 position < 猫 position\n2. 狗 is immediately to the left of 兔: 狗 position + 1 = 兔 position\n3. 狗 is to the left of 仓鼠: 狗 position < 仓鼠 position\n\nSo the order must satisfy:\n- 狗 < 仓鼠 < 猫\n- 狗 and 兔 are adjacent, with 狗 immediately left of 兔 (i.e., (狗, 兔) as a consecutive pair)\n\nSince 狗 < 仓鼠 < 猫, the three are in order 狗, 仓鼠, 猫.\n\nThe pair (狗, 兔) must be consecutive.\n\nPositions1,2,3,4.\n\nIf狗 is at position 1,兔 is at position 2. Then 仓鼠 and 猫 must be at positions 3 and 4. Since 仓鼠 < 猫: 仓鼠 at 3, 猫 at 4.\nOrder: 狗, 兔, 仓鼠, 猫\nCheck: 仓鼠(3) < 猫(4) ✓, 狗(1)+1=兔(2) ✓, 狗(1) < 仓鼠(3) ✓\n\nIf 狗 is at position 2, 兔 is at position 3. Then 仓鼠 and 猫 at1 and 4. But 仓鼠 > 狗(2), so 仓鼠 must be at 4... but then 猫 would be at 1, and 仓鼠(4) is not < 猫(1). Contradiction.\n\nIf 狗 is at position 3, 兔 is at position 4. Then 仓鼠 and 猫 at 1 and 2. But 仓鼠 > 狗(3), impossible.\n\nSo the only valid arrangement is: 狗, 兔, 仓鼠, 猫.\n\nPosition 2 is 兔.",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 490,
+        "cachedInput": 0,
+        "reasoning": 487
+      },
+      "finishedMs": 10389
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 1844,
+      "solveMs": 1844,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答只输出物品名本身。需要解题。需要严格只输出物品名。需要确定第二位的宠物。\n\n题目：四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1. 兔在仓鼠左边\n2. 兔不在最左\n3. 猫紧邻仓鼠左边\n\n需要问第2位是哪一种。\n\n我们来推理。四个位置1-4。猫紧邻仓鼠左边，即猫在仓鼠前一位。所以可能对(cat, hamster)在位置(1,2),(2,3),(3,4)。\n\n兔在仓鼠左边且兔不在最左。兔位置 < 仓鼠位置，且兔 != 1。\n\n如果猫仓鼠在(1,2)，则仓鼠位置2，兔必须在位置1左边，且兔不在最左矛盾。不行。\n如果猫仓鼠在(2,3)，则仓鼠位置3，兔在位置1或2，且不在最左 => 兔位置2。但位置2已经是猫，矛盾。\n如果猫仓鼠在(3,4)，则仓鼠位置4，兔在位置1,2,3且不在最左 => 兔位置2或3。位置3是猫，所以兔位置2。狗位置1。序列：狗、兔、猫、仓鼠。第2位是兔。\n\n只输出「兔」。确保没有引号或标点。 final only 兔. ",
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 310,
+        "cachedInput": 0,
+        "reasoning": 308
+      },
+      "finishedMs": 7275
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 6644,
+      "solveMs": 6644,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Four pets in a row: 猫, 狗, 兔, 仓鼠.\n\nConstraints:\n1. 兔 left of 仓鼠\n2. 兔 not in leftmost position (position 1)\n3. 猫 immediately left of 仓鼠\n\nSo猫 _仓鼠 pattern: 猫 at position i, 仓鼠 at i+1.\n\nPossible: 猫 at 1, 仓鼠 at 2; 猫 at 2, 仓鼠 at 3; 猫 at 3, 仓鼠 at 4.\n\n兔 not at position 1, and 兔 left of 仓鼠.\n\nCase A: 猫 仓鼠 ... positions 1,2. Remaining兔, 狗 at 3,4. 兔 left of 仓鼠 (pos 2) — 兔 would be at 3 or 4, not left. Fails.\n\nCase B: 猫 at 2, 仓鼠 at 3. Remaining 兔, 狗 at 1 and 4. 兔 not at 1 (constraint 2), so 兔 at 4, 狗 at 1. But 兔 must be left of 仓鼠 (pos 3): 兔 at 4 is not left. Fails.\n\nCase C: 猫 at 3, 仓鼠 at 4. Remaining 兔, 狗 at 1 and 2. 兔 not at 1 → 兔 at 2, 狗 at 1. 兔 (2) left of 仓鼠 (4). ✓\n\nSo position 2 is 兔.",
+      "score": 1,
+      "usage": {
+        "input": 90,
+        "output": 364,
+        "cachedInput": 0,
+        "reasoning": 361
+      },
+      "finishedMs": 12750
+    },
+    {
+      "taskId": "LD-03",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 在 仓鼠 左边\n2. 兔 不在最左\n3. 猫 紧邻 仓鼠 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 8593,
+      "solveMs": 8593,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions1-4: four pets:猫, 狗, 兔, 仓鼠.\n\nClues:\n1. 兔 is left of 仓鼠\n2. 兔 is not in position 1 (not leftmost)\n3. 猫 is immediately to the left of 仓鼠 (adjacent, directly left)\n\nFrom clue 3: 猫 is directly left of 仓鼠, so 仓鼠 can't be in position 1 (someone is to its left), and 猫 can't be in position 4 (it needs someone to its right).\nPossible: 猫仓鼠 at positions (1,2), (2,3), (3,4).\n\nFrom clue 1: 兔 is left of 仓鼠.\n\nCase (猫,仓鼠) at (1,2): 仓鼠 at2, 兔 must be at position 1. But clue 2 says 兔 not at position 1. Contradiction.\n\nCase (猫,仓鼠) at (2,3): 仓鼠 at 3, 兔 must be left of 3 and not at 1, so 兔 at 2. But position 2 is 猫. Contradiction. Actually 兔 at position 1 or 2. Position 2 is 猫. So 兔 at 1. But clue 2 forbids. Contradiction.\n\nWait, let me re-check. 仓鼠 at position 3. 兔 left of 仓鼠 means 兔 at1 or 2. Position 2 is 猫. So 兔 at 1. But clue 2 says not leftmost. Contradiction.\n\nCase (猫,仓鼠) at (3,4): 仓鼠 at 4, 兔 must be left of 4, not at 1. So 兔 at 2 or 3. Position 3 is 猫. So 兔 at 2. Remaining position 1 is 狗.\n\nSo order: 狗, 兔, 猫, 仓鼠.\n\nPosition 2 is 兔.",
+      "score": 1,
+      "usage": {
+        "input": 90,
+        "output": 459,
+        "cachedInput": 0,
+        "reasoning": 456
+      },
+      "finishedMs": 15869
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 1562,
+      "solveMs": 1562,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，不多一个字。需要解谜。需要严格只输出物品名。题目：四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问第3位是哪一种？\n\n先分析。四种乐器：钢琴、小提琴、吉他、架子鼓。排列四个位置。条件：\n1 小提琴紧邻钢琴左边 => 小提琴在钢琴左边相邻。\n2 架子鼓在最右 => 位置4=架子鼓。\n3 钢琴紧邻架子鼓左边 => 钢琴在位置3，架子鼓位置4。\n由1，小提琴在钢琴左边相邻 => 小提琴位置2。\n剩余吉他位置1。排列：吉他、小提琴、钢琴、架子鼓。第3位是钢琴。\n\n需要只输出“钢琴”。注意不要标点。最终只输出物品名本身。 ",
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 211,
+        "cachedInput": 0,
+        "reasoning": 209
+      },
+      "finishedMs": 11549
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 3708,
+      "solveMs": 3708,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "架子鼓最右（第4位）。钢琴紧邻架子鼓左边，所以钢琴第3位。小提琴紧邻钢琴左边，所以小提琴第2位。吉他第1位。第3位是钢琴。",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 53,
+        "cachedInput": 0,
+        "reasoning": 50
+      },
+      "finishedMs": 14099
+    },
+    {
+      "taskId": "LD-04",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 紧邻 钢琴 左边\n2. 架子鼓 在最右\n3. 钢琴 紧邻 架子鼓 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 3854,
+      "solveMs": 3854,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through the constraints:\n\nPositions: 1, 2, 3, 4 (left to right)\n\nConstraints:\n1. 小提琴 immediately to the left of 钢琴 (小提琴 is directly left of 钢琴)\n2. 架子鼓 is at position 4\n3. 钢琴 immediately to the left of 架子鼓 (钢琴 is directly left of 架子鼓)\n\nFrom constraint 2: 架子鼓 = position 4\nFrom constraint 3: 钢琴 = position 3 (directly left of 架子鼓)\nFrom constraint 1: 小提琴 = position 2 (directly left of 钢琴)\nRemaining: 吉他 = position 1\n\nSo position 3 is 钢琴.",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 177,
+        "cachedInput": 0,
+        "reasoning": 174
+      },
+      "finishedMs": 15404
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 1746,
+      "solveMs": 1746,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答只输出物品名本身。需要解逻辑。四种乐器排成一列位置1-4。钢琴P，小提琴V，吉他G，架子鼓D。\n条件：\n1 P 在 D 左边。\n2 V 紧邻 D 左边：V 的位置 = D-1。\n3 P 紧邻 G 左边：P 的位置 = G-1。\n\n求第1位是哪一种。\n\n我们需要解。条件2意味着 V,D 连续且 V在D左。条件3 P,G连续且 P在G左。四个物品正好两对连续块：V-D 和 P-G。必须排列这两个块成四个位置，可能顺序： [V,D,P,G] 或 [P,G,V,D]。检查条件1 P在D左边。若 [V,D,P,G]，P位置3，D位置2，P不在D左边（3<2 false）。若 [P,G,V,D]，P位置1，D位置4，满足。所以第1位钢琴。输出只物品名「钢琴」。确保不多。 ",
+      "score": 1,
+      "usage": {
+        "input": 109,
+        "output": 222,
+        "cachedInput": 0,
+        "reasoning": 220
+      },
+      "finishedMs": 14499
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 4494,
+      "solveMs": 4494,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this:\n\nPositions: 1, 2, 3, 4\n\nConstraints:\n1. Piano is left of drums\n2. Violin is immediately left of drums\n3. Piano is immediately left of guitar\n\nFrom (2): Violin, Drums are adjacent with Violin left → [Violin, Drums]\nFrom (3): Piano, Guitar are adjacent with Piano left → [Piano, Guitar]\n\nSo we need to place two pairs: [Violin, Drums] and [Piano, Guitar] in4 positions.\n\nPossibilities:\n- Positions 1-2: Violin, Drums; Positions 3-4: Piano, Guitar → Check (1): Piano at 3, Drums at 2 → Piano is NOT left of Drums. ✗\n- Positions 1-2: Piano, Guitar; Positions 3-4: Violin, Drums → Check (1): Piano at 1, Drums at 4 → Piano left of Drums ✓. All constraints satisfied.\n\nSo position 1 is Piano.\n\nWait, the answer should be just the item name: 钢琴",
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 245,
+        "cachedInput": 0,
+        "reasoning": 242
+      },
+      "finishedMs": 18595
+    },
+    {
+      "taskId": "LD-05",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 在 架子鼓 左边\n2. 小提琴 紧邻 架子鼓 左边\n3. 钢琴 紧邻 吉他 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 6029,
+      "solveMs": 6029,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through the constraints:\n\n4 instruments in a row: 钢琴(P), 小提琴(V), 吉他(G), 架子鼓(D)\n\n1. P is to the left of D\n2. V is immediately to the left of D (V D)\n3. P is immediately to the left of G (P G)\n\nFrom constraint 2: ...V D...\nFrom constraint 3: ...P G...\n\nSo we have (P, G) and (V, D) as adjacent pairs.\n\nSince P is to the left of D (constraint 1), and the pairs are (P,G) and (V,D):\n\nPossible arrangements with these pairs:\n- (P,G) then (V,D): P G V D ✓ (P is left of D ✓)\n- (V,D) then (P,G): V D P G ✗ (P is not left of D)\n\nSo the arrangement is P G V D.\n\n第1位是钢琴。",
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 208,
+        "cachedInput": 0,
+        "reasoning": 205
+      },
+      "finishedMs": 20529
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 935,
+      "solveMs": 935,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1 猫不在最右\n2 兔在最左\n3 狗在猫左边\n问第4位是哪一种？\n\n位置1最左兔。剩余位置2,3,4是猫狗仓鼠。猫不在位置4。狗在猫左边。因此猫不能位置2？如果猫在位置2，狗必须在位置1，但位置1是兔，不行。所以猫位置3。狗在猫左边，剩余位置2可以是狗。仓鼠位置4。所以第4位是仓鼠。只输出“仓鼠”。 ",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 158,
+        "cachedInput": 0,
+        "reasoning": 155
+      },
+      "finishedMs": 16340
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 2952,
+      "solveMs": 2952,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions: 1,2,3,4. Rabbit leftmost (1). Cat not rightmost (not 4). Dog left of cat.\n\nSo positions 2,3,4 = cat, dog, hamster in some order. Cat not 4. Dog left of cat.\n\nPossible: dog at 2, cat at 3 → hamster 4. cat at 4 not allowed. dog at 3, cat at 4 not allowed. cat at 2, dog left → dog at 1 occupied by rabbit. So cat=3, dog=2, hamster=4.",
+      "score": 1,
+      "usage": {
+        "input": 84,
+        "output": 131,
+        "cachedInput": 0,
+        "reasoning": 127
+      },
+      "finishedMs": 18823
+    },
+    {
+      "taskId": "LD-06",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 不在最右\n2. 兔 在最左\n3. 狗 在 猫 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "仓鼠",
+      "target": "仓鼠",
+      "latencyMs": 4645,
+      "solveMs": 4645,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through the positions.\n\nPosition 1 (leftmost): 兔 (from condition 2)\n\nCondition 3: 狗 is to the left of 猫.\n\nCondition 1: 猫 is not at the far right (position 4).\n\nRemaining positions2, 3, 4 for 猫, 狗, 仓鼠.\n\n猫 is not at position 4. So 猫 is at position 2 or 3.\n\nIf 猫 is at position 2: 狗 must be to the left of 猫, so 狗 at position 1. But position 1 is 兔. Contradiction.\n\nIf 猫 is at position 3: 狗 must be to the left of position 3, so 狗 at position 2 (since position 1 is 兔). Then 仓鼠 at position 4.\n\nSo position 4 = 仓鼠.",
+      "score": 1,
+      "usage": {
+        "input": 84,
+        "output": 207,
+        "cachedInput": 0,
+        "reasoning": 203
+      },
+      "finishedMs": 20987
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 2530,
+      "solveMs": 2530,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。题目：四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1 兔不在最左\n2 仓鼠紧邻狗左边（仓鼠在狗左边相邻）\n3 猫在最右\n问第2位是哪一种？\n\n需要确定排列。四种位置1-4。猫在4。仓鼠紧邻狗左边，可能的相邻对位置：(1,2) 仓鼠狗 或 (2,3) 仓鼠狗 或 (3,4) 仓鼠狗，但4是猫，不能狗在4，所以排除(3,4)。剩下(1,2)或(2,3)。兔不在最左。考虑剩余位置。\n\n如果仓鼠狗在(1,2)，则位置1仓鼠，2狗，4猫，剩余位置3兔。兔不在最左满足。排列 仓鼠 狗 兔 猫。第2位狗。\n如果仓鼠狗在(2,3)，则位置2仓鼠，3狗，4猫，剩余位置1兔。但兔不在最左条件违反。排除。\n所以第2位是狗。只输出「狗」。注意用户范例「仓鼠」，要求只输出物品名本身。最终只 \"狗\"。 ",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 291,
+        "cachedInput": 0,
+        "reasoning": 289
+      },
+      "finishedMs": 21126
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 4400,
+      "solveMs": 4400,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Four positions: 1,2,3,4.\n\nCat is rightmost (4). Hamster immediately left of dog: so hamster-dog adjacent pair in positions (1,2) or (2,3).\n\nRabbit not in position 1.\n\nCase (1,2): hamster=1, dog=2, rabbit must be 3 (rabbit not 1, cat=4). Positions: 1=hamster,2=dog,3=rabbit,4=cat. Check: rabbit not leftmost ✓. So position 2 = dog.\n\nCase (2,3): hamster=2, dog=3, then rabbit must be 1 — violates rabbit not leftmost. So invalid.\n\nPosition 2 = dog.",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 159,
+        "cachedInput": 0,
+        "reasoning": 156
+      },
+      "finishedMs": 23224
+    },
+    {
+      "taskId": "LD-07",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 兔 不在最左\n2. 仓鼠 紧邻 狗 左边\n3. 猫 在最右\n\n问题：第 2 位是哪一种？",
+      "answer": "狗",
+      "target": "狗",
+      "latencyMs": 4127,
+      "solveMs": 4127,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Order: positions 1,2,3,4.\n\n1. Rabbit not at position 1.\n2. Hamster is immediately left of Dog, so positions: Hamster at n, Dog at n+1.\n3. Cat at position 4.\n\nFrom (3), Cat is at 4. Hamster-Dog pair is adjacent. Possible pairs: (1,2) or (2,3).\n\nIf Hamster at 2, Dog at 3: then Rabbit at 1, but (1) says Rabbit not at leftmost. So this doesn't work.\n\nIf Hamster at 1, Dog at 2: Rabbit at 3. That works.\n\nSo position 2 is Dog.",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 151,
+        "cachedInput": 0,
+        "reasoning": 148
+      },
+      "finishedMs": 24657
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 1211,
+      "solveMs": 1211,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身。需要解题。条件：四种水果排成一列，位置1-4。苹果在最右 => 位置4是苹果。所以第4位是苹果。需要只输出物品名本身。注意条件1 西瓜紧邻橙子左边，2 香蕉在橙子左边，3 苹果最右。第四位苹果。输出「苹果」不带引号。 Ensure no extra.",
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 93,
+        "cachedInput": 0,
+        "reasoning": 91
+      },
+      "finishedMs": 22199
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 2372,
+      "solveMs": 2372,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions1-4 left to right.\n\n苹果 is rightmost → position 4 = 苹果.\n\nCheck consistency: 西瓜 immediately left of 橙子; 香蕉 left of 橙子.\n\nSo order: 香蕉?西瓜 橙子 苹果 — position 4 is 苹果.\n\nAnswer: 苹果",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 83,
+        "cachedInput": 0,
+        "reasoning": 80
+      },
+      "finishedMs": 23499
+    },
+    {
+      "taskId": "LD-08",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 香蕉 在 橙子 左边\n3. 苹果 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 5647,
+      "solveMs": 5647,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through the constraints:\n\nPositions1, 2, 3, 4 (left to right).\n\n1. 西瓜 is immediately left of 橙子: (西瓜, 橙子) are adjacent with 西瓜 left of 橙子.\n2. 香蕉 is left of 橙子.\n3. 苹果 is at position 4 (most right).\n\nSo position 4 = 苹果.\n\nThe pair (西瓜, 橙子) must be in positions (1,2) or (2,3).\n\nCase A: 西瓜=1, 橙子=2. Then 香蕉 must be left of 橙子 (position 2), so 香蕉=1, but 西瓜=1. Contradiction.\n\nCase B: 西瓜=2, 橙子=3.香蕉 must be left of 橙子(3), so 香蕉=1. \nPositions: 1=香蕉, 2=西瓜, 3=橙子, 4=苹果. All conditions satisfied.\n\nQuestion: 第4位是哪一种？ → 苹果",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 258,
+        "cachedInput": 0,
+        "reasoning": 255
+      },
+      "finishedMs": 27848
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 1433,
+      "solveMs": 1433,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，不多一个字。需要推理解谜。注意要求“只输出物品名本身（如「仓鼠」），不多一个字。” 我们需要给出第二位水果。让我们分析。\n\n四种水果排成一列：苹果、香蕉、橙子、西瓜。条件：\n1. 西瓜紧邻橙子左边 -> 顺序 西瓜 橙子 连续，且西瓜在橙子左边。\n2. 橙子不在最右 -> 橙子位置不是4。\n3. 香蕉在最左 -> 香蕉位置1。\n\n共有4位置。香蕉位置1。西瓜橙子连续，橙子不最右。可能位置：橙子2，西瓜1，但位置1已是香蕉，冲突。橙子3，西瓜2。橙子4，西瓜3，但橙子不最右冲突。因此橙子=3，西瓜=2。剩余位置4苹果。所以第2位是西瓜。\n\n需要只输出“西瓜”。注意示例说要输出物品名本身。最终只输出西瓜。 ",
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 220,
+        "cachedInput": 0,
+        "reasoning": 218
+      },
+      "finishedMs": 24658
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 5131,
+      "solveMs": 5131,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Banana is leftmost (position 1). Watermelon immediately left of Orange: positions (2,3). Orange not rightmost — consistent since position 3. So position 4 is apple.\n\nPosition 2: watermelon.",
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 52,
+        "cachedInput": 0,
+        "reasoning": 49
+      },
+      "finishedMs": 28631
+    },
+    {
+      "taskId": "LD-09",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 西瓜 紧邻 橙子 左边\n2. 橙子 不在最右\n3. 香蕉 在最左\n\n问题：第 2 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 3934,
+      "solveMs": 3934,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions1-4 left to right.\n\nBanana is leftmost → position 1 = banana.\n\nWatermelon immediately left of orange → watermelon and orange are adjacent with watermelon left of orange.\n\nOrange not rightmost → orange ≠ position 4.\n\nWatermelon-orange pair can be positions (2,3) or (3,4). But orange ≠ 4, so (3,4) is out. So pair is (2,3): watermelon=2, orange=3.\n\nRemaining: apple=4.\n\nPosition 2 =西瓜.",
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 120,
+        "cachedInput": 0,
+        "reasoning": 117
+      },
+      "finishedMs": 28593
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 1172,
+      "solveMs": 1172,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，不多一个字。需要解题。题目：四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果在橙子左边\n2. 西瓜在最左\n3. 西瓜紧邻香蕉左边\n\n问第2位是哪一种？\n\n排列位置1-4。西瓜在最左 -> pos1=西瓜。西瓜紧邻香蕉左边 -> pos2=香蕉。剩下苹果、橙子在pos3,4，且苹果在橙子左边 -> pos3=苹果, pos4=橙子。第2位是香蕉。只输出「香蕉」。注意格式如「仓鼠」? 用户说只输出物品名本身（如「仓鼠」），不多一个字。所以最终只需 香蕉。",
+      "score": 1,
+      "usage": {
+        "input": 104,
+        "output": 166,
+        "cachedInput": 0,
+        "reasoning": 164
+      },
+      "finishedMs": 25832
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 3853,
+      "solveMs": 3853,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "西瓜 is leftmost (position 1). 西瓜 is immediately left of 香蕉, so 香蕉 is position 2.",
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 35,
+        "cachedInput": 0,
+        "reasoning": 32
+      },
+      "finishedMs": 29686
+    },
+    {
+      "taskId": "LD-10",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 在 橙子 左边\n2. 西瓜 在最左\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 2494,
+      "solveMs": 2494,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "西瓜最左(1位)，西瓜紧邻香蕉左边 → 香蕉2位。\n\n苹果在橙子左边：苹果3，橙子4。\n\n第2位是香蕉。",
+      "score": 1,
+      "usage": {
+        "input": 93,
+        "output": 43,
+        "cachedInput": 0,
+        "reasoning": 40
+      },
+      "finishedMs": 30343
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 1040,
+      "solveMs": 1040,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答用户中文问题。要求“只输出物品名本身（如「仓鼠」），不多一个字。” 需要求解排列。四种乐器：钢琴、小提琴、吉他、架子鼓。条件：\n1 小提琴在最右（第4）\n2 钢琴紧邻吉他左边\n3 钢琴在最左（第1）\n问第1位是哪一种？ 条件3直接钢琴在最左，第1位是钢琴。需要只输出物品名本身，不加标点。输出“钢琴”。确保没有多余字。",
+      "score": 1,
+      "usage": {
+        "input": 100,
+        "output": 111,
+        "cachedInput": 0,
+        "reasoning": 109
+      },
+      "finishedMs": 29634
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 7731,
+      "solveMs": 7731,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "The clues seem contradictory but the answer asked is position 1, and clue 3 says piano is leftmost.\n\nWait, but clue 3 says piano is leftmost — answer: 钢琴.\n\nBut let's check consistency: positions1-4. Piano at 1, violin at 4, piano adjacent left of guitar → guitar at 2, drums at 3. Consistent.\n\nAnswer: 钢琴",
+      "score": 1,
+      "usage": {
+        "input": 92,
+        "output": 93,
+        "cachedInput": 0,
+        "reasoning": 90
+      },
+      "finishedMs": 36364
+    },
+    {
+      "taskId": "LD-11",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 小提琴 在最右\n2. 钢琴 紧邻 吉他 左边\n3. 钢琴 在最左\n\n问题：第 1 位是哪一种？",
+      "answer": "钢琴",
+      "target": "钢琴",
+      "latencyMs": 5492,
+      "solveMs": 5492,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions1-4 left to right.\n\n1. Violin at far right → position 4.\n2. Piano immediately left of guitar → piano and guitar adjacent, piano on left.\n3. Piano at far left → position 1.\n\nSo piano at 1, guitar at 2 (since piano immediately left of guitar), violin at 4, drums at 3.\n\nPosition 1: 钢琴",
+      "score": 1,
+      "usage": {
+        "input": 92,
+        "output": 89,
+        "cachedInput": 0,
+        "reasoning": 86
+      },
+      "finishedMs": 35127
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 1511,
+      "solveMs": 1511,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，不多一个字。需要解逻辑。四种乐器排成一列位置1-4：钢琴、小提琴、吉他、架子鼓。条件：\n1 架子鼓不在最左。\n2 吉他在小提琴左边。\n3 架子鼓在吉他左边。\n排列满足 架子鼓 < 吉他 < 小提琴（位置从左到右）。架子鼓不在位置1。四人位置。设鼓位置不能1，且需在吉他左，吉他在小提琴左。鼓可能2或? 若鼓2，则吉他3，小提琴4，钢琴1。若鼓3，则吉他4，小提琴需>4不可能。所以唯一：位置1钢琴,2架子鼓,3吉他,4小提琴。问第2位：架子鼓。\n\n只输出物品名本身：架子鼓. Ensure no punctuation. ",
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 180,
+        "cachedInput": 0,
+        "reasoning": 177
+      },
+      "finishedMs": 31198
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 10469,
+      "solveMs": 10469,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this step by step.\n\nFour instruments in a row: 钢琴 (piano), 小提琴 (violin), 吉他 (guitar), 架子鼓 (drum set).\n\nPositions: 1, 2, 3, 4 (left to right)\n\nClues:\n1. 架子鼓 is not at position 1 (not leftmost)\n2. 吉他 is to the left of 小提琴\n3. 架子鼓 is to the left of 吉他\n\nFrom clue 3: 架子鼓 < 吉他 (in position)\nFrom clue 2: 吉他 < 小提琴\nCombined: 架子鼓 < 吉他 < 小提琴\n\nFrom clue 1: 架子鼓 ≠ position 1\n\nSo 架子鼓 can be at position 2, 3, but since 架子鼓 < 吉他 < 小提琴, 架子鼓 can be at most position 2 (since 吉他 and 小提琴 need to be to its right).\n\nWait: 架子鼓 at position 2, 吉他 at3, 小提琴 at 4 → 钢琴 at 1\n架式鼓 at position 2 is allowed by clue 1 (not leftmost).\n\n架式鼓 at position 1 would violate clue 1.\n\nSo:钢琴(1), 架子鼓(2), 吉他(3), 小提琴(4)\n\nBut wait, can 架式鼓 be at position 2? Let me check if there are other possibilities.\n\n架式鼓 at 2, 吉他 at 3, 小提琴 at 4, 钢琴 at 1 ✓Could吉他 be at 4? No, because 小提琴 must be to its right.\n\nCould 架式鼓 be at 1? No, violates clue 1.\n\nSo the only arrangement is: 钢琴, 架子鼓, 吉他, 小提琴\n\nPosition 2 is 架子鼓.\n\nWait, let me reconsider. The question asks for the item name only.",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 476,
+        "cachedInput": 0,
+        "reasoning": 472
+      },
+      "finishedMs": 40813
+    },
+    {
+      "taskId": "LD-12",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 架子鼓 不在最左\n2. 吉他 在 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "架子鼓",
+      "target": "架子鼓",
+      "latencyMs": 2907,
+      "solveMs": 2907,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions1-4. Constraints:\n1. 架子鼓 ≠ 1\n2. 吉他 before 小提琴\n3. 架子鼓 before 吉他\n\nSo order: 架子鼓 < 吉他 < 小提琴, and 架子鼓 ≠ 1.\n\n架子鼓 must be in position 2 or later, but before 吉他 and 小提琴. So 架子鼓=2, 吉他=3, 小提琴=4, 钢琴=1.\n\nPosition 2: 架子鼓",
+      "score": 1,
+      "usage": {
+        "input": 94,
+        "output": 129,
+        "cachedInput": 0,
+        "reasoning": 125
+      },
+      "finishedMs": 34107
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 1492,
+      "solveMs": 1492,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。题目：四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1 橙子不在最左\n2 橙子在香蕉左边\n3 西瓜在最右\n问第3位是哪一种？\n\n需要推理。四种位置1-4。西瓜在4。橙子不在1，且在香蕉左边。剩余位置1-3给苹果、香蕉、橙子。橙子不在1，且在香蕉左。可能排列：位置2橙子，位置3香蕉，位置1苹果。或者位置3橙子，香蕉只能在4但4西瓜不可能。所以唯一：1苹果，2橙子，3香蕉，4西瓜。第3位是香蕉。只输出物品名本身。最终「香蕉」。确保无多余标点。 ",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 183,
+        "cachedInput": 0,
+        "reasoning": 181
+      },
+      "finishedMs": 35600
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 4534,
+      "solveMs": 4534,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nFour fruits in a row: positions 1, 2, 3, 4 (left to right).\n\nConstraints:\n1. Orange (橙子) not in position 1 (leftmost)\n2. Orange (橙子) is to the left of Banana (香蕉)\n3. Watermelon (西瓜) is in position 4 (rightmost)\n\nSo position 4 = 西瓜.\n\nRemaining fruits for positions 1, 2, 3: 苹果, 香蕉, 橙子.\n\n橙子 not in position 1.\n橙子 is to the left of 香蕉.\n\nPossible arrangements for positions 1, 2, 3:\n- If 橙子 is in position 2, then 香蕉 must be in position 3 (to the right). Then 苹果 in position 1.\n  Order: 苹果, 橙子, 香蕉, 西瓜 ✓\n\n- If 橙子 is in position 3, then 香蕉 must be in position 4, but 西瓜 is in position 4. Contradiction.\n\nSo: 苹果, 橙子, 香蕉, 西瓜.\n\nPosition 3 = 香蕉.",
+      "score": 1,
+      "usage": {
+        "input": 88,
+        "output": 278,
+        "cachedInput": 0,
+        "reasoning": 275
+      },
+      "finishedMs": 39664
+    },
+    {
+      "taskId": "LD-13",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 香蕉 左边\n3. 西瓜 在最右\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 7572,
+      "solveMs": 7572,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nFour fruits in a row: 位置1, 位置2, 位置3, 位置4.\n\nClues:\n1. 橙子 not in position 1\n2. 橙子 is to the left of 香蕉\n3. 西瓜 is in position 4\n\nSo西瓜 is at position 4.\n\nRemaining fruits for positions 1-3: 苹果, 香蕉, 橙子.\n\nFrom clue 2: 橙子 is left of 香蕉, so 橙子's position < 香蕉's position.\n\nFrom clue 1: 橙子 is not in position 1.\n\nPossible arrangements for positions 1-3 with橙子 left of 香蕉 and 橙子 not in position 1:\n- 橙子 in position 2, 香蕉 in position 3, 苹果 in position 1\n- 橙子 in position 2, 苹果 in position 3, 香蕉... wait, 香蕉 must be to the right of 橙子.\n\nLet me enumerate: positions 1-3 get 苹果, 香蕉, 橙子 where 橙子 < 香蕉 and 橙子 ≠ position 1.\n\nCases where 橙子 < 香蕉:\n- 橙子 pos 1, 香蕉 pos 2 or 3\n- 橙子 pos 2, 香蕉 pos 3\n\nBut 橙子 ≠ pos 1, so only: 橙子 pos 2, 香蕉 pos 3, 苹果 pos 1.\n\nSo position 3 is 香蕉.",
+      "score": 1,
+      "usage": {
+        "input": 88,
+        "output": 390,
+        "cachedInput": 0,
+        "reasoning": 387
+      },
+      "finishedMs": 43174
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 1003,
+      "solveMs": 1003,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身。需要解题。题目：四种宠物排成一列：猫、狗、兔、仓鼠。条件：\n1 仓鼠不在最左\n2 狗紧邻兔左边\n3 兔在最右\n问第1位是哪一种？\n排列四位，兔在最右即第4。狗紧邻兔左边 => 狗第3。剩余猫、仓鼠在第1、2。仓鼠不在最左 => 仓鼠第2，猫第1。答案：猫。只输出物品名本身。",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 120,
+        "cachedInput": 0,
+        "reasoning": 118
+      },
+      "finishedMs": 37368
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "仓鼠不在最左，狗在3，兔在4，仓鼠在2，剩下猫在第1位。\n\n猫",
+      "target": "猫",
+      "latencyMs": 6551,
+      "solveMs": 6551,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions: 1,2,3,4.\n兔 at position 4 (most right).\n狗 immediately left of 兔 → dog at 3.\n仓鼠 not leftmost → hamster at 2.\n猫 at 1.",
+      "score": 0,
+      "note": "期望「猫」，实答「仓鼠不在最左，狗在3，兔在4，仓鼠在2，剩下猫在第1位。\n\n猫」",
+      "usage": {
+        "input": 86,
+        "output": 79,
+        "cachedInput": 0,
+        "reasoning": 50
+      },
+      "finishedMs": 43921
+    },
+    {
+      "taskId": "LD-14",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 仓鼠 不在最左\n2. 狗 紧邻 兔 左边\n3. 兔 在最右\n\n问题：第 1 位是哪一种？",
+      "answer": "猫",
+      "target": "猫",
+      "latencyMs": 4237,
+      "solveMs": 4237,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "猫、狗、兔、仓鼠排成一列，位置1、2、3、4。\n\n1. 仓鼠不在最左（位置1）\n2. 狗紧邻兔左边3. 兔在最右（位置4）\n\n由3：位置4 = 兔\n由2：狗在兔左边紧邻，所以位置3 = 狗\n由1：仓鼠不在位置1，所以仓鼠在位置2，猫在位置1。",
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 107,
+        "cachedInput": 0,
+        "reasoning": 104
+      },
+      "finishedMs": 43902
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 2080,
+      "solveMs": 2080,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答用户。用户要求“只输出物品名本身（如「仓鼠」），不多一个字。” 需要解题。四种水果排列：苹果、香蕉、橙子、西瓜。条件：\n1 橙子不在最左\n2 橙子在苹果左边\n3 西瓜紧邻香蕉左边（即 西瓜 香蕉 连续，且西瓜在香蕉左边）\n\n问第1位是哪一种？需要确定。\n\n我们来排列。条件3：香蕉在西瓜右边紧邻，模式 西-香。\n条件2：橙在苹果左边。橙不在最左。\n\n总共四个位置。由于 西香 占两个连续，且 橙在苹果左边。\n\n可能排列。位置1不能橙。检查所有满足西香连续。\n\n位置对可能是 (1,2): 西瓜,香蕉; 剩余位置3,4为橙,苹果。橙在苹果左边，则3橙4苹果。橙不在最左成立。排列：西瓜 香蕉 橙子 苹果。第1位西瓜。\n\n位置对 (2,3): 位置2西瓜3香蕉; 剩余位置1,4为橙,苹果。橙在苹果左边，则需要橙在位置1，苹果位置4，但条件1橙不在最左，矛盾。或者苹果1橙4不满足橙在苹果左边。不行。\n\n位置对 (3,4): 位置3西瓜4香蕉; 剩余位置1,2为橙,苹果。橙在苹果左边，需1橙2苹果，但橙不在最左矛盾。不行。\n\n因此唯一排列：西瓜、香蕉、橙子、苹果。第1位是西瓜。输出“西瓜”。注意用户要求只输出物品名本身。最终只“西瓜”。 ",
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 361,
+        "cachedInput": 0,
+        "reasoning": 359
+      },
+      "finishedMs": 42895
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 8701,
+      "solveMs": 8701,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nFour positions: 1, 2, 3, 4. Fruits: 苹果(A), 香蕉(B), 橙子(O), 西瓜(W).\n\nConstraints:\n1. O not in position 1\n2. O is to the left of A\n3. W is immediately to the left of B\n\nFrom constraint 3: (W, B) must be adjacent with W before B. Possible positions for (W, B): (1,2), (2,3), (3,4).\n\nLet me try each:\n\nCase 1: W=1, B=2. Then O and A fill positions 3,4. O is left of A → O=3, A=4. Check constraint 1: O not in position 1 ✓. This works.\n\nCase 2: W=2, B=3. Then O and A fill positions 1,4. O left of A → O must be in position 1... but constraint 1 says O not in position 1. Or O=1, A=4? O must be left of A, O could be 1, A=4. But O can't be in position 1. So invalid. What about A=1, O=4? Then O is not left of A. Invalid.\n\nCase 3: W=3, B=4. Then O and A fill positions 1,2. O left of A → O=1, A=2. But O can't be in position 1. Invalid.\n\nSo only Case 1 works: Position 1 is 西瓜.",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 351,
+        "cachedInput": 0,
+        "reasoning": 348
+      },
+      "finishedMs": 51599
+    },
+    {
+      "taskId": "LD-15",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 不在最左\n2. 橙子 在 苹果 左边\n3. 西瓜 紧邻 香蕉 左边\n\n问题：第 1 位是哪一种？",
+      "answer": "西瓜",
+      "target": "西瓜",
+      "latencyMs": 7990,
+      "solveMs": 7990,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this step by step.\n\nFour fruits in a row: 苹果(Apple), 香蕉(Banana), 橙子(Orange), 西瓜(Watermelon)\n\nConstraints:\n1. 橙子 not in position 1 (leftmost)\n2. 橙子 is to the left of 苹果\n3. 西瓜 is immediately to the left of 香蕉 (so they form: 西瓜, 香蕉)\n\nSince 西瓜 is immediately left of 香蕉, they occupy consecutive positions as [西瓜, 香蕉].\n\nPossible placements for [西瓜, 香蕉]: positions (1,2), (2,3), or (3,4).\n\nCase 1: 西瓜=1, 香蕉=2\nRemaining positions 3,4 for 橙子 and 苹果.\n- 橙子 not in position 1 ✓\n- 橙子 left of 苹果: 橙子=3, 苹果=4 ✓\nOrder: 西瓜, 香蕉, 橙子, 苹果. Valid.\n\nCase 2: 西瓜=2, 香蕉=3\nRemaining positions 1,4 for 橙子 and 苹果.\n- 橙子 not in position 1 → 橙子=4, 苹果=1\n- 橙子 left of 苹果? 4 is right of 1. ✗ Invalid.\n\nCase 3: 西瓜=3, 香蕉=4\nRemaining positions 1,2 for 橙子 and 苹果.\n- 橙子 not in position 1 → 橙子=2, 苹果=1\n- 橙子 left of 苹果? 2 is right of 1. ✗ Invalid.\n\nOnly valid solution: 西瓜, 香蕉, 橙子, 苹果.\n\nPosition 1 is 西瓜.",
+      "score": 1,
+      "usage": {
+        "input": 95,
+        "output": 444,
+        "cachedInput": 0,
+        "reasoning": 441
+      },
+      "finishedMs": 51166
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 2338,
+      "solveMs": 2338,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答只输出物品名本身。需要解题。题目中文。四种乐器排列：钢琴、小提琴、吉他、架子鼓。条件：\n1. 钢琴紧邻架子鼓左边：钢琴 immediately left of 架子鼓。即 P, D 相邻顺序 P-D。\n2. 吉他紧邻小提琴左边：吉他 immediately left of 小提琴。G, V 相邻顺序 G-V。\n3. 架子鼓在吉他左边：D before G（不一定紧邻）。\n\n问第4位是哪个？\n\n我们需要确定排列。四个物品 P,V,G,D。条件 P-D 相邻，G-V 相邻，D < G。\n\n因为 D before G，且 P immediately left D。所以 P-D ... G-V? 由于 G-V 是块，D 在 G 左边。可能排列：\n位置1-2: P,D; 位置3-4: G,V 满足 D before G (位置2<3). 排列 P,D,G,V。第4 V=小提琴。\n还有其他可能吗？如果 P-D 在位置2-3，则 D位置3，G必须>3，但 G-V块需占位置? G位置4,V5 impossible. 如果 P-D 在位置3-4，则 D位置4，G after D impossible. 如果 G-V在位置1-2，则 G位置1，D before G impossible. 如果 G-V在位置2-3，则 G位置2，D before G需D位置1，但 P-D必须P位置0,D1 impossible. 所以唯一 P,D,G,V。第四小提琴。\n\n用户要求只输出物品名本身，如「仓鼠」，不多一个字。所以只输出：小提琴。注意不要引号？只输出物品名。最终：小提琴。",
+      "score": 1,
+      "usage": {
+        "input": 109,
+        "output": 371,
+        "cachedInput": 0,
+        "reasoning": 369
+      },
+      "finishedMs": 46241
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 4006,
+      "solveMs": 4006,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this.\n\nFour instruments in a row: positions 1, 2, 3, 4.\n\n1. Piano is immediately left of drum set: P D\n2. Guitar is immediately left of violin: G V\n3. Drum set is left of guitar: D ... G\n\nSo we have the sequence: P D ... G V\n\nSince P D is adjacent and G V is adjacent, and D is somewhere left of G:\n\nP D G V - this puts them in positions 1, 2, 3, 4.\n\nSo position 4 is violin.",
+      "score": 1,
+      "usage": {
+        "input": 104,
+        "output": 129,
+        "cachedInput": 0,
+        "reasoning": 124
+      },
+      "finishedMs": 47928
+    },
+    {
+      "taskId": "LD-16",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种乐器排成一列：钢琴、小提琴、吉他、架子鼓。已知：\n1. 钢琴 紧邻 架子鼓 左边\n2. 吉他 紧邻 小提琴 左边\n3. 架子鼓 在 吉他 左边\n\n问题：第 4 位是哪一种？",
+      "answer": "小提琴",
+      "target": "小提琴",
+      "latencyMs": 3186,
+      "solveMs": 3186,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this. Four instruments:钢琴(P), 小提琴(V), 吉他(G), 架子鼓(D) in a row of 4 positions.\n\n1. 钢琴 紧邻 架子鼓 左边 → P D are adjacent with P on left of D\n2. 吉他 紧邻 小提琴 左边 → G V are adjacent with G on left of V\n3. 架子鼓 在 吉他 左边 → D is to the left of G\n\nFrom 1: P DFrom 2: G V\nFrom 3: D is left of G\n\nSo the arrangement must be: P D G V\n\nPositions: 1=P, 2=D, 3=G, 4=V\n\nPosition 4 is 小提琴.",
+      "score": 1,
+      "usage": {
+        "input": 104,
+        "output": 188,
+        "cachedInput": 0,
+        "reasoning": 183
+      },
+      "finishedMs": 49429
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 1077,
+      "solveMs": 1077,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。题目：四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果紧邻香蕉左边\n2. 橙子紧邻西瓜左边\n3. 香蕉在最右\n问第4位是哪一种？\n\n四种水果排一列，位置1-4。香蕉在最右即第4位。苹果紧邻香蕉左边，则苹果第3位。橙子紧邻西瓜左边，剩下位置1、2，所以橙子第1，西瓜第2。问第4位是香蕉。只输出物品名本身。需要输出「香蕉」。确保不多字。",
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 151,
+        "cachedInput": 0,
+        "reasoning": 149
+      },
+      "finishedMs": 49007
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 3308,
+      "solveMs": 3308,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "香蕉在最右 = 第4位。\n\n答案是香蕉。\n\nWait，题目问第4位是哪一种，答案是香蕉。\n\n但\"只输出物品名本身\"，所以输出：香蕉",
+      "score": 1,
+      "usage": {
+        "input": 97,
+        "output": 45,
+        "cachedInput": 0,
+        "reasoning": 42
+      },
+      "finishedMs": 52317
+    },
+    {
+      "taskId": "LD-17",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 1294,
+      "solveMs": 1294,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "香蕉在最右（第4位）。",
+      "score": 1,
+      "usage": {
+        "input": 97,
+        "output": 13,
+        "cachedInput": 0,
+        "reasoning": 10
+      },
+      "finishedMs": 50724
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 2407,
+      "solveMs": 2407,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身。需要解题。需要小心。题目：四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子在香蕉左边\n2. 橙子紧邻西瓜左边\n3. 香蕉不在最右\n问第4位是哪一种？\n\n我们需要解排列。四个位置1-4。条件2：橙子紧邻西瓜左边，即 (橙, 西) 连续，橙位置i，西 i+1。条件1：橙在香蕉左边：pos橙 < pos香蕉。条件3：香蕉不在最右，pos香蕉 !=4。\n\n候选排列四个物品：苹果 A, 香蕉 B, 橙 O, 西瓜 W。\n\nW=O+1。O < B。B !=4。\n\n由于 O,W占用连续两个位置。可能 O位置：1 -> W2；2->W3；3->W4。\nB必须 > O且不在4。\n\n- O=1,W=2。B >1且 !=4，可以是2或3，但2已W，所以B=3。剩余A=4。排列 O,W,B,A => 橙 西瓜 香蕉 苹果。满足橙在香蕉左，香蕉不在最右。第4苹果。\n- O=2,W=3。B>2且!=4，唯一B=3，但3已W，不可能。\n- O=3,W=4。B>3且!=4，无。\n\n所以第4位苹果。\n\n需要只输出物品名本身。最终「苹果」。注意要求如「仓鼠」，不多个字。所以 final: 苹果。 ",
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 349,
+        "cachedInput": 0,
+        "reasoning": 347
+      },
+      "finishedMs": 53132
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 6085,
+      "solveMs": 6085,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "We need: positions 1,2,3,4.\nItems: 苹果, 香蕉, 橙子, 西瓜.\n1. 橙子 left of 香蕉 (not necessarily adjacent).\n2. 橙子 immediately left of 西瓜 →西瓜 = 橙子+1.\n3. 香蕉 not at position 4.\n\n橙子 at position i, 西瓜 at i+1, i ∈ {1,2,3}.\n香蕉 not at 4, 橙子 left of 香蕉 (橙子 position < 香蕉 position).\n\nCase i=1: 橙子=1, 西瓜=2.香蕉 ∈ {3,4} but not 4 → 香蕉=3. 苹果=4. Check橙子(1) left of 香蕉(3): yes. Valid.\nCase i=2: 橙子=2, 西瓜=3. 香蕉 >2 and not 4 → 香蕉=? must be 3 or 4; 3 taken, 4 forbidden. So no.\nCase i=3: 橙子=3, 西瓜=4. 香蕉 >3 → 4 taken. No.\n\nSo position 4 = 苹果.",
+      "score": 1,
+      "usage": {
+        "input": 96,
+        "output": 300,
+        "cachedInput": 0,
+        "reasoning": 297
+      },
+      "finishedMs": 57252
+    },
+    {
+      "taskId": "LD-18",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 橙子 在 香蕉 左边\n2. 橙子 紧邻 西瓜 左边\n3. 香蕉 不在最右\n\n问题：第 4 位是哪一种？",
+      "answer": "苹果",
+      "target": "苹果",
+      "latencyMs": 19752,
+      "solveMs": 19752,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Let me work through this step by step.\n\nFour fruits in a row: positions 1, 2, 3, 4.\n\nClues:\n1. 橙子 is left of 香蕉 (orange is left of banana)\n2. 橙子 is immediately left of 西瓜 (orange is immediately left of watermelon)\n3. 香蕉 is not at the far right (banana is not position 4)\n\nFrom clue 2: 橙子 and 西瓜 are adjacent with 橙子 on the left. Possible positions for 橙子: (1,2), (2,3), (3,4).\nSo possible pairs:橙子 at 1, 西瓜 at 2; 橙子 at 2, 西瓜 at 3; 橙子 at 3, 西瓜 at 4.\n\nFrom clue 1: 橙子 is left of 香蕉. So 香蕉 is to the right of 橙子.\n\nFrom clue 3: 香蕉 ≠ position 4.\n\nCase1: 橙子 at 1, 西瓜 at 2.\n香蕉 must be right of 橙子 (position 1), so 香蕉 at 3 or 4. But 香蕉 ≠ 4, so 香蕉 at 3.\nRemaining: 苹果 at 4.\nCheck: 橙子(1) left of 香蕉(3) ✓, 橙子(1) adjacent left of 西瓜(2) ✓, 香蕉(3) not at right ✓.\nArrangement: 橙子, 西瓜, 香蕉, 苹果.\n\nCase 2: 橙子 at 2, 西瓜 at 3.\n香蕉 must be right of 橙子 (position 2), so 香蕉 at 3 or 4. But 西瓜 is at 3, so 香蕉 at 4. But 香蕉 ≠ 4. Contradiction.\n\nCase 3: 橙子 at 3, 西瓜 at 4.\n香蕉 must be right of 橙子 (position 3), so 香蕉 at 4. But 西瓜 is at 4. Contradiction. Also 香蕉 ≠ 4.\n\nOnly Case 1 works. Position 4 is 苹果.",
+      "score": 1,
+      "usage": {
+        "input": 96,
+        "output": 536,
+        "cachedInput": 0,
+        "reasoning": 533
+      },
+      "finishedMs": 71352
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 1854,
+      "solveMs": 1854,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答中文，只输出物品名本身，如「仓鼠」，不多一个字。需要解题。注意要求只输出物品名本身。需要确定第三位水果。\n\n题目：四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果紧邻香蕉左边\n2. 西瓜紧邻苹果左边\n3. 香蕉在橙子左边\n问第3位是哪一种？\n\n分析：苹果紧邻香蕉左边 => 顺序 苹果, 香蕉 相邻，苹果在香蕉左边。\n西瓜紧邻苹果左边 => 西瓜, 苹果 相邻，西瓜在苹果左边。\n结合 => 西瓜, 苹果, 香蕉 连续。香蕉在橙子左边 => 香蕉位置在橙子左边。四种全部使用。连续三位置可能是1-3或2-4。\n\n如果 西瓜,苹果,香蕉 在1-3，则位置4是橙子，香蕉在橙子左边成立。序列：1西瓜 2苹果 3香蕉 4橙子。第3位是香蕉。\n\n如果 西瓜,苹果,香蕉 在2-4，则位置1是橙子，但香蕉在橙子左边不成立（香蕉在4，橙子在1，香蕉在橙子右边）。所以唯一。第3位香蕉。\n\n输出「香蕉」仅两字。确保无标点。 ",
+      "score": 1,
+      "usage": {
+        "input": 108,
+        "output": 288,
+        "cachedInput": 0,
+        "reasoning": 286
+      },
+      "finishedMs": 54172
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 7568,
+      "solveMs": 7568,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Four fruits in a row: 苹果(A), 香蕉(B), 橙子(O), 西瓜(W)\n\n1. 苹果 immediately left of 香蕉 → A _ B (adjacent, A before B)\n2. 西瓜 immediately left of 苹果 → W _ A (adjacent, W before A)\n3. 香蕉 in left of 橙子 → B before O (not necessarily adjacent)\n\nFrom 1 and 2: W immediately left of A, A immediately left of B → W, A, B consecutive: W A BSo positions 1,2,3 are W, A, B (or they could be at positions 2,3,4). Then O must be in the remaining spot.\n\nCase 1: W A B at positions 1,2,3 → O at position 4. Check:香蕉(B) at position 3, 橙子(O) at position 4. B is left of O ✓.\n\nCase 2: W A B at positions 2,3,4 → O at position 1. But then B at position 4, O at position 1: B is right of O, violating condition 3.\n\nSo the arrangement is W A B O. Position 3 is 香蕉.",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 286,
+        "cachedInput": 0,
+        "reasoning": 283
+      },
+      "finishedMs": 60702
+    },
+    {
+      "taskId": "LD-19",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种水果排成一列：苹果、香蕉、橙子、西瓜。已知：\n1. 苹果 紧邻 香蕉 左边\n2. 西瓜 紧邻 苹果 左边\n3. 香蕉 在 橙子 左边\n\n问题：第 3 位是哪一种？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 10765,
+      "solveMs": 10765,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Constraints:\n1. Apple immediately left of Banana: AB\n2. Watermelon immediately left of Apple: WA\n3. Banana left of Orange\n\nFrom 1 and 2: WAB as a block.\n\nBanana left of Orange: WAB _ needs Orange after Banana.\n\nWAB with Orange to the right of Banana: WABOSo order: 西瓜, 苹果, 香蕉, 橙子\n\n3rd is 香蕉.",
+      "score": 1,
+      "usage": {
+        "input": 101,
+        "output": 104,
+        "cachedInput": 0,
+        "reasoning": 101
+      },
+      "finishedMs": 64938
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "custom:eca8fe86-57f0-49fd-88ea-16164d5aa465",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 1526,
+      "solveMs": 1526,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "我们需要回答只用物品名本身。需要解题。排列四种：猫、狗、兔、仓鼠。条件：猫最左。兔不在最右。仓鼠紧邻狗左边。问第2位是什么。\n\n让我们推理。位置1=猫。剩余位置2,3,4放狗兔仓鼠。仓鼠紧邻狗左边，即(仓鼠,狗)连续，仓鼠在前。可用位置2-3或3-4。位置1猫不能。情况A：位置2仓鼠，位置3狗，位置4兔。但兔不在最右，违反（位置4兔）。情况B：位置3仓鼠，位置4狗，位置2兔。兔不在最右满足。所以第2位是兔。输出「兔」。需要只输出物品名本身。 final 兔.",
+      "score": 1,
+      "usage": {
+        "input": 102,
+        "output": 176,
+        "cachedInput": 0,
+        "reasoning": 174
+      },
+      "finishedMs": 58780
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "custom:7b85e114-b714-4053-b044-585d9c9213c1",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 4300,
+      "solveMs": 4300,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "猫在最左（位置1）。\n兔不在最右（位置4≠兔）。\n仓鼠紧邻狗左边：仓鼠在狗左边相邻，即 (仓鼠,狗) = (2,3) or (3,4).\n\nPositions 2,3,4 contain兔,狗,仓鼠.\n\nCase (2,3) = 仓鼠,狗 → position 4 = 兔. But 兔 must not be rightmost. Contradiction.\n\nCase (3,4) = 仓鼠,狗 → position 2 = 兔. Valid.\n\nSo position 2 = 兔.",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 136,
+        "cachedInput": 0,
+        "reasoning": 133
+      },
+      "finishedMs": 63081
+    },
+    {
+      "taskId": "LD-20",
+      "condition": "unique-solve",
+      "model": "custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477",
+      "prompt": "只输出物品名本身（如「仓鼠」），不多一个字。\n四种宠物排成一列：猫、狗、兔、仓鼠。已知：\n1. 猫 在最左\n2. 兔 不在最右\n3. 仓鼠 紧邻 狗 左边\n\n问题：第 2 位是哪一种？",
+      "answer": "兔",
+      "target": "兔",
+      "latencyMs": 5862,
+      "solveMs": 5862,
+      "attempts": 1,
+      "usageComplete": true,
+      "reasoning": "Positions: 1, 2, 3, 4 (left to right)\n\n1. 猫 is at position 1.\n2. 兔 not at position 4.\n3. 仓鼠 is immediately to the left of 狗.\n\nFrom 3: 仓鼠-狗 is a consecutive pair (仓鼠 at some position i, 狗 at i+1).\n\nRemaining positions2, 3, 4 for 兔, 仓鼠, 狗.\n\n仓鼠-狗 pairs can be at positions (2,3) or (3,4).\n\nCase1: 仓鼠 at 2, 狗 at 3. Then 兔 at 4. But 兔 not at 最右 (position 4). Contradiction.\n\nCase 2: 仓鼠 at 3, 狗 at 4. Then 兔 at 2. Check: 兔 at 2 (not position 4 ✓).\n\nSo positions: 1=猫, 2=兔, 3=仓鼠, 4=狗.\n\n第2位是兔。",
+      "score": 1,
+      "usage": {
+        "input": 87,
+        "output": 239,
+        "cachedInput": 0,
+        "reasoning": 236
+      },
+      "finishedMs": 66566
+    }
+  ],
+  "withdrawals": [],
+  "meta": {
+    "arenaFingerprint": "bfa52af2af5380fd",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.35.0",
+    "plannedTasks": 20,
+    "rankingPolicy": "quality-ci-v1",
+    "execution": {
+      "schedule": "pool",
+      "concurrency": 4,
+      "reasoning": "provider-default",
+      "timeoutMs": 60000,
+      "failureLimit": 3,
+      "judgeTimeoutMs": 60000
+    }
+  }
+}

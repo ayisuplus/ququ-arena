@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-research.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": false,
+        "checks": [
+          {
+            "name": "No new shell penetration into original colliders above deck",
+            "passed": false
+          },
+          {
+            "name": "Triangle winding agrees with supplied normals",
+            "passed": true
+          },
+          {
+            "name": "14 distinct research seat IDs and walker bindings",
+            "passed": true
+          },
+          {
+            "name": "Two baked reflection volumes follow R2",
+            "passed": true
+          },
+          {
+            "name": "9 local neutral warm lights without added shadows",
+            "passed": true
+          }
+        ],
+        "overlaps": [
+          {
+            "newPart": "Stair guard 0 out 0 -1",
+            "originalPart": "R2 public planning deck",
+            "depth": 0.0307692289
+          },
+          {
+            "newPart": "Stair guard 0 out 0 -1",
+            "originalPart": "Northwest research observation public floor",
+            "depth": 0.0307692289
+          },
+          {
+            "newPart": "Stair guard 0 out 0 1",
+            "originalPart": "R2 public planning deck",
+            "depth": 0.0307692289
+          },
+          {
+            "newPart": "Stair guard 0 out 0 1",
+            "originalPart": "Northwest research observation public floor",
+            "depth": 0.0307692289
+          }
+        ],
+        "meshes": [
+          {
+            "name": "Research-porcelain-v001",
+            "triangles": 22356,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-porcelain-v001.asset"
+          },
+          {
+            "name": "Research-blue-v001",
+            "triangles": 12312,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-blue-v001.asset"
+          },
+          {
+            "name": "Research-glass-v001",
+            "triangles": 6156,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-glass-v001.asset"
+          },
+          {
+            "name": "Research-silver-v001",
+            "triangles": 21060,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-silver-v001.asset"
+          },
+          {
+            "name": "Research-wood-v001",
+            "triangles": 432,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-wood-v001.asset"
+          },
+          {
+            "name": "Research-paving-v001",
+            "triangles": 24,
+            "invalidNormals": 0,
+            "asset": "Assets/Station/Models/DistrictsV019/Research-paving-v001.asset"
+          }
+        ],
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

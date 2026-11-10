@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "seq": 3643,
+      "timestampUtc": "2026-09-30T20:00:32.6956696Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Assets\\Scripts\\App\\ArenaGame.cs(223,22): warning CS0109: The member 'ArenaGame.AddComponent<T>()' does not hide an accessible member. The new keyword is not required.",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 3648,
+      "timestampUtc": "2026-09-30T20:01:06.3921019Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds.",
+      "stackTrace": "UnityEngine.Debug:LogWarning (object)\nUnity.Pipeline.Editor.BuildProcessors.PipelineRuntimeBuildProcessor:OnPreprocessBuild (UnityEditor.Build.BuildCallbackContext) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:73)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nStationRingPrototypeBuild:Build () (at Assets/Editor/StationRingPrototypeBuild.cs:28)\nUnityEditor.EditorApplication:ExecuteMenuItem (string)\nUnity.Pipeline.Editor.Commands.MenuItemCommand:ExecuteMenu (string) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/MenuItemCommand.cs:73)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 3649,
+      "timestampUtc": "2026-09-30T20:01:10.5119304Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Assets\\Scripts\\App\\ArenaGame.cs(223,22): warning CS0109: The member 'ArenaGame.AddComponent<T>()' does not hide an accessible member. The new keyword is not required.",
+      "stackTrace": "",
+      "seeded": false
+    }
+  ],
+  "cursor": 3652,
+  "session": "814657f7922d4052bc4ce786f94bf596",
+  "returned": 3,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 54,
+    "warn": 170,
+    "log": 1776
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-09-30T20:03:09.1034666Z",
+    "ageMs": 113,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 2,
+    "consoleLogs": 6,
+    "seeded": true
+  }
+}

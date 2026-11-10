@@ -1,0 +1,61 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationThreeRingBuildingsV015.unity",
+    "scope": "Three daily forecourt routes with actual source buildings and colliders; building interiors and interactions remain separate",
+    "initialPhase": 97.0,
+    "seconds": 0.0,
+    "distance": 203.2386474609375,
+    "frames": 12686,
+    "passed": false,
+    "checks": [
+        {
+            "name": "arrival curved seam reached",
+            "passed": true,
+            "error": 0.04111983999609947
+        },
+        {
+            "name": "arrival curved seam supported",
+            "passed": true,
+            "error": 0.0001043081283569336
+        },
+        {
+            "name": "arrival curved seam no building penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer edge to rotating street reached",
+            "passed": true,
+            "error": 0.04927321895956993
+        },
+        {
+            "name": "outer edge to rotating street supported",
+            "passed": true,
+            "error": 0.0009251832962036133
+        },
+        {
+            "name": "outer edge to rotating street no building penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "outer edge to rotating street stays on arc",
+            "passed": true,
+            "error": 0.1504058837890625
+        },
+        {
+            "name": "outer street to inner edge reached",
+            "passed": false,
+            "error": 54.74999237060547
+        },
+        {
+            "name": "outer street to inner edge supported",
+            "passed": true,
+            "error": 0.000990152359008789
+        },
+        {
+            "name": "outer street to inner edge no building penetration",
+            "passed": true,
+            "error": 0.0
+        }
+    ]
+}

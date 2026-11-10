@@ -1,0 +1,1520 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "odd-one-out",
+    "title": "找不同擂台",
+    "description": "四个词里挑出不属于同一类的那个（生成器自建）：十个人工审清边界的类别池（水果/动物/交通工具/乐器/颜色/球类/蔬菜/家具/天体/电器），3 同类 + 1 异类打乱顺序。测类别归纳与常识边界。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:odd-one-out:2026-09-10",
+    "taskPrefix": "只输出那个异类词本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "odd-one-out": "找不同（3 同类 + 1 异类）"
+    }
+  },
+  "startedAt": "2026-09-10T10:26:48.472Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "OO-01",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：长笛、萨克斯、架子鼓、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "棒球",
+      "target": "棒球",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-01",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：长笛、萨克斯、架子鼓、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "棒",
+      "target": "棒球",
+      "latencyMs": 423,
+      "score": 0,
+      "note": "期望「棒球」，实答「棒」",
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-01",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：长笛、萨克斯、架子鼓、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "棒球",
+      "target": "棒球",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-01",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：长笛、萨克斯、架子鼓、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "棒球",
+      "target": "棒球",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-02",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、香蕉、微波炉、电饭煲。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-02",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、香蕉、微波炉、电饭煲。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 306,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-02",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、香蕉、微波炉、电饭煲。\n\n问题：哪一个不属于同一类？",
+      "answer": "香",
+      "target": "香蕉",
+      "latencyMs": 108,
+      "score": 0,
+      "note": "期望「香蕉」，实答「香」",
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-02",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、香蕉、微波炉、电饭煲。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-03",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：冰箱、荔枝、葡萄、橙子。\n\n问题：哪一个不属于同一类？",
+      "answer": "冰箱",
+      "target": "冰箱",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-03",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：冰箱、荔枝、葡萄、橙子。\n\n问题：哪一个不属于同一类？",
+      "answer": "冰箱",
+      "target": "冰箱",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-03",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：冰箱、荔枝、葡萄、橙子。\n\n问题：哪一个不属于同一类？",
+      "answer": "冰",
+      "target": "冰箱",
+      "latencyMs": 142,
+      "score": 0,
+      "note": "期望「冰箱」，实答「冰」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-03",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：冰箱、荔枝、葡萄、橙子。\n\n问题：哪一个不属于同一类？",
+      "answer": "冰箱",
+      "target": "冰箱",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-04",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：西瓜、葡萄、菠萝、火车。\n\n问题：哪一个不属于同一类？",
+      "answer": "火车",
+      "target": "火车",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-04",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：西瓜、葡萄、菠萝、火车。\n\n问题：哪一个不属于同一类？",
+      "answer": "火车",
+      "target": "火车",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-04",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：西瓜、葡萄、菠萝、火车。\n\n问题：哪一个不属于同一类？",
+      "answer": "火车",
+      "target": "火车",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-04",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：西瓜、葡萄、菠萝、火车。\n\n问题：哪一个不属于同一类？",
+      "answer": "火车",
+      "target": "火车",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-05",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：乒乓球、衣柜、椅子、茶几。\n\n问题：哪一个不属于同一类？",
+      "answer": "乒乓球",
+      "target": "乒乓球",
+      "latencyMs": 295,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-05",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：乒乓球、衣柜、椅子、茶几。\n\n问题：哪一个不属于同一类？",
+      "answer": "乒乓",
+      "target": "乒乓球",
+      "latencyMs": 310,
+      "score": 0,
+      "note": "期望「乒乓球」，实答「乒乓」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-05",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：乒乓球、衣柜、椅子、茶几。\n\n问题：哪一个不属于同一类？",
+      "answer": "乒乓",
+      "target": "乒乓球",
+      "latencyMs": 392,
+      "score": 0,
+      "note": "期望「乒乓球」，实答「乒乓」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-05",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：乒乓球、衣柜、椅子、茶几。\n\n问题：哪一个不属于同一类？",
+      "answer": "乒乓球",
+      "target": "乒乓球",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-06",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、茶几、火车、卡车。\n\n问题：哪一个不属于同一类？",
+      "answer": "茶几",
+      "target": "茶几",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-06",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、茶几、火车、卡车。\n\n问题：哪一个不属于同一类？",
+      "answer": "茶几",
+      "target": "茶几",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-06",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、茶几、火车、卡车。\n\n问题：哪一个不属于同一类？",
+      "answer": "茶",
+      "target": "茶几",
+      "latencyMs": 395,
+      "score": 0,
+      "note": "期望「茶几」，实答「茶」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-06",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、茶几、火车、卡车。\n\n问题：哪一个不属于同一类？",
+      "answer": "茶几",
+      "target": "茶几",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-07",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、西瓜、自行车、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "自行车",
+      "target": "自行车",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-07",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、西瓜、自行车、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "自行车",
+      "target": "自行车",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-07",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、西瓜、自行车、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "自行这",
+      "target": "自行车",
+      "latencyMs": 363,
+      "score": 0,
+      "note": "期望「自行车」，实答「自行这」",
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-07",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、西瓜、自行车、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "自行车",
+      "target": "自行车",
+      "latencyMs": 377,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-08",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：粉色、茄子、紫色、橙色。\n\n问题：哪一个不属于同一类？",
+      "answer": "茄子",
+      "target": "茄子",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-08",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：粉色、茄子、紫色、橙色。\n\n问题：哪一个不属于同一类？",
+      "answer": "茄子",
+      "target": "茄子",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-08",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：粉色、茄子、紫色、橙色。\n\n问题：哪一个不属于同一类？",
+      "answer": "茄子",
+      "target": "茄子",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-08",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：粉色、茄子、紫色、橙色。\n\n问题：哪一个不属于同一类？",
+      "answer": "茄",
+      "target": "茄子",
+      "latencyMs": 411,
+      "score": 0,
+      "note": "期望「茄子」，实答「茄」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "OO-09",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、土星、金星、白菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "白菜",
+      "target": "白菜",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-09",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、土星、金星、白菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "白",
+      "target": "白菜",
+      "latencyMs": 122,
+      "score": 0,
+      "note": "期望「白菜」，实答「白」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-09",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、土星、金星、白菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "白",
+      "target": "白菜",
+      "latencyMs": 192,
+      "score": 0,
+      "note": "期望「白菜」，实答「白」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-09",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、土星、金星、白菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "白菜",
+      "target": "白菜",
+      "latencyMs": 435,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-10",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：紫色、桌子、鞋柜、床。\n\n问题：哪一个不属于同一类？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-10",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：紫色、桌子、鞋柜、床。\n\n问题：哪一个不属于同一类？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-10",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：紫色、桌子、鞋柜、床。\n\n问题：哪一个不属于同一类？",
+      "answer": "紫",
+      "target": "紫色",
+      "latencyMs": 179,
+      "score": 0,
+      "note": "期望「紫色」，实答「紫」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-10",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：紫色、桌子、鞋柜、床。\n\n问题：哪一个不属于同一类？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-11",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：网球、篮球、乒乓球、热水器。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水器",
+      "target": "热水器",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-11",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：网球、篮球、乒乓球、热水器。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水器",
+      "target": "热水器",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-11",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：网球、篮球、乒乓球、热水器。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水",
+      "target": "热水器",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "期望「热水器」，实答「热水」",
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-11",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：网球、篮球、乒乓球、热水器。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水器",
+      "target": "热水器",
+      "latencyMs": 297,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-12",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、西瓜、羽毛球、荔枝。\n\n问题：哪一个不属于同一类？",
+      "answer": "羽毛球",
+      "target": "羽毛球",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-12",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、西瓜、羽毛球、荔枝。\n\n问题：哪一个不属于同一类？",
+      "answer": "羽球",
+      "target": "羽毛球",
+      "latencyMs": 302,
+      "score": 0,
+      "note": "期望「羽毛球」，实答「羽球」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-12",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、西瓜、羽毛球、荔枝。\n\n问题：哪一个不属于同一类？",
+      "answer": "羽个球",
+      "target": "羽毛球",
+      "latencyMs": 84,
+      "score": 0,
+      "note": "期望「羽毛球」，实答「羽个球」",
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-12",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、西瓜、羽毛球、荔枝。\n\n问题：哪一个不属于同一类？",
+      "answer": "羽毛球",
+      "target": "羽毛球",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-13",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、菠萝、橙子、月亮。\n\n问题：哪一个不属于同一类？",
+      "answer": "月亮",
+      "target": "月亮",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-13",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、菠萝、橙子、月亮。\n\n问题：哪一个不属于同一类？",
+      "answer": "月",
+      "target": "月亮",
+      "latencyMs": 259,
+      "score": 0,
+      "note": "期望「月亮」，实答「月」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-13",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、菠萝、橙子、月亮。\n\n问题：哪一个不属于同一类？",
+      "answer": "月亮",
+      "target": "月亮",
+      "latencyMs": 382,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-13",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：荔枝、菠萝、橙子、月亮。\n\n问题：哪一个不属于同一类？",
+      "answer": "月",
+      "target": "月亮",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "期望「月亮」，实答「月」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-14",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：地铁、自行车、飞机、香蕉。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-14",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：地铁、自行车、飞机、香蕉。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-14",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：地铁、自行车、飞机、香蕉。\n\n问题：哪一个不属于同一类？",
+      "answer": "香",
+      "target": "香蕉",
+      "latencyMs": 137,
+      "score": 0,
+      "note": "期望「香蕉」，实答「香」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-14",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：地铁、自行车、飞机、香蕉。\n\n问题：哪一个不属于同一类？",
+      "answer": "香蕉",
+      "target": "香蕉",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-15",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：足球、排球、沙发、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "沙发",
+      "target": "沙发",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-15",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：足球、排球、沙发、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "沙发",
+      "target": "沙发",
+      "latencyMs": 83,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-15",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：足球、排球、沙发、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "沙",
+      "target": "沙发",
+      "latencyMs": 245,
+      "score": 0,
+      "note": "期望「沙发」，实答「沙」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-15",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：足球、排球、沙发、棒球。\n\n问题：哪一个不属于同一类？",
+      "answer": "沙发",
+      "target": "沙发",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-16",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、菠萝、荔枝、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "芹菜",
+      "target": "芹菜",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-16",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、菠萝、荔枝、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "芹菜",
+      "target": "芹菜",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-16",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、菠萝、荔枝、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "芹菜",
+      "target": "芹菜",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-16",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：香蕉、菠萝、荔枝、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "芹菜",
+      "target": "芹菜",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-17",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、太阳、床、木星。\n\n问题：哪一个不属于同一类？",
+      "answer": "床",
+      "target": "床",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-17",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、太阳、床、木星。\n\n问题：哪一个不属于同一类？",
+      "answer": "床",
+      "target": "床",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-17",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、太阳、床、木星。\n\n问题：哪一个不属于同一类？",
+      "answer": "床",
+      "target": "床",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-17",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：彗星、太阳、床、木星。\n\n问题：哪一个不属于同一类？",
+      "answer": "床",
+      "target": "床",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-18",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：钢琴、飞机、小提琴、萨克斯。\n\n问题：哪一个不属于同一类？",
+      "answer": "飞机",
+      "target": "飞机",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-18",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：钢琴、飞机、小提琴、萨克斯。\n\n问题：哪一个不属于同一类？",
+      "answer": "飞机",
+      "target": "飞机",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-18",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：钢琴、飞机、小提琴、萨克斯。\n\n问题：哪一个不属于同一类？",
+      "answer": "飞机",
+      "target": "飞机",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-18",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：钢琴、飞机、小提琴、萨克斯。\n\n问题：哪一个不属于同一类？",
+      "answer": "飞",
+      "target": "飞机",
+      "latencyMs": 256,
+      "score": 0,
+      "note": "期望「飞机」，实答「飞」",
+      "usage": {
+        "input": 26,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-19",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、葡萄、轮船、地铁。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡萄",
+      "target": "葡萄",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-19",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、葡萄、轮船、地铁。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡萄",
+      "target": "葡萄",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-19",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、葡萄、轮船、地铁。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡萄",
+      "target": "葡萄",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-19",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：飞机、葡萄、轮船、地铁。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡",
+      "target": "葡萄",
+      "latencyMs": 273,
+      "score": 0,
+      "note": "期望「葡萄」，实答「葡」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-20",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：椅子、衣柜、桌子、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡萄",
+      "target": "葡萄",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-20",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：椅子、衣柜、桌子、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡",
+      "target": "葡萄",
+      "latencyMs": 167,
+      "score": 0,
+      "note": "期望「葡萄」，实答「葡」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-20",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：椅子、衣柜、桌子、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡",
+      "target": "葡萄",
+      "latencyMs": 173,
+      "score": 0,
+      "note": "期望「葡萄」，实答「葡」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-20",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：椅子、衣柜、桌子、葡萄。\n\n问题：哪一个不属于同一类？",
+      "answer": "葡",
+      "target": "葡萄",
+      "latencyMs": 295,
+      "score": 0,
+      "note": "期望「葡萄」，实答「葡」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-21",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：老虎、长笛、海豚、松鼠。\n\n问题：哪一个不属于同一类？",
+      "answer": "长",
+      "target": "长笛",
+      "latencyMs": 445,
+      "score": 0,
+      "note": "期望「长笛」，实答「长」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-21",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：老虎、长笛、海豚、松鼠。\n\n问题：哪一个不属于同一类？",
+      "answer": "长",
+      "target": "长笛",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「长笛」，实答「长」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-21",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：老虎、长笛、海豚、松鼠。\n\n问题：哪一个不属于同一类？",
+      "answer": "长笛",
+      "target": "长笛",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-21",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：老虎、长笛、海豚、松鼠。\n\n问题：哪一个不属于同一类？",
+      "answer": "长笛",
+      "target": "长笛",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-22",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：衣柜、粉色、青色、绿色。\n\n问题：哪一个不属于同一类？",
+      "answer": "衣柜",
+      "target": "衣柜",
+      "latencyMs": 382,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-22",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：衣柜、粉色、青色、绿色。\n\n问题：哪一个不属于同一类？",
+      "answer": "衣柜",
+      "target": "衣柜",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-22",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：衣柜、粉色、青色、绿色。\n\n问题：哪一个不属于同一类？",
+      "answer": "衣",
+      "target": "衣柜",
+      "latencyMs": 441,
+      "score": 0,
+      "note": "期望「衣柜」，实答「衣」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-22",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：衣柜、粉色、青色、绿色。\n\n问题：哪一个不属于同一类？",
+      "answer": "衣柜",
+      "target": "衣柜",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-23",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、狮子、海豚、熊猫。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水器",
+      "target": "热水器",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-23",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、狮子、海豚、熊猫。\n\n问题：哪一个不属于同一类？",
+      "answer": "热器",
+      "target": "热水器",
+      "latencyMs": 281,
+      "score": 0,
+      "note": "期望「热水器」，实答「热器」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-23",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、狮子、海豚、熊猫。\n\n问题：哪一个不属于同一类？",
+      "answer": "水器",
+      "target": "热水器",
+      "latencyMs": 367,
+      "score": 0,
+      "note": "期望「热水器」，实答「水器」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-23",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：热水器、狮子、海豚、熊猫。\n\n问题：哪一个不属于同一类？",
+      "answer": "热水器",
+      "target": "热水器",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-24",
+      "condition": "odd-one-out",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：土豆、书架、茄子、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "书架",
+      "target": "书架",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-24",
+      "condition": "odd-one-out",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：土豆、书架、茄子、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "书架",
+      "target": "书架",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-24",
+      "condition": "odd-one-out",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：土豆、书架、茄子、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "书",
+      "target": "书架",
+      "latencyMs": 248,
+      "score": 0,
+      "note": "期望「书架」，实答「书」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "OO-24",
+      "condition": "odd-one-out",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出那个异类词本身，不多一个字。\n四个词：土豆、书架、茄子、芹菜。\n\n问题：哪一个不属于同一类？",
+      "answer": "书架",
+      "target": "书架",
+      "latencyMs": 322,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "66bc850084e7fc60",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.22.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "buildId": "build_d673dfb57109",
+  "result": "Succeeded",
+  "platform": "StandaloneWindows64",
+  "outputPath": "E:/projects/黑洞空间站/.cache/v019-r3-finish-player/StationV019.exe",
+  "totalSizeBytes": 1199451419,
+  "buildTimeMs": 51763,
+  "buildStartedAt": "2026-10-04T07:44:11.6487965Z",
+  "buildEndedAt": "2026-10-04T07:45:03.4124395Z",
+  "totalWarnings": 2,
+  "totalErrors": 0,
+  "errors": [],
+  "warnings": [
+    {
+      "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+    },
+    {
+      "message": "warning CS0109: The member 'ArenaGame.AddComponent<T>()' does not hide an accessible member. The new keyword is not required.",
+      "file": "Assets\\Scripts\\App\\ArenaGame.cs"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "practical-open",
+  "title": "实用场景 · 开放评审",
+  "mode": "open",
+  "description": "使用明确标注的合成材料，覆盖核对、排期、预算、数据、需求变更与复盘。开放题允许不同合理答案；多轮任务含三轮固定材料与修订要求，个别任务需要识别不可满足的约束。",
+  "author": "AI斗兽场 · 人工可编辑",
+  "version": "1.0.0",
+  "judge": {
+    "kind": "rubric",
+    "dimensions": [
+      {
+        "id": "correctness",
+        "name": "正确性",
+        "weight": 35,
+        "criteria": "关键事实、计算与结论正确；实质性错误按影响扣分。"
+      },
+      {
+        "id": "evidence",
+        "name": "依据",
+        "weight": 25,
+        "criteria": "结论对应给定材料，区分事实、假设与未知；编造或无依据断言扣分。"
+      },
+      {
+        "id": "completeness",
+        "name": "完整性",
+        "weight": 25,
+        "criteria": "覆盖全部要求及主要边界条件；遗漏重要问题扣分。"
+      },
+      {
+        "id": "clarity",
+        "name": "表达清晰度",
+        "weight": 15,
+        "criteria": "结构清楚，关键判断与行动可定位；含糊或自相矛盾扣分。"
+      }
+    ]
+  },
+  "conditions": {
+    "reconciliation": "材料核对",
+    "scheduling": "项目排期",
+    "budget": "预算调整",
+    "data": "数据解读",
+    "requirements": "需求变更",
+    "retrospective": "案例复盘"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "逐题核对数字、资源与依赖、变更覆盖及评分条件；合成材料，语义评审仍可能存在裁判差异。"
+  },
+  "canary": "ququ-arena:f25d1626-54cd-43bd-8836-e8b012"
+}

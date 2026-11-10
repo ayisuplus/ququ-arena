@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>战报 · 通假·拼音剖面擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:#f3ece1; color:#7a6a52; font-size:11px; padding:2px 8px; border-radius:6px; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:#fff; }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:#fbf8f3; border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:#4c453d; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; }
+</style></head>
+<body><div class="wrap">
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 通假·拼音剖面擂台</h1>
+  <div class="sub">复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-09T18:02:30.250Z · 用时 0.0s · 3 只蛐蛐 × 85 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>模型</th><th>总分</th><th>带调拼音还原</th><th>数字调拼音还原</th><th>无声调拼音还原</th><th>首字母缩写还原（悬崖维度）</th><th>汉字拼音混写还原</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">老实-k2</td><td class="muted">mock:laoshi-k2</td>
+      <td class="score">80.0%</td>
+      <td>93.3%</td><td>53.3%</td><td>80.0%</td><td>80.0%</td><td>93.3%</td>
+      <td>1632</td><td>⚔️ 骁骑</td><td class="win">1734 (+132)</td><td>85</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">滑头-72B</td><td class="muted">mock:huatou-72b</td>
+      <td class="score">71.8%</td>
+      <td>100.0%</td><td>93.3%</td><td>92.0%</td><td>13.3%</td><td>46.7%</td>
+      <td>1616</td><td>⚔️ 骁骑</td><td class="win">1670 (+116)</td><td>85</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">犟驴-7B</td><td class="muted">mock:jianglv-7b</td>
+      <td class="score">29.4%</td>
+      <td>20.0%</td><td>53.3%</td><td>32.0%</td><td>13.3%</td><td>26.7%</td>
+      <td>1252</td><td>🐣 雏虫</td><td class="lose">572 (-248)</td><td>85</td>
+      <td>—</td>
+    </tr>
+</tbody></table></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 老实-k2 以 80.0% 夺冠，领先 滑头-72B 8.2%。</li><li>🩸 屠杀局：首尾差距 50.6%，犟驴-7B 基本是被按在地上摩擦完整场的。</li><li>🎬 名场面：「t2-p2h-0012」全员翻车（均分 0.0%）——请将以下拼音还原为正确的中文句子，只输出还原结果：
+jin1 tian1 de tian1 qi4 …</li><li>   本场共 10 道&quot;团灭题&quot;，这罐子的出题人是个狠角色。</li></ul></div>
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">数字调拼音还原</span> 全场平均仅 <b>0.0%</b> —— t2-p2h-0012</div>
+      <div class="prompt">请将以下拼音还原为正确的中文句子，只输出还原结果：
+jin1 tian1 de tian1 qi4 fei1 chang2 shi4 he2 jiao1 you2</div>
+      <div class="target">参考答案：今天的天气非常适合郊游</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：今天的天气非常适合郊我</li><li><b>犟驴-7B</b>（0.0%）：今天人天气非常适合郊游</li><li><b>老实-k2</b>（0.0%）：今天的天气非</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">首字母缩写还原（悬崖维度）</span> 全场平均仅 <b>0.0%</b> —— t2-p2h-0014</div>
+      <div class="prompt">以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：
+j t d t q f c s h j y</div>
+      <div class="target">参考答案：今天的天气非常适合郊游</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：今天的天气非</li><li><b>犟驴-7B</b>（0.0%）：今天的天气非常适合有游</li><li><b>老实-k2</b>（0.0%）：今天的天气非</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">无声调拼音还原</span> 全场平均仅 <b>0.0%</b> —— t2-p2h-0023</div>
+      <div class="prompt">请将以下拼音还原为正确的中文句子，只输出还原结果：
+ke ji chuang xin tui dong she hui jin bu</div>
+      <div class="target">参考答案：科技创新推动社会进步</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：科技创新推动社一进步</li><li><b>犟驴-7B</b>（0.0%）：科技创新推</li><li><b>老实-k2</b>（0.0%）：这技创新推动社会进步</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">首字母缩写还原（悬崖维度）</span> 全场平均仅 <b>0.0%</b> —— t2-p2h-0034</div>
+      <div class="prompt">以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：
+z w s s j s z n d y y z y</div>
+      <div class="target">参考答案：中文是世界上最难的语言之一</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：中文是世界上最难的语之一</li><li><b>犟驴-7B</b>（0.0%）：我文是世界上最难的语言之一</li><li><b>老实-k2</b>（0.0%）：中文是世界上最</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">首字母缩写还原（悬崖维度）</span> 全场平均仅 <b>0.0%</b> —— t2-p2h-0044</div>
+      <div class="prompt">以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：
+z g w t x y r z y j</div>
+      <div class="target">参考答案：这个问题需要认真研究</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：这个问题要认真研究</li><li><b>犟驴-7B</b>（0.0%）：这个问题需要认真究</li><li><b>老实-k2</b>（0.0%）：这个问题需</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">首字母缩写还原（悬崖维度）</span> 全场平均仅 <b>33.3%</b> —— t2-p2h-0004</div>
+      <div class="prompt">以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：
+b j s z g d s d</div>
+      <div class="target">参考答案：北京是中国的首都</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：北京是中</li><li><b>犟驴-7B</b>（0.0%）：北是中国的首都</li><li><b>老实-k2</b>（100.0%）：北京是中国的首都</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">带调拼音还原</span> 全场平均仅 <b>33.3%</b> —— t2-p2h-0006</div>
+      <div class="prompt">请将以下拼音还原为正确的中文句子，只输出还原结果：
+rén gōng zhì néng zhèng zài gǎi biàn shì jiè</div>
+      <div class="target">参考答案：人工智能正在改变世界</div>
+      <ul><li><b>犟驴-7B</b>（0.0%）：人工智能正改变世界</li><li><b>老实-k2</b>（0.0%）：人为智能正在改变世界</li><li><b>滑头-72B</b>（100.0%）：人工智能正在改变世界</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">数字调拼音还原</span> 全场平均仅 <b>33.3%</b> —— t2-p2h-0007</div>
+      <div class="prompt">请将以下拼音还原为正确的中文句子，只输出还原结果：
+ren2 gong1 zhi4 neng2 zheng4 zai4 gai3 bian4 shi4 jie4</div>
+      <div class="target">参考答案：人工智能正在改变世界</div>
+      <ul><li><b>犟驴-7B</b>（0.0%）：人工是能正在改变世界</li><li><b>老实-k2</b>（0.0%）：人工能正在改变世界</li><li><b>滑头-72B</b>（100.0%）：人工智能正在改变世界</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">无声调拼音还原</span> 全场平均仅 <b>33.3%</b> —— t2-p2h-0008</div>
+      <div class="prompt">请将以下拼音还原为正确的中文句子，只输出还原结果：
+ren gong zhi neng zheng zai gai bian shi jie</div>
+      <div class="target">参考答案：人工智能正在改变世界</div>
+      <ul><li><b>犟驴-7B</b>（0.0%）：人工智能正</li><li><b>老实-k2</b>（0.0%）：人工智能正在改变世大</li><li><b>滑头-72B</b>（100.0%）：人工智能正在改变世界</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">汉字拼音混写还原</span> 全场平均仅 <b>33.3%</b> —— t2-p2h-0010</div>
+      <div class="prompt">以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：
+人工智neng正在gaibian世jie</div>
+      <div class="target">参考答案：人工智能正在改变世界</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：人工智能正</li><li><b>犟驴-7B</b>（0.0%）：工智能正在改变世界</li><li><b>老实-k2</b>（100.0%）：人工智能正在改变世界</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 255 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北是中国的首都</td>
+      <td class="muted">期望「北京是中国的首都」，实答「北是中国的首都」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">京是中国的首都</td>
+      <td class="muted">期望「北京是中国的首都」，实答「京是中国的首都」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北京是中</td>
+      <td class="muted">期望「北京是中国的首都」，实答「北京是中」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0004</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北京是中</td>
+      <td class="muted">期望「北京是中国的首都」，实答「北京是中」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0004</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北是中国的首都</td>
+      <td class="muted">期望「北京是中国的首都」，实答「北是中国的首都」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0004</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0005</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0005</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北京是中</td>
+      <td class="muted">期望「北京是中国的首都」，实答「北京是中」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0005</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0006</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0006</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工智能正改变世界</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工智能正改变世界」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0006</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人为智能正在改变世界</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人为智能正在改变世界」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0007</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0007</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工是能正在改变世界</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工是能正在改变世界」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0007</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工能正在改变世界</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工能正在改变世界」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工智能正</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工智能正」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工智能正在改变世大</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工智能正在改变世大」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0009</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0009</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0009</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0010</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人工智能正</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「人工智能正」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0010</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">工智能正在改变世界</td>
+      <td class="muted">期望「人工智能正在改变世界」，实答「工智能正在改变世界」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0010</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">人工智能正在改变世界</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0011</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0011</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0011</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0012</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非常适合郊我</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非常适合郊我」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0012</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天人天气非常适合郊游</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天人天气非常适合郊游」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0012</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0013</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0013</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0013</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0014</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0014</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非常适合有游</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非常适合有游」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0014</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0015</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的气非常适合郊游</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的气非常适合郊游」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0015</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">今天的天气非常了合郊游</td>
+      <td class="muted">期望「今天的天气非常适合郊游」，实答「今天的天气非常了合郊游」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0015</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">今天的天气非常适合郊游</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0016</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0016</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这本书的内</td>
+      <td class="muted">期望「这本书的内容十分有趣」，实答「这本书的内」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0016</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0017</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0017</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0017</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0018</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0018</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这本书的内容十分有中</td>
+      <td class="muted">期望「这本书的内容十分有趣」，实答「这本书的内容十分有中」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0018</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0019</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这本书的内</td>
+      <td class="muted">期望「这本书的内容十分有趣」，实答「这本书的内」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0019</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这本的的内容十分有趣</td>
+      <td class="muted">期望「这本书的内容十分有趣」，实答「这本的的内容十分有趣」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0019</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0020</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0020</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0020</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这本书的内容十分有趣</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0021</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0021</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0021</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0022</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0022</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0022</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0023</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推动社一进步</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推动社一进步」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0023</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0023</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这技创新推动社会进步</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「这技创新推动社会进步」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0024</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推动了会进步</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推动了会进步」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0024</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0024</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0025</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0025</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">科技创新推动社会进上</td>
+      <td class="muted">期望「科技创新推动社会进步」，实答「科技创新推动社会进上」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0025</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">科技创新推动社会进步</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0026</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0026</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">他每天持锻炼身体</td>
+      <td class="muted">期望「他每天坚持锻炼身体」，实答「他每天持锻炼身体」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0026</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0027</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0027</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0027</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0028</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0028</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">他每天坚持</td>
+      <td class="muted">期望「他每天坚持锻炼身体」，实答「他每天坚持」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0028</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0029</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0029</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">他每天坚持</td>
+      <td class="muted">期望「他每天坚持锻炼身体」，实答「他每天坚持」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0029</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0030</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">他每天坚锻炼身体</td>
+      <td class="muted">期望「他每天坚持锻炼身体」，实答「他每天坚锻炼身体」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0030</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0030</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">他每天坚持锻炼身体</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0031</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0031</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">中文是世界上最难的语言之人</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「中文是世界上最难的语言之人」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0031</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0032</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0032</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">中文是世界上最</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「中文是世界上最」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0032</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0033</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0033</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">中文是世界上最的语言之一</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「中文是世界上最的语言之一」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0033</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0034</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">中文是世界上最难的语之一</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「中文是世界上最难的语之一」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0034</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">我文是世界上最难的语言之一</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「我文是世界上最难的语言之一」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0034</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">中文是世界上最</td>
+      <td class="muted">期望「中文是世界上最难的语言之一」，实答「中文是世界上最」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0035</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0035</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0035</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">中文是世界上最难的语言之一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0036</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0036</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">保环境是每个人的责任</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「保环境是每个人的责任」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0036</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0037</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0037</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">保护环境是每</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「保护环境是每」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0037</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">护环境是每个人的责任</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「护环境是每个人的责任」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0038</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0038</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0038</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0039</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">保护环是每个人的责任</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「保护环是每个人的责任」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0039</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">保护环境是每个人责任</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「保护环境是每个人责任」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0039</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0040</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">保护环境是每个人责任</td>
+      <td class="muted">期望「保护环境是每个人的责任」，实答「保护环境是每个人责任」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0040</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0040</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">保护环境是每个人的责任</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0041</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0041</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这个问题需</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「这个问题需」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0041</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0042</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0042</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0042</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0043</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0043</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0043</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0044</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这个问题要认真研究</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「这个问题要认真研究」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0044</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这个问题需要认真究</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「这个问题需要认真究」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0044</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这个问题需</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「这个问题需」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0045</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">为个问题需要认真研究</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「为个问题需要认真研究」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0045</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">这个问题需认真研究</td>
+      <td class="muted">期望「这个问题需要认真研究」，实答「这个问题需认真研究」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0045</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这个问题需要认真研究</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0046</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0046</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶冶人的了操</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的了操」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0046</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0047</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0047</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0047</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0048</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0048</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0048</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0049</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0049</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶冶人的操</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的操」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0049</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0050</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0050</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">音乐能够陶冶人的在操</td>
+      <td class="muted">期望「音乐能够陶冶人的情操」，实答「音乐能够陶冶人的在操」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0050</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">音乐能够陶冶人的情操</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0051</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0051</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">知识改</td>
+      <td class="muted">期望「知识改变命运」，实答「知识改」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0051</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0052</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0052</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">知识改变命</td>
+      <td class="muted">期望「知识改变命运」，实答「知识改变命」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0052</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0053</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0053</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">知识改变命</td>
+      <td class="muted">期望「知识改变命运」，实答「知识改变命」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0053</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0054</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">识改变命运</td>
+      <td class="muted">期望「知识改变命运」，实答「识改变命运」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0054</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0054</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0055</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0055</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">知识改</td>
+      <td class="muted">期望「知识改变命运」，实答「知识改」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0055</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">知识改变命运</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0056</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0056</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">团结就是量</td>
+      <td class="muted">期望「团结就是力量」，实答「团结就是量」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0056</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0057</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0057</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0057</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0058</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0058</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0058</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0059</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">团结就</td>
+      <td class="muted">期望「团结就是力量」，实答「团结就」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0059</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">团是就是力量</td>
+      <td class="muted">期望「团结就是力量」，实答「团是就是力量」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0059</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0060</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0060</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">团为就是力量</td>
+      <td class="muted">期望「团结就是力量」，实答「团为就是力量」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0060</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">团结就是力量</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0061</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0061</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败一成功之母</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败一成功之母」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0061</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0062</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0062</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0062</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0063</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0063</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败是国功之母</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败是国功之母」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0063</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败是功之母</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败是功之母」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0064</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败是成</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败是成」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0064</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败是成功母</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败是成功母」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0064</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0065</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0065</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">失败是成</td>
+      <td class="muted">期望「失败是成功之母」，实答「失败是成」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0065</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">失败是成功之母</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0066</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0066</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0066</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0067</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0067</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间人像海绵里的水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间人像海绵里的水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0067</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海里的水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海里的水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0068</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0068</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海绵里在水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海绵里在水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0068</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0069</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0069</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海里的水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海里的水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0069</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0070</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">时间就像海绵里的水</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0070</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间了像海绵里的水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间了像海绵里的水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0070</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">时间就像海绵里水</td>
+      <td class="muted">期望「时间就像海绵里的水」，实答「时间就像海绵里水」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0071</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0071</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">读书破万卷这笔如有神</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「读书破万卷这笔如有神」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0071</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0072</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0072</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0072</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">读书破万卷人笔如有神</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「读书破万卷人笔如有神」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0073</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0073</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0073</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0074</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">读书破万下笔如有神</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「读书破万下笔如有神」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0074</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">是书破万卷下笔如有神</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「是书破万卷下笔如有神」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0074</td><td><span class="tag">首字母缩写还原（悬崖维度）</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0075</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">读书破万卷下笔有神</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「读书破万卷下笔有神」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0075</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">读书破万卷</td>
+      <td class="muted">期望「读书破万卷下笔如有神」，实答「读书破万卷」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0075</td><td><span class="tag">汉字拼音混写还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">读书破万卷下笔如有神</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0001</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0001</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北</td>
+      <td class="muted">期望「北京」，实答「北」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0001</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0002</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">四个</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0002</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">四</td>
+      <td class="muted">期望「四个」，实答「四」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0002</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">四个</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">H2</td>
+      <td class="muted">期望「H2O」，实答「H2」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">大2O</td>
+      <td class="muted">期望「H2O」，实答「大2O」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0003</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">H2O</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0004</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">东方</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0004</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">东方</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0004</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">东方</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0005</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">七天</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0005</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">七</td>
+      <td class="muted">期望「七天」，实答「七」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0005</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">七天</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0006</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">表意文字</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0006</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">表在文字</td>
+      <td class="muted">期望「表意文字」，实答「表在文字」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0006</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">表意文字</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0007</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">第一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0007</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">第</td>
+      <td class="muted">期望「第一」，实答「第」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0007</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">第一</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">太阳</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">太阳</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0008</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">太阳</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0009</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">传统节日</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0009</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">统节日</td>
+      <td class="muted">期望「传统节日」，实答「统节日」</td>
+    </tr>
+<tr>
+      <td>t2-pqa-0009</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">传统节日</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0010</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">三个</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0010</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">三个</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-pqa-0010</td><td><span class="tag">无声调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">三</td>
+      <td class="muted">期望「三个」，实答「三」</td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：滑头-72B / 犟驴-7B / 老实-k2
+  <br>Token 用量：滑头-72B 2597+352，犟驴-7B 2597+340，老实-k2 2597+357
+</footer>
+</div></body></html>

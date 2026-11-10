@@ -1,0 +1,21 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "emoji-quiz",
+  "title": "表情猜谜擂台",
+  "description": "表情符号猜成语/电影（内容自建，谜底均为通行谜面）。idiom 维度 16 题表情猜成语，movie 维度 4 题表情猜电影。测符号解码与文化映射能力——趣味性罐，天然适合内容创作截图传播。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:emoji-quiz:2026-09-10",
+  "taskPrefix": "只输出谜底本身（成语/电影名），不多一个字。\n",
+  "judge": {
+    "kind": "exact"
+  },
+  "conditions": {
+    "idiom": "表情猜成语",
+    "movie": "表情猜电影"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "blockedReason": "表情到成语、作品的对应不唯一，部分提示与目标不符（柠檬表情对应“梅”），需重设计候选项。"
+  }
+}

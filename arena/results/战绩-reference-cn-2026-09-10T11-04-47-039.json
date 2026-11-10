@@ -1,0 +1,1270 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "reference-cn",
+    "title": "中文指代擂台",
+    "description": "Winograd 最小对中文版（自建）：同一句式仅换从句，指代对象随之翻转（\"小明把伞借给了小华，因为他没带伞\"的他=小华；\"因为他多带了一把伞\"的他=小明）。测代词指代的语义推理——答错最小对=没读懂句子。exact 裁判。",
+    "author": "AI斗兽场（自建，Winograd 式最小对）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:reference-cn:2026-09-10",
+    "taskPrefix": "只输出代词指代的那个人名本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "winograd": "最小对指代消解"
+    }
+  },
+  "startedAt": "2026-09-10T11:04:47.039Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RC-01",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他没带伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小",
+      "target": "小华",
+      "latencyMs": 330,
+      "score": 0,
+      "note": "期望「小华」，实答「小」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-01",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他没带伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小华",
+      "target": "小华",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-01",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他没带伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小华",
+      "target": "小华",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-01",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他没带伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小华",
+      "target": "小华",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-02",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他多带了一把伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小明",
+      "target": "小明",
+      "latencyMs": 312,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-02",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他多带了一把伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小",
+      "target": "小明",
+      "latencyMs": 215,
+      "score": 0,
+      "note": "期望「小明」，实答「小」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-02",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他多带了一把伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小明",
+      "target": "小明",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-02",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「小明把伞借给了小华，因为他多带了一把伞。」\n问题：句中的「他」指的是谁？",
+      "answer": "小明",
+      "target": "小明",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-03",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他考了第一名。」\n问题：句中的「他」指的是谁？",
+      "answer": "班长",
+      "target": "班长",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-03",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他考了第一名。」\n问题：句中的「他」指的是谁？",
+      "answer": "班长",
+      "target": "班长",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-03",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他考了第一名。」\n问题：句中的「他」指的是谁？",
+      "answer": "班长",
+      "target": "班长",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-03",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他考了第一名。」\n问题：句中的「他」指的是谁？",
+      "answer": "班长",
+      "target": "班长",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-04",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他教学有方。」\n问题：句中的「他」指的是谁？",
+      "answer": "老师",
+      "target": "老师",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-04",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他教学有方。」\n问题：句中的「他」指的是谁？",
+      "answer": "老师",
+      "target": "老师",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-04",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他教学有方。」\n问题：句中的「他」指的是谁？",
+      "answer": "老",
+      "target": "老师",
+      "latencyMs": 166,
+      "score": 0,
+      "note": "期望「老师」，实答「老」",
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-04",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「老师表扬了班长，因为他教学有方。」\n问题：句中的「他」指的是谁？",
+      "answer": "老师",
+      "target": "老师",
+      "latencyMs": 344,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-05",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她发烧了。」\n问题：句中的「她」指的是谁？",
+      "answer": "病",
+      "target": "病人",
+      "latencyMs": 87,
+      "score": 0,
+      "note": "期望「病人」，实答「病」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-05",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她发烧了。」\n问题：句中的「她」指的是谁？",
+      "answer": "病",
+      "target": "病人",
+      "latencyMs": 327,
+      "score": 0,
+      "note": "期望「病人」，实答「病」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-05",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她发烧了。」\n问题：句中的「她」指的是谁？",
+      "answer": "病",
+      "target": "病人",
+      "latencyMs": 147,
+      "score": 0,
+      "note": "期望「病人」，实答「病」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-05",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她发烧了。」\n问题：句中的「她」指的是谁？",
+      "answer": "病人",
+      "target": "病人",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-06",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她很细心。」\n问题：句中的「她」指的是谁？",
+      "answer": "护士",
+      "target": "护士",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-06",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她很细心。」\n问题：句中的「她」指的是谁？",
+      "answer": "护士",
+      "target": "护士",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-06",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她很细心。」\n问题：句中的「她」指的是谁？",
+      "answer": "护士",
+      "target": "护士",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-06",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「护士给病人量了体温，因为她很细心。」\n问题：句中的「她」指的是谁？",
+      "answer": "护士",
+      "target": "护士",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-07",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他拖欠了三个月。」\n问题：句中的「他」指的是谁？",
+      "answer": "租客",
+      "target": "租客",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-07",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他拖欠了三个月。」\n问题：句中的「他」指的是谁？",
+      "answer": "租客",
+      "target": "租客",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-07",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他拖欠了三个月。」\n问题：句中的「他」指的是谁？",
+      "answer": "租",
+      "target": "租客",
+      "latencyMs": 155,
+      "score": 0,
+      "note": "期望「租客」，实答「租」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RC-07",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他拖欠了三个月。」\n问题：句中的「他」指的是谁？",
+      "answer": "租",
+      "target": "租客",
+      "latencyMs": 118,
+      "score": 0,
+      "note": "期望「租客」，实答「租」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-08",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他等着钱用。」\n问题：句中的「他」指的是谁？",
+      "answer": "房东",
+      "target": "房东",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-08",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他等着钱用。」\n问题：句中的「他」指的是谁？",
+      "answer": "房东",
+      "target": "房东",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-08",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他等着钱用。」\n问题：句中的「他」指的是谁？",
+      "answer": "房东",
+      "target": "房东",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-08",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「房东催促租客交租，因为他等着钱用。」\n问题：句中的「他」指的是谁？",
+      "answer": "房东",
+      "target": "房东",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-09",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他作业早就写完了。」\n问题：句中的「他」指的是谁？",
+      "answer": "哥哥",
+      "target": "哥哥",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-09",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他作业早就写完了。」\n问题：句中的「他」指的是谁？",
+      "answer": "哥哥",
+      "target": "哥哥",
+      "latencyMs": 407,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-09",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他作业早就写完了。」\n问题：句中的「他」指的是谁？",
+      "answer": "哥",
+      "target": "哥哥",
+      "latencyMs": 257,
+      "score": 0,
+      "note": "期望「哥哥」，实答「哥」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-09",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他作业早就写完了。」\n问题：句中的「他」指的是谁？",
+      "answer": "哥哥",
+      "target": "哥哥",
+      "latencyMs": 147,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-10",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他央求了一下午。」\n问题：句中的「他」指的是谁？",
+      "answer": "弟弟",
+      "target": "弟弟",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-10",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他央求了一下午。」\n问题：句中的「他」指的是谁？",
+      "answer": "弟",
+      "target": "弟弟",
+      "latencyMs": 404,
+      "score": 0,
+      "note": "期望「弟弟」，实答「弟」",
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-10",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他央求了一下午。」\n问题：句中的「他」指的是谁？",
+      "answer": "弟",
+      "target": "弟弟",
+      "latencyMs": 359,
+      "score": 0,
+      "note": "期望「弟弟」，实答「弟」",
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-10",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「哥哥答应弟弟一起去踢球，因为他央求了一下午。」\n问题：句中的「他」指的是谁？",
+      "answer": "弟弟",
+      "target": "弟弟",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-11",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他迟到了。」\n问题：句中的「他」指的是谁？",
+      "answer": "实习生",
+      "target": "实习生",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-11",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他迟到了。」\n问题：句中的「他」指的是谁？",
+      "answer": "实习为",
+      "target": "实习生",
+      "latencyMs": 94,
+      "score": 0,
+      "note": "期望「实习生」，实答「实习为」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-11",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他迟到了。」\n问题：句中的「他」指的是谁？",
+      "answer": "实大生",
+      "target": "实习生",
+      "latencyMs": 294,
+      "score": 0,
+      "note": "期望「实习生」，实答「实大生」",
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-11",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他迟到了。」\n问题：句中的「他」指的是谁？",
+      "answer": "实习生",
+      "target": "实习生",
+      "latencyMs": 460,
+      "score": 1,
+      "usage": {
+        "input": 29,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-12",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他一向严格。」\n问题：句中的「他」指的是谁？",
+      "answer": "经理",
+      "target": "经理",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-12",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他一向严格。」\n问题：句中的「他」指的是谁？",
+      "answer": "经理",
+      "target": "经理",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-12",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他一向严格。」\n问题：句中的「他」指的是谁？",
+      "answer": "经",
+      "target": "经理",
+      "latencyMs": 370,
+      "score": 0,
+      "note": "期望「经理」，实答「经」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-12",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「经理批评了实习生，因为他一向严格。」\n问题：句中的「他」指的是谁？",
+      "answer": "经理",
+      "target": "经理",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-13",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她看天气预报降温了。」\n问题：句中的「她」指的是谁？",
+      "answer": "妈妈",
+      "target": "妈妈",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-13",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她看天气预报降温了。」\n问题：句中的「她」指的是谁？",
+      "answer": "妈妈",
+      "target": "妈妈",
+      "latencyMs": 115,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-13",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她看天气预报降温了。」\n问题：句中的「她」指的是谁？",
+      "answer": "妈妈",
+      "target": "妈妈",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-13",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她看天气预报降温了。」\n问题：句中的「她」指的是谁？",
+      "answer": "妈妈",
+      "target": "妈妈",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-14",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她总爱穿得太少。」\n问题：句中的「她」指的是谁？",
+      "answer": "女儿",
+      "target": "女儿",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-14",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她总爱穿得太少。」\n问题：句中的「她」指的是谁？",
+      "answer": "女",
+      "target": "女儿",
+      "latencyMs": 393,
+      "score": 0,
+      "note": "期望「女儿」，实答「女」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-14",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她总爱穿得太少。」\n问题：句中的「她」指的是谁？",
+      "answer": "女儿",
+      "target": "女儿",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-14",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「妈妈提醒女儿带外套，因为她总爱穿得太少。」\n问题：句中的「她」指的是谁？",
+      "answer": "女儿",
+      "target": "女儿",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-15",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他帮忙看住了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "保安",
+      "target": "保安",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-15",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他帮忙看住了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "保安",
+      "target": "保安",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-15",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他帮忙看住了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "保",
+      "target": "保安",
+      "latencyMs": 296,
+      "score": 0,
+      "note": "期望「保安」，实答「保」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-15",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他帮忙看住了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "保",
+      "target": "保安",
+      "latencyMs": 468,
+      "score": 0,
+      "note": "期望「保安」，实答「保」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-16",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他终于收到了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "快递员",
+      "target": "快递员",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-16",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他终于收到了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "快递",
+      "target": "快递员",
+      "latencyMs": 182,
+      "score": 0,
+      "note": "期望「快递员」，实答「快递」",
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-16",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他终于收到了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "快递员",
+      "target": "快递员",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-16",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「快递员感谢了保安，因为他终于收到了包裹。」\n问题：句中的「他」指的是谁？",
+      "answer": "快递员",
+      "target": "快递员",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-17",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他第一次上场。」\n问题：句中的「他」指的是谁？",
+      "answer": "新人",
+      "target": "新人",
+      "latencyMs": 308,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-17",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他第一次上场。」\n问题：句中的「他」指的是谁？",
+      "answer": "新人",
+      "target": "新人",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-17",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他第一次上场。」\n问题：句中的「他」指的是谁？",
+      "answer": "新人",
+      "target": "新人",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-17",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他第一次上场。」\n问题：句中的「他」指的是谁？",
+      "answer": "新人",
+      "target": "新人",
+      "latencyMs": 380,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-18",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他善于调动气氛。」\n问题：句中的「他」指的是谁？",
+      "answer": "教练",
+      "target": "教练",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-18",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他善于调动气氛。」\n问题：句中的「他」指的是谁？",
+      "answer": "教练",
+      "target": "教练",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-18",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他善于调动气氛。」\n问题：句中的「他」指的是谁？",
+      "answer": "教",
+      "target": "教练",
+      "latencyMs": 337,
+      "score": 0,
+      "note": "期望「教练」，实答「教」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-18",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「教练鼓励了新人，因为他善于调动气氛。」\n问题：句中的「他」指的是谁？",
+      "answer": "教练",
+      "target": "教练",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-19",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他需要定期复查。」\n问题：句中的「他」指的是谁？",
+      "answer": "病人",
+      "target": "病人",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-19",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他需要定期复查。」\n问题：句中的「他」指的是谁？",
+      "answer": "病人",
+      "target": "病人",
+      "latencyMs": 465,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-19",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他需要定期复查。」\n问题：句中的「他」指的是谁？",
+      "answer": "病人",
+      "target": "病人",
+      "latencyMs": 353,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-19",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他需要定期复查。」\n问题：句中的「他」指的是谁？",
+      "answer": "病人",
+      "target": "病人",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-20",
+      "condition": "winograd",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他下周要出差。」\n问题：句中的「他」指的是谁？",
+      "answer": "医生",
+      "target": "医生",
+      "latencyMs": 165,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-20",
+      "condition": "winograd",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他下周要出差。」\n问题：句中的「他」指的是谁？",
+      "answer": "医生",
+      "target": "医生",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-20",
+      "condition": "winograd",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他下周要出差。」\n问题：句中的「他」指的是谁？",
+      "answer": "医生",
+      "target": "医生",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RC-20",
+      "condition": "winograd",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出代词指代的那个人名本身，不多一个字。\n句子：「医生嘱咐病人按时服药，因为他下周要出差。」\n问题：句中的「他」指的是谁？",
+      "answer": "医生",
+      "target": "医生",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "f47d3a867d22c589",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.25.0"
+  }
+}

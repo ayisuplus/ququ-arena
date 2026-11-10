@@ -1,0 +1,64 @@
+{
+  "at": "2026-09-13T10:27:26.873Z",
+  "source": "C:/Users/36322/AppData/Local/Temp/harness-real-hyru9n/harness/h-08a7eaff-873d-474c-9811-30e6ccb95806.json",
+  "runId": "h-08a7eaff-873d-474c-9811-30e6ccb95806",
+  "note": "只在新容器复核已有真实模型产物；不重跑模型，不追改原试验分数。",
+  "rows": [
+    {
+      "trial": "t1",
+      "originalStatus": "failed",
+      "originalScore": 0,
+      "artifactPassed": false,
+      "checks": [
+        {
+          "id": "pages",
+          "title": "首尾页与默认值",
+          "passed": false
+        },
+        {
+          "id": "range",
+          "title": "越界页与不可变性",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "拒绝非法页码和大小",
+          "passed": false
+        }
+      ],
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ total (0.635879ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 54.734185\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_957e798a6d544b0bb854a5f67c91bfeb_pages\nnot ok 1 - check_957e798a6d544b0bb854a5f67c91bfeb_pages\n  ---\n  duration_ms: 11.54445\n  type: 'test'\n  location: '/workspace/acceptance.mjs:2:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n        items: [\n    +     3\n    -     1,\n    -     2\n        ],\n        total: 3\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    items:\n      0: 1\n      1: 2\n    total: 3\n  actual:\n    items:\n      0: 3\n    total: 3\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:2:70)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n# Subtest: check_957e798a6d544b0bb854a5f67c91bfeb_range\nok 2 - check_957e798a6d544b0bb854a5f67c91bfeb_range\n  ---\n  duration_ms: 0.12423\n  type: 'test'\n  ...\n# Subtest: check_957e798a6d544b0bb854a5f67c91bfeb_invalid\nnot ok 3 - check_957e798a6d544b0bb854a5f67c91bfeb_invalid\n  ---\n  duration_ms: 0.275991\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:110)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 63.731824\n"
+      }
+    },
+    {
+      "trial": "t2",
+      "originalStatus": "failed",
+      "originalScore": 0,
+      "artifactPassed": false,
+      "checks": [
+        {
+          "id": "pages",
+          "title": "首尾页与默认值",
+          "passed": true
+        },
+        {
+          "id": "range",
+          "title": "越界页与不可变性",
+          "passed": true
+        },
+        {
+          "id": "invalid",
+          "title": "拒绝非法页码和大小",
+          "passed": false
+        }
+      ],
+      "logs": {
+        "syntax.log": "exit 0",
+        "public-tests.log": "✔ total (0.592185ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 52.956933\n",
+        "acceptance.log": "TAP version 13\n# Subtest: check_74e090f6772241438b17cdbab081cb34_pages\nok 1 - check_74e090f6772241438b17cdbab081cb34_pages\n  ---\n  duration_ms: 0.955714\n  type: 'test'\n  ...\n# Subtest: check_74e090f6772241438b17cdbab081cb34_range\nok 2 - check_74e090f6772241438b17cdbab081cb34_range\n  ---\n  duration_ms: 0.241499\n  type: 'test'\n  ...\n# Subtest: check_74e090f6772241438b17cdbab081cb34_invalid\nnot ok 3 - check_74e090f6772241438b17cdbab081cb34_invalid\n  ---\n  duration_ms: 0.551333\n  type: 'test'\n  location: '/workspace/acceptance.mjs:6:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///workspace/acceptance.mjs:6:110)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:974:18)\n    Test.postRun (node:internal/test_runner/test:1542:19)\n    Test.run (node:internal/test_runner/test:1467:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 56.578112\n"
+      }
+    }
+  ]
+}

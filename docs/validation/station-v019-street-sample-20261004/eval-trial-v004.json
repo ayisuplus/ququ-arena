@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "command": "unity command eval_file",
+  "data": null,
+  "errors": [
+    {
+      "code": "COMMAND_FAILED",
+      "message": "Compilation Failed\n  The namespace 'System.Collections.Generic' cannot be used with type arguments（第 46 行，第 54 列）\n  The namespace 'System.Collections.Generic' cannot be used with type arguments（第 51 行，第 70 列）\n  The best overloaded Add method 'List<Generic<Vector3>>.Add(Generic<Vector3>)' for the collection initializer has some invalid arguments（第 51 行，第 100 列）\n  Argument 1: cannot convert from 'System.Collections.Generic.List<UnityEngine.Vector3>' to 'System.Collections.Generic<UnityEngine.Vector3>'（第 51 行，第 100 列）\n  The namespace 'System.Collections.Generic' cannot be used with type arguments（第 54 行，第 67 列）\n  The namespace 'System.Collections.Generic' cannot be used with type arguments（第 56 行，第 40 列）\n  The namespace 'System.Collections.Generic' cannot be used with type arguments（第 56 行，第 107 列）\n  Operator '<' cannot be applied to operands of type 'int' and 'method group'（第 57 行，第 16 列）\n  Operator '%' cannot be applied to operands of type 'int' and 'method group'（第 58 行，第 30 列）\n  Operator '>=' cannot be applied to operands of type 'method group' and 'int'（第 64 行，第 7 列）\n  Operator '>=' cannot be applied to operands of type 'method group' and 'int'（第 64 行，第 47 列）\n  Operator '/=' cannot be applied to operands of type 'Vector3' and 'method group'（第 68 行，第 61 列）\n  Operator '-' cannot be applied to operands of type 'method group' and 'int'（第 69 行，第 17 列）\n  Operator '/' cannot be applied to operands of type 'method group' and 'int'（第 81 行，第 110 列）\n  Unreachable code detected（第 135 行，第 12 列）"
+    }
+  ],
+  "warnings": []
+}

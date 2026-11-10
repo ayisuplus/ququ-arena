@@ -1,0 +1,14 @@
+{
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "competitionId": "c415e7579-7ecc-4b9c-a3b9-401b0155f414",
+    "status": "waiting",
+    "reason": "平局或异常待续；尚未产生冠军",
+    "error": "System.Exception: 等待期间停止轮询：83 -> 83\r\n  at QuQu.StationWaitingPollProbeV019+<Check>d__3.MoveNext () [0x002fa] in <89f7423f0fba460baf8b0da107368fa8>:0 \r\n  at QuQu.StationWaitingPollProbeV019+<Start>d__2.MoveNext () [0x000cc] in <89f7423f0fba460baf8b0da107368fa8>:0 ",
+    "passed": false,
+    "waitingIsNonTerminal": true,
+    "waitingKeepsPolling": false,
+    "pollRoundsAtWaiting": 83,
+    "pollRoundsAfterWait": 83,
+    "waitedSeconds": 3,
+    "graphics": "NVIDIA GeForce RTX 5090"
+}

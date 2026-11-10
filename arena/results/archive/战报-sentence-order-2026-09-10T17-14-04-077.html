@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 语句排序擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 20 道题 · 冠军 笔记-DOTS 80.0%">
+<title>战报 · 语句排序擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 语句排序擂台</h1>
+  <div class="sub">形制致敬行测语句排序（内容自建）。把一段连贯文字的 5 个句子打乱，按行文逻辑重排，exact 裁判（序号数字串）。reference-chain 考指代衔接（「它/这些/在他的带领下」必须后指）、conjunction-chain 考关联词与论证衔接（首先/其次/然后/最后、因为/因此、不但/而且/更）、general-detail 考总分结构（总起→分述→总结）、time-space 考时空顺序（参观路线/四季/登山/村庄一天）。每题只设唯一连贯顺序；meta.sentences 存正确序、meta.order 存数字串，契约测试三方映射复算（展示序按 order 重排 ≡ 正确序，展示序≠正确序防送分，20 串互不相同）。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T17:14:04.077Z · 用时 243.9s · 4 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>指代衔接（它/这些/其 必须后指）</th><th>关联词与论证衔接（首先/因为/不但/所以）</th><th>总分结构（总起→分述→总结）</th><th>时空顺序（路线/四季/一天）</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">笔记-DOTS<span class="badge-ach" title="本场解锁：尸山血海">💀</span><div class="muted">dots:dots3-note-prev</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>80.0%</td><td>100.0%</td><td>40.0%</td><td>100.0%</td>
+      <td class="nw">1572</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1760 (+72)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">月影-K3 <span class="tag">首秀</span><div class="muted">kimi-coding:k3</div></td>
+      <td class="score">80.0%<div class="ci">±17.5%</div></td>
+      <td>80.0%</td><td>100.0%</td><td>60.0%</td><td>80.0%</td>
+      <td class="nw">1559</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1559 (+59)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">守门员-K2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">75.0%<div class="ci">±17.5%</div></td>
+      <td>40.0%</td><td>60.0%</td><td>100.0%</td><td>100.0%</td>
+      <td class="nw">1600</td><td class="nw">🐲 虫王</td><td class="nw win">52199 (+100)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">深思-V4F <span class="tag">首秀</span><div class="muted">deepseek:deepseek-v4-flash</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td><td>0.0%</td><td>0.0%</td><td>0.0%</td>
+      <td class="nw">1269</td><td class="nw">🛡️ 老卒</td><td class="nw lose">1269 (-231)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[-20.0%, 20.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.96（k=20 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！笔记-DOTS 与 月影-K3 的分差 95% CI 为 [-20.0%, 20.0%]，含 0——谁是冠军纯属运气。</li><li>🩸 屠杀局：首尾 80.0% 的鸿沟——深思-V4F 今晚不宜出门。</li><li>💥 大爆冷！赛前最大热门 守门员-K2（生涯 52099）仅列第 3，身价当场蒸发。</li><li>🐴 下克上！身价垫底的 月影-K3（生涯 1500）杀进前二——评级公司要加班了。</li><li>🎬 名场面：「SO-RC-02」全员翻车（均分 25.0%）——把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字…</li><li>   共 4 道团灭题——出题人今晚睡得着吗。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">指代衔接（它/这些/其 必须后指）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">月影-K3</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">守门员-K2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">深思-V4F</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">关联词与论证衔接（首先/因为/不但/所以）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">月影-K3</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">守门员-K2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">深思-V4F</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">总分结构（总起→分述→总结）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:40.0%"></span></span>
+        <span class="dim-val">40.0%</span></div><div class="dim-row"><span class="dim-name">月影-K3</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:60.0%"></span></span>
+        <span class="dim-val">60.0%</span></div><div class="dim-row"><span class="dim-name">守门员-K2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">深思-V4F</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">时空顺序（路线/四季/一天）</div><div class="dim-row"><span class="dim-name">笔记-DOTS</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">月影-K3</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.0%"></span></span>
+        <span class="dim-val">80.0%</span></div><div class="dim-row"><span class="dim-name">守门员-K2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">深思-V4F</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>笔记-DOTS</th><th>月影-K3</th><th>守门员-K2</th><th>深思-V4F</th></tr></thead>
+<tbody><tr><td class="name">笔记-DOTS</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.04)">52.5%</td><td style="background:rgba(26,127,75,0.56)">90.0%</td></tr>
+<tr><td class="name">月影-K3</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">52.5%</td><td style="background:rgba(26,127,75,0.56)">90.0%</td></tr>
+<tr><td class="name">守门员-K2</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.52)">87.5%</td></tr>
+<tr><td class="name">深思-V4F</td><td style="background:rgba(193,68,30,0.56)">10.0%</td><td style="background:rgba(193,68,30,0.56)">10.0%</td><td style="background:rgba(193,68,30,0.52)">12.5%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">指代衔接（它/这些/其 必须后指）</span> 全场平均仅 <b>25.0%</b> —— SO-RC-02</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①同学们都喜欢听她的课。
+②大家都十分尊敬她。
+③李老师教我们语文。
+④她讲课生动有趣。
+⑤在她的带领下，我们班的语文成绩不断提高。</div>
+      <div class="target">参考答案：34152</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：34125</li><li><b>深思-V4F</b>（0.0%）：③④①②⑤</li><li><b>守门员-K2</b>（0.0%）：341</li><li><b>月影-K3</b>（100.0%）：34152</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">指代衔接（它/这些/其 必须后指）</span> 全场平均仅 <b>25.0%</b> —— SO-RC-05</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①这个高高瘦瘦的男孩篮球打得特别好。
+②他叫张明，来自南方。
+③大家都爱和他一起打球。
+④我们班转来一位新同学。
+⑤很快他就成了校队的主力。</div>
+      <div class="target">参考答案：42153</div>
+      <ul><li><b>深思-V4F</b>（0.0%）：41253</li><li><b>月影-K3</b>（0.0%）：42135</li><li><b>守门员-K2</b>（0.0%）：4215了</li><li><b>笔记-DOTS</b>（100.0%）：42153</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">总分结构（总起→分述→总结）</span> 全场平均仅 <b>25.0%</b> —— SO-GD-01</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①柳树抽出了嫩绿的枝条。
+②春天的公园真美。
+③到处是一派生机勃勃的景象。
+④桃花笑红了脸。
+⑤小草也从土里探出了头。</div>
+      <div class="target">参考答案：24153</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：23145</li><li><b>深思-V4F</b>（0.0%）：②①④⑤③</li><li><b>月影-K3</b>（0.0%）：21453</li><li><b>守门员-K2</b>（100.0%）：24153</li></ul>
+    </div>
+<div class="bath">
+      <div class="bath-head"><span class="tag">总分结构（总起→分述→总结）</span> 全场平均仅 <b>25.0%</b> —— SO-GD-05</div>
+      <div class="prompt">把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。
+把下列 5 个句子排成一段连贯的话：
+①坚持阅读，让人视野开阔。
+②让我们从小养成好习惯。
+③勤于思考，让人头脑灵活。
+④早睡早起，让人精力充沛。
+⑤良好的习惯让人受益终身。</div>
+      <div class="target">参考答案：54132</div>
+      <ul><li><b>笔记-DOTS</b>（0.0%）：25134</li><li><b>深思-V4F</b>（0.0%）：51432</li><li><b>月影-K3</b>（0.0%）：51342</li><li><b>守门员-K2</b>（100.0%）：54132</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 80 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">6.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">31542</td>
+      <td class="muted">674ms</td>
+      <td class="muted">期望「35142」，实答「31542」</td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">3.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-01</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35142</td>
+      <td class="muted">156ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">9.7s</td>
+      <td class="muted">期望「34152」，实答「34125」</td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">③④①②⑤</td>
+      <td class="muted">586ms</td>
+      <td class="muted">期望「34152」，实答「③④①②⑤」</td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34152</td>
+      <td class="muted">11.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-02</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>守门员-K2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">341</td>
+      <td class="muted">456ms</td>
+      <td class="muted">期望「34152」，实答「341」</td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">11.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">31245</td>
+      <td class="muted">861ms</td>
+      <td class="muted">期望「32145」，实答「31245」</td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">32145</td>
+      <td class="muted">3.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-03</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>守门员-K2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">3145</td>
+      <td class="muted">453ms</td>
+      <td class="muted">期望「32145」，实答「3145」</td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">4.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">②⑤①④③</td>
+      <td class="muted">349ms</td>
+      <td class="muted">期望「25143」，实答「②⑤①④③」</td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">6.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-04</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25143</td>
+      <td class="muted">265ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">7.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">41253</td>
+      <td class="muted">855ms</td>
+      <td class="muted">期望「42153」，实答「41253」</td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>月影-K3</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">42135</td>
+      <td class="muted">6.1s</td>
+      <td class="muted">期望「42153」，实答「42135」</td>
+    </tr>
+<tr>
+      <td>SO-RC-05</td><td><span class="tag">指代衔接（它/这些/其 必须后指）</span></td>
+      <td>守门员-K2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4215了</td>
+      <td class="muted">393ms</td>
+      <td class="muted">期望「42153」，实答「4215了」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">9.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">④③①⑤②</td>
+      <td class="muted">393ms</td>
+      <td class="muted">期望「43152」，实答「④③①⑤②」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">43152</td>
+      <td class="muted">6.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-01</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>守门员-K2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4352</td>
+      <td class="muted">139ms</td>
+      <td class="muted">期望「43152」，实答「4352」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">4.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">42153</td>
+      <td class="muted">1.2s</td>
+      <td class="muted">期望「42513」，实答「42153」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">4.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-02</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42513</td>
+      <td class="muted">179ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">9.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">21435</td>
+      <td class="muted">347ms</td>
+      <td class="muted">期望「24135」，实答「21435」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">7.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-03</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24135</td>
+      <td class="muted">426ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">6.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">④⑤①②③</td>
+      <td class="muted">507ms</td>
+      <td class="muted">期望「34512」，实答「④⑤①②③」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">4.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-04</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">267ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">8.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">④②⑤①③</td>
+      <td class="muted">335ms</td>
+      <td class="muted">期望「45123」，实答「④②⑤①③」</td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">45123</td>
+      <td class="muted">17.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-CJ-05</td><td><span class="tag">关联词与论证衔接（首先/因为/不但/所以）</span></td>
+      <td>守门员-K2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">4123</td>
+      <td class="muted">281ms</td>
+      <td class="muted">期望「45123」，实答「4123」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">23145</td>
+      <td class="muted">38.6s</td>
+      <td class="muted">期望「24153」，实答「23145」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">②①④⑤③</td>
+      <td class="muted">781ms</td>
+      <td class="muted">期望「24153」，实答「②①④⑤③」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>月影-K3</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">21453</td>
+      <td class="muted">8.5s</td>
+      <td class="muted">期望「24153」，实答「21453」</td>
+    </tr>
+<tr>
+      <td>SO-GD-01</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">24153</td>
+      <td class="muted">218ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">21.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">34512</td>
+      <td class="muted">304ms</td>
+      <td class="muted">期望「35412」，实答「34512」</td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">6.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-02</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">35412</td>
+      <td class="muted">166ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51243</td>
+      <td class="muted">30.3s</td>
+      <td class="muted">期望「54123」，实答「51243」</td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">⑤④①②③</td>
+      <td class="muted">415ms</td>
+      <td class="muted">期望「54123」，实答「⑤④①②③」</td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54123</td>
+      <td class="muted">10.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-03</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54123</td>
+      <td class="muted">137ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">8.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">⑤③①④②</td>
+      <td class="muted">713ms</td>
+      <td class="muted">期望「53142」，实答「⑤③①④②」</td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">4.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-04</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">53142</td>
+      <td class="muted">250ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">46.8s</td>
+      <td class="muted">期望「54132」，实答「25134」</td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51432</td>
+      <td class="muted">625ms</td>
+      <td class="muted">期望「54132」，实答「51432」</td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>月影-K3</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51342</td>
+      <td class="muted">3.8s</td>
+      <td class="muted">期望「54132」，实答「51342」</td>
+    </tr>
+<tr>
+      <td>SO-GD-05</td><td><span class="tag">总分结构（总起→分述→总结）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">54132</td>
+      <td class="muted">348ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">4.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51243</td>
+      <td class="muted">668ms</td>
+      <td class="muted">期望「52143」，实答「51243」</td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">5.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-01</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">52143</td>
+      <td class="muted">366ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">4.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">51423</td>
+      <td class="muted">818ms</td>
+      <td class="muted">期望「42315」，实答「51423」</td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>月影-K3</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">54231</td>
+      <td class="muted">3.3s</td>
+      <td class="muted">期望「42315」，实答「54231」</td>
+    </tr>
+<tr>
+      <td>SO-TS-02</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">42315</td>
+      <td class="muted">351ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">6.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">③④①②⑤</td>
+      <td class="muted">689ms</td>
+      <td class="muted">期望「34125」，实答「③④①②⑤」</td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">4.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-03</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">34125</td>
+      <td class="muted">276ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">3.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">21543</td>
+      <td class="muted">692ms</td>
+      <td class="muted">期望「25341」，实答「21543」</td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">3.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-04</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25341</td>
+      <td class="muted">220ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>笔记-DOTS</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">21.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>深思-V4F</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">②⑤①③④</td>
+      <td class="muted">787ms</td>
+      <td class="muted">期望「25134」，实答「②⑤①③④」</td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>月影-K3</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">5.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>SO-TS-05</td><td><span class="tag">时空顺序（路线/四季/一天）</span></td>
+      <td>守门员-K2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">25134</td>
+      <td class="muted">379ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.12.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：笔记-DOTS / 深思-V4F / 月影-K3 / 守门员-K2<br>
+  题库指纹 <code>3b4e54bdecef7500</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:sentence-order:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：笔记-DOTS 2415+25024，深思-V4F 1870+70，月影-K3 3422+4393，守门员-K2 1436+56
+</footer>
+</div></body></html>

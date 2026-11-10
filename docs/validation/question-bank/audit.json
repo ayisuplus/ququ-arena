@@ -1,0 +1,523 @@
+{
+  "banks": 73,
+  "tasks": 2034,
+  "playable": 1817,
+  "paused": 217,
+  "ruleChecked": 1717,
+  "solverChecked": 494,
+  "modelJudged": 100,
+  "issues": [],
+  "coverage": [
+    {
+      "bank": "anagram-check",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "analogy-pair",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "arith-word",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "base-convert",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "case-clash",
+      "total": 24,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "case-extract",
+      "total": 24,
+      "playable": 12,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "childhood-song",
+      "total": 16,
+      "playable": 16,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "cipher-decode",
+      "total": 30,
+      "playable": 30,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "conditional-logic",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "core-arena",
+      "total": 48,
+      "playable": 48,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "couplet-chain",
+      "total": 16,
+      "playable": 16,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "data-analysis",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "date-reason",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "definition-judge",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "digit-slang",
+      "total": 16,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "dyck-bracket",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "element-symbol",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "emoji-grid",
+      "total": 40,
+      "playable": 40,
+      "solved": 40,
+      "modelJudged": 0
+    },
+    {
+      "bank": "emoji-quiz",
+      "total": 20,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "event-order",
+      "total": 20,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "excel-survivor",
+      "total": 6,
+      "playable": 6,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "experience-replay",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "honesty-trap",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "idiom-blank",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "idiom-fix",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "judge-shield",
+      "total": 28,
+      "playable": 28,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "kb-fringe",
+      "total": 20,
+      "playable": 12,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "legal-boundary",
+      "total": 52,
+      "playable": 52,
+      "solved": 0,
+      "modelJudged": 52
+    },
+    {
+      "bank": "legal-math",
+      "total": 21,
+      "playable": 21,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "logical-deduction",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "math24-judge",
+      "total": 30,
+      "playable": 30,
+      "solved": 30,
+      "modelJudged": 0
+    },
+    {
+      "bank": "measure-word",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "metacog-gate",
+      "total": 150,
+      "playable": 120,
+      "solved": 90,
+      "modelJudged": 0
+    },
+    {
+      "bank": "mini-sudoku",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "navigate",
+      "total": 26,
+      "playable": 26,
+      "solved": 26,
+      "modelJudged": 0
+    },
+    {
+      "bank": "number-sequence",
+      "total": 16,
+      "playable": 16,
+      "solved": 16,
+      "modelJudged": 0
+    },
+    {
+      "bank": "odd-one-out",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "palindrome-cn",
+      "total": 36,
+      "playable": 36,
+      "solved": 36,
+      "modelJudged": 0
+    },
+    {
+      "bank": "pattern-grid",
+      "total": 12,
+      "playable": 12,
+      "solved": 12,
+      "modelJudged": 0
+    },
+    {
+      "bank": "poem-match",
+      "total": 16,
+      "playable": 16,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "polite-troll",
+      "total": 40,
+      "playable": 40,
+      "solved": 0,
+      "modelJudged": 40
+    },
+    {
+      "bank": "province-plate",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "reading-mini",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "reference-cn",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "reverse-word-cn",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "riddle-me",
+      "total": 16,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "roman-num",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "ruozhiba",
+      "total": 16,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "sentence-order",
+      "total": 20,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "session-shift",
+      "total": 32,
+      "playable": 32,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "shuffle-track",
+      "total": 26,
+      "playable": 26,
+      "solved": 26,
+      "modelJudged": 0
+    },
+    {
+      "bank": "soup-lateral",
+      "total": 12,
+      "playable": 0,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "star-sign",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "statute-choice",
+      "total": 16,
+      "playable": 16,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "statute-match",
+      "total": 22,
+      "playable": 22,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "statute-reading",
+      "total": 96,
+      "playable": 96,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "stroke-count",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "stroop-test",
+      "total": 26,
+      "playable": 26,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "syllogism",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "t9-encode",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "temporal-seq",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "tongjia-pinyin",
+      "total": 85,
+      "playable": 68,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "tongjia-typo",
+      "total": 140,
+      "playable": 134,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "truth-lie",
+      "total": 26,
+      "playable": 26,
+      "solved": 26,
+      "modelJudged": 0
+    },
+    {
+      "bank": "unit-convert",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "verify-claim",
+      "total": 16,
+      "playable": 16,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "voxel-craft",
+      "total": 22,
+      "playable": 22,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "word-blank",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "word-sort-pinyin",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "xiehouyu",
+      "total": 20,
+      "playable": 20,
+      "solved": 0,
+      "modelJudged": 0
+    },
+    {
+      "bank": "yinyang-master",
+      "total": 8,
+      "playable": 8,
+      "solved": 0,
+      "modelJudged": 8
+    },
+    {
+      "bank": "zebra-mini",
+      "total": 24,
+      "playable": 24,
+      "solved": 24,
+      "modelJudged": 0
+    },
+    {
+      "bank": "zodiac-year",
+      "total": 24,
+      "playable": 24,
+      "solved": 0,
+      "modelJudged": 0
+    }
+  ]
+}

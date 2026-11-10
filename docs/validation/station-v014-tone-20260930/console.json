@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "error",
+      "tail": "3"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 3157,
+          "timestampUtc": "2026-09-30T15:40:57.1116642Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms",
+          "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteGated>d__105:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1403)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass115_0/<<HandleExecRequest>b__0>d:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2032)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommandByName>d__133:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2478)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommand>d__134:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2517)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 3159,
+          "timestampUtc": "2026-09-30T15:42:00.7035561Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 3204,
+          "timestampUtc": "2026-09-30T15:54:00.9127744Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 3204,
+      "session": "814657f7922d4052bc4ce786f94bf596",
+      "returned": 3,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 34,
+        "warn": 107,
+        "log": 1859
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-09-30T15:55:52.8924063Z",
+        "ageMs": 189,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 1,
+        "consoleWarnings": 0,
+        "consoleLogs": 11,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

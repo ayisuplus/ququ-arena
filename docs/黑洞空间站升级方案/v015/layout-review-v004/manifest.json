@@ -1,0 +1,46 @@
+{
+  "version": "v004",
+  "date": "2026-10-01",
+  "kind": "AI concept image and planning review",
+  "tool": "built-in imagegen",
+  "source": "../layout-review-v003/birdseye-v003.png",
+  "pedestrian": "../layout-review-v003/pedestrian-v003.png",
+  "sourceCommit": "2a953b26",
+  "sceneModified": false,
+  "unityTestsRun": false,
+  "finalImage": "birdseye-annotated-v004.png",
+  "rejected": "history/arrows-conflicting-rejected.png",
+  "rejectionReason": "Conflicting directional arrows on the same rings",
+  "visualChecks": [
+    "Six region labels readable",
+    "R1 and R3 clockwise, R2 counterclockwise text",
+    "Conflicting arrows removed",
+    "Central open shaft retained",
+    "Fixed transfer strips solid and flush",
+    "Plants remain in glass garden",
+    "Concept, not runtime, caption present"
+  ],
+  "userVisualApproval": "pending",
+  "files": [
+    {
+      "path": "birdseye-annotated-v004.png",
+      "sha256": "138955c0cb962b7c7ab718aad581299903b1392e760491d4a7f435893cdd5ff4",
+      "bytes": 2313311
+    },
+    {
+      "path": "history/arrows-conflicting-rejected.png",
+      "sha256": "f08057bdfe8397c5c0ee162e2cf65b862e619819ca2e9be4cc1e1d5b5cb60006",
+      "bytes": 2421565
+    },
+    {
+      "path": "prompts.md",
+      "sha256": "fb7fd84871ad002179d44f3fcf02e77a21449380c742ad9e6dd1092b157022b3",
+      "bytes": 3448
+    },
+    {
+      "path": "README.md",
+      "sha256": "8883d5580a5d4a10cf17cd89a71084d8d00611a2412c71189eb6daa9443e0e05",
+      "bytes": 5054
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "UnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());var r=UnityEngine.GameObject.Find(\"Rounded ceiling cloud\").GetComponent<UnityEngine.Renderer>();var m=UnityEngine.GameObject.Find(\"Rounded shared oak table\").GetComponent<UnityEngine.Renderer>().sharedMaterial;return new{lightmapIndex=r.lightmapIndex,lightmaps=UnityEngine.LightmapSettings.lightmaps.Length,probes=UnityEngine.LightmapSettings.lightProbes.count,woodMaterial=m.name,roughnessMap=m.GetTexture(\"_MetallicGlossMap\").name,keywords=m.shaderKeywords};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "lightmapIndex": 0,
+        "lightmaps": 4,
+        "probes": 186,
+        "woodMaterial": "V013-OakSurface",
+        "roughnessMap": "OakMetallicSmoothness",
+        "keywords": [
+          "_METALLICSPECGLOSSMAP",
+          "_NORMALMAP"
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

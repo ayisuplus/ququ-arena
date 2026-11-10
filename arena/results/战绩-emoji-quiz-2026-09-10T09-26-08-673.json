@@ -1,0 +1,1275 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "emoji-quiz",
+    "title": "表情猜谜擂台",
+    "description": "表情符号猜成语/电影（内容自建，谜底均为通行谜面）。idiom 维度 16 题表情猜成语，movie 维度 4 题表情猜电影。测符号解码与文化映射能力——趣味性罐，天然适合内容创作截图传播。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:emoji-quiz:2026-09-10",
+    "taskPrefix": "只输出谜底本身（成语/电影名），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "idiom": "表情猜成语",
+      "movie": "表情猜电影"
+    }
+  },
+  "startedAt": "2026-09-10T09:26:08.673Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "EQ-ID-01",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐺❤️🐶🫁",
+      "answer": "狼心狗肺",
+      "target": "狼心狗肺",
+      "latencyMs": 165,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-01",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐺❤️🐶🫁",
+      "answer": "狼心",
+      "target": "狼心狗肺",
+      "latencyMs": 83,
+      "score": 0,
+      "note": "期望「狼心狗肺」，实答「狼心」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-01",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐺❤️🐶🫁",
+      "answer": "狼心狗肺",
+      "target": "狼心狗肺",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-01",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐺❤️🐶🫁",
+      "answer": "狼心狗肺",
+      "target": "狼心狗肺",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-02",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐔✈️🥚💥",
+      "answer": "鸡飞蛋打",
+      "target": "鸡飞蛋打",
+      "latencyMs": 101,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-02",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐔✈️🥚💥",
+      "answer": "鸡飞",
+      "target": "鸡飞蛋打",
+      "latencyMs": 359,
+      "score": 0,
+      "note": "期望「鸡飞蛋打」，实答「鸡飞」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-02",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐔✈️🥚💥",
+      "answer": "鸡这蛋打",
+      "target": "鸡飞蛋打",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「鸡飞蛋打」，实答「鸡这蛋打」",
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-02",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐔✈️🥚💥",
+      "answer": "鸡飞蛋打",
+      "target": "鸡飞蛋打",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-03",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🐍➕🦶",
+      "answer": "画蛇添足",
+      "target": "画蛇添足",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-03",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🐍➕🦶",
+      "answer": "画蛇添足",
+      "target": "画蛇添足",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-03",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🐍➕🦶",
+      "answer": "画蛇",
+      "target": "画蛇添足",
+      "latencyMs": 440,
+      "score": 0,
+      "note": "期望「画蛇添足」，实答「画蛇」",
+      "usage": {
+        "input": 19,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-03",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🐍➕🦶",
+      "answer": "画蛇添足",
+      "target": "画蛇添足",
+      "latencyMs": 177,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-04",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧍🌳🐰",
+      "answer": "守株待兔",
+      "target": "守株待兔",
+      "latencyMs": 310,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-04",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧍🌳🐰",
+      "answer": "守株待兔",
+      "target": "守株待兔",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-04",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧍🌳🐰",
+      "answer": "守株待兔",
+      "target": "守株待兔",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-04",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧍🌳🐰",
+      "answer": "守株待兔",
+      "target": "守株待兔",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-05",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐮🎹",
+      "answer": "对牛弹琴",
+      "target": "对牛弹琴",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-05",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐮🎹",
+      "answer": "对牛弹琴",
+      "target": "对牛弹琴",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-05",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐮🎹",
+      "answer": "人牛弹琴",
+      "target": "对牛弹琴",
+      "latencyMs": 259,
+      "score": 0,
+      "note": "期望「对牛弹琴」，实答「人牛弹琴」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-05",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐮🎹",
+      "answer": "对牛弹琴",
+      "target": "对牛弹琴",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-06",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🙉🔔",
+      "answer": "掩耳盗铃",
+      "target": "掩耳盗铃",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-06",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🙉🔔",
+      "answer": "掩耳盗铃",
+      "target": "掩耳盗铃",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-06",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🙉🔔",
+      "answer": "掩耳盗铃",
+      "target": "掩耳盗铃",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-06",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🙉🔔",
+      "answer": "掩耳盗铃",
+      "target": "掩耳盗铃",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "EQ-ID-07",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🍷🏹🐍",
+      "answer": "杯弓蛇影",
+      "target": "杯弓蛇影",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-07",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🍷🏹🐍",
+      "answer": "杯蛇影",
+      "target": "杯弓蛇影",
+      "latencyMs": 139,
+      "score": 0,
+      "note": "期望「杯弓蛇影」，实答「杯蛇影」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-07",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🍷🏹🐍",
+      "answer": "杯大蛇影",
+      "target": "杯弓蛇影",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「杯弓蛇影」，实答「杯大蛇影」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-07",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🍷🏹🐍",
+      "answer": "杯弓蛇影",
+      "target": "杯弓蛇影",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-08",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦊🐯💪",
+      "answer": "狐假虎威",
+      "target": "狐假虎威",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-08",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦊🐯💪",
+      "answer": "狐假",
+      "target": "狐假虎威",
+      "latencyMs": 212,
+      "score": 0,
+      "note": "期望「狐假虎威」，实答「狐假」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-08",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦊🐯💪",
+      "answer": "狐假虎威",
+      "target": "狐假虎威",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-08",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦊🐯💪",
+      "answer": "狐假虎威",
+      "target": "狐假虎威",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-09",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🕳️🐸",
+      "answer": "井底之蛙",
+      "target": "井底之蛙",
+      "latencyMs": 389,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-09",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🕳️🐸",
+      "answer": "井底之蛙",
+      "target": "井底之蛙",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-09",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🕳️🐸",
+      "answer": "井底之蛙",
+      "target": "井底之蛙",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-09",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🕳️🐸",
+      "answer": "井底之蛙",
+      "target": "井底之蛙",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-10",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐉🖌️👁️",
+      "answer": "画龙点睛",
+      "target": "画龙点睛",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-10",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐉🖌️👁️",
+      "answer": "画龙点睛",
+      "target": "画龙点睛",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-10",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐉🖌️👁️",
+      "answer": "画龙点睛",
+      "target": "画龙点睛",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-10",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐉🖌️👁️",
+      "answer": "画龙点睛",
+      "target": "画龙点睛",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-11",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🏹🦅🦅",
+      "answer": "一箭",
+      "target": "一箭双雕",
+      "latencyMs": 353,
+      "score": 0,
+      "note": "期望「一箭双雕」，实答「一箭」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-11",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🏹🦅🦅",
+      "answer": "一箭双雕",
+      "target": "一箭双雕",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-11",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🏹🦅🦅",
+      "answer": "一箭雕",
+      "target": "一箭双雕",
+      "latencyMs": 452,
+      "score": 0,
+      "note": "期望「一箭双雕」，实答「一箭雕」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-11",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🏹🦅🦅",
+      "answer": "一箭双雕",
+      "target": "一箭双雕",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-12",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：❤️❤️❤️💭💭",
+      "answer": "三心二意",
+      "target": "三心二意",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-12",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：❤️❤️❤️💭💭",
+      "answer": "三心二意",
+      "target": "三心二意",
+      "latencyMs": 334,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-12",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：❤️❤️❤️💭💭",
+      "answer": "的心二意",
+      "target": "三心二意",
+      "latencyMs": 261,
+      "score": 0,
+      "note": "期望「三心二意」，实答「的心二意」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-12",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：❤️❤️❤️💭💭",
+      "answer": "三心",
+      "target": "三心二意",
+      "latencyMs": 450,
+      "score": 0,
+      "note": "期望「三心二意」，实答「三心」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-13",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：7️⃣⬆️8️⃣⬇️",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-13",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：7️⃣⬆️8️⃣⬇️",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 381,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-13",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：7️⃣⬆️8️⃣⬇️",
+      "answer": "七上是下",
+      "target": "七上八下",
+      "latencyMs": 424,
+      "score": 0,
+      "note": "期望「七上八下」，实答「七上是下」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-13",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：7️⃣⬆️8️⃣⬇️",
+      "answer": "七上八下",
+      "target": "七上八下",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-14",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：9️⃣🐂1️⃣🪶",
+      "answer": "九牛一毛",
+      "target": "九牛一毛",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-14",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：9️⃣🐂1️⃣🪶",
+      "answer": "九牛一在",
+      "target": "九牛一毛",
+      "latencyMs": 276,
+      "score": 0,
+      "note": "期望「九牛一毛」，实答「九牛一在」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-14",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：9️⃣🐂1️⃣🪶",
+      "answer": "九牛一",
+      "target": "九牛一毛",
+      "latencyMs": 213,
+      "score": 0,
+      "note": "期望「九牛一毛」，实答「九牛一」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-14",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：9️⃣🐂1️⃣🪶",
+      "answer": "九牛一毛",
+      "target": "九牛一毛",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-15",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🫓😋",
+      "answer": "画饼充饥",
+      "target": "画饼充饥",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-15",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🫓😋",
+      "answer": "画饼",
+      "target": "画饼充饥",
+      "latencyMs": 458,
+      "score": 0,
+      "note": "期望「画饼充饥」，实答「画饼」",
+      "usage": {
+        "input": 18,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-15",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🫓😋",
+      "answer": "画不充饥",
+      "target": "画饼充饥",
+      "latencyMs": 104,
+      "score": 0,
+      "note": "期望「画饼充饥」，实答「画不充饥」",
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-15",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🎨🫓😋",
+      "answer": "画饼充饥",
+      "target": "画饼充饥",
+      "latencyMs": 187,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-16",
+      "condition": "idiom",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：👀🍋💧",
+      "answer": "望梅止渴",
+      "target": "望梅止渴",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-16",
+      "condition": "idiom",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：👀🍋💧",
+      "answer": "望梅止渴",
+      "target": "望梅止渴",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-16",
+      "condition": "idiom",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：👀🍋💧",
+      "answer": "望梅止渴",
+      "target": "望梅止渴",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-ID-16",
+      "condition": "idiom",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：👀🍋💧",
+      "answer": "望梅止渴",
+      "target": "望梅止渴",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 18,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-01",
+      "condition": "movie",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🛳️🧊💔",
+      "answer": "泰坦尼克号",
+      "target": "泰坦尼克号",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-01",
+      "condition": "movie",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🛳️🧊💔",
+      "answer": "不坦尼克号",
+      "target": "泰坦尼克号",
+      "latencyMs": 89,
+      "score": 0,
+      "note": "期望「泰坦尼克号」，实答「不坦尼克号」",
+      "usage": {
+        "input": 19,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-01",
+      "condition": "movie",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🛳️🧊💔",
+      "answer": "泰坦尼为号",
+      "target": "泰坦尼克号",
+      "latencyMs": 251,
+      "score": 0,
+      "note": "期望「泰坦尼克号」，实答「泰坦尼为号」",
+      "usage": {
+        "input": 19,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-01",
+      "condition": "movie",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🛳️🧊💔",
+      "answer": "泰坦尼克号",
+      "target": "泰坦尼克号",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 19,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-02",
+      "condition": "movie",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧙⚡",
+      "answer": "哈利波特",
+      "target": "哈利波特",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-02",
+      "condition": "movie",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧙⚡",
+      "answer": "哈利特",
+      "target": "哈利波特",
+      "latencyMs": 166,
+      "score": 0,
+      "note": "期望「哈利波特」，实答「哈利特」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-02",
+      "condition": "movie",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧙⚡",
+      "answer": "哈利",
+      "target": "哈利波特",
+      "latencyMs": 153,
+      "score": 0,
+      "note": "期望「哈利波特」，实答「哈利」",
+      "usage": {
+        "input": 17,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-02",
+      "condition": "movie",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🧙⚡",
+      "answer": "为利波特",
+      "target": "哈利波特",
+      "latencyMs": 377,
+      "score": 0,
+      "note": "期望「哈利波特」，实答「为利波特」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-03",
+      "condition": "movie",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦁👑",
+      "answer": "狮子王",
+      "target": "狮子王",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-03",
+      "condition": "movie",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦁👑",
+      "answer": "狮子王",
+      "target": "狮子王",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-03",
+      "condition": "movie",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦁👑",
+      "answer": "一子王",
+      "target": "狮子王",
+      "latencyMs": 436,
+      "score": 0,
+      "note": "期望「狮子王」，实答「一子王」",
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-03",
+      "condition": "movie",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🦁👑",
+      "answer": "狮子王",
+      "target": "狮子王",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-04",
+      "condition": "movie",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐼🥋",
+      "answer": "功夫熊猫",
+      "target": "功夫熊猫",
+      "latencyMs": 128,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-04",
+      "condition": "movie",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐼🥋",
+      "answer": "功夫熊猫",
+      "target": "功夫熊猫",
+      "latencyMs": 251,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-04",
+      "condition": "movie",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐼🥋",
+      "answer": "功夫熊猫",
+      "target": "功夫熊猫",
+      "latencyMs": 479,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "EQ-MV-04",
+      "condition": "movie",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出谜底本身（成语/电影名），不多一个字。\n看表情猜谜底：🐼🥋",
+      "answer": "功夫熊猫",
+      "target": "功夫熊猫",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 17,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "c213e79e6a1f0732",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.18.0"
+  }
+}

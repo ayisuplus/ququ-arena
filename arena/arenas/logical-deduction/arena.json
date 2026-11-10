@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "logical-deduction",
+  "title": "逻辑排位擂台",
+  "description": "BBH logical_deduction 中文生成器版：四种物品排一列，给若干约束，问某位是谁。关键工程：约束先加到唯一解再做反向消元最小化（冗余约束=水题），24 种排列暴力校验唯一性。生成器即权威。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:logical-deduction:2026-09-10",
+  "taskPrefix": "只输出物品名本身（如「仓鼠」），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "unique-solve": "约束排位（唯一解已暴力校验）" }
+}

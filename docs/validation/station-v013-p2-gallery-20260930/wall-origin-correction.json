@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var root=UnityEngine.GameObject.Find(\"V013 continuous observation gallery\");int fixedWalls=0;foreach(var t in root.GetComponentsInChildren<UnityEngine.Transform>())if(t.name.Contains(\"pressure wall\")&&t.position.y<1){t.position+=UnityEngine.Vector3.up*1.515f;fixedWalls++;}UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());UnityEditor.SceneManagement.EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene());return new{fixedWalls};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "fixedWalls": 4
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

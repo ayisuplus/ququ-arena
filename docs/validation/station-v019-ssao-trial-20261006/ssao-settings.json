@@ -1,0 +1,6 @@
+{
+  "renderer": "Assets/Settings/PC_Renderer.asset",
+  "feature": "ScreenSpaceAmbientOcclusion",
+  "before": "{\n    \"AOMethod\": 0,\n    \"Downsample\": 1,\n    \"Source\": 0,\n    \"NormalSamples\": 1,\n    \"Samples\": 1,\n    \"AfterOpaque\": false,\n    \"Intensity\": 1.2999999523162842,\n    \"DirectLightingStrength\": 0.25,\n    \"Radius\": 1.2000000476837159\n}",
+  "after": "{\n    \"AOMethod\": 0,\n    \"Downsample\": 0,\n    \"Source\": 1,\n    \"NormalSamples\": 1,\n    \"Samples\": 1,\n    \"AfterOpaque\": false,\n    \"Intensity\": 0.8999999761581421,\n    \"DirectLightingStrength\": 0.25,\n    \"Radius\": 0.3499999940395355\n}"
+}

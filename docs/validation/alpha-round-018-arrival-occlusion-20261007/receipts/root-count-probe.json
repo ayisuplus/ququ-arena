@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var s=UnityEngine.SceneManagement.SceneManager.GetActiveScene();int before=s.rootCount;var g=new UnityEngine.GameObject(\"R18 root count calibration\"){hideFlags=UnityEngine.HideFlags.HideAndDontSave};int during=s.rootCount;UnityEngine.Object.DestroyImmediate(g);return new{before,during,after=s.rootCount,s.isDirty};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "before": 12,
+        "during": 12,
+        "after": 12,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

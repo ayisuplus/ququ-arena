@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nconst string models=\"Assets/Station/Models/EcologicalParkV017/Natural\",textures=\"Assets/Station/Textures/EcologicalParkV017\",materials=\"Assets/Station/Materials/EcologicalParkV017\",prefabs=\"Assets/Station/Prefabs/EcologicalParkV017\";\nSystem.IO.Directory.CreateDirectory(models);System.IO.Directory.CreateDirectory(prefabs);\nforeach(var file in System.IO.Directory.GetFiles(\"../production/black-hole-station/v017/plant-kit/Natural\",\"*.fbx\"))System.IO.File.Copy(file,models+\"/\"+System.IO.Path.GetFileName(file),false);\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nforeach(var path in System.IO.Directory.GetFiles(models,\"*.fbx\")){\n var importer=(UnityEditor.ModelImporter)UnityEditor.AssetImporter.GetAtPath(path.Replace('\\\\','/'));importer.materialImportMode=UnityEditor.ModelImporterMaterialImportMode.None;importer.isReadable=true;importer.SaveAndReimport();\n}\nvar mats=new System.Collections.Generic.Dictionary<string,UnityEngine.Material>();\nforeach(string label in new[]{\"Fern\",\"Grass\",\"Periwinkle\",\"Moss\"}){\n foreach(var suffix in new[]{\"_BaseAlpha.png\",\"_Normal.exr\"}){var p=textures+\"/\"+label+suffix;var importer=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(p);importer.textureType=suffix.Contains(\"Normal\")?UnityEditor.TextureImporterType.NormalMap:UnityEditor.TextureImporterType.Default;importer.sRGBTexture=!suffix.Contains(\"Normal\");importer.alphaIsTransparency=!suffix.Contains(\"Normal\");importer.mipmapEnabled=true;importer.maxTextureSize=1024;importer.SaveAndReimport();}\n var mat=new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\")){name=label+\"Leaves\"};mat.SetTexture(\"_BaseMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"/\"+label+\"_BaseAlpha.png\"));mat.SetTexture(\"_BumpMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"/\"+label+\"_Normal.exr\"));mat.SetColor(\"_BaseColor\",UnityEngine.Color.white);mat.SetFloat(\"_AlphaClip\",1);mat.SetFloat(\"_Cutoff\",.30f);mat.SetFloat(\"_Cull\",0);mat.SetFloat(\"_Smoothness\",.25f);mat.EnableKeyword(\"_ALPHATEST_ON\");mat.EnableKeyword(\"_NORMALMAP\");UnityEditor.AssetDatabase.CreateAsset(mat,materials+\"/\"+mat.name+\".mat\");mats[label]=mat;\n}\nvar rows=new System.Collections.Generic.List<object>();\nforeach(string name in new[]{\"FernB\",\"FernC\",\"FernA\",\"MeadowGrass\",\"PeriwinkleA\",\"PeriwinkleB\",\"MossPatch\"}){\n var label=name.StartsWith(\"Fern\")?\"Fern\":name.StartsWith(\"Meadow\")?\"Grass\":name.StartsWith(\"Periwinkle\")?\"Periwinkle\":\"Moss\";\n var go=new UnityEngine.GameObject(name);var lod=go.AddComponent<UnityEngine.LODGroup>();var levels=new System.Collections.Generic.List<UnityEngine.LOD>();int near=0,far=0;\n for(int level=0;level<2;level++){\n  var source=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(models+\"/\"+name+\"_LOD\"+level+\".fbx\");if(!source)throw new System.Exception(\"Missing derived source \"+name);\n  var child=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(source);child.transform.SetParent(go.transform,false);var renderers=child.GetComponentsInChildren<UnityEngine.MeshRenderer>();\n  foreach(var r in renderers){r.sharedMaterial=mats[label];r.lightmapIndex=-1;r.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;r.lightProbeUsage=UnityEngine.Rendering.LightProbeUsage.BlendProbes;r.reflectionProbeUsage=UnityEngine.Rendering.ReflectionProbeUsage.BlendProbes;UnityEditor.GameObjectUtility.SetStaticEditorFlags(r.gameObject,0);}\n  int count=child.GetComponentsInChildren<UnityEngine.MeshFilter>().Sum(m=>m.sharedMesh.triangles.Length/3);if(level==0)near=count;else far=count;\n  levels.Add(new UnityEngine.LOD(level==0?.10f:.001f,renderers));\n }\n lod.SetLODs(levels.ToArray());lod.RecalculateBounds();UnityEditor.PrefabUtility.SaveAsPrefabAsset(go,prefabs+\"/\"+name+\".prefab\");UnityEngine.Object.DestroyImmediate(go);rows.Add(new{name,near,far,material=label});\n}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.Directory.CreateDirectory(\"../docs/validation/station-v017-plants-20261003\");System.IO.File.WriteAllText(\"../docs/validation/station-v017-plants-20261003/natural-kit.json\",Newtonsoft.Json.JsonConvert.SerializeObject(rows,Newtonsoft.Json.Formatting.Indented));return rows;\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "FernB",
+          "near": 2384,
+          "far": 1001,
+          "material": "Fern"
+        },
+        {
+          "name": "FernC",
+          "near": 2248,
+          "far": 944,
+          "material": "Fern"
+        },
+        {
+          "name": "FernA",
+          "near": 784,
+          "far": 329,
+          "material": "Fern"
+        },
+        {
+          "name": "MeadowGrass",
+          "near": 5945,
+          "far": 2496,
+          "material": "Grass"
+        },
+        {
+          "name": "PeriwinkleA",
+          "near": 11252,
+          "far": 4724,
+          "material": "Periwinkle"
+        },
+        {
+          "name": "PeriwinkleB",
+          "near": 9096,
+          "far": 3819,
+          "material": "Periwinkle"
+        },
+        {
+          "name": "MossPatch",
+          "near": 4080,
+          "far": 1305,
+          "material": "Moss"
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

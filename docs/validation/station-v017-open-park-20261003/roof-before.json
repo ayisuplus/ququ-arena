@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nvar garden=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nvar roofs=garden.GetComponentsInChildren<UnityEngine.MeshRenderer>().Where(r=>r.name.IndexOf(\"roof\",System.StringComparison.OrdinalIgnoreCase)>=0||r.name.Contains(\"顶棚\")||r.name.StartsWith(\"Solid portal canopy\")||r.name==\"Silver combined framing\").Select(r=>r.name).ToArray();\nreturn new{passed=roofs.Length==0,roofs,scene=scene.path,doors=garden.GetComponentsInChildren<QuQu.StationConservatoryDoor>().Length,airlocks=garden.GetComponentsInChildren<QuQu.StationPressureVestibule>().Length};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": false,
+        "roofs": [
+          "Greenhouse roof",
+          "Greenhouse roof structural rib",
+          "Greenhouse roof structural rib",
+          "Greenhouse roof structural rib",
+          "温室北入口透明顶棚",
+          "温室南入口透明顶棚",
+          "Greenhouse pearl floating roof",
+          "Glass roof -1 -1",
+          "Glass roof -1 1",
+          "Glass roof 1 -1",
+          "Glass roof 1 1",
+          "Silver combined framing",
+          "Solid portal canopy",
+          "Solid portal canopy.001",
+          "Solid portal canopy.002",
+          "Solid portal canopy.003"
+        ],
+        "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+        "doors": 4,
+        "airlocks": 2
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

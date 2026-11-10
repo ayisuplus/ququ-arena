@@ -1,0 +1,176 @@
+{
+  "evidence": "Actual Windows framebuffer; saved mock duel replay and isolated backend; no paid model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "travel": [
+    {
+      "from": "Arena",
+      "to": "Commentary",
+      "seconds": 5.40918064
+    },
+    {
+      "from": "Commentary",
+      "to": "Referee",
+      "seconds": 5.4003973
+    },
+    {
+      "from": "Referee",
+      "to": "Commentary",
+      "seconds": 5.40039635
+    },
+    {
+      "from": "Commentary",
+      "to": "Arena",
+      "seconds": 5.400097
+    }
+  ],
+  "skipStaticEscAndRestore": true,
+  "pixel": {
+    "bothAttacks": true,
+    "hits": 8,
+    "announcements": 2,
+    "duplicatesAndReconnect": true,
+    "motionOff": true,
+    "inactiveFrozen": true
+  },
+  "performance": [
+    {
+      "view": "home-1920",
+      "fps": 58.617794,
+      "p95ms": 16.6700974,
+      "cpuMs": 17.059717613636373,
+      "gpuMs": 1.1688842971428572,
+      "drawCallsMax": 536,
+      "trianglesMax": 989537
+    },
+    {
+      "view": "arena-1920",
+      "fps": 58.4174461,
+      "p95ms": 16.6700974,
+      "cpuMs": 17.118105113636375,
+      "gpuMs": 1.1430414628571439,
+      "drawCallsMax": 542,
+      "trianglesMax": 1690382
+    },
+    {
+      "view": "commentary-1920",
+      "fps": 58.79889,
+      "p95ms": 16.6698971,
+      "cpuMs": 17.007155367231636,
+      "gpuMs": 1.6158749090909077,
+      "drawCallsMax": 283,
+      "trianglesMax": 1174257
+    },
+    {
+      "view": "glass-1920",
+      "fps": 58.7750473,
+      "p95ms": 16.6716976,
+      "cpuMs": 17.014014689265544,
+      "gpuMs": 1.4050007272727258,
+      "drawCallsMax": 642,
+      "trianglesMax": 2111686
+    },
+    {
+      "view": "referee-1920",
+      "fps": 58.8734,
+      "p95ms": 16.6704941,
+      "cpuMs": 16.985570056497185,
+      "gpuMs": 0.90079127272727244,
+      "drawCallsMax": 138,
+      "trianglesMax": 790149
+    },
+    {
+      "view": "home-2560",
+      "fps": 57.376873,
+      "p95ms": 16.6692963,
+      "cpuMs": 17.428660115606945,
+      "gpuMs": 1.9707787906976741,
+      "drawCallsMax": 536,
+      "trianglesMax": 989537
+    },
+    {
+      "view": "arena-2560",
+      "fps": 57.51733,
+      "p95ms": 16.6697,
+      "cpuMs": 17.386031791907534,
+      "gpuMs": 1.6955743255813962,
+      "drawCallsMax": 542,
+      "trianglesMax": 1690074
+    },
+    {
+      "view": "commentary-2560",
+      "fps": 57.7678375,
+      "p95ms": 16.6689968,
+      "cpuMs": 17.31066781609195,
+      "gpuMs": 1.5287069425287358,
+      "drawCallsMax": 283,
+      "trianglesMax": 1174257
+    },
+    {
+      "view": "glass-2560",
+      "fps": 57.7547264,
+      "p95ms": 16.6697,
+      "cpuMs": 17.314062068965516,
+      "gpuMs": 1.6295968554913298,
+      "drawCallsMax": 644,
+      "trianglesMax": 2111710
+    },
+    {
+      "view": "referee-2560",
+      "fps": 57.6930237,
+      "p95ms": 16.6697,
+      "cpuMs": 17.333081034482774,
+      "gpuMs": 1.5420182196531784,
+      "drawCallsMax": 138,
+      "trianglesMax": 790149
+    },
+    {
+      "view": "home-3840",
+      "fps": 54.72972,
+      "p95ms": 16.6695,
+      "cpuMs": 18.271613333333327,
+      "gpuMs": 4.1101923902439035,
+      "drawCallsMax": 536,
+      "trianglesMax": 989537
+    },
+    {
+      "view": "arena-3840",
+      "fps": 54.42838,
+      "p95ms": 16.6694012,
+      "cpuMs": 18.372798170731702,
+      "gpuMs": 3.3792234146341489,
+      "drawCallsMax": 542,
+      "trianglesMax": 1690074
+    },
+    {
+      "view": "commentary-3840",
+      "fps": 54.8764153,
+      "p95ms": 16.6740017,
+      "cpuMs": 18.2228006060606,
+      "gpuMs": 3.1767196097560957,
+      "drawCallsMax": 283,
+      "trianglesMax": 1174257
+    },
+    {
+      "view": "glass-3840",
+      "fps": 54.7955475,
+      "p95ms": 16.6697979,
+      "cpuMs": 18.249629090909089,
+      "gpuMs": 3.3751196097560956,
+      "drawCallsMax": 644,
+      "trianglesMax": 2111710
+    },
+    {
+      "view": "referee-3840",
+      "fps": 55.14809,
+      "p95ms": 16.6696014,
+      "cpuMs": 18.132981927710844,
+      "gpuMs": 2.908667345454544,
+      "drawCallsMax": 138,
+      "trianglesMax": 790149
+    }
+  ],
+  "threeResolutions": true,
+  "runtimeErrors": [],
+  "backendPid": 73552,
+  "passed": true
+}

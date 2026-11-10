@@ -1,0 +1,1628 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "stroop-test",
+    "title": "斯特鲁普效应擂台",
+    "description": "心理学最著名的冲突范式的 LLM 版（生成器自建）：颜色词用另一种颜色印刷，conflict-ink 问印刷色（答字义即翻车）、conflict-word 问字义（答墨色即翻车）、congruent 一致对照（防逢题必反）。测认知冲突下的指令跟随——LLM 的 Stroop 效应是真实研究热点。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:stroop-test:2026-09-10",
+    "taskPrefix": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "conflict-ink": "冲突问墨色（字义≠墨色，答字义即翻车）",
+      "conflict-word": "冲突问字义（答墨色即翻车）",
+      "congruent": "一致对照（字义=墨色，防逢题必反）"
+    }
+  },
+  "startedAt": "2026-09-10T10:01:36.792Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-01",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「绿」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄",
+      "target": "黄色",
+      "latencyMs": 273,
+      "score": 0,
+      "note": "期望「黄色」，实答「黄」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 118,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 284,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-02",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「黄」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 445,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-03",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫",
+      "target": "紫色",
+      "latencyMs": 247,
+      "score": 0,
+      "note": "期望「紫色」，实答「紫」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 235,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫",
+      "target": "紫色",
+      "latencyMs": 200,
+      "score": 0,
+      "note": "期望「紫色」，实答「紫」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-04",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-05",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-05",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-05",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 138,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-05",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 439,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-06",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-06",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-06",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 373,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-06",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「橙」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-07",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "绿",
+      "target": "绿色",
+      "latencyMs": 217,
+      "score": 0,
+      "note": "期望「绿色」，实答「绿」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-07",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "绿",
+      "target": "绿色",
+      "latencyMs": 144,
+      "score": 0,
+      "note": "期望「绿色」，实答「绿」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-07",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "绿色",
+      "target": "绿色",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-07",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "绿色",
+      "target": "绿色",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-08",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-08",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-08",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-08",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "橙色",
+      "target": "橙色",
+      "latencyMs": 287,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-09",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-09",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-09",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 461,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "STROOP-INK-09",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 238,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-INK-10",
+      "condition": "conflict-ink",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红色",
+      "target": "红色",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-INK-10",
+      "condition": "conflict-ink",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红",
+      "target": "红色",
+      "latencyMs": 266,
+      "score": 0,
+      "note": "期望「红色」，实答「红」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-INK-10",
+      "condition": "conflict-ink",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红色",
+      "target": "红色",
+      "latencyMs": 264,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-INK-10",
+      "condition": "conflict-ink",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红色",
+      "target": "红色",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-01",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-01",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-01",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-01",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 396,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-02",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-02",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-02",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-02",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-03",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-03",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 465,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-03",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-03",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-04",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-04",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-04",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-04",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 205,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-05",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-05",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-05",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 259,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-05",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 297,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-06",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 83,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-06",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-06",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-06",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-07",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-07",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-07",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-07",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「紫」。\n问题：这个字是哪个汉字？",
+      "answer": "紫",
+      "target": "紫",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-08",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 119,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-08",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-08",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-08",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-09",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-09",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-09",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-09",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「红」。\n问题：这个字是哪个汉字？",
+      "answer": "红",
+      "target": "红",
+      "latencyMs": 441,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-10",
+      "condition": "conflict-word",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-10",
+      "condition": "conflict-word",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-10",
+      "condition": "conflict-word",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 269,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-WORD-10",
+      "condition": "conflict-word",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-01",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红",
+      "target": "红色",
+      "latencyMs": 439,
+      "score": 0,
+      "note": "期望「红色」，实答「红」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-01",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红",
+      "target": "红色",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「红色」，实答「红」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-01",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红色",
+      "target": "红色",
+      "latencyMs": 446,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-01",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用红色墨水印刷的汉字「红」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "红色",
+      "target": "红色",
+      "latencyMs": 284,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-02",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-02",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-02",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝",
+      "target": "蓝色",
+      "latencyMs": 440,
+      "score": 0,
+      "note": "期望「蓝色」，实答「蓝」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-02",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用蓝色墨水印刷的汉字「蓝」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "蓝色",
+      "target": "蓝色",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-03",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-03",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-03",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-03",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用绿色墨水印刷的汉字「绿」。\n问题：这个字是哪个汉字？",
+      "answer": "绿",
+      "target": "绿",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-04",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-04",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-04",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-04",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用黄色墨水印刷的汉字「黄」。\n问题：这个字是哪个汉字？",
+      "answer": "黄",
+      "target": "黄",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-05",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 83,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-05",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-05",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫",
+      "target": "紫色",
+      "latencyMs": 443,
+      "score": 0,
+      "note": "期望「紫色」，实答「紫」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-05",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用紫色墨水印刷的汉字「紫」。\n问题：这个字的印刷颜色是什么颜色？",
+      "answer": "紫色",
+      "target": "紫色",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-06",
+      "condition": "congruent",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「橙」。\n问题：这个字是哪个汉字？",
+      "answer": "橙",
+      "target": "橙",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-06",
+      "condition": "congruent",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「橙」。\n问题：这个字是哪个汉字？",
+      "answer": "橙",
+      "target": "橙",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-06",
+      "condition": "congruent",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「橙」。\n问题：这个字是哪个汉字？",
+      "answer": "橙",
+      "target": "橙",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "STROOP-CON-06",
+      "condition": "congruent",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（颜色词如「红色」/汉字如「红」），不多一个字。\n屏幕上有一个用橙色墨水印刷的汉字「橙」。\n问题：这个字是哪个汉字？",
+      "answer": "橙",
+      "target": "橙",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ce0ddcf8ab1d828d",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.20.0"
+  }
+}

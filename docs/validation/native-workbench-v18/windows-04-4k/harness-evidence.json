@@ -1,0 +1,183 @@
+{
+  "id": "h-3e5b3aa6-d37a-4e3b-ad6c-eda0cc58c13c",
+  "createdAt": "2026-09-21T06:16:38.63Z",
+  "status": "completed",
+  "benchmark": {
+    "id": "custom-2346ee71-baed-4a55-b4bb-5efc6df9dc11",
+    "title": "工作台固定响应题",
+    "mode": "qa",
+    "tasks": [
+      {
+        "id": "Q1",
+        "title": "Q1 · test"
+      }
+    ],
+    "judgeRequired": false
+  },
+  "profiles": [
+    {
+      "id": "baseline",
+      "name": "基础 pi-agent",
+      "revision": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "extensions": []
+    },
+    {
+      "id": "p-77cc5a073a3dc0cd",
+      "name": "规划",
+      "revision": "77cc5a073a3dc0cd2e2b0bba49edc9f61f6811b48751409b5b43c9258e95e34f",
+      "extensions": [
+        {
+          "id": "plan",
+          "version": "1.0.0",
+          "title": "先规划",
+          "prompt": "先分析当前任务的目标、约束、边界条件和验证步骤，给出简短执行计划。本阶段不要交付最终答案，不调用工具。接下来会按这个计划执行任务。"
+        }
+      ]
+    }
+  ],
+  "protocol": {
+    "version": "pi-harness-1",
+    "executorHash": "915252c638586b24e88321664bbfa494cc3e831e54037c20e221491a49d5db38",
+    "piVersion": "0.85.1",
+    "piAiVersion": "0.85.1",
+    "nodeVersion": "24.15.0",
+    "model": {
+      "id": "custom:5030e1fe-dfef-4759-9675-d39494f1a19a",
+      "name": "本地固定响应 · 验证",
+      "modelId": "fixture-win",
+      "provider": "custom",
+      "endpointHash": "5ed0b3a0a03acc402bc6f79ef61469e8add0bafccbbe63a4fecc56a1c2ce71b5"
+    },
+    "benchmarkHash": "772ae0cd62816c01b799efa1a58cd069552eb2676b04f9d901163c4de880a596",
+    "budget": {
+      "timeMs": 30000,
+      "maxCalls": 4,
+      "maxOutputTokens": 64
+    },
+    "repeats": 1,
+    "split": "development",
+    "sampling": {
+      "temperature": 0,
+      "thinking": "provider-default",
+      "cache": "none",
+      "retries": 0
+    },
+    "cacheNote": "请求关闭显式缓存，供应商可能忽略；未预热，不保证物理冷缓存。只统计实际返回的缓存字段。",
+    "systemPrompt": "你在可重复的 Benchmark 实验中解决任务。按题目要求作答，保留仍有效的约束。只使用提供的材料与工具。不访问外部应用、网络或本机环境，不寻找验收器。代码任务可读取项目文件、修改允许的文件、运行公开测试。最终答案遵守题目要求；你的自述不构成验收结果。",
+    "toolsHash": "031ad8e11cfb9c0fc19d2f33e343d26d929f8d044dbb298648b9791d370bb189",
+    "schedule": "逐题配对；每次重复轮换配置顺序；单并发；每个试验独立上下文和工作区；累计失败 3 次停止当前试验"
+  },
+  "trials": [
+    {
+      "id": "t1",
+      "taskId": "Q1",
+      "profileId": "baseline",
+      "repeat": 1,
+      "status": "completed",
+      "score": 1,
+      "elapsedMs": 2316,
+      "usage": {
+        "calls": 1,
+        "knownCalls": 1,
+        "input": 10,
+        "output": 5,
+        "total": 15,
+        "complete": true,
+        "cacheKnownCalls": 0,
+        "cacheRate": null
+      }
+    },
+    {
+      "id": "t2",
+      "taskId": "Q1",
+      "profileId": "p-77cc5a073a3dc0cd",
+      "repeat": 1,
+      "status": "completed",
+      "score": 1,
+      "elapsedMs": 4641,
+      "usage": {
+        "calls": 2,
+        "knownCalls": 2,
+        "input": 20,
+        "output": 10,
+        "total": 30,
+        "complete": true,
+        "cacheKnownCalls": 0,
+        "cacheRate": null
+      }
+    }
+  ],
+  "summary": [
+    {
+      "id": "baseline",
+      "name": "基础 pi-agent",
+      "planned": 1,
+      "completed": 1,
+      "failures": 0,
+      "pending": 0,
+      "score": 1,
+      "delta": 0,
+      "interval": null,
+      "independentTasks": 1,
+      "elapsedMs": 2316,
+      "timeDeltaMs": 0,
+      "usage": {
+        "calls": 1,
+        "knownCalls": 1,
+        "input": 10,
+        "output": 5,
+        "total": 15,
+        "complete": true,
+        "cacheKnownCalls": 0,
+        "cacheRate": null
+      },
+      "tokenDelta": 0,
+      "judgeCalls": [],
+      "tasks": [
+        {
+          "id": "Q1",
+          "score": 1,
+          "baseline": 1,
+          "delta": 0
+        }
+      ],
+      "note": "质量差值按同题、同次重复配对，先在题内平均，再按题 bootstrap；失败执行计 0，环境失败或待评分阻止完整比较。区间仅为当前任务集合的探索性描述，多配置未校正；不自动宣称提升。"
+    },
+    {
+      "id": "p-77cc5a073a3dc0cd",
+      "name": "规划",
+      "planned": 1,
+      "completed": 1,
+      "failures": 0,
+      "pending": 0,
+      "score": 1,
+      "delta": 0,
+      "interval": null,
+      "independentTasks": 1,
+      "elapsedMs": 4641,
+      "timeDeltaMs": 2325,
+      "usage": {
+        "calls": 2,
+        "knownCalls": 2,
+        "input": 20,
+        "output": 10,
+        "total": 30,
+        "complete": true,
+        "cacheKnownCalls": 0,
+        "cacheRate": null
+      },
+      "tokenDelta": 15,
+      "judgeCalls": [],
+      "tasks": [
+        {
+          "id": "Q1",
+          "score": 1,
+          "baseline": 1,
+          "delta": 0
+        }
+      ],
+      "note": "质量差值按同题、同次重复配对，先在题内平均，再按题 bootstrap；失败执行计 0，环境失败或待评分阻止完整比较。区间仅为当前任务集合的探索性描述，多配置未校正；不自动宣称提升。"
+    }
+  ],
+  "comparisonKey": "c7693e73971fae9c57a4cc18dade75ca1091d1efed3e9684c46c264c438dd82e"
+}

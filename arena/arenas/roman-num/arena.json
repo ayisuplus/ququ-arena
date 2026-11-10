@@ -1,0 +1,15 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "roman-num",
+  "title": "罗马数字擂台",
+  "description": "罗马数字 ↔ 阿拉伯数字双向转换（生成器自建）：40% 题偏向减记规则（IV/IX/XC/CD 的减法位）。契约测试用独立的减记规则实现复算。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:roman-num:2026-09-10",
+  "taskPrefix": "只输出转换结果本身（罗马数字串或阿拉伯数字），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "to-roman": "阿拉伯→罗马",
+    "from-roman": "罗马→阿拉伯"
+  }
+}

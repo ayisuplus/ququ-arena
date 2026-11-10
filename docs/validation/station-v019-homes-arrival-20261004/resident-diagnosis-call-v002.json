@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\diagnose-lounge-resident.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "seconds": 700.4106,
+        "local": [
+          30.0528259,
+          0.07999998,
+          20.3829517
+        ],
+        "rings": [
+          {
+            "RingId": "v015-r1",
+            "DegreesPerSecond": 0.05115695,
+            "yaw": 132.830872
+          },
+          {
+            "RingId": "v015-r2",
+            "DegreesPerSecond": -0.0244158171,
+            "yaw": 245.8989
+          },
+          {
+            "RingId": "v015-r3",
+            "DegreesPerSecond": 0.0112786973,
+            "yaw": 104.899719
+          }
+        ],
+        "near": [
+          {
+            "name": "V015 fixed perimeter protection glass",
+            "distance": 0,
+            "position": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Garden rest bench 5 -1",
+            "distance": 0.8295607,
+            "position": [
+              -249.961548,
+              2.79394531
+            ]
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

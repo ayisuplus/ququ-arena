@@ -1,0 +1,15 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "palindrome-cn",
+  "title": "回文擂台",
+  "description": "中文回文判断（逐字倒读是否完全相同）：正例为经典回文清单（上海自来水来自海上/客上天然居居然天上客等），反例分两档——普通非回文与「回文改一字」的拟回文（长得像但不是）。生成器校验反例确实不回文。",
+  "author": "AI斗兽场（生成器自建，经典回文清单手写）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:palindrome-cn:2026-09-10",
+  "taskPrefix": "只输出「是」或「否」，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "is-palindrome": "真回文（答「是」）",
+    "not-palindrome": "非回文（答「否」；含拟回文陷阱档）"
+  }
+}

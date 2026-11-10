@@ -1,0 +1,1522 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "reverse-word-cn",
+    "title": "反转词擂台",
+    "description": "中文两可词（蜜蜂↔蜂蜜、牙刷↔刷牙）：两字词倒过来还是不是常见词？20 条两可配对 + 4 条非两可对照（防\"逢题必答有\"）。exact 裁判。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:reverse-word-cn:2026-09-10",
+    "taskPrefix": "只输出答案本身（一个词或「不是」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "has-reverse": "两可词（答出反转词）",
+      "no-reverse": "非两可对照（答「不是」）"
+    }
+  },
+  "startedAt": "2026-09-10T11:24:31.699Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "RW-Y-01",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「蜜蜂」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蜂蜜",
+      "target": "蜂蜜",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-01",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「蜜蜂」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蜂蜜",
+      "target": "蜂蜜",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-01",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「蜜蜂」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蜂",
+      "target": "蜂蜜",
+      "latencyMs": 186,
+      "score": 0,
+      "note": "期望「蜂蜜」，实答「蜂」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-01",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「蜜蜂」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蜂",
+      "target": "蜂蜜",
+      "latencyMs": 93,
+      "score": 0,
+      "note": "期望「蜂蜜」，实答「蜂」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-02",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「奶牛」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "牛奶",
+      "target": "牛奶",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-02",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「奶牛」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "牛奶",
+      "target": "牛奶",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-02",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「奶牛」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "牛",
+      "target": "牛奶",
+      "latencyMs": 239,
+      "score": 0,
+      "note": "期望「牛奶」，实答「牛」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-02",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「奶牛」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "牛奶",
+      "target": "牛奶",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-03",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「牙刷」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "刷牙",
+      "target": "刷牙",
+      "latencyMs": 180,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-03",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「牙刷」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "刷牙",
+      "target": "刷牙",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-03",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「牙刷」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "刷牙",
+      "target": "刷牙",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-03",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「牙刷」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "刷牙",
+      "target": "刷牙",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-04",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「喜欢」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "欢喜",
+      "target": "欢喜",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-04",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「喜欢」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "欢喜",
+      "target": "欢喜",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-04",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「喜欢」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "欢喜",
+      "target": "欢喜",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-04",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「喜欢」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "欢喜",
+      "target": "欢喜",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-05",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「唱歌」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "歌唱",
+      "target": "歌唱",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-05",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「唱歌」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "歌",
+      "target": "歌唱",
+      "latencyMs": 367,
+      "score": 0,
+      "note": "期望「歌唱」，实答「歌」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-05",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「唱歌」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "歌",
+      "target": "歌唱",
+      "latencyMs": 393,
+      "score": 0,
+      "note": "期望「歌唱」，实答「歌」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-05",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「唱歌」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "歌唱",
+      "target": "歌唱",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-06",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「井水」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "水井",
+      "target": "水井",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-06",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「井水」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "水井",
+      "target": "水井",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-06",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「井水」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "水井",
+      "target": "水井",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-06",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「井水」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "水井",
+      "target": "水井",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-07",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「门锁」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "锁门",
+      "target": "锁门",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-07",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「门锁」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "锁门",
+      "target": "锁门",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-07",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「门锁」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "锁",
+      "target": "锁门",
+      "latencyMs": 123,
+      "score": 0,
+      "note": "期望「锁门」，实答「锁」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-07",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「门锁」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "锁",
+      "target": "锁门",
+      "latencyMs": 155,
+      "score": 0,
+      "note": "期望「锁门」，实答「锁」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-08",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「画笔」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "笔画",
+      "target": "笔画",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-08",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「画笔」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "笔",
+      "target": "笔画",
+      "latencyMs": 393,
+      "score": 0,
+      "note": "期望「笔画」，实答「笔」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-08",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「画笔」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "笔画",
+      "target": "笔画",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-08",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「画笔」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "笔画",
+      "target": "笔画",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-09",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「风扇」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "扇风",
+      "target": "扇风",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-09",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「风扇」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "扇风",
+      "target": "扇风",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-09",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「风扇」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "扇",
+      "target": "扇风",
+      "latencyMs": 327,
+      "score": 0,
+      "note": "期望「扇风」，实答「扇」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-09",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「风扇」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "扇风",
+      "target": "扇风",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-10",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「骑马」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "马骑",
+      "target": "马骑",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-10",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「骑马」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "马骑",
+      "target": "马骑",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "RW-Y-10",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「骑马」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "马",
+      "target": "马骑",
+      "latencyMs": 444,
+      "score": 0,
+      "note": "期望「马骑」，实答「马」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-10",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「骑马」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "马骑",
+      "target": "马骑",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-11",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「代替」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "替代",
+      "target": "替代",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-11",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「代替」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "替",
+      "target": "替代",
+      "latencyMs": 264,
+      "score": 0,
+      "note": "期望「替代」，实答「替」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-11",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「代替」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "替代",
+      "target": "替代",
+      "latencyMs": 367,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-11",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「代替」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "替代",
+      "target": "替代",
+      "latencyMs": 228,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-12",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「情感」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "感情",
+      "target": "感情",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-12",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「情感」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "感情",
+      "target": "感情",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-12",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「情感」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "感",
+      "target": "感情",
+      "latencyMs": 285,
+      "score": 0,
+      "note": "期望「感情」，实答「感」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-12",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「情感」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "感情",
+      "target": "感情",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-13",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「积累」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "累积",
+      "target": "累积",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-13",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「积累」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "累积",
+      "target": "累积",
+      "latencyMs": 331,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-13",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「积累」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "累积",
+      "target": "累积",
+      "latencyMs": 110,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-13",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「积累」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "累积",
+      "target": "累积",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-14",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「察觉」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "觉察",
+      "target": "觉察",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-14",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「察觉」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "觉察",
+      "target": "觉察",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-14",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「察觉」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "觉",
+      "target": "觉察",
+      "latencyMs": 387,
+      "score": 0,
+      "note": "期望「觉察」，实答「觉」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-14",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「察觉」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "觉察",
+      "target": "觉察",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-15",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「相互」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "互相",
+      "target": "互相",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-15",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「相互」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "互",
+      "target": "互相",
+      "latencyMs": 390,
+      "score": 0,
+      "note": "期望「互相」，实答「互」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-15",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「相互」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "互",
+      "target": "互相",
+      "latencyMs": 188,
+      "score": 0,
+      "note": "期望「互相」，实答「互」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-15",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「相互」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "互相",
+      "target": "互相",
+      "latencyMs": 306,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-16",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「菜蔬」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蔬菜",
+      "target": "蔬菜",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-16",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「菜蔬」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蔬",
+      "target": "蔬菜",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「蔬菜」，实答「蔬」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-16",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「菜蔬」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蔬",
+      "target": "蔬菜",
+      "latencyMs": 260,
+      "score": 0,
+      "note": "期望「蔬菜」，实答「蔬」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-16",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「菜蔬」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "蔬菜",
+      "target": "蔬菜",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-17",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「力气」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "气力",
+      "target": "气力",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-17",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「力气」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "气",
+      "target": "气力",
+      "latencyMs": 144,
+      "score": 0,
+      "note": "期望「气力」，实答「气」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-17",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「力气」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "气",
+      "target": "气力",
+      "latencyMs": 340,
+      "score": 0,
+      "note": "期望「气力」，实答「气」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-17",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「力气」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "气力",
+      "target": "气力",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-18",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「演讲」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "讲演",
+      "target": "讲演",
+      "latencyMs": 147,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-18",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「演讲」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "讲演",
+      "target": "讲演",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-18",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「演讲」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "讲",
+      "target": "讲演",
+      "latencyMs": 201,
+      "score": 0,
+      "note": "期望「讲演」，实答「讲」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-18",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「演讲」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "讲演",
+      "target": "讲演",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-19",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「少年」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "年少",
+      "target": "年少",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-19",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「少年」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "年少",
+      "target": "年少",
+      "latencyMs": 253,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-19",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「少年」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "年",
+      "target": "年少",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「年少」，实答「年」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-19",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「少年」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "年少",
+      "target": "年少",
+      "latencyMs": 389,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-20",
+      "condition": "has-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「上海」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "海",
+      "target": "海上",
+      "latencyMs": 273,
+      "score": 0,
+      "note": "期望「海上」，实答「海」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-20",
+      "condition": "has-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「上海」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "海",
+      "target": "海上",
+      "latencyMs": 204,
+      "score": 0,
+      "note": "期望「海上」，实答「海」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-20",
+      "condition": "has-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「上海」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "海",
+      "target": "海上",
+      "latencyMs": 250,
+      "score": 0,
+      "note": "期望「海上」，实答「海」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-Y-20",
+      "condition": "has-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「上海」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "海上",
+      "target": "海上",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-01",
+      "condition": "no-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「苹」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-01",
+      "condition": "no-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「苹」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-01",
+      "condition": "no-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「苹」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 345,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-01",
+      "condition": "no-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「苹」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 241,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-02",
+      "condition": "no-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「电」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 275,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-02",
+      "condition": "no-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「电」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-02",
+      "condition": "no-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「电」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 265,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-02",
+      "condition": "no-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「电」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 168,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-03",
+      "condition": "no-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「火」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-03",
+      "condition": "no-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「火」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-03",
+      "condition": "no-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「火」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不",
+      "target": "不是",
+      "latencyMs": 466,
+      "score": 0,
+      "note": "期望「不是」，实答「不」",
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-03",
+      "condition": "no-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「火」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-04",
+      "condition": "no-reverse",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「学」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-04",
+      "condition": "no-reverse",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「学」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-04",
+      "condition": "no-reverse",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「学」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "RW-N-04",
+      "condition": "no-reverse",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身（一个词或「不是」），不多一个字。\n「学」这个词把两个字倒过来念，还是常见词吗？如果是，写出那个词；不是就答「不是」。",
+      "answer": "不是",
+      "target": "不是",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "e8a6f4811237e2c9",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.27.0"
+  }
+}

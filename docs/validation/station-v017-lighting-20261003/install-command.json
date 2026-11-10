@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"Saved V017 Edit required\");\nconst string output=\"../docs/validation/station-v017-lighting-20261003/\";\nif(UnityEngine.GameObject.Find(\"V017 park daylight fixtures\"))throw new System.Exception(\"Lighting sample already installed\");\nvar garden=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nvar changes=new System.Collections.Generic.List<object>();\nstring Path(UnityEngine.Transform t){return t.parent?Path(t.parent)+\"/\"+t.name:t.name;}\nvoid Change(UnityEngine.Light l,int kelvin,UnityEngine.Color tint){\n changes.Add(new{path=Path(l.transform),before=new{color=l.color.ToString(),l.useColorTemperature,l.colorTemperature,l.intensity},after=new{kelvin,color=tint.ToString(),l.intensity}});\n UnityEditor.Undo.RecordObject(l,\"V017 friendly white lighting\");l.useColorTemperature=true;l.colorTemperature=kelvin;l.color=tint;UnityEditor.EditorUtility.SetDirty(l);\n}\nvar lights=UnityEngine.Object.FindObjectsByType<UnityEngine.Light>(UnityEngine.FindObjectsInactive.Include,UnityEngine.FindObjectsSortMode.None).Where(l=>l.gameObject.scene==scene&&l.gameObject.activeInHierarchy&&l.enabled).ToArray();\nforeach(var l in lights){\n if(l.type==UnityEngine.LightType.Directional)Change(l,l.name==\"White deck reflected fill\"?4500:4800,UnityEngine.Color.white);\n else if(l.lightmapBakeType==UnityEngine.LightmapBakeType.Realtime)Change(l,l.transform.IsChildOf(garden)?4900:3500,UnityEngine.Color.white);\n}\nvar beforeAmbient=new{sky=UnityEngine.RenderSettings.ambientSkyColor.ToString(),equator=UnityEngine.RenderSettings.ambientEquatorColor.ToString(),ground=UnityEngine.RenderSettings.ambientGroundColor.ToString()};\nUnityEngine.RenderSettings.ambientSkyColor=new UnityEngine.Color(.77f,.76f,.72f);\nUnityEngine.RenderSettings.ambientEquatorColor=new UnityEngine.Color(.64f,.63f,.60f);\nUnityEngine.RenderSettings.ambientGroundColor=new UnityEngine.Color(.44f,.435f,.41f);\nvar root=new UnityEngine.GameObject(\"V017 park daylight fixtures\");root.transform.SetParent(garden,false);UnityEditor.Undo.RegisterCreatedObjectUndo(root,\"V017 park daylight fixtures\");\n// Broad pools of light stay inside the conservatory; existing grow lights keep their intensity.\nforeach(float x in new[]{-10f,10f})foreach(float z in new[]{-16f,16f}){\n var go=new UnityEngine.GameObject(\"Soft canopy daylight \"+x+\" \"+z);go.transform.SetParent(root.transform,false);go.transform.localPosition=new UnityEngine.Vector3(x,7.2f,z);go.transform.localRotation=UnityEngine.Quaternion.Euler(90,0,0);\n var l=go.AddComponent<UnityEngine.Light>();l.type=UnityEngine.LightType.Spot;l.useColorTemperature=true;l.colorTemperature=4800;l.color=UnityEngine.Color.white;l.intensity=28;l.range=10;l.spotAngle=108;l.innerSpotAngle=75;l.shadows=UnityEngine.LightShadows.None;\n}\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.File.WriteAllText(output+\"lighting-v001.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{scene=scene.path,changes,beforeAmbient,afterAmbient=new{sky=UnityEngine.RenderSettings.ambientSkyColor.ToString(),equator=UnityEngine.RenderSettings.ambientEquatorColor.ToString(),ground=UnityEngine.RenderSettings.ambientGroundColor.ToString()},newLights=4,cameraExposureAndVolumeUnchanged=true,materialAndGeometryUnchanged=true},Newtonsoft.Json.Formatting.Indented));\nreturn new{changedLights=changes.Count,newLights=4,scene.isDirty};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "changedLights": 11,
+        "newLights": 4,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

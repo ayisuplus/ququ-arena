@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();var root=UnityEngine.GameObject.Find(\"V013 civic exterior finish\");\nvar invalid=new System.Collections.Generic.List<string>();int baked=0;\nforeach(var r in root.GetComponentsInChildren<UnityEngine.MeshRenderer>()){\n if(System.Array.Exists(r.sharedMaterials,m=>!m))invalid.Add(\"Missing material: \"+r.name);\n if((UnityEditor.GameObjectUtility.GetStaticEditorFlags(r.gameObject)&UnityEditor.StaticEditorFlags.ContributeGI)!=0){baked++;if(r.lightmapIndex<0||r.lightmapIndex>=UnityEngine.LightmapSettings.lightmaps.Length)invalid.Add(\"Missing lightmap: \"+r.name);}\n}\nvar roof=UnityEngine.GameObject.Find(\"Pavilion integrated roof\").GetComponent<UnityEngine.BoxCollider>();\nreturn new{scene=scene.name,dirty=scene.isDirty,baking=UnityEditor.Lightmapping.isRunning,maps=UnityEngine.LightmapSettings.lightmaps.Length,probes=UnityEngine.LightmapSettings.lightProbes.count,newRootBakedRenderers=baked,invalid,roofBounds=roof.bounds.ToString()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "BlackHoleStationSereneV013",
+        "dirty": false,
+        "baking": false,
+        "maps": 4,
+        "probes": 261,
+        "newRootBakedRenderers": 47,
+        "invalid": [],
+        "roofBounds": "Center: (174.00, 4.65, -209.00), Extents: (7.10, 0.21, 7.10)"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

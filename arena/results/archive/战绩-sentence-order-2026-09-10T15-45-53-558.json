@@ -1,0 +1,1282 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "sentence-order",
+    "title": "语句排序擂台",
+    "description": "形制致敬行测语句排序（内容自建）。把一段连贯文字的 5 个句子打乱，按行文逻辑重排，exact 裁判（序号数字串）。reference-chain 考指代衔接（「它/这些/在他的带领下」必须后指）、conjunction-chain 考关联词与论证衔接（首先/其次/然后/最后、因为/因此、不但/而且/更）、general-detail 考总分结构（总起→分述→总结）、time-space 考时空顺序（参观路线/四季/登山/村庄一天）。每题只设唯一连贯顺序；meta.sentences 存正确序、meta.order 存数字串，契约测试三方映射复算（展示序按 order 重排 ≡ 正确序，展示序≠正确序防送分，20 串互不相同）。",
+    "author": "AI斗兽场（内容自建，形制致敬行测语句排序）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:sentence-order:2026-09-10",
+    "taskPrefix": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "reference-chain": "指代衔接（它/这些/其 必须后指）",
+      "conjunction-chain": "关联词与论证衔接（首先/因为/不但/所以）",
+      "general-detail": "总分结构（总起→分述→总结）",
+      "time-space": "时空顺序（路线/四季/一天）"
+    }
+  },
+  "startedAt": "2026-09-10T15:45:53.558Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "351",
+      "target": "35142",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「35142」，实答「351」",
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "341",
+      "target": "34152",
+      "latencyMs": 379,
+      "score": 0,
+      "note": "期望「34152」，实答「341」",
+      "usage": {
+        "input": 69,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "341",
+      "target": "34152",
+      "latencyMs": 456,
+      "score": 0,
+      "note": "期望「34152」，实答「341」",
+      "usage": {
+        "input": 69,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-03",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这只小猫特别机灵。\n②它全身雪白，只有尾巴尖是黑色的。\n③爷爷家养了一只小猫。\n④一有老鼠动静，它就立刻扑过去。\n⑤因此爷爷家的粮食再没被老鼠糟蹋过。",
+      "answer": "32145",
+      "target": "32145",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-03",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这只小猫特别机灵。\n②它全身雪白，只有尾巴尖是黑色的。\n③爷爷家养了一只小猫。\n④一有老鼠动静，它就立刻扑过去。\n⑤因此爷爷家的粮食再没被老鼠糟蹋过。",
+      "answer": "32145",
+      "target": "32145",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-03",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这只小猫特别机灵。\n②它全身雪白，只有尾巴尖是黑色的。\n③爷爷家养了一只小猫。\n④一有老鼠动静，它就立刻扑过去。\n⑤因此爷爷家的粮食再没被老鼠糟蹋过。",
+      "answer": "32145",
+      "target": "32145",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-03",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这只小猫特别机灵。\n②它全身雪白，只有尾巴尖是黑色的。\n③爷爷家养了一只小猫。\n④一有老鼠动静，它就立刻扑过去。\n⑤因此爷爷家的粮食再没被老鼠糟蹋过。",
+      "answer": "3145",
+      "target": "32145",
+      "latencyMs": 453,
+      "score": 0,
+      "note": "期望「32145」，实答「3145」",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-04",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①里面的书却摆得满满当当。\n②校门口新开了一家书店。\n③一放学，店里就挤满了小读者。\n④这些书大多是同学们喜欢的课外读物。\n⑤书店不大，只有两间门面。",
+      "answer": "25143",
+      "target": "25143",
+      "latencyMs": 377,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-04",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①里面的书却摆得满满当当。\n②校门口新开了一家书店。\n③一放学，店里就挤满了小读者。\n④这些书大多是同学们喜欢的课外读物。\n⑤书店不大，只有两间门面。",
+      "answer": "25143",
+      "target": "25143",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-04",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①里面的书却摆得满满当当。\n②校门口新开了一家书店。\n③一放学，店里就挤满了小读者。\n④这些书大多是同学们喜欢的课外读物。\n⑤书店不大，只有两间门面。",
+      "answer": "是5143",
+      "target": "25143",
+      "latencyMs": 261,
+      "score": 0,
+      "note": "期望「25143」，实答「是5143」",
+      "usage": {
+        "input": 73,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-04",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①里面的书却摆得满满当当。\n②校门口新开了一家书店。\n③一放学，店里就挤满了小读者。\n④这些书大多是同学们喜欢的课外读物。\n⑤书店不大，只有两间门面。",
+      "answer": "25143",
+      "target": "25143",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-05",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这个高高瘦瘦的男孩篮球打得特别好。\n②他叫张明，来自南方。\n③大家都爱和他一起打球。\n④我们班转来一位新同学。\n⑤很快他就成了校队的主力。",
+      "answer": "42153",
+      "target": "42153",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-RC-05",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这个高高瘦瘦的男孩篮球打得特别好。\n②他叫张明，来自南方。\n③大家都爱和他一起打球。\n④我们班转来一位新同学。\n⑤很快他就成了校队的主力。",
+      "answer": "2153",
+      "target": "42153",
+      "latencyMs": 408,
+      "score": 0,
+      "note": "期望「42153」，实答「2153」",
+      "usage": {
+        "input": 71,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-RC-05",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这个高高瘦瘦的男孩篮球打得特别好。\n②他叫张明，来自南方。\n③大家都爱和他一起打球。\n④我们班转来一位新同学。\n⑤很快他就成了校队的主力。",
+      "answer": "42153",
+      "target": "42153",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-RC-05",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①这个高高瘦瘦的男孩篮球打得特别好。\n②他叫张明，来自南方。\n③大家都爱和他一起打球。\n④我们班转来一位新同学。\n⑤很快他就成了校队的主力。",
+      "answer": "4215了",
+      "target": "42153",
+      "latencyMs": 393,
+      "score": 0,
+      "note": "期望「42153」，实答「4215了」",
+      "usage": {
+        "input": 71,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-01",
+      "condition": "conjunction-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①其次，同学们分头准备节目。\n②最后，班会在热烈的掌声中开始。\n③首先，班干部们商量确定了主题。\n④班会的准备工作有条不紊。\n⑤然后，大家一起布置教室。",
+      "answer": "43152",
+      "target": "43152",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-01",
+      "condition": "conjunction-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①其次，同学们分头准备节目。\n②最后，班会在热烈的掌声中开始。\n③首先，班干部们商量确定了主题。\n④班会的准备工作有条不紊。\n⑤然后，大家一起布置教室。",
+      "answer": "431不2",
+      "target": "43152",
+      "latencyMs": 453,
+      "score": 0,
+      "note": "期望「43152」，实答「431不2」",
+      "usage": {
+        "input": 74,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-01",
+      "condition": "conjunction-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①其次，同学们分头准备节目。\n②最后，班会在热烈的掌声中开始。\n③首先，班干部们商量确定了主题。\n④班会的准备工作有条不紊。\n⑤然后，大家一起布置教室。",
+      "answer": "431",
+      "target": "43152",
+      "latencyMs": 170,
+      "score": 0,
+      "note": "期望「43152」，实答「431」",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-01",
+      "condition": "conjunction-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①其次，同学们分头准备节目。\n②最后，班会在热烈的掌声中开始。\n③首先，班干部们商量确定了主题。\n④班会的准备工作有条不紊。\n⑤然后，大家一起布置教室。",
+      "answer": "4352",
+      "target": "43152",
+      "latencyMs": 139,
+      "score": 0,
+      "note": "期望「43152」，实答「4352」",
+      "usage": {
+        "input": 74,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-02",
+      "condition": "conjunction-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①他们在山下休整了一天。\n②山路被雨水冲得泥泞不堪。\n③第二天放晴后，队伍才重新启程。\n④昨夜的雨下得很大。\n⑤因为道路难行，登山队决定推迟出发。",
+      "answer": "42513",
+      "target": "42513",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-02",
+      "condition": "conjunction-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①他们在山下休整了一天。\n②山路被雨水冲得泥泞不堪。\n③第二天放晴后，队伍才重新启程。\n④昨夜的雨下得很大。\n⑤因为道路难行，登山队决定推迟出发。",
+      "answer": "4251是",
+      "target": "42513",
+      "latencyMs": 192,
+      "score": 0,
+      "note": "期望「42513」，实答「4251是」",
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-02",
+      "condition": "conjunction-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①他们在山下休整了一天。\n②山路被雨水冲得泥泞不堪。\n③第二天放晴后，队伍才重新启程。\n④昨夜的雨下得很大。\n⑤因为道路难行，登山队决定推迟出发。",
+      "answer": "42513",
+      "target": "42513",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-02",
+      "condition": "conjunction-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①他们在山下休整了一天。\n②山路被雨水冲得泥泞不堪。\n③第二天放晴后，队伍才重新启程。\n④昨夜的雨下得很大。\n⑤因为道路难行，登山队决定推迟出发。",
+      "answer": "42513",
+      "target": "42513",
+      "latencyMs": 179,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-03",
+      "condition": "conjunction-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①更重要的是，这里全年免费开放。\n②这座图书馆藏书丰富。\n③因此吸引了许多市民前来看书。\n④不但图书种类繁多，而且环境安静舒适。\n⑤图书馆成了城里人最爱去的地方之一。",
+      "answer": "24135",
+      "target": "24135",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-03",
+      "condition": "conjunction-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①更重要的是，这里全年免费开放。\n②这座图书馆藏书丰富。\n③因此吸引了许多市民前来看书。\n④不但图书种类繁多，而且环境安静舒适。\n⑤图书馆成了城里人最爱去的地方之一。",
+      "answer": "24135",
+      "target": "24135",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-03",
+      "condition": "conjunction-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①更重要的是，这里全年免费开放。\n②这座图书馆藏书丰富。\n③因此吸引了许多市民前来看书。\n④不但图书种类繁多，而且环境安静舒适。\n⑤图书馆成了城里人最爱去的地方之一。",
+      "answer": "241是5",
+      "target": "24135",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「24135」，实答「241是5」",
+      "usage": {
+        "input": 77,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-03",
+      "condition": "conjunction-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①更重要的是，这里全年免费开放。\n②这座图书馆藏书丰富。\n③因此吸引了许多市民前来看书。\n④不但图书种类繁多，而且环境安静舒适。\n⑤图书馆成了城里人最爱去的地方之一。",
+      "answer": "24135",
+      "target": "24135",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 77,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-04",
+      "condition": "conjunction-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①然后倒入蛋液翻炒。\n②最后撒上盐，一盘香喷喷的炒鸡蛋就做好了。\n③妈妈教我炒鸡蛋。\n④先把鸡蛋打进碗里搅匀。\n⑤接着往锅里倒油烧热。",
+      "answer": "34512",
+      "target": "34512",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-04",
+      "condition": "conjunction-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①然后倒入蛋液翻炒。\n②最后撒上盐，一盘香喷喷的炒鸡蛋就做好了。\n③妈妈教我炒鸡蛋。\n④先把鸡蛋打进碗里搅匀。\n⑤接着往锅里倒油烧热。",
+      "answer": "3的512",
+      "target": "34512",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「34512」，实答「3的512」",
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-04",
+      "condition": "conjunction-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①然后倒入蛋液翻炒。\n②最后撒上盐，一盘香喷喷的炒鸡蛋就做好了。\n③妈妈教我炒鸡蛋。\n④先把鸡蛋打进碗里搅匀。\n⑤接着往锅里倒油烧热。",
+      "answer": "3412",
+      "target": "34512",
+      "latencyMs": 448,
+      "score": 0,
+      "note": "期望「34512」，实答「3412」",
+      "usage": {
+        "input": 69,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-04",
+      "condition": "conjunction-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①然后倒入蛋液翻炒。\n②最后撒上盐，一盘香喷喷的炒鸡蛋就做好了。\n③妈妈教我炒鸡蛋。\n④先把鸡蛋打进碗里搅匀。\n⑤接着往锅里倒油烧热。",
+      "answer": "34512",
+      "target": "34512",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-05",
+      "condition": "conjunction-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①只有日积月累，才能真正掌握知识。\n②那些看似轻松的学霸，背后都付出了努力。\n③所以，别羡慕别人，从现在开始踏实学习吧。\n④学习没有捷径可走。\n⑤与其临时抱佛脚，不如平时下功夫。",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-05",
+      "condition": "conjunction-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①只有日积月累，才能真正掌握知识。\n②那些看似轻松的学霸，背后都付出了努力。\n③所以，别羡慕别人，从现在开始踏实学习吧。\n④学习没有捷径可走。\n⑤与其临时抱佛脚，不如平时下功夫。",
+      "answer": "45123",
+      "target": "45123",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-05",
+      "condition": "conjunction-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①只有日积月累，才能真正掌握知识。\n②那些看似轻松的学霸，背后都付出了努力。\n③所以，别羡慕别人，从现在开始踏实学习吧。\n④学习没有捷径可走。\n⑤与其临时抱佛脚，不如平时下功夫。",
+      "answer": "451",
+      "target": "45123",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「45123」，实答「451」",
+      "usage": {
+        "input": 80,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-CJ-05",
+      "condition": "conjunction-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①只有日积月累，才能真正掌握知识。\n②那些看似轻松的学霸，背后都付出了努力。\n③所以，别羡慕别人，从现在开始踏实学习吧。\n④学习没有捷径可走。\n⑤与其临时抱佛脚，不如平时下功夫。",
+      "answer": "4123",
+      "target": "45123",
+      "latencyMs": 281,
+      "score": 0,
+      "note": "期望「45123」，实答「4123」",
+      "usage": {
+        "input": 80,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-01",
+      "condition": "general-detail",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①柳树抽出了嫩绿的枝条。\n②春天的公园真美。\n③到处是一派生机勃勃的景象。\n④桃花笑红了脸。\n⑤小草也从土里探出了头。",
+      "answer": "2453",
+      "target": "24153",
+      "latencyMs": 420,
+      "score": 0,
+      "note": "期望「24153」，实答「2453」",
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-01",
+      "condition": "general-detail",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①柳树抽出了嫩绿的枝条。\n②春天的公园真美。\n③到处是一派生机勃勃的景象。\n④桃花笑红了脸。\n⑤小草也从土里探出了头。",
+      "answer": "24153",
+      "target": "24153",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-01",
+      "condition": "general-detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①柳树抽出了嫩绿的枝条。\n②春天的公园真美。\n③到处是一派生机勃勃的景象。\n④桃花笑红了脸。\n⑤小草也从土里探出了头。",
+      "answer": "2不153",
+      "target": "24153",
+      "latencyMs": 130,
+      "score": 0,
+      "note": "期望「24153」，实答「2不153」",
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-01",
+      "condition": "general-detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①柳树抽出了嫩绿的枝条。\n②春天的公园真美。\n③到处是一派生机勃勃的景象。\n④桃花笑红了脸。\n⑤小草也从土里探出了头。",
+      "answer": "24153",
+      "target": "24153",
+      "latencyMs": 218,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-02",
+      "condition": "general-detail",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①读书还能陶冶情操。\n②所以我们要多读书、读好书。\n③读书的好处很多。\n④读书能开阔眼界。\n⑤读书能增长知识。",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 396,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-02",
+      "condition": "general-detail",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①读书还能陶冶情操。\n②所以我们要多读书、读好书。\n③读书的好处很多。\n④读书能开阔眼界。\n⑤读书能增长知识。",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 152,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-02",
+      "condition": "general-detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①读书还能陶冶情操。\n②所以我们要多读书、读好书。\n③读书的好处很多。\n④读书能开阔眼界。\n⑤读书能增长知识。",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 349,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-02",
+      "condition": "general-detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①读书还能陶冶情操。\n②所以我们要多读书、读好书。\n③读书的好处很多。\n④读书能开阔眼界。\n⑤读书能增长知识。",
+      "answer": "35412",
+      "target": "35412",
+      "latencyMs": 166,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-03",
+      "condition": "general-detail",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①游泳能锻炼全身肌肉。\n②打球能提高反应能力。\n③让我们都动起来，享受运动的快乐。\n④跑步能增强心肺功能。\n⑤运动对身体益处多多。",
+      "answer": "54123",
+      "target": "54123",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-03",
+      "condition": "general-detail",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①游泳能锻炼全身肌肉。\n②打球能提高反应能力。\n③让我们都动起来，享受运动的快乐。\n④跑步能增强心肺功能。\n⑤运动对身体益处多多。",
+      "answer": "541",
+      "target": "54123",
+      "latencyMs": 388,
+      "score": 0,
+      "note": "期望「54123」，实答「541」",
+      "usage": {
+        "input": 68,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-03",
+      "condition": "general-detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①游泳能锻炼全身肌肉。\n②打球能提高反应能力。\n③让我们都动起来，享受运动的快乐。\n④跑步能增强心肺功能。\n⑤运动对身体益处多多。",
+      "answer": "541",
+      "target": "54123",
+      "latencyMs": 111,
+      "score": 0,
+      "note": "期望「54123」，实答「541」",
+      "usage": {
+        "input": 68,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-03",
+      "condition": "general-detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①游泳能锻炼全身肌肉。\n②打球能提高反应能力。\n③让我们都动起来，享受运动的快乐。\n④跑步能增强心肺功能。\n⑤运动对身体益处多多。",
+      "answer": "54123",
+      "target": "54123",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-04",
+      "condition": "general-detail",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①村后是一片茂密的竹林。\n②无论走到哪里，我都忘不了它。\n③村前有一条清澈的小河。\n④村里还有一棵几百年的老槐树。\n⑤我的家乡是个美丽的小山村。",
+      "answer": "53142",
+      "target": "53142",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-04",
+      "condition": "general-detail",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①村后是一片茂密的竹林。\n②无论走到哪里，我都忘不了它。\n③村前有一条清澈的小河。\n④村里还有一棵几百年的老槐树。\n⑤我的家乡是个美丽的小山村。",
+      "answer": "53142",
+      "target": "53142",
+      "latencyMs": 261,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-04",
+      "condition": "general-detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①村后是一片茂密的竹林。\n②无论走到哪里，我都忘不了它。\n③村前有一条清澈的小河。\n④村里还有一棵几百年的老槐树。\n⑤我的家乡是个美丽的小山村。",
+      "answer": "我3142",
+      "target": "53142",
+      "latencyMs": 443,
+      "score": 0,
+      "note": "期望「53142」，实答「我3142」",
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-04",
+      "condition": "general-detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①村后是一片茂密的竹林。\n②无论走到哪里，我都忘不了它。\n③村前有一条清澈的小河。\n④村里还有一棵几百年的老槐树。\n⑤我的家乡是个美丽的小山村。",
+      "answer": "53142",
+      "target": "53142",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-05",
+      "condition": "general-detail",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①坚持阅读，让人视野开阔。\n②让我们从小养成好习惯。\n③勤于思考，让人头脑灵活。\n④早睡早起，让人精力充沛。\n⑤良好的习惯让人受益终身。",
+      "answer": "54132",
+      "target": "54132",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-05",
+      "condition": "general-detail",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①坚持阅读，让人视野开阔。\n②让我们从小养成好习惯。\n③勤于思考，让人头脑灵活。\n④早睡早起，让人精力充沛。\n⑤良好的习惯让人受益终身。",
+      "answer": "54132",
+      "target": "54132",
+      "latencyMs": 283,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-05",
+      "condition": "general-detail",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①坚持阅读，让人视野开阔。\n②让我们从小养成好习惯。\n③勤于思考，让人头脑灵活。\n④早睡早起，让人精力充沛。\n⑤良好的习惯让人受益终身。",
+      "answer": "5412",
+      "target": "54132",
+      "latencyMs": 277,
+      "score": 0,
+      "note": "期望「54132」，实答「5412」",
+      "usage": {
+        "input": 70,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-GD-05",
+      "condition": "general-detail",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①坚持阅读，让人视野开阔。\n②让我们从小养成好习惯。\n③勤于思考，让人头脑灵活。\n④早睡早起，让人精力充沛。\n⑤良好的习惯让人受益终身。",
+      "answer": "54132",
+      "target": "54132",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-TS-01",
+      "condition": "time-space",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①展厅尽头是一段楼梯，登上二楼就是书画馆。\n②穿过序厅，便进入了古代文物展厅。\n③参观结束后，我们从东门离开了博物馆。\n④书画馆西侧是临时展览馆。\n⑤走进博物馆大门，我们先来到序厅。",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-TS-01",
+      "condition": "time-space",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①展厅尽头是一段楼梯，登上二楼就是书画馆。\n②穿过序厅，便进入了古代文物展厅。\n③参观结束后，我们从东门离开了博物馆。\n④书画馆西侧是临时展览馆。\n⑤走进博物馆大门，我们先来到序厅。",
+      "answer": "5214",
+      "target": "52143",
+      "latencyMs": 107,
+      "score": 0,
+      "note": "期望「52143」，实答「5214」",
+      "usage": {
+        "input": 81,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-TS-01",
+      "condition": "time-space",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①展厅尽头是一段楼梯，登上二楼就是书画馆。\n②穿过序厅，便进入了古代文物展厅。\n③参观结束后，我们从东门离开了博物馆。\n④书画馆西侧是临时展览馆。\n⑤走进博物馆大门，我们先来到序厅。",
+      "answer": "521",
+      "target": "52143",
+      "latencyMs": 388,
+      "score": 0,
+      "note": "期望「52143」，实答「521」",
+      "usage": {
+        "input": 81,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-TS-01",
+      "condition": "time-space",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①展厅尽头是一段楼梯，登上二楼就是书画馆。\n②穿过序厅，便进入了古代文物展厅。\n③参观结束后，我们从东门离开了博物馆。\n④书画馆西侧是临时展览馆。\n⑤走进博物馆大门，我们先来到序厅。",
+      "answer": "52143",
+      "target": "52143",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 81,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SO-TS-02",
+      "condition": "time-space",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①冬天，雪后的操场变成了乐园。\n②夏天，浓密的树荫成了我们的凉棚。\n③秋天，金黄的银杏叶铺满小路。\n④春天，校园里的迎春花最先报到。\n⑤校园的四季，各有各的美。",
+      "answer": "42315",
+      "target": "42315",
+      "latencyMs": 368,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-02",
+      "condition": "time-space",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①冬天，雪后的操场变成了乐园。\n②夏天，浓密的树荫成了我们的凉棚。\n③秋天，金黄的银杏叶铺满小路。\n④春天，校园里的迎春花最先报到。\n⑤校园的四季，各有各的美。",
+      "answer": "42315",
+      "target": "42315",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-02",
+      "condition": "time-space",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①冬天，雪后的操场变成了乐园。\n②夏天，浓密的树荫成了我们的凉棚。\n③秋天，金黄的银杏叶铺满小路。\n④春天，校园里的迎春花最先报到。\n⑤校园的四季，各有各的美。",
+      "answer": "42315",
+      "target": "42315",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-02",
+      "condition": "time-space",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①冬天，雪后的操场变成了乐园。\n②夏天，浓密的树荫成了我们的凉棚。\n③秋天，金黄的银杏叶铺满小路。\n④春天，校园里的迎春花最先报到。\n⑤校园的四季，各有各的美。",
+      "answer": "42315",
+      "target": "42315",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-03",
+      "condition": "time-space",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①中午，在半山腰的亭子里休息吃饭。\n②傍晚，终于登上了山顶看日落。\n③清晨，我们在山脚集合出发。\n④上午，沿着石阶一路向上攀登。\n⑤大家疲惫却兴奋地合影留念。",
+      "answer": "34125",
+      "target": "34125",
+      "latencyMs": 277,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-03",
+      "condition": "time-space",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①中午，在半山腰的亭子里休息吃饭。\n②傍晚，终于登上了山顶看日落。\n③清晨，我们在山脚集合出发。\n④上午，沿着石阶一路向上攀登。\n⑤大家疲惫却兴奋地合影留念。",
+      "answer": "341",
+      "target": "34125",
+      "latencyMs": 348,
+      "score": 0,
+      "note": "期望「34125」，实答「341」",
+      "usage": {
+        "input": 75,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-03",
+      "condition": "time-space",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①中午，在半山腰的亭子里休息吃饭。\n②傍晚，终于登上了山顶看日落。\n③清晨，我们在山脚集合出发。\n④上午，沿着石阶一路向上攀登。\n⑤大家疲惫却兴奋地合影留念。",
+      "answer": "341是5",
+      "target": "34125",
+      "latencyMs": 463,
+      "score": 0,
+      "note": "期望「34125」，实答「341是5」",
+      "usage": {
+        "input": 75,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-03",
+      "condition": "time-space",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①中午，在半山腰的亭子里休息吃饭。\n②傍晚，终于登上了山顶看日落。\n③清晨，我们在山脚集合出发。\n④上午，沿着石阶一路向上攀登。\n⑤大家疲惫却兴奋地合影留念。",
+      "answer": "34125",
+      "target": "34125",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 75,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-04",
+      "condition": "time-space",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①夜晚，村庄在蛙声中渐渐安静。\n②天刚蒙蒙亮，公鸡的啼鸣唤醒了村庄。\n③中午，家家户户升起袅袅炊烟。\n④傍晚，劳作一天的人们踏着夕阳回家。\n⑤上午，人们在田间地头忙碌。",
+      "answer": "25341",
+      "target": "25341",
+      "latencyMs": 352,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-04",
+      "condition": "time-space",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①夜晚，村庄在蛙声中渐渐安静。\n②天刚蒙蒙亮，公鸡的啼鸣唤醒了村庄。\n③中午，家家户户升起袅袅炊烟。\n④傍晚，劳作一天的人们踏着夕阳回家。\n⑤上午，人们在田间地头忙碌。",
+      "answer": "25341",
+      "target": "25341",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-04",
+      "condition": "time-space",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①夜晚，村庄在蛙声中渐渐安静。\n②天刚蒙蒙亮，公鸡的啼鸣唤醒了村庄。\n③中午，家家户户升起袅袅炊烟。\n④傍晚，劳作一天的人们踏着夕阳回家。\n⑤上午，人们在田间地头忙碌。",
+      "answer": "2341",
+      "target": "25341",
+      "latencyMs": 234,
+      "score": 0,
+      "note": "期望「25341」，实答「2341」",
+      "usage": {
+        "input": 78,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-04",
+      "condition": "time-space",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①夜晚，村庄在蛙声中渐渐安静。\n②天刚蒙蒙亮，公鸡的啼鸣唤醒了村庄。\n③中午，家家户户升起袅袅炊烟。\n④傍晚，劳作一天的人们踏着夕阳回家。\n⑤上午，人们在田间地头忙碌。",
+      "answer": "25341",
+      "target": "25341",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-05",
+      "condition": "time-space",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①绕过开满野花的山坡。\n②小溪从山涧里出发。\n③穿过一座古老的石桥。\n④最后汇入宽阔的大河。\n⑤它流过翠绿的竹林。",
+      "answer": "25134",
+      "target": "25134",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-05",
+      "condition": "time-space",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①绕过开满野花的山坡。\n②小溪从山涧里出发。\n③穿过一座古老的石桥。\n④最后汇入宽阔的大河。\n⑤它流过翠绿的竹林。",
+      "answer": "25134",
+      "target": "25134",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-05",
+      "condition": "time-space",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①绕过开满野花的山坡。\n②小溪从山涧里出发。\n③穿过一座古老的石桥。\n④最后汇入宽阔的大河。\n⑤它流过翠绿的竹林。",
+      "answer": "25这34",
+      "target": "25134",
+      "latencyMs": 108,
+      "score": 0,
+      "note": "期望「25134」，实答「25这34」",
+      "usage": {
+        "input": 64,
+        "output": 3
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "SO-TS-05",
+      "condition": "time-space",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①绕过开满野花的山坡。\n②小溪从山涧里出发。\n③穿过一座古老的石桥。\n④最后汇入宽阔的大河。\n⑤它流过翠绿的竹林。",
+      "answer": "25134",
+      "target": "25134",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 3
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "3b4e54bdecef7500",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.7.0"
+  }
+}

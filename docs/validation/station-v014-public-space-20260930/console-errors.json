@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "error",
+      "tail": "30"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 4,
+          "timestampUtc": "2026-09-29T22:00:12.1858073Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 15,
+          "timestampUtc": "2026-09-29T22:14:12.372654Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 35,
+          "timestampUtc": "2026-09-29T22:47:12.7229357Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 50,
+          "timestampUtc": "2026-09-29T23:26:43.1557414Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 108,
+          "timestampUtc": "2026-09-29T23:47:13.3705962Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 114,
+          "timestampUtc": "2026-09-30T00:19:59.351568Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "SetPerIndexUVs failed because the output has too many vertices",
+          "stackTrace": "UnityEditor.Unwrapping:GenerateSecondaryUVSet (UnityEngine.Mesh)\nPipelineEvaluation.PipelineEval_81d0c873:Execute ()\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Compilation.EvalCodeCompiler:ExecuteCompiledAssembly (System.Reflection.Assembly) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Compilation/EvalCodeCompiler.cs:190)\nUnity.Pipeline.Compilation.EvalCodeCompiler:CompileAndExecuteOnMainThread (string,int,System.Diagnostics.Stopwatch) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Compilation/EvalCodeCompiler.cs:54)\nUnity.Pipeline.Runtime.Commands.CodeEvalCommand:EvaluateSource (string,int,string) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Commands/CodeEvalCommand.cs:112)\nUnity.Pipeline.Runtime.Commands.CodeEvalCommand:EvaluateCode (string,int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Commands/CodeEvalCommand.cs:24)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 136,
+          "timestampUtc": "2026-09-30T00:25:43.7722209Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 265,
+          "timestampUtc": "2026-09-30T00:57:44.1162615Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 322,
+          "timestampUtc": "2026-09-30T01:29:14.4580759Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 329,
+          "timestampUtc": "2026-09-30T01:35:14.536032Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 337,
+          "timestampUtc": "2026-09-30T01:43:44.6312766Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 396,
+          "timestampUtc": "2026-09-30T03:30:46.7652357Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 541,
+          "timestampUtc": "2026-09-30T03:35:16.8257163Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 647,
+          "timestampUtc": "2026-09-30T03:39:46.8742723Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 652,
+          "timestampUtc": "2026-09-30T03:47:16.9922356Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 656,
+          "timestampUtc": "2026-09-30T04:00:17.3277044Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 664,
+          "timestampUtc": "2026-09-30T04:04:14.7545333Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Failed to handle /api/exec request: Main thread operation timed out after 5000ms",
+          "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteGated>d__105:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1403)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass115_0/<<HandleExecRequest>b__0>d:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2032)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommandByName>d__133:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2478)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommand>d__134:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2517)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 686,
+          "timestampUtc": "2026-09-30T04:14:17.5528355Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 815,
+          "timestampUtc": "2026-09-30T04:26:17.8872121Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 910,
+          "timestampUtc": "2026-09-30T04:30:17.8910252Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        },
+        {
+          "seq": 913,
+          "timestampUtc": "2026-09-30T04:33:17.9277408Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.",
+          "stackTrace": "System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.get_CodeBase () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) (at <d49d4cb128564ee1b54a84338c98d353>:0)\nSystem.Reflection.Assembly.GetName () (at <d49d4cb128564ee1b54a84338c98d353>:0)\nUnityEditor.QuickInstall.QuickInstaller.DetectPackagesFromLoadedAssemblies () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller.PackageListHandler (UnityEditor.PackageManager.Requests.ListRequest request, UnityEditor.EditorApplication+CallbackFunction registeredCallback) (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.QuickInstall.QuickInstaller+<>c__DisplayClass21_0.<CreatePackageListHandler>b__0 () (at <9049465ece784f6dada6a9a2d58e91eb>:0)\nUnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at <8c0bcab5a3cf47549b7148fa2785366a>:0)\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 938,
+      "session": "814657f7922d4052bc4ce786f94bf596",
+      "returned": 21,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 21,
+        "warn": 9,
+        "log": 908
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-09-30T04:42:16.9496848Z",
+        "ageMs": 215,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 1,
+        "consoleWarnings": 0,
+        "consoleLogs": 28,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

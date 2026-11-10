@@ -1,0 +1,1278 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "unit-convert",
+    "title": "单位换算擂台",
+    "description": "形制致敬小学单位换算与数据计量（内容自建）。传统基本功：length-area 长度面积（含公顷↔平方米 10000 进制）、weight-volume 重量与体积容积（含 1升=1立方分米、1毫升=1立方厘米）、time 时间（含世纪=100年、2.5小时=150分）、data-binary 数据单位二进制约定（1 KB=1024 B，题面逐题声明——1024 与 1000 之争在本罐没有借口）。答案均为整数，exact 裁判；每题 meta.expr 存换算式，契约测试逐题复算。",
+    "author": "AI斗兽场（内容自建，形制致敬传统单位换算题）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:unit-convert:2026-09-10",
+    "taskPrefix": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "length-area": "长度与面积（含公顷/平方千米）",
+      "weight-volume": "重量与体积容积（含升/毫升与立方单位互化）",
+      "time": "时间单位（时/分/秒/天/周/世纪）",
+      "data-binary": "数据单位（二进制约定 1 KB = 1024 B）"
+    }
+  },
+  "startedAt": "2026-09-10T15:14:58.445Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "UC-LA-01",
+      "condition": "length-area",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3.5 千米等于多少米？",
+      "answer": "3500",
+      "target": "3500",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-01",
+      "condition": "length-area",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3.5 千米等于多少米？",
+      "answer": "3500",
+      "target": "3500",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-01",
+      "condition": "length-area",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3.5 千米等于多少米？",
+      "answer": "3500",
+      "target": "3500",
+      "latencyMs": 276,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-01",
+      "condition": "length-area",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3.5 千米等于多少米？",
+      "answer": "3500",
+      "target": "3500",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-02",
+      "condition": "length-area",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 米等于多少厘米？",
+      "answer": "250",
+      "target": "250",
+      "latencyMs": 338,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-02",
+      "condition": "length-area",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 米等于多少厘米？",
+      "answer": "250",
+      "target": "250",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-02",
+      "condition": "length-area",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 米等于多少厘米？",
+      "answer": "250",
+      "target": "250",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-02",
+      "condition": "length-area",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 米等于多少厘米？",
+      "answer": "250",
+      "target": "250",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-03",
+      "condition": "length-area",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 公顷等于多少平方米？",
+      "answer": "20000",
+      "target": "20000",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-03",
+      "condition": "length-area",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 公顷等于多少平方米？",
+      "answer": "20000",
+      "target": "20000",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-03",
+      "condition": "length-area",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 公顷等于多少平方米？",
+      "answer": "2000大",
+      "target": "20000",
+      "latencyMs": 304,
+      "score": 0,
+      "note": "期望「20000」，实答「2000大」",
+      "usage": {
+        "input": 23,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-03",
+      "condition": "length-area",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 公顷等于多少平方米？",
+      "answer": "200",
+      "target": "20000",
+      "latencyMs": 342,
+      "score": 0,
+      "note": "期望「20000」，实答「200」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-04",
+      "condition": "length-area",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n5 平方千米等于多少公顷？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 130,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-04",
+      "condition": "length-area",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n5 平方千米等于多少公顷？",
+      "answer": "50",
+      "target": "500",
+      "latencyMs": 303,
+      "score": 0,
+      "note": "期望「500」，实答「50」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-04",
+      "condition": "length-area",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n5 平方千米等于多少公顷？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-04",
+      "condition": "length-area",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n5 平方千米等于多少公顷？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-05",
+      "condition": "length-area",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n8 分米等于多少毫米？",
+      "answer": "800",
+      "target": "800",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-05",
+      "condition": "length-area",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n8 分米等于多少毫米？",
+      "answer": "800",
+      "target": "800",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-05",
+      "condition": "length-area",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n8 分米等于多少毫米？",
+      "answer": "80",
+      "target": "800",
+      "latencyMs": 303,
+      "score": 0,
+      "note": "期望「800」，实答「80」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-LA-05",
+      "condition": "length-area",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n8 分米等于多少毫米？",
+      "answer": "800",
+      "target": "800",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-WV-01",
+      "condition": "weight-volume",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 吨等于多少千克？",
+      "answer": "2500",
+      "target": "2500",
+      "latencyMs": 92,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-WV-01",
+      "condition": "weight-volume",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 吨等于多少千克？",
+      "answer": "国500",
+      "target": "2500",
+      "latencyMs": 462,
+      "score": 0,
+      "note": "期望「2500」，实答「国500」",
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-WV-01",
+      "condition": "weight-volume",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 吨等于多少千克？",
+      "answer": "25",
+      "target": "2500",
+      "latencyMs": 199,
+      "score": 0,
+      "note": "期望「2500」，实答「25」",
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-WV-01",
+      "condition": "weight-volume",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 吨等于多少千克？",
+      "answer": "2500",
+      "target": "2500",
+      "latencyMs": 427,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "UC-WV-02",
+      "condition": "weight-volume",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n4000 克等于多少千克？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-02",
+      "condition": "weight-volume",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n4000 克等于多少千克？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-02",
+      "condition": "weight-volume",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n4000 克等于多少千克？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 122,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-02",
+      "condition": "weight-volume",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n4000 克等于多少千克？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-03",
+      "condition": "weight-volume",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 升等于多少毫升？",
+      "answer": "3000",
+      "target": "3000",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-03",
+      "condition": "weight-volume",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 升等于多少毫升？",
+      "answer": "3000",
+      "target": "3000",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-03",
+      "condition": "weight-volume",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 升等于多少毫升？",
+      "answer": "300",
+      "target": "3000",
+      "latencyMs": 461,
+      "score": 0,
+      "note": "期望「3000」，实答「300」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-03",
+      "condition": "weight-volume",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 升等于多少毫升？",
+      "answer": "30",
+      "target": "3000",
+      "latencyMs": 421,
+      "score": 0,
+      "note": "期望「3000」，实答「30」",
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-04",
+      "condition": "weight-volume",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 立方米等于多少立方分米？",
+      "answer": "2000",
+      "target": "2000",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-04",
+      "condition": "weight-volume",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 立方米等于多少立方分米？",
+      "answer": "000",
+      "target": "2000",
+      "latencyMs": 294,
+      "score": 0,
+      "note": "期望「2000」，实答「000」",
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-04",
+      "condition": "weight-volume",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 立方米等于多少立方分米？",
+      "answer": "200",
+      "target": "2000",
+      "latencyMs": 450,
+      "score": 0,
+      "note": "期望「2000」，实答「200」",
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-04",
+      "condition": "weight-volume",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 立方米等于多少立方分米？",
+      "answer": "2000",
+      "target": "2000",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-05",
+      "condition": "weight-volume",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n500 毫升等于多少立方厘米？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 322,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-05",
+      "condition": "weight-volume",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n500 毫升等于多少立方厘米？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-05",
+      "condition": "weight-volume",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n500 毫升等于多少立方厘米？",
+      "answer": "50",
+      "target": "500",
+      "latencyMs": 465,
+      "score": 0,
+      "note": "期望「500」，实答「50」",
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-WV-05",
+      "condition": "weight-volume",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n500 毫升等于多少立方厘米？",
+      "answer": "500",
+      "target": "500",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-01",
+      "condition": "time",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 小时等于多少分钟？",
+      "answer": "150",
+      "target": "150",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-01",
+      "condition": "time",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 小时等于多少分钟？",
+      "answer": "15",
+      "target": "150",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "期望「150」，实答「15」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-01",
+      "condition": "time",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 小时等于多少分钟？",
+      "answer": "150",
+      "target": "150",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-01",
+      "condition": "time",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2.5 小时等于多少分钟？",
+      "answer": "150",
+      "target": "150",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-02",
+      "condition": "time",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 天等于多少小时？",
+      "answer": "72",
+      "target": "72",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-02",
+      "condition": "time",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 天等于多少小时？",
+      "answer": "72",
+      "target": "72",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-02",
+      "condition": "time",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 天等于多少小时？",
+      "answer": "7",
+      "target": "72",
+      "latencyMs": 362,
+      "score": 0,
+      "note": "期望「72」，实答「7」",
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-02",
+      "condition": "time",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3 天等于多少小时？",
+      "answer": "72",
+      "target": "72",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-03",
+      "condition": "time",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n1 世纪等于多少年？",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-03",
+      "condition": "time",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n1 世纪等于多少年？",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-03",
+      "condition": "time",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n1 世纪等于多少年？",
+      "answer": "10",
+      "target": "100",
+      "latencyMs": 353,
+      "score": 0,
+      "note": "期望「100」，实答「10」",
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-03",
+      "condition": "time",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n1 世纪等于多少年？",
+      "answer": "1中0",
+      "target": "100",
+      "latencyMs": 149,
+      "score": 0,
+      "note": "期望「100」，实答「1中0」",
+      "usage": {
+        "input": 22,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-04",
+      "condition": "time",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3600 秒等于多少分钟？",
+      "answer": "60",
+      "target": "60",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-04",
+      "condition": "time",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3600 秒等于多少分钟？",
+      "answer": "60",
+      "target": "60",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-04",
+      "condition": "time",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3600 秒等于多少分钟？",
+      "answer": "6",
+      "target": "60",
+      "latencyMs": 475,
+      "score": 0,
+      "note": "期望「60」，实答「6」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-04",
+      "condition": "time",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n3600 秒等于多少分钟？",
+      "answer": "6",
+      "target": "60",
+      "latencyMs": 141,
+      "score": 0,
+      "note": "期望「60」，实答「6」",
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-05",
+      "condition": "time",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 周等于多少天？",
+      "answer": "14",
+      "target": "14",
+      "latencyMs": 354,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-05",
+      "condition": "time",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 周等于多少天？",
+      "answer": "14",
+      "target": "14",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-05",
+      "condition": "time",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 周等于多少天？",
+      "answer": "1",
+      "target": "14",
+      "latencyMs": 452,
+      "score": 0,
+      "note": "期望「14」，实答「1」",
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-TM-05",
+      "condition": "time",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n2 周等于多少天？",
+      "answer": "14",
+      "target": "14",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 22,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-DB-01",
+      "condition": "data-binary",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 KB = 1024 B），3 KB 等于多少 B？",
+      "answer": "3072",
+      "target": "3072",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-DB-01",
+      "condition": "data-binary",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 KB = 1024 B），3 KB 等于多少 B？",
+      "answer": "30",
+      "target": "3072",
+      "latencyMs": 350,
+      "score": 0,
+      "note": "期望「3072」，实答「30」",
+      "usage": {
+        "input": 35,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-DB-01",
+      "condition": "data-binary",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 KB = 1024 B），3 KB 等于多少 B？",
+      "answer": "3上72",
+      "target": "3072",
+      "latencyMs": 425,
+      "score": 0,
+      "note": "期望「3072」，实答「3上72」",
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-DB-01",
+      "condition": "data-binary",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 KB = 1024 B），3 KB 等于多少 B？",
+      "answer": "3072",
+      "target": "3072",
+      "latencyMs": 441,
+      "score": 1,
+      "usage": {
+        "input": 35,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "UC-DB-02",
+      "condition": "data-binary",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 MB = 1024 KB），2 MB 等于多少 KB？",
+      "answer": "2048",
+      "target": "2048",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-02",
+      "condition": "data-binary",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 MB = 1024 KB），2 MB 等于多少 KB？",
+      "answer": "2048",
+      "target": "2048",
+      "latencyMs": 293,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-02",
+      "condition": "data-binary",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 MB = 1024 KB），2 MB 等于多少 KB？",
+      "answer": "20",
+      "target": "2048",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "期望「2048」，实答「20」",
+      "usage": {
+        "input": 36,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-02",
+      "condition": "data-binary",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 MB = 1024 KB），2 MB 等于多少 KB？",
+      "answer": "2048",
+      "target": "2048",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-03",
+      "condition": "data-binary",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），1.5 GB 等于多少 MB？",
+      "answer": "1536",
+      "target": "1536",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-03",
+      "condition": "data-binary",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），1.5 GB 等于多少 MB？",
+      "answer": "1536",
+      "target": "1536",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-03",
+      "condition": "data-binary",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），1.5 GB 等于多少 MB？",
+      "answer": "536",
+      "target": "1536",
+      "latencyMs": 364,
+      "score": 0,
+      "note": "期望「1536」，实答「536」",
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-03",
+      "condition": "data-binary",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），1.5 GB 等于多少 MB？",
+      "answer": "1536",
+      "target": "1536",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 37,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-04",
+      "condition": "data-binary",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），4096 MB 等于多少 GB？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-04",
+      "condition": "data-binary",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），4096 MB 等于多少 GB？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-04",
+      "condition": "data-binary",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），4096 MB 等于多少 GB？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-04",
+      "condition": "data-binary",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 GB = 1024 MB），4096 MB 等于多少 GB？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-05",
+      "condition": "data-binary",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 TB = 1024 GB），2 TB 等于多少 GB？",
+      "answer": "248",
+      "target": "2048",
+      "latencyMs": 210,
+      "score": 0,
+      "note": "期望「2048」，实答「248」",
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-05",
+      "condition": "data-binary",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 TB = 1024 GB），2 TB 等于多少 GB？",
+      "answer": "204",
+      "target": "2048",
+      "latencyMs": 206,
+      "score": 0,
+      "note": "期望「2048」，实答「204」",
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-05",
+      "condition": "data-binary",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 TB = 1024 GB），2 TB 等于多少 GB？",
+      "answer": "2048",
+      "target": "2048",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "UC-DB-05",
+      "condition": "data-binary",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出换算结果的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n按二进制计量约定（1 TB = 1024 GB），2 TB 等于多少 GB？",
+      "answer": "2048",
+      "target": "2048",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "a8dd99f0fe3caa96",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.5.0"
+  }
+}

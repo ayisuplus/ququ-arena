@@ -1,0 +1,1580 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "arith-word",
+    "title": "应用题擂台",
+    "description": "形制致敬 GSM8K（多步算术应用题，内容自建）。传统评测第一基本功：读题列式算出确定数值。multi-step 考多步四则混合；classic-type 考小学经典题型（鸡兔同笼/相遇/工程/年龄）；trap-rounding 考进一法与去尾法（租船装箱必须进一、剪裁购买必须去尾）；fraction-of 考分数与占比（含「剩下的几分之几」陷阱）。答案均为整数，exact 裁判；每题 meta.expr 存算式，契约测试逐题复算（ceil/floor 白名单求值）。",
+    "author": "AI斗兽场（内容自建，形制致敬 GSM8K）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:arith-word:2026-09-10",
+    "taskPrefix": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "multi-step": "多步四则混合运算",
+      "classic-type": "经典题型（鸡兔同笼/相遇/工程/年龄）",
+      "trap-rounding": "进一法与去尾法（余数处理陷阱）",
+      "fraction-of": "分数与占比（含『剩下的几分之几』陷阱）"
+    }
+  },
+  "startedAt": "2026-09-10T16:18:29.315Z",
+  "durationMs": 5564,
+  "contestants": [
+    {
+      "id": "dots:dots3-note-prev",
+      "name": "笔记-DOTS",
+      "kind": "pi",
+      "provider": "dots",
+      "modelId": "dots3-note-prev"
+    },
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "AW-MS-01",
+      "condition": "multi-step",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n小明买了 3 支铅笔，每支 2 元，又买了一本 8 元的笔记本。他付给售货员 50 元，应找回多少元？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 1978,
+      "score": 1,
+      "usage": {
+        "input": 79,
+        "output": 163
+      },
+      "finishedMs": 1978
+    },
+    {
+      "taskId": "AW-MS-01",
+      "condition": "multi-step",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n小明买了 3 支铅笔，每支 2 元，又买了一本 8 元的笔记本。他付给售货员 50 元，应找回多少元？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-01",
+      "condition": "multi-step",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n小明买了 3 支铅笔，每支 2 元，又买了一本 8 元的笔记本。他付给售货员 50 元，应找回多少元？",
+      "answer": "3",
+      "target": "36",
+      "latencyMs": 288,
+      "score": 0,
+      "note": "期望「36」，实答「3」",
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-01",
+      "condition": "multi-step",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n小明买了 3 支铅笔，每支 2 元，又买了一本 8 元的笔记本。他付给售货员 50 元，应找回多少元？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-01",
+      "condition": "multi-step",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n小明买了 3 支铅笔，每支 2 元，又买了一本 8 元的笔记本。他付给售货员 50 元，应找回多少元？",
+      "answer": "36",
+      "target": "36",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-02",
+      "condition": "multi-step",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱苹果有 24 个，平均分给 4 个小组。每个小组从分到的苹果中拿出 2 个送给老师，每个小组还剩多少个？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 2395,
+      "score": 1,
+      "usage": {
+        "input": 76,
+        "output": 211
+      },
+      "finishedMs": 2399
+    },
+    {
+      "taskId": "AW-MS-02",
+      "condition": "multi-step",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱苹果有 24 个，平均分给 4 个小组。每个小组从分到的苹果中拿出 2 个送给老师，每个小组还剩多少个？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-02",
+      "condition": "multi-step",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱苹果有 24 个，平均分给 4 个小组。每个小组从分到的苹果中拿出 2 个送给老师，每个小组还剩多少个？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 20
+    },
+    {
+      "taskId": "AW-MS-02",
+      "condition": "multi-step",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱苹果有 24 个，平均分给 4 个小组。每个小组从分到的苹果中拿出 2 个送给老师，每个小组还剩多少个？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-02",
+      "condition": "multi-step",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱苹果有 24 个，平均分给 4 个小组。每个小组从分到的苹果中拿出 2 个送给老师，每个小组还剩多少个？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-03",
+      "condition": "multi-step",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n图书角有 5 层书架，每层放 18 本书。借出 26 本后又新补上 9 本，图书角现在有书多少本？",
+      "answer": "73",
+      "target": "73",
+      "latencyMs": 1841,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 180
+      },
+      "finishedMs": 1861
+    },
+    {
+      "taskId": "AW-MS-03",
+      "condition": "multi-step",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n图书角有 5 层书架，每层放 18 本书。借出 26 本后又新补上 9 本，图书角现在有书多少本？",
+      "answer": "7",
+      "target": "73",
+      "latencyMs": 228,
+      "score": 0,
+      "note": "期望「73」，实答「7」",
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-03",
+      "condition": "multi-step",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n图书角有 5 层书架，每层放 18 本书。借出 26 本后又新补上 9 本，图书角现在有书多少本？",
+      "answer": "7",
+      "target": "73",
+      "latencyMs": 356,
+      "score": 0,
+      "note": "期望「73」，实答「7」",
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-03",
+      "condition": "multi-step",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n图书角有 5 层书架，每层放 18 本书。借出 26 本后又新补上 9 本，图书角现在有书多少本？",
+      "answer": "73",
+      "target": "73",
+      "latencyMs": 357,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-03",
+      "condition": "multi-step",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n图书角有 5 层书架，每层放 18 本书。借出 26 本后又新补上 9 本，图书角现在有书多少本？",
+      "answer": "73",
+      "target": "73",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-04",
+      "condition": "multi-step",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n操场一圈 400 米，小红跑了 3 圈，又跑了 150 米。她一共跑了多少米？",
+      "answer": "1350",
+      "target": "1350",
+      "latencyMs": 1326,
+      "score": 1,
+      "usage": {
+        "input": 66,
+        "output": 96
+      },
+      "finishedMs": 1347
+    },
+    {
+      "taskId": "AW-MS-04",
+      "condition": "multi-step",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n操场一圈 400 米，小红跑了 3 圈，又跑了 150 米。她一共跑了多少米？",
+      "answer": "1350",
+      "target": "1350",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-04",
+      "condition": "multi-step",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n操场一圈 400 米，小红跑了 3 圈，又跑了 150 米。她一共跑了多少米？",
+      "answer": "1350",
+      "target": "1350",
+      "latencyMs": 474,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-04",
+      "condition": "multi-step",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n操场一圈 400 米，小红跑了 3 圈，又跑了 150 米。她一共跑了多少米？",
+      "answer": "350",
+      "target": "1350",
+      "latencyMs": 116,
+      "score": 0,
+      "note": "期望「1350」，实答「350」",
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 21
+    },
+    {
+      "taskId": "AW-MS-04",
+      "condition": "multi-step",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n操场一圈 400 米，小红跑了 3 圈，又跑了 150 米。她一共跑了多少米？",
+      "answer": "1350",
+      "target": "1350",
+      "latencyMs": 178,
+      "score": 1,
+      "usage": {
+        "input": 36,
+        "output": 2
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-MS-05",
+      "condition": "multi-step",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？",
+      "answer": "",
+      "target": "100",
+      "latencyMs": 513,
+      "score": 0,
+      "note": "期望「100」，实答「」",
+      "usage": {
+        "input": 71,
+        "output": 4
+      },
+      "finishedMs": 534
+    },
+    {
+      "taskId": "AW-MS-05",
+      "condition": "multi-step",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？",
+      "answer": "00",
+      "target": "100",
+      "latencyMs": 305,
+      "score": 0,
+      "note": "期望「100」，实答「00」",
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-MS-05",
+      "condition": "multi-step",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-MS-05",
+      "condition": "multi-step",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？",
+      "answer": "的00",
+      "target": "100",
+      "latencyMs": 400,
+      "score": 0,
+      "note": "期望「100」，实答「的00」",
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-MS-05",
+      "condition": "multi-step",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n食堂原有一批大米，平均每天消耗 12 千克，用了 5 天后还剩 40 千克。食堂原有大米多少千克？",
+      "answer": "100",
+      "target": "100",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 2
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-CT-01",
+      "condition": "classic-type",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 10 只，数一数腿共有 28 条。兔有多少只？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 2572,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 214
+      },
+      "finishedMs": 2594
+    },
+    {
+      "taskId": "AW-CT-01",
+      "condition": "classic-type",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 10 只，数一数腿共有 28 条。兔有多少只？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 334,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-CT-01",
+      "condition": "classic-type",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 10 只，数一数腿共有 28 条。兔有多少只？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 228,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-CT-01",
+      "condition": "classic-type",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 10 只，数一数腿共有 28 条。兔有多少只？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-CT-01",
+      "condition": "classic-type",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 10 只，数一数腿共有 28 条。兔有多少只？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 22
+    },
+    {
+      "taskId": "AW-CT-02",
+      "condition": "classic-type",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n甲乙两地相距 240 千米，一辆快车和一辆慢车同时从两地相对开出，快车每小时行 70 千米，慢车每小时行 50 千米。两车几小时后相遇？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 2516,
+      "score": 1,
+      "usage": {
+        "input": 91,
+        "output": 219
+      },
+      "finishedMs": 2538
+    },
+    {
+      "taskId": "AW-CT-02",
+      "condition": "classic-type",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n甲乙两地相距 240 千米，一辆快车和一辆慢车同时从两地相对开出，快车每小时行 70 千米，慢车每小时行 50 千米。两车几小时后相遇？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 23
+    },
+    {
+      "taskId": "AW-CT-02",
+      "condition": "classic-type",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n甲乙两地相距 240 千米，一辆快车和一辆慢车同时从两地相对开出，快车每小时行 70 千米，慢车每小时行 50 千米。两车几小时后相遇？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 23
+    },
+    {
+      "taskId": "AW-CT-02",
+      "condition": "classic-type",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n甲乙两地相距 240 千米，一辆快车和一辆慢车同时从两地相对开出，快车每小时行 70 千米，慢车每小时行 50 千米。两车几小时后相遇？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 23
+    },
+    {
+      "taskId": "AW-CT-02",
+      "condition": "classic-type",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n甲乙两地相距 240 千米，一辆快车和一辆慢车同时从两地相对开出，快车每小时行 70 千米，慢车每小时行 50 千米。两车几小时后相遇？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 331,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 23
+    },
+    {
+      "taskId": "AW-CT-03",
+      "condition": "classic-type",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n修一条路，甲队单独修 10 天完成，乙队单独修 15 天完成。两队合修，多少天可以完成？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 2985,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 259
+      },
+      "finishedMs": 3008
+    },
+    {
+      "taskId": "AW-CT-03",
+      "condition": "classic-type",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n修一条路，甲队单独修 10 天完成，乙队单独修 15 天完成。两队合修，多少天可以完成？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 423,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 534
+    },
+    {
+      "taskId": "AW-CT-03",
+      "condition": "classic-type",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n修一条路，甲队单独修 10 天完成，乙队单独修 15 天完成。两队合修，多少天可以完成？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 534
+    },
+    {
+      "taskId": "AW-CT-03",
+      "condition": "classic-type",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n修一条路，甲队单独修 10 天完成，乙队单独修 15 天完成。两队合修，多少天可以完成？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 534
+    },
+    {
+      "taskId": "AW-CT-03",
+      "condition": "classic-type",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n修一条路，甲队单独修 10 天完成，乙队单独修 15 天完成。两队合修，多少天可以完成？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 534
+    },
+    {
+      "taskId": "AW-CT-04",
+      "condition": "classic-type",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n今年爸爸 36 岁，小明 8 岁。几年后爸爸的年龄正好是小明的 2 倍？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 3129,
+      "score": 1,
+      "usage": {
+        "input": 67,
+        "output": 242
+      },
+      "finishedMs": 3663
+    },
+    {
+      "taskId": "AW-CT-04",
+      "condition": "classic-type",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n今年爸爸 36 岁，小明 8 岁。几年后爸爸的年龄正好是小明的 2 倍？",
+      "answer": "2",
+      "target": "20",
+      "latencyMs": 321,
+      "score": 0,
+      "note": "期望「20」，实答「2」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1348
+    },
+    {
+      "taskId": "AW-CT-04",
+      "condition": "classic-type",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n今年爸爸 36 岁，小明 8 岁。几年后爸爸的年龄正好是小明的 2 倍？",
+      "answer": "2",
+      "target": "20",
+      "latencyMs": 194,
+      "score": 0,
+      "note": "期望「20」，实答「2」",
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1348
+    },
+    {
+      "taskId": "AW-CT-04",
+      "condition": "classic-type",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n今年爸爸 36 岁，小明 8 岁。几年后爸爸的年龄正好是小明的 2 倍？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 395,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1348
+    },
+    {
+      "taskId": "AW-CT-04",
+      "condition": "classic-type",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n今年爸爸 36 岁，小明 8 岁。几年后爸爸的年龄正好是小明的 2 倍？",
+      "answer": "20",
+      "target": "20",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 34,
+        "output": 1
+      },
+      "finishedMs": 1348
+    },
+    {
+      "taskId": "AW-CT-05",
+      "condition": "classic-type",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 35 只，腿共 94 条。鸡有多少只？",
+      "answer": "23",
+      "target": "23",
+      "latencyMs": 2271,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 200
+      },
+      "finishedMs": 3619
+    },
+    {
+      "taskId": "AW-CT-05",
+      "condition": "classic-type",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 35 只，腿共 94 条。鸡有多少只？",
+      "answer": "2",
+      "target": "23",
+      "latencyMs": 289,
+      "score": 0,
+      "note": "期望「23」，实答「2」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1861
+    },
+    {
+      "taskId": "AW-CT-05",
+      "condition": "classic-type",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 35 只，腿共 94 条。鸡有多少只？",
+      "answer": "2",
+      "target": "23",
+      "latencyMs": 433,
+      "score": 0,
+      "note": "期望「23」，实答「2」",
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1861
+    },
+    {
+      "taskId": "AW-CT-05",
+      "condition": "classic-type",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 35 只，腿共 94 条。鸡有多少只？",
+      "answer": "23",
+      "target": "23",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1861
+    },
+    {
+      "taskId": "AW-CT-05",
+      "condition": "classic-type",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n笼子里有鸡和兔共 35 只，腿共 94 条。鸡有多少只？",
+      "answer": "23",
+      "target": "23",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1
+      },
+      "finishedMs": 1861
+    },
+    {
+      "taskId": "AW-TR-01",
+      "condition": "trap-rounding",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n47 名学生乘车去春游，每辆车最多坐 9 人，至少需要租多少辆车？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 2587,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 220
+      },
+      "finishedMs": 4448
+    },
+    {
+      "taskId": "AW-TR-01",
+      "condition": "trap-rounding",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n47 名学生乘车去春游，每辆车最多坐 9 人，至少需要租多少辆车？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1978
+    },
+    {
+      "taskId": "AW-TR-01",
+      "condition": "trap-rounding",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n47 名学生乘车去春游，每辆车最多坐 9 人，至少需要租多少辆车？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1978
+    },
+    {
+      "taskId": "AW-TR-01",
+      "condition": "trap-rounding",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n47 名学生乘车去春游，每辆车最多坐 9 人，至少需要租多少辆车？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1978
+    },
+    {
+      "taskId": "AW-TR-01",
+      "condition": "trap-rounding",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n47 名学生乘车去春游，每辆车最多坐 9 人，至少需要租多少辆车？",
+      "answer": "6",
+      "target": "6",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 1978
+    },
+    {
+      "taskId": "AW-TR-02",
+      "condition": "trap-rounding",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根绳子长 50 米，剪成 3 米一根的跳绳，最多能剪出多少根？",
+      "answer": "16",
+      "target": "16",
+      "latencyMs": 1191,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 84
+      },
+      "finishedMs": 3169
+    },
+    {
+      "taskId": "AW-TR-02",
+      "condition": "trap-rounding",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根绳子长 50 米，剪成 3 米一根的跳绳，最多能剪出多少根？",
+      "answer": "16",
+      "target": "16",
+      "latencyMs": 434,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2399
+    },
+    {
+      "taskId": "AW-TR-02",
+      "condition": "trap-rounding",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根绳子长 50 米，剪成 3 米一根的跳绳，最多能剪出多少根？",
+      "answer": "16",
+      "target": "16",
+      "latencyMs": 110,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2399
+    },
+    {
+      "taskId": "AW-TR-02",
+      "condition": "trap-rounding",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根绳子长 50 米，剪成 3 米一根的跳绳，最多能剪出多少根？",
+      "answer": "1",
+      "target": "16",
+      "latencyMs": 363,
+      "score": 0,
+      "note": "期望「16」，实答「1」",
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2399
+    },
+    {
+      "taskId": "AW-TR-02",
+      "condition": "trap-rounding",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根绳子长 50 米，剪成 3 米一根的跳绳，最多能剪出多少根？",
+      "answer": "16",
+      "target": "16",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 2399
+    },
+    {
+      "taskId": "AW-TR-03",
+      "condition": "trap-rounding",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n商店运来 130 千克苹果，每个纸箱最多装 12 千克。要把这些苹果全部装箱，至少需要多少个纸箱？",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 913,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 53
+      },
+      "finishedMs": 3312
+    },
+    {
+      "taskId": "AW-TR-03",
+      "condition": "trap-rounding",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n商店运来 130 千克苹果，每个纸箱最多装 12 千克。要把这些苹果全部装箱，至少需要多少个纸箱？",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 2538
+    },
+    {
+      "taskId": "AW-TR-03",
+      "condition": "trap-rounding",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n商店运来 130 千克苹果，每个纸箱最多装 12 千克。要把这些苹果全部装箱，至少需要多少个纸箱？",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 2538
+    },
+    {
+      "taskId": "AW-TR-03",
+      "condition": "trap-rounding",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n商店运来 130 千克苹果，每个纸箱最多装 12 千克。要把这些苹果全部装箱，至少需要多少个纸箱？",
+      "answer": "1",
+      "target": "11",
+      "latencyMs": 408,
+      "score": 0,
+      "note": "期望「11」，实答「1」",
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 2538
+    },
+    {
+      "taskId": "AW-TR-03",
+      "condition": "trap-rounding",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n商店运来 130 千克苹果，每个纸箱最多装 12 千克。要把这些苹果全部装箱，至少需要多少个纸箱？",
+      "answer": "11",
+      "target": "11",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 1
+      },
+      "finishedMs": 2538
+    },
+    {
+      "taskId": "AW-TR-04",
+      "condition": "trap-rounding",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n把 38 块糖分给小朋友，每人分 5 块，最多能分给多少个小朋友？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 2297,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 203
+      },
+      "finishedMs": 4835
+    },
+    {
+      "taskId": "AW-TR-04",
+      "condition": "trap-rounding",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n把 38 块糖分给小朋友，每人分 5 块，最多能分给多少个小朋友？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 228,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2595
+    },
+    {
+      "taskId": "AW-TR-04",
+      "condition": "trap-rounding",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n把 38 块糖分给小朋友，每人分 5 块，最多能分给多少个小朋友？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2595
+    },
+    {
+      "taskId": "AW-TR-04",
+      "condition": "trap-rounding",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n把 38 块糖分给小朋友，每人分 5 块，最多能分给多少个小朋友？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2595
+    },
+    {
+      "taskId": "AW-TR-04",
+      "condition": "trap-rounding",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n把 38 块糖分给小朋友，每人分 5 块，最多能分给多少个小朋友？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 2595
+    },
+    {
+      "taskId": "AW-TR-05",
+      "condition": "trap-rounding",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n张老师带了 200 元去买词典，每本词典 28 元，最多能买多少本？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 2574,
+      "score": 1,
+      "usage": {
+        "input": 64,
+        "output": 224
+      },
+      "finishedMs": 5169
+    },
+    {
+      "taskId": "AW-TR-05",
+      "condition": "trap-rounding",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n张老师带了 200 元去买词典，每本词典 28 元，最多能买多少本？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 3008
+    },
+    {
+      "taskId": "AW-TR-05",
+      "condition": "trap-rounding",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n张老师带了 200 元去买词典，每本词典 28 元，最多能买多少本？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 3008
+    },
+    {
+      "taskId": "AW-TR-05",
+      "condition": "trap-rounding",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n张老师带了 200 元去买词典，每本词典 28 元，最多能买多少本？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 3008
+    },
+    {
+      "taskId": "AW-TR-05",
+      "condition": "trap-rounding",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n张老师带了 200 元去买词典，每本词典 28 元，最多能买多少本？",
+      "answer": "7",
+      "target": "7",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 1
+      },
+      "finishedMs": 3009
+    },
+    {
+      "taskId": "AW-FC-01",
+      "condition": "fraction-of",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一本书 120 页，小华第一天看了全书的 1/3，第二天看了 40 页。还剩多少页没看？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 2220,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 245
+      },
+      "finishedMs": 5229
+    },
+    {
+      "taskId": "AW-FC-01",
+      "condition": "fraction-of",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一本书 120 页，小华第一天看了全书的 1/3，第二天看了 40 页。还剩多少页没看？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 475,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3169
+    },
+    {
+      "taskId": "AW-FC-01",
+      "condition": "fraction-of",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一本书 120 页，小华第一天看了全书的 1/3，第二天看了 40 页。还剩多少页没看？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3169
+    },
+    {
+      "taskId": "AW-FC-01",
+      "condition": "fraction-of",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一本书 120 页，小华第一天看了全书的 1/3，第二天看了 40 页。还剩多少页没看？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3169
+    },
+    {
+      "taskId": "AW-FC-01",
+      "condition": "fraction-of",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一本书 120 页，小华第一天看了全书的 1/3，第二天看了 40 页。还剩多少页没看？",
+      "answer": "40",
+      "target": "40",
+      "latencyMs": 246,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3169
+    },
+    {
+      "taskId": "AW-FC-02",
+      "condition": "fraction-of",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱牛奶有 24 盒，第一周喝了这箱牛奶的 1/4，第二周又喝了剩下的 1/3。现在还剩多少盒？",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 842,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 34
+      },
+      "finishedMs": 4011
+    },
+    {
+      "taskId": "AW-FC-02",
+      "condition": "fraction-of",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱牛奶有 24 盒，第一周喝了这箱牛奶的 1/4，第二周又喝了剩下的 1/3。现在还剩多少盒？",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 3312
+    },
+    {
+      "taskId": "AW-FC-02",
+      "condition": "fraction-of",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱牛奶有 24 盒，第一周喝了这箱牛奶的 1/4，第二周又喝了剩下的 1/3。现在还剩多少盒？",
+      "answer": "12",
+      "target": "12",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 3312
+    },
+    {
+      "taskId": "AW-FC-02",
+      "condition": "fraction-of",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱牛奶有 24 盒，第一周喝了这箱牛奶的 1/4，第二周又喝了剩下的 1/3。现在还剩多少盒？",
+      "answer": "1",
+      "target": "12",
+      "latencyMs": 225,
+      "score": 0,
+      "note": "期望「12」，实答「1」",
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 3312
+    },
+    {
+      "taskId": "AW-FC-02",
+      "condition": "fraction-of",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一箱牛奶有 24 盒，第一周喝了这箱牛奶的 1/4，第二周又喝了剩下的 1/3。现在还剩多少盒？",
+      "answer": "1",
+      "target": "12",
+      "latencyMs": 294,
+      "score": 0,
+      "note": "期望「12」，实答「1」",
+      "usage": {
+        "input": 40,
+        "output": 1
+      },
+      "finishedMs": 3312
+    },
+    {
+      "taskId": "AW-FC-03",
+      "condition": "fraction-of",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n果园里有 84 棵果树，其中 2/7 是苹果树。苹果树有多少棵？",
+      "answer": "24",
+      "target": "24",
+      "latencyMs": 2252,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 201
+      },
+      "finishedMs": 5564
+    },
+    {
+      "taskId": "AW-FC-03",
+      "condition": "fraction-of",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n果园里有 84 棵果树，其中 2/7 是苹果树。苹果树有多少棵？",
+      "answer": "24",
+      "target": "24",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 3619
+    },
+    {
+      "taskId": "AW-FC-03",
+      "condition": "fraction-of",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n果园里有 84 棵果树，其中 2/7 是苹果树。苹果树有多少棵？",
+      "answer": "24",
+      "target": "24",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 3619
+    },
+    {
+      "taskId": "AW-FC-03",
+      "condition": "fraction-of",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n果园里有 84 棵果树，其中 2/7 是苹果树。苹果树有多少棵？",
+      "answer": "2",
+      "target": "24",
+      "latencyMs": 329,
+      "score": 0,
+      "note": "期望「24」，实答「2」",
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 3619
+    },
+    {
+      "taskId": "AW-FC-03",
+      "condition": "fraction-of",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n果园里有 84 棵果树，其中 2/7 是苹果树。苹果树有多少棵？",
+      "answer": "24",
+      "target": "24",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 32,
+        "output": 1
+      },
+      "finishedMs": 3619
+    },
+    {
+      "taskId": "AW-FC-04",
+      "condition": "fraction-of",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根铁丝长 36 米，第一次用去全长的 1/4，第二次用去 9 米。两次一共用去多少米？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 1805,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 140
+      },
+      "finishedMs": 5424
+    },
+    {
+      "taskId": "AW-FC-04",
+      "condition": "fraction-of",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根铁丝长 36 米，第一次用去全长的 1/4，第二次用去 9 米。两次一共用去多少米？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3663
+    },
+    {
+      "taskId": "AW-FC-04",
+      "condition": "fraction-of",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根铁丝长 36 米，第一次用去全长的 1/4，第二次用去 9 米。两次一共用去多少米？",
+      "answer": "1",
+      "target": "18",
+      "latencyMs": 166,
+      "score": 0,
+      "note": "期望「18」，实答「1」",
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3663
+    },
+    {
+      "taskId": "AW-FC-04",
+      "condition": "fraction-of",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根铁丝长 36 米，第一次用去全长的 1/4，第二次用去 9 米。两次一共用去多少米？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 171,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3663
+    },
+    {
+      "taskId": "AW-FC-04",
+      "condition": "fraction-of",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n一根铁丝长 36 米，第一次用去全长的 1/4，第二次用去 9 米。两次一共用去多少米？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 140,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 3663
+    },
+    {
+      "taskId": "AW-FC-05",
+      "condition": "fraction-of",
+      "model": "dots:dots3-note-prev",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n六年级一班有 45 名学生，其中 3/5 参加了兴趣小组。没有参加兴趣小组的有多少名？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 1714,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 133
+      },
+      "finishedMs": 5377
+    },
+    {
+      "taskId": "AW-FC-05",
+      "condition": "fraction-of",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n六年级一班有 45 名学生，其中 3/5 参加了兴趣小组。没有参加兴趣小组的有多少名？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 4011
+    },
+    {
+      "taskId": "AW-FC-05",
+      "condition": "fraction-of",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n六年级一班有 45 名学生，其中 3/5 参加了兴趣小组。没有参加兴趣小组的有多少名？",
+      "answer": "1",
+      "target": "18",
+      "latencyMs": 221,
+      "score": 0,
+      "note": "期望「18」，实答「1」",
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 4011
+    },
+    {
+      "taskId": "AW-FC-05",
+      "condition": "fraction-of",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n六年级一班有 45 名学生，其中 3/5 参加了兴趣小组。没有参加兴趣小组的有多少名？",
+      "answer": "1",
+      "target": "18",
+      "latencyMs": 265,
+      "score": 0,
+      "note": "期望「18」，实答「1」",
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 4011
+    },
+    {
+      "taskId": "AW-FC-05",
+      "condition": "fraction-of",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案的阿拉伯数字本身（不带单位、不带算式），不多一个字。\n六年级一班有 45 名学生，其中 3/5 参加了兴趣小组。没有参加兴趣小组的有多少名？",
+      "answer": "18",
+      "target": "18",
+      "latencyMs": 105,
+      "score": 1,
+      "usage": {
+        "input": 38,
+        "output": 1
+      },
+      "finishedMs": 4011
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "2013c308ec0302d8",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.8.1"
+  }
+}

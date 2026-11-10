@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle v013 Edit mode required\");\nvar avatar=UnityEngine.GameObject.Find(\"P2W visible player graybox avatar\").GetComponent<UnityEngine.Renderer>();var enabled=avatar.enabled;\nvar names=new[]{\"Cafe local reflections\",\"Forecourt local reflections\",\"South link reflections\",\"South gallery reflections\",\"West gallery reflections\",\"Lookout interior reflections\",\"Pavilion local reflections\"};\nvar files=new[]{\"CafeInterior\",\"ForecourtInterior\",\"SouthLink\",\"SouthGallery\",\"WestGallery\",\"LookoutInterior\",\"PavilionInterior\"};\ntry {\n avatar.enabled=false;\n for(int i=0;i<names.Length;i++){\n  var probe=UnityEngine.GameObject.Find(names[i]).GetComponent<UnityEngine.ReflectionProbe>();var path=\"Assets/Station/Textures/SereneReflectionsV013/\"+files[i]+\".exr\";\n  if(!UnityEditor.Lightmapping.BakeReflectionProbe(probe,path))throw new System.Exception(\"Bake failed: \"+names[i]);\n  UnityEditor.AssetDatabase.ImportAsset(path,UnityEditor.ImportAssetOptions.ForceSynchronousImport);var cube=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Cubemap>(path);\n  if(!cube||cube.width!=probe.resolution)throw new System.Exception(\"Invalid reflection: \"+names[i]);probe.customBakedTexture=cube;UnityEditor.EditorUtility.SetDirty(probe);\n }\n}finally{avatar.enabled=enabled;}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{baked=names};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "baked": [
+          "Cafe local reflections",
+          "Forecourt local reflections",
+          "South link reflections",
+          "South gallery reflections",
+          "West gallery reflections",
+          "Lookout interior reflections",
+          "Pavilion local reflections"
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

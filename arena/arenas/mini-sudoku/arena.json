@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "mini-sudoku",
+  "title": "迷你数独擂台",
+  "description": "4×4 数独挖空问一格（生成器自建）：随机合法满盘→逐格挖空且回溯数解保持唯一解（多解回填）→问某空格。生成器即权威（答案=满盘真解）。测约束满足推理。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:mini-sudoku:2026-09-10",
+  "taskPrefix": "只输出应填的数字本身（1-4），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "mini-sudoku": "4×4 数独挖空（唯一解已校验）" }
+}

@@ -1,0 +1,556 @@
+{
+  "checks": [
+    {
+      "name": "chatgpt authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "chatgpt original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "chatgpt no second migration",
+      "passed": true
+    },
+    {
+      "name": "chatgpt migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "chatgpt legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "chatgpt legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "chatgpt legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "claude authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "claude original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "claude no second migration",
+      "passed": true
+    },
+    {
+      "name": "claude migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "claude invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "claude legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "claude legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "claude legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "deepseek authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "deepseek original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "deepseek no second migration",
+      "passed": true
+    },
+    {
+      "name": "deepseek migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "deepseek invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "deepseek legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "deepseek legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "deepseek legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "gemini authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "gemini original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "gemini no second migration",
+      "passed": true
+    },
+    {
+      "name": "gemini migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "gemini invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "gemini legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "gemini legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "gemini legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "glm authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "glm original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "glm no second migration",
+      "passed": true
+    },
+    {
+      "name": "glm migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "glm invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "glm legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "glm legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "glm legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "kimi authentic legacy state accepted",
+      "passed": true
+    },
+    {
+      "name": "kimi original progress counters and direction retained",
+      "passed": true
+    },
+    {
+      "name": "kimi no second migration",
+      "passed": true
+    },
+    {
+      "name": "kimi migrated state has floor",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"version\":2}",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"targetIndex\":-1}",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"segmentFraction\":1.1}",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"waitRemaining\":121}",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"visits\":-1}",
+      "passed": true
+    },
+    {
+      "name": "kimi invalid state rejected {\"id\":\"wrong\"}",
+      "passed": true
+    },
+    {
+      "name": "kimi legacy destination retained",
+      "passed": true
+    },
+    {
+      "name": "kimi legacy inbound last-segment fix",
+      "passed": true
+    },
+    {
+      "name": "kimi legacy inbound resolves to relocated home",
+      "passed": true
+    },
+    {
+      "name": "stage presence hides matching resident and collider",
+      "passed": true
+    },
+    {
+      "name": "resident reappears after stage fixture",
+      "passed": true
+    },
+    {
+      "name": "remote dialogue rejected",
+      "passed": true
+    },
+    {
+      "name": "modal dialogue rejected",
+      "passed": true
+    },
+    {
+      "name": "nearby dialogue accepted",
+      "passed": true
+    },
+    {
+      "name": "dialogue only exposes own settled answer",
+      "passed": true
+    },
+    {
+      "name": "resident reserves occupied cafe seat",
+      "passed": true
+    }
+  ],
+  "migrated": [
+    {
+      "id": "resident/chatgpt",
+      "legacy": {
+        "id": "resident/chatgpt",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": 94.0671157836914,
+          "y": 0.079999864101409912,
+          "z": 55.984615325927734
+        },
+        "targetIndex": 3,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/chatgpt",
+        "version": 1,
+        "segmentFraction": 0.16761291027069092,
+        "position": {
+          "x": 124.17525482177734,
+          "y": 0.059999998658895493,
+          "z": -159.59513854980469
+        },
+        "targetIndex": 4,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "id": "resident/claude",
+      "legacy": {
+        "id": "resident/claude",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": 112.70843505859375,
+          "y": 0.079999923706054688,
+          "z": 89.0
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/claude",
+        "version": 1,
+        "segmentFraction": 0.61286443471908569,
+        "position": {
+          "x": 104.48351287841797,
+          "y": 0.059999998658895493,
+          "z": -197.45828247070313
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "id": "resident/deepseek",
+      "legacy": {
+        "id": "resident/deepseek",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": 112.64981079101563,
+          "y": 0.079999864101409912,
+          "z": 35.0
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/deepseek",
+        "version": 1,
+        "segmentFraction": 0.62845230102539063,
+        "position": {
+          "x": 165.64772033691406,
+          "y": 0.059999998658895493,
+          "z": -149.75192260742188
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "id": "resident/gemini",
+      "legacy": {
+        "id": "resident/gemini",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": -90.5,
+          "y": 0.079999864101409912,
+          "z": 65.70843505859375
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/gemini",
+        "version": 1,
+        "segmentFraction": 0.18512581288814545,
+        "position": {
+          "x": -38.238765716552734,
+          "y": 0.059999998658895493,
+          "z": -207.0867919921875
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "id": "resident/glm",
+      "legacy": {
+        "id": "resident/glm",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": -73.5,
+          "y": 0.079999923706054688,
+          "z": 58.252620697021484
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/glm",
+        "version": 1,
+        "segmentFraction": 0.54210293292999268,
+        "position": {
+          "x": -51.409587860107422,
+          "y": 0.059999998658895493,
+          "z": -221.64691162109375
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    },
+    {
+      "id": "resident/kimi",
+      "legacy": {
+        "id": "resident/kimi",
+        "version": 0,
+        "segmentFraction": 0.0,
+        "position": {
+          "x": -73.5,
+          "y": 0.079999923706054688,
+          "z": 65.785614013671875
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      },
+      "normalized": {
+        "id": "resident/kimi",
+        "version": 1,
+        "segmentFraction": 0.53573095798492432,
+        "position": {
+          "x": -44.044357299804688,
+          "y": 0.059999998658895493,
+          "z": -223.22785949707031
+        },
+        "targetIndex": 1,
+        "visits": 0,
+        "returns": 0,
+        "outbound": true,
+        "inLounge": false,
+        "waitRemaining": 0.0
+      }
+    }
+  ]
+}

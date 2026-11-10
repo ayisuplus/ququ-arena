@@ -1,0 +1,113 @@
+{
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "excel-survivor",
+    "title": "烂 Excel 求生",
+    "description": "测大模型能不能从一堆烂表格里活着出来：伪装分隔符、千分位、表头偏移、全角数字、前向填充、混乱日期——每题都是真实办公室惨案。exact 裁判。",
+    "author": "AI斗兽场内置",
+    "canary": "ququ-arena:78036449-6831-8dfa-f492-ab175c",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "format_trick": "伪装格式：分隔符与排版假象",
+      "dirty": "脏数据：千分位/全角/混入字符",
+      "structure": "结构陷阱：表头偏移与前向填充"
+    }
+  },
+  "startedAt": "2026-09-10T06:42:01.298Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:xueba-o9",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 409,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:huatou-72b",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "3",
+      "target": "33",
+      "latencyMs": 389,
+      "score": 0,
+      "note": "期望「33」，实答「3」",
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:jianglv-7b",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 167,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "excel-001",
+      "condition": "format_trick",
+      "model": "mock:laoshi-k2",
+      "prompt": "下面这段文本是从某系统导出的「CSV」。注意首行的 sep=; 声明——分隔符是分号不是逗号。\n\nsep=;\n品名;数量;单价\n苹果;3;5\n香蕉;2;3\n橙子;4;2\n\n请计算总金额（数量×单价求和），只输出数字。\n",
+      "answer": "33",
+      "target": "33",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "14bb87fc9193324e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.4.0"
+  }
+}

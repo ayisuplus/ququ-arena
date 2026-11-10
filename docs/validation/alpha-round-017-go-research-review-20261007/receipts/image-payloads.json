@@ -1,0 +1,29 @@
+{
+  "atUtc": "2026-10-07T04:45:48.333Z",
+  "nativeCompleted": true,
+  "assistantMessageCount": 5,
+  "models": [
+    "opencode-go/mimo-v2.6-pro"
+  ],
+  "images": [
+    {
+      "file": "alpha-read-image-1.webp",
+      "toolCallId": "call_0c4c5aee9eab4cc2886c456e",
+      "toolName": "read",
+      "mimeType": "image/webp",
+      "bytes": 68568,
+      "sha256": "66f85986235ee90c4d8b40e4f9438bf455a1e8f059a15c056cc5b8d041cffceb",
+      "encodedSha256": "7f850f65517a84bfb55a19642a8ebdb4f0820836278b723345491458474095a7"
+    },
+    {
+      "file": "alpha-read-image-2.webp",
+      "toolCallId": "call_75b0e045c1e846f99e60d55c",
+      "toolName": "read",
+      "mimeType": "image/webp",
+      "bytes": 56136,
+      "sha256": "351454a1e497b48df86f9d00ce14e23ca87fb7eb74e8bbca9f50fcb974028d84",
+      "encodedSha256": "a9e0fd14aaab27b5364078f12f5458be47f88895092ad313eb3feda3d8863626"
+    }
+  ],
+  "scope": "Exact image blocks returned by native read, after its own image conversion. Not original PNG bytes or provider HTTP capture."
+}

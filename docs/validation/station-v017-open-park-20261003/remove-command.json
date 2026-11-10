@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nvar garden=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nbool Roof(UnityEngine.Transform t)=>t.name.IndexOf(\"roof\",System.StringComparison.OrdinalIgnoreCase)>=0||t.name.Contains(\"顶棚\")||t.name.StartsWith(\"Solid portal canopy\")||t.name==\"Silver combined framing\"||t.name==\"South garden continuous entry canopy\";\nvar removed=new System.Collections.Generic.List<object>();\nforeach(var t in garden.GetComponentsInChildren<UnityEngine.Transform>(true).Where(Roof)){\n if(!t.gameObject.activeSelf)continue;\n UnityEditor.Undo.RecordObject(t.gameObject,\"Remove park roofs at user request\");\n removed.Add(new{name=t.name,path=UnityEditor.AnimationUtility.CalculateTransformPath(t,garden),wasVisible=t.gameObject.activeInHierarchy,meshes=t.GetComponentsInChildren<UnityEngine.MeshRenderer>().Length});\n t.gameObject.SetActive(false);\n}\nUnityEngine.Physics.SyncTransforms();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nvar remaining=garden.GetComponentsInChildren<UnityEngine.MeshRenderer>().Where(r=>Roof(r.transform)).Select(r=>r.name).ToArray();\nvar report=new{scene=scene.path,removed,remainingRoofMeshes=remaining,outerDoors=garden.GetComponentsInChildren<QuQu.StationConservatoryDoor>().Length,careAirlocks=garden.GetComponentsInChildren<QuQu.StationPressureVestibule>().Select(v=>v.StableId).ToArray(),userDirection=\"Open-air main park with no roof; original source scene and functional objects preserved\"};\nSystem.IO.Directory.CreateDirectory(\"../docs/validation/station-v017-open-park-20261003\");\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-open-park-20261003/roof-removal.json\",Newtonsoft.Json.JsonConvert.SerializeObject(report,Newtonsoft.Json.Formatting.Indented));\nreturn new{removed=removed.Count,remainingRoofMeshes=remaining,report.outerDoors,report.careAirlocks};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removed": 19,
+        "remainingRoofMeshes": [],
+        "outerDoors": 4,
+        "careAirlocks": [
+          "south-greenhouse-north",
+          "south-greenhouse-south"
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

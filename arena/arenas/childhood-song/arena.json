@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "childhood-song",
+  "title": "儿歌词擂台",
+  "description": "经典儿歌/童谣接下句（自建 canonical，16 题）：让我们荡起双桨、两只老虎、找朋友、数鸭子……测中文童年共同记忆库存——接不上「小船儿推开波浪」的模型没有中文童年。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:childhood-song:2026-09-10",
+  "taskPrefix": "只输出下一句歌词本身，不多一个字、不加标点。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "classic": "儿歌/童谣接下句"
+  }
+}

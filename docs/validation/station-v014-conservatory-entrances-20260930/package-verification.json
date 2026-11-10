@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v014\\ecological-garden\\package-0.2.0",
+    "manifest": {
+      "assetId": "black_hole_station_ecological_shell_v014",
+      "description": "Original 48 x 44 m low glazed conservatory structural candidate; framing extends to 49.35 x 45.35 x 10.625 m. Four open circulation portals; no plants or runtime door logic.",
+      "displayName": "black-hole-station-ecological-shell-v014",
+      "files": [
+        {
+          "bytes": 1991220,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "61f1d69f747f82c0bd2eef9c78cacb4bf16e8493b1b640a460610d4f98e34fec"
+        },
+        {
+          "bytes": 1693,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "18195a5133d2b675446d920b6f37a780646892546377d97c37dc08a39c69a503"
+        },
+        {
+          "bytes": 692,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "c886bb05a0f645d2f7c068f48adc92cb2dc779ffe609b2d564e63635194eeb44"
+        },
+        {
+          "bytes": 2879,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "543499f5bd939e180f1897eafc0f74debfd6bbace7ad06a340f8ada7a7cc69b1"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_f220c6f5d781a30290dc1255",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

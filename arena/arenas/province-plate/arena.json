@@ -1,0 +1,22 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "province-plate",
+  "title": "车牌省简称擂台",
+  "description": "车牌汉字简称 ↔ 省份双向（生成器自建）：粤→广东、鄂→湖北——车牌常识。省简称表权威，契约逐题复算。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:province-plate:2026-09-10",
+  "taskPrefix": "只输出答案本身（省名或简称字），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "abbr-to-province": "简称→省份",
+    "province-to-abbr": "省份→简称"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "补上自治区范围，接受省、市、自治区的常用简称和正式全称。"
+  }
+}

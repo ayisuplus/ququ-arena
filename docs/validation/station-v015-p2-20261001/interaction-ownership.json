@@ -1,0 +1,3297 @@
+[
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-322381612-0",
+    "path": "P2 station graybox/Outer 240m pressure hull graybox/P3 east resident rooms/Station resident resident/chatgpt",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident chatgpt home package",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-322381612-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-322381614-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/chatgpt",
+      "PresetId": "chatgpt"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-814184542-0",
+    "path": "P2 station graybox/Outer 240m pressure hull graybox/P3 east resident rooms/Station resident resident/claude",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident claude home package",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-814184542-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-814184544-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/claude",
+      "PresetId": "claude"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-468079072-0",
+    "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-003 DeepSeek resident - former player cabin/40 sqm resident module room/resident/deepseek",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident deepseek home package",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-579548780-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-468079074-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/deepseek",
+      "ResidentId": "resident/deepseek"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1182392696-0",
+    "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-003 DeepSeek resident - former player cabin/Station resident resident/deepseek",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident deepseek home package",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1182392696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1182392698-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/deepseek",
+      "PresetId": "deepseek"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1708423226-0",
+    "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-001 first AI resident - door to shared corridor/40 sqm resident module room/resident/chatgpt",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident chatgpt home package",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-847138104-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1708423228-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/chatgpt",
+      "ResidentId": "resident/chatgpt"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2060720436-0",
+    "path": "P2 station graybox/East triangle - resident lounge and model rooms/ROOM-MODEL-002 second AI resident - door to shared corridor/40 sqm resident module room/resident/claude",
+    "active": true,
+    "activeSelf": true,
+    "owner": "resident claude home package",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977854336-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2060720438-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/claude",
+      "ResidentId": "resident/claude"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1185036906-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/gemini",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2007828628-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1185036907-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/gemini",
+      "ResidentId": "resident/gemini"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1751378552-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/glm",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2007828628-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1751378553-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/glm",
+      "ResidentId": "resident/glm"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1694850978-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Model home room/resident/kimi",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2007828628-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1694850979-0",
+    "component": "StationRoomIdentity",
+    "stable": {
+      "RoomId": "room/resident/kimi",
+      "ResidentId": "resident/kimi"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-152407205-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Station resident resident/gemini",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-152407205-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-152407207-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/gemini",
+      "PresetId": "gemini"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2125755810-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Station resident resident/glm",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2125755810-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2125755812-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/glm",
+      "PresetId": "glm"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1907496109-0",
+    "path": "P2 station graybox/West model residence - former observation gallery/Station resident resident/kimi",
+    "active": true,
+    "activeSelf": true,
+    "owner": "gemini glm kimi existing home group",
+    "action": "move-adapt-route",
+    "reason": "Preserve resident ID; convert world route and save state in P3",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1907496109-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1907496111-0",
+    "component": "StationResidentRoutine",
+    "stable": {
+      "ResidentId": "resident/kimi",
+      "PresetId": "kimi"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1744068675-0",
+    "path": "P2 station graybox/Fixed spectator landing - outside moving ring/Graybox spectator seat 1-3",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r1-event-core",
+    "action": "move-package",
+    "reason": "Arena, lift, spectator circulation and presentation share R1",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897553400-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1744068680-0",
+    "component": "StationSpectatorSeat",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1269780513-0",
+    "path": "P2 station graybox/Contestant platforms and entrance lifts",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r1-event-core",
+    "action": "move-package",
+    "reason": "Arena, lift, spectator circulation and presentation share R1",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1269780513-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1269780516-0",
+    "component": "ArenaDuelPlatforms",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1945915606-0",
+    "path": "Station visitor first-person walker",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1945915606-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1945915607-0",
+    "component": "StationGrayboxWalker",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-446389948-0",
+    "path": "Station visitor first-person walker/Player eye camera",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1945915606-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-446389952-0",
+    "component": "StationSpectatorCamera",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920471-0",
+    "path": "Station live competition presentation",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920471-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920473-0",
+    "component": "ArenaConnection",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920471-0",
+    "path": "Station live competition presentation",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920471-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-897920472-0",
+    "component": "ArenaStationLiveMatch",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-346017932-0",
+    "path": "Station live question board",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r1-event-core",
+    "action": "move-package",
+    "reason": "Arena, lift, spectator circulation and presentation share R1",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-346017932-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-346017933-0",
+    "component": "StationQuestionBoard",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1043195342-0",
+    "path": "P2W world connectivity graybox/Lower observation - loop and two exterior descents/East public core entrance W4C graybox",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r1-public-entry",
+    "action": "rehouse-package",
+    "reason": "Keep core entrance interaction and no-save threshold on R1",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1043195342-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1043195344-0",
+    "component": "StationCoreEastGate",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-84019229-0",
+    "path": "P2W world connectivity graybox/Lower observation - loop and two exterior descents/East public core entrance W4C graybox/East gate no-save threshold",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r1-public-entry",
+    "action": "rehouse-package",
+    "reason": "Keep core entrance interaction and no-save threshold on R1",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1043195342-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-84019231-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-937780500-0",
+    "path": "P2W world connectivity graybox/North public airlock and exterior dock - concept arrival axis/North dock double hatch and sealed berth",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-681026436-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-937780502-0",
+    "component": "StationDockAirlock",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1038639657-0",
+    "path": "P2W world connectivity graybox/North public airlock and exterior dock - concept arrival axis/North docked vessel graybox/Dock vessel berth hatch control",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-681026436-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1038639659-0",
+    "component": "StationDockedVesselHatch",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-634004179-0",
+    "path": "P2W world connectivity graybox/NE corner observatory node/NE observatory operations console",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-upper-observation",
+    "action": "rehouse-package",
+    "reason": "Retain observation function; replace old square upper promenade connections",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1540353498-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-634004181-0",
+    "component": "StationObservationPoint",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-676985741-0",
+    "path": "Station world candidate save",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-676985741-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-676985742-0",
+    "component": "StationWorldSave",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-2065379100",
+    "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core/North ring wayfinding junction graybox/North ring junction route console",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-2065379100",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2065379103-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1826880085-0",
+    "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core/Outer ring district status bays W4L/港区货运观察湾/港区货运观察湾状态台",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-court",
+    "action": "move-package",
+    "reason": "Status bay and its stable console belong to the destination court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1027051388-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1826880087-0",
+    "component": "StationDistrictStatusBoard",
+    "stable": {
+      "StableId": "ring-port-status"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1629890835-0",
+    "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core/Outer ring district status bays W4L/科研公开答卷观察湾/科研公开答卷观察湾状态台",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Status bay and its stable console belong to the destination court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1249313460-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1629890837-0",
+    "component": "StationDistrictStatusBoard",
+    "stable": {
+      "StableId": "ring-research-status"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1261224806-0",
+    "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core/Outer ring district status bays W4L/花园温室观察湾/花园温室观察湾状态台",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-garden-court",
+    "action": "move-package",
+    "reason": "Status bay and its stable console belong to the destination court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-446686579-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1261224808-0",
+    "component": "StationDistrictStatusBoard",
+    "stable": {
+      "StableId": "ring-garden-status"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1735459435-0",
+    "path": "Four district W1 connected world graybox/Outer ring - four districts connect without the core/Outer ring district status bays W4L/生活街赛事观察湾/生活街赛事观察湾状态台",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Status bay and its stable console belong to the destination court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1292230247-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1735459437-0",
+    "component": "StationDistrictStatusBoard",
+    "stable": {
+      "StableId": "ring-civic-status"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1478689934-0",
+    "path": "Four district W1 connected world graybox/Northwest research observation district graybox/Observation instrument plinth 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "research main and entry canopy",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-873314074-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1478689939-0",
+    "component": "StationResearchDesk",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-1643606517",
+    "path": "Four district W1 connected world graybox/Northeast arrival port district graybox/Dock cargo control console -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1955730695-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1643606520-0",
+    "component": "StationDockCargoService",
+    "stable": {
+      "StableId": "north-dock-left"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-433596541",
+    "path": "Four district W1 connected world graybox/Northeast arrival port district graybox/Dock cargo control console 25",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1955730695-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-433596544-0",
+    "component": "StationDockCargoService",
+    "stable": {
+      "StableId": "north-dock-right"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-417911408",
+    "path": "Four district W1 connected world graybox/Northeast arrival port district graybox/Port side-bay visitor guide",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-417911408",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-417911411-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-1687308494",
+    "path": "Four district W1 connected world graybox/Northeast arrival port district graybox/East arcade live match information console",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-1687308494",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1687308497-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1205040555-0",
+    "path": "Four district W1 connected world graybox/Southeast civic life district graybox/Southeast public cafe and street stop",
+    "active": true,
+    "activeSelf": true,
+    "owner": "cafe and observation gallery",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1003602793-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1205040557-0",
+    "component": "StationCafeMoment",
+    "stable": {
+      "StableId": "east-lounge-cafe-01"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1715224355-0",
+    "path": "Four district W1 connected world graybox/Southeast civic life district graybox/Southeast public cafe and street stop/P3 lounge arena broadcast",
+    "active": true,
+    "activeSelf": true,
+    "owner": "cafe and observation gallery",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1003602793-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1715224356-0",
+    "component": "StationLoungeBroadcast",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-772447044-0",
+    "path": "Four district W1 connected world graybox/Southeast civic life district graybox/Southeast public match pavilion/Southeast civic match board",
+    "active": true,
+    "activeSelf": true,
+    "owner": "ring-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-772447044-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-772447046-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-478021195197692101-2044311085",
+    "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox/South greenhouse care console",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2044311088-0",
+    "component": "StationGreenhouseCare",
+    "stable": {
+      "StableId": "south-greenhouse-veggie-01"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-114282384-0",
+    "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox/South greenhouse pressure thresholds/温室北入口",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-114282387-0",
+    "component": "StationPressureVestibule",
+    "stable": {
+      "StableId": "south-greenhouse-north"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-114282384-0",
+    "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox/South greenhouse pressure thresholds/温室北入口",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-114282386-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1695192380-0",
+    "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox/South greenhouse pressure thresholds/温室南入口",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1695192383-0",
+    "component": "StationPressureVestibule",
+    "stable": {
+      "StableId": "south-greenhouse-south"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1695192380-0",
+    "path": "Four district W1 connected world graybox/Southwest ecological garden district graybox/South public greenhouse graybox/South greenhouse pressure thresholds/温室南入口",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1138331954-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1695192382-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1114661082-0",
+    "path": "South cross-district walk W4N/Garden south walk guide",
+    "active": true,
+    "activeSelf": true,
+    "owner": "ring-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1114661082-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1114661084-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1293737686-0",
+    "path": "South cross-district walk W4N/South crossroad guide",
+    "active": true,
+    "activeSelf": true,
+    "owner": "ring-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1293737686-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1293737688-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-576777137-0",
+    "path": "South cross-district walk W4N/Cafe south walk guide",
+    "active": true,
+    "activeSelf": true,
+    "owner": "ring-wayfinding",
+    "action": "adapt-interaction",
+    "reason": "Replace fixed compass/world destination text with live ring destinations",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-576777137-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-576777139-0",
+    "component": "StationArrivalGuide",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1674254396-0",
+    "path": "Public match notices W4O",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1674254396-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1674254397-0",
+    "component": "StationPublicMatchNotice",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2125311443-0",
+    "path": "V013 southwest conservatory/Garden seat 0",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1287583104-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2125311445-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-garden-seat-01",
+      "Place": "生态花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2028062059-0",
+    "path": "V013 southwest conservatory/Garden seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1287583104-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2028062061-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-garden-seat-02",
+      "Place": "生态花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1297193404-0",
+    "path": "V013 southwest conservatory/Garden seat 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1287583104-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1297193406-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-garden-seat-03",
+      "Place": "生态花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-365036314-0",
+    "path": "V013 southwest conservatory/Garden seat 3",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1287583104-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-365036316-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-garden-seat-04",
+      "Place": "生态花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042251-0",
+    "path": "V013 northwest research gallery",
+    "active": true,
+    "activeSelf": true,
+    "owner": "research main and entry canopy",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042252-0",
+    "component": "StationResearchArchive",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1773581936-0",
+    "path": "V013 northwest research gallery/Research seated observation 0",
+    "active": true,
+    "activeSelf": true,
+    "owner": "research main and entry canopy",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1773581938-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-research-seat-01",
+      "Place": "银白观测舱"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-521946247-0",
+    "path": "V013 northwest research gallery/Research seated observation 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "research main and entry canopy",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2037042251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-521946249-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-research-seat-02",
+      "Place": "银白观测舱"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-899388496-0",
+    "path": "V013 quiet soundscape",
+    "active": true,
+    "activeSelf": true,
+    "owner": "global-services",
+    "action": "keep-global",
+    "reason": "Keep authority and shared services outside rotating roots",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-899388496-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-899388497-0",
+    "component": "StationSoundscape",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-584124663-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-584124665-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-01",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1088990426-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1088990428-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-02",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1755402055-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 3",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1755402057-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-03",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1532630955-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1532630957-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-04",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-726972509-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 5",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-726972511-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-05",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-811078856-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 6",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-811078858-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-06",
+      "Place": "北侧候舱区"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1683435708-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 7",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1683435710-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-07",
+      "Place": "停泊舱窗景席"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-767078393-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 8",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-767078395-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-08",
+      "Place": "停泊舱窗景席"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2109981892-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 9",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2109981894-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-09",
+      "Place": "停泊舱窗景席"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1270893774-0",
+    "path": "V013 north boarding hall and vessel/North boarding seat 10",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-dock-and-cargo",
+    "action": "move-package",
+    "reason": "Existing complete building package",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1663975696-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1270893776-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-north-boarding-seat-10",
+      "Place": "停泊舱窗景席"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-242295460-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-242295462-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-01",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-83762123-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-83762125-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-02",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-342084828-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 3",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-342084830-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-03",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-457918192-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-457918194-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-04",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1253139767-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 5",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1253139769-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-05",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294176512-0",
+    "path": "V014 public courts/East social lounge/East lounge seat 6",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-cafe-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1593605958-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294176514-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-06",
+      "Place": "东翼公共客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-663072208-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 7",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-663072210-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-07",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2109569343-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 8",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2109569345-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-08",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-325661025-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 9",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-325661027-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-09",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1544318985-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 10",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1544318987-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-10",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-663490519-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 11",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-663490521-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-11",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-683309103-0",
+    "path": "V014 public courts/West reading lounge/East lounge seat 12",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r2-research-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-609927835-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-683309105-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-east-lounge-seat-12",
+      "Place": "西翼阅读客厅"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1966054340-0",
+    "path": "V014 public courts/North waiting rest/Southern rest seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1590454101-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1966054342-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-south-pause-seat-01",
+      "Place": "北翼等候前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-384997469-0",
+    "path": "V014 public courts/North waiting rest/Southern rest seat 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "fp-arrival-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1590454101-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-384997471-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-south-pause-seat-02",
+      "Place": "北翼等候前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1228993735-0",
+    "path": "V014 public courts/South garden rest/Southern rest seat 3",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-garden-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1600482829-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1228993737-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-south-pause-seat-03",
+      "Place": "南翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1310605889-0",
+    "path": "V014 public courts/South garden rest/Southern rest seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-garden-court",
+    "action": "move-package",
+    "reason": "Existing complete seating group assigned to its functional court",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1600482829-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1310605891-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v013-south-pause-seat-04",
+      "Place": "南翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1284248154-0",
+    "path": "V014 public courts/north-west seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1284248156-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-north-west-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-178816986-0",
+    "path": "V014 public courts/north-west seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-178816988-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-north-west-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-110083044-0",
+    "path": "V014 public courts/north-east seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-110083046-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-north-east-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-344521899-0",
+    "path": "V014 public courts/north-east seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-344521901-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-north-east-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-875938213-0",
+    "path": "V014 public courts/east-north seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-875938215-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-east-north-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1139158696-0",
+    "path": "V014 public courts/east-north seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1139158698-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-east-north-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-600871684-0",
+    "path": "V014 public courts/east-south seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-600871686-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-east-south-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-279255509-0",
+    "path": "V014 public courts/east-south seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-279255511-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-east-south-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-298953755-0",
+    "path": "V014 public courts/south-east seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-298953757-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-south-east-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2046974660-0",
+    "path": "V014 public courts/south-east seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2046974662-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-south-east-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1530744564-0",
+    "path": "V014 public courts/south-west seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1530744566-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-south-west-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2039254624-0",
+    "path": "V014 public courts/south-west seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2039254626-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-south-west-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1892232766-0",
+    "path": "V014 public courts/west-south seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1892232768-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-west-south-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1143516046-0",
+    "path": "V014 public courts/west-south seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1143516048-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-west-south-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1457522147-0",
+    "path": "V014 public courts/west-north seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1457522149-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-west-north-a",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1776633659-0",
+    "path": "V014 public courts/west-north seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1776633661-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-west-north-b",
+      "Place": "四翼花园前庭"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-591484818-0",
+    "path": "V014 public courts/street-ne seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-591484820-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-ne-a",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-358762463-0",
+    "path": "V014 public courts/street-ne seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-358762465-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-ne-b",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-162274820-0",
+    "path": "V014 public courts/street-nw seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-162274822-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-nw-a",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-386741094-0",
+    "path": "V014 public courts/street-nw seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-386741096-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-nw-b",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1098640252-0",
+    "path": "V014 public courts/street-sw seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1098640254-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-sw-a",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1696398769-0",
+    "path": "V014 public courts/street-sw seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1696398771-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-sw-b",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-33115354-0",
+    "path": "V014 public courts/street-se seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-33115356-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-se-a",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-718965711-0",
+    "path": "V014 public courts/street-se seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-237520105-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-718965713-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-court-street-se-b",
+      "Place": "环站步道休息处"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-206496960-0",
+    "path": "V014 garden promenade/Promenade seat 0 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-206496962-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-0-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-712819208-0",
+    "path": "V014 garden promenade/Promenade seat 0 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-712819210-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-0-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1080775548-0",
+    "path": "V014 garden promenade/Promenade seat 1 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1080775550-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-1-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2033670723-0",
+    "path": "V014 garden promenade/Promenade seat 1 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2033670725-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-1-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-224116351-0",
+    "path": "V014 garden promenade/Promenade seat 2 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-224116353-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-2-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-723257076-0",
+    "path": "V014 garden promenade/Promenade seat 2 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-723257078-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-2-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1136345804-0",
+    "path": "V014 garden promenade/Promenade seat 3 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1136345806-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-3-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-787935924-0",
+    "path": "V014 garden promenade/Promenade seat 3 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-787935926-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-3-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-373679088-0",
+    "path": "V014 garden promenade/Promenade seat 4 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-373679090-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-4-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-62210815-0",
+    "path": "V014 garden promenade/Promenade seat 4 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-62210817-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-4-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2067466016-0",
+    "path": "V014 garden promenade/Promenade seat 5 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2067466018-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-5-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-828429566-0",
+    "path": "V014 garden promenade/Promenade seat 5 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-828429568-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-5-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-879426984-0",
+    "path": "V014 garden promenade/Promenade seat 6 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-879426986-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-6-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1031895582-0",
+    "path": "V014 garden promenade/Promenade seat 6 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1031895584-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-6-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1725569515-0",
+    "path": "V014 garden promenade/Promenade seat 7 -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1725569517-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-7-a",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1134880749-0",
+    "path": "V014 garden promenade/Promenade seat 7 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "r3-prom-plazas",
+    "action": "relayout-items",
+    "reason": "Preserve existing seats and fittings; place on owned plazas away from seams",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-336699384-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1134880751-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-garden-7-b",
+      "Place": "环站步行花园"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-145085389-0",
+    "path": "V014 civic buildings/05  /  COMMONS/READING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-145085391-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-1-a",
+      "Place": "公共阅览与会客楼 · READING"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2124617416-0",
+    "path": "V014 civic buildings/05  /  COMMONS/READING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2124617418-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-1-b",
+      "Place": "公共阅览与会客楼 · READING"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1873443537-0",
+    "path": "V014 civic buildings/05  /  COMMONS/MEETING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1873443539-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-2-a",
+      "Place": "公共阅览与会客楼 · MEETING"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1325544138-0",
+    "path": "V014 civic buildings/05  /  COMMONS/MEETING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1325544140-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-2-b",
+      "Place": "公共阅览与会客楼 · MEETING"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-248160664-0",
+    "path": "V014 civic buildings/05  /  COMMONS/COMMUNITY usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-248160666-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-3-a",
+      "Place": "公共阅览与会客楼 · COMMUNITY"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1133323594-0",
+    "path": "V014 civic buildings/05  /  COMMONS/COMMUNITY usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1133323596-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-3-b",
+      "Place": "公共阅览与会客楼 · COMMUNITY"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1570748094-0",
+    "path": "V014 civic buildings/05  /  COMMONS/QUIET LOUNGE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1570748096-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-4-a",
+      "Place": "公共阅览与会客楼 · QUIET LOUNGE"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1299960455-0",
+    "path": "V014 civic buildings/05  /  COMMONS/QUIET LOUNGE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1299960457-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-east-4-b",
+      "Place": "公共阅览与会客楼 · QUIET LOUNGE"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1342009495-0",
+    "path": "V014 civic buildings/05  /  COMMONS/V014 room fitout/Writing seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1342009497-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-writing-east-1",
+      "Place": "公共楼 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1174660613-0",
+    "path": "V014 civic buildings/05  /  COMMONS/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "05 commons",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-701890022-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1174660615-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-writing-east-4",
+      "Place": "公共楼 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-587774977-0",
+    "path": "V014 civic buildings/06  /  STUDY/PUBLIC ARCHIVE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-587774979-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-1-a",
+      "Place": "研修与讨论楼 · PUBLIC ARCHIVE"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-223320110-0",
+    "path": "V014 civic buildings/06  /  STUDY/PUBLIC ARCHIVE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-223320112-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-1-b",
+      "Place": "研修与讨论楼 · PUBLIC ARCHIVE"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2017238323-0",
+    "path": "V014 civic buildings/06  /  STUDY/Civic public archive console",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2017238325-0",
+    "component": "StationResearchDesk",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1660776476-0",
+    "path": "V014 civic buildings/06  /  STUDY/ANALYSIS usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1660776478-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-2-a",
+      "Place": "研修与讨论楼 · ANALYSIS"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-694913492-0",
+    "path": "V014 civic buildings/06  /  STUDY/ANALYSIS usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-694913494-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-2-b",
+      "Place": "研修与讨论楼 · ANALYSIS"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1989407261-0",
+    "path": "V014 civic buildings/06  /  STUDY/DISCUSSION usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1989407263-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-3-a",
+      "Place": "研修与讨论楼 · DISCUSSION"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-645836814-0",
+    "path": "V014 civic buildings/06  /  STUDY/DISCUSSION usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-645836816-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-3-b",
+      "Place": "研修与讨论楼 · DISCUSSION"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1685905942-0",
+    "path": "V014 civic buildings/06  /  STUDY/QUIET WORK usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1685905944-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-4-a",
+      "Place": "研修与讨论楼 · QUIET WORK"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1908592264-0",
+    "path": "V014 civic buildings/06  /  STUDY/QUIET WORK usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1908592266-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-building-west-4-b",
+      "Place": "研修与讨论楼 · QUIET WORK"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-846149655-0",
+    "path": "V014 civic buildings/06  /  STUDY/V014 room fitout/Room information wall 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-846149657-0",
+    "component": "StationResearchArchive",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1235544207-0",
+    "path": "V014 civic buildings/06  /  STUDY/V014 room fitout/Writing seat 2",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1235544209-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-writing-west-2",
+      "Place": "研修楼 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1335618656-0",
+    "path": "V014 civic buildings/06  /  STUDY/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "06 study",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-977752463-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1335618658-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-writing-west-4",
+      "Place": "研修楼 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1668662436-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/READING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1668662438-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-1-a",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-750196223-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/READING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-750196225-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-1-b",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2031264521-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/MEETING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2031264523-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-2-a",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-861522136-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/MEETING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-861522138-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-2-b",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-287719563-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/COMMUNITY usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-287719565-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-3-a",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1550248438-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/COMMUNITY usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1550248440-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-3-b",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1706952512-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/QUIET LOUNGE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1706952514-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-4-a",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-289517099-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/QUIET LOUNGE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-289517101-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-north-4-b",
+      "Place": "北侧访客会客楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1982612660-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/V014 room fitout/Writing seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1982612662-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-writing-north-1",
+      "Place": "北侧访客会客楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1180830715-0",
+    "path": "V014 north south civic buildings/07  /  VISITOR/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "07 visitor",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1294719549-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1180830717-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-writing-north-4",
+      "Place": "北侧访客会客楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1562497881-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/READING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1562497883-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-1-a",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-722379434-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/READING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-722379436-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-1-b",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-576600667-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/MEETING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-576600669-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-2-a",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1048830223-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/MEETING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1048830225-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-2-b",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2134055026-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/COMMUNITY usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2134055028-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-3-a",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1480856660-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/COMMUNITY usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1480856662-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-3-b",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1764404483-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/QUIET LOUNGE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1764404485-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-4-a",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-584210606-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/QUIET LOUNGE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-584210608-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-south-4-b",
+      "Place": "南侧阅读活动楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2144267336-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/V014 room fitout/Writing seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2144267338-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-writing-south-1",
+      "Place": "南侧阅读活动楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-349407469-0",
+    "path": "V014 north south civic buildings/08  /  ACTIVITY/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "08 activity",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-756897117-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-349407471-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-northsouth-writing-south-4",
+      "Place": "南侧阅读活动楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1209690502-0",
+    "path": "V014 balanced civic buildings/09  /  READING/READING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1209690504-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-1-a",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1308985021-0",
+    "path": "V014 balanced civic buildings/09  /  READING/READING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1308985023-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-1-b",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1982944589-0",
+    "path": "V014 balanced civic buildings/09  /  READING/MEETING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1982944591-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-2-a",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1956139560-0",
+    "path": "V014 balanced civic buildings/09  /  READING/MEETING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1956139562-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-2-b",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1947576636-0",
+    "path": "V014 balanced civic buildings/09  /  READING/COMMUNITY usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1947576638-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-3-a",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-226000641-0",
+    "path": "V014 balanced civic buildings/09  /  READING/COMMUNITY usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-226000643-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-3-b",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-831980389-0",
+    "path": "V014 balanced civic buildings/09  /  READING/QUIET LOUNGE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-831980391-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-4-a",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-891207841-0",
+    "path": "V014 balanced civic buildings/09  /  READING/QUIET LOUNGE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-891207843-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-northwest-4-b",
+      "Place": "北侧候舱阅览楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1997208945-0",
+    "path": "V014 balanced civic buildings/09  /  READING/V014 room fitout/Writing seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1997208947-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-writing-northwest-1",
+      "Place": "北侧候舱阅览楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-433350392-0",
+    "path": "V014 balanced civic buildings/09  /  READING/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "09 waiting",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1761324180-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-433350394-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-writing-northwest-4",
+      "Place": "北侧候舱阅览楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-552313971-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/READING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-552313973-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-1-a",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-470479086-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/READING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-470479088-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-1-b",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-943431199-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/MEETING usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-943431201-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-2-a",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1943923928-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/MEETING usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1943923930-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-2-b",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-211836372-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/COMMUNITY usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-211836374-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-3-a",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-728710408-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/COMMUNITY usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-728710410-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-3-b",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-124592111-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/QUIET LOUNGE usable seat -1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-124592113-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-4-a",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1490454546-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/QUIET LOUNGE usable seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1490454548-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-southeast-4-b",
+      "Place": "南侧共享工作楼 · 会客休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-133839246-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/V014 room fitout/Writing seat 1",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-133839248-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-writing-southeast-1",
+      "Place": "南侧共享工作楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1432813013-0",
+    "path": "V014 balanced civic buildings/10  /  WORKROOM/V014 room fitout/Writing seat 4",
+    "active": true,
+    "activeSelf": true,
+    "owner": "10 workroom",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1609033405-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1432813015-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-infill-writing-southeast-4",
+      "Place": "南侧共享工作楼 · 窗边阅读"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1545100535-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 101/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1545100537-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-1-writing",
+      "Place": "短住舱 101 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-469482820-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 101/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-469482822-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-1-lounge",
+      "Place": "短住舱 101 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-618814574-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Guest door 101",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-618814576-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1186795880-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 102/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1186795882-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-2-writing",
+      "Place": "短住舱 102 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2010238308-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 102/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2010238310-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-2-lounge",
+      "Place": "短住舱 102 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1228707745-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Guest door 102",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1228707747-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-379132211-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 103/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-379132213-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-3-writing",
+      "Place": "短住舱 103 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1278826106-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 103/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1278826108-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-3-lounge",
+      "Place": "短住舱 103 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1924316990-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Guest door 103",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1924316992-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1849462213-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 104/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1849462215-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-4-writing",
+      "Place": "短住舱 104 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-708282051-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Suite 104/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-708282053-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-east-4-lounge",
+      "Place": "短住舱 104 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1057782473-0",
+    "path": "V014 guest lodges/11  /  GUEST LODGE/Guest door 104",
+    "active": true,
+    "activeSelf": true,
+    "owner": "11 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-538746605-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1057782475-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1198694849-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 201/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1198694851-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-1-writing",
+      "Place": "短住舱 201 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2122275511-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 201/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-2122275513-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-1-lounge",
+      "Place": "短住舱 201 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-308707870-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Guest door 201",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-308707872-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-396884050-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 202/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-396884052-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-2-writing",
+      "Place": "短住舱 202 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1370780849-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 202/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1370780851-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-2-lounge",
+      "Place": "短住舱 202 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1861564995-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Guest door 202",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1861564997-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-256286293-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 203/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-256286295-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-3-writing",
+      "Place": "短住舱 203 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-123266862-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 203/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-123266864-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-3-lounge",
+      "Place": "短住舱 203 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-634568295-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Guest door 203",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-634568297-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1955796064-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 204/writing seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1955796066-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-4-writing",
+      "Place": "短住舱 204 · 窗边书桌"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-41415842-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Suite 204/lounge seat",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-41415844-0",
+    "component": "StationGardenSeat",
+    "stable": {
+      "StableId": "v014-guest-west-4-lounge",
+      "Place": "短住舱 204 · 起居休息"
+    }
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1577561325-0",
+    "path": "V014 guest lodges/12  /  GUEST LODGE/Guest door 204",
+    "active": true,
+    "activeSelf": true,
+    "owner": "12 guest lodge",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1538295251-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1577561327-0",
+    "component": "StationGuestDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-760693666-0",
+    "path": "V014 conservatory entrances/North conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-760693669-0",
+    "component": "StationConservatoryDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-760693666-0",
+    "path": "V014 conservatory entrances/North conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-760693668-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-577418592-0",
+    "path": "V014 conservatory entrances/East conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-577418595-0",
+    "component": "StationConservatoryDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-577418592-0",
+    "path": "V014 conservatory entrances/East conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-577418594-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1054551015-0",
+    "path": "V014 conservatory entrances/South conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1054551018-0",
+    "component": "StationConservatoryDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1054551015-0",
+    "path": "V014 conservatory entrances/South conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1054551017-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-601538133-0",
+    "path": "V014 conservatory entrances/West conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-601538136-0",
+    "component": "StationConservatoryDoor",
+    "stable": {}
+  },
+  {
+    "sourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-601538133-0",
+    "path": "V014 conservatory entrances/West conservatory entry",
+    "active": true,
+    "activeSelf": true,
+    "owner": "glass ecology garden",
+    "action": "move-package",
+    "reason": "Measured package in layout candidate",
+    "ruleSourceId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-1450767185-0",
+    "componentId": "GlobalObjectId_V1-2-b46c3d99f163a8f47a95a995a8b63746-601538135-0",
+    "component": "StationUnsafeSaveZone",
+    "stable": {}
+  }
+]

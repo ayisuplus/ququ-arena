@@ -1,0 +1,18 @@
+继续“黑洞空间站”小轮任务。你的上一轮结论已被独立审查纠偏：到达视角仍有局部遮挡，124→122°没有充分支撑依据，四条射线也不是四个机位。不要重述“已全部解决”。
+
+这轮唯一目标：基于新测量与当前实际支撑几何，提出一个最小的科研檐口修正候选，供下一轮临时试验。只提出一个候选，明确它试图改善哪些目标、仍保留哪些遮挡，以及如何验证支撑/碰撞；不要安装或永久修改场景、资产、材质，不构建，不运行Player，不进入Play，不改设置/包/账号/存档，也不要创建新任务或代理。最终方案放答复，不写仓库文件。保留三环、旧楼、路线、稳定ID与存档语义。
+
+先实际read以下小文件与图片（路径相对当前E:/projects/黑洞空间站）：
+1. docs/validation/alpha-round-018-arrival-occlusion-20261007/README.md
+2. docs/validation/alpha-round-018-arrival-occlusion-20261007/summary.json
+3. docs/validation/alpha-round-018-arrival-occlusion-20261007/measurement-v2/arrival-edit-mode.png
+4. production/black-hole-station/v015/p4-public-groups/create-groups.cs 中科研柱/分枝定义（按需局部读）。
+5. production/black-hole-station/v019/install-linking-canopy.cs 中当前单开口构形参考；这只是旧安装代码，禁止执行。
+
+R18是协调者真实编辑态诊断，不能冒充你执行或当R16 Player精确复现。4000射线→207结构目标；68最近opaque前景为檐口（61在124°以下、5在128°以上、2恰在128°），4为column122。样本不是像素面积；最小/最大角度不是自动切割范围。124–128°开口既存，116–120°第二开口方案曾因残片/悬空支撑否决，不要重提。Reading木纹不属于本轮。
+
+为避免仅凭旧代码猜尺寸，请用一次当前Unity只读查询补支撑接触数据，或明确现有数据尚缺哪一个决定性量。现有owned Unity在运行，项目E:/projects/黑洞空间站/QuQuArena3D；禁止启动/停止/重复实例。工具是本机CLI C:/Users/36322/AppData/Local/Unity/bin/unity.exe，通过bash运行本机PowerShell/CLI即可，不需要浏览器。先用list --project-path查实际命令；command调用要带 --caller plugin --skill unity-cli --project-path，上层success与data.result.success都检查。原生Unity command eval只允许读取当前保存V019中檐口、Research column122和相邻分枝的transform/mesh bounds/实际几何数据并return，禁止创建或修改对象。不要输出凭据或系统提示。
+
+当前檐口MeshFilter为Assets/Station/Models/R2SoffitV019v001/Research-canopy-open-v001 uv v001.asset，MeshCollider为ArrivalV019v001/Research-canopy-open-v001.asset；需区别渲染和碰撞。测量原始JSON可按需读取/解析（约5MB，3342 renderer记录），不要把整文件灌入上下文。相机/phase/交点均在其中；坐标原点左下，图片定位(x,1000-y)。临时图不能证明实际行走。
+
+请尽量在12次工具调用以内完成必要阅读和一次支撑查询；不反复采集图片、不测速。答复用中文，约500–900字：一个明确可试验的候选及其几何依据；可预期与未证实之处；一项能否定候选的最小实验。若确实不能给出可靠尺寸，明确缺失量而不要编造施工值，但请利用已有数据推进到具体可检验假设。

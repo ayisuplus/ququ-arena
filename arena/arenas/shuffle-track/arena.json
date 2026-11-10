@@ -1,0 +1,16 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "shuffle-track",
+  "title": "洗牌追踪擂台",
+  "description": "BBH tracking-shuffled-objects 的中文生成器版：N 人各持一物，K 次两两交换，问最后谁拿着某物。交换链程序化执行，生成器即权威；固定种子可复现。目标物必须动过才入题（原地不动的题不考追踪）。测多步状态追踪——LLM 经典弱项。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:shuffle-track:2026-09-10",
+  "taskPrefix": "只输出人物代号本身（甲/乙/丙/丁/戊），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "swaps-2": "3 人 2 换（入门）",
+    "swaps-4": "4 人 4 换（中等）",
+    "swaps-6": "5 人 6 换（绕晕）"
+  }
+}

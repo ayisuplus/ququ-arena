@@ -1,0 +1,42 @@
+{
+  "name": "ququ-arena",
+  "version": "3.35.0",
+  "description": "AI斗兽场 QuQuArena —— 全民电子蛐蛐平台：脑洞→蛐蛐罐(benchmark包)→多模型开赛→带统计显著性的榜单/战报/论文骨架",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "benchmark",
+    "llm-evaluation",
+    "leaderboard",
+    "arena",
+    "电子蛐蛐",
+    "大模型评测"
+  ],
+  "author": "AI斗兽场 contributors",
+  "bin": {
+    "ququ": "src/cli.ts"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "arena": "node src/cli.ts",
+    "list": "node src/cli.ts list",
+    "stable": "node src/cli.ts stable",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.web.json",
+    "audit:questions": "node scripts/audit-question-bank.ts",
+    "test": "npm run format:check && npm run typecheck && node --test \"test/*.test.ts\"",
+    "demo": "node src/cli.ts battle --arena tongjia-pinyin --models mock:xueba-o9,mock:huatou-72b,mock:jianglv-7b,mock:laoshi-k2",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"web/**/*.{js,css}\" \"scripts/**/*.{ts,mjs}\"",
+    "format:check": "prettier --check --log-level warn \"src/**/*.ts\" \"test/**/*.ts\" \"web/**/*.{js,css}\" \"scripts/**/*.{ts,mjs}\""
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "^0.85.1",
+    "@earendil-works/pi-ai": "^0.85.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.8",
+    "typescript": "^7.0.2"
+  }
+}

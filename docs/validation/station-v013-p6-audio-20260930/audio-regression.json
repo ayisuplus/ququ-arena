@@ -1,0 +1,419 @@
+{
+  "mode": "Editor Play real-time regional audio and public-event fixtures",
+  "complete": true,
+  "checks": [
+    {
+      "name": "port zone 0",
+      "pass": true
+    },
+    {
+      "name": "port zone 1",
+      "pass": true
+    },
+    {
+      "name": "port zone 2",
+      "pass": true
+    },
+    {
+      "name": "port audible DSP",
+      "pass": true
+    },
+    {
+      "name": "cafe zone 0",
+      "pass": true
+    },
+    {
+      "name": "cafe zone 1",
+      "pass": true
+    },
+    {
+      "name": "cafe zone 2",
+      "pass": true
+    },
+    {
+      "name": "cafe audible DSP",
+      "pass": true
+    },
+    {
+      "name": "cafe-fade zone 0",
+      "pass": true
+    },
+    {
+      "name": "cafe-fade zone 1",
+      "pass": true
+    },
+    {
+      "name": "cafe-fade zone 2",
+      "pass": true
+    },
+    {
+      "name": "cafe-fade audible DSP",
+      "pass": true
+    },
+    {
+      "name": "cafe-outside zone 0",
+      "pass": true
+    },
+    {
+      "name": "cafe-outside zone 1",
+      "pass": true
+    },
+    {
+      "name": "cafe-outside zone 2",
+      "pass": true
+    },
+    {
+      "name": "cafe-outside quiet DSP",
+      "pass": true
+    },
+    {
+      "name": "garden zone 0",
+      "pass": true
+    },
+    {
+      "name": "garden zone 1",
+      "pass": true
+    },
+    {
+      "name": "garden zone 2",
+      "pass": true
+    },
+    {
+      "name": "garden audible DSP",
+      "pass": true
+    },
+    {
+      "name": "research-quiet zone 0",
+      "pass": true
+    },
+    {
+      "name": "research-quiet zone 1",
+      "pass": true
+    },
+    {
+      "name": "research-quiet zone 2",
+      "pass": true
+    },
+    {
+      "name": "research-quiet quiet DSP",
+      "pass": true
+    },
+    {
+      "name": "outer-ring-quiet zone 0",
+      "pass": true
+    },
+    {
+      "name": "outer-ring-quiet zone 1",
+      "pass": true
+    },
+    {
+      "name": "outer-ring-quiet zone 2",
+      "pass": true
+    },
+    {
+      "name": "outer-ring-quiet quiet DSP",
+      "pass": true
+    },
+    {
+      "name": "above-cafe-quiet zone 0",
+      "pass": true
+    },
+    {
+      "name": "above-cafe-quiet zone 1",
+      "pass": true
+    },
+    {
+      "name": "above-cafe-quiet zone 2",
+      "pass": true
+    },
+    {
+      "name": "above-cafe-quiet quiet DSP",
+      "pass": true
+    },
+    {
+      "name": "Settings button blocks pointer lock",
+      "pass": true
+    },
+    {
+      "name": "Settings blocks gameplay",
+      "pass": true
+    },
+    {
+      "name": "Settings releases pointer",
+      "pass": true
+    },
+    {
+      "name": "Mute stops cues",
+      "pass": true
+    },
+    {
+      "name": "Mute pauses all beds",
+      "pass": true
+    },
+    {
+      "name": "Subscribed to existing public events",
+      "pass": true
+    },
+    {
+      "name": "Start notice",
+      "pass": true
+    },
+    {
+      "name": "Duplicate suppressed",
+      "pass": true
+    },
+    {
+      "name": "Unsettled round silent",
+      "pass": true
+    },
+    {
+      "name": "Settled round notice",
+      "pass": true
+    },
+    {
+      "name": "Muted event stays silent",
+      "pass": true
+    },
+    {
+      "name": "Unmute does not replay",
+      "pass": true
+    },
+    {
+      "name": "New competition sequence",
+      "pass": true
+    },
+    {
+      "name": "Remote care rejected",
+      "pass": true
+    },
+    {
+      "name": "Care confirmation",
+      "pass": true
+    },
+    {
+      "name": "Archive confirmation",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "name": "port",
+      "rms": 0.008769152,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 73.06664
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": true,
+          "volume": 0.175,
+          "load": "Loaded",
+          "time": 2.47465634
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Unloaded",
+          "time": 0.0
+        }
+      ]
+    },
+    {
+      "name": "cafe",
+      "rms": 0.00189569616,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": true,
+          "volume": 0.0875,
+          "load": "Loaded",
+          "time": 75.56265
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Unloaded",
+          "time": 0.0
+        }
+      ]
+    },
+    {
+      "name": "cafe-fade",
+      "rms": 0.00604614662,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": true,
+          "volume": 0.04375,
+          "load": "Loaded",
+          "time": 78.07998
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Unloaded",
+          "time": 0.0
+        }
+      ]
+    },
+    {
+      "name": "cafe-outside",
+      "rms": 0.0,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 79.06132
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Unloaded",
+          "time": 0.0
+        }
+      ]
+    },
+    {
+      "name": "garden",
+      "rms": 0.00326710148,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 79.06132
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": true,
+          "volume": 0.1575,
+          "load": "Loaded",
+          "time": 2.496
+        }
+      ]
+    },
+    {
+      "name": "research-quiet",
+      "rms": 0.0,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 79.06132
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.50131273
+        }
+      ]
+    },
+    {
+      "name": "outer-ring-quiet",
+      "rms": 0.0,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 79.06132
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.50131273
+        }
+      ]
+    },
+    {
+      "name": "above-cafe-quiet",
+      "rms": 0.0,
+      "zones": [
+        {
+          "name": "Cafe local music",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 79.06132
+        },
+        {
+          "name": "Arrival port equipment hush",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.48
+        },
+        {
+          "name": "Garden circulation water",
+          "isPlaying": false,
+          "volume": 0.0,
+          "load": "Loaded",
+          "time": 4.50131273
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "listenerCount": 1,
+  "muted": false
+}

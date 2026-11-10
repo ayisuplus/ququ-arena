@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\package-v003",
+    "manifest": {
+      "assetId": "v016_b01_moon_sail_transparent_enclosure",
+      "description": "Four original curved panes separated from glass infill; solid floor, ceiling and ends. Hidden shell pieces cut inside two cavities, outer silhouette and original collision retained. 40576 GLB triangles; Unity transparency comes from derived material. No new spend, no navigable interior.",
+      "displayName": "V016 B01 Moon Sail Transparent Enclosure",
+      "files": [
+        {
+          "bytes": 1261856,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "23038973bb719aef5f90e9454a3de130e3168d1aa66b5b56962916e3fe2c1108"
+        },
+        {
+          "bytes": 1885,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "5d83a0ac09f6ee55477d7d793ac85a991987a8e10b2c2528ca6ad8cb85f8404c"
+        },
+        {
+          "bytes": 870,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "debeda96d2229961722040ea8d2c51b7738b5b8f7bd3fe4b466d0b81ffaffe08"
+        },
+        {
+          "bytes": 2691,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "17f935499e40344099a60a9b50b91a3bb6bc37d208ecb9b05840e2c1089e7a53"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_0827cfe0371d8eb702fe93a8",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.3.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

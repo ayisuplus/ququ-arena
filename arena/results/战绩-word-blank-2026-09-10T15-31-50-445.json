@@ -1,0 +1,1254 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "word-blank",
+    "title": "选词填空擂台",
+    "description": "形制致敬行测言语理解·逻辑填空（内容自建）。句子挖空，四选一填最恰当的词，exact 裁判（选项字母）。synonym-nuance 考近义词分工（必需/必须、截至/截止、权利/权力、起用/启用、反映/反应）；collocation 考固定搭配（发扬传统/发表看法/严峻形势/稳定物价/丰富储备）；conjunction 考关联词（假设/递进/转折/让步/无条件）；context-twist 考语境转折（看似…却…、表面…内心…、不但不…反而…）。每题干扰项与正确答案确有明确分工或搭配边界，不靠语感模糊出题。meta.answerText 入契约校验字母↔文本一致。",
+    "author": "AI斗兽场（内容自建，形制致敬行测逻辑填空）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:word-blank:2026-09-10",
+    "taskPrefix": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "synonym-nuance": "近义词分工辨析（必需/必须、截至/截止等）",
+      "collocation": "固定搭配（动宾/修饰）",
+      "conjunction": "关联词选择（假设/递进/转折/让步/无条件）",
+      "context-twist": "语境转折（前后反义对照）"
+    }
+  },
+  "startedAt": "2026-09-10T15:31:50.445Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "WB-SN-01",
+      "condition": "synonym-nuance",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n水是人类生存所______的。\nA. 必须\nB. 必需\nC. 务必\nD. 一定",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 449,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-01",
+      "condition": "synonym-nuance",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n水是人类生存所______的。\nA. 必须\nB. 必需\nC. 务必\nD. 一定",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-01",
+      "condition": "synonym-nuance",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n水是人类生存所______的。\nA. 必须\nB. 必需\nC. 务必\nD. 一定",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-01",
+      "condition": "synonym-nuance",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n水是人类生存所______的。\nA. 必须\nB. 必需\nC. 务必\nD. 一定",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 415,
+      "score": 1,
+      "usage": {
+        "input": 42,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-02",
+      "condition": "synonym-nuance",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n到 10 月 31 日______，已有 300 人完成报名。\nA. 截止\nB. 中断\nC. 截至\nD. 停止",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-02",
+      "condition": "synonym-nuance",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n到 10 月 31 日______，已有 300 人完成报名。\nA. 截止\nB. 中断\nC. 截至\nD. 停止",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 430,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-02",
+      "condition": "synonym-nuance",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n到 10 月 31 日______，已有 300 人完成报名。\nA. 截止\nB. 中断\nC. 截至\nD. 停止",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-02",
+      "condition": "synonym-nuance",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n到 10 月 31 日______，已有 300 人完成报名。\nA. 截止\nB. 中断\nC. 截至\nD. 停止",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-03",
+      "condition": "synonym-nuance",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公民依法享有言论、出版等方面的______。\nA. 权利\nB. 权力\nC. 权势\nD. 权威",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 120,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-03",
+      "condition": "synonym-nuance",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公民依法享有言论、出版等方面的______。\nA. 权利\nB. 权力\nC. 权势\nD. 权威",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 112,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-03",
+      "condition": "synonym-nuance",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公民依法享有言论、出版等方面的______。\nA. 权利\nB. 权力\nC. 权势\nD. 权威",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-03",
+      "condition": "synonym-nuance",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公民依法享有言论、出版等方面的______。\nA. 权利\nB. 权力\nC. 权势\nD. 权威",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-04",
+      "condition": "synonym-nuance",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公司决定大胆______年轻干部担任重要职务。\nA. 启用\nB. 利用\nC. 雇佣\nD. 起用",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 282,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-04",
+      "condition": "synonym-nuance",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公司决定大胆______年轻干部担任重要职务。\nA. 启用\nB. 利用\nC. 雇佣\nD. 起用",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-04",
+      "condition": "synonym-nuance",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公司决定大胆______年轻干部担任重要职务。\nA. 启用\nB. 利用\nC. 雇佣\nD. 起用",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-04",
+      "condition": "synonym-nuance",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n公司决定大胆______年轻干部担任重要职务。\nA. 启用\nB. 利用\nC. 雇佣\nD. 起用",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-05",
+      "condition": "synonym-nuance",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n群众______的问题，有关部门已经逐一核实处理。\nA. 反应\nB. 感应\nC. 反映\nD. 反响",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-05",
+      "condition": "synonym-nuance",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n群众______的问题，有关部门已经逐一核实处理。\nA. 反应\nB. 感应\nC. 反映\nD. 反响",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 85,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-05",
+      "condition": "synonym-nuance",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n群众______的问题，有关部门已经逐一核实处理。\nA. 反应\nB. 感应\nC. 反映\nD. 反响",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-SN-05",
+      "condition": "synonym-nuance",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n群众______的问题，有关部门已经逐一核实处理。\nA. 反应\nB. 感应\nC. 反映\nD. 反响",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-01",
+      "condition": "collocation",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n我们要______勤俭节约的优良传统。\nA. 发挥\nB. 发扬\nC. 发展\nD. 发动",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-01",
+      "condition": "collocation",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n我们要______勤俭节约的优良传统。\nA. 发挥\nB. 发扬\nC. 发展\nD. 发动",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-01",
+      "condition": "collocation",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n我们要______勤俭节约的优良传统。\nA. 发挥\nB. 发扬\nC. 发展\nD. 发动",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-01",
+      "condition": "collocation",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n我们要______勤俭节约的优良传统。\nA. 发挥\nB. 发扬\nC. 发展\nD. 发动",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-02",
+      "condition": "collocation",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n座谈会上大家畅所欲言，纷纷______自己的看法。\nA. 发布\nB. 宣布\nC. 发表\nD. 宣告",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-02",
+      "condition": "collocation",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n座谈会上大家畅所欲言，纷纷______自己的看法。\nA. 发布\nB. 宣布\nC. 发表\nD. 宣告",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-02",
+      "condition": "collocation",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n座谈会上大家畅所欲言，纷纷______自己的看法。\nA. 发布\nB. 宣布\nC. 发表\nD. 宣告",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 142,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "WB-CO-02",
+      "condition": "collocation",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n座谈会上大家畅所欲言，纷纷______自己的看法。\nA. 发布\nB. 宣布\nC. 发表\nD. 宣告",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-03",
+      "condition": "collocation",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n面对______的就业形势，毕业生们早早开始准备。\nA. 严肃\nB. 严厉\nC. 严格\nD. 严峻",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-03",
+      "condition": "collocation",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n面对______的就业形势，毕业生们早早开始准备。\nA. 严肃\nB. 严厉\nC. 严格\nD. 严峻",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-03",
+      "condition": "collocation",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n面对______的就业形势，毕业生们早早开始准备。\nA. 严肃\nB. 严厉\nC. 严格\nD. 严峻",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 302,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-03",
+      "condition": "collocation",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n面对______的就业形势，毕业生们早早开始准备。\nA. 严肃\nB. 严厉\nC. 严格\nD. 严峻",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 137,
+      "score": 1,
+      "usage": {
+        "input": 47,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-04",
+      "condition": "collocation",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n政府采取有效措施______物价，保障民生。\nA. 稳定\nB. 稳固\nC. 坚固\nD. 坚定",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-04",
+      "condition": "collocation",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n政府采取有效措施______物价，保障民生。\nA. 稳定\nB. 稳固\nC. 坚固\nD. 坚定",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-04",
+      "condition": "collocation",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n政府采取有效措施______物价，保障民生。\nA. 稳定\nB. 稳固\nC. 坚固\nD. 坚定",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-04",
+      "condition": "collocation",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n政府采取有效措施______物价，保障民生。\nA. 稳定\nB. 稳固\nC. 坚固\nD. 坚定",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-05",
+      "condition": "collocation",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n只有不断______知识储备，才能跟上时代步伐。\nA. 丰盛\nB. 丰满\nC. 丰富\nD. 丰厚",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 304,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-05",
+      "condition": "collocation",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n只有不断______知识储备，才能跟上时代步伐。\nA. 丰盛\nB. 丰满\nC. 丰富\nD. 丰厚",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-05",
+      "condition": "collocation",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n只有不断______知识储备，才能跟上时代步伐。\nA. 丰盛\nB. 丰满\nC. 丰富\nD. 丰厚",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CO-05",
+      "condition": "collocation",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n只有不断______知识储备，才能跟上时代步伐。\nA. 丰盛\nB. 丰满\nC. 丰富\nD. 丰厚",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-01",
+      "condition": "conjunction",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______明天下雨，运动会______推迟举行。\nA. 即使……也\nB. 如果……就\nC. 无论……都\nD. 虽然……但是",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-01",
+      "condition": "conjunction",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______明天下雨，运动会______推迟举行。\nA. 即使……也\nB. 如果……就\nC. 无论……都\nD. 虽然……但是",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-01",
+      "condition": "conjunction",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______明天下雨，运动会______推迟举行。\nA. 即使……也\nB. 如果……就\nC. 无论……都\nD. 虽然……但是",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 465,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-01",
+      "condition": "conjunction",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______明天下雨，运动会______推迟举行。\nA. 即使……也\nB. 如果……就\nC. 无论……都\nD. 虽然……但是",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-02",
+      "condition": "conjunction",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他______学习成绩优异，______乐于助人，深受同学喜爱。\nA. 虽然……但是\nB. 因为……所以\nC. 即使……也\nD. 不仅……而且",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-02",
+      "condition": "conjunction",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他______学习成绩优异，______乐于助人，深受同学喜爱。\nA. 虽然……但是\nB. 因为……所以\nC. 即使……也\nD. 不仅……而且",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-02",
+      "condition": "conjunction",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他______学习成绩优异，______乐于助人，深受同学喜爱。\nA. 虽然……但是\nB. 因为……所以\nC. 即使……也\nD. 不仅……而且",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 260,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-02",
+      "condition": "conjunction",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他______学习成绩优异，______乐于助人，深受同学喜爱。\nA. 虽然……但是\nB. 因为……所以\nC. 即使……也\nD. 不仅……而且",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-03",
+      "condition": "conjunction",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______学习任务很重，他______坚持参加志愿服务。\nA. 虽然……但是\nB. 不仅……而且\nC. 如果……就\nD. 无论……都",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-03",
+      "condition": "conjunction",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______学习任务很重，他______坚持参加志愿服务。\nA. 虽然……但是\nB. 不仅……而且\nC. 如果……就\nD. 无论……都",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-03",
+      "condition": "conjunction",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______学习任务很重，他______坚持参加志愿服务。\nA. 虽然……但是\nB. 不仅……而且\nC. 如果……就\nD. 无论……都",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 86,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-03",
+      "condition": "conjunction",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______学习任务很重，他______坚持参加志愿服务。\nA. 虽然……但是\nB. 不仅……而且\nC. 如果……就\nD. 无论……都",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-04",
+      "condition": "conjunction",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______遇到再大的困难，我们______不会退缩。\nA. 如果……就\nB. 因为……所以\nC. 即使……也\nD. 虽然……但是",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-04",
+      "condition": "conjunction",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______遇到再大的困难，我们______不会退缩。\nA. 如果……就\nB. 因为……所以\nC. 即使……也\nD. 虽然……但是",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-04",
+      "condition": "conjunction",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______遇到再大的困难，我们______不会退缩。\nA. 如果……就\nB. 因为……所以\nC. 即使……也\nD. 虽然……但是",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-04",
+      "condition": "conjunction",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______遇到再大的困难，我们______不会退缩。\nA. 如果……就\nB. 因为……所以\nC. 即使……也\nD. 虽然……但是",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 412,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-05",
+      "condition": "conjunction",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______什么情况，他______能冷静应对。\nA. 如果……就\nB. 无论……都\nC. 虽然……但是\nD. 不仅……而且",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 466,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-05",
+      "condition": "conjunction",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______什么情况，他______能冷静应对。\nA. 如果……就\nB. 无论……都\nC. 虽然……但是\nD. 不仅……而且",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-05",
+      "condition": "conjunction",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______什么情况，他______能冷静应对。\nA. 如果……就\nB. 无论……都\nC. 虽然……但是\nD. 不仅……而且",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CJ-05",
+      "condition": "conjunction",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n______什么情况，他______能冷静应对。\nA. 如果……就\nB. 无论……都\nC. 虽然……但是\nD. 不仅……而且",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-01",
+      "condition": "context-twist",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这件事看似简单，做起来却十分______。\nA. 容易\nB. 轻松\nC. 复杂\nD. 有趣",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-01",
+      "condition": "context-twist",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这件事看似简单，做起来却十分______。\nA. 容易\nB. 轻松\nC. 复杂\nD. 有趣",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-01",
+      "condition": "context-twist",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这件事看似简单，做起来却十分______。\nA. 容易\nB. 轻松\nC. 复杂\nD. 有趣",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 244,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-01",
+      "condition": "context-twist",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这件事看似简单，做起来却十分______。\nA. 容易\nB. 轻松\nC. 复杂\nD. 有趣",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-02",
+      "condition": "context-twist",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他表面上很冷漠，内心却十分______。\nA. 冷酷\nB. 热情\nC. 平静\nD. 严肃",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-02",
+      "condition": "context-twist",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他表面上很冷漠，内心却十分______。\nA. 冷酷\nB. 热情\nC. 平静\nD. 严肃",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-02",
+      "condition": "context-twist",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他表面上很冷漠，内心却十分______。\nA. 冷酷\nB. 热情\nC. 平静\nD. 严肃",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 136,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-02",
+      "condition": "context-twist",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他表面上很冷漠，内心却十分______。\nA. 冷酷\nB. 热情\nC. 平静\nD. 严肃",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-03",
+      "condition": "context-twist",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n别人都在随声附和，他却______地指出了方案的漏洞。\nA. 委婉\nB. 含糊\nC. 附和\nD. 直言",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 198,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-03",
+      "condition": "context-twist",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n别人都在随声附和，他却______地指出了方案的漏洞。\nA. 委婉\nB. 含糊\nC. 附和\nD. 直言",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-03",
+      "condition": "context-twist",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n别人都在随声附和，他却______地指出了方案的漏洞。\nA. 委婉\nB. 含糊\nC. 附和\nD. 直言",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-03",
+      "condition": "context-twist",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n别人都在随声附和，他却______地指出了方案的漏洞。\nA. 委婉\nB. 含糊\nC. 附和\nD. 直言",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 418,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-04",
+      "condition": "context-twist",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这个故事开头______，结尾却出人意料地精彩。\nA. 平淡\nB. 精彩\nC. 曲折\nD. 动人",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-04",
+      "condition": "context-twist",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这个故事开头______，结尾却出人意料地精彩。\nA. 平淡\nB. 精彩\nC. 曲折\nD. 动人",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-04",
+      "condition": "context-twist",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这个故事开头______，结尾却出人意料地精彩。\nA. 平淡\nB. 精彩\nC. 曲折\nD. 动人",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-04",
+      "condition": "context-twist",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n这个故事开头______，结尾却出人意料地精彩。\nA. 平淡\nB. 精彩\nC. 曲折\nD. 动人",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 390,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-05",
+      "condition": "context-twist",
+      "model": "mock:xueba-o9",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他不但不紧张，______镇定自若。\nA. 而且\nB. 反而\nC. 但是\nD. 所以",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-05",
+      "condition": "context-twist",
+      "model": "mock:huatou-72b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他不但不紧张，______镇定自若。\nA. 而且\nB. 反而\nC. 但是\nD. 所以",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-05",
+      "condition": "context-twist",
+      "model": "mock:jianglv-7b",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他不但不紧张，______镇定自若。\nA. 而且\nB. 反而\nC. 但是\nD. 所以",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "WB-CT-05",
+      "condition": "context-twist",
+      "model": "mock:laoshi-k2",
+      "prompt": "从四个选项中选出填入横线处最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n他不但不紧张，______镇定自若。\nA. 而且\nB. 反而\nC. 但是\nD. 所以",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 43,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "c64edb70c15e096c",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.6.0"
+  }
+}

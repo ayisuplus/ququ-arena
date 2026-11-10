@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:/projects/黑洞空间站/.cache/alpha-round-001/question-timing-check.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "mode": "switch",
+        "passed": true,
+        "failed": 0,
+        "checks": [
+          "mode.file-readable | passed=True | actual=switch | expected=a stage word from timing-mode.txt",
+          "switch.board-present | passed=True | actual=board=True, question=True | expected=board=True, question=True",
+          "switch.page-still-1 | passed=True | actual=1 | expected=1",
+          "switch.heading-follows-new-status | passed=True | actual=第 2 题  /  STATUS_SWITCH | expected=contains STATUS_SWITCH",
+          "switch.body-unchanged | passed=True | actual=PRIMARYLINE001 QUQU  | expected=PRIMARYLINE001 QUQU A RE"
+        ],
+        "pageCount": -1,
+        "startedAt": 54.8061638,
+        "elapsedSeconds": 0,
+        "unity": "6000.3.24f1",
+        "playMode": true,
+        "scene": "",
+        "reusedExistingBoard": false,
+        "note": "one short synchronous stage per call; the 8s rotation is observed between calls, never awaited here"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

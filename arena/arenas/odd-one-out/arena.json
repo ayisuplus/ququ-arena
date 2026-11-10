@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "odd-one-out",
+  "title": "找不同擂台",
+  "description": "四个词里挑出不属于同一类的那个（生成器自建）：十个人工审清边界的类别池（水果/动物/交通工具/乐器/颜色/球类/蔬菜/家具/天体/电器），3 同类 + 1 异类打乱顺序。测类别归纳与常识边界。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:odd-one-out:2026-09-10",
+  "taskPrefix": "只输出那个异类词本身，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": { "odd-one-out": "找不同（3 同类 + 1 异类）" }
+}

@@ -1,0 +1,24 @@
+{
+  "nativeSessionId": "33e74e77-d15c-45ab-883e-cdf167d4dc1f",
+  "throughPhase": "After first round-one archive commit 452460d1, before documentation correction",
+  "completeMessagesEndpoint": {
+    "path": "/api/native/sessions/{id}/messages",
+    "attempts": 2,
+    "httpStatus": 400,
+    "error": "OMP get_messages timed out"
+  },
+  "otherNativeCommands": {
+    "get_state": "succeeded; isSettled=true, isStreaming=false, messageCount=198",
+    "get_last_assistant_text": "succeeded; actual Alpha confirmed commit 452460d1",
+    "get_messages_page": "succeeded; 25 pages at limit=8 returned all 198 messages"
+  },
+  "compactSerializedMessagesBytes": 1052078,
+  "nativePhysicalFrameLimitBytes": 1048576,
+  "sourceFinding": {
+    "nativeEncoder": "OMP18.4.3 rpc-frame.ts encodes rpc_chunk.data as base64 of UTF8 byte fragments",
+    "alphaTransport": "src/native/rpc-process.ts joins data strings directly and calls JSON.parse without base64 decoding",
+    "negotiation": "src/native/server.ts explicitly selects protocolVersion=2",
+    "causalInterpretation": "Source mismatch is consistent with timeouts after the message payload crossed the one-MiB chunk boundary. Native pagination avoids the oversized response."
+  },
+  "status": "Unresolved; recorded for a separate focused Alpha interface round. No Alpha production source changed in this round."
+}

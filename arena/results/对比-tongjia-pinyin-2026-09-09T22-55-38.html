@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同卷对比 · 通假·拼音剖面擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#c0b39e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 40px 24px 64px; }
+  header { text-align:center; margin-bottom: 32px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 30px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 19px; margin: 32px 0 12px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .name { font-weight: 600; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .up { color: #1a7f4b; font-weight: 600; } .down { color: var(--accent); font-weight: 600; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 10px; border-radius:6px; white-space:nowrap; }
+  .tag.up { background:#eaf5ee; color:#1a7f4b; } .tag.down { background:#fbeae6; color:var(--accent); }
+  [data-theme="dark"] .tag.up { background:#1e3a2a; color:#3ecf8e; } [data-theme="dark"] .tag.down { background:#3a2320; color:#e0603f; }
+  .cibar { position: relative; width: 160px; height: 12px; background: var(--soft); border-radius: 6px; overflow: hidden; }
+  .cifill { position: absolute; top: 0; bottom: 0; border-radius: 6px; }
+  .zero { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--muted); }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:44px; }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">同 卷 对 比 · DIFF</div>
+  <h1>🔀 通假·拼音剖面擂台</h1>
+  <div class="sub">A: 2026-09-09 22:50 → B: 2026-09-09 22:55 · 指纹 <code>def240638a207d62</code> · 仅比共同题</div>
+</header>
+
+<h2>🏆 逐模型判定</h2>
+<div class="card"><table>
+<thead><tr><th>蛐蛐</th><th>A 场均</th><th>B 场均</th><th>Δ(A−B)</th><th>95% CI</th><th>区间图</th><th>判定</th></tr></thead>
+<tbody>
+<tr>
+      <td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td>75.0%</td><td>75.0%</td>
+      <td class="up">+0.0%</td>
+      <td class="muted">[0.0%, 0.0%]</td>
+      <td><div class="cibar"><div class="cifill" style="left:50%;width:1.5%;background:var(--muted)"></div><div class="zero"></div></div></td>
+      <td><span class="tag">➖ 噪声内</span></td>
+    </tr>
+<tr>
+      <td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td>75.0%</td><td>75.0%</td>
+      <td class="up">+0.0%</td>
+      <td class="muted">[0.0%, 0.0%]</td>
+      <td><div class="cibar"><div class="cifill" style="left:50%;width:1.5%;background:var(--muted)"></div><div class="zero"></div></div></td>
+      <td><span class="tag">➖ 噪声内</span></td>
+    </tr>
+<tr>
+      <td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td>0.0%</td><td>0.0%</td>
+      <td class="up">+0.0%</td>
+      <td class="muted">[0.0%, 0.0%]</td>
+      <td><div class="cibar"><div class="cifill" style="left:50%;width:1.5%;background:var(--muted)"></div><div class="zero"></div></div></td>
+      <td><span class="tag">➖ 噪声内</span></td>
+    </tr>
+<tr>
+      <td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td>100.0%</td><td>100.0%</td>
+      <td class="up">+0.0%</td>
+      <td class="muted">[0.0%, 0.0%]</td>
+      <td><div class="cibar"><div class="cifill" style="left:50%;width:1.5%;background:var(--muted)"></div><div class="zero"></div></div></td>
+      <td><span class="tag">➖ 噪声内</span></td>
+    </tr>
+</tbody></table>
+<p class="muted">CI 含 0 = 变化在噪声内。区间图以中轴为 0，绿=显著进步，红=显著退步，灰=噪声。</p></div>
+
+
+
+
+
+<footer>AI斗兽场 QuQuArena · 同卷对比 · 不同卷的分数不可比</footer>
+</div></body></html>

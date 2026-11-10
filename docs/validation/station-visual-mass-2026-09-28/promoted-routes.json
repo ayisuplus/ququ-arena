@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\AI斗兽场\\production\\black-hole-station\\walk_p2w_routes.cs",
+      "timeout": "60000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "[\r\n  {\r\n    \"route\": \"player cabin to upper public ramp\",\r\n    \"meters\": 187.3,\r\n    \"moves\": 750,\r\n    \"end\": \"(85.00, 0.09, -20.00)\"\r\n  },\r\n  {\r\n    \"route\": \"upper east-to-west via north hub\",\r\n    \"meters\": 508.2,\r\n    \"moves\": 2034,\r\n    \"end\": \"(-85.00, 0.09, -20.00)\"\r\n  },\r\n  {\r\n    \"route\": \"upper north dock overlook out and back\",\r\n    \"meters\": 147.8,\r\n    \"moves\": 592,\r\n    \"end\": \"(12.00, 14.08, 105.00)\"\r\n  },\r\n  {\r\n    \"route\": \"upper full perimeter loop\",\r\n    \"meters\": 864.0,\r\n    \"moves\": 3456,\r\n    \"end\": \"(105.00, 14.08, 70.00)\"\r\n  },\r\n  {\r\n    \"route\": \"upper west exit to lower west entrance\",\r\n    \"meters\": 130.0,\r\n    \"moves\": 520,\r\n    \"end\": \"(-115.00, 0.08, -80.00)\"\r\n  },\r\n  {\r\n    \"route\": \"lower west-to-east via observation north\",\r\n    \"meters\": 641.6,\r\n    \"moves\": 2568,\r\n    \"end\": \"(115.00, 0.08, -80.00)\"\r\n  },\r\n  {\r\n    \"route\": \"lower full perimeter loop\",\r\n    \"meters\": 680.0,\r\n    \"moves\": 2720,\r\n    \"end\": \"(85.00, -11.92, 10.00)\"\r\n  },\r\n  {\r\n    \"route\": \"lower east exit to north dock via west public ring\",\r\n    \"meters\": 682.0,\r\n    \"moves\": 2728,\r\n    \"end\": \"(12.00, 0.08, 205.00)\"\r\n  },\r\n  {\r\n    \"route\": \"lower east exit to north dock via east public bypass\",\r\n    \"meters\": 410.2,\r\n    \"moves\": 1641,\r\n    \"end\": \"(12.00, 0.08, 205.00)\"\r\n  },\r\n  {\r\n    \"route\": \"public dock out and back\",\r\n    \"meters\": 180.0,\r\n    \"moves\": 720,\r\n    \"end\": \"(12.00, 0.08, 115.00)\"\r\n  },\r\n  {\r\n    \"route\": \"continuous cabin to upper to lower to dock\",\r\n    \"meters\": 1877.2,\r\n    \"moves\": 7513,\r\n    \"end\": \"(12.00, 0.08, 205.00)\"\r\n  }\r\n]"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

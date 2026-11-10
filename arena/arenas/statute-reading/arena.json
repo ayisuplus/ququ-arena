@@ -1,0 +1,21 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "statute-reading",
+  "title": "法条细读 · 咬文嚼字擂台",
+  "description": "素材为民法典全量原文（1260 条，取自法律AI项目 civil_code 抓取），精选 48 条合同编+明星条款，每条配一真一假两个陈述。假陈述按陷阱类型分布：modal-swap（应当↔可以）、scope-shift（主体范围）、logic-invert（条件/效果反转）、detail-shift（数字/程序细节）。测大模型对法律文本的逐字细读能力——\"大意对了\"在这里全是零分。",
+  "author": "AI斗兽场（素材：民法典，经法律AI项目抓取）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:statute-reading:2026-09-10",
+  "taskPrefix": "你是严谨的法律文本审读员。下面给出《中华人民共和国民法典》条文原文和一个「陈述」。判断该陈述与条文原文是否一致：一致只输出「真」，不一致只输出「假」，不多一个字。注意数字、主体范围、\"应当/可以/不得\"等限定词和程序细节的细微差别。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "verbatim-true": "一致转述（目标：真）",
+    "modal-swap": "假·模态偷换（应当↔可以/选择性）",
+    "scope-shift": "假·主体范围扩大",
+    "logic-invert": "假·条件或效果反转",
+    "detail-shift": "假·数字/程序细节改动"
+  }
+}

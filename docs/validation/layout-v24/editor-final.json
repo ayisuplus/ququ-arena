@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new {playing=EditorApplication.isPlaying,compiling=EditorApplication.isCompiling,dirty=UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty,validation=SessionState.GetBool(\"QuQu.VisualValidation\",false),defaultGraphics=PlayerSettings.GetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64),shaderErrors=ShaderUtil.GetShaderMessages(AssetDatabase.LoadAssetAtPath<Shader>(\"Assets/Shaders/GalaxyFloor.shader\")).Select(x=>x.message).ToArray()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "dirty": false,
+        "validation": false,
+        "defaultGraphics": true,
+        "shaderErrors": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\tmp\\ququ-native-v16-20260920"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,1273 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "t9-encode",
+    "title": "九宫格编码擂台",
+    "description": "拼音音节 → 手机九宫格（T9）数字键（生成器自建）：编码方向唯一；解码方向因多义词歧义不出题（出题纪律）。T9 表权威。测字符映射细心。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:t9-encode:2026-09-10",
+    "taskPrefix": "只输出数字键串本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "pinyin-to-t9": "拼音→T9 数字"
+    }
+  },
+  "startedAt": "2026-09-10T11:42:44.902Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "T9-01",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ge」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-01",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ge」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-01",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ge」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 328,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-01",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ge」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-02",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「chi」按九宫格该按哪些数字键？",
+      "answer": "244",
+      "target": "244",
+      "latencyMs": 144,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-02",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「chi」按九宫格该按哪些数字键？",
+      "answer": "244",
+      "target": "244",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-02",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「chi」按九宫格该按哪些数字键？",
+      "answer": "244",
+      "target": "244",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-02",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「chi」按九宫格该按哪些数字键？",
+      "answer": "244",
+      "target": "244",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "T9-03",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「xiao」按九宫格该按哪些数字键？",
+      "answer": "9426",
+      "target": "9426",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-03",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「xiao」按九宫格该按哪些数字键？",
+      "answer": "9426",
+      "target": "9426",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-03",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「xiao」按九宫格该按哪些数字键？",
+      "answer": "9上26",
+      "target": "9426",
+      "latencyMs": 366,
+      "score": 0,
+      "note": "期望「9426」，实答「9上26」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-03",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「xiao」按九宫格该按哪些数字键？",
+      "answer": "9426",
+      "target": "9426",
+      "latencyMs": 248,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-04",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「le」按九宫格该按哪些数字键？",
+      "answer": "53",
+      "target": "53",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-04",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「le」按九宫格该按哪些数字键？",
+      "answer": "5",
+      "target": "53",
+      "latencyMs": 415,
+      "score": 0,
+      "note": "期望「53」，实答「5」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-04",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「le」按九宫格该按哪些数字键？",
+      "answer": "53",
+      "target": "53",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-04",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「le」按九宫格该按哪些数字键？",
+      "answer": "53",
+      "target": "53",
+      "latencyMs": 257,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-05",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wo」按九宫格该按哪些数字键？",
+      "answer": "96",
+      "target": "96",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-05",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wo」按九宫格该按哪些数字键？",
+      "answer": "96",
+      "target": "96",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-05",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wo」按九宫格该按哪些数字键？",
+      "answer": "9",
+      "target": "96",
+      "latencyMs": 215,
+      "score": 0,
+      "note": "期望「96」，实答「9」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-05",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wo」按九宫格该按哪些数字键？",
+      "answer": "96",
+      "target": "96",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-06",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「he」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-06",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「he」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-06",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「he」按九宫格该按哪些数字键？",
+      "answer": "4",
+      "target": "43",
+      "latencyMs": 231,
+      "score": 0,
+      "note": "期望「43」，实答「4」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-06",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「he」按九宫格该按哪些数字键？",
+      "answer": "43",
+      "target": "43",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-07",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「tian」按九宫格该按哪些数字键？",
+      "answer": "8426",
+      "target": "8426",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-07",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「tian」按九宫格该按哪些数字键？",
+      "answer": "8426",
+      "target": "8426",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-07",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「tian」按九宫格该按哪些数字键？",
+      "answer": "8426",
+      "target": "8426",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-07",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「tian」按九宫格该按哪些数字键？",
+      "answer": "8426",
+      "target": "8426",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-08",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「zhong」按九宫格该按哪些数字键？",
+      "answer": "94664",
+      "target": "94664",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-08",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「zhong」按九宫格该按哪些数字键？",
+      "answer": "946我4",
+      "target": "94664",
+      "latencyMs": 363,
+      "score": 0,
+      "note": "期望「94664」，实答「946我4」",
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-08",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「zhong」按九宫格该按哪些数字键？",
+      "answer": "9了664",
+      "target": "94664",
+      "latencyMs": 87,
+      "score": 0,
+      "note": "期望「94664」，实答「9了664」",
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-08",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「zhong」按九宫格该按哪些数字键？",
+      "answer": "94664",
+      "target": "94664",
+      "latencyMs": 398,
+      "score": 1,
+      "usage": {
+        "input": 50,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-09",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「di」按九宫格该按哪些数字键？",
+      "answer": "34",
+      "target": "34",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-09",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「di」按九宫格该按哪些数字键？",
+      "answer": "34",
+      "target": "34",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-09",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「di」按九宫格该按哪些数字键？",
+      "answer": "34",
+      "target": "34",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-09",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「di」按九宫格该按哪些数字键？",
+      "answer": "3",
+      "target": "34",
+      "latencyMs": 402,
+      "score": 0,
+      "note": "期望「34」，实答「3」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-10",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「hao」按九宫格该按哪些数字键？",
+      "answer": "426",
+      "target": "426",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-10",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「hao」按九宫格该按哪些数字键？",
+      "answer": "42",
+      "target": "426",
+      "latencyMs": 161,
+      "score": 0,
+      "note": "期望「426」，实答「42」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-10",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「hao」按九宫格该按哪些数字键？",
+      "answer": "426",
+      "target": "426",
+      "latencyMs": 363,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-10",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「hao」按九宫格该按哪些数字键？",
+      "answer": "42",
+      "target": "426",
+      "latencyMs": 210,
+      "score": 0,
+      "note": "期望「426」，实答「42」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-11",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wan」按九宫格该按哪些数字键？",
+      "answer": "926",
+      "target": "926",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-11",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wan」按九宫格该按哪些数字键？",
+      "answer": "926",
+      "target": "926",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-11",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wan」按九宫格该按哪些数字键？",
+      "answer": "92",
+      "target": "926",
+      "latencyMs": 226,
+      "score": 0,
+      "note": "期望「926」，实答「92」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-11",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「wan」按九宫格该按哪些数字键？",
+      "answer": "926",
+      "target": "926",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-12",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「shuo」按九宫格该按哪些数字键？",
+      "answer": "7486",
+      "target": "7486",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-12",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「shuo」按九宫格该按哪些数字键？",
+      "answer": "786",
+      "target": "7486",
+      "latencyMs": 89,
+      "score": 0,
+      "note": "期望「7486」，实答「786」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-12",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「shuo」按九宫格该按哪些数字键？",
+      "answer": "7486",
+      "target": "7486",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-12",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「shuo」按九宫格该按哪些数字键？",
+      "answer": "748了",
+      "target": "7486",
+      "latencyMs": 376,
+      "score": 0,
+      "note": "期望「7486」，实答「748了」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-13",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「da」按九宫格该按哪些数字键？",
+      "answer": "3",
+      "target": "32",
+      "latencyMs": 257,
+      "score": 0,
+      "note": "期望「32」，实答「3」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-13",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「da」按九宫格该按哪些数字键？",
+      "answer": "32",
+      "target": "32",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-13",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「da」按九宫格该按哪些数字键？",
+      "answer": "3",
+      "target": "32",
+      "latencyMs": 371,
+      "score": 0,
+      "note": "期望「32」，实答「3」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-13",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「da」按九宫格该按哪些数字键？",
+      "answer": "3",
+      "target": "32",
+      "latencyMs": 277,
+      "score": 0,
+      "note": "期望「32」，实答「3」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-14",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ma」按九宫格该按哪些数字键？",
+      "answer": "62",
+      "target": "62",
+      "latencyMs": 396,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-14",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ma」按九宫格该按哪些数字键？",
+      "answer": "62",
+      "target": "62",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-14",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ma」按九宫格该按哪些数字键？",
+      "answer": "6",
+      "target": "62",
+      "latencyMs": 223,
+      "score": 0,
+      "note": "期望「62」，实答「6」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-14",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ma」按九宫格该按哪些数字键？",
+      "answer": "62",
+      "target": "62",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-15",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ta」按九宫格该按哪些数字键？",
+      "answer": "82",
+      "target": "82",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-15",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ta」按九宫格该按哪些数字键？",
+      "answer": "82",
+      "target": "82",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-15",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ta」按九宫格该按哪些数字键？",
+      "answer": "8",
+      "target": "82",
+      "latencyMs": 180,
+      "score": 0,
+      "note": "期望「82」，实答「8」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-15",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ta」按九宫格该按哪些数字键？",
+      "answer": "82",
+      "target": "82",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-16",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「kan」按九宫格该按哪些数字键？",
+      "answer": "526",
+      "target": "526",
+      "latencyMs": 286,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-16",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「kan」按九宫格该按哪些数字键？",
+      "answer": "526",
+      "target": "526",
+      "latencyMs": 189,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-16",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「kan」按九宫格该按哪些数字键？",
+      "answer": "52",
+      "target": "526",
+      "latencyMs": 245,
+      "score": 0,
+      "note": "期望「526」，实答「52」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-16",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「kan」按九宫格该按哪些数字键？",
+      "answer": "52了",
+      "target": "526",
+      "latencyMs": 81,
+      "score": 0,
+      "note": "期望「526」，实答「52了」",
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-17",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ba」按九宫格该按哪些数字键？",
+      "answer": "22",
+      "target": "22",
+      "latencyMs": 104,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-17",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ba」按九宫格该按哪些数字键？",
+      "answer": "22",
+      "target": "22",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-17",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ba」按九宫格该按哪些数字键？",
+      "answer": "2",
+      "target": "22",
+      "latencyMs": 298,
+      "score": 0,
+      "note": "期望「22」，实答「2」",
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-17",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ba」按九宫格该按哪些数字键？",
+      "answer": "22",
+      "target": "22",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-18",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ni」按九宫格该按哪些数字键？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 391,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-18",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ni」按九宫格该按哪些数字键？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 298,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-18",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ni」按九宫格该按哪些数字键？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-18",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ni」按九宫格该按哪些数字键？",
+      "answer": "64",
+      "target": "64",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-19",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「guo」按九宫格该按哪些数字键？",
+      "answer": "486",
+      "target": "486",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-19",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「guo」按九宫格该按哪些数字键？",
+      "answer": "486",
+      "target": "486",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-19",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「guo」按九宫格该按哪些数字键？",
+      "answer": "46",
+      "target": "486",
+      "latencyMs": 414,
+      "score": 0,
+      "note": "期望「486」，实答「46」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-19",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「guo」按九宫格该按哪些数字键？",
+      "answer": "486",
+      "target": "486",
+      "latencyMs": 331,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-20",
+      "condition": "pinyin-to-t9",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ren」按九宫格该按哪些数字键？",
+      "answer": "736",
+      "target": "736",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-20",
+      "condition": "pinyin-to-t9",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ren」按九宫格该按哪些数字键？",
+      "answer": "73",
+      "target": "736",
+      "latencyMs": 277,
+      "score": 0,
+      "note": "期望「736」，实答「73」",
+      "usage": {
+        "input": 49,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-20",
+      "condition": "pinyin-to-t9",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ren」按九宫格该按哪些数字键？",
+      "answer": "736",
+      "target": "736",
+      "latencyMs": 334,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "T9-20",
+      "condition": "pinyin-to-t9",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出数字键串本身，不多一个字。\n手机九宫格（T9）：2=abc，3=def，4=ghi，5=jkl，6=mno，7=pqrs，8=tuv，9=wxyz。\n拼音「ren」按九宫格该按哪些数字键？",
+      "answer": "736",
+      "target": "736",
+      "latencyMs": 330,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 2
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "7a4800349e7e462e",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.29.0"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "首页首屏可见声音开关和设置，未主动播放或加载音乐"
+    },
+    {
+      "name": "真实额度提示含剩余次数与北京时间，已耗尽的免费阵容无法提交开赛"
+    },
+    {
+      "name": "1080p/1440p、深浅主题的面板、六首配乐和额度提示均可见"
+    },
+    {
+      "name": "首页真实配乐试听八秒后停止，无隐藏循环续播"
+    },
+    {
+      "name": "开赛与胜利音效可直接试听，不会启动比赛或背景配乐"
+    },
+    {
+      "name": "无页面异常、开赛、配置写入或外部模型请求"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/home.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/model-picker.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/arena-audio.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/home.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/model-picker.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/arena-audio.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/arena-audio-score.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/arena-audio-library.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/api/models"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/api/agents"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/music-ai-fight.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/music-ai-fight.ogg"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:8182/web/assets/audio/music-ai-fight.ogg"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "project_id": "appgprj_6aa65b29e1f081919e7bf254b233246a",
+  "id": "appgdep_6aa67c7313bc819185db9c4f59a5afae",
+  "version_id": "appgprj_6aa65b29e1f081919e7bf254b233246a~appgver_dfab1ab731b08191aa73356ec6245372",
+  "status": "succeeded",
+  "url": "https://ququ-engineering-arena.zluo66977.chatgpt.site",
+  "env_set_revision": 1,
+  "commit_sha": "a90c7790f31fc04eb1b9a6d4b2a43cb01f08c6fa",
+  "verifiedAt": "2026-09-13T10:42:25.478Z",
+  "executor": {
+    "pid": 61332,
+    "loopbackPort": 57656,
+    "harnessPage": true,
+    "benchmarks": 68,
+    "profiles": 4
+  },
+  "connectionCheck": {
+    "model": "Qwen3.5-4B · 硅基流动",
+    "state": "ready",
+    "note": "有效推理/用量响应，无最终答案也可确认连接；不表示任务已完成"
+  },
+  "workerRequests": [
+    {
+      "time": 1789296130996,
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296127353,
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296126465,
+      "path": "/sites-api/executor/sync",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296125916,
+      "path": "/sites-api/status",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296123930,
+      "path": "/sites-api/status",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296123743,
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296123422,
+      "path": "/sites-api/executor/sync",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "time": 1789296119980,
+      "path": "/sites-api/status",
+      "status": 200,
+      "outcome": "ok"
+    }
+  ],
+  "validation": {
+    "fullRegressionPassed": 372,
+    "finalHarnessPassed": 10,
+    "sitesRelayPassed": 7,
+    "browser": "docs/validation/harness/browser-checks.json",
+    "previewPort8183": "stopped after isolated acceptance"
+  }
+}

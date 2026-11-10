@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nforeach(var file in System.IO.Directory.GetFiles(\"../production/black-hole-station/v017/plant-kit/P03\",\"*.fbx\"))System.IO.File.Copy(file,\"Assets/Station/Models/EcologicalParkV017/P03/\"+System.IO.Path.GetFileName(file),true);UnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nvar mat=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/EcologicalParkV017/ParkQuietWater.mat\");mat.SetFloat(\"_RippleStrength\",.06f);UnityEditor.EditorUtility.SetDirty(mat);UnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{rootDepth=.12f,rippleStrength=.06f,waterShaderMessages=UnityEditor.ShaderUtil.GetShaderMessages(mat.shader).Select(m=>m.message).ToArray()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "rootDepth": 0.12,
+        "rippleStrength": 0.06,
+        "waterShaderMessages": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

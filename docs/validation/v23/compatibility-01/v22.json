@@ -1,0 +1,208 @@
+{
+  "evidence": "Real Windows rendering; saved competition fixtures, no new model calls",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "scope": "full v22",
+  "travel": [
+    {
+      "from": "Arena",
+      "to": "Lab",
+      "seconds": 5.08387041
+    },
+    {
+      "from": "Lab",
+      "to": "Referee",
+      "seconds": 5.086829
+    },
+    {
+      "from": "Referee",
+      "to": "Commentary",
+      "seconds": 2.04212379
+    },
+    {
+      "from": "Commentary",
+      "to": "Gallery",
+      "seconds": 5.101589
+    }
+  ],
+  "combatModeSwitch": {
+    "hits": 8,
+    "rounds": 8,
+    "deferred": true,
+    "duplicatesIgnored": true,
+    "reconnect": true
+  },
+  "booths": [
+    {
+      "mode": "chibi",
+      "place": "Referee",
+      "homeY": 0.8999996
+    },
+    {
+      "mode": "chibi",
+      "place": "Commentary",
+      "homeY": 1.18000031
+    },
+    {
+      "mode": "standard",
+      "place": "Referee",
+      "homeY": 0.199999809
+    },
+    {
+      "mode": "standard",
+      "place": "Commentary",
+      "homeY": 0.479999542
+    }
+  ],
+  "gallerySwitchAndDisplay": true,
+  "customAppearanceAndAsyncRace": true,
+  "soak": {
+    "seconds": 600.0128,
+    "maxMoving": 3,
+    "minSeparation": 1.29986823,
+    "arrivals": [
+      21,
+      23,
+      20,
+      19,
+      18,
+      19
+    ]
+  },
+  "performance": [
+    {
+      "configuration": "1920-standard-bh-True",
+      "fps": 59.50532,
+      "p95ms": 16.6722012,
+      "cpuMs": 16.805219287211727,
+      "gpuMs": 0.789159798319327,
+      "drawCallsMax": 366,
+      "trianglesMax": 2359977,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 209496864
+    },
+    {
+      "configuration": "1920-standard-bh-False",
+      "fps": 59.5456276,
+      "p95ms": 16.6718044,
+      "cpuMs": 16.794281551362673,
+      "gpuMs": 0.80166292436974806,
+      "drawCallsMax": 367,
+      "trianglesMax": 2340191,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 209522096
+    },
+    {
+      "configuration": "1920-chibi-bh-True",
+      "fps": 59.5167236,
+      "p95ms": 16.6738949,
+      "cpuMs": 16.802105241090153,
+      "gpuMs": 0.72577936134453713,
+      "drawCallsMax": 371,
+      "trianglesMax": 1802211,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 183689360
+    },
+    {
+      "configuration": "1920-chibi-bh-False",
+      "fps": 59.5574722,
+      "p95ms": 16.6876984,
+      "cpuMs": 16.790305031446554,
+      "gpuMs": 0.66468463865546323,
+      "drawCallsMax": 370,
+      "trianglesMax": 1802199,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 183589144
+    },
+    {
+      "configuration": "2560-standard-bh-True",
+      "fps": 59.04851,
+      "p95ms": 16.6714,
+      "cpuMs": 16.935423678646934,
+      "gpuMs": 1.4688797288135584,
+      "drawCallsMax": 371,
+      "trianglesMax": 2396222,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 209499984
+    },
+    {
+      "configuration": "2560-standard-bh-False",
+      "fps": 59.1890335,
+      "p95ms": 16.6714,
+      "cpuMs": 16.894841139240516,
+      "gpuMs": 1.1977888202959841,
+      "drawCallsMax": 368,
+      "trianglesMax": 2379698,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 209779808
+    },
+    {
+      "configuration": "2560-chibi-bh-True",
+      "fps": 59.13618,
+      "p95ms": 16.6713,
+      "cpuMs": 16.910209071729955,
+      "gpuMs": 1.0799660380549694,
+      "drawCallsMax": 371,
+      "trianglesMax": 1784706,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 183996176
+    },
+    {
+      "configuration": "2560-chibi-bh-False",
+      "fps": 59.20581,
+      "p95ms": 16.6723,
+      "cpuMs": 16.890065611814325,
+      "gpuMs": 1.2000749598308675,
+      "drawCallsMax": 371,
+      "trianglesMax": 1808198,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 184108352
+    },
+    {
+      "configuration": "3840-standard-bh-True",
+      "fps": 58.05953,
+      "p95ms": 16.6707973,
+      "cpuMs": 17.223661505376342,
+      "gpuMs": 2.242584774193547,
+      "drawCallsMax": 369,
+      "trianglesMax": 2379947,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 209972168
+    },
+    {
+      "configuration": "3840-standard-bh-False",
+      "fps": 58.1871147,
+      "p95ms": 16.6710949,
+      "cpuMs": 17.185700643776823,
+      "gpuMs": 2.5105777167381991,
+      "drawCallsMax": 369,
+      "trianglesMax": 2378004,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 210219040
+    },
+    {
+      "configuration": "3840-chibi-bh-True",
+      "fps": 58.064003,
+      "p95ms": 16.673605,
+      "cpuMs": 17.223009892473115,
+      "gpuMs": 2.0879343483870958,
+      "drawCallsMax": 371,
+      "trianglesMax": 1788212,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 184522456
+    },
+    {
+      "configuration": "3840-chibi-bh-False",
+      "fps": 58.200676,
+      "p95ms": 16.670599,
+      "cpuMs": 17.181874463519303,
+      "gpuMs": 2.2097398111587965,
+      "drawCallsMax": 370,
+      "trianglesMax": 1802199,
+      "graphicsDriverAllocatedBytes": 0,
+      "managedAndNativeAllocatedBytes": 184646936
+    }
+  ],
+  "runtimeErrors": [],
+  "backendPid": 31796,
+  "passed": true
+}

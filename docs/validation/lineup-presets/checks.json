@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-12T18:31:40.631Z",
+  "isolated": true,
+  "checks": [
+    "single removal works while left list is filtered; dirty lineup survives refresh; update is explicit",
+    "named groups switch the complete lineup; duplicate names rejected; clearing never overwrites the saved group",
+    "model names resolve by ID; group rename, cancel and delete retain selected models and their configuration",
+    "delisted models stay visible in presets, block launch, and can be removed directly to restore a usable lineup",
+    "1435x1078: 16 selections scroll, all removal controls fit, clear and start stay visible",
+    "1920x1080: 16 selections scroll, all removal controls fit, clear and start stay visible",
+    "2560x1440: 16 selections scroll, all removal controls fit, clear and start stay visible",
+    "keyboard removal retains focus; removal and presets send no config writes or match requests; credentials are never stored",
+    "corrupt local storage: lineup remains usable and failed saves never claim success",
+    "blocked local storage: lineup remains usable and failed saves never claim success"
+  ],
+  "errors": [],
+  "unintendedWrites": []
+}

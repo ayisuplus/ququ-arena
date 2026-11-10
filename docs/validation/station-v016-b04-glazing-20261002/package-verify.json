@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b04-terraced-lounge\\package-v002",
+    "manifest": {
+      "assetId": "v016_b04_terraced_lounge_window_apertures",
+      "description": "Five original modules with real front and rear apertures and open walnut rear frames. Modeling-stage materials in the GLB; Unity derived glazing material produces transparency. Core and access remain closed, no terrace access or resident identity.",
+      "displayName": "V016 B04 Terraced Lounge Window Apertures",
+      "files": [
+        {
+          "bytes": 2580204,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "b71d8542d39dbf920b9c49131b646fcb46db9892c3dd2a5c471bbeebcd7ea552"
+        },
+        {
+          "bytes": 1713,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "86173c07015d84824b123214e04686b877d82c0afdc19566e11cde4c101a144d"
+        },
+        {
+          "bytes": 856,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "306c9db0625a3eea7bf9aedd18ddaf6ab691ef98805193ce3cfc502fedd7533e"
+        },
+        {
+          "bytes": 2577,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "de272d0ad25aa58593b9a9457facb3bd69e2f2b0e9cf8f79e5b078fc860d2b84"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_81a8da14a0d3be815d9faff4",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

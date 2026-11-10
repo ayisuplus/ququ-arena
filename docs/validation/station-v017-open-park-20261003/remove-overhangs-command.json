@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nvar objects=UnityEngine.Object.FindObjectsByType<UnityEngine.MeshRenderer>(UnityEngine.FindObjectsSortMode.None).Where(r=>r.gameObject.scene==scene&&(r.name.Contains(\"conservatory entry bowed entry canopy\")||r.name==\"Ecology entrance sage fascia\")).Select(r=>r.gameObject).ToArray();\nif(objects.Length!=5)throw new System.Exception(\"Expected four park entry canopies and shared fascia\");\nvar rows=objects.Select(go=>new{go.name,path=UnityEditor.AnimationUtility.CalculateTransformPath(go.transform,null)}).ToArray();\nforeach(var go in objects){UnityEditor.Undo.RecordObject(go,\"Remove all remaining park entry overhangs\");go.SetActive(false);}\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-open-park-20261003/entry-overhang-removal.json\",Newtonsoft.Json.JsonConvert.SerializeObject(rows,Newtonsoft.Json.Formatting.Indented));return new{removed=rows.Length};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "removed": 5
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

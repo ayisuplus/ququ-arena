@@ -1,0 +1,786 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "tongjia-typo",
+    "title": "错字归正 · 语境对照擂台",
+    "description": "复用 TongJia-Bench T3 机制归因 pilot 142 题（源数据 20 条退化题——perturbedChar=distractorChar 扰动未生效——已剔除，属上游 pilot 生成器缺陷）（同音字替换的成语/词语归正：「一劳永遗」→「一劳永逸」）。受控语境设计：C0 中性语境（71）/ C+ 强语境（71）/ C- 误导语境（20）——同词不同语境成组（meta.family=group_id），测语境对归正的助益与干扰。exact 裁判，与 tongjia-pinyin（拼音剖面）互为姊妹罐。",
+    "author": "AI斗兽场（素材：TongJia-Bench T3 pilot）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:tongjia-typo:2026-09-10",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "C0": "中性语境（无语境助益）",
+      "C+": "强语境（语境有助归正）",
+      "C-": "误导语境（语境可能带偏）"
+    }
+  },
+  "startedAt": "2026-09-10T08:40:24.677Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 141,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳",
+      "target": "一劳永逸",
+      "latencyMs": 86,
+      "score": 0,
+      "note": "期望「一劳永逸」，实答「一劳」",
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「一劳永遗」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 300,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「一劳永遗」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 448,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「一劳永遗」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 173,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「一劳永遗」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 321,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0001-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「一劳永遗」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "一劳永逸",
+      "target": "一劳永逸",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「按步就班」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「按步就班」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 168,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「按步就班」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "按部班",
+      "target": "按部就班",
+      "latencyMs": 283,
+      "score": 0,
+      "note": "期望「按部就班」，实答「按部班」",
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「按步就班」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「按步就班」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「按步就班」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「按步就班」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "按部就",
+      "target": "按部就班",
+      "latencyMs": 176,
+      "score": 0,
+      "note": "期望「按部就班」，实答「按部就」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0002-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「按步就班」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「变本利厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 355,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「变本利厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「变本利厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 375,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「变本利厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 143,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「变本利厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 359,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「变本利厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "变本加个",
+      "target": "变本加厉",
+      "latencyMs": 442,
+      "score": 0,
+      "note": "期望「变本加厉」，实答「变本加个」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「变本利厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "变本加厉",
+      "target": "变本加厉",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0003-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「变本利厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "本加厉",
+      "target": "变本加厉",
+      "latencyMs": 374,
+      "score": 0,
+      "note": "期望「变本加厉」，实答「本加厉」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「不计记数」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "不计其数",
+      "target": "不计其数",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「不计记数」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "不计其数",
+      "target": "不计其数",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「不计记数」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "不计其数",
+      "target": "不计其数",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「不计记数」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "不计了数",
+      "target": "不计其数",
+      "latencyMs": 144,
+      "score": 0,
+      "note": "期望「不计其数」，实答「不计了数」",
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「不计记数」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "不计数",
+      "target": "不计其数",
+      "latencyMs": 266,
+      "score": 0,
+      "note": "期望「不计其数」，实答「不计数」",
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「不计记数」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "不计",
+      "target": "不计其数",
+      "latencyMs": 275,
+      "score": 0,
+      "note": "期望「不计其数」，实答「不计」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「不计记数」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "不计",
+      "target": "不计其数",
+      "latencyMs": 400,
+      "score": 0,
+      "note": "期望「不计其数」，实答「不计」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0004-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「不计记数」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "不计",
+      "target": "不计其数",
+      "latencyMs": 286,
+      "score": 0,
+      "note": "期望「不计其数」，实答「不计」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t3-idiom-0005-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「穿流不息」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「穿流不息」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "川流息",
+      "target": "川流不息",
+      "latencyMs": 158,
+      "score": 0,
+      "note": "期望「川流不息」，实答「川流息」",
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「穿流不息」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「穿流不息」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 155,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「穿流不息」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「穿流不息」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 117,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「穿流不息」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "川流",
+      "target": "川流不息",
+      "latencyMs": 149,
+      "score": 0,
+      "note": "期望「川流不息」，实答「川流」",
+      "usage": {
+        "input": 20,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0005-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「穿流不息」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "川流不息",
+      "target": "川流不息",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-c0",
+      "condition": "C0",
+      "model": "mock:xueba-o9",
+      "prompt": "「再励再厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 241,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-c0",
+      "condition": "C0",
+      "model": "mock:huatou-72b",
+      "prompt": "「再励再厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "再有再厉",
+      "target": "再接再厉",
+      "latencyMs": 84,
+      "score": 0,
+      "note": "期望「再接再厉」，实答「再有再厉」",
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-c0",
+      "condition": "C0",
+      "model": "mock:jianglv-7b",
+      "prompt": "「再励再厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "再接",
+      "target": "再接再厉",
+      "latencyMs": 212,
+      "score": 0,
+      "note": "期望「再接再厉」，实答「再接」",
+      "usage": {
+        "input": 14,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-c0",
+      "condition": "C0",
+      "model": "mock:laoshi-k2",
+      "prompt": "「再励再厉」中有一个错别字，请改正并只输出改正后的词语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 14,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-cp",
+      "condition": "C+",
+      "model": "mock:xueba-o9",
+      "prompt": "「再励再厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 164,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-cp",
+      "condition": "C+",
+      "model": "mock:huatou-72b",
+      "prompt": "「再励再厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 163,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-cp",
+      "condition": "C+",
+      "model": "mock:jianglv-7b",
+      "prompt": "「再励再厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "t3-idiom-0006-cp",
+      "condition": "C+",
+      "model": "mock:laoshi-k2",
+      "prompt": "「再励再厉」中有一个错别字。提示：这是一个四字成语。请改正并只输出改正后的成语：",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 333,
+      "score": 1,
+      "usage": {
+        "input": 20,
+        "output": 2
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "8795b9219684b6f4",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.16.0"
+  }
+}

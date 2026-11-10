@@ -1,0 +1,1041 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "case-clash",
+    "title": "案卷冲突检测擂台",
+    "description": "主题致敬法律AI（其系统级 L2 能力「跨材料冲突检测」的单提示移植；内容自建）。给出借条/流水/证言/合同等两份案卷材料，判断是否存在冲突：冲突题须答出冲突并点中锚点（冲突词 + 冲突点关键词，组合裁判），干净对照题只许答「无冲突」（exact）。时间线/金额/身份三类冲突——多文档一致性是多证据场景的基本功。",
+    "author": "AI斗兽场（主题致敬：法律AI）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:case-clash:2026-09-10",
+    "taskPrefix": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "timeline-clash": "时间线冲突（日期/时间/期限矛盾）",
+      "amount-clash": "金额冲突（借条/流水/合同数额不符）",
+      "identity-clash": "身份冲突（签字/证人/年龄不一致）",
+      "clean": "干净对照：材料完全一致，须答「无冲突」"
+    }
+  },
+  "startedAt": "2026-09-10T07:25:09.746Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 318,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 4
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款五天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 430,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 248,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-01",
+      "condition": "timeline-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：「今借到李某人民币五万元整，借款人张某，2024 年 3 月 10 日」。\n材料B（银行流水）：李某账户 2024 年 3 月 5 日向张某转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：转账早于借条落款五天",
+      "target": "冲突：转账早于借条落款五天",
+      "latencyMs": 278,
+      "score": 0,
+      "note": "缺少关键词: 日期",
+      "usage": {
+        "input": 77,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-02",
+      "condition": "timeline-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（原告陈述）：「事故发生于 2024 年 5 月 1 日晚八点左右」。\n材料B（医院急诊记录）：伤者入院时间为 2024 年 5 月 1 日下午两点。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：陈述的事故时间晚于入院时间",
+      "target": "冲突：陈述的事故时间晚于入院时间",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-02",
+      "condition": "timeline-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（原告陈述）：「事故发生于 2024 年 5 月 1 日晚八点左右」。\n材料B（医院急诊记录）：伤者入院时间为 2024 年 5 月 1 日下午两点。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：陈述的的故时间晚于入院时间",
+      "target": "冲突：陈述的事故时间晚于入院时间",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-02",
+      "condition": "timeline-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（原告陈述）：「事故发生于 2024 年 5 月 1 日晚八点左右」。\n材料B（医院急诊记录）：伤者入院时间为 2024 年 5 月 1 日下午两点。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：陈述的事故",
+      "target": "冲突：陈述的事故时间晚于入院时间",
+      "latencyMs": 446,
+      "score": 0,
+      "note": "缺少关键词: 时间",
+      "usage": {
+        "input": 74,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-02",
+      "condition": "timeline-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（原告陈述）：「事故发生于 2024 年 5 月 1 日晚八点左右」。\n材料B（医院急诊记录）：伤者入院时间为 2024 年 5 月 1 日下午两点。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：陈述的人故时间晚于入院时间",
+      "target": "冲突：陈述的事故时间晚于入院时间",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 74,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-03",
+      "condition": "timeline-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：租期自 2024 年 1 月 1 日起一年。\n材料B（聊天记录）：租客 2023 年 12 月 20 日说\"已经住进来半个月了\"。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：入住时间早于租期开始",
+      "target": "冲突：入住时间早于租期开始",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-03",
+      "condition": "timeline-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：租期自 2024 年 1 月 1 日起一年。\n材料B（聊天记录）：租客 2023 年 12 月 20 日说\"已经住进来半个月了\"。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：入住时间早于租期开始",
+      "target": "冲突：入住时间早于租期开始",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-03",
+      "condition": "timeline-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：租期自 2024 年 1 月 1 日起一年。\n材料B（聊天记录）：租客 2023 年 12 月 20 日说\"已经住进来半个月了\"。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：入住时间早租期开始",
+      "target": "冲突：入住时间早于租期开始",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-03",
+      "condition": "timeline-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：租期自 2024 年 1 月 1 日起一年。\n材料B（聊天记录）：租客 2023 年 12 月 20 日说\"已经住进来半个月了\"。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：入住时间早于租期开始",
+      "target": "冲突：入住时间早于租期开始",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-04",
+      "condition": "timeline-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤记录）：王某 4 月 10 日全天旷工。\n材料B（出差审批单）：王某 4 月 10 日经批准赴外地出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：旷工记录与批准的出差同日",
+      "target": "冲突：旷工记录与批准的出差同日",
+      "latencyMs": 473,
+      "score": 0,
+      "note": "缺少关键词: 考勤",
+      "usage": {
+        "input": 64,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-04",
+      "condition": "timeline-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤记录）：王某 4 月 10 日全天旷工。\n材料B（出差审批单）：王某 4 月 10 日经批准赴外地出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：旷工记录与批准的出差同日",
+      "target": "冲突：旷工记录与批准的出差同日",
+      "latencyMs": 138,
+      "score": 0,
+      "note": "缺少关键词: 考勤",
+      "usage": {
+        "input": 64,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-04",
+      "condition": "timeline-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤记录）：王某 4 月 10 日全天旷工。\n材料B（出差审批单）：王某 4 月 10 日经批准赴外地出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：旷工记录与",
+      "target": "冲突：旷工记录与批准的出差同日",
+      "latencyMs": 275,
+      "score": 0,
+      "note": "缺少关键词: 考勤",
+      "usage": {
+        "input": 64,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-TL-04",
+      "condition": "timeline-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤记录）：王某 4 月 10 日全天旷工。\n材料B（出差审批单）：王某 4 月 10 日经批准赴外地出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：旷工记录与批准的出差同日",
+      "target": "冲突：旷工记录与批准的出差同日",
+      "latencyMs": 460,
+      "score": 0,
+      "note": "缺少关键词: 考勤",
+      "usage": {
+        "input": 64,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-01",
+      "condition": "amount-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：借款本金十万元。\n材料B（银行流水）：实际转账八万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：借条本金与实转金额差两万",
+      "target": "冲突：借条本金与实转金额差两万",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-01",
+      "condition": "amount-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：借款本金十万元。\n材料B（银行流水）：实际转账八万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：借条本金与",
+      "target": "冲突：借条本金与实转金额差两万",
+      "latencyMs": 190,
+      "score": 0,
+      "note": "缺少关键词: 金额",
+      "usage": {
+        "input": 53,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-01",
+      "condition": "amount-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：借款本金十万元。\n材料B（银行流水）：实际转账八万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：借条本金与实为金额差两万",
+      "target": "冲突：借条本金与实转金额差两万",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-01",
+      "condition": "amount-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：借款本金十万元。\n材料B（银行流水）：实际转账八万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：借条本金与",
+      "target": "冲突：借条本金与实转金额差两万",
+      "latencyMs": 285,
+      "score": 0,
+      "note": "缺少关键词: 金额",
+      "usage": {
+        "input": 53,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-02",
+      "condition": "amount-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（报价单）：设备总价 56 万元。\n材料B（付款凭证）：已付 65 万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：已付金额超过报价九万",
+      "target": "冲突：已付金额超过报价九万",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-02",
+      "condition": "amount-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（报价单）：设备总价 56 万元。\n材料B（付款凭证）：已付 65 万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：已付金额超过报价九万",
+      "target": "冲突：已付金额超过报价九万",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-02",
+      "condition": "amount-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（报价单）：设备总价 56 万元。\n材料B（付款凭证）：已付 65 万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：已付一额超过报价九万",
+      "target": "冲突：已付金额超过报价九万",
+      "latencyMs": 117,
+      "score": 0,
+      "note": "缺少关键词: 金额",
+      "usage": {
+        "input": 55,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-02",
+      "condition": "amount-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（报价单）：设备总价 56 万元。\n材料B（付款凭证）：已付 65 万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：已付金额超过报价九万",
+      "target": "冲突：已付金额超过报价九万",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 55,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-03",
+      "condition": "amount-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（收据）：收到租金每月三千元。\n材料B（转账记录）：每月实转两千五百元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：收据金额与实转每月差五百元",
+      "target": "冲突：收据金额与实转每月差五百元",
+      "latencyMs": 279,
+      "score": 0,
+      "note": "缺少关键词: 租金",
+      "usage": {
+        "input": 55,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-03",
+      "condition": "amount-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（收据）：收到租金每月三千元。\n材料B（转账记录）：每月实转两千五百元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：收据金额与实转每月差五百元",
+      "target": "冲突：收据金额与实转每月差五百元",
+      "latencyMs": 386,
+      "score": 0,
+      "note": "缺少关键词: 租金",
+      "usage": {
+        "input": 55,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-03",
+      "condition": "amount-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（收据）：收到租金每月三千元。\n材料B（转账记录）：每月实转两千五百元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：收据金额与",
+      "target": "冲突：收据金额与实转每月差五百元",
+      "latencyMs": 127,
+      "score": 0,
+      "note": "缺少关键词: 租金",
+      "usage": {
+        "input": 55,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-03",
+      "condition": "amount-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（收据）：收到租金每月三千元。\n材料B（转账记录）：每月实转两千五百元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲：收据金额与实转每月差五百元",
+      "target": "冲突：收据金额与实转每月差五百元",
+      "latencyMs": 382,
+      "score": 0,
+      "note": "缺少关键词: 租金",
+      "usage": {
+        "input": 55,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-04",
+      "condition": "amount-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（工资条）：月基本工资 8000 元。\n材料B（劳动合同）：约定月基本工资 6000 元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：工资条与合同约定差两千元",
+      "target": "冲突：工资条与合同约定差两千元",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-04",
+      "condition": "amount-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（工资条）：月基本工资 8000 元。\n材料B（劳动合同）：约定月基本工资 6000 元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：工资条与合同约定差两千元",
+      "target": "冲突：工资条与合同约定差两千元",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-04",
+      "condition": "amount-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（工资条）：月基本工资 8000 元。\n材料B（劳动合同）：约定月基本工资 6000 元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：工资条与合同约定差两千元",
+      "target": "冲突：工资条与合同约定差两千元",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-AM-04",
+      "condition": "amount-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（工资条）：月基本工资 8000 元。\n材料B（劳动合同）：约定月基本工资 6000 元。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：工资条与合同约定差两千元",
+      "target": "冲突：工资条与合同约定差两千元",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-01",
+      "condition": "identity-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：出卖人签字「张某」。\n材料B（身份证复印）：出卖人身份证姓名为「章某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：签字与身",
+      "target": "冲突：签字与身份证姓名不符",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-01",
+      "condition": "identity-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：出卖人签字「张某」。\n材料B（身份证复印）：出卖人身份证姓名为「章某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：签字与身份证姓名不符",
+      "target": "冲突：签字与身份证姓名不符",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-01",
+      "condition": "identity-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：出卖人签字「张某」。\n材料B（身份证复印）：出卖人身份证姓名为「章某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突上签字与身份证姓名不符",
+      "target": "冲突：签字与身份证姓名不符",
+      "latencyMs": 316,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-01",
+      "condition": "identity-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：出卖人签字「张某」。\n材料B（身份证复印）：出卖人身份证姓名为「章某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：签字与身份证姓名不符",
+      "target": "冲突：签字与身份证姓名不符",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 7
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-02",
+      "condition": "identity-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证人证言甲）：「当晚开车的是穿红衣服的男子」。\n材料B（证人证言乙）：「当晚开车的是穿红衣服的女子」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：两证人对驾车人性别陈述相反",
+      "target": "冲突：两证人对驾车人性别陈述相反",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-02",
+      "condition": "identity-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证人证言甲）：「当晚开车的是穿红衣服的男子」。\n材料B（证人证言乙）：「当晚开车的是穿红衣服的女子」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：两证人对驾",
+      "target": "冲突：两证人对驾车人性别陈述相反",
+      "latencyMs": 372,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-02",
+      "condition": "identity-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证人证言甲）：「当晚开车的是穿红衣服的男子」。\n材料B（证人证言乙）：「当晚开车的是穿红衣服的女子」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：两证人对驾",
+      "target": "冲突：两证人对驾车人性别陈述相反",
+      "latencyMs": 210,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-02",
+      "condition": "identity-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证人证言甲）：「当晚开车的是穿红衣服的男子」。\n材料B（证人证言乙）：「当晚开车的是穿红衣服的女子」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲：两证人对驾车人性别陈述相反",
+      "target": "冲突：两证人对驾车人性别陈述相反",
+      "latencyMs": 379,
+      "score": 0,
+      "usage": {
+        "input": 63,
+        "output": 8
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "CC-ID-03",
+      "condition": "identity-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（授权委托书）：受托人为「刘某」。\n材料B（庭审笔录）：实际出庭代理的是「陈某」，未见变更委托手续。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：受我人与实际代理人不一致",
+      "target": "冲突：受托人与实际代理人不一致",
+      "latencyMs": 162,
+      "score": 0,
+      "note": "缺少关键词: 委托",
+      "usage": {
+        "input": 62,
+        "output": 8
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-03",
+      "condition": "identity-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（授权委托书）：受托人为「刘某」。\n材料B（庭审笔录）：实际出庭代理的是「陈某」，未见变更委托手续。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：受托人与实际代理人不一致",
+      "target": "冲突：受托人与实际代理人不一致",
+      "latencyMs": 207,
+      "score": 0,
+      "note": "缺少关键词: 委托",
+      "usage": {
+        "input": 62,
+        "output": 8
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-03",
+      "condition": "identity-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（授权委托书）：受托人为「刘某」。\n材料B（庭审笔录）：实际出庭代理的是「陈某」，未见变更委托手续。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：受托人与实际代理人不一",
+      "target": "冲突：受托人与实际代理人不一致",
+      "latencyMs": 364,
+      "score": 0,
+      "note": "缺少关键词: 委托",
+      "usage": {
+        "input": 62,
+        "output": 7
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-03",
+      "condition": "identity-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（授权委托书）：受托人为「刘某」。\n材料B（庭审笔录）：实际出庭代理的是「陈某」，未见变更委托手续。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：受托人与实际代理人不一致",
+      "target": "冲突：受托人与实际代理人不一致",
+      "latencyMs": 125,
+      "score": 0,
+      "note": "缺少关键词: 委托",
+      "usage": {
+        "input": 62,
+        "output": 8
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-04",
+      "condition": "identity-clash",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（病历）：患者年龄 45 岁。\n材料B（挂号单）：同一患者身份证号对应年龄 29 岁。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：病历年龄与身份证年龄相差十六岁",
+      "target": "冲突：病历年龄与身份证年龄相差十六岁",
+      "latencyMs": 176,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-04",
+      "condition": "identity-clash",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（病历）：患者年龄 45 岁。\n材料B（挂号单）：同一患者身份证号对应年龄 29 岁。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：病历年龄与身份证年龄相差十六岁",
+      "target": "冲突：病历年龄与身份证年龄相差十六岁",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-04",
+      "condition": "identity-clash",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（病历）：患者年龄 45 岁。\n材料B（挂号单）：同一患者身份证号对应年龄 29 岁。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：病历年龄与身",
+      "target": "冲突：病历年龄与身份证年龄相差十六岁",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 5
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-ID-04",
+      "condition": "identity-clash",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（病历）：患者年龄 45 岁。\n材料B（挂号单）：同一患者身份证号对应年龄 29 岁。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突：病历年龄与身份证年龄相差十六岁",
+      "target": "冲突：病历年龄与身份证年龄相差十六岁",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 9
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-01",
+      "condition": "clean",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：2024 年 3 月 5 日借款五万元。\n材料B（银行流水）：2024 年 3 月 5 日转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-01",
+      "condition": "clean",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：2024 年 3 月 5 日借款五万元。\n材料B（银行流水）：2024 年 3 月 5 日转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲",
+      "target": "无冲突",
+      "latencyMs": 379,
+      "score": 0,
+      "note": "期望「无冲突」，实答「无冲」",
+      "usage": {
+        "input": 65,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-01",
+      "condition": "clean",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：2024 年 3 月 5 日借款五万元。\n材料B（银行流水）：2024 年 3 月 5 日转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲中",
+      "target": "无冲突",
+      "latencyMs": 300,
+      "score": 0,
+      "note": "期望「无冲突」，实答「无冲中」",
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-01",
+      "condition": "clean",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（借条）：2024 年 3 月 5 日借款五万元。\n材料B（银行流水）：2024 年 3 月 5 日转账五万元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-02",
+      "condition": "clean",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：月租金两千元，每月五日支付。\n材料B（转账记录）：每月五日按时转账两千元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-02",
+      "condition": "clean",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：月租金两千元，每月五日支付。\n材料B（转账记录）：每月五日按时转账两千元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 87,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-02",
+      "condition": "clean",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：月租金两千元，每月五日支付。\n材料B（转账记录）：每月五日按时转账两千元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-02",
+      "condition": "clean",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（合同）：月租金两千元，每月五日支付。\n材料B（转账记录）：每月五日按时转账两千元。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲",
+      "target": "无冲突",
+      "latencyMs": 449,
+      "score": 0,
+      "note": "期望「无冲突」，实答「无冲」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-03",
+      "condition": "clean",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤）：4 月 10 日王某出差。\n材料B（审批单）：4 月 10 日批准王某出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-03",
+      "condition": "clean",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤）：4 月 10 日王某出差。\n材料B（审批单）：4 月 10 日批准王某出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-03",
+      "condition": "clean",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤）：4 月 10 日王某出差。\n材料B（审批单）：4 月 10 日批准王某出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-03",
+      "condition": "clean",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（考勤）：4 月 10 日王某出差。\n材料B（审批单）：4 月 10 日批准王某出差。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲",
+      "target": "无冲突",
+      "latencyMs": 452,
+      "score": 0,
+      "note": "期望「无冲突」，实答「无冲」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-04",
+      "condition": "clean",
+      "model": "mock:xueba-o9",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证言甲）：「送货单由仓管员赵某签收」。\n材料B（证言乙）：「那天收货的是仓管员赵某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲突",
+      "target": "无冲突",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-04",
+      "condition": "clean",
+      "model": "mock:huatou-72b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证言甲）：「送货单由仓管员赵某签收」。\n材料B（证言乙）：「那天收货的是仓管员赵某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "中冲突",
+      "target": "无冲突",
+      "latencyMs": 307,
+      "score": 0,
+      "note": "期望「无冲突」，实答「中冲突」",
+      "usage": {
+        "input": 59,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-04",
+      "condition": "clean",
+      "model": "mock:jianglv-7b",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证言甲）：「送货单由仓管员赵某签收」。\n材料B（证言乙）：「那天收货的是仓管员赵某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "无冲了",
+      "target": "无冲突",
+      "latencyMs": 255,
+      "score": 0,
+      "note": "期望「无冲突」，实答「无冲了」",
+      "usage": {
+        "input": 59,
+        "output": 2
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "CC-CL-04",
+      "condition": "clean",
+      "model": "mock:laoshi-k2",
+      "prompt": "你是细致的案卷审查员。只输出一行：材料一致则输出「无冲突」；有冲突则输出「冲突：<冲突点简述>」。不多一行。\n材料A（证言甲）：「送货单由仓管员赵某签收」。\n材料B（证言乙）：「那天收货的是仓管员赵某」。\n\n以上材料之间是否存在冲突？",
+      "answer": "冲突",
+      "target": "无冲突",
+      "latencyMs": 374,
+      "score": 0,
+      "note": "期望「无冲突」，实答「冲突」",
+      "usage": {
+        "input": 59,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "d320d2204b0b5768",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.8.0"
+  }
+}

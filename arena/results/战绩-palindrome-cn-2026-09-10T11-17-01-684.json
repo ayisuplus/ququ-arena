@@ -1,0 +1,2212 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "palindrome-cn",
+    "title": "回文擂台",
+    "description": "中文回文判断（逐字倒读是否完全相同）：正例为经典回文清单（上海自来水来自海上/客上天然居居然天上客等），反例分两档——普通非回文与「回文改一字」的拟回文（长得像但不是）。生成器校验反例确实不回文。",
+    "author": "AI斗兽场（生成器自建，经典回文清单手写）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:palindrome-cn:2026-09-10",
+    "taskPrefix": "只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "is-palindrome": "真回文（答「是」）",
+      "not-palindrome": "非回文（答「否」；含拟回文陷阱档）"
+    }
+  },
+  "startedAt": "2026-09-10T11:17:01.684Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "PL-Y-01",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海自来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-01",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海自来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-01",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海自来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-01",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海自来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 443,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-02",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生花落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-02",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生花落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-02",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生花落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-02",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生花落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-03",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「黄山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-03",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「黄山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 202,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-03",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「黄山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-03",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「黄山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 388,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-04",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连水尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 385,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-04",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连水尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 470,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-04",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连水尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-04",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连水尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-05",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁雾」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-05",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁雾」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 254,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-05",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁雾」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-05",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁雾」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-06",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山鸡斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 404,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-06",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山鸡斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-06",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山鸡斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-06",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山鸡斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 413,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-07",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上客」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-07",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上客」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 440,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-07",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上客」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-07",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上客」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-08",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「人过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 386,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-08",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「人过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-08",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「人过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-08",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「人过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 232,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-09",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺隐云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-09",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺隐云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-09",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺隐云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 97,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-09",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺隐云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 200,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-10",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会桥」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-10",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会桥」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-10",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会桥」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-10",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会桥」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-11",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅映雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-11",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅映雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-11",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅映雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-11",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅映雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 311,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-12",
+      "condition": "is-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺歌蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-12",
+      "condition": "is-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺歌蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-12",
+      "condition": "is-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺歌蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 278,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-Y-12",
+      "condition": "is-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺歌蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "PL-N1-01",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「今天天气真不错」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-01",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「今天天气真不错」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-01",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「今天天气真不错」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 319,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-01",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「今天天气真不错」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-02",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「我们去公园散步」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-02",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「我们去公园散步」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-02",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「我们去公园散步」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-02",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「我们去公园散步」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-03",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这本书写得很好」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-03",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这本书写得很好」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-03",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这本书写得很好」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-03",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这本书写得很好」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 454,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-04",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「他在学校当老师」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-04",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「他在学校当老师」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-04",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「他在学校当老师」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 455,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-04",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「他在学校当老师」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-05",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「明天要早起上班」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 318,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-05",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「明天要早起上班」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 121,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-05",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「明天要早起上班」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-05",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「明天要早起上班」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 103,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-06",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这家店菜很好吃」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 190,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-06",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这家店菜很好吃」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 325,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-06",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这家店菜很好吃」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-06",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「这家店菜很好吃」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-07",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「小猫在追蝴蝶」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-07",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「小猫在追蝴蝶」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 472,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-07",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「小猫在追蝴蝶」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-07",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「小猫在追蝴蝶」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 436,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-08",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「周末去看电影」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-08",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「周末去看电影」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 452,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-08",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「周末去看电影」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-08",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「周末去看电影」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-09",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「老师夸我进步大」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-09",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「老师夸我进步大」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 323,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-09",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「老师夸我进步大」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-09",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「老师夸我进步大」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-10",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「晚饭吃了三碗面」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-10",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「晚饭吃了三碗面」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 151,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-10",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「晚饭吃了三碗面」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-10",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「晚饭吃了三碗面」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-11",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「火车准点到站」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-11",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「火车准点到站」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-11",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「火车准点到站」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-11",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「火车准点到站」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-12",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「春天花开了」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-12",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「春天花开了」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-12",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「春天花开了」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 339,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N1-12",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「春天花开了」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 459,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "PL-N2-01",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海山来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 416,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-01",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海山来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-01",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海山来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-01",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「上海山来水来自海上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 171,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-02",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生小落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 133,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-02",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生小落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-02",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生小落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-02",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山东落花生小落东山」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-03",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-03",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 109,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-03",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 458,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-03",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「山山落叶松叶落山黄」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 371,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-04",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连小尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 138,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-04",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连小尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-04",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连小尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 389,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-04",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天连小尾水连天」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-05",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁云」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-05",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁云」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-05",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁云」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 234,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-05",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雾锁山头山锁云」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 95,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-06",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 264,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-06",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-06",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-06",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「斗鸡山上山斗」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-07",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 108,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-07",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-07",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 471,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-07",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「客上天然居居然天上」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 469,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-08",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-08",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 267,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-08",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 90,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-08",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「天过大佛寺寺佛大过人」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-09",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺小云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-09",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺小云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 383,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-09",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺小云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-09",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「僧游云隐寺寺小云游僧」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 343,
+      "score": 1,
+      "usage": {
+        "input": 25,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-10",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会中」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-10",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会中」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-10",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会中」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-10",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「桥会快船快会中」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-11",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅多雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-11",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅多雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-11",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅多雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 192,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-11",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「雪映梅花梅多雪」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-12",
+      "condition": "not-palindrome",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺水蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 91,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-12",
+      "condition": "not-palindrome",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺水蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 376,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-12",
+      "condition": "not-palindrome",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺水蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    },
+    {
+      "taskId": "PL-N2-12",
+      "condition": "not-palindrome",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出「是」或「否」，不多一个字。\n「莺水蝶舞舞蝶歌莺」逐字倒过来读和原来完全一样（是回文）吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 384,
+      "score": 1,
+      "usage": {
+        "input": 24,
+        "output": 1
+      },
+      "finishedMs": 3
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "1b096984822cee6c",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.26.0"
+  }
+}

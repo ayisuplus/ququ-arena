@@ -1,0 +1,63 @@
+{
+  "version": "v24",
+  "createdAt": "2026-09-22T08:44:47.6513218Z",
+  "defaultGraphics": "Direct3D11",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "unity": "6000.3.24f1",
+  "launcher": "Start-Game.cmd",
+  "rollback": "Start-Game-v23.cmd",
+  "validation": "docs/validation/layout-v24/README.md",
+  "source": "production/layout-v24",
+  "preserved": [
+    {
+      "path": "C:\\Users\\36322\\AppData\\LocalLow\\QuQuArena\\QuQu Arena 3D\\Customization\\profile.json",
+      "sha256": "24BC9DB0DBB45BF08D085605EECAFBA1E3AEBE988656224BF42CA84EDBA79F0B",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\projects\\AI斗兽场\\QuQuArena3D\\BuildV23\\QuQuArena3D_Data\\Managed\\Assembly-CSharp.dll",
+      "sha256": "F5922854D83687FFEF019079E7BC8B273632BAC52F230B1A54B1761B9B63F45E",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "path": "QuQuArena3D.exe",
+      "sha256": "E1A9D9E062BBCDB91F76983FAE8BB1E4FB8036D55289318EF91033F130D38ECC",
+      "bytes": 667136
+    },
+    {
+      "path": "UnityPlayer.dll",
+      "sha256": "E286BD7F01C45197D051325423B13DF133D2AC315671ECA2881E7936D251C6BD",
+      "bytes": 36742568
+    },
+    {
+      "path": "QuQuArena3D_Data/globalgamemanagers",
+      "sha256": "1D72C344F26E444F6DACD139A4496F742952B8E81919826AA651EA3A6C479526",
+      "bytes": 375476
+    },
+    {
+      "path": "QuQuArena3D_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "60BFB83C3630A608C615BE53A7CC259D2F6F7B83729784AF7B7F01453237FD0B",
+      "bytes": 651264
+    },
+    {
+      "path": "Backend/node.exe",
+      "sha256": "3331E1FFE19874215472217C5E94F5A0C6D8E18C4AC7111D3937AA0AD5E9B4A5",
+      "bytes": 91694408
+    },
+    {
+      "path": "NativeDialogs/QuQuFileDialog.exe",
+      "sha256": "FD23EC3599429DC32F02B7D086106C02FA4A7B6445B5F9D623CE3B63D760A905",
+      "bytes": 6656
+    }
+  ],
+  "windowsEvidence": [
+    "windows-03-slap",
+    "windows-03-duel",
+    "windows-03-spectator",
+    "facilities-05",
+    "exit-final-default"
+  ],
+  "sceneShaderHashes": "player-data-hashes.json"
+}

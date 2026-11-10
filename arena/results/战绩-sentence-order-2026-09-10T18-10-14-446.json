@@ -1,0 +1,177 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "sentence-order",
+    "title": "语句排序擂台",
+    "description": "形制致敬行测语句排序（内容自建）。把一段连贯文字的 5 个句子打乱，按行文逻辑重排，exact 裁判（序号数字串）。reference-chain 考指代衔接（「它/这些/在他的带领下」必须后指）、conjunction-chain 考关联词与论证衔接（首先/其次/然后/最后、因为/因此、不但/而且/更）、general-detail 考总分结构（总起→分述→总结）、time-space 考时空顺序（参观路线/四季/登山/村庄一天）。每题只设唯一连贯顺序；meta.sentences 存正确序、meta.order 存数字串，契约测试三方映射复算（展示序按 order 重排 ≡ 正确序，展示序≠正确序防送分，20 串互不相同）。",
+    "author": "AI斗兽场（内容自建，形制致敬行测语句排序）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:sentence-order:2026-09-10",
+    "taskPrefix": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "reference-chain": "指代衔接（它/这些/其 必须后指）",
+      "conjunction-chain": "关联词与论证衔接（首先/因为/不但/所以）",
+      "general-detail": "总分结构（总起→分述→总结）",
+      "time-space": "时空顺序（路线/四季/一天）"
+    }
+  },
+  "startedAt": "2026-09-10T18:10:14.446Z",
+  "durationMs": 808,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 102,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "351",
+      "target": "35142",
+      "latencyMs": 435,
+      "score": 0,
+      "note": "期望「35142」，实答「351」",
+      "usage": {
+        "input": 65,
+        "output": 2
+      },
+      "finishedMs": 202
+    },
+    {
+      "taskId": "SO-RC-01",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①河里有成群的小鱼。\n②给孩子们带来了许多欢乐。\n③我的家乡有一条小河。\n④它们在水草间穿梭嬉戏。\n⑤河水清澈见底。",
+      "answer": "35142",
+      "target": "35142",
+      "latencyMs": 156,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 3
+      },
+      "finishedMs": 202
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:xueba-o9",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 404
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:huatou-72b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "341",
+      "target": "34152",
+      "latencyMs": 379,
+      "score": 0,
+      "note": "期望「34152」，实答「341」",
+      "usage": {
+        "input": 69,
+        "output": 2
+      },
+      "finishedMs": 404
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:jianglv-7b",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "34152",
+      "target": "34152",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 69,
+        "output": 3
+      },
+      "finishedMs": 606
+    },
+    {
+      "taskId": "SO-RC-02",
+      "condition": "reference-chain",
+      "model": "mock:laoshi-k2",
+      "prompt": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 25413），不多一个字。\n把下列 5 个句子排成一段连贯的话：\n①同学们都喜欢听她的课。\n②大家都十分尊敬她。\n③李老师教我们语文。\n④她讲课生动有趣。\n⑤在她的带领下，我们班的语文成绩不断提高。",
+      "answer": "341",
+      "target": "34152",
+      "latencyMs": 456,
+      "score": 0,
+      "note": "期望「34152」，实答「341」",
+      "usage": {
+        "input": 69,
+        "output": 2
+      },
+      "finishedMs": 606
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "3b4e54bdecef7500",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.15.0"
+  }
+}

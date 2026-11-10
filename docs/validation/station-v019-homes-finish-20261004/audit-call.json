@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-homes-finish.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "Homes green",
+            "reference": true,
+            "triangles": true,
+            "geometry": true,
+            "uv": true
+          },
+          {
+            "name": "Homes porcelain",
+            "reference": true,
+            "triangles": true,
+            "geometry": true,
+            "uv": true
+          }
+        ],
+        "colliders": 19,
+        "errors": [],
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

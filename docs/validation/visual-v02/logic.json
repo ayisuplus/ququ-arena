@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new {logic=ArenaBuild.ValidateLogic(),presets=ArenaModelPresetBuild.CheckPreferences(),prepared=ArenaBuild.Prepare(),shaders=UnityEditor.ShaderUtil.GetShaderMessages(Shader.Find(\"QuQu/Painted Character\")).Select(m=>m.message).ToArray()};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "logic": "7 presentation and customization assertions passed",
+        "presets": "11 model identity, legacy customization and portable preset checks passed",
+        "prepared": "Scene and Windows settings ready: Assets/Scenes/QuQuArena.unity",
+        "shaders": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7801,
+      "projectPath": "C:\\Users\\36322\\AppData\\Local\\Temp\\ququ-arena3d-build-22dd3ca5"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,1264 @@
+{
+  "scene": "BlackHoleStationVisualSampleV012A1",
+  "graphics": "NVIDIA GeForce RTX 5090",
+  "graphicsApi": "Direct3D11",
+  "width": 2560,
+  "height": 1440,
+  "holdSecondsRequested": 1800,
+  "quality": "PC",
+  "vSync": 0,
+  "targetFrameRate": -1,
+  "windows": [
+    {
+      "label": "broadcast-off",
+      "broadcastEnabled": false,
+      "seconds": 10.000362500000003,
+      "frames": 15954,
+      "mainCameraRenders": 15954,
+      "feedCameraRenders": 0,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 15954,
+        "slowerThan60Hz": 1,
+        "mean": 0.62685797295389634,
+        "p50": 0.59039826737716794,
+        "p95": 0.84420351777225733,
+        "p99": 1.3713010121136904,
+        "max": 18.855299800634384
+      },
+      "gpuMs": {
+        "count": 13695,
+        "slowerThan60Hz": 0,
+        "mean": 0.527455520993062,
+        "p50": 0.493568,
+        "p95": 0.82048,
+        "p99": 1.285888,
+        "max": 2.10816
+      },
+      "cpuMs": {
+        "count": 15954,
+        "slowerThan60Hz": 1,
+        "mean": 0.62688970791024445,
+        "p50": 0.5901,
+        "p95": 0.8446,
+        "p99": 1.3705,
+        "max": 18.8565
+      },
+      "unityAllocatedBytes": 196839234,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 6811648
+    },
+    {
+      "label": "broadcast-on",
+      "broadcastEnabled": true,
+      "seconds": 10.0005159,
+      "frames": 10051,
+      "mainCameraRenders": 10051,
+      "feedCameraRenders": 10051,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 10051,
+        "slowerThan60Hz": 1,
+        "mean": 0.994975485635747,
+        "p50": 0.96780044259503484,
+        "p95": 1.203202991746366,
+        "p99": 1.7793013248592615,
+        "max": 18.460197374224663
+      },
+      "gpuMs": {
+        "count": 9661,
+        "slowerThan60Hz": 0,
+        "mean": 0.95184438215506018,
+        "p50": 0.923904,
+        "p95": 1.259264,
+        "p99": 1.656576,
+        "max": 2.883328
+      },
+      "cpuMs": {
+        "count": 10051,
+        "slowerThan60Hz": 1,
+        "mean": 0.99499283653368353,
+        "p50": 0.9678,
+        "p95": 1.2031,
+        "p99": 1.7793,
+        "max": 18.4633
+      },
+      "unityAllocatedBytes": 196867696,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 6041600
+    },
+    {
+      "label": "sustained-01",
+      "broadcastEnabled": true,
+      "seconds": 60.000969600000005,
+      "frames": 60353,
+      "mainCameraRenders": 60353,
+      "feedCameraRenders": 60353,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 60353,
+        "slowerThan60Hz": 8,
+        "mean": 0.99423091993324841,
+        "p50": 0.96609978936612606,
+        "p95": 1.2052012607455254,
+        "p99": 1.7646966734901071,
+        "max": 18.71899887919426
+      },
+      "gpuMs": {
+        "count": 58086,
+        "slowerThan60Hz": 0,
+        "mean": 0.95106354357332046,
+        "p50": 0.920832,
+        "p95": 1.270784,
+        "p99": 1.677568,
+        "max": 2.862848
+      },
+      "cpuMs": {
+        "count": 60353,
+        "slowerThan60Hz": 8,
+        "mean": 0.99422560767484136,
+        "p50": 0.9659,
+        "p95": 1.2054,
+        "p99": 1.7651,
+        "max": 18.722
+      },
+      "unityAllocatedBytes": 196896056,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8101888
+    },
+    {
+      "label": "sustained-02",
+      "broadcastEnabled": true,
+      "seconds": 60.000213200000019,
+      "frames": 59868,
+      "mainCameraRenders": 59868,
+      "feedCameraRenders": 59868,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 59868,
+        "slowerThan60Hz": 12,
+        "mean": 1.0025909567335136,
+        "p50": 0.97439769888296723,
+        "p95": 1.213201554492116,
+        "p99": 1.7661990132182837,
+        "max": 24.398596957325935
+      },
+      "gpuMs": {
+        "count": 57612,
+        "slowerThan60Hz": 0,
+        "mean": 0.95634525029508044,
+        "p50": 0.92672,
+        "p95": 1.281536,
+        "p99": 1.683968,
+        "max": 2.893056
+      },
+      "cpuMs": {
+        "count": 59868,
+        "slowerThan60Hz": 12,
+        "mean": 1.0025913576534993,
+        "p50": 0.9743,
+        "p95": 1.2135,
+        "p99": 1.7679,
+        "max": 24.4013
+      },
+      "unityAllocatedBytes": 196865888,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7389184
+    },
+    {
+      "label": "sustained-03",
+      "broadcastEnabled": true,
+      "seconds": 60.000118900000018,
+      "frames": 60216,
+      "mainCameraRenders": 60216,
+      "feedCameraRenders": 60216,
+      "invalidGpuTimings": 3,
+      "frameMs": {
+        "count": 60216,
+        "slowerThan60Hz": 11,
+        "mean": 0.99679820503098493,
+        "p50": 0.96680130809545517,
+        "p95": 1.2122944463044405,
+        "p99": 1.7551020719110966,
+        "max": 24.680102244019508
+      },
+      "gpuMs": {
+        "count": 57747,
+        "slowerThan60Hz": 0,
+        "mean": 0.950512492908721,
+        "p50": 0.920064,
+        "p95": 1.281536,
+        "p99": 1.688832,
+        "max": 2.938368
+      },
+      "cpuMs": {
+        "count": 60216,
+        "slowerThan60Hz": 11,
+        "mean": 0.99681093397104159,
+        "p50": 0.9669,
+        "p95": 1.2124,
+        "p99": 1.7556,
+        "max": 24.6802
+      },
+      "unityAllocatedBytes": 196900896,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8134656
+    },
+    {
+      "label": "sustained-04",
+      "broadcastEnabled": true,
+      "seconds": 60.0001728,
+      "frames": 57405,
+      "mainCameraRenders": 57405,
+      "feedCameraRenders": 57405,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 57405,
+        "slowerThan60Hz": 12,
+        "mean": 1.0456017874434846,
+        "p50": 1.0079010389745235,
+        "p95": 1.3531037839129567,
+        "p99": 1.8340985989198089,
+        "max": 24.2024939507246
+      },
+      "gpuMs": {
+        "count": 55127,
+        "slowerThan60Hz": 0,
+        "mean": 0.98588535824551582,
+        "p50": 0.953088,
+        "p95": 1.34912,
+        "p99": 1.730816,
+        "max": 5.456384
+      },
+      "cpuMs": {
+        "count": 57405,
+        "slowerThan60Hz": 13,
+        "mean": 1.045591561710655,
+        "p50": 1.0079,
+        "p95": 1.3532,
+        "p99": 1.8342,
+        "max": 24.205
+      },
+      "unityAllocatedBytes": 196866880,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7397376
+    },
+    {
+      "label": "sustained-05",
+      "broadcastEnabled": true,
+      "seconds": 60.000787800000012,
+      "frames": 59077,
+      "mainCameraRenders": 59077,
+      "feedCameraRenders": 59077,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 59077,
+        "slowerThan60Hz": 11,
+        "mean": 1.0160044568979432,
+        "p50": 0.98219956271350384,
+        "p95": 1.2625992530956864,
+        "p99": 1.788895926438272,
+        "max": 23.316496983170509
+      },
+      "gpuMs": {
+        "count": 56561,
+        "slowerThan60Hz": 0,
+        "mean": 0.96447714177613331,
+        "p50": 0.931584,
+        "p95": 1.32096,
+        "p99": 1.71008,
+        "max": 3.132928
+      },
+      "cpuMs": {
+        "count": 59077,
+        "slowerThan60Hz": 11,
+        "mean": 1.0160085363170064,
+        "p50": 0.9822,
+        "p95": 1.2622,
+        "p99": 1.7891,
+        "max": 23.3163
+      },
+      "unityAllocatedBytes": 196878840,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7684096
+    },
+    {
+      "label": "sustained-06",
+      "broadcastEnabled": true,
+      "seconds": 60.001127999999994,
+      "frames": 60135,
+      "mainCameraRenders": 60135,
+      "feedCameraRenders": 60135,
+      "invalidGpuTimings": 4,
+      "frameMs": {
+        "count": 60135,
+        "slowerThan60Hz": 11,
+        "mean": 0.99814704752073324,
+        "p50": 0.9708970901556313,
+        "p95": 1.2030045036226511,
+        "p99": 1.747101778164506,
+        "max": 23.848902434110641
+      },
+      "gpuMs": {
+        "count": 57751,
+        "slowerThan60Hz": 0,
+        "mean": 0.9520331475472289,
+        "p50": 0.92416,
+        "p95": 1.280256,
+        "p99": 1.672704,
+        "max": 2.8224
+      },
+      "cpuMs": {
+        "count": 60135,
+        "slowerThan60Hz": 11,
+        "mean": 0.998147456556069,
+        "p50": 0.9709,
+        "p95": 1.2032,
+        "p99": 1.7471,
+        "max": 23.8502
+      },
+      "unityAllocatedBytes": 196890464,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7606272
+    },
+    {
+      "label": "sustained-07",
+      "broadcastEnabled": true,
+      "seconds": 60.000046399999974,
+      "frames": 59660,
+      "mainCameraRenders": 59660,
+      "feedCameraRenders": 59660,
+      "invalidGpuTimings": 3,
+      "frameMs": {
+        "count": 59660,
+        "slowerThan60Hz": 12,
+        "mean": 1.006082003033143,
+        "p50": 0.979400472715497,
+        "p95": 1.2140022590756416,
+        "p99": 1.7673043766990304,
+        "max": 24.365002289414406
+      },
+      "gpuMs": {
+        "count": 57343,
+        "slowerThan60Hz": 0,
+        "mean": 0.958058135779437,
+        "p50": 0.93184,
+        "p95": 1.277952,
+        "p99": 1.689088,
+        "max": 2.678528
+      },
+      "cpuMs": {
+        "count": 59660,
+        "slowerThan60Hz": 12,
+        "mean": 1.0060773281930881,
+        "p50": 0.9793,
+        "p95": 1.2143,
+        "p99": 1.7674,
+        "max": 24.3655
+      },
+      "unityAllocatedBytes": 196892424,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7491584
+    },
+    {
+      "label": "sustained-08",
+      "broadcastEnabled": true,
+      "seconds": 60.000771099999952,
+      "frames": 59788,
+      "mainCameraRenders": 59788,
+      "feedCameraRenders": 59788,
+      "invalidGpuTimings": 4,
+      "frameMs": {
+        "count": 59788,
+        "slowerThan60Hz": 13,
+        "mean": 1.0039407022879123,
+        "p50": 0.97769987769424915,
+        "p95": 1.2069019721820951,
+        "p99": 1.7605016473680735,
+        "max": 24.414703249931335
+      },
+      "gpuMs": {
+        "count": 57536,
+        "slowerThan60Hz": 0,
+        "mean": 0.95598753726361863,
+        "p50": 0.928512,
+        "p95": 1.271296,
+        "p99": 1.687552,
+        "max": 2.708224
+      },
+      "cpuMs": {
+        "count": 59788,
+        "slowerThan60Hz": 13,
+        "mean": 1.0039405733592091,
+        "p50": 0.9778,
+        "p95": 1.207,
+        "p99": 1.7608,
+        "max": 24.4173
+      },
+      "unityAllocatedBytes": 196895128,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8196096
+    },
+    {
+      "label": "sustained-09",
+      "broadcastEnabled": true,
+      "seconds": 60.00042099999996,
+      "frames": 59870,
+      "mainCameraRenders": 59870,
+      "feedCameraRenders": 59870,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 59870,
+        "slowerThan60Hz": 12,
+        "mean": 1.002560820267882,
+        "p50": 0.97689905669540167,
+        "p95": 1.2038974091410637,
+        "p99": 1.754102879203856,
+        "max": 24.559099227190018
+      },
+      "gpuMs": {
+        "count": 57634,
+        "slowerThan60Hz": 0,
+        "mean": 0.95487738376653353,
+        "p50": 0.929024,
+        "p95": 1.264896,
+        "p99": 1.678336,
+        "max": 2.88768
+      },
+      "cpuMs": {
+        "count": 59870,
+        "slowerThan60Hz": 12,
+        "mean": 1.0025609921496592,
+        "p50": 0.9769,
+        "p95": 1.204,
+        "p99": 1.755,
+        "max": 24.5612
+      },
+      "unityAllocatedBytes": 196886160,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7417856
+    },
+    {
+      "label": "sustained-10",
+      "broadcastEnabled": true,
+      "seconds": 60.000093900000024,
+      "frames": 59737,
+      "mainCameraRenders": 59737,
+      "feedCameraRenders": 59737,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 59737,
+        "slowerThan60Hz": 12,
+        "mean": 1.0047873849121269,
+        "p50": 0.97930128686130047,
+        "p95": 1.2070011580362916,
+        "p99": 1.7583970911800861,
+        "max": 24.590199813246727
+      },
+      "gpuMs": {
+        "count": 57552,
+        "slowerThan60Hz": 0,
+        "mean": 0.95692609619127822,
+        "p50": 0.932864,
+        "p95": 1.25824,
+        "p99": 1.665024,
+        "max": 2.743808
+      },
+      "cpuMs": {
+        "count": 59737,
+        "slowerThan60Hz": 12,
+        "mean": 1.0047951001891453,
+        "p50": 0.9792,
+        "p95": 1.2072,
+        "p99": 1.759,
+        "max": 24.5925
+      },
+      "unityAllocatedBytes": 196894432,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8159232
+    },
+    {
+      "label": "sustained-11",
+      "broadcastEnabled": true,
+      "seconds": 60.000134500000058,
+      "frames": 59682,
+      "mainCameraRenders": 59682,
+      "feedCameraRenders": 59682,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 59682,
+        "slowerThan60Hz": 13,
+        "mean": 1.0057105912823772,
+        "p50": 0.980300479568541,
+        "p95": 1.2053996324539185,
+        "p99": 1.7464994452893734,
+        "max": 24.250701069831848
+      },
+      "gpuMs": {
+        "count": 57501,
+        "slowerThan60Hz": 0,
+        "mean": 0.95645031675971559,
+        "p50": 0.930816,
+        "p95": 1.262592,
+        "p99": 1.639936,
+        "max": 3.000832
+      },
+      "cpuMs": {
+        "count": 59682,
+        "slowerThan60Hz": 13,
+        "mean": 1.0057111859522025,
+        "p50": 0.9803,
+        "p95": 1.2055,
+        "p99": 1.7467,
+        "max": 24.2518
+      },
+      "unityAllocatedBytes": 196893048,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8142848
+    },
+    {
+      "label": "sustained-12",
+      "broadcastEnabled": true,
+      "seconds": 60.000572799999986,
+      "frames": 59559,
+      "mainCameraRenders": 59559,
+      "feedCameraRenders": 59559,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 59559,
+        "slowerThan60Hz": 12,
+        "mean": 1.0077934555010186,
+        "p50": 0.98219956271350384,
+        "p95": 1.20970094576478,
+        "p99": 1.7579010454937816,
+        "max": 24.164598435163498
+      },
+      "gpuMs": {
+        "count": 57430,
+        "slowerThan60Hz": 0,
+        "mean": 0.95838036204075217,
+        "p50": 0.93312,
+        "p95": 1.273344,
+        "p99": 1.664,
+        "max": 2.778368
+      },
+      "cpuMs": {
+        "count": 59559,
+        "slowerThan60Hz": 12,
+        "mean": 1.0077947497439503,
+        "p50": 0.9822,
+        "p95": 1.2101,
+        "p99": 1.758,
+        "max": 24.1679
+      },
+      "unityAllocatedBytes": 196894520,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7942144
+    },
+    {
+      "label": "sustained-13",
+      "broadcastEnabled": true,
+      "seconds": 60.000160499999993,
+      "frames": 59619,
+      "mainCameraRenders": 59619,
+      "feedCameraRenders": 59619,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 59619,
+        "slowerThan60Hz": 12,
+        "mean": 1.0067809676678559,
+        "p50": 0.9805980371311307,
+        "p95": 1.2141014449298382,
+        "p99": 1.7480016686022282,
+        "max": 24.587104097008705
+      },
+      "gpuMs": {
+        "count": 57480,
+        "slowerThan60Hz": 0,
+        "mean": 0.95803643368129665,
+        "p50": 0.930304,
+        "p95": 1.284096,
+        "p99": 1.696,
+        "max": 2.668032
+      },
+      "cpuMs": {
+        "count": 59619,
+        "slowerThan60Hz": 12,
+        "mean": 1.0067683708213828,
+        "p50": 0.9804,
+        "p95": 1.2144,
+        "p99": 1.7482,
+        "max": 24.5871
+      },
+      "unityAllocatedBytes": 196897048,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7958528
+    },
+    {
+      "label": "sustained-14",
+      "broadcastEnabled": true,
+      "seconds": 60.000266000000011,
+      "frames": 59763,
+      "mainCameraRenders": 59763,
+      "feedCameraRenders": 59763,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 59763,
+        "slowerThan60Hz": 10,
+        "mean": 1.0043492564517176,
+        "p50": 0.97709754481911659,
+        "p95": 1.2099986197426915,
+        "p99": 1.7480016686022282,
+        "max": 24.250602349638939
+      },
+      "gpuMs": {
+        "count": 57534,
+        "slowerThan60Hz": 0,
+        "mean": 0.95575728967218143,
+        "p50": 0.927232,
+        "p95": 1.292032,
+        "p99": 1.676288,
+        "max": 2.913792
+      },
+      "cpuMs": {
+        "count": 59763,
+        "slowerThan60Hz": 10,
+        "mean": 1.0043513829627,
+        "p50": 0.9772,
+        "p95": 1.2101,
+        "p99": 1.7482,
+        "max": 24.2534
+      },
+      "unityAllocatedBytes": 196962008,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7593984
+    },
+    {
+      "label": "sustained-15",
+      "broadcastEnabled": true,
+      "seconds": 60.000779800000032,
+      "frames": 57396,
+      "mainCameraRenders": 57396,
+      "feedCameraRenders": 57396,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 57396,
+        "slowerThan60Hz": 12,
+        "mean": 1.0457823283291563,
+        "p50": 1.0129038710147142,
+        "p95": 1.3135983608663082,
+        "p99": 1.8177933525294065,
+        "max": 24.763002991676331
+      },
+      "gpuMs": {
+        "count": 54907,
+        "slowerThan60Hz": 0,
+        "mean": 0.98855567705392844,
+        "p50": 0.9536,
+        "p95": 1.37984,
+        "p99": 1.824,
+        "max": 4.082176
+      },
+      "cpuMs": {
+        "count": 57396,
+        "slowerThan60Hz": 12,
+        "mean": 1.0457910917137136,
+        "p50": 1.0129,
+        "p95": 1.3134,
+        "p99": 1.8181,
+        "max": 24.7661
+      },
+      "unityAllocatedBytes": 196980480,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8118272
+    },
+    {
+      "label": "sustained-16",
+      "broadcastEnabled": true,
+      "seconds": 60.00057240000001,
+      "frames": 56043,
+      "mainCameraRenders": 56043,
+      "feedCameraRenders": 56043,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 56043,
+        "slowerThan60Hz": 13,
+        "mean": 1.0710052479653229,
+        "p50": 1.0392998810857534,
+        "p95": 1.3551020529121161,
+        "p99": 1.8616000888869166,
+        "max": 23.219501599669456
+      },
+      "gpuMs": {
+        "count": 53393,
+        "slowerThan60Hz": 0,
+        "mean": 1.0065783688498449,
+        "p50": 0.9728,
+        "p95": 1.408,
+        "p99": 1.879296,
+        "max": 6.424576
+      },
+      "cpuMs": {
+        "count": 56043,
+        "slowerThan60Hz": 13,
+        "mean": 1.0710009135842091,
+        "p50": 1.0393,
+        "p95": 1.3553,
+        "p99": 1.8624,
+        "max": 23.2218
+      },
+      "unityAllocatedBytes": 196983792,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7548928
+    },
+    {
+      "label": "sustained-17",
+      "broadcastEnabled": true,
+      "seconds": 60.000911099999939,
+      "frames": 60690,
+      "mainCameraRenders": 60690,
+      "feedCameraRenders": 60690,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 60690,
+        "slowerThan60Hz": 11,
+        "mean": 0.98899925051051074,
+        "p50": 0.95940334722399712,
+        "p95": 1.1973001528531313,
+        "p99": 1.7401998629793525,
+        "max": 22.858496755361557
+      },
+      "gpuMs": {
+        "count": 58288,
+        "slowerThan60Hz": 0,
+        "mean": 0.94603710787812256,
+        "p50": 0.918272,
+        "p95": 1.256704,
+        "p99": 1.677056,
+        "max": 2.62272
+      },
+      "cpuMs": {
+        "count": 60690,
+        "slowerThan60Hz": 11,
+        "mean": 0.98898126215190418,
+        "p50": 0.9594,
+        "p95": 1.1971,
+        "p99": 1.7404,
+        "max": 22.8531
+      },
+      "unityAllocatedBytes": 196959288,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7249920
+    },
+    {
+      "label": "sustained-18",
+      "broadcastEnabled": true,
+      "seconds": 60.00085009999998,
+      "frames": 59097,
+      "mainCameraRenders": 59097,
+      "feedCameraRenders": 59097,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 59097,
+        "slowerThan60Hz": 11,
+        "mean": 1.0156852363973194,
+        "p50": 0.98709610756486654,
+        "p95": 1.2433035299181938,
+        "p99": 1.7675949493423104,
+        "max": 24.776898324489594
+      },
+      "gpuMs": {
+        "count": 56766,
+        "slowerThan60Hz": 0,
+        "mean": 0.96744675615685771,
+        "p50": 0.939008,
+        "p95": 1.312512,
+        "p99": 1.729792,
+        "max": 4.666368
+      },
+      "cpuMs": {
+        "count": 59097,
+        "slowerThan60Hz": 11,
+        "mean": 1.0157020542497954,
+        "p50": 0.987,
+        "p95": 1.2435,
+        "p99": 1.7683,
+        "max": 24.7797
+      },
+      "unityAllocatedBytes": 196974288,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8081408
+    },
+    {
+      "label": "sustained-19",
+      "broadcastEnabled": true,
+      "seconds": 60.000318500000049,
+      "frames": 56704,
+      "mainCameraRenders": 56704,
+      "feedCameraRenders": 56704,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 56704,
+        "slowerThan60Hz": 11,
+        "mean": 1.058528497149456,
+        "p50": 1.0250991908833385,
+        "p95": 1.3216978404670954,
+        "p99": 1.9090985879302025,
+        "max": 24.027295410633087
+      },
+      "gpuMs": {
+        "count": 54153,
+        "slowerThan60Hz": 0,
+        "mean": 1.0004541786420009,
+        "p50": 0.9664,
+        "p95": 1.383936,
+        "p99": 1.931776,
+        "max": 4.218112
+      },
+      "cpuMs": {
+        "count": 56704,
+        "slowerThan60Hz": 11,
+        "mean": 1.0585282184678357,
+        "p50": 1.0252,
+        "p95": 1.3218,
+        "p99": 1.9095,
+        "max": 24.03
+      },
+      "unityAllocatedBytes": 196966136,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7409664
+    },
+    {
+      "label": "sustained-20",
+      "broadcastEnabled": true,
+      "seconds": 60.000806499999953,
+      "frames": 52389,
+      "mainCameraRenders": 52389,
+      "feedCameraRenders": 52389,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 52389,
+        "slowerThan60Hz": 4,
+        "mean": 1.145706933198126,
+        "p50": 1.0953940218314528,
+        "p95": 1.541595789603889,
+        "p99": 2.1401005797088146,
+        "max": 23.197406902909279
+      },
+      "gpuMs": {
+        "count": 49968,
+        "slowerThan60Hz": 0,
+        "mean": 1.0615655254562877,
+        "p50": 1.019904,
+        "p95": 1.478144,
+        "p99": 2.244352,
+        "max": 8.125184
+      },
+      "cpuMs": {
+        "count": 52389,
+        "slowerThan60Hz": 4,
+        "mean": 1.1457006451736085,
+        "p50": 1.0954,
+        "p95": 1.542,
+        "p99": 2.1408,
+        "max": 23.2
+      },
+      "unityAllocatedBytes": 196995152,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8003584
+    },
+    {
+      "label": "sustained-21",
+      "broadcastEnabled": true,
+      "seconds": 60.000550399999838,
+      "frames": 56179,
+      "mainCameraRenders": 56179,
+      "feedCameraRenders": 56179,
+      "invalidGpuTimings": 1,
+      "frameMs": {
+        "count": 56179,
+        "slowerThan60Hz": 9,
+        "mean": 1.0683822466627264,
+        "p50": 1.0321995941922069,
+        "p95": 1.3328018831089139,
+        "p99": 1.9552933517843485,
+        "max": 24.85160157084465
+      },
+      "gpuMs": {
+        "count": 53891,
+        "slowerThan60Hz": 1,
+        "mean": 0.99997241127461656,
+        "p50": 0.97024,
+        "p95": 1.30944,
+        "p99": 1.945856,
+        "max": 17.099264
+      },
+      "cpuMs": {
+        "count": 56179,
+        "slowerThan60Hz": 9,
+        "mean": 1.0683734010929249,
+        "p50": 1.0322,
+        "p95": 1.3328,
+        "p99": 1.9552,
+        "max": 24.8633
+      },
+      "unityAllocatedBytes": 196964512,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7897088
+    },
+    {
+      "label": "sustained-22",
+      "broadcastEnabled": true,
+      "seconds": 60.000142299999879,
+      "frames": 53434,
+      "mainCameraRenders": 53434,
+      "feedCameraRenders": 53434,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 53434,
+        "slowerThan60Hz": 7,
+        "mean": 1.12328896251187,
+        "p50": 1.0580994421616197,
+        "p95": 1.6004039207473397,
+        "p99": 2.0755953155457973,
+        "max": 23.042900487780571
+      },
+      "gpuMs": {
+        "count": 51519,
+        "slowerThan60Hz": 0,
+        "mean": 1.0292968928744781,
+        "p50": 0.993024,
+        "p95": 1.397504,
+        "p99": 1.875456,
+        "max": 4.825088
+      },
+      "cpuMs": {
+        "count": 53434,
+        "slowerThan60Hz": 7,
+        "mean": 1.1233055245723773,
+        "p50": 1.0581,
+        "p95": 1.6011,
+        "p99": 2.0754,
+        "max": 23.0431
+      },
+      "unityAllocatedBytes": 196994224,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7864320
+    },
+    {
+      "label": "sustained-23",
+      "broadcastEnabled": true,
+      "seconds": 60.001100199999883,
+      "frames": 49900,
+      "mainCameraRenders": 49900,
+      "feedCameraRenders": 49900,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 49900,
+        "slowerThan60Hz": 18,
+        "mean": 1.2028365133060535,
+        "p50": 1.1081986594945192,
+        "p95": 1.8821995472535491,
+        "p99": 2.5937003083527088,
+        "max": 134.47530567646027
+      },
+      "gpuMs": {
+        "count": 45606,
+        "slowerThan60Hz": 2,
+        "mean": 1.0954332731658121,
+        "p50": 1.024,
+        "p95": 1.944832,
+        "p99": 2.77376,
+        "max": 17.104384
+      },
+      "cpuMs": {
+        "count": 49900,
+        "slowerThan60Hz": 18,
+        "mean": 1.2028340460921665,
+        "p50": 1.1079,
+        "p95": 1.8828,
+        "p99": 2.6216,
+        "max": 133.6453
+      },
+      "unityAllocatedBytes": 196963304,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7696384
+    },
+    {
+      "label": "sustained-24",
+      "broadcastEnabled": true,
+      "seconds": 60.000432199999977,
+      "frames": 55769,
+      "mainCameraRenders": 55769,
+      "feedCameraRenders": 55769,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 55769,
+        "slowerThan60Hz": 8,
+        "mean": 1.0762104864592821,
+        "p50": 1.0505951941013336,
+        "p95": 1.3000000035390258,
+        "p99": 1.8263038946315646,
+        "max": 20.604599267244339
+      },
+      "gpuMs": {
+        "count": 54019,
+        "slowerThan60Hz": 0,
+        "mean": 1.005762586349245,
+        "p50": 0.983808,
+        "p95": 1.29664,
+        "p99": 1.709824,
+        "max": 3.605504
+      },
+      "cpuMs": {
+        "count": 55769,
+        "slowerThan60Hz": 8,
+        "mean": 1.0762126719145171,
+        "p50": 1.0506,
+        "p95": 1.3001,
+        "p99": 1.8263,
+        "max": 20.6075
+      },
+      "unityAllocatedBytes": 197002704,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8151040
+    },
+    {
+      "label": "sustained-25",
+      "broadcastEnabled": true,
+      "seconds": 60.000884900000074,
+      "frames": 56098,
+      "mainCameraRenders": 56098,
+      "feedCameraRenders": 56098,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 56098,
+        "slowerThan60Hz": 4,
+        "mean": 1.0699539809297787,
+        "p50": 1.0461946949362755,
+        "p95": 1.2861039722338319,
+        "p99": 1.8138960003852844,
+        "max": 23.010304197669029
+      },
+      "gpuMs": {
+        "count": 54229,
+        "slowerThan60Hz": 0,
+        "mean": 1.0027055528223017,
+        "p50": 0.980224,
+        "p95": 1.296384,
+        "p99": 1.703424,
+        "max": 3.50336
+      },
+      "cpuMs": {
+        "count": 56098,
+        "slowerThan60Hz": 4,
+        "mean": 1.069946060465613,
+        "p50": 1.0462,
+        "p95": 1.2864,
+        "p99": 1.8138,
+        "max": 23.0132
+      },
+      "unityAllocatedBytes": 196996784,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8261632
+    },
+    {
+      "label": "sustained-26",
+      "broadcastEnabled": true,
+      "seconds": 60.000379000000066,
+      "frames": 55965,
+      "mainCameraRenders": 55965,
+      "feedCameraRenders": 55965,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 55965,
+        "slowerThan60Hz": 4,
+        "mean": 1.0724895687924094,
+        "p50": 1.0495961178094149,
+        "p95": 1.2876983964815736,
+        "p99": 1.8338010413572192,
+        "max": 23.0335034430027
+      },
+      "gpuMs": {
+        "count": 53838,
+        "slowerThan60Hz": 0,
+        "mean": 1.0039661479252593,
+        "p50": 0.979456,
+        "p95": 1.327104,
+        "p99": 1.761792,
+        "max": 2.738944
+      },
+      "cpuMs": {
+        "count": 55965,
+        "slowerThan60Hz": 4,
+        "mean": 1.0724968373090407,
+        "p50": 1.0496,
+        "p95": 1.2878,
+        "p99": 1.8333,
+        "max": 23.0335
+      },
+      "unityAllocatedBytes": 196992960,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8036352
+    },
+    {
+      "label": "sustained-27",
+      "broadcastEnabled": true,
+      "seconds": 60.00034370000003,
+      "frames": 54480,
+      "mainCameraRenders": 54480,
+      "feedCameraRenders": 54480,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 54480,
+        "slowerThan60Hz": 3,
+        "mean": 1.1017207660423485,
+        "p50": 1.0699972044676542,
+        "p95": 1.3818027218803763,
+        "p99": 1.8900014692917466,
+        "max": 23.009197786450386
+      },
+      "gpuMs": {
+        "count": 52309,
+        "slowerThan60Hz": 0,
+        "mean": 1.0227495548375922,
+        "p50": 0.995072,
+        "p95": 1.36704,
+        "p99": 1.801728,
+        "max": 3.101184
+      },
+      "cpuMs": {
+        "count": 54480,
+        "slowerThan60Hz": 3,
+        "mean": 1.1017061747430108,
+        "p50": 1.0701,
+        "p95": 1.3821,
+        "p99": 1.8904,
+        "max": 23.0112
+      },
+      "unityAllocatedBytes": 196993856,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8052736
+    },
+    {
+      "label": "sustained-28",
+      "broadcastEnabled": true,
+      "seconds": 60.000648199999887,
+      "frames": 54629,
+      "mainCameraRenders": 54629,
+      "feedCameraRenders": 54629,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 54629,
+        "slowerThan60Hz": 5,
+        "mean": 1.098739054647655,
+        "p50": 1.0655967053025961,
+        "p95": 1.3922973303124309,
+        "p99": 1.8758999649435282,
+        "max": 25.9115993976593
+      },
+      "gpuMs": {
+        "count": 52842,
+        "slowerThan60Hz": 0,
+        "mean": 1.0197877143181544,
+        "p50": 0.992256,
+        "p95": 1.343488,
+        "p99": 1.765632,
+        "max": 3.246848
+      },
+      "cpuMs": {
+        "count": 54629,
+        "slowerThan60Hz": 5,
+        "mean": 1.098754366728292,
+        "p50": 1.0656,
+        "p95": 1.3924,
+        "p99": 1.8759,
+        "max": 25.9145
+      },
+      "unityAllocatedBytes": 196972928,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7802880
+    },
+    {
+      "label": "sustained-29",
+      "broadcastEnabled": true,
+      "seconds": 60.000930400000016,
+      "frames": 56552,
+      "mainCameraRenders": 56552,
+      "feedCameraRenders": 56552,
+      "invalidGpuTimings": 2,
+      "frameMs": {
+        "count": 56552,
+        "slowerThan60Hz": 10,
+        "mean": 1.0613548065424678,
+        "p50": 1.0249008191749454,
+        "p95": 1.3588010333478451,
+        "p99": 1.8448057817295194,
+        "max": 24.293502792716026
+      },
+      "gpuMs": {
+        "count": 54337,
+        "slowerThan60Hz": 0,
+        "mean": 0.99243243962676653,
+        "p50": 0.959232,
+        "p95": 1.357568,
+        "p99": 1.831936,
+        "max": 4.099584
+      },
+      "cpuMs": {
+        "count": 56552,
+        "slowerThan60Hz": 10,
+        "mean": 1.0613482617767767,
+        "p50": 1.0249,
+        "p95": 1.3591,
+        "p99": 1.845,
+        "max": 24.2962
+      },
+      "unityAllocatedBytes": 197012408,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 8552448
+    },
+    {
+      "label": "sustained-30",
+      "broadcastEnabled": true,
+      "seconds": 60.000882499999989,
+      "frames": 57611,
+      "mainCameraRenders": 57611,
+      "feedCameraRenders": 57611,
+      "invalidGpuTimings": 0,
+      "frameMs": {
+        "count": 57611,
+        "slowerThan60Hz": 10,
+        "mean": 1.0418817469252633,
+        "p50": 1.0089002316817641,
+        "p95": 1.2971017276868224,
+        "p99": 1.8152990378439426,
+        "max": 29.332894831895828
+      },
+      "gpuMs": {
+        "count": 55600,
+        "slowerThan60Hz": 0,
+        "mean": 0.97800135827339119,
+        "p50": 0.950016,
+        "p95": 1.303808,
+        "p99": 1.777152,
+        "max": 4.67072
+      },
+      "cpuMs": {
+        "count": 57611,
+        "slowerThan60Hz": 10,
+        "mean": 1.0418879189738042,
+        "p50": 1.0088,
+        "p95": 1.2973,
+        "p99": 1.8142,
+        "max": 29.3354
+      },
+      "unityAllocatedBytes": 196966864,
+      "unityReservedBytes": 275329024,
+      "managedBytes": 7544832
+    }
+  ],
+  "eye": "(205.000, 1.690, -205.000)",
+  "screenDistance": 10.0841455,
+  "complete": true
+}

@@ -1,0 +1,420 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "三首免费完整配乐与原有三首编曲可选，默认不开声音且不下载音频"
+    },
+    {
+      "name": "三首本机 Ogg 均实际播放，切歌复用一个流式播放器，无合成配乐叠播"
+    },
+    {
+      "name": "真实 HTTP Range 可跳转并从末尾循环，无需完整解码曲库到内存"
+    },
+    {
+      "name": "暂停同步停止媒体与 AudioContext，恢复继续当前曲目位置"
+    },
+    {
+      "name": "开赛与胜利试听使用真实素材节点，胜利叠加掌声和欢呼，试听保留比赛配乐"
+    },
+    {
+      "name": "音效开关约束试听；1080p/1440p 声音面板完整可见"
+    },
+    {
+      "name": "真实结算停止配乐并播放胜利素材，重复结算不会再次喝彩"
+    },
+    {
+      "name": "加载过程中暂停，迟到的音频响应不会重新发声，恢复仍能播放"
+    },
+    {
+      "name": "配乐文件失败时明确提示并使用原电子编曲，比赛界面保持可用"
+    },
+    {
+      "name": "单条音效缺失仅回退该提示，其他胜利和观众素材正常播放"
+    },
+    {
+      "name": "卸载释放媒体与音频图；无页面异常、真实赛事、模型或外部请求"
+    },
+    {
+      "name": "三首完整配乐与八条素材可解码，满音量叠加所有提示的实际 PCM 无削波",
+      "measurements": [
+        {
+          "id": "ai-fight",
+          "sourceDuration": 268.00521541950116,
+          "peak": 0.6896937489509583,
+          "rms": 0.13769700193024878,
+          "invalid": 0
+        },
+        {
+          "id": "electric-stream",
+          "sourceDuration": 80.38541950113378,
+          "peak": 0.7067709565162659,
+          "rms": 0.15326116238226578,
+          "invalid": 0
+        },
+        {
+          "id": "pure-raceway",
+          "sourceDuration": 96,
+          "peak": 0.7319950461387634,
+          "rms": 0.12987074468013543,
+          "invalid": 0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=3964928-"
+    },
+    {
+      "url": "/web/assets/audio/music-electric-stream.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/web/assets/audio/music-electric-stream.ogg",
+      "range": "bytes=1114112-"
+    },
+    {
+      "url": "/web/assets/audio/music-electric-stream.ogg",
+      "range": "bytes=163840-"
+    },
+    {
+      "url": "/web/assets/audio/music-pure-raceway.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/web/assets/audio/music-pure-raceway.ogg",
+      "range": "bytes=1310720-"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=3964928-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=229376-"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/audio-qa"
+    },
+    {
+      "url": "/web/arena-audio.css"
+    },
+    {
+      "url": "/web/arena-audio.js"
+    },
+    {
+      "url": "/web/arena-audio-score.js"
+    },
+    {
+      "url": "/web/arena-audio-library.js"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=3964928-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg",
+      "range": "bytes=131072-"
+    },
+    {
+      "url": "/web/assets/audio/music-ai-fight.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-electric-stream.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    },
+    {
+      "url": "/web/assets/audio/music-pure-raceway.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-start.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-round.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-score.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-winner.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-tie.ogg"
+    },
+    {
+      "url": "/web/assets/audio/cue-error.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-cheers.ogg"
+    },
+    {
+      "url": "/web/assets/audio/crowd-applause.ogg"
+    }
+  ]
+}

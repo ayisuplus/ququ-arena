@@ -1,0 +1,178 @@
+{
+  "arena": {
+    "name": "tongjia-pinyin",
+    "title": "通假·拼音剖面擂台",
+    "description": "复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。",
+    "author": "TongJia-Bench",
+    "version": "0.1.0",
+    "canary": "ququ-arena:0263d039-75cd-e2f0-352c-bd1750",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "tone_mark": "带调拼音还原",
+      "tone_number": "数字调拼音还原",
+      "no_tone": "无声调拼音还原",
+      "initials": "首字母缩写还原（悬崖维度）",
+      "mixed_50": "汉字拼音混写还原"
+    },
+    "$schema": "../../arena.schema.json"
+  },
+  "startedAt": "2026-09-10T08:04:26.337Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:xueba-o9",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北京是中",
+      "target": "北京是中国的首都",
+      "latencyMs": 312,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北京是中」",
+      "usage": {
+        "input": 30,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 157,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 214,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「北是中国的首都」",
+      "usage": {
+        "input": 30,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:xueba-o9",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:huatou-72b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:jianglv-7b",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 167,
+      "score": 0,
+      "note": "期望「北京是中国的首都」，实答「京是中国的首都」",
+      "usage": {
+        "input": 33,
+        "output": 4
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "t2-p2h-0002",
+      "condition": "tone_number",
+      "model": "mock:laoshi-k2",
+      "prompt": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "answer": "北京是中国的首都",
+      "target": "北京是中国的首都",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 33,
+        "output": 4
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "def240638a207d62",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.12.0"
+  }
+}

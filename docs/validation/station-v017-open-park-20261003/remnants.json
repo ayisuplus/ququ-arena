@@ -1,0 +1,343 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nvar rows=new System.Collections.Generic.List<object>();\nforeach(var mf in frame.GetComponentsInChildren<UnityEngine.MeshFilter>()){\n if(!mf.sharedMesh||mf.name.Contains(\"LOD\")||mf.name.Contains(\"foliage\"))continue;\n var vertices=mf.sharedMesh.vertices.Select(v=>frame.InverseTransformPoint(mf.transform.TransformPoint(v))).ToArray();\n if(vertices.Length==0)continue;\n var min=new UnityEngine.Vector3(vertices.Min(v=>v.x),vertices.Min(v=>v.y),vertices.Min(v=>v.z));var max=new UnityEngine.Vector3(vertices.Max(v=>v.x),vertices.Max(v=>v.y),vertices.Max(v=>v.z));\n if(min.y<2.8f||max.y>8)continue;\n rows.Add(new{path=UnityEditor.AnimationUtility.CalculateTransformPath(mf.transform,frame),min=min.ToString(\"F2\"),max=max.ToString(\"F2\"),mesh=UnityEditor.AssetDatabase.GetAssetPath(mf.sharedMesh)});\n}\nreturn rows;\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 0",
+          "min": "(-6.13, 3.13, -3.35)",
+          "max": "(-4.87, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 1",
+          "min": "(-3.93, 3.13, -3.35)",
+          "max": "(-2.67, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 2",
+          "min": "(-1.73, 3.13, -3.35)",
+          "max": "(-0.48, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 3",
+          "min": "(0.48, 3.13, -3.35)",
+          "max": "(1.73, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 4",
+          "min": "(2.68, 3.13, -3.35)",
+          "max": "(3.93, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie LED grow module 5",
+          "min": "(4.87, 3.13, -3.35)",
+          "max": "(6.13, 3.20, -2.65)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South public greenhouse graybox/Veggie grow light support housing",
+          "min": "(-7.25, 3.20, -3.48)",
+          "max": "(7.25, 3.40, -2.52)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V013 southwest conservatory/Greenhouse silver door surround/DoorFrame/Door header",
+          "min": "(-2.23, 4.02, 11.28)",
+          "max": "(2.23, 4.24, 11.72)",
+          "mesh": "Assets/Station/Models/SereneGardenLightmapMeshesV013/Mesh-010.asset"
+        },
+        {
+          "path": "V013 southwest conservatory/Greenhouse silver door surround/DoorFrame/Door header",
+          "min": "(-2.23, 4.02, 6.78)",
+          "max": "(2.23, 4.24, 7.22)",
+          "mesh": "Assets/Station/Models/SereneGardenLightmapMeshesV013/Mesh-010.asset"
+        },
+        {
+          "path": "V013 southwest conservatory/Greenhouse silver door surround/DoorFrame/Door header",
+          "min": "(-2.23, 4.02, -7.22)",
+          "max": "(2.23, 4.24, -6.78)",
+          "mesh": "Assets/Station/Models/SereneGardenLightmapMeshesV013/Mesh-010.asset"
+        },
+        {
+          "path": "V013 southwest conservatory/Greenhouse silver door surround/DoorFrame/Door header",
+          "min": "(-2.23, 4.02, -11.72)",
+          "max": "(2.23, 4.24, -11.28)",
+          "mesh": "Assets/Station/Models/SereneGardenLightmapMeshesV013/Mesh-010.asset"
+        },
+        {
+          "path": "South garden recessed name band",
+          "min": "(-3.75, 4.91, 30.72)",
+          "max": "(3.75, 5.47, 30.81)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "South garden entrance name",
+          "min": "(-1.44, 5.09, 30.81)",
+          "max": "(1.43, 5.29, 30.81)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/White suspended grow fixture",
+          "min": "(-20.00, 5.75, -9.63)",
+          "max": "(-18.00, 5.85, -9.37)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Cold white diffuser",
+          "min": "(-19.93, 5.73, -9.60)",
+          "max": "(-18.08, 5.75, -9.40)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(-19.76, 5.85, -9.51)",
+          "max": "(-19.74, 7.35, -9.49)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(-18.26, 5.85, -9.51)",
+          "max": "(-18.24, 7.94, -9.49)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/White suspended grow fixture",
+          "min": "(-20.00, 5.75, 9.37)",
+          "max": "(-18.00, 5.85, 9.63)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Cold white diffuser",
+          "min": "(-19.93, 5.73, 9.40)",
+          "max": "(-18.08, 5.75, 9.60)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(-19.76, 5.85, 9.49)",
+          "max": "(-19.74, 7.35, 9.51)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(-18.26, 5.85, 9.49)",
+          "max": "(-18.24, 7.94, 9.51)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/White suspended grow fixture",
+          "min": "(18.00, 5.75, -9.63)",
+          "max": "(20.00, 5.85, -9.37)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Cold white diffuser",
+          "min": "(18.08, 5.73, -9.60)",
+          "max": "(19.93, 5.75, -9.40)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(18.24, 5.85, -9.51)",
+          "max": "(18.26, 7.94, -9.49)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(19.74, 5.85, -9.51)",
+          "max": "(19.76, 7.35, -9.49)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/White suspended grow fixture",
+          "min": "(18.00, 5.75, 9.37)",
+          "max": "(20.00, 5.85, 9.63)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Cold white diffuser",
+          "min": "(18.08, 5.73, 9.40)",
+          "max": "(19.93, 5.75, 9.60)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(18.24, 5.85, 9.49)",
+          "max": "(18.26, 7.94, 9.51)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 enclosed botanical beds/Conservatory grow lights/Slender suspension",
+          "min": "(19.74, 5.85, 9.49)",
+          "max": "(19.76, 7.35, 9.51)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/Left sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(-2.06, 3.14, 21.94)",
+          "max": "(0.00, 3.24, 22.06)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/Right sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(0.00, 3.14, 21.94)",
+          "max": "(2.06, 3.24, 22.06)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/White concealed drive",
+          "min": "(-4.88, 3.13, 21.75)",
+          "max": "(4.88, 3.39, 22.25)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/Cold white entry line",
+          "min": "(-2.00, 3.11, 22.24)",
+          "max": "(2.00, 3.13, 22.25)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/Conservatory sign",
+          "min": "(-0.76, 3.20, 21.74)",
+          "max": "(0.77, 3.34, 21.74)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/North conservatory entry/Conservatory sign",
+          "min": "(-0.77, 3.20, 22.26)",
+          "max": "(0.76, 3.34, 22.26)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/Left sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(23.94, 3.14, 0.00)",
+          "max": "(24.06, 3.24, 2.06)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/Right sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(23.94, 3.14, -2.06)",
+          "max": "(24.06, 3.24, 0.00)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/White concealed drive",
+          "min": "(23.75, 3.13, -4.88)",
+          "max": "(24.25, 3.39, 4.88)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/Cold white entry line",
+          "min": "(24.24, 3.11, -2.00)",
+          "max": "(24.25, 3.13, 2.00)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/Conservatory sign",
+          "min": "(23.74, 3.20, -0.77)",
+          "max": "(23.74, 3.34, 0.76)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/East conservatory entry/Conservatory sign",
+          "min": "(24.26, 3.20, -0.76)",
+          "max": "(24.26, 3.34, 0.77)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/Left sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(0.00, 3.14, -22.06)",
+          "max": "(2.06, 3.24, -21.94)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/Right sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(-2.06, 3.14, -22.06)",
+          "max": "(0.00, 3.24, -21.94)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/White concealed drive",
+          "min": "(-4.88, 3.13, -22.25)",
+          "max": "(4.88, 3.39, -21.75)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/Cold white entry line",
+          "min": "(-2.00, 3.11, -22.25)",
+          "max": "(2.00, 3.13, -22.24)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/Conservatory sign",
+          "min": "(-0.77, 3.20, -21.74)",
+          "max": "(0.76, 3.34, -21.74)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/South conservatory entry/Conservatory sign",
+          "min": "(-0.76, 3.20, -22.26)",
+          "max": "(0.77, 3.34, -22.26)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/Left sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(-24.06, 3.14, -2.06)",
+          "max": "(-23.94, 3.24, 0.00)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/Right sliding leaf/ConservatoryDoorLeaf/Pearl horizontal frame.001",
+          "min": "(-24.06, 3.14, 0.00)",
+          "max": "(-23.94, 3.24, 2.06)",
+          "mesh": "Assets/Station/Models/EcologicalGardenV014/ConservatoryDoorLeaf.fbx"
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/White concealed drive",
+          "min": "(-24.25, 3.13, -4.88)",
+          "max": "(-23.75, 3.39, 4.88)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/Cold white entry line",
+          "min": "(-24.25, 3.11, -2.00)",
+          "max": "(-24.24, 3.13, 2.00)",
+          "mesh": "Library/unity default resources"
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/Conservatory sign",
+          "min": "(-23.74, 3.20, -0.76)",
+          "max": "(-23.74, 3.34, 0.77)",
+          "mesh": ""
+        },
+        {
+          "path": "V014 conservatory entrances/West conservatory entry/Conservatory sign",
+          "min": "(-24.26, 3.20, -0.77)",
+          "max": "(-24.26, 3.34, 0.76)",
+          "mesh": ""
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

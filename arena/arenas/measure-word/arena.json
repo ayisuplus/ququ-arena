@@ -1,0 +1,21 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "measure-word",
+  "title": "量词填空擂台",
+  "description": "20 道中文量词选择填空；只在题面给出的四个候选中选择，容器和成对物品说明计数对象。测常用搭配，不宣称候选之外的表达错误。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:measure-word:2026-09-10",
+  "taskPrefix": "只输出缺的量词本身（一个字），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "blank": "量词填一字"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "改为给定候选量词、结合上下文选择，不再把开放量词搭配当成唯一答案。"
+  }
+}

@@ -1,0 +1,19 @@
+taskId,condition,mean,discrimination_r,tag,n
+t2-p2h-0001,tone_mark,0.5000,0.3527,sharp,20
+t2-p2h-0004,initials,0.5000,0.4082,sharp,8
+t2-p2h-0002,tone_number,0.7500,0.7124,sharp,16
+t2-p2h-0003,no_tone,0.7500,0.9272,sharp,8
+
+# IRT Rasch 1PL
+model,theta
+mock:xueba-o9,0.507
+mock:huatou-72b,1.529
+mock:jianglv-7b,-2.44
+mock:laoshi-k2,2.509
+
+# 题目难度（b 均值 0 定标）
+taskId,difficulty_b
+t2-p2h-0001,0.79
+t2-p2h-0002,-0.82
+t2-p2h-0003,-0.643
+t2-p2h-0004,0.673

@@ -1,0 +1,166 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+  "views": [
+    {
+      "id": "research-eye",
+      "frame": "V015 package - research main and entry canopy",
+      "eye": [
+        16.0,
+        1.7,
+        15.0
+      ],
+      "ring": "v015-r2",
+      "ringEye": [
+        -62.00962,
+        1.7,
+        -137.403809
+      ]
+    },
+    {
+      "id": "cafe-eye",
+      "frame": "V015 package - cafe and observation gallery",
+      "eye": [
+        -15.0,
+        1.7,
+        5.0
+      ],
+      "ring": "v015-r2",
+      "ringEye": [
+        117.0,
+        1.7,
+        5.0
+      ]
+    },
+    {
+      "id": "reading-eye",
+      "frame": "V016 B02 crystal archive exterior trial",
+      "eye": [
+        -1.2,
+        1.7,
+        27.0
+      ],
+      "ring": "v015-r2",
+      "ringEye": [
+        -163.00148,
+        1.72,
+        51.7006378
+      ]
+    },
+    {
+      "id": "homes-eye",
+      "frame": "V015 package - resident chatgpt home package",
+      "eye": [
+        18.0,
+        1.7,
+        0.0
+      ],
+      "ring": "v015-r3",
+      "ringEye": [
+        152.340668,
+        1.7,
+        -181.552536
+      ]
+    },
+    {
+      "id": "guest-eye",
+      "frame": "V016 B04 terraced lounge exterior trial",
+      "eye": [
+        0.5,
+        1.7,
+        26.0
+      ],
+      "ring": "v015-r3",
+      "ringEye": [
+        -244.319153,
+        1.72,
+        -42.5723419
+      ]
+    },
+    {
+      "id": "garden-eye",
+      "frame": "V015 package - glass ecology garden",
+      "eye": [
+        -14.5,
+        1.7,
+        11.5
+      ],
+      "ring": "v015-r3",
+      "ringEye": [
+        -111.70929,
+        1.7,
+        170.48616
+      ]
+    },
+    {
+      "id": "arrival-eye",
+      "frame": "V015 package - arrival port",
+      "eye": [
+        -6.8,
+        1.7,
+        -30.0
+      ],
+      "ring": "fixed",
+      "ringEye": [
+        -6.8,
+        1.7,
+        260.0
+      ]
+    }
+  ],
+  "boxes": [
+    {
+      "id": "rear-edge/Reading side court edge",
+      "ring": "v015-r2",
+      "center": [
+        -54.253006,
+        0.375,
+        138.306946
+      ],
+      "size": [
+        17.7717476,
+        0.65,
+        0.399999946
+      ],
+      "yaw": 157.500031
+    },
+    {
+      "id": "rear-edge/Activity side court edge",
+      "ring": "v015-r2",
+      "center": [
+        -33.5546646,
+        0.375,
+        144.825424
+      ],
+      "size": [
+        15.3664474,
+        0.65,
+        0.4
+      ],
+      "yaw": 347.999969
+    }
+  ],
+  "sky": {
+    "material": "Assets/Station/Materials/V014-HorizonSun.mat",
+    "rotation": 0.0,
+    "direction": [
+      1.0,
+      0.375,
+      0.0
+    ],
+    "note": "Baked horizon source +Z mapped by CubeToPanorama and built-in panoramic sky to +X; verify with native sky-only capture"
+  },
+  "rings": [
+    {
+      "RingId": "v015-r1",
+      "DegreesPerSecond": 0.05115695
+    },
+    {
+      "RingId": "v015-r3",
+      "DegreesPerSecond": 0.0112786973
+    },
+    {
+      "RingId": "v015-r2",
+      "DegreesPerSecond": -0.0244158171
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var root=UnityEngine.GameObject.Find(\"V013 cafe forecourt\");var rows=new System.Collections.Generic.List<object>();foreach(var r in root.GetComponentsInChildren<UnityEngine.Renderer>()){rows.Add(new{name=r.name,parent=r.transform.parent.name,bounds=r.bounds.size.ToString(),center=r.bounds.center.ToString(),mats=System.Array.ConvertAll(r.sharedMaterials,m=>m.name)});}return rows;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "Forecourt ceiling bay 0",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -186.67)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 0",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -186.67)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 0",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -186.67)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt ceiling bay 1",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -192.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 1",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -192.00)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 1",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -192.00)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt ceiling bay 2",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -197.33)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 2",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -197.33)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 2",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -197.33)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt ceiling bay 3",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -202.67)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 3",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -202.67)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 3",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -202.67)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt ceiling bay 4",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -208.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 4",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -208.00)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 4",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -208.00)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt ceiling bay 5",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.15, 0.20, 5.22)",
+          "center": "(189.15, 4.17, -213.33)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt recessed light 5",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(8.75, 0.02, 4.80)",
+          "center": "(189.15, 4.06, -213.33)",
+          "mats": [
+            "V013-P1P2-Light"
+          ]
+        },
+        {
+          "name": "Forecourt floor panel 5",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(9.30, 0.01, 5.33)",
+          "center": "(189.15, 0.02, -213.33)",
+          "mats": [
+            "V013-LimestoneFloor"
+          ]
+        },
+        {
+          "name": "Forecourt pearl frame",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.60, 4.50, 0.28)",
+          "center": "(189.15, 2.08, -184.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt satin joint",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.26, 4.16, 0.30)",
+          "center": "(189.15, 2.08, -184.00)",
+          "mats": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Forecourt pearl frame",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.60, 4.50, 0.28)",
+          "center": "(189.15, 2.08, -194.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt satin joint",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.26, 4.16, 0.30)",
+          "center": "(189.15, 2.08, -194.00)",
+          "mats": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Forecourt pearl frame",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.60, 4.50, 0.28)",
+          "center": "(189.15, 2.08, -208.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt satin joint",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.26, 4.16, 0.30)",
+          "center": "(189.15, 2.08, -208.00)",
+          "mats": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Forecourt pearl frame",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.60, 4.50, 0.28)",
+          "center": "(189.15, 2.08, -216.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Forecourt satin joint",
+          "parent": "Forecourt curved frame",
+          "bounds": "(9.26, 4.16, 0.30)",
+          "center": "(189.15, 2.08, -216.00)",
+          "mats": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "Pearl gallery surround",
+          "parent": "West promenade south threshold",
+          "bounds": "(4.10, 3.20, 0.28)",
+          "center": "(186.00, 1.43, -216.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "Silver gallery gasket",
+          "parent": "West promenade south threshold",
+          "bounds": "(3.80, 2.90, 0.30)",
+          "center": "(186.00, 1.43, -216.00)",
+          "mats": [
+            "V013-P1P2-Silver"
+          ]
+        },
+        {
+          "name": "West south transom",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(3.76, 1.20, 0.10)",
+          "center": "(186.00, 3.65, -216.00)",
+          "mats": [
+            "V013-neutral-observation-glass"
+          ]
+        },
+        {
+          "name": "South transition infill",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(1.70, 1.20, 0.22)",
+          "center": "(193.05, 3.65, -216.00)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "West window lower trim",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(0.22, 0.40, 17.00)",
+          "center": "(184.52, 0.20, -207.50)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        },
+        {
+          "name": "West window crown",
+          "parent": "V013 cafe forecourt",
+          "bounds": "(0.30, 0.24, 17.00)",
+          "center": "(184.52, 4.16, -207.50)",
+          "mats": [
+            "V013-P1P2-Pearl"
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

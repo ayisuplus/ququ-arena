@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\measure-reading-court-joins.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "name": "Reading side court edge",
+          "position": [
+            -54.253006,
+            0.05,
+            138.306946
+          ],
+          "size": [
+            17.77175,
+            0.65,
+            0.4
+          ],
+          "yaw": 157.500031,
+          "start": [
+            -46.0435257,
+            0.375,
+            141.707428
+          ],
+          "end": [
+            -62.4624825,
+            0.374999046,
+            134.906479
+          ],
+          "hit": "Reading end return 1 left",
+          "hitId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-828150438-0",
+          "contact": [
+            -62.55487,
+            0.374999046,
+            134.86821
+          ],
+          "gap": 0.1
+        },
+        {
+          "name": "Activity side court edge",
+          "position": [
+            -33.5155373,
+            0.05,
+            144.83374
+          ],
+          "size": [
+            15.4464474,
+            0.65,
+            0.4
+          ],
+          "yaw": -12.0000191,
+          "start": [
+            -41.06999,
+            0.375,
+            143.227982
+          ],
+          "end": [
+            -25.9610844,
+            0.374989331,
+            146.439484
+          ],
+          "hit": "Solid front sill -1 -9",
+          "hitId": "GlobalObjectId_V1-2-3a581a0007d0ecd4398fcdeb4a45701d-2041492784-0",
+          "contact": [
+            -25.86327,
+            0.374989331,
+            146.460281
+          ],
+          "gap": 0.1
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

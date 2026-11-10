@@ -1,0 +1,104 @@
+{
+  "date": "2026-09-12",
+  "preview": "http://localhost:8182/",
+  "automated": {
+    "command": "npm test",
+    "typecheck": "passed",
+    "tests": 256,
+    "passed": 256,
+    "failed": 0,
+    "log": "full-tests.log"
+  },
+  "liveCatalog": {
+    "url": "https://openrouter.ai/api/v1/models",
+    "checkedAt": "2026-09-12T05:59:27.072Z",
+    "eligibleFreeTextModels": 19,
+    "stale": false,
+    "refreshIntervalMs": 300000,
+    "keyConfigured": true,
+    "realInferenceTested": true
+  },
+  "browser": {
+    "tool": "Codex built-in browser through CUA",
+    "realPreviewChecks": [
+      "Live official catalog",
+      "Search and checkbox selection",
+      "Manual refresh retains selection",
+      "Selection restored after reload",
+      "Settings dialogs",
+      "Desktop list and dialog visual inspection"
+    ],
+    "independentFixture": {
+      "synthetic": true,
+      "script": "arena/scripts/model-picker-fixture.mjs",
+      "arena": "tongjia-pinyin",
+      "questions": 1,
+      "models": [
+        "Synthetic OpenRouter ALPHA with streaming public summary",
+        "Custom local HTTP model with non-streaming answer"
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "checks": [
+        "Configure test OpenRouter key",
+        "Create and automatically select custom model",
+        "Clear stale search after custom save",
+        "Edit model and preserve blank key",
+        "Shared lineup launches both models",
+        "No reasoning clearly marked for non-streaming fixture",
+        "Paid or delisted selection retained and launch blocked",
+        "Offline catalog retains old rows and indicates stale status",
+        "Refresh recovers after catalog returns",
+        "Delete custom configuration keeps completed report",
+        "Empty lineup blocks launch",
+        "No test keys in battle report",
+        "No browser script errors"
+      ]
+    },
+    "viewportNote": "Viewport overrides were exercised and reset. CUA screenshots were scaled by the preview surface; no new pixel-dimension claim is made from them. Earlier workbench sizing evidence remains separate."
+  },
+  "formalCareerSha256": "04A6E5EC753D35307B3C3939EC5522907D24A8C7525739DB6E92F0336D9CE46D",
+  "limitations": [
+    "Free status is based on the fetched official pricing snapshot; account quotas and upstream availability still apply",
+    "Formal 8181 service remains unchanged"
+  ],
+  "liveInference": {
+    "startedAt": "2026-09-12T06:43:37.818Z",
+    "endedAt": "2026-09-12T06:44:14.895Z",
+    "battle": "b17891954178461",
+    "records": "openrouter-live-smoke.json",
+    "publicEvents": "openrouter-live-events.jsonl",
+    "freeOnly": true,
+    "questions": 1,
+    "models": [
+      {
+        "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+        "score": 1,
+        "latencyMs": 34754,
+        "usage": {
+          "input": 48,
+          "output": 6879
+        },
+        "publicReasoning": true,
+        "retries": 0
+      },
+      {
+        "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+        "score": 1,
+        "latencyMs": 18414,
+        "usage": {
+          "input": 58,
+          "output": 573
+        },
+        "publicReasoning": true,
+        "retries": 0
+      }
+    ],
+    "reportStatus": 200,
+    "keyFoundInPublicArtifacts": false,
+    "formalCareerUnchanged": true,
+    "browserReinspection": "Unavailable: CUA connection failed after reset; actual battle API and SSE verified"
+  }
+}

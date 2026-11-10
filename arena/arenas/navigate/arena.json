@@ -1,0 +1,15 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "navigate",
+  "title": "指令导航擂台",
+  "description": "BBH navigate 的中文生成器版：一串「前进/后退/左转/右转」指令后，判断是否回到起点（是/否 7:7 均衡）或报终点坐标。指令序列由生成器逐步模拟，答案=模拟结果。测多步空间状态更新。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:navigate:2026-09-10",
+  "taskPrefix": "只输出答案本身（「是」/「否」，或坐标 (x, y)），不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "return-home": "是否回到起点（是/否均衡）",
+    "endpoint": "终点坐标 (x, y)"
+  }
+}

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 表情猜谜擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 20 道题 · 冠军 学霸-o9 95.0%">
+<title>战报 · 表情猜谜擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 表情猜谜擂台</h1>
+  <div class="sub">表情符号猜成语/电影（内容自建，谜底均为通行谜面）。idiom 维度 16 题表情猜成语，movie 维度 4 题表情猜电影。测符号解码与文化映射能力——趣味性罐，天然适合内容创作截图传播。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T09:26:08.673Z · 用时 0.0s · 4 只蛐蛐 × 20 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>表情猜成语</th><th>表情猜电影</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">95.0%<div class="ci">±7.5%</div></td>
+      <td>93.8%</td><td>100.0%</td>
+      <td class="nw">1593</td><td class="nw">🐲 虫王</td><td class="nw win">10306 (+93)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">90.0%<div class="ci">±12.5%</div></td>
+      <td>93.8%</td><td>75.0%</td>
+      <td class="nw">1555</td><td class="nw">🐲 虫王</td><td class="nw win">34190 (+55)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">60.0%<div class="ci">±20.0%</div></td>
+      <td>62.5%</td><td>50.0%</td>
+      <td class="nw">1470</td><td class="nw">🐲 虫王</td><td class="nw lose">15373 (-30)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">40.0%<div class="ci">±20.0%</div></td>
+      <td>43.8%</td><td>25.0%</td>
+      <td class="nw">1383</td><td class="nw">🐣 雏虫</td><td class="nw lose">-54140 (-117)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[-10.0%, 20.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.89（k=20 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！学霸-o9 与 老实-k2 的分差 95% CI 为 [-10.0%, 20.0%]，含 0——谁是冠军纯属运气。</li><li>🩸 屠杀局：首尾 55.0% 的鸿沟——犟驴-7B 今晚不宜出门。</li><li>🎬 名场面：「EQ-MV-02」全员翻车（均分 25.0%）——只输出谜底本身（成语/电影名），不多一个字。
+看表情猜谜底：🧙⚡</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">表情猜成语</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:93.8%"></span></span>
+        <span class="dim-val">93.8%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:93.8%"></span></span>
+        <span class="dim-val">93.8%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:62.5%"></span></span>
+        <span class="dim-val">62.5%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:43.8%"></span></span>
+        <span class="dim-val">43.8%</span></div></div>
+<div class="dim-block"><div class="dim-title">表情猜电影</div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:75.0%"></span></span>
+        <span class="dim-val">75.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:50.0%"></span></span>
+        <span class="dim-val">50.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:25.0%"></span></span>
+        <span class="dim-val">25.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>学霸-o9</th><th>老实-k2</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">学霸-o9</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">52.5%</td><td style="background:rgba(26,127,75,0.25)">67.5%</td><td style="background:rgba(26,127,75,0.39)">77.5%</td></tr>
+<tr><td class="name">老实-k2</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.21)">65.0%</td><td style="background:rgba(26,127,75,0.35)">75.0%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.24)">32.5%</td><td style="background:rgba(193,68,30,0.21)">35.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.14)">60.0%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.39)">22.5%</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td style="background:rgba(193,68,30,0.14)">40.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<div class="bath">
+      <div class="bath-head"><span class="tag">表情猜电影</span> 全场平均仅 <b>25.0%</b> —— EQ-MV-02</div>
+      <div class="prompt">只输出谜底本身（成语/电影名），不多一个字。
+看表情猜谜底：🧙⚡</div>
+      <div class="target">参考答案：哈利波特</div>
+      <ul><li><b>滑头-72B</b>（0.0%）：哈利特</li><li><b>犟驴-7B</b>（0.0%）：哈利</li><li><b>老实-k2</b>（0.0%）：为利波特</li><li><b>学霸-o9</b>（100.0%）：哈利波特</li></ul>
+    </div>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 80 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>EQ-ID-01</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狼心狗肺</td>
+      <td class="muted">165ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-01</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">狼心</td>
+      <td class="muted">83ms</td>
+      <td class="muted">期望「狼心狗肺」，实答「狼心」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-01</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狼心狗肺</td>
+      <td class="muted">406ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-01</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狼心狗肺</td>
+      <td class="muted">412ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-02</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡飞蛋打</td>
+      <td class="muted">101ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-02</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">鸡飞</td>
+      <td class="muted">359ms</td>
+      <td class="muted">期望「鸡飞蛋打」，实答「鸡飞」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-02</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">鸡这蛋打</td>
+      <td class="muted">414ms</td>
+      <td class="muted">期望「鸡飞蛋打」，实答「鸡这蛋打」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-02</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">鸡飞蛋打</td>
+      <td class="muted">263ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-03</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画蛇添足</td>
+      <td class="muted">186ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-03</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画蛇添足</td>
+      <td class="muted">107ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-03</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">画蛇</td>
+      <td class="muted">440ms</td>
+      <td class="muted">期望「画蛇添足」，实答「画蛇」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-03</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画蛇添足</td>
+      <td class="muted">177ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-04</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">守株待兔</td>
+      <td class="muted">310ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-04</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">守株待兔</td>
+      <td class="muted">237ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-04</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">守株待兔</td>
+      <td class="muted">303ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-04</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">守株待兔</td>
+      <td class="muted">163ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-05</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">对牛弹琴</td>
+      <td class="muted">260ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-05</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">对牛弹琴</td>
+      <td class="muted">260ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-05</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">人牛弹琴</td>
+      <td class="muted">259ms</td>
+      <td class="muted">期望「对牛弹琴」，实答「人牛弹琴」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-05</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">对牛弹琴</td>
+      <td class="muted">152ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-06</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">掩耳盗铃</td>
+      <td class="muted">273ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-06</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">掩耳盗铃</td>
+      <td class="muted">454ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-06</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">掩耳盗铃</td>
+      <td class="muted">288ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-06</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">掩耳盗铃</td>
+      <td class="muted">449ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-07</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">杯弓蛇影</td>
+      <td class="muted">140ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-07</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">杯蛇影</td>
+      <td class="muted">139ms</td>
+      <td class="muted">期望「杯弓蛇影」，实答「杯蛇影」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-07</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">杯大蛇影</td>
+      <td class="muted">153ms</td>
+      <td class="muted">期望「杯弓蛇影」，实答「杯大蛇影」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-07</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">杯弓蛇影</td>
+      <td class="muted">316ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-08</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狐假虎威</td>
+      <td class="muted">433ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-08</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">狐假</td>
+      <td class="muted">212ms</td>
+      <td class="muted">期望「狐假虎威」，实答「狐假」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-08</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狐假虎威</td>
+      <td class="muted">375ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-08</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狐假虎威</td>
+      <td class="muted">316ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-09</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">井底之蛙</td>
+      <td class="muted">389ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-09</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">井底之蛙</td>
+      <td class="muted">413ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-09</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">井底之蛙</td>
+      <td class="muted">199ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-09</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">井底之蛙</td>
+      <td class="muted">339ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-10</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画龙点睛</td>
+      <td class="muted">118ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-10</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画龙点睛</td>
+      <td class="muted">348ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-10</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画龙点睛</td>
+      <td class="muted">255ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-10</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画龙点睛</td>
+      <td class="muted">90ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-11</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">一箭</td>
+      <td class="muted">353ms</td>
+      <td class="muted">期望「一箭双雕」，实答「一箭」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-11</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">一箭双雕</td>
+      <td class="muted">422ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-11</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">一箭雕</td>
+      <td class="muted">452ms</td>
+      <td class="muted">期望「一箭双雕」，实答「一箭雕」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-11</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">一箭双雕</td>
+      <td class="muted">164ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-12</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">三心二意</td>
+      <td class="muted">135ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-12</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">三心二意</td>
+      <td class="muted">334ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-12</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">的心二意</td>
+      <td class="muted">261ms</td>
+      <td class="muted">期望「三心二意」，实答「的心二意」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-12</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">三心</td>
+      <td class="muted">450ms</td>
+      <td class="muted">期望「三心二意」，实答「三心」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-13</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">七上八下</td>
+      <td class="muted">266ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-13</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">七上八下</td>
+      <td class="muted">381ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-13</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">七上是下</td>
+      <td class="muted">424ms</td>
+      <td class="muted">期望「七上八下」，实答「七上是下」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-13</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">七上八下</td>
+      <td class="muted">325ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-14</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">九牛一毛</td>
+      <td class="muted">182ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-14</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">九牛一在</td>
+      <td class="muted">276ms</td>
+      <td class="muted">期望「九牛一毛」，实答「九牛一在」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-14</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">九牛一</td>
+      <td class="muted">213ms</td>
+      <td class="muted">期望「九牛一毛」，实答「九牛一」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-14</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">九牛一毛</td>
+      <td class="muted">84ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-15</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画饼充饥</td>
+      <td class="muted">319ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-15</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">画饼</td>
+      <td class="muted">458ms</td>
+      <td class="muted">期望「画饼充饥」，实答「画饼」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-15</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">画不充饥</td>
+      <td class="muted">104ms</td>
+      <td class="muted">期望「画饼充饥」，实答「画不充饥」</td>
+    </tr>
+<tr>
+      <td>EQ-ID-15</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">画饼充饥</td>
+      <td class="muted">187ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-16</td><td><span class="tag">表情猜成语</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">望梅止渴</td>
+      <td class="muted">91ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-16</td><td><span class="tag">表情猜成语</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">望梅止渴</td>
+      <td class="muted">94ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-16</td><td><span class="tag">表情猜成语</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">望梅止渴</td>
+      <td class="muted">179ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-ID-16</td><td><span class="tag">表情猜成语</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">望梅止渴</td>
+      <td class="muted">373ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-01</td><td><span class="tag">表情猜电影</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">泰坦尼克号</td>
+      <td class="muted">321ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-01</td><td><span class="tag">表情猜电影</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">不坦尼克号</td>
+      <td class="muted">89ms</td>
+      <td class="muted">期望「泰坦尼克号」，实答「不坦尼克号」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-01</td><td><span class="tag">表情猜电影</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">泰坦尼为号</td>
+      <td class="muted">251ms</td>
+      <td class="muted">期望「泰坦尼克号」，实答「泰坦尼为号」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-01</td><td><span class="tag">表情猜电影</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">泰坦尼克号</td>
+      <td class="muted">257ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-02</td><td><span class="tag">表情猜电影</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">哈利波特</td>
+      <td class="muted">261ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-02</td><td><span class="tag">表情猜电影</span></td>
+      <td>滑头-72B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">哈利特</td>
+      <td class="muted">166ms</td>
+      <td class="muted">期望「哈利波特」，实答「哈利特」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-02</td><td><span class="tag">表情猜电影</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">哈利</td>
+      <td class="muted">153ms</td>
+      <td class="muted">期望「哈利波特」，实答「哈利」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-02</td><td><span class="tag">表情猜电影</span></td>
+      <td>老实-k2</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">为利波特</td>
+      <td class="muted">377ms</td>
+      <td class="muted">期望「哈利波特」，实答「为利波特」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-03</td><td><span class="tag">表情猜电影</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狮子王</td>
+      <td class="muted">442ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-03</td><td><span class="tag">表情猜电影</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狮子王</td>
+      <td class="muted">386ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-03</td><td><span class="tag">表情猜电影</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">一子王</td>
+      <td class="muted">436ms</td>
+      <td class="muted">期望「狮子王」，实答「一子王」</td>
+    </tr>
+<tr>
+      <td>EQ-MV-03</td><td><span class="tag">表情猜电影</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狮子王</td>
+      <td class="muted">342ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-04</td><td><span class="tag">表情猜电影</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">功夫熊猫</td>
+      <td class="muted">128ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-04</td><td><span class="tag">表情猜电影</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">功夫熊猫</td>
+      <td class="muted">251ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-04</td><td><span class="tag">表情猜电影</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">功夫熊猫</td>
+      <td class="muted">479ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>EQ-MV-04</td><td><span class="tag">表情猜电影</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">功夫熊猫</td>
+      <td class="muted">159ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v2.18.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>c213e79e6a1f0732</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:emoji-quiz:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 366+40，滑头-72B 366+37，犟驴-7B 366+39，老实-k2 366+40
+</footer>
+</div></body></html>

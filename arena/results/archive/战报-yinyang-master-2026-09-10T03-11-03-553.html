@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 阴阳怪气大师赛 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 4 道题 · 冠军 老实-k2 100.0%">
+<title>战报 · 阴阳怪气大师赛 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 阴阳怪气大师赛</h1>
+  <div class="sub">测大模型能不能听懂中文互联网的正话反说：识别反讽、判断语气强度、给出得体回应。LLM 裁判按 rubric 打分。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T03:11:03.553Z · 用时 0.0s · 4 只蛐蛐 × 4 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>反讽识别：听出正话反说</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td>
+      <td class="nw">1561</td><td class="nw">🐲 虫王</td><td class="nw win">15995 (+61)</td><td class="nw">4</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">80.8%<div class="ci">±28.9%</div></td>
+      <td>80.8%</td>
+      <td class="nw">1530</td><td class="nw">🐲 虫王</td><td class="nw win">6063 (+30)</td><td class="nw">4</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">61.7%<div class="ci">±38.3%</div></td>
+      <td>61.7%</td>
+      <td class="nw">1479</td><td class="nw">🐲 虫王</td><td class="nw lose">8754 (-21)</td><td class="nw">4</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">41.8%<div class="ci">±29.9%</div></td>
+      <td>41.8%</td>
+      <td class="nw">1430</td><td class="nw">🐣 雏虫</td><td class="nw lose">-24953 (-70)</td><td class="nw">4</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 57.8%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 老实-k2 以 100.0% 暂居首位，但有效题量不足（4 题），分差 95% CI [0.0%, 57.8%] 含 0——样本不足，名次不下结论。</li><li>🩸 屠杀局：首尾 58.3% 的鸿沟——犟驴-7B 今晚不宜出门。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">反讽识别：听出正话反说</div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:80.8%"></span></span>
+        <span class="dim-val">80.8%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:61.7%"></span></span>
+        <span class="dim-val">61.7%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:41.8%"></span></span>
+        <span class="dim-val">41.8%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>老实-k2</th><th>学霸-o9</th><th>滑头-72B</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">老实-k2</td><td class="self">—</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.35)">75.0%</td><td style="background:rgba(26,127,75,0.52)">87.5%</td></tr>
+<tr><td class="name">学霸-o9</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.17)">62.5%</td><td style="background:rgba(26,127,75,0.52)">87.5%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.17)">62.5%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.52)">12.5%</td><td style="background:rgba(193,68,30,0.52)">12.5%</td><td style="background:rgba(193,68,30,0.17)">37.5%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 16 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>yygq-001</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted">89ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-001</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted">216ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-001</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>犟驴-7B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted">158ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-001</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。表面是夸方案独特、夸你有创意，实际是反讽方案离谱、不切实际。说话人的真实情绪是不认可、嘲讽，可能还带一点看笑话的心态。。说话人通过正话反说表达不满，属于典型的阴阳怪气，</td>
+      <td class="muted">321ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-002</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。这是明褒实贬：前半句&quot;拍得真好&quot;是幌子，后半句&quot;下次别拍了&quot;直接点破真实态度——觉得拍得难看。属于包袱式阴阳怪气，笑点就在反转上。。说话人通过正话反说表达不满，属于典型</td>
+      <td class="muted">365ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-002</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>滑头-72B</td>
+      <td class="">26.0%</td>
+      <td class="answer">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted">208ms</td>
+      <td class="muted">老实-k2：语义重合度 19%，给 2.6/10</td>
+    </tr>
+<tr>
+      <td>yygq-002</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>犟驴-7B</td>
+      <td class="">26.0%</td>
+      <td class="answer">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted">341ms</td>
+      <td class="muted">老实-k2：语义重合度 19%，给 2.6/10</td>
+    </tr>
+<tr>
+      <td>yygq-002</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。这是明褒实贬：前半句&quot;拍得真好&quot;是幌子，后半句&quot;下次别拍了&quot;直接点破真实态度——觉得拍得难看。属于包袱式阴阳怪气，笑点就在反转上。。说话人通过正话反说表达不满，属于典型</td>
+      <td class="muted">305ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-003</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>学霸-o9</td>
+      <td class="">23.0%</td>
+      <td class="answer">这句话是在真诚地赞美对方，表达了说话人的认可与欣赏之情。</td>
+      <td class="muted">154ms</td>
+      <td class="muted">老实-k2：语义重合度 21%，给 2.3/10</td>
+    </tr>
+<tr>
+      <td>yygq-003</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。不是夸奖。&quot;熟了&quot;只肯定了最低标准（没做生），回避了对味道的任何评价，属于委婉的差评。真实评价是味道不怎么样，但不忍心直说。。说话人通过正话反说表达不满，属于典型的阴阳</td>
+      <td class="muted">308ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-003</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>犟驴-7B</td>
+      <td class="">20.0%</td>
+      <td class="answer">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted">280ms</td>
+      <td class="muted">老实-k2：语义重合度 18%，给 2/10</td>
+    </tr>
+<tr>
+      <td>yygq-003</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。不是夸奖。&quot;熟了&quot;只肯定了最低标准（没做生），回避了对味道的任何评价，属于委婉的差评。真实评价是味道不怎么样，但不忍心直说。。说话人通过正话反说表达不满，属于典型的阴阳</td>
+      <td class="muted">282ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-004</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。大概率是反讽。深夜加班打卡语境下，&quot;是公司的福气&quot;暗讽内卷/表演式加班，真实情绪可能是嘲讽或不认同这种加班文化。但也存在真诚佩服的可能，需结合双方关系判断；关键在于&quot;福</td>
+      <td class="muted">224ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+<tr>
+      <td>yygq-004</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>滑头-72B</td>
+      <td class="">21.0%</td>
+      <td class="answer">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted">127ms</td>
+      <td class="muted">老实-k2：语义重合度 18%，给 2.1/10</td>
+    </tr>
+<tr>
+      <td>yygq-004</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>犟驴-7B</td>
+      <td class="">21.0%</td>
+      <td class="answer">这句话的意思不明确，需要更多上下文才能判断说话人的真实意图。</td>
+      <td class="muted">285ms</td>
+      <td class="muted">老实-k2：语义重合度 18%，给 2.1/10</td>
+    </tr>
+<tr>
+      <td>yygq-004</td><td><span class="tag">反讽识别：听出正话反说</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">这句话表面是在夸赞，实际是反讽。大概率是反讽。深夜加班打卡语境下，&quot;是公司的福气&quot;暗讽内卷/表演式加班，真实情绪可能是嘲讽或不认同这种加班文化。但也存在真诚佩服的可能，需结合双方关系判断；关键在于&quot;福</td>
+      <td class="muted">383ms</td>
+      <td class="muted">老实-k2：语义重合度 100%，给 10/10</td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v1.8.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>39ce3b02df3b8609</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:66e1775b-c531-735e-93c8-85fc0d</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 110+206，滑头-72B 110+141，犟驴-7B 110+100，老实-k2 110+248
+</footer>
+</div></body></html>

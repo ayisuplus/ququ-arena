@@ -1,0 +1,993 @@
+{
+  "buildId": "build_a0fa88fec1a9",
+  "sourceBaseCommit": "80f3fdfb",
+  "sealCommitParent": "80f3fdfbf03629c43ead60f42182bc7bf79417ef",
+  "scope": "Saved candidate/source at sealing; Player payload verified separately. This is not a new test run or a pre-build source attestation.",
+  "playerPayloadFilesVerified": 190,
+  "playerPayload": {
+    "path": "docs/validation/station-v019-cafe-20261004/build-payload-v001.json",
+    "bytes": 41454,
+    "sha256": "a0275b5f4816309491f36e2bcd2c9698f1b941a1edda10e39039a7b43af6cd84"
+  },
+  "results": [
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-0/route.json",
+      "bytes": 47831,
+      "sha256": "34bd16ab1f70294113d4cfa85985d6d0bd1286f704c9b1d45d25be5ef7f0addb"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-97/route.json",
+      "bytes": 47820,
+      "sha256": "8ed05a7bf61385274c48d7383ce1e1bfa90b5b7b0ecc453e2b9a4bfc3aff5c2c"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-0/guards.json",
+      "bytes": 56462,
+      "sha256": "74f152b92b9cd464e7da8e6512db64c177853fb856eb85159ff84d657d090089"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-97/guards.json",
+      "bytes": 56464,
+      "sha256": "9f357f07f3ec3748f88dac4dce825a480e0e8873960f1d38ea56b496de8f3143"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-0/route.json",
+      "bytes": 110336,
+      "sha256": "3322b05afd05d5750d36fd81b3f1d97ebec9b0257760fa1e34e18d478d94c6c4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-97/route.json",
+      "bytes": 110337,
+      "sha256": "5e57b2e6ad3152e0a278a82599dc60783f7cb6b5c5b1b200a643f8ab8e295b88"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/rendering.json",
+      "bytes": 2911,
+      "sha256": "af3e6f763caeceff5b59d6819ad28292bfccc8fab06e00b2367bb2fab2ac1a36"
+    }
+  ],
+  "savedSources": [
+    {
+      "path": "production/black-hole-station/v019/cafe-guards.json",
+      "bytes": 9306,
+      "sha256": "946d14023b96d26d11321f595295fb551e10bf9472eb5b75d7c09ed7af012c7a"
+    },
+    {
+      "path": "production/black-hole-station/v019/cafe-routes.json",
+      "bytes": 7875,
+      "sha256": "11896f070274116baa6a1d18deba07a6c78983fb3ea7f0e23e53c8f43a96344e"
+    },
+    {
+      "path": "production/black-hole-station/v019/run-player.ps1",
+      "bytes": 3065,
+      "sha256": "2ec1569d5a8384ee55d2611a5b9c0cbac8fb2e685d0dbdc2e0191bdfa88bb510"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexInteriorProbeV018.cs",
+      "bytes": 14674,
+      "sha256": "967005f3e61f22ea37561b0de376afba8dd9a7261bb75d820049028efb8a931c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexRenderProbeV018.cs",
+      "bytes": 11665,
+      "sha256": "a28c14b725fa2d41c4825828d5c403383a38efc8433d6283caf00b72a543266e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe blue clear glass.mat",
+      "bytes": 3982,
+      "sha256": "78b2ece3af1654836b1b65772f4153f73ad30deea9c086c46819223085f3b353"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe blue clear glass.mat.meta",
+      "bytes": 188,
+      "sha256": "5a6ffa26bdbaba766430c4340a7d034ae70a29878549fd2bb4adcac8abb38d9f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe brushed silver.mat",
+      "bytes": 3833,
+      "sha256": "8e52f230f88facd224f4d2817dd5b608934ae4ceb825074b554f805ddef2bfdb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe brushed silver.mat.meta",
+      "bytes": 188,
+      "sha256": "74e36110e55474297083c302653439533da710ba6b468a60fa7051df70647c0e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe court blue ceramic.mat",
+      "bytes": 3963,
+      "sha256": "9d693240f3decec72bbfecf88627d535a1ef924fa22bb5ecf91046c168cc13da"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe court blue ceramic.mat.meta",
+      "bytes": 188,
+      "sha256": "0ebf786ceeca7cb95609d5f3aa9cd6d27d797643e0b7f147845af16fb6072ec0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe midblue enamel.mat",
+      "bytes": 4042,
+      "sha256": "dafa9e28b600a2a11934884271d6d4e86aaa671967ba67c95cd6e5ee33205b4a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe midblue enamel.mat.meta",
+      "bytes": 188,
+      "sha256": "dfa23cc934d29b2c876fb9389d47474a8329da3d1d9e578b63f7ccee92fb084d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe porcelain.mat",
+      "bytes": 4015,
+      "sha256": "42f5e28e51a4adac04ab783348512570dbeee671ef93bb7ba1a7e681db5eb062"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe porcelain.mat.meta",
+      "bytes": 188,
+      "sha256": "c8feb9c7de7a8a940cbf8e59d7ad1d1fab4e634d4762ffc9e1fc09418f2b6328"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe walnut.mat",
+      "bytes": 4105,
+      "sha256": "0c58ec58dd9a4f87fdb235cc98ae80013d1833602a7100572473fbb2c3762934"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe walnut.mat.meta",
+      "bytes": 188,
+      "sha256": "3699c24fc7416641a86c5d79524b4a32c0db1babcbb33a1e63fa7e15ade1be3b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe warm ceramic.mat",
+      "bytes": 3836,
+      "sha256": "090843b8427057ef4c6f958f3ad4f502003889be7df5c05b3f56baf3139cbc5b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe warm ceramic.mat.meta",
+      "bytes": 188,
+      "sha256": "ea4f0d18b051dbeb568704b8a3d8b02662d4a65839b56ef7ad8ae7917d5688fc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe warm stone v002.mat",
+      "bytes": 4124,
+      "sha256": "a3a565e32d37da4ef3146e2ea72d86808695bbcc8aa7dc0fbdadc8ace3a3e378"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Materials/DistrictsV019/Cafe warm stone v002.mat.meta",
+      "bytes": 188,
+      "sha256": "bc4856818a923b14bdf010e9be6d2df8dc3d8688f9b61162cb69c54f872dcc9b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-blue-v001.asset",
+      "bytes": 3507836,
+      "sha256": "b30a56c9700682b2a36a890d090136c5b01ebb5041d3d24501c3aaa5d509369f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-blue-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "c432a332a9ced34b9d9ea15edbf390e0f9eabd12c46b290b00e522470022ef56"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v001.asset",
+      "bytes": 22194,
+      "sha256": "42268e26796b71615970bb0a0189f8eae4c420daab066bbd1f4a5a51a7643fda"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "1fa5286b28f3f444aabfa76174f86da3d9834e796855292f887d4fc548a6fd5a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v002.asset",
+      "bytes": 5529639,
+      "sha256": "fe371b3b665625517367f05a5503e2373ba49b92f18013bec1e6d3ba8b92706b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v002.asset.meta",
+      "bytes": 188,
+      "sha256": "7f9d413b8d4a2252d8bfa7e5c3dbb26ccd831e98d63d2a401e091c98fd199859"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v003.asset",
+      "bytes": 171958,
+      "sha256": "cd3912824a35c445183e347b105031edcce483964b3b63a54fde27192cc81e70"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v003.asset.meta",
+      "bytes": 188,
+      "sha256": "89fd4412f565f00243bad0839f2e78a2c731c23769bd111b124d76eb96dd44f5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v004.asset",
+      "bytes": 205656,
+      "sha256": "9cc674e3e883989f798b6728ad9af4b93f2e5224abaa6293cbe1043f0a7583c3"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-floor-v004.asset.meta",
+      "bytes": 188,
+      "sha256": "738305b6cd778248bf3c54292bcb6fae278e02594b1955d065f046035da8125a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-glass-v001.asset",
+      "bytes": 778495,
+      "sha256": "aeb3a989dc561adebd5a7d401813f2778fc9d829a41664c49fde212149ed01e4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-glass-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "1a82159452381c4bbf181cf2e9b9923b09c44a26cf0448967cf928eb3bcb820f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-paving-v001.asset",
+      "bytes": 10948,
+      "sha256": "eac21886ded11cdf998e554aa0c4555d84d98c6ab13d621949e6779d5db290ad"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-paving-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "43bb0d213710e18cfc4c36cc905fd86945e413a69b361a5c72eaddd714cf8200"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-paving-v002.asset",
+      "bytes": 10960,
+      "sha256": "a63d001120509994d3470992276566388de08030c4aba6bd12617b650fc08e71"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-paving-v002.asset.meta",
+      "bytes": 188,
+      "sha256": "d08dcecf4703dbb76f65d9c181a02d9f70be34fc953828ef78a79713ac27ea42"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-porcelain-v001.asset",
+      "bytes": 2867645,
+      "sha256": "d12f5b9521ecf6646c79559288309c3d850467590fae5843de64bc01fc290d90"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-porcelain-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "2939930936394f98e8696f6c3f8faee507cb1b455ca812a50aac43d312dd25e9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-silver-v001.asset",
+      "bytes": 407832,
+      "sha256": "a25f896e391f79202c20af4e3df470f3702e2b80dd21e3c824bfd9f24ae2436d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-silver-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "0c0e26a2e002c20549af795c083ddb169afd354a7d2e1abdd5ba92f596bcbaaf"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-silver-v002.asset",
+      "bytes": 1755667,
+      "sha256": "b843da0bfb02f79765f32dda80c1b1626f04b3b57f53de763d848a3f0447fa85"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-silver-v002.asset.meta",
+      "bytes": 188,
+      "sha256": "e748df511ba593f121e42867801130e7ec2b602fbeb2c267f06f957703f70793"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-wood-v001.asset",
+      "bytes": 1789357,
+      "sha256": "3ca9cede44d1ff622263e6242becc6e0c3941ba570beaadad8cfd1950650f5eb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/DistrictsV019/Cafe-wood-v001.asset.meta",
+      "bytes": 188,
+      "sha256": "ddb33817b55e124e8f5c79fdf843580b97e46146c4c47008395fcba45362c7af"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+      "bytes": 36147042,
+      "sha256": "de07621638547809410bd29a9bbd38e9f2e395429d2e0f527e3d337883591c3a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/Marble01MetallicSmoothness.png",
+      "bytes": 881081,
+      "sha256": "f7e388a8f29a828900f8acad9b06f8fa3ce34b227d2769eaeec3e5b113ad00ed"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/Marble01MetallicSmoothness.png.meta",
+      "bytes": 2652,
+      "sha256": "354c8ff99910d901a7ade6110e9a4f68056c187f3a93456bf87750cae62f507e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_albedo.png",
+      "bytes": 6817382,
+      "sha256": "1436da4f4afca358e9141f3ad9a2e824931dae18f4cbe06bddafabec4756ebcf"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_albedo.png.meta",
+      "bytes": 2652,
+      "sha256": "645b945e1515472d3721405400aef41b7df61d9591f7658e6d31fe576ed08bbe"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_normal.png",
+      "bytes": 2016258,
+      "sha256": "f916840e6499572db492ac3dc8a6957e5c9d6eca1a45bed69a84f4993a6a8a7a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_normal.png.meta",
+      "bytes": 2652,
+      "sha256": "e395cfdec84082d087f30ad2296147f182c3d492bcfd19efb74b93e559fe568f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_roughness.png",
+      "bytes": 1380447,
+      "sha256": "a2e977c1f9c589aea08a3a2b7a1873414fab4a9610927db87f33a0a08c7a3fa8"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/MarbleCafeV019/model_roughness.png.meta",
+      "bytes": 2652,
+      "sha256": "07ce7241ab2484a5ae74218f88157702b3d017dcc071957dc933a8f10c36d037"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v001.exr",
+      "bytes": 389315,
+      "sha256": "6bf8d26fd6c98708ada941bf6273b863b5cbda3b4b5b49106cfdceadb529adf7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v001.exr.meta",
+      "bytes": 2653,
+      "sha256": "5369cd453abf9668109b9383af10987f72bf4b486b4206da23887e50178ca510"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v002.exr",
+      "bytes": 389315,
+      "sha256": "6bf8d26fd6c98708ada941bf6273b863b5cbda3b4b5b49106cfdceadb529adf7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v002.exr.meta",
+      "bytes": 2653,
+      "sha256": "df3cf0a9a24d77d1cbf90c15e684f31acc47b8233f661358748c7b80f74e54ec"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v003.exr",
+      "bytes": 389315,
+      "sha256": "6bf8d26fd6c98708ada941bf6273b863b5cbda3b4b5b49106cfdceadb529adf7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-loggia-v003.exr.meta",
+      "bytes": 2653,
+      "sha256": "5d049efb266d9c65b734bc0697a35050ea37f8a95c35782fcb397dd5cd093e05"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-original-v003.exr",
+      "bytes": 389328,
+      "sha256": "f42efaf1bb7b678fc8fd00df8399aa21ec40cadb28bbe6d541ed5a92ce53c150"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-original-v003.exr.meta",
+      "bytes": 2653,
+      "sha256": "30e5be9df210bb7a4d6490ba85b8f9457924386e12753b31fdbb7f9719a66ec5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v001.exr",
+      "bytes": 389469,
+      "sha256": "ffed3cfd3e1152c3f8acfd2ef1d09cfb8207023e39e24253dd9f994970e1a69e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v001.exr.meta",
+      "bytes": 2653,
+      "sha256": "8e43e989c86c490d9cbe5b2352c2300deab3afcc3c42e3ede75f3964e9c51afd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v002.exr",
+      "bytes": 389469,
+      "sha256": "ffed3cfd3e1152c3f8acfd2ef1d09cfb8207023e39e24253dd9f994970e1a69e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v002.exr.meta",
+      "bytes": 2653,
+      "sha256": "47db301aaca2c108f25562d4ec4afaa1b51a5238ff988d33dc030d4df5ba0b9e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v003.exr",
+      "bytes": 389469,
+      "sha256": "ffed3cfd3e1152c3f8acfd2ef1d09cfb8207023e39e24253dd9f994970e1a69e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Textures/ReflectionsV019/Cafe-rear-v003.exr.meta",
+      "bytes": 2653,
+      "sha256": "057d4c011896a2908a35ca860861efd0067d048750d3b9e0fce98fbf8ab0f86a"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/audit-cli-v001.json",
+      "bytes": 2973,
+      "sha256": "5c7600aa95acb8c8667788ffd17a5aeea68360cc8d1a5a22d77205d131468d10"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/audit-cli-v002.json",
+      "bytes": 2966,
+      "sha256": "1a0c3fe0e908bd179f00d6990ef829957f09605e75bb09286c71ad0e9b032ea7"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/audit-cli-v003.json",
+      "bytes": 2970,
+      "sha256": "75fd53edbaa4dc608da8c2588e796baed1928bfb607883728a5c771279a24d1f"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/bake-cli-v001.json",
+      "bytes": 946,
+      "sha256": "ad47cd73d2c5ab7e712988236a6722a49f8183191a39b8a1fa00d2a64f02256c"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/bake-cli-v002.json",
+      "bytes": 955,
+      "sha256": "e6327903db0ddfe6214ba3ec39d817c08a6ecfbe29817a4c1e5de581e56fda2a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/bake-cli-v003-retry.json",
+      "bytes": 1751,
+      "sha256": "6684305c4c1e0bda8178b7af24424e88809dca3691e203b438dff509fa1c342b"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/bake-cli-v003.json",
+      "bytes": 261,
+      "sha256": "ac5089d927e12af9159f3ae2ba075c84898c66f5d507528ae216bb809b0bfba7"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/before-capture-cli.json",
+      "bytes": 645,
+      "sha256": "65a2ffad625d5339a4aa3757a966c192f62e0d2bbb57233040143a7028af9ff4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/before-native/cafe-court.png",
+      "bytes": 932877,
+      "sha256": "b9e4928da140d507aa1ccf781e5ee619ad9d26fa9105ffcc1db3fc71dd2510e6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/before-native/cafe-group.png",
+      "bytes": 1147783,
+      "sha256": "99671c348d886edc8e9ae7a7d72fb193c0a4b519e42f45738d943491ab66532b"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/before-native/cafe-lot.png",
+      "bytes": 1024888,
+      "sha256": "b7da68b1ba1bc52620eeab0badb05b4eef9fbec506efd715690ac85522cf787f"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/before-native/cameras.json",
+      "bytes": 2098,
+      "sha256": "e1eec703938142a673cc8ed6570e160f7ec9fb495f346c2d911a9920215efe19"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/build-dispatch.json",
+      "bytes": 232,
+      "sha256": "cb3ddb5560a15d1518514a72ec80fe780440039f6ff3c4abbd7c2954d073a19b"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/build-payload-v001.json",
+      "bytes": 41454,
+      "sha256": "a0275b5f4816309491f36e2bcd2c9698f1b941a1edda10e39039a7b43af6cd84"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/build-status-final.json",
+      "bytes": 2421621,
+      "sha256": "14007112de7e50db1b37672e1e7d1be3c9df08263c5cb7cc1a905fc22e77d4cf"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/build-status.json",
+      "bytes": 379,
+      "sha256": "0ce9baeedb9fee418484d316da5c4609b2849cd0a0f7bae78e13656a5e9b28bf"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/cafe-layout-section.png",
+      "bytes": 180932,
+      "sha256": "d23a156e68e44972048b120cef72df49e5701ef51c03d75e479b29a493e67759"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/cafe-layout-section.svg",
+      "bytes": 178761,
+      "sha256": "9a0d48338a8e8c62b15cc249a49838d26a4d60cec78aaa33bca4d15b18d84b42"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/capture-cli-v001.json",
+      "bytes": 638,
+      "sha256": "11ce39a6650feca1eca1e03a772fd86f114241c7f7927f408452d8a40d61e5bc"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/capture-cli-v002.json",
+      "bytes": 647,
+      "sha256": "bb74a375961151addaae1ceefbb52976acfa7f6e151c50543c15f3c3dcbc5976"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/capture-cli-v003.json",
+      "bytes": 644,
+      "sha256": "496894b9b4640f3fe787ee2d34668808ad1f3c9b8e46d020c5bc0c6179ec7992"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/capture-phases-cli-v001.json",
+      "bytes": 619,
+      "sha256": "56f4a8c152e2f2c028ea6617e65752dc481c8efdfdb4a011feeb3fd7bd0c6dcf"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/court-finish-cli-v001.json",
+      "bytes": 856,
+      "sha256": "291a3f096b908a7cc8a461af834820f366173744b3a5dc87f3cb849e8856d1e6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/court-finish-v001.json",
+      "bytes": 217,
+      "sha256": "f1322b906c8e1686e5122fc943084cdb51acd874acdf4440f8f72fdcff4cc03d"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/export-cli-v001.json",
+      "bytes": 665,
+      "sha256": "4ad45528bf089c7e293227417929375421f72f656c67a681878a13a7d6e84b8d"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/finish-cli.json",
+      "bytes": 615,
+      "sha256": "223b39bc25aabf43ef0f9fa696f06284e2566193bbe9f267d20b673a61ae2b88"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/furniture-cli.json",
+      "bytes": 3376,
+      "sha256": "503c3df3292477a3705242d224f3cdb5035f7206c35e0ee06b8eaa64d04f629b"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/furniture.json",
+      "bytes": 2276,
+      "sha256": "7a50189e04e2d7a732163d10c4ecff0f68a186f377664f57375bb97b37899742"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-audit-cli.json",
+      "bytes": 2304,
+      "sha256": "5008d86a98698646351b9d5544c222180fb6f5b26268be33c9f43e50005a98f7"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-audit-v001.json",
+      "bytes": 1423,
+      "sha256": "2445a6af15d66fb0a3f7fa28953c05416efa0da1c2b655cc58cb55383ec96b40"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-capture-cli.json",
+      "bytes": 647,
+      "sha256": "020c9bcf7ff19ced81237b3b9d915a9c65751d7f1b0d7d951d16d5813350980e"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-native-v001/cafe-court.png",
+      "bytes": 973612,
+      "sha256": "5db5459a049af9bc7a0f67dd9c39f83095e017590703c40d01dd125cdc18f5fc"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-native-v001/cafe-group.png",
+      "bytes": 1243116,
+      "sha256": "abd3cc3e4932acfecdceaae1d7b4aad9525131b6398d30f3af659a034b431fe9"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-native-v001/cafe-lot.png",
+      "bytes": 991127,
+      "sha256": "ad7b83c1fdb90c1f18f3760bef33359e29571f7ece88688f60024604431dd5f1"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-native-v001/cameras.json",
+      "bytes": 2098,
+      "sha256": "e1eec703938142a673cc8ed6570e160f7ec9fb495f346c2d911a9920215efe19"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-v001.json",
+      "bytes": 253,
+      "sha256": "1e0dabd8def5e9e7a38c45a475c25dbfe6c7df7a6379fe39ea9aa1241b4f49c9"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-v002.json",
+      "bytes": 253,
+      "sha256": "17dd6143b89d5db42338f1e1647021d970d662d4944dcd2746b37729f48fa88a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-v003.json",
+      "bytes": 253,
+      "sha256": "fb1ed5fdb7a3ea495b8f80c46959dc55a6c79c1ef0da6057dc2d507533f98dc2"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/geometry-v004.json",
+      "bytes": 253,
+      "sha256": "0cdf66686324f23cb6c37d3be7687c7b2b475e3a6351f67bf06af0872f7bf7bd"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/inputs-cafe-v001.json",
+      "bytes": 59592,
+      "sha256": "12652ab6ff2fd47bee5288a31d258b31e72378cc1e8f9b597d18e929e30919c7"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/install-cli-v001.json",
+      "bytes": 828,
+      "sha256": "60a7baeed877e326c77b404d807b31ee9d116aa382154b12b3565577c5895230"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/installation.json",
+      "bytes": 188,
+      "sha256": "33f94d4623c8aa050b79bc4fb6eb4fdcfe44c4a7218845ff87fb82f1001647d4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/material-cli-v002.json",
+      "bytes": 922,
+      "sha256": "99a871d26b4dd9d4bef859d9c74b4a8131c490f8e52ec68caba237984d2ed1aa"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/material-v002.json",
+      "bytes": 293,
+      "sha256": "4da3992c2d885c3bb9bf3072b31a061b8a90588412761091755d2e8be307de06"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-audit-v001.json",
+      "bytes": 1969,
+      "sha256": "98f1e7d612920cf0c374709da339903986042e410a5564450de65a50bb81de41"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-audit-v002.json",
+      "bytes": 1962,
+      "sha256": "40759f1ec20d713d23d0a64e157af84a492f078ea7f664b8620c36abca119b5d"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-audit-v003.json",
+      "bytes": 1960,
+      "sha256": "c0f2dcf772e492c9b8fcb62567aa6f1794e4cba9c52ba1bd50f3c97966dd6a07"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-court.png",
+      "bytes": 980019,
+      "sha256": "520269e5f205415b82f3333ae111799d4304350af050211242effa24394e0aba"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-group.png",
+      "bytes": 1275028,
+      "sha256": "e45404cb6d02738babea51b61f406b9f3e75204159b806eb70d6ebeace8e8374"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-loggia.png",
+      "bytes": 1498797,
+      "sha256": "42258c69328d291b949fe4cc932d57b7a9997fd9f8cbce105f5f5961614a6ea9"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-lot.png",
+      "bytes": 1078014,
+      "sha256": "aecff162236b17ba38acb44af6fd3fd7f8d5acd39da989b1c713cf7417aa50d6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-low-terrace.png",
+      "bytes": 1366014,
+      "sha256": "f316d51cfac238604de044519c5e4db6530c30c2df7de8c46a0e8f37e845d393"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cafe-upper.png",
+      "bytes": 1459250,
+      "sha256": "976b41d2c7977636b328f5949e22d03f8dbfcd4c6053e3533158de569fb2a555"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v001/cameras.json",
+      "bytes": 2860,
+      "sha256": "e5ae1eebb18198a6b740570901ee5398b495e06a9bb8a7ca792517e1aa5c60ad"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-court.png",
+      "bytes": 980019,
+      "sha256": "520269e5f205415b82f3333ae111799d4304350af050211242effa24394e0aba"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-group.png",
+      "bytes": 1369330,
+      "sha256": "333781d1ed679fc2b47ce58d704cb357abb5a93ef39b91d95e98c8c9dc563629"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-loggia.png",
+      "bytes": 2122448,
+      "sha256": "e00040dfec6551ebfd25ab29889f14ba672e7e24828933b6708d43a8dd913517"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-lot.png",
+      "bytes": 1090086,
+      "sha256": "052f237e5dcc6985e1777249a7bd53736fe7a251a2276ba47aa957f92e3e9352"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-low-terrace.png",
+      "bytes": 2200370,
+      "sha256": "dc3eb31d5cf3813dd2f5e7dba9e042ff10550112093fd2b68ab338d23a44b575"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cafe-upper.png",
+      "bytes": 2021116,
+      "sha256": "d4250834e8307e20c716ced035a1bb86643f4b8269f7f1766dcbe21c6f229691"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v002/cameras.json",
+      "bytes": 2860,
+      "sha256": "e5ae1eebb18198a6b740570901ee5398b495e06a9bb8a7ca792517e1aa5c60ad"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-court.png",
+      "bytes": 983821,
+      "sha256": "f34c13dbc5efbadf097f3ad9f496f22555bda6f06e5b5a9d286617ed842a1b12"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-group.png",
+      "bytes": 1370091,
+      "sha256": "7163b551847f04a0ef6f5e2ba84c45a5ccbb773d4c59da0dd771c703e42d8678"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-loggia.png",
+      "bytes": 2084551,
+      "sha256": "0978c844b2f3be73273969015a1bac40130ec86492f5660bca755fc4a7ea3ff6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-lot.png",
+      "bytes": 1090361,
+      "sha256": "e76d805c8102292faaf2dc1e295a4e65b3735a636ef7f07661f81e29d83bc7d2"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-low-terrace.png",
+      "bytes": 2200370,
+      "sha256": "dc3eb31d5cf3813dd2f5e7dba9e042ff10550112093fd2b68ab338d23a44b575"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cafe-upper.png",
+      "bytes": 2021116,
+      "sha256": "d4250834e8307e20c716ced035a1bb86643f4b8269f7f1766dcbe21c6f229691"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/native-v003/cameras.json",
+      "bytes": 2860,
+      "sha256": "e5ae1eebb18198a6b740570901ee5398b495e06a9bb8a7ca792517e1aa5c60ad"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/original-survey.json",
+      "bytes": 193408,
+      "sha256": "ba3bb40edaecb122f991187094bc1a22f240a593ac1f0e371b2ca734ec255c97"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-0/exit.json",
+      "bytes": 88,
+      "sha256": "de36d449144eb30553c1ac71c14d63f96c26fb37c682316b3faba93a646864d1"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-0/process.json",
+      "bytes": 950,
+      "sha256": "dfcd7958b599db6c2a03c8668c1a5c5e4de250a4fd81b6b32c6f62f72756ee8f"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-0/progress.json",
+      "bytes": 110322,
+      "sha256": "5d56127a9f08024825567b959951d5356792c1155f13cc3a921932bc1dd5dbf1"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-0/route.json",
+      "bytes": 110336,
+      "sha256": "3322b05afd05d5750d36fd81b3f1d97ebec9b0257760fa1e34e18d478d94c6c4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-97/exit.json",
+      "bytes": 88,
+      "sha256": "43119b2a2a635f9b046960ff571c77c735852b3a89e922b0334f73ad19a8f068"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-97/process.json",
+      "bytes": 955,
+      "sha256": "a204decaa6bc350b59e89d954da42af2eb91dd212336f67910dfa281a8d18420"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-97/progress.json",
+      "bytes": 110324,
+      "sha256": "143d17cee3e663925e9aa38b03d87cda762ac781a4b6238b3409dce872e8e08a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-annex-97/route.json",
+      "bytes": 110337,
+      "sha256": "5e57b2e6ad3152e0a278a82599dc60783f7cb6b5c5b1b200a643f8ab8e295b88"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-0/exit.json",
+      "bytes": 88,
+      "sha256": "65c6466ae021845ce591a4efc30fed545c2baddc798d2422e6af349ab07a5279"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-0/guards.json",
+      "bytes": 56462,
+      "sha256": "74f152b92b9cd464e7da8e6512db64c177853fb856eb85159ff84d657d090089"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-0/process.json",
+      "bytes": 983,
+      "sha256": "4ba2ec78d79aa08558dbce25c20d3e716a8b398c97e95184b831b403c934c6f2"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-0/progress.json",
+      "bytes": 56449,
+      "sha256": "53d3b2c50c32f946813d12f88fcb859258396852de3a2efafd9fee09a8f58131"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-97/exit.json",
+      "bytes": 88,
+      "sha256": "65b64b38f5e5bf55b881e769acad418d085648f9b0e2832cfc287ab892a171bc"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-97/guards.json",
+      "bytes": 56464,
+      "sha256": "9f357f07f3ec3748f88dac4dce825a480e0e8873960f1d38ea56b496de8f3143"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-97/process.json",
+      "bytes": 988,
+      "sha256": "eff44c737f0c0bb06a2826342ee0c85e768fcb06a454e0693e5e0d64c1411d49"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-guards-97/progress.json",
+      "bytes": 56451,
+      "sha256": "3acdf24d5d8b7cea13f9e14e16b78344c479e62765bf7531f12ebfc1d04b4f99"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-0/exit.json",
+      "bytes": 88,
+      "sha256": "babd71cba3b7bdb6a4f1d3401180eed2d013a59a5100fc60ab42f647bbd1167e"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-0/process.json",
+      "bytes": 988,
+      "sha256": "5848450ed3ee334d225de6999c546b149e140f04525efad86db3abf0289603a7"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-0/progress.json",
+      "bytes": 47818,
+      "sha256": "6495076bcafae73db1ae6aff37ef64f9ec0f1d7d0dfd69e01c57cb9472cc71f4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-0/route.json",
+      "bytes": 47831,
+      "sha256": "34bd16ab1f70294113d4cfa85985d6d0bd1286f704c9b1d45d25be5ef7f0addb"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-97/exit.json",
+      "bytes": 88,
+      "sha256": "bc26e4e676f70b6dac7f3191c0e3fb3d68d498fa8eaae57bad9d01d2a8263ba4"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-97/process.json",
+      "bytes": 993,
+      "sha256": "28569a17536aed1921250fcf23345d4fd17198c45254bbaa915f62cc9be87b9a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-97/progress.json",
+      "bytes": 47806,
+      "sha256": "fc3b95316654dfbe3fc6cac1e9229af3914d5b350264d5cfaaa304a60dca7e56"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/player-route-97/route.json",
+      "bytes": 47820,
+      "sha256": "8ed05a7bf61385274c48d7383ce1e1bfa90b5b7b0ecc453e2b9a4bfc3aff5c2c"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/pre-cafe-preservation.json",
+      "bytes": 552,
+      "sha256": "d443f4d988640594f328f8012bbcc8eb7c20d2c1996a511ae399acb772e82d7c"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/preservation.json",
+      "bytes": 3440,
+      "sha256": "a85494ac2ab4a35f1754752f034d8aaf8ed1dc0d72f019189262e8199a58b6fd"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/reflections-v001.json",
+      "bytes": 303,
+      "sha256": "01aa34e05f1b7cb6403ea6d272564ec4179162af2f8a93b19572c767af3f77c6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/reflections-v002.json",
+      "bytes": 303,
+      "sha256": "065bb33f10e5e079abbce849ce91e07ac46992e79a8b656648af58834cfbd5b6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/reflections-v003.json",
+      "bytes": 1018,
+      "sha256": "78a9667cf341c79b17b4d003a902b6141f1ab5db67e1f8efc05161a604aaf52a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/reload-before-build.json",
+      "bytes": 678,
+      "sha256": "651691788614b94072ebbb4b163e55a02b222f1d7ca9a99165c47a07bc665247"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-court.png",
+      "bytes": 804460,
+      "sha256": "8c42bb7842085ff4ff6676a4120bbf35c05f29b84374957d6c911e400cb7fc47"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-group.png",
+      "bytes": 894942,
+      "sha256": "290287f55eaec55b43f6d271b542f5d99b251bf5b9e1c17f2b44d56a4a7b6762"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-loggia.png",
+      "bytes": 1597323,
+      "sha256": "6e43533ff09998f874becf2997b7c3b6405069fc999b52c77e181ac3f781da7f"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-low-terrace.png",
+      "bytes": 1666408,
+      "sha256": "80d1d7837e79a48d9091ad733187be929467c8e5e79adf7440ddfb7e22277355"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-old-room.png",
+      "bytes": 1246701,
+      "sha256": "a3b19ad5a47912cf1586514575c4e1f26225542159e05981c1acdab2aa0093fa"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/cafe-upper.png",
+      "bytes": 1564138,
+      "sha256": "1d2404864021a0c257883f15491a17ce46517bea842440ecbbd519d7b9f93d3b"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/exit.json",
+      "bytes": 88,
+      "sha256": "1a5837a6cc720c10d1d7dc4b3751bbd78bf670e726a44bc853388f146b290c5a"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/process.json",
+      "bytes": 813,
+      "sha256": "1f845d30fd0ed00df133aa26b5f32393f22cd7fd26dcbb969ef0641abe5bab51"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/progress.json",
+      "bytes": 2665,
+      "sha256": "d17aa38e8a117ab908d7111f1c2c3b26172be4666987a92ebd6d5f4b9edbdac6"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/render-visible-v001/rendering.json",
+      "bytes": 2911,
+      "sha256": "af3e6f763caeceff5b59d6819ad28292bfccc8fab06e00b2367bb2fab2ac1a36"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/survey-cli.json",
+      "bytes": 614,
+      "sha256": "7b1eb7aab37fa0c986519f4b598e9e3d21ef3f271ec19202903393a11be7c178"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/sweep-cafe-v001.json",
+      "bytes": 488592,
+      "sha256": "86f33783220f1fd2564482192e718137d80ca432907948107c70fcf6953100ff"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/cafe-eye-sky-baseline.png",
+      "bytes": 1031398,
+      "sha256": "c218b83590dfe497b00698081713b2aeca5596a3770c97f8f716ddf4f5af6fcd"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/cafe-eye-sky-candidate.png",
+      "bytes": 1147717,
+      "sha256": "eac1d7833668caaae55f18b9fd8adc07290068e2b078984ffd34c1ba7fabd01c"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/cameras.json",
+      "bytes": 2882,
+      "sha256": "7d8b0808221379d426de782625ba6819bf2b97cdbdc15414e7b29e916bf1ad0e"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/garden-eye-arena-baseline.png",
+      "bytes": 2290329,
+      "sha256": "144cd188cb4d54c0094da16ec400b0d57f66d6c1d396638ddc186ca8861d4543"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/garden-eye-arena-candidate.png",
+      "bytes": 2292239,
+      "sha256": "00aa878c86c9b6330c7d2b5f9c66b80d60584586a3e13ae7172c4673a15e74af"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/homes-eye-arena-baseline.png",
+      "bytes": 837967,
+      "sha256": "2809b10513595da16d149842067fee2e2084a002969cbbd9061a2145b22d113f"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/homes-eye-arena-candidate.png",
+      "bytes": 838435,
+      "sha256": "c2e3dd8f7e7d17ca2e2b8a6a48bcc2920ca3619ecd63c50d42375471250289db"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/view-phases-v001/sky-calibration.png",
+      "bytes": 1356105,
+      "sha256": "d933ecb801e935539fe92ed5a5f902a174ae32e4276f0bcb150965e6843ff980"
+    },
+    {
+      "path": "docs/validation/station-v019-cafe-20261004/windows-cafe-v001.json",
+      "bytes": 127052,
+      "sha256": "6394afb427150ec939c424ed4b6eebf5fc4105049f377819653fcc5d6b459c41"
+    }
+  ]
+}

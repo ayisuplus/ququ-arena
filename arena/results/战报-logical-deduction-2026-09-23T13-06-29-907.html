@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 逻辑排位擂台 · AI斗兽场">
+<meta property="og:description" content="3 只蛐蛐 × 20 道题 · 最高原始均分相同，列为并列第一；Elo 与速度不打破本次并列。 DeepSeek-Flash、MiMo-V2.6-Pro">
+<title>战报 · 逻辑排位擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: var(--ink); flex: none; }
+  .dim-bar { flex: 1; background: var(--soft); border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: var(--accent); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  /* 石墨底 + 香槟金单主色：主色只给主操作与选中态，冷灰蓝只给标签/信息，其余靠明度分层 */
+  :root { color-scheme:dark; --ink:#e8e8ea; --muted:#9a9ca6; --accent:#dcb46e; --gold:#e9a55c; --bg:#141518; --card:#1b1c20; --line:#2c2e34; --soft:#232429; --tag-bg:#22272f; --tag-ink:#a9bfd6; --button-ink:#1c1609; }
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --ink:#e8e8ea; --muted:#9a9ca6; --accent:#dcb46e; --gold:#e9a55c;
+    --bg:#141518; --card:#1b1c20; --line:#2c2e34; --soft:#232429; --tag-bg:#22272f; --tag-ink:#a9bfd6; --button-ink:#1c1609;
+  }
+  [data-theme="light"] { color-scheme:light; --ink:#1f2024; --muted:#63656e; --accent:#8a6320; --gold:#a5601c; --bg:#f5f4f0; --card:#fff; --line:#e1ddd4; --soft:#efede7; --tag-bg:#eceff3; --tag-ink:#3f5a78; --button-ink:#fff; }
+  [data-theme="dark"] .win { color:#7fcf9a; }
+  [data-theme="dark"] .hall.gold { background:linear-gradient(135deg,#29251d,#1d1c1f); border-color:#4a4232; }
+  [data-theme="dark"] .hall.dark { background:var(--card); border-color:var(--line); }
+  .card { border-radius:8px; }
+  .hall { border-radius:8px; }
+  body { line-height: 1.65; }
+  :where(body) { background-color:var(--bg); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
+  button, input, select, textarea { font-family: inherit; }
+  input, select, textarea { color:var(--ink); background:var(--card); accent-color:var(--accent); }
+  input::placeholder, textarea::placeholder { color:var(--muted); opacity:1; }
+  button, a, input, select, summary { transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s; }
+  :where(a, button, input, select, textarea, summary):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  button:disabled { cursor:not-allowed; opacity:.55; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  td { font-variant-numeric:tabular-nums; }
+  tbody tr:hover { background:var(--soft); }
+  code { color:var(--ink); background:var(--tag-bg); }
+  .muted { line-height:1.65; }
+  .site-nav { display:flex; align-items:center; gap:4px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--line); font-size:14px; }
+  .site-nav .arena-brand { display:flex; align-items:center; gap:11px; margin-right:28px; padding-left:0; color:var(--ink); font-size:16px; font-weight:700; letter-spacing:1px; }
+  .site-nav .arena-brand:hover { background:none; }
+  .brand-mark { display:inline-grid; place-items:center; width:26px; height:26px; border:1.5px solid var(--accent); border-radius:4px; color:var(--accent); transform:rotate(45deg); font-size:15px; }
+  .brand-mark span { transform:rotate(-45deg); }
+  .site-nav a { padding:7px 13px; border-radius:7px; color:var(--muted); text-decoration:none; }
+  .site-nav a:hover { color:var(--ink); background:var(--soft); text-decoration:none; }
+  .site-nav a[aria-current="page"] { color:var(--ink); background:var(--soft); font-weight:600; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; width:36px; height:36px; display:grid; place-items:center; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 10px; padding:0; cursor: pointer; color: var(--ink, #2b2622); font-size: 16px; box-shadow:none; }
+  .theme-toggle:hover { background:var(--soft); border-color:var(--muted); }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; } }
+
+</style></head>
+<body><div class="wrap" role="main"><button type="button" class="theme-toggle" onclick="toggleTheme()" title="切换明暗" aria-label="切换明暗主题" aria-pressed="false">🌓</button>
+<script>
+try { document.documentElement.dataset.theme = localStorage.getItem('ququ-theme') || 'dark'; } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+function syncThemeToggle() {
+  var dark = document.documentElement.dataset.theme === 'dark';
+  var button = document.querySelector('.theme-toggle');
+  button.setAttribute('aria-pressed', String(dark));
+  button.setAttribute('aria-label', dark ? '切换到浅色主题' : '切换到深色主题');
+  button.title = dark ? '切换到浅色主题' : '切换到深色主题';
+}
+syncThemeToggle();
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('ququ-theme', next); } catch (e) {}
+  syncThemeToggle();
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 逻辑排位擂台</h1>
+  
+  <div class="sub">BBH logical_deduction 中文生成器版：四种物品排一列，给若干约束，问某位是谁。关键工程：约束先加到唯一解再做反向消元最小化（冗余约束=水题），24 种排列暴力校验唯一性。生成器即权威。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-23T13:06:29.907Z · 用时 71.4s · 3 只蛐蛐 × 20 道题</div>
+</header>
+
+
+
+<h2>🏆 排行榜</h2>
+<div class="card" style="overflow-x:auto"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th title="约束排位（唯一解已暴力校验）">约束排位</th><th>本场Elo</th><th>段位</th><th>积分</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">DeepSeek-Flash<div class="muted">custom:eca8fe86-57f0-49fd-88ea-16164d5aa465</div></td>
+      <td class="score">100.0%<div class="ci">[100.0%, 100.0%]</div></td>
+      <td>100.0%</td>
+      <td class="nw">1506</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1596 (+6)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">MiMo-V2.6-Pro<div class="muted">custom:77bcf4ad-cf41-4efa-a36e-10611cc9d477</div></td>
+      <td class="score">100.0%<div class="ci">[100.0%, 100.0%]</div></td>
+      <td>100.0%</td>
+      <td class="nw">1506</td><td class="nw">⚔️ 骁骑</td><td class="nw win">1517 (+6)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">MiMo-V2.6-Flash<div class="muted">custom:7b85e114-b714-4053-b044-585d9c9213c1</div></td>
+      <td class="score">95.0%<div class="ci">[85.0%, 100.0%]</div></td>
+      <td>95.0%</td>
+      <td class="nw">1488</td><td class="nw">🛡️ 老卒</td><td class="nw lose">1388 (-12)</td><td class="nw">20</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">本场结论：最高原始均分相同，列为并列第一；Elo 与速度不打破本次并列。</p><p class="muted">前两名分差 95% CI：[0.0%, 0.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷内部一致性 Cronbach's α = 0.00（k=20 题 × m=3 模型；m<10 波动大，仅供内部参考）——一致性低，汇总均分的解释需谨慎（题诊 → analyze 命令）。</p></div>
+<h2>效率参考（不决定名次）</h2><div class="card"><table><thead><tr><th>名次</th><th>模型</th><th>综合分</th><th>答题均分</th><th>平均解题时间</th><th>记录Token</th><th>缓存命中</th><th>纳入题数：速度 / Token / 缓存</th></tr></thead><tbody><tr><td>1</td><td>DeepSeek-Flash</td><td>92.6</td><td>100.0%</td><td>1.6s</td><td>6534</td><td>0.0%（20/20题）</td><td>20 / 20 / 20（共20题）</td></tr><tr><td>1</td><td>MiMo-V2.6-Pro</td><td>83.2</td><td>100.0%</td><td>6.1s</td><td>6506</td><td>0.0%（20/20题）</td><td>20 / 20 / 20（共20题）</td></tr><tr><td>3</td><td>MiMo-V2.6-Flash</td><td>79.7</td><td>95.0%</td><td>5.5s</td><td>5896</td><td>0.0%（20/20题）</td><td>20 / 20 / 20（共20题）</td></tr></tbody></table><details><summary>综合分公式与缺失数据处理</summary><p>竞技综合分：每题100 × 答题得分（0–1）×（70 + 15 × 速度系数 + 10 × Token效率 + 5 × 缓存命中率）÷ 当题启用权重，再逐题等权平均。满分100；答错得0。</p><p>速度系数 = 同题有得分模型的最快解题耗时 ÷ 本模型耗时，上限1；解题时间包含重试及退避，不含容量排队、裁判和解说。</p><p>Token效率 = 同题有得分模型的最少总Token ÷ 本模型总Token，上限1。输入含缓存，输出含推理，均不重复相加；0 Token视为最高效率。</p><p>缓存命中率 = 缓存读取Token ÷ 输入Token；写入缓存不算命中。总览按Token量加权，未提供数据不当作0%。</p><p>同题任一模型的某项数据缺失、用量因重试不完整或输入为0时，全体跳过对应指标并按剩余权重归一化。每项展示实际纳入题数；不同模型的Token切分和缓存服务可能不同。</p><p>已退赛选手不参与综合排名和效率比较；退赛前的有效答案、答题均分与已知用量单独保留。</p></details><p class="muted">名次以上方排行榜的答题均分为准；本表只比较同题的速度、Token 与缓存效率。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>⚔️ 神仙打架！DeepSeek-Flash 跟 MiMo-V2.6-Pro 杀到分差进了噪声（95% CI [0.0%, 0.0%] 含 0）——冠军归属等于掷硬币。</li><li>🫡 站着输的：MiMo-V2.6-Flash 垫底仍拿到 95.0%——输得体面。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">约束排位（唯一解已暴力校验）</div><div class="dim-row"><span class="dim-name">DeepSeek-Flash</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">MiMo-V2.6-Pro</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">MiMo-V2.6-Flash</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:95.0%"></span></span>
+        <span class="dim-val">95.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>DeepSeek-Flash</th><th>MiMo-V2.6-Pro</th><th>MiMo-V2.6-Flash</th></tr></thead>
+<tbody><tr><td class="name">DeepSeek-Flash</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.04)">52.5%</td></tr>
+<tr><td class="name">MiMo-V2.6-Pro</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.04)">52.5%</td></tr>
+<tr><td class="name">MiMo-V2.6-Flash</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td style="background:rgba(193,68,30,0.04)">47.5%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 60 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>LD-01</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">1.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-01</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">5.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-01</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">6.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-02</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">1.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-02</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">8.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-02</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">8.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-03</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">1.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-03</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">6.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-03</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">8.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-04</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">1.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-04</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">3.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-04</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">3.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-05</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">1.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-05</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">4.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-05</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">6.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-06</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">935ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-06</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">3.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-06</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">仓鼠</td>
+      <td class="muted">4.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-07</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狗</td>
+      <td class="muted">2.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-07</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狗</td>
+      <td class="muted">4.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-07</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">狗</td>
+      <td class="muted">4.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-08</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-08</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">2.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-08</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">5.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-09</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">1.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-09</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">5.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-09</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">3.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-10</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">1.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-10</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">3.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-10</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">2.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-11</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">1.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-11</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">7.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-11</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">钢琴</td>
+      <td class="muted">5.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-12</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">架子鼓</td>
+      <td class="muted">1.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-12</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">架子鼓</td>
+      <td class="muted">10.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-12</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">架子鼓</td>
+      <td class="muted">2.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-13</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">1.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-13</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">4.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-13</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">7.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-14</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">猫</td>
+      <td class="muted">1.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-14</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">仓鼠不在最左，狗在3，兔在4，仓鼠在2，剩下猫在第1位。
+
+猫</td>
+      <td class="muted">6.6s</td>
+      <td class="muted">期望「猫」，实答「仓鼠不在最左，狗在3，兔在4，仓鼠在2，剩下猫在第1位。
+
+猫」</td>
+    </tr>
+<tr>
+      <td>LD-14</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">猫</td>
+      <td class="muted">4.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-15</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">2.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-15</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">8.7s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-15</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">西瓜</td>
+      <td class="muted">8.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-16</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小提琴</td>
+      <td class="muted">2.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-16</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小提琴</td>
+      <td class="muted">4.0s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-16</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">小提琴</td>
+      <td class="muted">3.2s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-17</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">1.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-17</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">3.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-17</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">1.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-18</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">2.4s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-18</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">6.1s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-18</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">苹果</td>
+      <td class="muted">19.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-19</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">1.9s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-19</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">7.6s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-19</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">香蕉</td>
+      <td class="muted">10.8s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-20</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>DeepSeek-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">1.5s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-20</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Flash</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">4.3s</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>LD-20</td><td><span class="tag">约束排位（唯一解已暴力校验）</span></td>
+      <td>MiMo-V2.6-Pro</td>
+      <td class="win">100.0%</td>
+      <td class="answer">兔</td>
+      <td class="muted">5.9s</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v3.35.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：DeepSeek-Flash / MiMo-V2.6-Flash / MiMo-V2.6-Pro<br>
+  题库指纹 <code>bfa52af2af5380fd</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:logical-deduction:2026-09-10</code>（训练语料过滤标记）
+  <br>Token 用量：DeepSeek-Flash 2092+4442，MiMo-V2.6-Flash 1870+4026，MiMo-V2.6-Pro 1870+4636
+</footer>
+</div></body></html>

@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle v013 required\");\nvar folder=\"Assets/Station/Models/SereneGalleryLightmapMeshesV013\";\nif(!UnityEditor.AssetDatabase.IsValidFolder(folder))UnityEditor.AssetDatabase.CreateFolder(\"Assets/Station/Models\",\"SereneGalleryLightmapMeshesV013\");\nvar copies=new System.Collections.Generic.Dictionary<UnityEngine.Mesh,UnityEngine.Mesh>();int count=0;\nforeach(var r in UnityEngine.GameObject.Find(\"V013 continuous observation gallery\").GetComponentsInChildren<UnityEngine.MeshRenderer>()){\n var mf=r.GetComponent<UnityEngine.MeshFilter>();var mesh=mf.sharedMesh;\n if(mesh.uv2.Length!=mesh.vertexCount){\n  if(!copies.TryGetValue(mesh,out var copy)){\n   copy=UnityEngine.Object.Instantiate(mesh);copy.name=mesh.name+\" gallery lightmap UV\";\n   if(!UnityEditor.Unwrapping.GenerateSecondaryUVSet(copy))throw new System.Exception(\"Unwrap failed: \"+mesh.name);\n   UnityEditor.AssetDatabase.CreateAsset(copy,folder+\"/Mesh-\"+copies.Count.ToString(\"D3\")+\".asset\");copies.Add(mesh,copy);\n  }mf.sharedMesh=copy;\n }\n UnityEditor.GameObjectUtility.SetStaticEditorFlags(r.gameObject,UnityEditor.GameObjectUtility.GetStaticEditorFlags(r.gameObject)|UnityEditor.StaticEditorFlags.ContributeGI);r.receiveGI=UnityEngine.ReceiveGI.Lightmaps;r.scaleInLightmap=1;count++;\n}\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{newContributors=count,unwrappedMeshes=copies.Count,started=UnityEditor.Lightmapping.BakeAsync()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "newContributors": 43,
+        "unwrappedMeshes": 3,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

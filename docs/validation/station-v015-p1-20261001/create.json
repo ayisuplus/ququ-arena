@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var current = UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif (current.isDirty || UnityEditor.EditorApplication.isPlaying)\n    throw new System.InvalidOperationException(\"Save current work or exit Play before creating the candidate\");\nconst string path = \"Assets/Station/Scenes/Candidates/BlackHoleStationRingPrototypeV015.unity\";\nif (System.IO.File.Exists(path)) throw new System.InvalidOperationException(\"Candidate already exists\");\nvar sky = UnityEngine.RenderSettings.skybox;\nvar scene = UnityEditor.SceneManagement.EditorSceneManager.NewScene(UnityEditor.SceneManagement.NewSceneSetup.EmptyScene);\nUnityEngine.RenderSettings.skybox = sky;\nUnityEngine.RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;\nUnityEngine.RenderSettings.ambientLight = new UnityEngine.Color(.55f,.65f,.75f);\nSystem.IO.Directory.CreateDirectory(\"Assets/Station/Models/RingPrototypeV015\");\nSystem.IO.Directory.CreateDirectory(\"Assets/Station/Materials/RingPrototypeV015\");\nUnityEngine.Material Material(string name, UnityEngine.Color color)\n{\n    var m = new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\"));\n    m.name=name; m.SetColor(\"_BaseColor\",color); m.SetFloat(\"_Smoothness\",.3f);\n    UnityEditor.AssetDatabase.CreateAsset(m,\"Assets/Station/Materials/RingPrototypeV015/\"+name+\".mat\"); return m;\n}\nvar blue=Material(\"Blue\",new UnityEngine.Color(.45f,.7f,.88f));\nvar white=Material(\"Porcelain\",new UnityEngine.Color(.92f,.95f,.98f));\nvar green=Material(\"Green\",new UnityEngine.Color(.48f,.77f,.69f));\nUnityEngine.GameObject Band(string name,float inner,float outer,UnityEngine.Material mat,string id,float edgeSpeed)\n{\n    const int count=512; var vertices=new UnityEngine.Vector3[(count+1)*2]; var tris=new int[count*6];\n    for(int i=0;i<=count;i++) { var a=i*2*UnityEngine.Mathf.PI/count; var d=new UnityEngine.Vector3(UnityEngine.Mathf.Sin(a),0,UnityEngine.Mathf.Cos(a)); vertices[i*2]=d*inner; vertices[i*2+1]=d*outer; }\n    for(int i=0;i<count;i++) { int v=i*2,t=i*6; tris[t]=v;tris[t+1]=v+1;tris[t+2]=v+2;tris[t+3]=v+1;tris[t+4]=v+3;tris[t+5]=v+2; }\n    var mesh=new UnityEngine.Mesh{name=name};mesh.vertices=vertices;mesh.triangles=tris;mesh.RecalculateNormals();mesh.RecalculateBounds();\n    UnityEditor.AssetDatabase.CreateAsset(mesh,\"Assets/Station/Models/RingPrototypeV015/\"+name+\".asset\");\n    var go=new UnityEngine.GameObject(name);go.AddComponent<UnityEngine.MeshFilter>().sharedMesh=mesh;go.AddComponent<UnityEngine.MeshRenderer>().sharedMaterial=mat;go.AddComponent<UnityEngine.MeshCollider>().sharedMesh=mesh;\n    if(id!=null){ var ring=go.AddComponent<QuQu.StationRotatingRing>();ring.RingId=id;ring.InnerRadius=inner;ring.OuterRadius=outer;ring.DegreesPerSecond=edgeSpeed/outer*UnityEngine.Mathf.Rad2Deg; }\n    return go;\n}\nvar inner=Band(\"R1 prototype deck\",40,64,blue,\"prototype-inner\",.075f);\nBand(\"Fixed transfer promenade\",64,72,white,null,0);\nvar outer=Band(\"R2 prototype deck\",72,100,green,\"prototype-outer\",-.075f);\n// Short off-axis walls represent building edges and deliberately offset street mouths.\nforeach(var item in new[]{(inner, new UnityEngine.Vector3(48,1.5f,12)),(outer,new UnityEngine.Vector3(82,1.5f,-17))})\n{\n    var wall=UnityEngine.GameObject.CreatePrimitive(UnityEngine.PrimitiveType.Cube);wall.name=\"Setback building boundary\";wall.transform.SetParent(item.Item1.transform);wall.transform.localPosition=item.Item2;wall.transform.localScale=new UnityEngine.Vector3(8,3,1);wall.GetComponent<UnityEngine.Renderer>().sharedMaterial=white;\n}\nvar light=new UnityEngine.GameObject(\"Prototype cool key light\").AddComponent<UnityEngine.Light>();light.type=UnityEngine.LightType.Directional;light.intensity=1.2f;light.transform.rotation=UnityEngine.Quaternion.Euler(45,-25,0);\nvar player=new UnityEngine.GameObject(\"Station visitor first-person walker\");player.transform.position=new UnityEngine.Vector3(52,.08f,0);\nvar cc=player.AddComponent<UnityEngine.CharacterController>();cc.height=1.8f;cc.radius=.32f;cc.center=new UnityEngine.Vector3(0,.9f,0);cc.skinWidth=.08f;cc.stepOffset=.3f;\nvar walker=player.AddComponent<QuQu.StationGrayboxWalker>();\nvar camera=new UnityEngine.GameObject(\"First person camera\").AddComponent<UnityEngine.Camera>();camera.tag=\"MainCamera\";camera.transform.SetParent(player.transform);camera.transform.localPosition=new UnityEngine.Vector3(0,1.63f,0);camera.farClipPlane=2000;camera.gameObject.AddComponent<UnityEngine.AudioListener>();walker.View=camera;\nplayer.transform.rotation=UnityEngine.Quaternion.Euler(0,90,0);\n// Real save services with minimal off-route fixtures; these are not migrated station buildings.\nvar fixtures=new UnityEngine.GameObject(\"P1 save fixtures - not migrated content\");fixtures.transform.position=new UnityEngine.Vector3(250,0,250);\nUnityEngine.GameObject Fixture(string name){var go=new UnityEngine.GameObject(name);go.transform.SetParent(fixtures.transform,false);return go;}\nvar greenhouse=Fixture(\"P1 greenhouse state fixture\").AddComponent<QuQu.StationGreenhouseCare>();greenhouse.StableId=\"p1-greenhouse\";greenhouse.Walker=walker;greenhouse.Foliage=Fixture(\"P1 foliage transform\").transform;\nvar cafe=Fixture(\"P1 cafe state fixture\").AddComponent<QuQu.StationCafeMoment>();cafe.StableId=\"p1-cafe\";cafe.Walker=walker;cafe.Counter=cafe.transform;cafe.Seats=System.Array.Empty<UnityEngine.Transform>();\nvar cargos=new QuQu.StationDockCargoService[2];\nfor(int i=0;i<2;i++){var service=Fixture(\"P1 cargo state \"+i).AddComponent<QuQu.StationDockCargoService>();service.StableId=\"p1-cargo-\"+i;service.Walker=walker;service.Cargo=Fixture(\"P1 cargo transform \"+i).transform;service.InspectionZ=240;cargos[i]=service;}\nvar save=new UnityEngine.GameObject(\"P1 real StationWorldSave\").AddComponent<QuQu.StationWorldSave>();save.Walker=walker;save.Greenhouse=greenhouse;save.Cafe=cafe;save.Cargo=cargos;\nUnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene,path);UnityEditor.AssetDatabase.SaveAssets();\nreturn new {scene=path,inner=new{min=40,max=64},fixedWidth=8,outer=new{min=72,max=100},edgeSpeed=.075f,fixtures=\"Existing save service types, synthetic state only\"};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationRingPrototypeV015.unity",
+        "inner": {
+          "min": 40,
+          "max": 64
+        },
+        "fixedWidth": 8,
+        "outer": {
+          "min": 72,
+          "max": 100
+        },
+        "edgeSpeed": 0.075,
+        "fixtures": "Existing save service types, synthetic state only"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

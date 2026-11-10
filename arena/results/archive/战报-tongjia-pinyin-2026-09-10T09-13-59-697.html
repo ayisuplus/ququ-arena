@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="战报 · 通假·拼音剖面擂台 · AI斗兽场">
+<meta property="og:description" content="4 只蛐蛐 × 2 道题 · 冠军 老实-k2 100.0%">
+<title>战报 · 通假·拼音剖面擂台 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#7a6a52; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .nw { white-space: nowrap; }
+  .score { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ci { font-weight: 400; font-size: 11px; color: var(--muted); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .err { color: var(--gold); font-size: 12px; }
+  .tag { display:inline-block; background:var(--tag-bg); color:var(--tag-ink); font-size:11px; padding:2px 8px; border-radius:6px; }
+  .badge-ach { margin-left: 4px; cursor: default; }
+  .win { color:#1a7f4b; font-weight:600; } .lose { color:var(--accent); }
+  .bath { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:14px; background:var(--card); }
+  .bath-head { font-size:14px; margin-bottom:8px; }
+  .prompt { white-space:pre-wrap; background:var(--soft); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+  .target { font-size:13px; color:var(--gold); margin-bottom:8px; }
+  .bath ul { margin:0; padding-left:18px; font-size:13px; color:var(--ink); opacity:.85; }
+  .cast { margin:0; padding-left:20px; font-size:14px; line-height:2; }
+  .answer { font-size:13px; max-width:320px; word-break: break-all; }
+  details summary { cursor:pointer; color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; line-height:1.9; }
+  .dim-block { margin-bottom: 18px; }
+  .dim-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .dim-row { display: flex; align-items: center; gap: 10px; margin: 3px 0; font-size: 13px; }
+  .dim-name { width: 110px; text-align: right; color: #4c453d; flex: none; }
+  .dim-bar { flex: 1; background: #f3ece1; border-radius: 6px; height: 14px; overflow: hidden; }
+  .dim-fill { display: block; height: 100%; background: linear-gradient(90deg, #d9a05b, #c1442e); border-radius: 6px; }
+  .dim-val { width: 52px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .matrix td, .matrix th { text-align: center; padding: 8px 6px; font-size: 13px; }
+  .matrix td.name { text-align: right; }
+  .matrix td.self { color: var(--muted); }
+  @media print {
+    .theme-toggle { display: none; }
+    .card, .bath { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">电 子 蛐 蛐 · 战 报</div>
+  <h1>🦗 通假·拼音剖面擂台</h1>
+  <div class="sub">复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。</div>
+  <div class="sub" style="margin-top:6px">开赛时间 2026-09-10T09:13:59.697Z · 用时 0.0s · 4 只蛐蛐 × 2 道题</div>
+</header>
+
+<h2>🏆 排行榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>总分(95% CI)</th><th>带调拼音还原</th><th>数字调拼音还原</th><th>本场Elo</th><th>段位</th><th>生涯Elo</th><th>完赛</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>🥇</td><td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td><td>100.0%</td>
+      <td class="nw">1532</td><td class="nw">🐲 虫王</td><td class="nw win">33360 (+32)</td><td class="nw">2</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥈</td><td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="score">100.0%<div class="ci">±0.0%</div></td>
+      <td>100.0%</td><td>100.0%</td>
+      <td class="nw">1531</td><td class="nw">🐲 虫王</td><td class="nw win">15112 (+31)</td><td class="nw">2</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>🥉</td><td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="score">50.0%<div class="ci">±50.0%</div></td>
+      <td>0.0%</td><td>100.0%</td>
+      <td class="nw">1491</td><td class="nw">🐲 虫王</td><td class="nw lose">9991 (-9)</td><td class="nw">2</td>
+      <td>—</td>
+    </tr>
+<tr>
+      <td>4.</td><td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="score">0.0%<div class="ci">±0.0%</div></td>
+      <td>0.0%</td><td>0.0%</td>
+      <td class="nw">1445</td><td class="nw">🐣 雏虫</td><td class="nw lose">-52730 (-55)</td><td class="nw">2</td>
+      <td>—</td>
+    </tr>
+</tbody></table>
+<p class="muted">前两名分差 95% CI：[0.0%, 0.0%] —— 含 0，冠亚军差距在统计噪声范围内，名次不足以下结论。</p><p class="muted">本卷信度 Cronbach's α = 0.73（k=2 题 × m=4 蛐蛐；m<10 波动大，仅供内部参考）——各题同向区分，榜单均分可信。</p></div>
+
+<h2>🎙️ 解说席</h2>
+<div class="card"><ul class="cast"><li>👑 老实-k2 以 100.0% 暂居首位，但有效题量不足（2 题），分差 95% CI [0.0%, 0.0%] 含 0——样本不足，名次不下结论。</li><li>🩸 屠杀局：首尾 100.0% 的鸿沟——犟驴-7B 今晚不宜出门。</li></ul></div>
+
+<h2>📊 维度对决</h2>
+<div class="card">
+<div class="dim-block"><div class="dim-title">带调拼音还原</div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+<div class="dim-block"><div class="dim-title">数字调拼音还原</div><div class="dim-row"><span class="dim-name">老实-k2</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">滑头-72B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">学霸-o9</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:100.0%"></span></span>
+        <span class="dim-val">100.0%</span></div><div class="dim-row"><span class="dim-name">犟驴-7B</span>
+        <span class="dim-bar"><span class="dim-fill" style="width:0.0%"></span></span>
+        <span class="dim-val">0.0%</span></div></div>
+</div>
+
+<h2>🤼 胜率矩阵</h2>
+<div class="card" style="overflow-x:auto"><table class="matrix">
+<thead><tr><th>行 \ 列</th><th>老实-k2</th><th>滑头-72B</th><th>学霸-o9</th><th>犟驴-7B</th></tr></thead>
+<tbody><tr><td class="name">老实-k2</td><td class="self">—</td><td style="background:transparent">50.0%</td><td style="background:rgba(26,127,75,0.35)">75.0%</td><td style="background:rgba(26,127,75,0.70)">100.0%</td></tr>
+<tr><td class="name">滑头-72B</td><td style="background:transparent">50.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.35)">75.0%</td><td style="background:rgba(26,127,75,0.70)">100.0%</td></tr>
+<tr><td class="name">学霸-o9</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td class="self">—</td><td style="background:rgba(26,127,75,0.35)">75.0%</td></tr>
+<tr><td class="name">犟驴-7B</td><td style="background:rgba(193,68,30,0.70)">0.0%</td><td style="background:rgba(193,68,30,0.70)">0.0%</td><td style="background:rgba(193,68,30,0.35)">25.0%</td><td class="self">—</td></tr></tbody></table>
+<p class="muted">行蛐蛐对列蛐蛐的同题胜率（胜=1 平=0.5），仅统计双方都有效作答的题。</p></div>
+
+
+
+<h2>🩸 名场面（集体翻车题）</h2>
+<p class="muted">本场没有集体翻车题，蛐蛐们表现稳健。</p>
+
+<h2>🧾 逐题明细</h2>
+<details><summary>展开全部 8 条交战记录</summary>
+<div class="card" style="margin-top:12px"><table>
+<thead><tr><th>题目</th><th>维度</th><th>蛐蛐</th><th>得分</th><th>回答</th><th>耗时</th><th>裁判备注</th></tr></thead>
+<tbody>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>学霸-o9</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted">312ms</td>
+      <td class="muted">期望「北京是中国的首都（改过一个字）」，实答「北京是中国的首都」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都（改过一个字）</td>
+      <td class="muted">157ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">北京中国的首都（改过一个字）</td>
+      <td class="muted">214ms</td>
+      <td class="muted">期望「北京是中国的首都（改过一个字）」，实答「北京中国的首都（改过一个字）」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0001</td><td><span class="tag">带调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都（改过一个字）</td>
+      <td class="muted">360ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>学霸-o9</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted">268ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>滑头-72B</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted">162ms</td>
+      <td class="muted"></td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>犟驴-7B</td>
+      <td class="lose">0.0%</td>
+      <td class="answer">京是中国的首都</td>
+      <td class="muted">167ms</td>
+      <td class="muted">期望「北京是中国的首都」，实答「京是中国的首都」</td>
+    </tr>
+<tr>
+      <td>t2-p2h-0002</td><td><span class="tag">数字调拼音还原</span></td>
+      <td>老实-k2</td>
+      <td class="win">100.0%</td>
+      <td class="answer">北京是中国的首都</td>
+      <td class="muted">271ms</td>
+      <td class="muted"></td>
+    </tr>
+</tbody></table></div></details>
+
+<footer>
+  AI斗兽场 QuQuArena v2.17.0 · 基于 earendil-works/pi Agent 底座 ·
+  本次参战：学霸-o9 / 滑头-72B / 犟驴-7B / 老实-k2<br>
+  题库指纹 <code>ca5e6ad8175c3b07</code> · 裁判 mock:laoshi-k2
+  
+  <br>canary <code>ququ-arena:0263d039-75cd-e2f0-352c-bd1750</code>（训练语料过滤标记）
+  <br>Token 用量：学霸-o9 63+8，滑头-72B 63+12，犟驴-7B 63+11，老实-k2 63+12
+</footer>
+</div></body></html>

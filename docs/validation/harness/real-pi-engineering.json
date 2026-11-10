@@ -1,0 +1,163 @@
+{
+  "at": "2026-09-13T10:21:27.924Z",
+  "root": "C:\\Users\\36322\\AppData\\Local\\Temp\\harness-real-ela6NM",
+  "id": "h-42577952-742a-49f4-84da-6e056b032b00",
+  "protocol": {
+    "version": "pi-harness-1",
+    "executorHash": "e491f9335c6f93635c87830389c9b44681549321cd282a60f6cfb32529429519",
+    "piVersion": "0.85.1",
+    "model": {
+      "id": "custom:66fad92c-14d6-4186-9338-9380768db4df",
+      "name": "Qwen3-8B · 硅基流动",
+      "modelId": "Qwen/Qwen3-8B",
+      "provider": "custom",
+      "endpointHash": "dcfb966d818ddf8f4d10f7397ce546e86d3fcb8afe26371506405f6978c6f661"
+    },
+    "benchmarkHash": "e5945cfe91fe76cad554292c4e69c796ebe5c342cf55b22203dc4e2e7df8198c",
+    "image": "sha256:2fe369e969550cde8e867afc3fe370b260140cab4a23d467074295b42163d553",
+    "budget": {
+      "timeMs": 180000,
+      "maxCalls": 8,
+      "maxOutputTokens": 4096
+    },
+    "repeats": 1,
+    "split": "development",
+    "sampling": {
+      "temperature": 0,
+      "thinking": "off",
+      "cache": "none",
+      "retries": 0
+    },
+    "cacheNote": "请求关闭显式缓存，供应商可能忽略；未预热，不保证物理冷缓存。只统计实际返回的缓存字段。",
+    "systemPrompt": "你在可重复的 Benchmark 实验中解决任务。按题目要求作答，保留仍有效的约束。只使用提供的材料与工具。不访问外部应用、网络或本机环境，不寻找验收器。代码任务可读取项目文件、修改允许的文件、运行公开测试。最终答案遵守题目要求；你的自述不构成验收结果。",
+    "toolsHash": "ce16ef2de064ac515fc5b1f76c84ea4e4c1f41442459c8c3611738955a4d5c21",
+    "schedule": "逐题配对；每次重复轮换配置顺序；单并发；每个试验独立上下文和工作区；累计失败 3 次停止当前试验"
+  },
+  "status": "completed",
+  "summary": [
+    {
+      "id": "baseline",
+      "name": "基础 pi-agent",
+      "planned": 1,
+      "completed": 0,
+      "failures": 1,
+      "pending": 0,
+      "score": 0,
+      "delta": 0,
+      "interval": null,
+      "independentTasks": 1,
+      "elapsedMs": 180016,
+      "timeDeltaMs": 0,
+      "usage": {
+        "calls": 1,
+        "knownCalls": 1,
+        "input": 522,
+        "output": 5337,
+        "total": 5859,
+        "complete": true,
+        "cacheKnownCalls": 1,
+        "cacheRate": 0
+      },
+      "tokenDelta": 0,
+      "judgeCalls": [],
+      "tasks": [
+        {
+          "id": "idempotent-ledger",
+          "score": 0,
+          "baseline": 0,
+          "delta": 0
+        }
+      ],
+      "note": "质量差值按同题、同次重复配对，先在题内平均，再按题 bootstrap；失败执行计 0，环境失败或待评分阻止完整比较。区间仅为当前任务集合的探索性描述，多配置未校正；不自动宣称提升。"
+    },
+    {
+      "id": "p-77cc5a073a3dc0cd",
+      "name": "规划",
+      "planned": 1,
+      "completed": 0,
+      "failures": 1,
+      "pending": 0,
+      "score": 0,
+      "delta": 0,
+      "interval": null,
+      "independentTasks": 1,
+      "elapsedMs": 180001,
+      "timeDeltaMs": -15,
+      "usage": {
+        "calls": 1,
+        "knownCalls": 1,
+        "input": 251,
+        "output": 4880,
+        "total": 5131,
+        "complete": true,
+        "cacheKnownCalls": 1,
+        "cacheRate": 0
+      },
+      "tokenDelta": -728,
+      "judgeCalls": [],
+      "tasks": [
+        {
+          "id": "idempotent-ledger",
+          "score": 0,
+          "baseline": 0,
+          "delta": 0
+        }
+      ],
+      "note": "质量差值按同题、同次重复配对，先在题内平均，再按题 bootstrap；失败执行计 0，环境失败或待评分阻止完整比较。区间仅为当前任务集合的探索性描述，多配置未校正；不自动宣称提升。"
+    }
+  ],
+  "trials": [
+    {
+      "id": "t1",
+      "status": "failed",
+      "error": "执行预算已耗尽或保存失败",
+      "score": 0,
+      "patchBytes": 0,
+      "calls": [
+        {
+          "phase": "solve",
+          "status": "aborted",
+          "elapsedMs": 180015,
+          "usage": {
+            "input": 522,
+            "output": 5337,
+            "cachedInput": 0
+          },
+          "error": "模型请求中止或超时"
+        }
+      ],
+      "events": [
+        {
+          "kind": "call",
+          "text": "answer · solve · 调用 1"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "status": "failed",
+      "error": "执行预算已耗尽或保存失败",
+      "score": 0,
+      "patchBytes": 0,
+      "calls": [
+        {
+          "phase": "plan",
+          "status": "aborted",
+          "elapsedMs": 180001,
+          "usage": {
+            "input": 251,
+            "output": 4880,
+            "cachedInput": 0
+          },
+          "error": "模型请求中止或超时"
+        }
+      ],
+      "events": [
+        {
+          "kind": "call",
+          "text": "answer · plan · 调用 1"
+        }
+      ]
+    }
+  ]
+}

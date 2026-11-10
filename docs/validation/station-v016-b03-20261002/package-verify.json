@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b03-tidal-seed\\package-v001",
+    "manifest": {
+      "assetId": "v016_b03_tidal_seed_exterior_trial",
+      "description": "Local retopology guided by B03 concept and inspected Meshy draft; split rear repaired; ribs, glazing, plinth and entry reconstructed. Closed exterior, transparent glass and indoor garden pending.",
+      "displayName": "V016 B03 Tidal Seed Exterior Trial",
+      "files": [
+        {
+          "bytes": 473208,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "f0231b1f50cfede57bf53a30d7fcb358553b3e431eae26d94876d7faf059a73b"
+        },
+        {
+          "bytes": 1746,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "283fa7fb2a9bdb60e14568880df618d86c1aa15ee6d69074edbccec87c0c822d"
+        },
+        {
+          "bytes": 743,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "0eeaca4e80208ba4f86efaaccf665a2173af9da644164718734e02a727e63c13"
+        },
+        {
+          "bytes": 2691,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "f55281213ee5eb3f87c0d0ddd7a730439c729cbf2f18b705e389ccae6bbf4f4f"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_380af78957ac57b237fafcf7",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

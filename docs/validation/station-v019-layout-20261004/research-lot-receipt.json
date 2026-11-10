@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\check-research-lot.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "id": "main-wing",
+          "x0": -12,
+          "x1": 9,
+          "z0": -22,
+          "z1": -5,
+          "h": 18,
+          "overlaps": [],
+          "minRadius": 122.102417,
+          "maxRadius": 144.6824
+        },
+        {
+          "id": "low-wing",
+          "x0": -26,
+          "x1": -14,
+          "z0": -22,
+          "z1": -5,
+          "h": 9,
+          "overlaps": [],
+          "minRadius": 108.115677,
+          "maxRadius": 121.999992
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

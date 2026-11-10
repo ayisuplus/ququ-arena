@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v018\\approaches\\preflight.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "id": "B01",
+          "radius": 172,
+          "problems": []
+        },
+        {
+          "id": "B02",
+          "radius": 172.004272,
+          "problems": []
+        },
+        {
+          "id": "B03",
+          "radius": 187.967041,
+          "problems": []
+        },
+        {
+          "id": "B04",
+          "radius": 250.000488,
+          "problems": []
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

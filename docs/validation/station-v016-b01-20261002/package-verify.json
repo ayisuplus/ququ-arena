@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\package-v001",
+    "manifest": {
+      "assetId": "v016_b01_moon_sail_exterior_trial",
+      "description": "Source Meshy curved shells retained and smoothed, curved glass and clean mullions rebuilt locally. Closed exterior trial, inferred back, surface finishing pending.",
+      "displayName": "V016 B01 Moon Sail Exterior Trial",
+      "files": [
+        {
+          "bytes": 1296384,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "1a4bc86118079142c6995315ab5dfa232e2710bc43be55d943ef3e8b16c9cff5"
+        },
+        {
+          "bytes": 1746,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "944db648eac4a3035da3ada71d850cefe9d13b6a263af198a823f849305e85af"
+        },
+        {
+          "bytes": 717,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "e20a52da1e999063b6d07fedc605cdb51f53e77d498130e9258abcb82fff7685"
+        },
+        {
+          "bytes": 2691,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "8325c608c2adbeeda5260c08f477d4d819ae7da6c42b300ebc35bd08a5ac8058"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_16d9d2e90e5865732adc56f2",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

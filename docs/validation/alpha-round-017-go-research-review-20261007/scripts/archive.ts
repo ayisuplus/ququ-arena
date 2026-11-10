@@ -1,0 +1,34 @@
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { join, resolve, dirname } from "node:path";
+import { createHash } from "node:crypto";
+const here=import.meta.dir,source=resolve(here,"../.."),game="E:/projects/黑洞空间站",out=join(game,"docs/validation/alpha-round-017-go-research-review-20261007");
+const hash=(b:Uint8Array|string)=>createHash("sha256").update(b).digest("hex");
+const json=async(name:string)=>JSON.parse(await readFile(join(here,name),"utf8"));
+const assert=(v:unknown,m:string)=>{if(!v)throw new Error(m);};
+const receipt=await json("receipt.json"),exit=await json("probe-exit.json"),payload=await json("image-payloads.json"),started=await json("dispatch-started.json"),accepted=await json("accepted.json"),ready=await json("readiness.json");
+const events=(await readFile(join(here,"events.jsonl"),"utf8")).trim().split(/\r?\n/).map(JSON.parse);
+const states=(await readFile(join(here,"states.jsonl"),"utf8")).trim().split(/\r?\n/).map(JSON.parse);
+assert(exit.exitCode===0&&receipt.native.status==="completed"&&!receipt.native.hasError,"Task not successful");
+assert(receipt.requests===1&&receipt.tools.count===8&&receipt.tools.errors===0&&receipt.tools.names.every((n:string)=>n==="read"),"Unexpected tools/task count");
+assert(receipt.responseModels.length===1&&receipt.responseModels[0]==="opencode-go/mimo-v2.6-pro"&&receipt.retry===false,"Provider/retry drift");
+assert(receipt.tools.restoreExact&&receipt.configUnchanged&&JSON.stringify(receipt.game.before)===JSON.stringify(receipt.game.after)&&!receipt.game.after.status,"Post-task state drift");
+assert(hash((await readFile(join(here,"task.txt"),"utf8")).trim())===started.promptSha256,"Task text drift");
+assert((await readFile(join(here,"alpha-answer.md"))).equals(await readFile(join(here,"review-answer.md"))),"Final answer differs");
+for(const image of payload.images){const bytes=await readFile(join(here,image.file)),event=events.find(e=>e.type==="tool_execution_end"&&e.toolCallId===image.toolCallId);assert(hash(bytes)===image.sha256&&event?.imageBlocks.some((b:any)=>b.dataSha256===image.encodedSha256)&&!event.isError,"Image payload mismatch");}
+for(const image of started.images)assert(hash(await readFile(image.path))===image.sha256,"Original image drift");
+const beforeAccept=states.filter(s=>new Date(s.atUtc)<new Date(accepted.atUtc));
+assert(beforeAccept.length>0&&beforeAccept.every(s=>!s.isSettled&&s.hasPendingAsyncWork),"Preparation reported idle");
+const times={requestStarted:started.atUtc,accepted:accepted.atUtc,agentStart:events.find(e=>e.type==="agent_start").atUtc,firstTool:events.find(e=>e.type==="tool_execution_start").atUtc,nativeSettled:events.find(e=>e.type==="session_settled").atUtc,hostSnapshot:events.find(e=>e.type==="alpha_snapshot").atUtc,observedIdle:states.find(s=>s.accepted&&s.isSettled&&!s.isStreaming&&!s.hasPendingAsyncWork&&!s.queuedMessageCount).atUtc};
+const seconds=(a:string,b:string)=>(Date.parse(b)-Date.parse(a))/1000;
+const timing={times,seconds:{requestToAcceptance:seconds(times.requestStarted,times.accepted),agentStartToFirstTool:seconds(times.agentStart,times.firstTool),agentStartToNativeSettled:seconds(times.agentStart,times.nativeSettled),nativeSettledToHostSnapshot:seconds(times.nativeSettled,times.hostSnapshot),requestToObservedIdle:seconds(times.requestStarted,times.observedIdle)},scope:"One Alpha prompt task; native agent interval includes five assistant responses and eight read tool calls. Not provider request count, time to first token, pure decode speed, or comparable benchmark.",beforeAcceptanceSamples:beforeAccept.length,allBeforeAcceptanceBusy:true};
+await writeFile(join(here,"lifecycle-timing.json"),JSON.stringify(timing,null,2)+"\n",{flag:"wx"});
+await mkdir(out,{recursive:true});const copies:any[]=[];
+async function copy(from:string,to:string){const b=await readFile(from);await mkdir(dirname(join(out,to)),{recursive:true});await writeFile(join(out,to),b,{flag:"wx"});copies.push({source:from,path:to,bytes:b.length,sha256:hash(b)});}
+for(const f of ["preflight.json","readiness.json","dispatch-started.json","accepted.json","receipt.json","calls.json","probe-exit.json","image-payloads.json","lifecycle-timing.json","supervisor-started.json"])await copy(join(here,f),"receipts/"+f);
+for(const f of ["events.jsonl","states.jsonl","probe.log","process-phases.jsonl"])await copy(join(here,f),"raw/"+f);
+for(const f of ["task.txt","alpha-answer.md"])await copy(join(here,f),f);
+for(const f of ["preflight.ts","prepare.ts","dispatch.ts","read-completed.ts","run.ps1","archive.ts"])await copy(join(here,f),"scripts/"+f);
+for(const image of started.images)await copy(image.path,"images/"+image.path.split(/[\\/]/).at(-1));
+for(const image of payload.images)await copy(join(here,image.file),"images/"+image.file);
+await writeFile(join(out,"receipts/original-copies.json"),JSON.stringify(copies,null,2)+"\n",{flag:"wx"});
+console.log(JSON.stringify({out,copies:copies.length,timing,assertionsPassed:true}));

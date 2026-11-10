@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联赛战报 · 2026-Q3 赛季 · AI斗兽场</title>
+<style>
+  :root { --ink:#2b2622; --muted:#8a8177; --accent:#c1442e; --gold:#b98a1c; --bg:#faf6f0; --card:#fff; --line:#e8e0d5; --soft:#fbf8f3; --tag-bg:#f3ece1; --tag-ink:#c0b39e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; letter-spacing:4px; padding:4px 14px; border-radius:99px; margin-bottom:14px; }
+  h1 { font-size: 34px; margin: 0 0 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 20px; margin: 40px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .pts { font-weight: 800; font-size: 18px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .champ-row { background: #fbf3e8; }
+  .place { text-align: center; font-variant-numeric: tabular-nums; }
+  .p1 { color: var(--accent); font-weight: 700; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .champ-box { text-align:center; background:var(--card); border:2px solid var(--gold); border-radius:16px; padding:28px; margin-bottom:8px; }
+  .champ-box .big { font-size: 40px; font-weight: 900; }
+  .champ-box .score { font-size: 56px; font-weight: 900; color: var(--accent); }
+  .leg { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
+  .leg-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+  .leg-podium { font-size: 14px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:48px; }
+  
+  [data-theme="dark"] {
+    --ink:#e8e0d5; --muted:#9a9186; --accent:#e0603f; --gold:#d4a843;
+    --bg:#211c17; --card:#2b2622; --line:#423a31; --soft:#332c25; --tag-bg:#3d352c; --tag-ink:#c0b39e;
+  }
+  [data-theme="dark"] .win { color:#3ecf8e; }
+  [data-theme="dark"] .hall.gold { background: linear-gradient(135deg, #3d2f1a, #33281a); border-color:#5a4a2e; }
+  [data-theme="dark"] .hall.dark { background: #2b2622; border-color:#423a31; }
+  .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--card, #fff); border: 1px solid var(--line, #e8e0d5); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--ink, #2b2622); font-size: 13px; }
+
+</style></head>
+<body><div class="wrap" role="main"><button class="theme-toggle" onclick="toggleTheme()" title="切换明暗">🌓</button>
+<script>
+if (localStorage.getItem('ququ-theme')) document.documentElement.dataset.theme = localStorage.getItem('ququ-theme');
+function toggleTheme() {
+  var next = document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ququ-theme', next);
+}
+</script>
+<header>
+  <div class="badge">巡 回 联 赛 · 战 报</div>
+  <h1>🏟️ 2026-Q3 赛季 · 2 站巡回</h1>
+  <div class="sub">2026-09-10 15:31 · 4 只蛐蛐 · 3 只上过领奖台</div>
+</header>
+
+<div class="champ-box">
+  <div class="muted">盟 主</div>
+  <div class="big">👑 老实-k2</div>
+  <div class="score">8 分</div>
+  <div class="muted">2 个分站冠军 · 各站场均 100.0%</div>
+</div>
+
+<h2>🏆 总积分榜</h2>
+<div class="card"><table>
+<thead><tr><th>名次</th><th>蛐蛐</th><th>积分</th><th>分冠</th><th>通假·拼音剖面擂</th><th>阴阳怪气大师赛</th><th>场均</th></tr></thead>
+<tbody>
+<tr class="champ-row">
+      <td>🥇</td>
+      <td class="name">老实-k2<div class="muted">mock:laoshi-k2</div></td>
+      <td class="pts">8</td>
+      <td>2 冠</td>
+      <td class="place p1">1</td><td class="place p1">1</td>
+      <td>100.0%</td>
+    </tr>
+<tr class="">
+      <td>🥈</td>
+      <td class="name">学霸-o9<div class="muted">mock:xueba-o9</div></td>
+      <td class="pts">6</td>
+      <td>0 冠</td>
+      <td class="place p2">2</td><td class="place p2">2</td>
+      <td>77.9%</td>
+    </tr>
+<tr class="">
+      <td>🥉</td>
+      <td class="name">滑头-72B<div class="muted">mock:huatou-72b</div></td>
+      <td class="pts">4</td>
+      <td>0 冠</td>
+      <td class="place p3">3</td><td class="place p3">3</td>
+      <td>68.4%</td>
+    </tr>
+<tr class="">
+      <td>4.</td>
+      <td class="name">犟驴-7B<div class="muted">mock:jianglv-7b</div></td>
+      <td class="pts">2</td>
+      <td>0 冠</td>
+      <td class="place p4">4</td><td class="place p4">4</td>
+      <td>20.9%</td>
+    </tr>
+</tbody></table>
+<p class="muted">积分规则：每站第 1 名拿 N 分（N=参赛数），第 2 名 N−1 分，依次递减；平分按各站场均决胜。</p></div>
+
+<h2>📍 分站速览</h2>
+<div class="leg">
+    <div class="leg-title">《通假·拼音剖面擂台》 <span class="muted">4 题 · exact 裁判 · 指纹 def240638a207d62</span></div>
+    <div class="leg-podium">🥇 老实-k2 100.0% &nbsp;·&nbsp; 🥈 学霸-o9 75.0% &nbsp;·&nbsp; 🥉 滑头-72B 75.0%</div>
+  </div>
+<div class="leg">
+    <div class="leg-title">《阴阳怪气大师赛》 <span class="muted">4 题 · llm 裁判 · 指纹 39ce3b02df3b8609</span></div>
+    <div class="leg-podium">🥇 老实-k2 100.0% &nbsp;·&nbsp; 🥈 学霸-o9 80.8% &nbsp;·&nbsp; 🥉 滑头-72B 61.7%</div>
+  </div>
+
+<footer>AI斗兽场 QuQuArena · 联赛战报 · 各站详细战报见同目录 战报-*.html</footer>
+</div></body></html>

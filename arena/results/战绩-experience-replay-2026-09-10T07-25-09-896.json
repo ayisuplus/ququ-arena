@@ -1,0 +1,1032 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "experience-replay",
+    "title": "经验回放 · 模式归纳擂台",
+    "description": "主题致敬持续学习引擎（经验→模式→迁移的最小闭环；内容自建）。给出 3-4 条历史「输入→被确认的正确输出」，要求对新输入应用同一规则。四类模式：format-map 格式变换、rule-infer 分类规则、threshold-infer 阈值边界（含边界值）、symbol-map 符号映射。测的是经验回放式在上下文学习：从样例抽规则并一致地迁移，而不是瞎猜。exact 裁判离线可复现。",
+    "author": "AI斗兽场（主题致敬：持续学习引擎）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:experience-replay:2026-09-10",
+    "taskPrefix": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "format-map": "格式变换：从样例归纳格式规则",
+      "rule-infer": "分类归纳：从样例归纳打标规则",
+      "threshold-infer": "阈值边界：归纳区间并对边界值一致处理",
+      "symbol-map": "符号映射：状态到符号的一致映射"
+    }
+  },
+  "startedAt": "2026-09-10T07:25:09.896Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "ER-FM-01",
+      "condition": "format-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n2024-01-05 → 05/01/2024\n1999-12-31 → 31/12/1999\n2026-09-10 → 10/09/2026\n\n新输入：2025-06-18 →",
+      "answer": "18/06/2025",
+      "target": "18/06/2025",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-01",
+      "condition": "format-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n2024-01-05 → 05/01/2024\n1999-12-31 → 31/12/1999\n2026-09-10 → 10/09/2026\n\n新输入：2025-06-18 →",
+      "answer": "18/06/2025",
+      "target": "18/06/2025",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-01",
+      "condition": "format-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n2024-01-05 → 05/01/2024\n1999-12-31 → 31/12/1999\n2026-09-10 → 10/09/2026\n\n新输入：2025-06-18 →",
+      "answer": "18/06",
+      "target": "18/06/2025",
+      "latencyMs": 139,
+      "score": 0,
+      "note": "期望「18/06/2025」，实答「18/06」",
+      "usage": {
+        "input": 82,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-01",
+      "condition": "format-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n2024-01-05 → 05/01/2024\n1999-12-31 → 31/12/1999\n2026-09-10 → 10/09/2026\n\n新输入：2025-06-18 →",
+      "answer": "18/06/2025",
+      "target": "18/06/2025",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 82,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-02",
+      "condition": "format-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n张三 → 三张\n王小明 → 王小明\n欧阳娜娜 → 欧阳娜娜\n\n新输入：李小红 →",
+      "answer": "李小红",
+      "target": "李小红",
+      "latencyMs": 358,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-02",
+      "condition": "format-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n张三 → 三张\n王小明 → 王小明\n欧阳娜娜 → 欧阳娜娜\n\n新输入：李小红 →",
+      "answer": "为小红",
+      "target": "李小红",
+      "latencyMs": 210,
+      "score": 0,
+      "note": "期望「李小红」，实答「为小红」",
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-02",
+      "condition": "format-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n张三 → 三张\n王小明 → 王小明\n欧阳娜娜 → 欧阳娜娜\n\n新输入：李小红 →",
+      "answer": "李小这",
+      "target": "李小红",
+      "latencyMs": 105,
+      "score": 0,
+      "note": "期望「李小红」，实答「李小这」",
+      "usage": {
+        "input": 57,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-02",
+      "condition": "format-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n张三 → 三张\n王小明 → 王小明\n欧阳娜娜 → 欧阳娜娜\n\n新输入：李小红 →",
+      "answer": "李小",
+      "target": "李小红",
+      "latencyMs": 250,
+      "score": 0,
+      "note": "期望「李小红」，实答「李小」",
+      "usage": {
+        "input": 57,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-03",
+      "condition": "format-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nhello world → HelloWorld\nfoo bar baz → FooBarBaz\nopen ai → OpenAi\n\n新输入：good morning →",
+      "answer": "GoodMorning",
+      "target": "GoodMorning",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-03",
+      "condition": "format-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nhello world → HelloWorld\nfoo bar baz → FooBarBaz\nopen ai → OpenAi\n\n新输入：good morning →",
+      "answer": "GoodMorning",
+      "target": "GoodMorning",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-03",
+      "condition": "format-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nhello world → HelloWorld\nfoo bar baz → FooBarBaz\nopen ai → OpenAi\n\n新输入：good morning →",
+      "answer": "GoodMo",
+      "target": "GoodMorning",
+      "latencyMs": 226,
+      "score": 0,
+      "note": "期望「GoodMorning」，实答「GoodMo」",
+      "usage": {
+        "input": 80,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-03",
+      "condition": "format-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nhello world → HelloWorld\nfoo bar baz → FooBarBaz\nopen ai → OpenAi\n\n新输入：good morning →",
+      "answer": "GoodMorning",
+      "target": "GoodMorning",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 80,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-04",
+      "condition": "format-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n13812345678 → 138****5678\n13900001111 → 139****1111\n15066668888 → 150****8888\n\n新输入：13799990000 →",
+      "answer": "137****0000",
+      "target": "137****0000",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-04",
+      "condition": "format-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n13812345678 → 138****5678\n13900001111 → 139****1111\n15066668888 → 150****8888\n\n新输入：13799990000 →",
+      "answer": "137****000",
+      "target": "137****0000",
+      "latencyMs": 251,
+      "score": 0,
+      "note": "期望「137****0000」，实答「137****000」",
+      "usage": {
+        "input": 85,
+        "output": 5
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-04",
+      "condition": "format-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n13812345678 → 138****5678\n13900001111 → 139****1111\n15066668888 → 150****8888\n\n新输入：13799990000 →",
+      "answer": "137****0000",
+      "target": "137****0000",
+      "latencyMs": 89,
+      "score": 1,
+      "usage": {
+        "input": 85,
+        "output": 6
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-FM-04",
+      "condition": "format-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n13812345678 → 138****5678\n13900001111 → 139****1111\n15066668888 → 150****8888\n\n新输入：13799990000 →",
+      "answer": "137***",
+      "target": "137****0000",
+      "latencyMs": 89,
+      "score": 0,
+      "note": "期望「137****0000」，实答「137***」",
+      "usage": {
+        "input": 85,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-01",
+      "condition": "rule-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n苹果 → 水果\n白菜 → 蔬菜\n香蕉 → 水果\n胡萝卜 → 蔬菜\n\n新输入：西瓜 →",
+      "answer": "水果",
+      "target": "水果",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-01",
+      "condition": "rule-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n苹果 → 水果\n白菜 → 蔬菜\n香蕉 → 水果\n胡萝卜 → 蔬菜\n\n新输入：西瓜 →",
+      "answer": "水果",
+      "target": "水果",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-01",
+      "condition": "rule-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n苹果 → 水果\n白菜 → 蔬菜\n香蕉 → 水果\n胡萝卜 → 蔬菜\n\n新输入：西瓜 →",
+      "answer": "水",
+      "target": "水果",
+      "latencyMs": 415,
+      "score": 0,
+      "note": "期望「水果」，实答「水」",
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-01",
+      "condition": "rule-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n苹果 → 水果\n白菜 → 蔬菜\n香蕉 → 水果\n胡萝卜 → 蔬菜\n\n新输入：西瓜 →",
+      "answer": "水果",
+      "target": "水果",
+      "latencyMs": 275,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-02",
+      "condition": "rule-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n报销金额 300 → 一级审批\n报销金额 2500 → 二级审批\n报销金额 800 → 一级审批\n报销金额 6000 → 二级审批\n\n新输入：报销金额 1200 →",
+      "answer": "一级审批",
+      "target": "一级审批",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-02",
+      "condition": "rule-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n报销金额 300 → 一级审批\n报销金额 2500 → 二级审批\n报销金额 800 → 一级审批\n报销金额 6000 → 二级审批\n\n新输入：报销金额 1200 →",
+      "answer": "一审批",
+      "target": "一级审批",
+      "latencyMs": 436,
+      "score": 0,
+      "note": "期望「一级审批」，实答「一审批」",
+      "usage": {
+        "input": 78,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-02",
+      "condition": "rule-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n报销金额 300 → 一级审批\n报销金额 2500 → 二级审批\n报销金额 800 → 一级审批\n报销金额 6000 → 二级审批\n\n新输入：报销金额 1200 →",
+      "answer": "一级审批",
+      "target": "一级审批",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-02",
+      "condition": "rule-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n报销金额 300 → 一级审批\n报销金额 2500 → 二级审批\n报销金额 800 → 一级审批\n报销金额 6000 → 二级审批\n\n新输入：报销金额 1200 →",
+      "answer": "一级审批",
+      "target": "一级审批",
+      "latencyMs": 437,
+      "score": 1,
+      "usage": {
+        "input": 78,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-03",
+      "condition": "rule-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n标题含「急」→ 优先处理\n标题含「报销」→ 财务队列\n标题含「故障」→ 优先处理\n标题含「咨询」→ 普通队列\n\n新输入：标题含「急报」→",
+      "answer": "优先处理",
+      "target": "优先处理",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-03",
+      "condition": "rule-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n标题含「急」→ 优先处理\n标题含「报销」→ 财务队列\n标题含「故障」→ 优先处理\n标题含「咨询」→ 普通队列\n\n新输入：标题含「急报」→",
+      "answer": "优先处理",
+      "target": "优先处理",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-03",
+      "condition": "rule-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n标题含「急」→ 优先处理\n标题含「报销」→ 财务队列\n标题含「故障」→ 优先处理\n标题含「咨询」→ 普通队列\n\n新输入：标题含「急报」→",
+      "answer": "优先为理",
+      "target": "优先处理",
+      "latencyMs": 459,
+      "score": 0,
+      "note": "期望「优先处理」，实答「优先为理」",
+      "usage": {
+        "input": 71,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-03",
+      "condition": "rule-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n标题含「急」→ 优先处理\n标题含「报销」→ 财务队列\n标题含「故障」→ 优先处理\n标题含「咨询」→ 普通队列\n\n新输入：标题含「急报」→",
+      "answer": "优先处理",
+      "target": "优先处理",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 71,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-04",
+      "condition": "rule-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nk12 教育 → 受限行业\n白酒 → 受限行业\n图书出版 → 普通行业\n医疗器械 → 受限行业\n文具制造 → 普通行业\n\n新输入：健身服务 →",
+      "answer": "在通行业",
+      "target": "普通行业",
+      "latencyMs": 171,
+      "score": 0,
+      "note": "期望「普通行业」，实答「在通行业」",
+      "usage": {
+        "input": 73,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-04",
+      "condition": "rule-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nk12 教育 → 受限行业\n白酒 → 受限行业\n图书出版 → 普通行业\n医疗器械 → 受限行业\n文具制造 → 普通行业\n\n新输入：健身服务 →",
+      "answer": "普通行业",
+      "target": "普通行业",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-04",
+      "condition": "rule-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nk12 教育 → 受限行业\n白酒 → 受限行业\n图书出版 → 普通行业\n医疗器械 → 受限行业\n文具制造 → 普通行业\n\n新输入：健身服务 →",
+      "answer": "普通行业",
+      "target": "普通行业",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-RI-04",
+      "condition": "rule-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\nk12 教育 → 受限行业\n白酒 → 受限行业\n图书出版 → 普通行业\n医疗器械 → 受限行业\n文具制造 → 普通行业\n\n新输入：健身服务 →",
+      "answer": "普通行业",
+      "target": "普通行业",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 73,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-01",
+      "condition": "threshold-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n95 → 优秀\n80 → 良好\n61 → 及格\n59 → 不及格\n90 → 优秀\n\n新输入：60 →",
+      "answer": "及格",
+      "target": "及格",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-01",
+      "condition": "threshold-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n95 → 优秀\n80 → 良好\n61 → 及格\n59 → 不及格\n90 → 优秀\n\n新输入：60 →",
+      "answer": "及",
+      "target": "及格",
+      "latencyMs": 244,
+      "score": 0,
+      "note": "期望「及格」，实答「及」",
+      "usage": {
+        "input": 62,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-01",
+      "condition": "threshold-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n95 → 优秀\n80 → 良好\n61 → 及格\n59 → 不及格\n90 → 优秀\n\n新输入：60 →",
+      "answer": "及",
+      "target": "及格",
+      "latencyMs": 269,
+      "score": 0,
+      "note": "期望「及格」，实答「及」",
+      "usage": {
+        "input": 62,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-01",
+      "condition": "threshold-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n95 → 优秀\n80 → 良好\n61 → 及格\n59 → 不及格\n90 → 优秀\n\n新输入：60 →",
+      "answer": "及格",
+      "target": "及格",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 62,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-02",
+      "condition": "threshold-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n温度 37.5 → 正常\n温度 38.2 → 发热\n温度 37.2 → 正常\n温度 39.0 → 高热\n\n新输入：温度 38.5 →",
+      "answer": "发热",
+      "target": "发热",
+      "latencyMs": 208,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-02",
+      "condition": "threshold-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n温度 37.5 → 正常\n温度 38.2 → 发热\n温度 37.2 → 正常\n温度 39.0 → 高热\n\n新输入：温度 38.5 →",
+      "answer": "发",
+      "target": "发热",
+      "latencyMs": 220,
+      "score": 0,
+      "note": "期望「发热」，实答「发」",
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-02",
+      "condition": "threshold-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n温度 37.5 → 正常\n温度 38.2 → 发热\n温度 37.2 → 正常\n温度 39.0 → 高热\n\n新输入：温度 38.5 →",
+      "answer": "发",
+      "target": "发热",
+      "latencyMs": 224,
+      "score": 0,
+      "note": "期望「发热」，实答「发」",
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-02",
+      "condition": "threshold-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n温度 37.5 → 正常\n温度 38.2 → 发热\n温度 37.2 → 正常\n温度 39.0 → 高热\n\n新输入：温度 38.5 →",
+      "answer": "发热",
+      "target": "发热",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-03",
+      "condition": "threshold-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n响应 5 分钟 → 达标\n响应 29 分钟 → 达标\n响应 31 分钟 → 超时\n响应 45 分钟 → 超时\n\n新输入：响应 30 分钟 →",
+      "answer": "达标",
+      "target": "达标",
+      "latencyMs": 270,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-03",
+      "condition": "threshold-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n响应 5 分钟 → 达标\n响应 29 分钟 → 达标\n响应 31 分钟 → 超时\n响应 45 分钟 → 超时\n\n新输入：响应 30 分钟 →",
+      "answer": "达",
+      "target": "达标",
+      "latencyMs": 370,
+      "score": 0,
+      "note": "期望「达标」，实答「达」",
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-03",
+      "condition": "threshold-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n响应 5 分钟 → 达标\n响应 29 分钟 → 达标\n响应 31 分钟 → 超时\n响应 45 分钟 → 超时\n\n新输入：响应 30 分钟 →",
+      "answer": "达标",
+      "target": "达标",
+      "latencyMs": 99,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "ER-TI-03",
+      "condition": "threshold-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n响应 5 分钟 → 达标\n响应 29 分钟 → 达标\n响应 31 分钟 → 超时\n响应 45 分钟 → 超时\n\n新输入：响应 30 分钟 →",
+      "answer": "达标",
+      "target": "达标",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 72,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-TI-04",
+      "condition": "threshold-infer",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n消费 99 → 不包邮\n消费 100 → 包邮\n消费 250 → 包邮\n消费 66 → 不包邮\n\n新输入：消费 100 →",
+      "answer": "包邮",
+      "target": "包邮",
+      "latencyMs": 181,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-TI-04",
+      "condition": "threshold-infer",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n消费 99 → 不包邮\n消费 100 → 包邮\n消费 250 → 包邮\n消费 66 → 不包邮\n\n新输入：消费 100 →",
+      "answer": "包邮",
+      "target": "包邮",
+      "latencyMs": 129,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-TI-04",
+      "condition": "threshold-infer",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n消费 99 → 不包邮\n消费 100 → 包邮\n消费 250 → 包邮\n消费 66 → 不包邮\n\n新输入：消费 100 →",
+      "answer": "包邮",
+      "target": "包邮",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-TI-04",
+      "condition": "threshold-infer",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n消费 99 → 不包邮\n消费 100 → 包邮\n消费 250 → 包邮\n消费 66 → 不包邮\n\n新输入：消费 100 →",
+      "answer": "包",
+      "target": "包邮",
+      "latencyMs": 170,
+      "score": 0,
+      "note": "期望「包邮」，实答「包」",
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-01",
+      "condition": "symbol-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n已通过 → √\n已驳回 → ×\n待复核 → ○\n已通过 → √\n\n新输入：已驳回 →",
+      "answer": "×",
+      "target": "×",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-01",
+      "condition": "symbol-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n已通过 → √\n已驳回 → ×\n待复核 → ○\n已通过 → √\n\n新输入：已驳回 →",
+      "answer": "×",
+      "target": "×",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-01",
+      "condition": "symbol-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n已通过 → √\n已驳回 → ×\n待复核 → ○\n已通过 → √\n\n新输入：已驳回 →",
+      "answer": "×",
+      "target": "×",
+      "latencyMs": 441,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-01",
+      "condition": "symbol-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n已通过 → √\n已驳回 → ×\n待复核 → ○\n已通过 → √\n\n新输入：已驳回 →",
+      "answer": "×",
+      "target": "×",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-02",
+      "condition": "symbol-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n严重事故 → 红色\n一般事故 → 黄色\n轻微剐蹭 → 绿色\n重大事故 → 红色\n\n新输入：中等事故 →",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 419,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-02",
+      "condition": "symbol-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n严重事故 → 红色\n一般事故 → 黄色\n轻微剐蹭 → 绿色\n重大事故 → 红色\n\n新输入：中等事故 →",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-02",
+      "condition": "symbol-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n严重事故 → 红色\n一般事故 → 黄色\n轻微剐蹭 → 绿色\n重大事故 → 红色\n\n新输入：中等事故 →",
+      "answer": "黄",
+      "target": "黄色",
+      "latencyMs": 448,
+      "score": 0,
+      "note": "期望「黄色」，实答「黄」",
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-02",
+      "condition": "symbol-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n严重事故 → 红色\n一般事故 → 黄色\n轻微剐蹭 → 绿色\n重大事故 → 红色\n\n新输入：中等事故 →",
+      "answer": "黄色",
+      "target": "黄色",
+      "latencyMs": 285,
+      "score": 1,
+      "usage": {
+        "input": 63,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-03",
+      "condition": "symbol-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n春季 → 甲\n夏季 → 乙\n秋季 → 丙\n冬季 → 丁\n\n新输入：夏季 →",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 170,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-03",
+      "condition": "symbol-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n春季 → 甲\n夏季 → 乙\n秋季 → 丙\n冬季 → 丁\n\n新输入：夏季 →",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 230,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-03",
+      "condition": "symbol-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n春季 → 甲\n夏季 → 乙\n秋季 → 丙\n冬季 → 丁\n\n新输入：夏季 →",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 462,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-03",
+      "condition": "symbol-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n春季 → 甲\n夏季 → 乙\n秋季 → 丙\n冬季 → 丁\n\n新输入：夏季 →",
+      "answer": "乙",
+      "target": "乙",
+      "latencyMs": 216,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-04",
+      "condition": "symbol-map",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n一等奖 → 金\n二等奖 → 银\n三等奖 → 铜\n参与奖 → 无\n\n新输入：二等奖 →",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 225,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-04",
+      "condition": "symbol-map",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n一等奖 → 金\n二等奖 → 银\n三等奖 → 铜\n参与奖 → 无\n\n新输入：二等奖 →",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 400,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-04",
+      "condition": "symbol-map",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n一等奖 → 金\n二等奖 → 银\n三等奖 → 铜\n参与奖 → 无\n\n新输入：二等奖 →",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 410,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "ER-SM-04",
+      "condition": "symbol-map",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按经验工作。规则：只输出新输入对应的答案本身（沿用经验记录里的输出格式与措辞），不多一个字。\n经验记录（历史输入 → 当时被确认的正确输出）：\n一等奖 → 金\n二等奖 → 银\n三等奖 → 铜\n参与奖 → 无\n\n新输入：二等奖 →",
+      "answer": "银",
+      "target": "银",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ac02ee0c4f986ce8",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.8.0"
+  }
+}

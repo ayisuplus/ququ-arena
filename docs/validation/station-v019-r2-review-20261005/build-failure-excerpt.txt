@@ -1,0 +1,27 @@
+ExecutionEngineException: String conversion error: Illegal byte sequence encounted in the input.
+  at (wrapper managed-to-native) System.Reflection.RuntimeAssembly.get_code_base(System.Reflection.Assembly,bool)
+  at System.Reflection.RuntimeAssembly.GetCodeBase (System.Reflection.Assembly a, System.Boolean escaped) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.Reflection.RuntimeAssembly.get_CodeBase () [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.Reflection.AssemblyName.Create (System.Reflection.Assembly assembly, System.Boolean fillCodebase) [0x00010] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.Reflection.RuntimeAssembly.GetName (System.Boolean copiedName) [0x0000e] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.Reflection.Assembly.GetName () [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at UnityEngine.InputSystem.Editor.LinkFileGenerator.GenerateAdditionalLinkXmlFile (UnityEditor.Build.Reporting.BuildReport report, UnityEditor.UnityLinker.UnityLinkerBuildPipelineData data) [0x00046] in .\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194\InputSystem\Editor\BuildPipeline\LinkFileGenerator.cs:56 
+  at UnityEditorInternal.AssemblyStripper.ProcessBuildPipelineGenerateAdditionalLinkXmlFiles (UnityEditor.Modules.BuildPostProcessArgs args) [0x0006a] in <8c0bcab5a3cf47549b7148fa2785366a>:0 
+  at UnityEditorInternal.AssemblyStripper.GetLinkXmlFiles (UnityEditor.Modules.BuildPostProcessArgs args, NiceIO.NPath linkerInputDirectory) [0x0005d] in <8c0bcab5a3cf47549b7148fa2785366a>:0 
+  at UnityEditor.Modules.BeeBuildPostprocessor.LinkerConfigFor (UnityEditor.Modules.BuildPostProcessArgs args) [0x000da] in <8c0bcab5a3cf47549b7148fa2785366a>:0 
+  at UnityEditor.Modules.BeeBuildPostprocessor+<GetDataForBuildProgramFor>d__65.MoveNext () [0x00088] in <8c0bcab5a3cf47549b7148fa2785366a>:0 
+  at System.Linq.Enumerable+AppendPrependIterator`1[TSource].LoadFromEnumerator () [0x00000] in <e1f614c5eede4689988594bcb9796955>:0 
+  at System.Linq.Enumerable+AppendPrepend1Iterator`1[TSource].MoveNext () [0x00047] in <e1f614c5eede4689988594bcb9796955>:0 
+  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext () [0x0004e] in <e1f614c5eede4689988594bcb9796955>:0 
+  at Bee.BeeDriver.BeeDriver.WriteDataForBuildProgram (Bee.BeeDriver.InternalState state, System.Threading.Tasks.TaskCompletionSource`1[TResult] dagGenerationCompletionSource) [0x0006a] in <72a3ae07dd924c09bf9a8b3826c0dbdd>:0 
+  at Bee.BeeDriver.BeeDriver+<>c__DisplayClass0_0.<BuildAsync>g__WriteData|0 () [0x00000] in <72a3ae07dd924c09bf9a8b3826c0dbdd>:0 
+  at Bee.BeeDriver.BeeDriver.BuildAsync (Bee.BeeDriver.BuildRequest buildRequest, System.Threading.CancellationToken cancellationToken) [0x000f0] in <72a3ae07dd924c09bf9a8b3826c0dbdd>:0 
+  at UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) [0x00090] in <8c0bcab5a3cf47549b7148fa2785366a>:0 
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck_Injected(String[], ManagedSpanWrapper&, ManagedSpanWrapper&, BuildTargetGroup, BuildTarget, Int32, BuildOptions, String[], Boolean)
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck(String[], String, String, BuildTargetGroup, BuildTarget, Int32, BuildOptions, String[], Boolean)
+UnityEditor.BuildPipeline:BuildPlayerInternal(String[], String, String, BuildTargetGroup, BuildTarget, Int32, BuildOptions, String[])
+UnityEditor.BuildPipeline:BuildPlayer(String[], String, String, BuildTargetGroup, BuildTarget, Int32, BuildOptions, String[])
+UnityEditor.BuildPipeline:BuildPlayer(BuildPlayerOptions)
+Unity.Pipeline.Editor.Commands.Build.BuildCommand:RunBuild(String, BuildTarget, String, BuildOptions, String[], String) (at .\Library\PackageCache\com.unity.pipeline@ab05e9cd7f74\Editor\Commands\Build\BuildCommand.cs:344)
+Unity.Pipeline.Editor.Commands.Build.BuildCommand:OnUpdate() (at .\Library\PackageCache\com.unity.pipeline@ab05e9cd7f74\Editor\Commands\Build\BuildCommand.cs:296)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions()

@@ -1,0 +1,116 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "session-shift",
+    "title": "规则漂移 · 持续学习擂台",
+    "description": "主题致敬持续学习引擎（learn while working，最新知识优先，未触及的旧知识要留住）；内容为自建——两源数据已证据性收完，本罐是方向性续作。手册条款按时间线漂移，考三件事：apply-latest 采纳最新条款、scope-guard 对未触及场景保留旧条款（不过度泛化=retention）、primacy-trap 抵抗首因效应，外加 no-update 对照。答案短语均沿用手册措辞，exact 裁判离线可复现。",
+    "author": "AI斗兽场（主题致敬：持续学习引擎）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:session-shift:2026-09-10",
+    "taskPrefix": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "apply-latest": "采纳最新：场景命中被更新条款，答案取自最新版",
+      "primacy-trap": "首因陷阱：初版更醒目，仍须执行最新版",
+      "scope-guard": "保留未改：更新只改他场景，本场景沿用旧条款",
+      "no-update": "无更新对照：直接按初版作答"
+    }
+  },
+  "startedAt": "2026-09-10T07:19:06.275Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SS-AL-01",
+      "condition": "apply-latest",
+      "model": "mock:xueba-o9",
+      "prompt": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n手册条款（按发布时间，新条款覆盖冲突的旧条款）：\nv1（2024-01）：报销单笔超过五百元需总监审批。\nv2（2024-06）：报销单笔超过两千元才需总监审批。\n\n场景问题：小王报销一千二百元，需要总监审批吗？",
+      "answer": "不需要",
+      "target": "不需要",
+      "latencyMs": 428,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SS-AL-01",
+      "condition": "apply-latest",
+      "model": "mock:huatou-72b",
+      "prompt": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n手册条款（按发布时间，新条款覆盖冲突的旧条款）：\nv1（2024-01）：报销单笔超过五百元需总监审批。\nv2（2024-06）：报销单笔超过两千元才需总监审批。\n\n场景问题：小王报销一千二百元，需要总监审批吗？",
+      "answer": "不需要",
+      "target": "不需要",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 99,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "SS-AL-01",
+      "condition": "apply-latest",
+      "model": "mock:jianglv-7b",
+      "prompt": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n手册条款（按发布时间，新条款覆盖冲突的旧条款）：\nv1（2024-01）：报销单笔超过五百元需总监审批。\nv2（2024-06）：报销单笔超过两千元才需总监审批。\n\n场景问题：小王报销一千二百元，需要总监审批吗？",
+      "answer": "我需要",
+      "target": "不需要",
+      "latencyMs": 267,
+      "score": 0,
+      "note": "期望「不需要」，实答「我需要」",
+      "usage": {
+        "input": 99,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SS-AL-01",
+      "condition": "apply-latest",
+      "model": "mock:laoshi-k2",
+      "prompt": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n手册条款（按发布时间，新条款覆盖冲突的旧条款）：\nv1（2024-01）：报销单笔超过五百元需总监审批。\nv2（2024-06）：报销单笔超过两千元才需总监审批。\n\n场景问题：小王报销一千二百元，需要总监审批吗？",
+      "answer": "不需",
+      "target": "不需要",
+      "latencyMs": 474,
+      "score": 0,
+      "note": "期望「不需要」，实答「不需」",
+      "usage": {
+        "input": 99,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "46094ca59e0321bb",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.7.0"
+  }
+}

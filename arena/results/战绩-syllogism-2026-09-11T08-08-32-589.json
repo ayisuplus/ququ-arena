@@ -1,0 +1,234 @@
+{
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "syllogism",
+    "title": "三段论擂台",
+    "description": "古典直言三段论（传统逻辑题库形制，内容自建）。给两个前提一个结论，判断结论能否从前提必然推出——现代一阶语义（『有些』=至少一个、全称无存在含义），题面前缀已声明。valid 为有效式（Barbara/Celarent/Darii/E 换位/链式）；invalid-converse 为换位与肯定后件谬误；invalid-negative 为否定前提谬误；invalid-particular 为特称误推（双特称前提、特称推全称、『有些』不当蕴含『有些不』）。多题结论在现实世界为真但推不出来——测严格蕴含不是测朴素直觉。exact 裁判（是/否）；每题 meta.form 存结构化命题，契约测试区域枚举模型检验逐题复算。",
+    "author": "AI斗兽场（内容自建，形制致敬传统逻辑题库）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:syllogism:2026-09-10",
+    "taskPrefix": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "valid": "有效式（前提真则结论必然真）",
+      "invalid-converse": "换位与肯定后件谬误",
+      "invalid-negative": "否定前提谬误",
+      "invalid-particular": "特称误推（双特称/特称推全称）"
+    }
+  },
+  "startedAt": "2026-09-11T08:08:32.589Z",
+  "durationMs": 2429,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 280,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 250,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 1
+      },
+      "finishedMs": 405
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 59,
+        "output": 1
+      },
+      "finishedMs": 406
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 809
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 96,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 809
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 107,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1214
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 206,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1215
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "mock:xueba-o9",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 388,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1618
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "mock:huatou-72b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 81,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 1619
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "mock:jianglv-7b",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 185,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2023
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "mock:laoshi-k2",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 429,
+      "score": 1,
+      "usage": {
+        "input": 56,
+        "output": 1
+      },
+      "finishedMs": 2023
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "1279f9c33dff8c08",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.23.0"
+  }
+}

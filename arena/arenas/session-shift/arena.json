@@ -1,0 +1,20 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "session-shift",
+  "title": "规则漂移 · 持续学习擂台",
+  "description": "主题致敬持续学习引擎（learn while working，最新知识优先，未触及的旧知识要留住）；内容为自建——两源数据已证据性收完，本罐是方向性续作。手册条款按时间线漂移，考三件事：apply-latest 采纳最新条款、scope-guard 对未触及场景保留旧条款（不过度泛化=retention）、primacy-trap 抵抗首因效应，外加 no-update 对照。答案短语均沿用手册措辞，exact 裁判离线可复现。",
+  "author": "AI斗兽场（主题致敬：持续学习引擎）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:session-shift:2026-09-10",
+  "taskPrefix": "你在按一本工作手册执行任务。手册条款按发布时间先后列出，后发布的条款覆盖先发布的冲突条款；未被更新的条款继续有效。根据场景问题作答，只输出答案短语本身（沿用手册措辞），不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "apply-latest": "采纳最新：场景命中被更新条款，答案取自最新版",
+    "primacy-trap": "首因陷阱：初版更醒目，仍须执行最新版",
+    "scope-guard": "保留未改：更新只改他场景，本场景沿用旧条款",
+    "no-update": "无更新对照：直接按初版作答"
+  }
+}

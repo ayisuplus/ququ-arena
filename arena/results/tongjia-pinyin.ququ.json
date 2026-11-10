@@ -1,0 +1,892 @@
+{
+  "format": "ququ-arena-pack/1",
+  "arena": {
+    "name": "tongjia-pinyin",
+    "title": "通假·拼音剖面擂台",
+    "description": "复用 TongJia-Bench pilot 真实数据：测大模型把各种形态的拼音还原成汉字句子的能力。五种拼音形态同句对齐，首字母缩写是最具区分度的「悬崖维度」。",
+    "author": "TongJia-Bench",
+    "version": "0.1.0",
+    "canary": "ququ-arena:0263d039-75cd-e2f0-352c-bd1750",
+    "judge": {
+      "kind": "exact",
+      "trimPunct": true
+    },
+    "conditions": {
+      "tone_mark": "带调拼音还原",
+      "tone_number": "数字调拼音还原",
+      "no_tone": "无声调拼音还原",
+      "initials": "首字母缩写还原（悬崖维度）",
+      "mixed_50": "汉字拼音混写还原"
+    },
+    "$schema": "../../arena.schema.json"
+  },
+  "tasks": [
+    {
+      "id": "t2-p2h-0001",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nběi jīng shì zhōng guó de shǒu dū",
+      "target": "北京是中国的首都",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0002",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei3 jing1 shi4 zhong1 guo2 de shou3 du1",
+      "target": "北京是中国的首都",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0003",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbei jing shi zhong guo de shou du",
+      "target": "北京是中国的首都",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0004",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb j s z g d s d",
+      "target": "北京是中国的首都",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0005",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbei京是中guodeshou都",
+      "target": "北京是中国的首都",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0006",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nrén gōng zhì néng zhèng zài gǎi biàn shì jiè",
+      "target": "人工智能正在改变世界",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0007",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren2 gong1 zhi4 neng2 zheng4 zai4 gai3 bian4 shi4 jie4",
+      "target": "人工智能正在改变世界",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0008",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nren gong zhi neng zheng zai gai bian shi jie",
+      "target": "人工智能正在改变世界",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0009",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nr g z n z z g b s j",
+      "target": "人工智能正在改变世界",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0010",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n人工智neng正在gaibian世jie",
+      "target": "人工智能正在改变世界",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0011",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njīn tiān de tiān qì fēi cháng shì hé jiāo yóu",
+      "target": "今天的天气非常适合郊游",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0012",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin1 tian1 de tian1 qi4 fei1 chang2 shi4 he2 jiao1 you2",
+      "target": "今天的天气非常适合郊游",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0013",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\njin tian de tian qi fei chang shi he jiao you",
+      "target": "今天的天气非常适合郊游",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0014",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nj t d t q f c s h j y",
+      "target": "今天的天气非常适合郊游",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0015",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\njin天detian气非chang适合郊you",
+      "target": "今天的天气非常适合郊游",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0016",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè běn shū de nèi róng shí fēn yǒu qù",
+      "target": "这本书的内容十分有趣",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0017",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ben3 shu1 de nei4 rong2 shi2 fen1 you3 qu4",
+      "target": "这本书的内容十分有趣",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0018",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ben shu de nei rong shi fen you qu",
+      "target": "这本书的内容十分有趣",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0019",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz b s d n r s f y q",
+      "target": "这本书的内容十分有趣",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0020",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhebenshudenei容shifenyouqu",
+      "target": "这本书的内容十分有趣",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0021",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nkē jì chuàng xīn tuī dòng shè huì jìn bù",
+      "target": "科技创新推动社会进步",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0022",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke1 ji4 chuang4 xin1 tui1 dong4 she4 hui4 jin4 bu4",
+      "target": "科技创新推动社会进步",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0023",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nke ji chuang xin tui dong she hui jin bu",
+      "target": "科技创新推动社会进步",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0024",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nk j c x t d s h j b",
+      "target": "科技创新推动社会进步",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0025",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nkeji创新推动社会进bu",
+      "target": "科技创新推动社会进步",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0026",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntā měi tiān jiān chí duàn liàn shēn tǐ",
+      "target": "他每天坚持锻炼身体",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0027",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta1 mei3 tian1 jian1 chi2 duan4 lian4 shen1 ti3",
+      "target": "他每天坚持锻炼身体",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0028",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nta mei tian jian chi duan lian shen ti",
+      "target": "他每天坚持锻炼身体",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0029",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt m t j c d l s t",
+      "target": "他每天坚持锻炼身体",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0030",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n他每天坚chiduanlian身ti",
+      "target": "他每天坚持锻炼身体",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0031",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhōng wén shì shì jiè shàng zuì nán de yǔ yán zhī yī",
+      "target": "中文是世界上最难的语言之一",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0032",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong1 wen2 shi4 shi4 jie4 shang4 zui4 nan2 de yu3 yan2 zhi1 yi1",
+      "target": "中文是世界上最难的语言之一",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0033",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhong wen shi shi jie shang zui nan de yu yan zhi yi",
+      "target": "中文是世界上最难的语言之一",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0034",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz w s s j s z n d y y z y",
+      "target": "中文是世界上最难的语言之一",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0035",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n中文shishijieshangzuinan的语言之一",
+      "target": "中文是世界上最难的语言之一",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0036",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbǎo hù huán jìng shì měi gè rén de zé rèn",
+      "target": "保护环境是每个人的责任",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0037",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao3 hu4 huan2 jing4 shi4 mei3 ge4 ren2 de ze2 ren4",
+      "target": "保护环境是每个人的责任",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0038",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nbao hu huan jing shi mei ge ren de ze ren",
+      "target": "保护环境是每个人的责任",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0039",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nb h h j s m g r d z r",
+      "target": "保护环境是每个人的责任",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0040",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nbaohu环jing是mei个人的ze任",
+      "target": "保护环境是每个人的责任",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0041",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhè ge wèn tí xū yào rèn zhēn yán jiū",
+      "target": "这个问题需要认真研究",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0042",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe4 ge wen4 ti2 xu1 yao4 ren4 zhen1 yan2 jiu1",
+      "target": "这个问题需要认真研究",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0043",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhe ge wen ti xu yao ren zhen yan jiu",
+      "target": "这个问题需要认真研究",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0044",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz g w t x y r z y j",
+      "target": "这个问题需要认真研究",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0045",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhege问题xuyao认真研jiu",
+      "target": "这个问题需要认真研究",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0046",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyīn yuè néng gòu táo yě rén de qíng cāo",
+      "target": "音乐能够陶冶人的情操",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0047",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin1 yue4 neng2 gou4 tao2 ye3 ren2 de qing2 cao1",
+      "target": "音乐能够陶冶人的情操",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0048",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nyin yue neng gou tao ye ren de qing cao",
+      "target": "音乐能够陶冶人的情操",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0049",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ny y n g t y r d q c",
+      "target": "音乐能够陶冶人的情操",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0050",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nyin乐能够taoyerende情cao",
+      "target": "音乐能够陶冶人的情操",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0051",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhī shí gǎi biàn mìng yùn",
+      "target": "知识改变命运",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0052",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi1 shi2 gai3 bian4 ming4 yun4",
+      "target": "知识改变命运",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0053",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nzhi shi gai bian ming yun",
+      "target": "知识改变命运",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0054",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nz s g b m y",
+      "target": "知识改变命运",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0055",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nzhishi改bian命运",
+      "target": "知识改变命运",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0056",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuán jié jiù shì lì liàng",
+      "target": "团结就是力量",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0057",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan2 jie2 jiu4 shi4 li4 liang4",
+      "target": "团结就是力量",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0058",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ntuan jie jiu shi li liang",
+      "target": "团结就是力量",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0059",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nt j j s l l",
+      "target": "团结就是力量",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0060",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n团jiejiu是li量",
+      "target": "团结就是力量",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0061",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshī bài shì chéng gōng zhī mǔ",
+      "target": "失败是成功之母",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0062",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi1 bai4 shi4 cheng2 gong1 zhi1 mu3",
+      "target": "失败是成功之母",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0063",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi bai shi cheng gong zhi mu",
+      "target": "失败是成功之母",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0064",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns b s c g z m",
+      "target": "失败是成功之母",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0065",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshibai是chenggong之mu",
+      "target": "失败是成功之母",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0066",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshí jiān jiù xiàng hǎi mián lǐ de shuǐ",
+      "target": "时间就像海绵里的水",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0067",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi2 jian1 jiu4 xiang4 hai3 mian2 li3 de shui3",
+      "target": "时间就像海绵里的水",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0068",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\nshi jian jiu xiang hai mian li de shui",
+      "target": "时间就像海绵里的水",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0069",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\ns j j x h m l d s",
+      "target": "时间就像海绵里的水",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0070",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\nshijianjiu像海绵lideshui",
+      "target": "时间就像海绵里的水",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0071",
+      "condition": "tone_mark",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndú shū pò wàn juàn xià bǐ rú yǒu shén",
+      "target": "读书破万卷下笔如有神",
+      "meta": {
+        "tone_form": "tone_mark",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0072",
+      "condition": "tone_number",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu2 shu1 po4 wan4 juan4 xia4 bi3 ru2 you3 shen2",
+      "target": "读书破万卷下笔如有神",
+      "meta": {
+        "tone_form": "tone_number",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0073",
+      "condition": "no_tone",
+      "input": "请将以下拼音还原为正确的中文句子，只输出还原结果：\ndu shu po wan juan xia bi ru you shen",
+      "target": "读书破万卷下笔如有神",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0074",
+      "condition": "initials",
+      "input": "以下是中文句子的拼音首字母缩写，请还原为最可能的中文句子，只输出还原结果：\nd s p w j x b r y s",
+      "target": "读书破万卷下笔如有神",
+      "meta": {
+        "tone_form": "initials",
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-p2h-0075",
+      "condition": "mixed_50",
+      "input": "以下是汉字与拼音混写的句子，请还原为正确的中文句子，只输出还原结果：\n读书powan卷下笔ruyou神",
+      "target": "读书破万卷下笔如有神",
+      "meta": {
+        "tone_form": "no_tone",
+        "mix_ratio": 0.5,
+        "source": "t2_sentences_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0001",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nzhong guo de shou du shi na li",
+      "target": "北京",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0002",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nyi nian you ji ge ji jie",
+      "target": "四个",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0003",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nshui de hua xue shi shi shen me",
+      "target": "H2O",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0004",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\ntai yang cong na ge fang xiang sheng qi",
+      "target": "东方",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0005",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nyi zhou you ji tian",
+      "target": "七天",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0006",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nhan zi shi yong shen me wen zi xi tong",
+      "target": "表意文字",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0007",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nchang jiang shi zhong guo di ji zhang de he liu",
+      "target": "第一",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0008",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\ndi qiu rao shen me gong zhuan",
+      "target": "太阳",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0009",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nchun jie shi zhong guo de shen me jie ri",
+      "target": "传统节日",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    },
+    {
+      "id": "t2-pqa-0010",
+      "condition": "no_tone",
+      "input": "请阅读以下拼音问题并用中文简要回答：\nsan jiao xing you ji ge jiao",
+      "target": "三个",
+      "meta": {
+        "tone_form": "no_tone",
+        "source": "t2_qa_v1"
+      }
+    }
+  ],
+  "fingerprint": "def240638a207d62",
+  "packedAt": "2026-09-09T21:57:17.642Z"
+}

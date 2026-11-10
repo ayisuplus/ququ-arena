@@ -1,0 +1,19 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "truth-lie",
+  "title": "真假话擂台",
+  "description": "BBH web-of-lies 的中文生成器版：每人非老实人（只说真话）即骗子（只说假话），锚定首人身份后沿陈述链推导末人身份。生成器即权威：先定身份再生成一致陈述，链唯一可解；全部 30 题经独立传播复算校验零矛盾。测多步逻辑约束传播。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:truth-lie:2026-09-10",
+  "taskPrefix": "已知每人要么是老实人（只说真话），要么是骗子（只说假话）。只输出「老实人」或「骗子」，不多一个字。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "chain-3": "3 人链（中等）",
+    "chain-4": "4 人链（绕晕）",
+    "chain-5": "5 人链（绕晕）"
+  }
+}

@@ -1,0 +1,1491 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "mini-sudoku",
+    "title": "迷你数独擂台",
+    "description": "4×4 数独挖空问一格（生成器自建）：随机合法满盘→逐格挖空且回溯数解保持唯一解（多解回填）→问某空格。生成器即权威（答案=满盘真解）。测约束满足推理。",
+    "author": "AI斗兽场（生成器自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:mini-sudoku:2026-09-10",
+    "taskPrefix": "只输出应填的数字本身（1-4），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "mini-sudoku": "4×4 数独挖空（唯一解已校验）"
+    }
+  },
+  "startedAt": "2026-09-10T10:26:48.298Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "MS-01",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n2 4 · 3\n· 1 2 4\n· · 3 1\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 420,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-01",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n2 4 · 3\n· 1 2 4\n· · 3 1\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-01",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n2 4 · 3\n· 1 2 4\n· · 3 1\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 444,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-01",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n2 4 · 3\n· 1 2 4\n· · 3 1\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 184,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-02",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n· 1 4 2\n1 · 2 4\n· 2 · ·\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-02",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n· 1 4 2\n1 · 2 4\n· 2 · ·\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-02",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n· 1 4 2\n1 · 2 4\n· 2 · ·\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 139,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-02",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n· 1 4 2\n1 · 2 4\n· 2 · ·\n\n问题：第 4 行第 1 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-03",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · 1\n2 · 4 ·\n· 3 1 ·\n1 · 3 4\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 236,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-03",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · 1\n2 · 4 ·\n· 3 1 ·\n1 · 3 4\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-03",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · 1\n2 · 4 ·\n· 3 1 ·\n1 · 3 4\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 146,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-03",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · 1\n2 · 4 ·\n· 3 1 ·\n1 · 3 4\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 341,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-04",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 2 1\n1 2 · ·\n4 1 3 ·\n· 3 · 4\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-04",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 2 1\n1 2 · ·\n4 1 3 ·\n· 3 · 4\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-04",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 2 1\n1 2 · ·\n4 1 3 ·\n· 3 · 4\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-04",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 2 1\n1 2 · ·\n4 1 3 ·\n· 3 · 4\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 351,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-05",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 4 · 3\n· 1 · 4\n4 2 · ·\n1 3 4 ·\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-05",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 4 · 3\n· 1 · 4\n4 2 · ·\n1 3 4 ·\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-05",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 4 · 3\n· 1 · 4\n4 2 · ·\n1 3 4 ·\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 393,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-05",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 4 · 3\n· 1 · 4\n4 2 · ·\n1 3 4 ·\n\n问题：第 2 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-06",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 · ·\n3 1 2 4\n2 · 1 ·\n1 3 · 2\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-06",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 · ·\n3 1 2 4\n2 · 1 ·\n1 3 · 2\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-06",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 · ·\n3 1 2 4\n2 · 1 ·\n1 3 · 2\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 403,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-06",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 · ·\n3 1 2 4\n2 · 1 ·\n1 3 · 2\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 191,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-07",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 1 3\n· 1 4 ·\n1 3 · 4\n· 4 · 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-07",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 1 3\n· 1 4 ·\n1 3 · 4\n· 4 · 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 153,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-07",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 1 3\n· 1 4 ·\n1 3 · 4\n· 4 · 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-07",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 2 1 3\n· 1 4 ·\n1 3 · 4\n· 4 · 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 94,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-08",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 · 3 1\n3 1 2 4\n1 · · 2\n· 2 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 203,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-08",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 · 3 1\n3 1 2 4\n1 · · 2\n· 2 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 433,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-08",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 · 3 1\n3 1 2 4\n1 · · 2\n· 2 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 186,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-08",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 · 3 1\n3 1 2 4\n1 · · 2\n· 2 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 394,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-09",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · ·\n2 · 4 3\n4 3 2 1\n· 2 · ·\n\n问题：第 1 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-09",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · ·\n2 · 4 3\n4 3 2 1\n· 2 · ·\n\n问题：第 1 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-09",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · ·\n2 · 4 3\n4 3 2 1\n· 2 · ·\n\n问题：第 1 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-09",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 4 · ·\n2 · 4 3\n4 3 2 1\n· 2 · ·\n\n问题：第 1 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-10",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 4\n2 4 1 ·\n3 2 4 1\n· 1 3 ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-10",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 4\n2 4 1 ·\n3 2 4 1\n· 1 3 ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 332,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-10",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 4\n2 4 1 ·\n3 2 4 1\n· 1 3 ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 212,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-10",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 4\n2 4 1 ·\n3 2 4 1\n· 1 3 ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-11",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 1 4\n· 4 3 2\n4 · 2 ·\n2 3 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-11",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 1 4\n· 4 3 2\n4 · 2 ·\n2 3 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-11",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 1 4\n· 4 3 2\n4 · 2 ·\n2 3 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-11",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 · 1 4\n· 4 3 2\n4 · 2 ·\n2 3 · ·\n\n问题：第 1 行第 2 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 360,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-12",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 1 3 ·\n3 4 · 1\n· 3 · ·\n1 · 4 3\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-12",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 1 3 ·\n3 4 · 1\n· 3 · ·\n1 · 4 3\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 337,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-12",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 1 3 ·\n3 4 · 1\n· 3 · ·\n1 · 4 3\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-12",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n2 1 3 ·\n3 4 · 1\n· 3 · ·\n1 · 4 3\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 82,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-13",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 3\n· 3 2 4\n3 · 4 1\n4 1 · 2\n\n问题：第 1 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 366,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-13",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 3\n· 3 2 4\n3 · 4 1\n4 1 · 2\n\n问题：第 1 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 356,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-13",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 3\n· 3 2 4\n3 · 4 1\n4 1 · 2\n\n问题：第 1 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-13",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · · 3\n· 3 2 4\n3 · 4 1\n4 1 · 2\n\n问题：第 1 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-14",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n3 · · ·\n4 2 · 1\n· 3 4 2\n\n问题：第 2 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 346,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-14",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n3 · · ·\n4 2 · 1\n· 3 4 2\n\n问题：第 2 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 283,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-14",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n3 · · ·\n4 2 · 1\n· 3 4 2\n\n问题：第 2 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 477,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-14",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· 4 1 3\n3 · · ·\n4 2 · 1\n· 3 4 2\n\n问题：第 2 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 273,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-15",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 · 1\n· 1 · ·\n· 4 1 3\n1 3 4 ·\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 144,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-15",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 · 1\n· 1 · ·\n· 4 1 3\n1 3 4 ·\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-15",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 · 1\n· 1 · ·\n· 4 1 3\n1 3 4 ·\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 411,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-15",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 · 1\n· 1 · ·\n· 4 1 3\n1 3 4 ·\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 464,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-16",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · 2\n4 2 3 ·\n1 3 · 4\n2 · · ·\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "MS-16",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · 2\n4 2 3 ·\n1 3 · 4\n2 · · ·\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 114,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-16",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · 2\n4 2 3 ·\n1 3 · 4\n2 · · ·\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 270,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-16",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · 2\n4 2 3 ·\n1 3 · 4\n2 · · ·\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 431,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-17",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 1 3\n1 3 · ·\n· 1 · ·\n3 · 2 1\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 387,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-17",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 1 3\n1 3 · ·\n· 1 · ·\n3 · 2 1\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 132,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-17",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 1 3\n1 3 · ·\n· 1 · ·\n3 · 2 1\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 86,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-17",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 1 3\n1 3 · ·\n· 1 · ·\n3 · 2 1\n\n问题：第 3 行第 3 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-18",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n3 1 2 4\n4 · · ·\n1 · 4 2\n\n问题：第 4 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 243,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-18",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n3 1 2 4\n4 · · ·\n1 · 4 2\n\n问题：第 4 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 165,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-18",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n3 1 2 4\n4 · · ·\n1 · 4 2\n\n问题：第 4 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-18",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n3 1 2 4\n4 · · ·\n1 · 4 2\n\n问题：第 4 行第 2 列应填什么数字？",
+      "answer": "3",
+      "target": "3",
+      "latencyMs": 362,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-19",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n· 3 1 ·\n4 1 · 3\n3 · 4 1\n\n问题：第 2 行第 4 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-19",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n· 3 1 ·\n4 1 · 3\n3 · 4 1\n\n问题：第 2 行第 4 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 123,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-19",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n· 3 1 ·\n4 1 · 3\n3 · 4 1\n\n问题：第 2 行第 4 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 266,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-19",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · · 2\n· 3 1 ·\n4 1 · 3\n3 · 4 1\n\n问题：第 2 行第 4 列应填什么数字？",
+      "answer": "4",
+      "target": "4",
+      "latencyMs": 264,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-20",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · ·\n4 2 · 1\n2 · · ·\n1 4 2 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 289,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-20",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · ·\n4 2 · 1\n2 · · ·\n1 4 2 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-20",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · ·\n4 2 · 1\n2 · · ·\n1 4 2 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-20",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n3 1 · ·\n4 2 · 1\n2 · · ·\n1 4 2 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 255,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-21",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · 4 ·\n· · 1 ·\n2 · 3 4\n4 3 2 1\n\n问题：第 3 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 309,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-21",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · 4 ·\n· · 1 ·\n2 · 3 4\n4 3 2 1\n\n问题：第 3 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-21",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · 4 ·\n· · 1 ·\n2 · 3 4\n4 3 2 1\n\n问题：第 3 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 340,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-21",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 · 4 ·\n· · 1 ·\n2 · 3 4\n4 3 2 1\n\n问题：第 3 行第 2 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-22",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 3 4 2\n· · · ·\n· 1 · 4\n4 2 3 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 442,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-22",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 3 4 2\n· · · ·\n· 1 · 4\n4 2 3 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-22",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 3 4 2\n· · · ·\n· 1 · 4\n4 2 3 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-22",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n1 3 4 2\n· · · ·\n· 1 · 4\n4 2 3 1\n\n问题：第 2 行第 1 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 106,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-23",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n1 3 2 4\n· 1 · ·\n4 · 1 3\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 461,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-23",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n1 3 2 4\n· 1 · ·\n4 · 1 3\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 414,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-23",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n1 3 2 4\n· 1 · ·\n4 · 1 3\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 220,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-23",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n· · 3 1\n1 3 2 4\n· 1 · ·\n4 · 1 3\n\n问题：第 3 行第 4 列应填什么数字？",
+      "answer": "2",
+      "target": "2",
+      "latencyMs": 327,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-24",
+      "condition": "mini-sudoku",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 3 ·\n1 3 4 ·\n3 · 2 4\n· · · 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 134,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-24",
+      "condition": "mini-sudoku",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 3 ·\n1 3 4 ·\n3 · 2 4\n· · · 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 324,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-24",
+      "condition": "mini-sudoku",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 3 ·\n1 3 4 ·\n3 · 2 4\n· · · 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 335,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "MS-24",
+      "condition": "mini-sudoku",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出应填的数字本身（1-4），不多一个字。\n4×4 迷你数独：每行、每列、每个 2×2 宫内都是 1-4 不重复。「·」为空格。\n4 2 3 ·\n1 3 4 ·\n3 · 2 4\n· · · 3\n\n问题：第 1 行第 4 列应填什么数字？",
+      "answer": "1",
+      "target": "1",
+      "latencyMs": 84,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "d4d9e45ff367bad7",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.22.0"
+  }
+}

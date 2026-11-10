@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-homes-thresholds.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "passed": true,
+        "samples": 716,
+        "canopyChecks": 247,
+        "oldCourtArea": 827.0216331481934,
+        "newCourtArea": 827.0215850888635,
+        "privateArea": 131.75987877696753,
+        "screenBounds": [
+          {
+            "name": "V015 package - resident deepseek home package",
+            "position": [
+              -16.7,
+              0.045,
+              -4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          },
+          {
+            "name": "V015 package - resident deepseek home package",
+            "position": [
+              -16.7,
+              0.045,
+              4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          },
+          {
+            "name": "V015 package - resident chatgpt home package",
+            "position": [
+              -16.7,
+              0.045,
+              -4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          },
+          {
+            "name": "V015 package - resident chatgpt home package",
+            "position": [
+              -16.7,
+              0.045,
+              4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          },
+          {
+            "name": "V015 package - resident claude home package",
+            "position": [
+              -16.7,
+              0.045,
+              -4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          },
+          {
+            "name": "V015 package - resident claude home package",
+            "position": [
+              -16.7,
+              0.045,
+              4.4
+            ],
+            "size": [
+              3.2,
+              1.24,
+              0.5
+            ]
+          }
+        ],
+        "errors": [],
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

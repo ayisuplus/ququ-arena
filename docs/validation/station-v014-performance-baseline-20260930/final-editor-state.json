@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(UnityEditor.EditorApplication.isPlaying||scene.isDirty||scene.name!=\"BlackHoleStationFourWingsV014\")throw new System.Exception(\"Saved v014 scene in Edit mode required\");\nreturn new{scene=scene.name,dirty=scene.isDirty,playing=UnityEditor.EditorApplication.isPlaying};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "BlackHoleStationFourWingsV014",
+        "dirty": false,
+        "playing": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\r\nif(scene.name!=\"BlackHoleStationSereneV013\" || UnityEditor.EditorApplication.isPlaying || scene.isDirty)throw new System.Exception(\"Clean v013 required\");\r\nvar stage=\"before\";\r\nvar folder=System.IO.Path.GetFullPath(\"../docs/validation/station-v013-p1p2-lighting-20260930/\"+stage);System.IO.Directory.CreateDirectory(folder);\r\nvar views=new[]{\r\n new{name=\"table-detail\",p=new UnityEngine.Vector3(204,1.55f,-204.7f),t=new UnityEngine.Vector3(204,.75f,-202)},\r\n new{name=\"round-table-detail\",p=new UnityEngine.Vector3(203,1.5f,-199),t=new UnityEngine.Vector3(202,.75f,-197.3f)},\r\n new{name=\"forecourt-north\",p=new UnityEngine.Vector3(189.5f,1.6f,-187),t=new UnityEngine.Vector3(189.5f,2,-216)},\r\n new{name=\"forecourt-entry\",p=new UnityEngine.Vector3(187,1.6f,-198),t=new UnityEngine.Vector3(195,2,-209)},\r\n new{name=\"forecourt-south\",p=new UnityEngine.Vector3(190,1.6f,-214),t=new UnityEngine.Vector3(189,2,-190)},\r\n new{name=\"chair-close\",p=new UnityEngine.Vector3(200,1.25f,-204),t=new UnityEngine.Vector3(202,0.65f,-201.8f)},new{name=\"lookout-left\",p=new UnityEngine.Vector3(169,1.6f,-247),t=new UnityEngine.Vector3(-1200,-1000,0)},new{name=\"lookout-right\",p=new UnityEngine.Vector3(169,1.6f,-245),t=new UnityEngine.Vector3(-1200,-1000,0)},new{name=\"entry\",p=new UnityEngine.Vector3(191,1.6f,-205),t=new UnityEngine.Vector3(207,1.7f,-205)},\r\n new{name=\"lounge\",p=new UnityEngine.Vector3(196,1.6f,-208),t=new UnityEngine.Vector3(206,1.6f,-201)},\r\n new{name=\"service\",p=new UnityEngine.Vector3(201,1.6f,-207),t=new UnityEngine.Vector3(210,1.7f,-213)},\r\n new{name=\"gallery\",p=new UnityEngine.Vector3(186,1.6f,-225),t=new UnityEngine.Vector3(186,1.6f,-243)},\r\n new{name=\"lookout\",p=new UnityEngine.Vector3(179,1.6f,-246),t=new UnityEngine.Vector3(168,1.6f,-246)},\r\n new{name=\"blackhole\",p=new UnityEngine.Vector3(169,1.6f,-246),t=new UnityEngine.Vector3(-1200,-1000,0)}\r\n};\r\nvar go=new UnityEngine.GameObject(\"Temporary P1P2 camera\");go.hideFlags=UnityEngine.HideFlags.HideAndDontSave;\r\nvar cam=go.AddComponent<UnityEngine.Camera>();cam.enabled=false;cam.fieldOfView=70;cam.nearClipPlane=.08f;cam.farClipPlane=60000;cam.clearFlags=UnityEngine.CameraClearFlags.Skybox;\r\n{var cd=go.AddComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();cd.SetRenderer(1);cd.renderPostProcessing=true;cd.antialiasing=UnityEngine.Rendering.Universal.AntialiasingMode.SubpixelMorphologicalAntiAliasing;cd.antialiasingQuality=UnityEngine.Rendering.Universal.AntialiasingQuality.High;}\r\nvar rt=new UnityEngine.RenderTexture(1600,900,24);var tex=new UnityEngine.Texture2D(1600,900,UnityEngine.TextureFormat.RGB24,false);var prev=UnityEngine.RenderTexture.active;\r\ntry {cam.targetTexture=rt;foreach(var v in views){cam.transform.position=v.p;cam.transform.LookAt(v.t);cam.Render();UnityEngine.RenderTexture.active=rt;tex.ReadPixels(new UnityEngine.Rect(0,0,1600,900),0,0);tex.Apply();System.IO.File.WriteAllBytes(System.IO.Path.Combine(folder,v.name+\".png\"),tex.EncodeToPNG());}}\r\nfinally{UnityEngine.RenderTexture.active=prev;cam.targetTexture=null;UnityEngine.Object.DestroyImmediate(tex);UnityEngine.Object.DestroyImmediate(rt);UnityEngine.Object.DestroyImmediate(go);}\r\nreturn new{stage,folder,dirty=scene.isDirty};\r\n\r\n\r\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "stage": "before",
+        "folder": "E:\\projects\\黑洞空间站\\docs\\validation\\station-v013-p1p2-lighting-20260930\\before",
+        "dirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

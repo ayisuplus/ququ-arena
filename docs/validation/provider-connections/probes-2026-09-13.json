@@ -1,0 +1,134 @@
+{
+  "checkedAt": "2026-09-12T16:31:13.380Z",
+  "kind": "short-connection-probes-not-benchmark",
+  "models": [
+    {
+      "provider": "智谱",
+      "modelId": "glm-4.7-flash",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 129,
+      "streamMatches": true,
+      "latencyMs": 1097,
+      "usage": {
+        "input": 11,
+        "output": 78,
+        "cachedInput": 2,
+        "reasoning": 75
+      }
+    },
+    {
+      "provider": "硅基流动",
+      "modelId": "Qwen/Qwen3.5-4B",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 809,
+      "streamMatches": true,
+      "latencyMs": 4669,
+      "usage": {
+        "input": 16,
+        "output": 232
+      }
+    },
+    {
+      "provider": "硅基流动",
+      "modelId": "Qwen/Qwen3-8B",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 729,
+      "streamMatches": true,
+      "latencyMs": 37439,
+      "usage": {
+        "input": 15,
+        "output": 409,
+        "cachedInput": 0,
+        "reasoning": 407
+      }
+    },
+    {
+      "provider": "groq",
+      "modelId": "openai/gpt-oss-120b",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 195,
+      "streamMatches": true,
+      "latencyMs": 750,
+      "usage": {
+        "input": 78,
+        "output": 60,
+        "reasoning": 50
+      }
+    },
+    {
+      "provider": "groq",
+      "modelId": "openai/gpt-oss-20b",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 139,
+      "streamMatches": true,
+      "latencyMs": 676,
+      "usage": {
+        "input": 78,
+        "output": 48,
+        "reasoning": 38
+      }
+    },
+    {
+      "provider": "groq",
+      "modelId": "qwen/qwen3.8-27b",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 0,
+      "streamMatches": true,
+      "latencyMs": 364,
+      "usage": {
+        "input": 18,
+        "output": 2
+      }
+    },
+    {
+      "provider": "bai",
+      "modelId": "qwen3.8-flash",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 124,
+      "streamMatches": true,
+      "latencyMs": 1516,
+      "usage": {
+        "input": 67,
+        "output": 38,
+        "cachedInput": 0,
+        "reasoning": 35
+      }
+    },
+    {
+      "provider": "bai",
+      "modelId": "hy3",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 39,
+      "streamMatches": true,
+      "latencyMs": 1341,
+      "usage": {
+        "input": 18,
+        "output": 24,
+        "cachedInput": 0,
+        "reasoning": 21
+      }
+    },
+    {
+      "provider": "bai",
+      "modelId": "mimo-v2.5",
+      "ok": true,
+      "text": "收到",
+      "reasoningCharacters": 0,
+      "streamMatches": true,
+      "latencyMs": 3282,
+      "usage": {
+        "input": 260,
+        "output": 2,
+        "cachedInput": 192
+      }
+    }
+  ]
+}

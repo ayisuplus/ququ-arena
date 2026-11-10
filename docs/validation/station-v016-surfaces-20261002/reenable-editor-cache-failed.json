@@ -1,0 +1,27 @@
+{
+  "passed": false,
+  "error": "",
+  "checks": [
+    {
+      "name": "Disabled runtime objects released",
+      "passed": true
+    },
+    {
+      "name": "Re-enable restores all 30 runtime volumes",
+      "passed": true
+    },
+    {
+      "name": "Local offsets survive disabled ring rotation",
+      "passed": false
+    },
+    {
+      "name": "Original 26 zero offsets retained after restart",
+      "passed": true
+    },
+    {
+      "name": "One runtime volume for each source after restart",
+      "passed": true
+    }
+  ],
+  "seconds": 0.088540000026114285
+}

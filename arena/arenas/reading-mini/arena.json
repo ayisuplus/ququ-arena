@@ -1,0 +1,24 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "reading-mini",
+  "title": "阅读理解擂台",
+  "description": "形制致敬 RACE/语文阅读理解（内容自建，短文均为原创小短文）。每题一段 2-4 句短文 + 四选一问题，exact 裁判（选项字母）。detail 细节定位 8 题（答案逐字在文中，契约测试锚定 answerText ⊆ 短文）、main-idea 主旨概括 4 题（干扰项为以偏概全的细节）、infer 推理判断 4 题（只能推出一个选项）、word-meaning 词义指代 4 题（「它/扎得很深很广/苦心/少之又少」语境义）。传统评测第一大户，测的是「读没读懂」而非「背没背过」。",
+  "author": "AI斗兽场（内容自建，形制致敬阅读理解题）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:reading-mini:2026-09-10",
+  "taskPrefix": "阅读短文，从四个选项中选出最恰当的一项。只输出选项字母（A/B/C/D），不多一个字。\n根据本题提供的阅读材料回答，不把材料中的个别观察推广为普遍规律。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "detail": "细节定位（答案逐字在文中）",
+    "main-idea": "主旨概括（干扰项以偏概全）",
+    "infer": "推理判断（只能推出一个选项）",
+    "word-meaning": "词义与指代理解"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "note": "修正把观察等同于因果或提前启程的推断，删除无来源的竹子生长数字，明确只按材料作答。"
+  }
+}

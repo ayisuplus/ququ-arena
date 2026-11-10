@@ -1,0 +1,31 @@
+{
+  "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationEcologicalParkV017.unity",
+  "checks": [
+    {
+      "name": "b01-main",
+      "passed": false,
+      "collider": "B01 simplified collision",
+      "distance": 2.87841487
+    },
+    {
+      "name": "b01-small",
+      "passed": false,
+      "collider": "B01 simplified collision",
+      "distance": 2.92593646
+    },
+    {
+      "name": "b02-core",
+      "passed": false,
+      "collider": "B02_Porcelain.001",
+      "distance": 0.334679842
+    },
+    {
+      "name": "b04-core",
+      "passed": false,
+      "collider": "B04 simplified collision",
+      "distance": 2.40894413
+    }
+  ],
+  "passed": false,
+  "scope": "Expected baseline failure: full existing collision closes each proposed entry."
+}

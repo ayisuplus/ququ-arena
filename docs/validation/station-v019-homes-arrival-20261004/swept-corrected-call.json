@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\audit-lounge-swept-clearance.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "selected": 18,
+        "minRadius": 203.953445,
+        "maxRadius": 247.133942,
+        "minY": -4.76837158e-7,
+        "maxY": 5.52000046,
+        "rings": [
+          {
+            "RingId": "v015-r3",
+            "center": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "RingId": "v015-r1",
+            "center": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "RingId": "v015-r2",
+            "center": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "name": "V015 fixed perimeter protection glass",
+            "path": "V015 fixed buildings and global services/V015 fixed perimeter protection/V015 fixed perimeter protection glass",
+            "ring": null,
+            "minRadius": 0,
+            "maxRadius": 534.3247,
+            "minY": 0,
+            "maxY": 1.25,
+            "meshMinRadius": 253.938782,
+            "radiallySeparated": true
+          }
+        ],
+        "note": "Conservative world-AABB radial bands about R3 pivot. Same-ring pairs checked separately. Ground surfaces below 0.4m excluded. A candidate whose triangle-mesh minimum radius exceeds the selected maximum is separated at every yaw; other candidates remain unresolved. This does not establish visual clearance."
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

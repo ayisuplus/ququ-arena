@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nconst string models=\"Assets/Station/Models/EcologicalParkV017/P01\",textures=\"Assets/Station/Textures/EcologicalParkV017\";\nSystem.IO.Directory.CreateDirectory(models);\nforeach(var file in System.IO.Directory.GetFiles(\"../production/black-hole-station/v017/plant-kit/P01-GameV002\",\"*.fbx\"))System.IO.File.Copy(file,models+\"/\"+System.IO.Path.GetFileName(file),false);\nUnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nforeach(var path in System.IO.Directory.GetFiles(models,\"*.fbx\")){\n var importer=(UnityEditor.ModelImporter)UnityEditor.AssetImporter.GetAtPath(path.Replace('\\\\','/'));importer.materialImportMode=UnityEditor.ModelImporterMaterialImportMode.None;importer.isReadable=true;importer.SaveAndReimport();\n}\nforeach(var suffix in new[]{\"Base.png\",\"Normal.png\",\"MetallicSmoothness.png\"}){\n var importer=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(textures+\"/P01_\"+suffix);importer.textureType=suffix.Contains(\"Normal\")?UnityEditor.TextureImporterType.NormalMap:UnityEditor.TextureImporterType.Default;importer.sRGBTexture=suffix.StartsWith(\"Base\");importer.maxTextureSize=2048;importer.SaveAndReimport();\n}\nvar mat=new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\")){name=\"P01UnfurlLivingGreen\"};\nmat.SetTexture(\"_BaseMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"/P01_Base.png\"));mat.SetTexture(\"_BumpMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"/P01_Normal.png\"));mat.SetTexture(\"_MetallicGlossMap\",UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(textures+\"/P01_MetallicSmoothness.png\"));mat.SetColor(\"_BaseColor\",UnityEngine.Color.white);mat.SetFloat(\"_Smoothness\",.38f);mat.SetFloat(\"_BumpScale\",.55f);mat.SetFloat(\"_Cull\",0);mat.EnableKeyword(\"_NORMALMAP\");mat.EnableKeyword(\"_METALLICSPECGLOSSMAP\");UnityEditor.AssetDatabase.CreateAsset(mat,\"Assets/Station/Materials/EcologicalParkV017/\"+mat.name+\".mat\");\nvar go=new UnityEngine.GameObject(\"P01 Unfurl canopy v002\");var lod=go.AddComponent<UnityEngine.LODGroup>();var levels=new System.Collections.Generic.List<UnityEngine.LOD>();var rows=new System.Collections.Generic.List<object>();\nfor(int level=0;level<3;level++){\n var source=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(models+\"/P01_UnfurlCanopy_v002_LOD\"+level+\".fbx\");var child=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(source);child.transform.SetParent(go.transform,false);var renderers=child.GetComponentsInChildren<UnityEngine.MeshRenderer>();\n foreach(var r in renderers){r.sharedMaterial=mat;r.lightmapIndex=-1;r.shadowCastingMode=level==0?UnityEngine.Rendering.ShadowCastingMode.On:UnityEngine.Rendering.ShadowCastingMode.Off;r.reflectionProbeUsage=UnityEngine.Rendering.ReflectionProbeUsage.BlendProbes;}\n int count=child.GetComponentsInChildren<UnityEngine.MeshFilter>().Sum(m=>m.sharedMesh.triangles.Length/3);rows.Add(new{level,triangles=count});levels.Add(new UnityEngine.LOD(new[]{.28f,.10f,.002f}[level],renderers));\n}\nlod.SetLODs(levels.ToArray());lod.RecalculateBounds();\nvar trunk=go.AddComponent<UnityEngine.CapsuleCollider>();trunk.center=new UnityEngine.Vector3(0,.9f,0);trunk.height=1.8f;trunk.radius=.26f;\nvar prefab=UnityEditor.PrefabUtility.SaveAsPrefabAsset(go,\"Assets/Station/Prefabs/EcologicalParkV017/P01UnfurlCanopy.prefab\");UnityEngine.Object.DestroyImmediate(go);\nvar frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;var instance=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);instance.transform.SetParent(frame.Find(\"V017 continuous ecological park\"),false);instance.transform.localPosition=new UnityEngine.Vector3(-9.8f,.20f,-16);instance.transform.localRotation=UnityEngine.Quaternion.Euler(0,28,0);UnityEditor.Undo.RegisterCreatedObjectUndo(instance,\"Plant P01 focal tree\");\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nSystem.IO.File.WriteAllText(\"../docs/validation/station-v017-plants-20261003/p01-game-v002.json\",Newtonsoft.Json.JsonConvert.SerializeObject(new{prefab=UnityEditor.AssetDatabase.GetAssetPath(prefab),position=instance.transform.localPosition.ToString(),lods=rows,source=\"accepted remesh task; updated UV maps\"},Newtonsoft.Json.Formatting.Indented));return rows;\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "level": 0,
+          "triangles": 210123
+        },
+        {
+          "level": 1,
+          "triangles": 94555
+        },
+        {
+          "level": 2,
+          "triangles": 25214
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

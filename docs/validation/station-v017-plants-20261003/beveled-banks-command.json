@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nvar root=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform.Find(\"V017 continuous ecological park\");int count=0;\nforeach(var f in root.GetComponentsInChildren<UnityEngine.MeshFilter>().Where(f=>f.name.EndsWith(\" grounded bank\"))){var v=f.sharedMesh.vertices;var center=UnityEngine.Vector3.zero;for(int i=0;i<v.Length;i+=2)center+=v[i];center/=v.Length/2;for(int i=1;i<v.Length;i+=2){var direction=v[i]-center;direction.y=0;v[i]+=direction.normalized*.16f;}f.sharedMesh.vertices=v;f.sharedMesh.uv=v.Select(p=>new UnityEngine.Vector2(p.x/3,p.z/3)).ToArray();f.sharedMesh.RecalculateNormals();f.sharedMesh.RecalculateTangents();f.sharedMesh.RecalculateBounds();UnityEditor.EditorUtility.SetDirty(f.sharedMesh);count++;}\nvar m=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/EcologicalParkV017/LivingSoilBank.mat\");m.SetColor(\"_BaseColor\",UnityEngine.Color.white);UnityEditor.EditorUtility.SetDirty(m);UnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{beveledBanks=count};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "beveledBanks": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

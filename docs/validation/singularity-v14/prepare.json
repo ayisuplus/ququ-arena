@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty)throw new System.Exception(\"Dirty scene\"); return new { preparation=ArenaBuild.Prepare(),logic=ArenaBuild.ValidateLogic(),shader=UnityEditor.ShaderUtil.GetShaderMessages(UnityEngine.Shader.Find(\"QuQu/Spatial Singularity\")) };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "preparation": "Scene and Windows settings ready: Assets/Scenes/QuQuArena.unity",
+        "logic": "7 presentation and customization assertions passed",
+        "shader": []
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var m=UnityEngine.Object.FindFirstObjectByType<QuQu.ArenaStationLiveMatch>(); var w=UnityEngine.Object.FindFirstObjectByType<QuQu.StationGrayboxWalker>(); if(m.Status!=\"赛事待续 · 续赛待定\" || m.Rig.Phase!=\"docked\" || w.transform.position.z<240 || !w.View.enabled) throw new System.InvalidOperationException(\"Pending display or remote camera failed: \"+m.Status); return new Newtonsoft.Json.Linq.JObject { [\"fixturePendingVisible\"] = true, [\"status\"] = m.Status, [\"phase\"] = m.Rig.Phase, [\"playerZ\"] = w.transform.position.z, [\"cameraEnabled\"] = w.View.enabled };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "fixturePendingVisible": true,
+        "status": "赛事待续 · 续赛待定",
+        "phase": "docked",
+        "playerZ": 245,
+        "cameraEnabled": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\AI斗兽场\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

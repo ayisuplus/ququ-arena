@@ -1,0 +1,32 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b03-tidal-seed\\refined-v001\\B03_TidalSeed_v001.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 23262,
+      "materials": 4,
+      "textures": 0,
+      "hasUVs": false,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        29.030000686645508,
+        13.068001747131348,
+        17.10576820373535
+      ]
+    },
+    "failures": [],
+    "checksRun": 7,
+    "inspectorWarnings": [
+      "4 of 4 primitives have no TEXCOORD_0: the mesh cannot be textured or retextured until it is UV unwrapped",
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

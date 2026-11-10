@@ -1,0 +1,23 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "sentence-order",
+  "title": "语句排序擂台",
+  "description": "形制致敬行测语句排序（内容自建）。把一段连贯文字的 5 个句子打乱，按行文逻辑重排，exact 裁判（序号数字串）。reference-chain 考指代衔接（「它/这些/在他的带领下」必须后指）、conjunction-chain 考关联词与论证衔接（首先/其次/然后/最后、因为/因此、不但/而且/更）、general-detail 考总分结构（总起→分述→总结）、time-space 考时空顺序（参观路线/四季/登山/村庄一天）。每题只设唯一连贯顺序；meta.sentences 存正确序、meta.order 存数字串，契约测试三方映射复算（展示序按 order 重排 ≡ 正确序，展示序≠正确序防送分，20 串互不相同）。",
+  "author": "AI斗兽场（内容自建，形制致敬行测语句排序）",
+  "version": "0.2.0",
+  "canary": "ququ-arena:sentence-order:2026-09-10",
+  "taskPrefix": "把打乱的 5 个句子按连贯的行文顺序重新排列。只输出排列后的序号数字串（如 31542），不多一个字。\n",
+  "judge": {
+    "kind": "exact"
+  },
+  "conditions": {
+    "reference-chain": "指代衔接（它/这些/其 必须后指）",
+    "conjunction-chain": "关联词与论证衔接（首先/因为/不但/所以）",
+    "general-detail": "总分结构（总起→分述→总结）",
+    "time-space": "时空顺序（路线/四季/一天）"
+  },
+  "review": {
+    "date": "2026-09-13",
+    "blockedReason": "多组句子可采用不同的总分结构或叙事顺序，尚未建立可验证的唯一排序或等价答案。"
+  }
+}

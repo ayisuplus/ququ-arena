@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:/projects/黑洞空间站/.cache/alpha-round-001/question-timing-check.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "mode": "wrap",
+        "passed": true,
+        "failed": 0,
+        "checks": [
+          "mode.file-readable | passed=True | actual=wrap | expected=a stage word from timing-mode.txt",
+          "wrap.board-present | passed=True | actual=found | expected=found",
+          "wrap.wrapped-back-to-page-1 | passed=True | actual=1 | expected=1",
+          "wrap.footer-page-indicator-is-1 | passed=True | actual=CHARLIE    VS    DELTA    1 / 72 | expected=contains 1 / 72"
+        ],
+        "pageCount": 72,
+        "startedAt": 70.38762,
+        "elapsedSeconds": 0,
+        "unity": "6000.3.24f1",
+        "playMode": true,
+        "scene": "",
+        "reusedExistingBoard": false,
+        "note": "one short synchronous stage per call; the 8s rotation is observed between calls, never awaited here"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

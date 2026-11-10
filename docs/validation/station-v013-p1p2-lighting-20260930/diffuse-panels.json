@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning||UnityEngine.GameObject.Find(\"V013 baked ceiling diffusion\"))throw new System.Exception(\"Idle v013 without diffusion sources required\");\nvar root=new UnityEngine.GameObject(\"V013 baked ceiling diffusion\");\nvoid Panel(UnityEngine.Vector3 position,UnityEngine.Vector2 size,float intensity){\n var go=new UnityEngine.GameObject(\"Baked ceiling panel emitter\");go.transform.SetParent(root.transform);go.transform.position=position;go.transform.rotation=UnityEngine.Quaternion.Euler(90,0,0);\n var l=go.AddComponent<UnityEngine.Light>();l.type=UnityEngine.LightType.Rectangle;l.lightmapBakeType=UnityEngine.LightmapBakeType.Baked;l.areaSize=size;l.intensity=intensity;l.color=new UnityEngine.Color(1,.98f,.95f);l.shadows=UnityEngine.LightShadows.Soft;\n}\nforeach(float x in new[]{199.6f,210.4f})foreach(float z in new[]{-199.6f,-210.4f})Panel(new UnityEngine.Vector3(x,3.97f,z),new UnityEngine.Vector2(8,8),4);\nfor(int i=0;i<6;i++)Panel(new UnityEngine.Vector3(189.15f,4.035f,-184-(i+.5f)*32/6),new UnityEngine.Vector2(7.6f,4.3f),3);\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{panels=root.transform.childCount,started=UnityEditor.Lightmapping.BakeAsync()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "panels": 10,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var root=UnityEngine.GameObject.Find(\"V013 civic exterior finish\");\nforeach(var c in root.GetComponentsInChildren<UnityEngine.BoxCollider>()){\n if(c.name==\"Pavilion integrated roof\")c.size=new UnityEngine.Vector3(14.2f,.42f,14.2f);\n if(c.name==\"Pavilion planting island\"){c.center=new UnityEngine.Vector3(0,.3f,0);c.size=new UnityEngine.Vector3(3.2f,.6f,1.35f);}\n}\nforeach(var r in root.GetComponentsInChildren<UnityEngine.Renderer>())if(r.name==\"Recessed soil\")r.sharedMaterial=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(\"Assets/Station/Materials/V013-P1P2-Inset.mat\");\nvar scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return true;"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": true
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

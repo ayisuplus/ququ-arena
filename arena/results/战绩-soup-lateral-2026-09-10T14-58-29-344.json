@@ -1,0 +1,113 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "soup-lateral",
+    "title": "海龟汤擂台",
+    "description": "海龟汤（横向思维游戏）单提示版：只给汤面不给汤底，问一个具体细节，答「是」「否」或「无关」。汤底是通行经典版本（荒岛海龟汤/电梯侏儒/沙漠火柴/葬礼暗恋/瞎子买剪刀/病房蜡烛）。测部分信息下的横向推理——顺着汤面字面走必翻车。",
+    "author": "AI斗兽场（经典汤底自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:soup-lateral:2026-09-10",
+    "taskPrefix": "这是海龟汤游戏：汤面背后有一个隐藏的经典汤底。请先推理出最可能的汤底，再据此回答问题。只输出「是」「否」或「无关」（问题与汤底无关时答「无关」），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "soup-yes": "答案为「是」",
+      "soup-no": "答案为「否」",
+      "soup-irrelevant": "答案为「无关」（问题与汤底无关）"
+    }
+  },
+  "startedAt": "2026-09-10T14:58:29.344Z",
+  "durationMs": 1,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SOUP-S1-1",
+      "condition": "soup-no",
+      "model": "mock:xueba-o9",
+      "prompt": "这是海龟汤游戏：汤面背后有一个隐藏的经典汤底。请先推理出最可能的汤底，再据此回答问题。只输出「是」「否」或「无关」（问题与汤底无关时答「无关」），不多一个字。\n汤面：男子在餐厅点了一碗海龟汤，喝了一口，结账回家后自杀了。\n\n问题：他当年落难时喝到的\"海龟汤\"是真海龟汤吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 467,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SOUP-S1-1",
+      "condition": "soup-no",
+      "model": "mock:huatou-72b",
+      "prompt": "这是海龟汤游戏：汤面背后有一个隐藏的经典汤底。请先推理出最可能的汤底，再据此回答问题。只输出「是」「否」或「无关」（问题与汤底无关时答「无关」），不多一个字。\n汤面：男子在餐厅点了一碗海龟汤，喝了一口，结账回家后自杀了。\n\n问题：他当年落难时喝到的\"海龟汤\"是真海龟汤吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 199,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SOUP-S1-1",
+      "condition": "soup-no",
+      "model": "mock:jianglv-7b",
+      "prompt": "这是海龟汤游戏：汤面背后有一个隐藏的经典汤底。请先推理出最可能的汤底，再据此回答问题。只输出「是」「否」或「无关」（问题与汤底无关时答「无关」），不多一个字。\n汤面：男子在餐厅点了一碗海龟汤，喝了一口，结账回家后自杀了。\n\n问题：他当年落难时喝到的\"海龟汤\"是真海龟汤吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 406,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "SOUP-S1-1",
+      "condition": "soup-no",
+      "model": "mock:laoshi-k2",
+      "prompt": "这是海龟汤游戏：汤面背后有一个隐藏的经典汤底。请先推理出最可能的汤底，再据此回答问题。只输出「是」「否」或「无关」（问题与汤底无关时答「无关」），不多一个字。\n汤面：男子在餐厅点了一碗海龟汤，喝了一口，结账回家后自杀了。\n\n问题：他当年落难时喝到的\"海龟汤\"是真海龟汤吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 68,
+        "output": 1
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ecf0879fbacee3a0",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.4.0"
+  }
+}

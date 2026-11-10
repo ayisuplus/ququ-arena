@@ -1,0 +1,2148 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "syllogism",
+    "title": "三段论擂台",
+    "description": "古典直言三段论（传统逻辑题库形制，内容自建）。给两个前提一个结论，判断结论能否从前提必然推出——现代一阶语义（『有些』=至少一个、全称无存在含义），题面前缀已声明。valid 为有效式（Barbara/Celarent/Darii/E 换位/链式）；invalid-converse 为换位与肯定后件谬误；invalid-negative 为否定前提谬误；invalid-particular 为特称误推（双特称前提、特称推全称、『有些』不当蕴含『有些不』）。多题结论在现实世界为真但推不出来——测严格蕴含不是测朴素直觉。exact 裁判（是/否）；每题 meta.form 存结构化命题，契约测试区域枚举模型检验逐题复算。",
+    "author": "AI斗兽场（内容自建，形制致敬传统逻辑题库）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:syllogism:2026-09-10",
+    "taskPrefix": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "valid": "有效式（前提真则结论必然真）",
+      "invalid-converse": "换位与肯定后件谬误",
+      "invalid-negative": "否定前提谬误",
+      "invalid-particular": "特称误推（双特称/特称推全称）"
+    }
+  },
+  "startedAt": "2026-09-10T16:03:41.288Z",
+  "durationMs": 27369,
+  "contestants": [
+    {
+      "id": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "name": "闪电-NV35",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "nvidia/nemotron-3.5-lightning:free"
+    },
+    {
+      "id": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "name": "巨兽-NV120",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "name": "小快-LFM",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "liquid/lfm-2.5-2.6b:free"
+    },
+    {
+      "id": "openrouter:dots-studio/dots-3-note-preview:free",
+      "name": "笔记-DOTS",
+      "kind": "pi",
+      "provider": "openrouter",
+      "modelId": "dots-studio/dots-3-note-preview:free"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1697,
+      "score": 1,
+      "usage": {
+        "input": 116,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 1697
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 1778,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 1821
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 3071,
+      "score": 1,
+      "usage": {
+        "input": 96,
+        "output": 281,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 277,
+        "totalTokens": 377,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 3114
+    },
+    {
+      "taskId": "SY-VA-01",
+      "condition": "valid",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有动物都需要氧气。所以，所有猫都需要氧气。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 1359,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 1402
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "是",
+      "latencyMs": 2037,
+      "score": 0,
+      "note": "期望「是」，实答「否」",
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 2080
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "是",
+      "latencyMs": 1018,
+      "score": 0,
+      "note": "期望「是」，实答「否」",
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 1061
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 4502,
+      "score": 1,
+      "usage": {
+        "input": 86,
+        "output": 544,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 539,
+        "totalTokens": 630,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 4545
+    },
+    {
+      "taskId": "SY-VA-02",
+      "condition": "valid",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有猫是狗。所以，没有狗是猫。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 1472,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 1515
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1465,
+      "score": 1,
+      "usage": {
+        "input": 115,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 117,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 2526
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "是",
+      "latencyMs": 636,
+      "score": 0,
+      "note": "期望「是」，实答「否」",
+      "usage": {
+        "input": 115,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 117,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 2038
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 2333,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 437,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 426,
+        "totalTokens": 533,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 3848
+    },
+    {
+      "taskId": "SY-VA-03",
+      "condition": "valid",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。有些宠物是鸟。所以，有些宠物会飞。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 995,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 2692
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "是",
+      "latencyMs": 788,
+      "score": 0,
+      "note": "期望「是」，实答「否」",
+      "usage": {
+        "input": 118,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 120,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 2609
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1657,
+      "score": 1,
+      "usage": {
+        "input": 118,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 120,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 3695
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 3137,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 567,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 554,
+        "totalTokens": 667,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5217
+    },
+    {
+      "taskId": "SY-VA-04",
+      "condition": "valid",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鲸都不是鱼。所有白鲸都是鲸。所以，所有白鲸都不是鱼。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 1823,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 4349
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 790,
+      "score": 1,
+      "usage": {
+        "input": 135,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 137,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 3399
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 1229,
+      "score": 1,
+      "usage": {
+        "input": 135,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 137,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 3921
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "是",
+      "latencyMs": 4052,
+      "score": 1,
+      "usage": {
+        "input": 65,
+        "output": 1013,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 977,
+        "totalTokens": 1126,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 7166
+    },
+    {
+      "taskId": "SY-VA-05",
+      "condition": "valid",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有麻雀都是鸟。所有鸟都是卵生动物。所有卵生动物都是脊椎动物。所以，所有麻雀都是脊椎动物。这个推理必然成立吗？",
+      "answer": "",
+      "target": "是",
+      "latencyMs": 1077,
+      "score": 0,
+      "note": "期望「是」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 4476
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1167,
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 4862
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 641,
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 4489
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1914,
+      "score": 1,
+      "usage": {
+        "input": 39,
+        "output": 283,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 280,
+        "totalTokens": 370,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5835
+    },
+    {
+      "taskId": "SY-IC-01",
+      "condition": "invalid-converse",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，所有动物都是猫。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1078,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5427
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 694,
+      "score": 1,
+      "usage": {
+        "input": 114,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 116,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5170
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 520,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5009
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2725,
+      "score": 1,
+      "usage": {
+        "input": 48,
+        "output": 532,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 523,
+        "totalTokens": 628,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 7270
+    },
+    {
+      "taskId": "SY-IC-02",
+      "condition": "invalid-converse",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有医生都学过生物。有些教师也学过生物。所以，有些教师是医生。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 899,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5761
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1050,
+      "score": 1,
+      "usage": {
+        "input": 112,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 114,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 6059
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 775,
+      "score": 1,
+      "usage": {
+        "input": 112,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 114,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 5945
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 6739,
+      "score": 1,
+      "usage": {
+        "input": 44,
+        "output": 285,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 281,
+        "totalTokens": 377,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 11956
+    },
+    {
+      "taskId": "SY-IC-03",
+      "condition": "invalid-converse",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有狗都是动物。所有猫都是动物。所以，所有猫都是狗。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 886,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 6313
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 798,
+      "score": 1,
+      "usage": {
+        "input": 107,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 109,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 6559
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 767,
+      "score": 1,
+      "usage": {
+        "input": 107,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 109,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 6602
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 12298,
+      "score": 1,
+      "usage": {
+        "input": 45,
+        "output": 900,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 875,
+        "totalTokens": 993,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 18244
+    },
+    {
+      "taskId": "SY-IC-04",
+      "condition": "invalid-converse",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是玫瑰。所以，有些玫瑰不是花。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 963,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 7022
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 617,
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 6930
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 991,
+      "score": 1,
+      "usage": {
+        "input": 105,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 107,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 7550
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7026,
+      "score": 1,
+      "usage": {
+        "input": 23,
+        "output": 292,
+        "cacheRead": 64,
+        "cacheWrite": 0,
+        "reasoning": 286,
+        "totalTokens": 379,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 13628
+    },
+    {
+      "taskId": "SY-IC-05",
+      "condition": "invalid-converse",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所以，有些动物不是猫。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1243,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 8173
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 842,
+      "score": 1,
+      "usage": {
+        "input": 114,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 116,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 7864
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 13950,
+      "score": 1,
+      "usage": {
+        "input": 114,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 116,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 21116
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 9083,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 538,
+        "cacheRead": 64,
+        "cacheWrite": 0,
+        "reasoning": 531,
+        "totalTokens": 632,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 16353
+    },
+    {
+      "taskId": "SY-IN-01",
+      "condition": "invalid-negative",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。所有狗都不是猫。所以，所有狗都不是动物。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1230,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 8780
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "否",
+      "latencyMs": 996,
+      "score": 0,
+      "note": "期望「否」，实答「是」",
+      "usage": {
+        "input": 116,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 8860
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 816,
+      "score": 1,
+      "usage": {
+        "input": 116,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 8989
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7391,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 548,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 539,
+        "totalTokens": 645,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 16171
+    },
+    {
+      "taskId": "SY-IN-02",
+      "condition": "invalid-negative",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有鸟都会飞。所有企鹅都不是鸟。所以，有些企鹅不会飞。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1027,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 9887
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 861,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 119,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 9850
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1201,
+      "score": 1,
+      "usage": {
+        "input": 117,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 119,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 11051
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7517,
+      "score": 1,
+      "usage": {
+        "input": 49,
+        "output": 672,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 665,
+        "totalTokens": 769,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 17404
+    },
+    {
+      "taskId": "SY-IN-03",
+      "condition": "invalid-negative",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些花不是红色的。所有红色的东西都是暖色的。所以，有些花不是暖色的。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 995,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 12046
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2777,
+      "score": 1,
+      "usage": {
+        "input": 129,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 131,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 14733
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 940,
+      "score": 1,
+      "usage": {
+        "input": 129,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 131,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 12986
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 5422,
+      "score": 1,
+      "usage": {
+        "input": 57,
+        "output": 558,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 537,
+        "totalTokens": 663,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 18408
+    },
+    {
+      "taskId": "SY-IN-04",
+      "condition": "invalid-negative",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n没有鸟是哺乳动物。所有蝙蝠都不是鸟。所以，所有蝙蝠都是哺乳动物。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1007,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 14635
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 798,
+      "score": 1,
+      "usage": {
+        "input": 116,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 15433
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 790,
+      "score": 1,
+      "usage": {
+        "input": 116,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 15523
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 7644,
+      "score": 1,
+      "usage": {
+        "input": 30,
+        "output": 1101,
+        "cacheRead": 64,
+        "cacheWrite": 0,
+        "reasoning": 1089,
+        "totalTokens": 1195,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 23077
+    },
+    {
+      "taskId": "SY-IN-05",
+      "condition": "invalid-negative",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都吃鱼。有些动物不是猫。所以，有些动物不吃鱼。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 910,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 16433
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2055,
+      "score": 1,
+      "usage": {
+        "input": 108,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 110,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 18226
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1192,
+      "score": 1,
+      "usage": {
+        "input": 108,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 110,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 17545
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 10935,
+      "score": 1,
+      "usage": {
+        "input": 46,
+        "output": 1363,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 1355,
+        "totalTokens": 1457,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 27368
+    },
+    {
+      "taskId": "SY-IP-01",
+      "condition": "invalid-particular",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些学生是运动员。有些运动员是大学生。所以，有些学生是大学生。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1048,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 18452
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "是",
+      "target": "否",
+      "latencyMs": 1267,
+      "score": 0,
+      "note": "期望「否」，实答「是」",
+      "usage": {
+        "input": 107,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 109,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 18812
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2624,
+      "score": 1,
+      "usage": {
+        "input": 107,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 109,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 20850
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2736,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 231,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 227,
+        "totalTokens": 320,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 20980
+    },
+    {
+      "taskId": "SY-IP-02",
+      "condition": "invalid-particular",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些猫是黑色的。所以，有些猫不是黑色的。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1206,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 19614
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 745,
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 108,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 19197
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 710,
+      "score": 1,
+      "usage": {
+        "input": 106,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 108,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 19522
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2988,
+      "score": 1,
+      "usage": {
+        "input": 40,
+        "output": 277,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 272,
+        "totalTokens": 365,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 22185
+    },
+    {
+      "taskId": "SY-IP-03",
+      "condition": "invalid-particular",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些鸟不会飞。所以，所有鸟都不会飞。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1027,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 20549
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 610,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 105,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 20224
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1597,
+      "score": 1,
+      "usage": {
+        "input": 103,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 105,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 21821
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 2553,
+      "score": 1,
+      "usage": {
+        "input": 41,
+        "output": 287,
+        "cacheRead": 48,
+        "cacheWrite": 0,
+        "reasoning": 283,
+        "totalTokens": 376,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 23102
+    },
+    {
+      "taskId": "SY-IP-04",
+      "condition": "invalid-particular",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n有些教师是作家。所以，所有教师都是作家。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1059,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 21909
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 1999,
+      "score": 1,
+      "usage": {
+        "input": 115,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 117,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 22979
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 953,
+      "score": 1,
+      "usage": {
+        "input": 115,
+        "output": 2,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 117,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 22069
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "openrouter:liquid/lfm-2.5-2.6b:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "否",
+      "target": "否",
+      "latencyMs": 3038,
+      "score": 1,
+      "usage": {
+        "input": 31,
+        "output": 330,
+        "cacheRead": 64,
+        "cacheWrite": 0,
+        "reasoning": 325,
+        "totalTokens": 425,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 24859
+    },
+    {
+      "taskId": "SY-IP-05",
+      "condition": "invalid-particular",
+      "model": "openrouter:dots-studio/dots-3-note-preview:free",
+      "prompt": "判断结论能否从前提必然推出（在所有前提都成立的情形下，结论是否必然成立；「有些」只表示至少存在一个，不蕴含「有些不」）。只输出「是」或「否」，不多一个字。\n所有猫都是动物。有些猫是黑色的。所以，所有黑色的东西都是猫。这个推理必然成立吗？",
+      "answer": "",
+      "target": "否",
+      "latencyMs": 1246,
+      "score": 0,
+      "note": "期望「否」，实答「」",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "finishedMs": 23155
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "1279f9c33dff8c08",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.8.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new{running=UnityEditor.Lightmapping.isRunning,progress=UnityEditor.Lightmapping.buildProgress,lightmaps=UnityEngine.LightmapSettings.lightmaps.Length,probes=UnityEngine.LightmapSettings.lightProbes?UnityEngine.LightmapSettings.lightProbes.count:0,data=UnityEditor.Lightmapping.lightingDataAsset?UnityEditor.AssetDatabase.GetAssetPath(UnityEditor.Lightmapping.lightingDataAsset):null};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "running": false,
+        "progress": 0,
+        "lightmaps": 4,
+        "probes": 186,
+        "data": "Assets/Station/Scenes/BlackHoleStationSereneV013/LightingData.asset"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

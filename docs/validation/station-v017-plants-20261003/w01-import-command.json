@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();if(scene.name!=\"BlackHoleStationEcologicalParkV017\"||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"V017 Edit required\");\nconst string models=\"Assets/Station/Models/EcologicalParkV017/W01/\",mats=\"Assets/Station/Materials/EcologicalParkV017/\";System.IO.Directory.CreateDirectory(models);\nforeach(var file in System.IO.Directory.GetFiles(\"../production/black-hole-station/v017/plant-kit/W01\",\"*.fbx\"))System.IO.File.Copy(file,models+System.IO.Path.GetFileName(file),false);UnityEditor.AssetDatabase.Refresh(UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nforeach(var path in System.IO.Directory.GetFiles(models,\"*.fbx\")){var i=(UnityEditor.ModelImporter)UnityEditor.AssetImporter.GetAtPath(path.Replace('\\\\','/'));i.materialImportMode=UnityEditor.ModelImporterMaterialImportMode.None;i.isReadable=true;i.SaveAndReimport();}\nvar mat=new UnityEngine.Material(UnityEngine.Shader.Find(\"Universal Render Pipeline/Lit\")){name=\"W01PorcelainWhite\"};mat.SetColor(\"_BaseColor\",new UnityEngine.Color(.96f,.98f,.94f));mat.SetFloat(\"_Smoothness\",.68f);mat.SetFloat(\"_Metallic\",.03f);UnityEditor.AssetDatabase.CreateAsset(mat,mats+mat.name+\".mat\");\nvar go=new UnityEngine.GameObject(\"W01 layered leaf fountain\");var lod=go.AddComponent<UnityEngine.LODGroup>();var ls=new System.Collections.Generic.List<UnityEngine.LOD>();\nfor(int level=0;level<3;level++){var source=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(models+\"W01_LayeredLeafFountain_LOD\"+level+\".fbx\");var child=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(source);child.transform.SetParent(go.transform,false);var rs=child.GetComponentsInChildren<UnityEngine.MeshRenderer>();foreach(var r in rs){r.sharedMaterial=mat;r.lightmapIndex=-1;}ls.Add(new UnityEngine.LOD(new[]{.18f,.07f,.002f}[level],rs));}\nlod.SetLODs(ls.ToArray());lod.RecalculateBounds();var c=go.AddComponent<UnityEngine.CapsuleCollider>();c.height=1.25f;c.radius=.3f;c.center=new UnityEngine.Vector3(0,.625f,0);var prefab=UnityEditor.PrefabUtility.SaveAsPrefabAsset(go,\"Assets/Station/Prefabs/EcologicalParkV017/W01LayeredLeafFountain.prefab\");UnityEngine.Object.DestroyImmediate(go);\nvar frame=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;var park=frame.Find(\"V017 continuous ecological park\");var instance=(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefab);instance.transform.SetParent(park,false);instance.transform.localPosition=new UnityEngine.Vector3(9.8f,.15f,16.3f);instance.transform.localRotation=UnityEngine.Quaternion.Euler(0,24,0);\nvar motion=new UnityEngine.GameObject(\"Small leaf fountain water motion\");motion.transform.SetParent(instance.transform,false);motion.transform.localPosition=new UnityEngine.Vector3(0,1.05f,0);motion.transform.localRotation=UnityEngine.Quaternion.Euler(-90,0,0);var ps=motion.AddComponent<UnityEngine.ParticleSystem>();var main=ps.main;main.duration=3;main.loop=true;main.startLifetime=1.0f;main.startSpeed=.32f;main.startSize=.012f;main.startColor=new UnityEngine.Color(.72f,.85f,.82f,.45f);main.gravityModifier=.25f;main.simulationSpace=UnityEngine.ParticleSystemSimulationSpace.Local;main.maxParticles=128;var emission=ps.emission;emission.rateOverTime=44;var shape=ps.shape;shape.shapeType=UnityEngine.ParticleSystemShapeType.Circle;shape.radius=.08f;var renderer=ps.GetComponent<UnityEngine.ParticleSystemRenderer>();renderer.sharedMaterial=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(mats+\"ParkWaterDrops.mat\");renderer.renderMode=UnityEngine.ParticleSystemRenderMode.Stretch;renderer.velocityScale=.1f;renderer.lengthScale=3;ps.useAutoRandomSeed=false;ps.randomSeed=1718;\nvar sourceAudio=park.GetComponentInChildren<UnityEngine.AudioSource>();var sound=instance.AddComponent<UnityEngine.AudioSource>();UnityEditor.EditorUtility.CopySerialized(sourceAudio,sound);sound.volume=.06f;sound.minDistance=1.5f;sound.maxDistance=7;\nUnityEditor.AssetDatabase.SaveAssets();UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);return new{prefab=UnityEditor.AssetDatabase.GetAssetPath(prefab),height=1.25f,material=\"native porcelain\",newPaidRefineSkipped=true,position=instance.transform.localPosition.ToString()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "prefab": "Assets/Station/Prefabs/EcologicalParkV017/W01LayeredLeafFountain.prefab",
+        "height": 1.25,
+        "material": "native porcelain",
+        "newPaidRefineSkipped": true,
+        "position": "(9.80, 0.15, 16.30)"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

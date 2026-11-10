@@ -1,0 +1,296 @@
+{
+  "arena": {
+    "$schema": "../../arena.schema.json",
+    "name": "voxel-craft",
+    "title": "合成链路规划擂台",
+    "description": "素材溯源 voxelgym（voxel 因果世界模型平台）的 recipes.toml 七条合成配方与 tasks/__init__.py 的 LADDER 十二里程碑成就链（collect_log→…→mine_diamond），内容照搬源文件。recipe-lookup 读配方描述（shapeless inputs / shaped pattern+key / needs_table）答产物 out；chain-prereq 在题面给出的完整成就链上答某里程碑的直接前驱；chain-count 数链上两里程碑之间经过几个里程碑（含两端）。考结构化配方精读与链式前置推理，exact 裁判。",
+    "author": "AI斗兽场（素材溯源：voxelgym）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:voxel-craft:2026-09-10",
+    "taskPrefix": "只输出答案本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "recipe-lookup": "读配方描述（inputs/pattern+key/needs_table）答产物 out",
+      "chain-prereq": "答成就链上某里程碑的直接前驱",
+      "chain-count": "数链区间经过的里程碑个数（含两端）"
+    }
+  },
+  "startedAt": "2026-09-11T07:06:31.525Z",
+  "durationMs": 3234,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 93,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 447,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "pla",
+      "target": "planks",
+      "latencyMs": 377,
+      "score": 0,
+      "note": "期望「planks」，实答「pla」",
+      "usage": {
+        "input": 58,
+        "output": 2
+      },
+      "finishedMs": 404
+    },
+    {
+      "taskId": "VC-RL-01",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { log = 1 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "planks",
+      "target": "planks",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 58,
+        "output": 3
+      },
+      "finishedMs": 405
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 809
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 809
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 194,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 1214
+    },
+    {
+      "taskId": "VC-RL-02",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"P\", \"P\"]，key { P = planks }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "stick",
+      "target": "stick",
+      "latencyMs": 247,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 3
+      },
+      "finishedMs": 1214
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 183,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 1618
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 405,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 1619
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "crafting_table",
+      "target": "crafting_table",
+      "latencyMs": 425,
+      "score": 1,
+      "usage": {
+        "input": 60,
+        "output": 7
+      },
+      "finishedMs": 2022
+    },
+    {
+      "taskId": "VC-RL-03",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：无序配方（shapeless），输入 inputs { planks = 4 }，needs_table = false。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "craftin",
+      "target": "crafting_table",
+      "latencyMs": 154,
+      "score": 0,
+      "note": "期望「crafting_table」，实答「craftin」",
+      "usage": {
+        "input": 60,
+        "output": 4
+      },
+      "finishedMs": 2023
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 2426
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_",
+      "target": "wooden_pickaxe",
+      "latencyMs": 136,
+      "score": 0,
+      "note": "期望「wooden_pickaxe」，实答「wooden_」",
+      "usage": {
+        "input": 70,
+        "output": 4
+      },
+      "finishedMs": 2426
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 290,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 2830
+    },
+    {
+      "taskId": "VC-RL-04",
+      "condition": "recipe-lookup",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出答案本身，不多一个字。\n合成配方：形状 pattern [\"PPP\", \" S \", \" S \"]，key { P = planks, S = stick }，needs_table = true。这个配方造什么？答产物名（out 字段值，snake_case 英文原名）。",
+      "answer": "wooden_pickaxe",
+      "target": "wooden_pickaxe",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 70,
+        "output": 7
+      },
+      "finishedMs": 2830
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "ccb16d2581dd48df",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.21.0"
+  }
+}

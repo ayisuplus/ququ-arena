@@ -1,0 +1,602 @@
+{
+  "status": "P2/P3 checkpoint, full v019 goal remains active",
+  "baseCommit": "218e0b8aa3e088dda412fc6806493a805c12ab1d",
+  "checks": "Source preservation, native lots/paving, guards and routes in two Player phases, visible render; full worst-phase and complete district work pending",
+  "files": [
+    {
+      "path": ".cache/v019-player/StationV019.exe",
+      "sha256": "e1a9d9e062bbcdb91f76983fae8bb1e4fb8036d55289318ef91033f130d38ecc",
+      "bytes": 667136
+    },
+    {
+      "path": ".cache/v019-player/StationV019_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "2445224eaa693aa007f57d7822b6839b96681985a18b356e56ad1fda724cc631",
+      "bytes": 3584
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexInteriorProbeV018.cs",
+      "sha256": "fb524d86d96acc527e30dd565c0c8868c909a4a49efdd349a22fc91ea2aafbf6",
+      "bytes": 13855
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexRenderProbeV018.cs",
+      "sha256": "068a2b13cee12ab3e170dcea5bb6d0957c427df2c80f0092c585389843ea5de8",
+      "bytes": 7920
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationDistrictGuardProbeV019.cs",
+      "sha256": "33482bd6dbb5410f5902e2e696847b2620023d86b31d4a6d29d1afd41589dd49",
+      "bytes": 6110
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationDistrictGuardProbeV019.cs.meta",
+      "sha256": "0ca3efe5031ed3a36a93c570ecf3968257a1845f57c2217b44833aea2815455a",
+      "bytes": 59
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+      "sha256": "fe7f786f23f975f7be7a69580289be39f8346120f062762b147b14a9ae65ff62",
+      "bytes": 35065575
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/README.md",
+      "sha256": "d163fc81c5a7159d0ee90159f97d323ee959b609150528d21c1738918a627e9b",
+      "bytes": 4325
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-input-v001.json",
+      "sha256": "c74c59f8cc07fca983954d7e26a657d3256deead6b6ba8687e440b7ddc0d2b65",
+      "bytes": 1358
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-input-v002.json",
+      "sha256": "429e5e19ae6a5091381264f4aba7bd40918e010b323ed45b017014680f0c33b7",
+      "bytes": 2802
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-receipt-v001.json",
+      "sha256": "7107db055afbebc7b8f8d71b0d7e400ae9752f36954f6a57419338747bf4b289",
+      "bytes": 1786
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-receipt-v002.json",
+      "sha256": "df8ff8abdc6cd076d9a4e8fbe895b67a3fb8b9340cf8aba640fbafaa26cc47a7",
+      "bytes": 2151
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-receipt-v003.json",
+      "sha256": "44a12f7b32f4ebc98c761c737438dd35cdcba40be0f83d578fa6108177efadb7",
+      "bytes": 2150
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-v001.json",
+      "sha256": "33f3b5526577db13f7bbc7c98953706f26a1598e2a5fcf2fcbdb182487dca7af",
+      "bytes": 965
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-v002.json",
+      "sha256": "7da5c35e9a64a29cba675ca1f691a3751b4be64ad3391e816c741dc56ea3c442",
+      "bytes": 1260
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-lots-v003.json",
+      "sha256": "b93efa321f15179c5ad17f70dd846bf08c81bc35c4c8c8520581de6fca75f793",
+      "bytes": 1259
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-receipt-v002.json",
+      "sha256": "c98efa3108da0fed238633a66ab3a474f0e7ac2ae333c4fcdd52fe9a13090f74",
+      "bytes": 685
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-receipt-v003.json",
+      "sha256": "c98efa3108da0fed238633a66ab3a474f0e7ac2ae333c4fcdd52fe9a13090f74",
+      "bytes": 685
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/arrival-eye.png",
+      "sha256": "7005168964e610c9c9ebeeecb8c57f69881e9e7d0f58abdeba3793b753d05b39",
+      "bytes": 673672
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/cafe-eye.png",
+      "sha256": "5bae15087c2a4dc6b6126009fff9f4d2a029d751c40d972f57b645f6330c6dfc",
+      "bytes": 900373
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/cafe-massing.png",
+      "sha256": "9f5283b0553b44aece56e206569bc4f60f6eabb302bcf84969898dd8ca3c1174",
+      "bytes": 1144080
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/cameras.json",
+      "sha256": "6ccf058f0b9e0e163ca32d5cb0167c8a448d0fc702b3b6dd7fdd99ad69965bbf",
+      "bytes": 8473
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/garden-eye.png",
+      "sha256": "e7445a0b77eb06386a2e57167f8cdbf077d7b29e5125c84933598ba2f69395c0",
+      "bytes": 1389677
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/guest-eye.png",
+      "sha256": "0945108e0cf664820382ac812da388b3bca50f1e7e9f6672b398c6a3cc14aa9d",
+      "bytes": 1306205
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/guest-massing.png",
+      "sha256": "0c09097da195b8af0d9a0808d0aa6a040ad9f11b3f7316c354689d8aedfc5058",
+      "bytes": 1205851
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/homes-eye.png",
+      "sha256": "3544724da80bd4900f529c163ccac5dff3ffafaa8213e5592eba7e5047da65c7",
+      "bytes": 1072216
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/homes-massing.png",
+      "sha256": "0fa866842553e4ae06419a48ea3862bc9eb7a40764a8d54ae8efbb1d5bcd387d",
+      "bytes": 1227523
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/reading-eye.png",
+      "sha256": "a777478d11faa4184c60b265676ef5ac22a653e7e91a2d8bd5180707550759f0",
+      "bytes": 1295969
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/research-eye.png",
+      "sha256": "b7f5cf6e2de749733ca0c7fdcaff0321bff7368e2ca6d48f70c946c5dec2b7cd",
+      "bytes": 1188443
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/research-overview.png",
+      "sha256": "cac4f9bbd067ef4f9bf3ab4443fa381694a533ca15bec59cbcfb7aad46989d7f",
+      "bytes": 1294742
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/station.png",
+      "sha256": "2e6f6d8f0f11b77e262205778e3cba98a12e95bf35246561e0ec9f7829301c99",
+      "bytes": 1707594
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v002/study-massing.png",
+      "sha256": "f4c7323ef7ab8f2dcd778781b38b80b78036b76911504600e0689e26e27c3bc3",
+      "bytes": 1288633
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/arrival-eye.png",
+      "sha256": "9c6d2311f8f720d2541fb4d1d2e9d0902b45dfca4237beb3077cbfc8c87d94e5",
+      "bytes": 707489
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/cafe-eye.png",
+      "sha256": "5bae15087c2a4dc6b6126009fff9f4d2a029d751c40d972f57b645f6330c6dfc",
+      "bytes": 900373
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/cafe-massing.png",
+      "sha256": "9f5283b0553b44aece56e206569bc4f60f6eabb302bcf84969898dd8ca3c1174",
+      "bytes": 1144080
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/cameras.json",
+      "sha256": "d04051e60950b90e88866ae6a97d1ab5dbb494093e1842415481195aded821df",
+      "bytes": 8469
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/garden-eye.png",
+      "sha256": "bb4cdb2603e355312710d5ebf2a4a31771fd47dcdb2efeb7e4b380ebda4f9aa8",
+      "bytes": 1389702
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/guest-eye.png",
+      "sha256": "5eecfb78e78138b47f995e589e637fbb19e26e47fa179a7d782c5b36363e6e38",
+      "bytes": 1306211
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/guest-massing.png",
+      "sha256": "d3b5b28a26272999327ecb775b69cb03927cb057e6845c88041c85e5d733694e",
+      "bytes": 1177922
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/homes-eye.png",
+      "sha256": "9c7984916d7896ec9cafb3e68a759a14f2768ce6fd30aeae4d9c21dea1570a76",
+      "bytes": 1073360
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/homes-massing.png",
+      "sha256": "3adc4e0c229a2a5df8ad5694328d8b3a66acd14daa5fce42280822d41ae90dc2",
+      "bytes": 1228413
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/reading-eye.png",
+      "sha256": "0f1ef56fb43379616e90fb86063e12f521b812f4a4ac9e196b55f50d0af083db",
+      "bytes": 1296213
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/research-eye.png",
+      "sha256": "1b9a9e6a0416f5a23503f08459a515cd19c982b3dbc6b860cbc6f2f06e4d4768",
+      "bytes": 1188370
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/research-overview.png",
+      "sha256": "0317d0eab8ffb484ba0e03f45712287e815ff98af2c678898db5c74f600582f9",
+      "bytes": 1298029
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/station.png",
+      "sha256": "1e8237b0b8dc40e802ff4ae842befcadc5c851f05504e07fee9d005576128065",
+      "bytes": 1708044
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/district-massing-v003/study-massing.png",
+      "sha256": "490f35409175c1fc1f30cb9867039b49a129de9dea04c403005a01bf1be2ada9",
+      "bytes": 1288582
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/height-study-receipt-v003.json",
+      "sha256": "7ee456c80921f537f8caca115658a133f79192afc5ccede1c715d08f6cabd767",
+      "bytes": 681
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/height-study-v003.json",
+      "sha256": "04ff24d5ff99ed8c32e58e99ab9ade1519243eb2b8a434a9e2c095e801ada0f0",
+      "bytes": 1990753
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/paving-overlaps-v002.json",
+      "sha256": "89a048df4fb926991bf734313f7f18076a8f0adad225a0a69626389d1fb8cb08",
+      "bytes": 1520
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/paving-overlaps-v003.json",
+      "sha256": "b225772575711f93c1d4df05f447b4c03a2ce2d6e4fb0d8b244d3488e68d0b41",
+      "bytes": 1177
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/paving-receipt-v002-retry.json",
+      "sha256": "a9bb2b9ede7e940f01830efc5f75ed80368c899329ea2f0bb210df02c9ceec17",
+      "bytes": 2465
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/paving-receipt-v002.json",
+      "sha256": "ac5089d927e12af9159f3ae2ba075c84898c66f5d507528ae216bb809b0bfba7",
+      "bytes": 261
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/paving-receipt-v003.json",
+      "sha256": "29e366e14ab5eb6532ee69e3ad7d7de61045dd22c44ea1c6a47f028fee68709c",
+      "bytes": 2062
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/ring-height-study-v003.png",
+      "sha256": "e479065ff464341b7d215bae0090bc3f18b62ebd639a5735a69e9576b019f461",
+      "bytes": 171036
+    },
+    {
+      "path": "docs/validation/station-v019-layout-20261004/ring-height-summary-v003.json",
+      "sha256": "266a068b6c88d9adc127121bf59a6c5594a04d65629005b549dd8f1c8f45b18d",
+      "bytes": 355
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/README.md",
+      "sha256": "6bc583ce66b1e0bb80f71ce7499f113d915edc9184fe50fbf8d84b70f0097e23",
+      "bytes": 5652
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase0-v001/exit.json",
+      "sha256": "9c3ce1dcd51f21da832f0eeb6a36f6c761c76ff8123bfc5742a555f521a8fb81",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase0-v001/player.log",
+      "sha256": "026a5970708b94ea278da48b8921583f061f13992fd62950a1339680d9d1ca9a",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase0-v001/process.json",
+      "sha256": "c7d2982b677154926095e47ccafdc4dcef6255d484be6138cfbd6078a5fb0e9b",
+      "bytes": 992
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase0-v001/progress.json",
+      "sha256": "4a43474ea1850c82f2eb7355f6876cd6f387619eaee57adad7da9723e866c33a",
+      "bytes": 110324
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase0-v001/route.json",
+      "sha256": "d0c622a4041baa0d7bbfe56b8e704506ea787a8fd8343bf6c6ddf145a3d4dd83",
+      "bytes": 110337
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase97-v001/exit.json",
+      "sha256": "5230d7e4c1add258d826f92982b917b58b0e34003282e6bb43b6ba2c916267f0",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase97-v001/player.log",
+      "sha256": "c2934a30540e30ebc7120e2596ce642b39a40648e0a53b3e88f719b6f61ae286",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase97-v001/process.json",
+      "sha256": "61e27ae82c32d4b2cbaf58b4b42fe2ee077dde2d738c5cb35fdf3748e3ca35b3",
+      "bytes": 997
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase97-v001/progress.json",
+      "sha256": "7a81cc9729a7b7ca061e8bfd0a031d38da29ccf7f16cac6a0cad1531e10e73dc",
+      "bytes": 110296
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/annex-player-phase97-v001/route.json",
+      "sha256": "ebeff0dcf6b47d3c821973c9ddf5ab3b19607696169dd7e721e8f2a3b45b664c",
+      "bytes": 110308
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/build-start-v001.json",
+      "sha256": "21e4c8dc5dbbb83afb13c00113fcb00dce1e089bcec7ebb8aa27dce7b6dc22e6",
+      "bytes": 232
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/build-status-v001.json",
+      "sha256": "d024225277ba03ea78901d65eba84fd49b6913d4669cae11e5769ccede543cdd",
+      "bytes": 2412119
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/build-summary-v001.json",
+      "sha256": "b110194d1ecd2f8eb54116dd0e36359b1752121ed865bdb79d3389ec4dacdf8d",
+      "bytes": 634
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-editor-phase0-v001/guards.json",
+      "sha256": "a26686d204b60f502552bb4c41bd31a90bd9b10a7fd60bebd53f66f38544a462",
+      "bytes": 62015
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-editor-phase0-v001/manifest.json",
+      "sha256": "3aa48bc35e3a2199b7cc01e11d0402986f1a41e44aaaf0396c850133b9d452eb",
+      "bytes": 10200
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-editor-phase0-v001/progress.json",
+      "sha256": "a45c0b7c86c44d292e0830387cf719997eaedc990dcb841f44e0e8eff080dc15",
+      "bytes": 62000
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase0-v002/exit.json",
+      "sha256": "0d6d6533aff77b621a56d2c9b0f3acd8031d076c9fd13f3bf7c5f47cda39b2ae",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase0-v002/guards.json",
+      "sha256": "437de4c78518d7335f4c3f0a629f8d15b1e26a7100b59891e887dfc9339e0146",
+      "bytes": 59369
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase0-v002/player.log",
+      "sha256": "81a936609d984ca74fc731024a4b8e039c983667e0ec009dce1fc619ced8a250",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase0-v002/process.json",
+      "sha256": "4c99fdfc60fc3c49e4305d6ee7c3c4690bdda5f4032f530af58d9f7a0f66dea5",
+      "bytes": 1025
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase0-v002/progress.json",
+      "sha256": "2a9a8c3f1a9f4be06ceb8166bb8a391a91792472be71bd20ffa71905b9b63f59",
+      "bytes": 59355
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase97-v002/exit.json",
+      "sha256": "33e7210a42b756ec18e71b75af029600751245839550616787e6b968462ef792",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase97-v002/guards.json",
+      "sha256": "d3f6712d0acf5b83a0655a7ec982317ddcfc080fd316a0994e38677fa15453fc",
+      "bytes": 59370
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase97-v002/player.log",
+      "sha256": "4e438498c9c95b668e2d7a5c94578f5695e6c1a7256facc214206522688dcba0",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase97-v002/process.json",
+      "sha256": "97cb58019fa3a1c30187a82975fd111fc96d8f7c14202a8390c56c6523e18c0e",
+      "bytes": 1030
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-player-phase97-v002/progress.json",
+      "sha256": "0d5f4aedca8d544b8d2bbc1b10a59a3670d1b7061082f91c70bfd6294f4d0e66",
+      "bytes": 59356
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-start-phase0-v001-retry.json",
+      "sha256": "e7ff15d246e698034b6910ebdec8a0e6afb34ba314b182da79315283c60fb299",
+      "bytes": 643
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/guards-start-phase0-v001.json",
+      "sha256": "b415ddf3cf57e8804f470125abbc12a8781d3bc5d78285c6fb70a7286e32428c",
+      "bytes": 328
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/preservation-v002.json",
+      "sha256": "728175882566be6bf4c497a8e7cbf02d32018b3dcbbaf88d5ae7d2de0c0fcb6a",
+      "bytes": 851
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/reload-for-build-v001.json",
+      "sha256": "651691788614b94072ebbb4b163e55a02b222f1d7ca9a99165c47a07bc665247",
+      "bytes": 678
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/exit.json",
+      "sha256": "5c58ebb6933e8fa6ae7b8a9ffbe70955320fb308915b30ea88a990f1c51e9adc",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/player.log",
+      "sha256": "ff1346fcfb83e3493ff79a60a6ffee2c5609a46cf3731ba1babcc3111e04baa5",
+      "bytes": 1960
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/process.json",
+      "sha256": "ec32d438784583fecc9e6ba89d044f97aff03b79552ffbd70f3c8ef723f94cf8",
+      "bytes": 788
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/progress.json",
+      "sha256": "e9c01c6561e173e57c67665a13cb2dbdd279c58449138dda5ccb5b8b1ca237f8",
+      "bytes": 2154
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/rendering.json",
+      "sha256": "3c3d4fc35f63255756646074ae456fbf2e398ae9887792798a978b68ab37510b",
+      "bytes": 2280
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/research-front.png",
+      "sha256": "bd4032d1981ba6f46b18737476fe7104d768d9f59e73d61806e69d8ca5312b62",
+      "bytes": 1111481
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/research-reading.png",
+      "sha256": "cc62b2f563f5d1c013eaa62d932b1dacede5616133a7f7cd7c300e1bf0ade54f",
+      "bytes": 555843
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/research-terrace.png",
+      "sha256": "669f096a3f6a6c3b38474aca67af262c548a5395b0439d17333ac3602e65f77e",
+      "bytes": 943450
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/render-player-v001/research-upper.png",
+      "sha256": "d2d2c8858928cf7c85ae1d4069cda2f046a97b74d3cfce060ecd517c09f51cf0",
+      "bytes": 867624
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase0-v001/exit.json",
+      "sha256": "85fedf4e5ccb1871ba1323f9b29709eb65d23d0a84ea2bfc4adbe5bd6e3ce083",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase0-v001/player.log",
+      "sha256": "fb0cdf68de5a893146baab788fcb6875fe74eecbc2d705b7bcb3cb5ed6fa7376",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase0-v001/process.json",
+      "sha256": "363ed4c67900e31604e3243457242010e42029ee467905e91e1241b2ce1af073",
+      "bytes": 1051
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase0-v001/progress.json",
+      "sha256": "5b4930b785f8e359cd06206f903d6cc314d01ae9aa9f010be2699cf782ea3328",
+      "bytes": 44852
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase0-v001/route.json",
+      "sha256": "fd9cfc13a1466f3e1e8fee442f502bb13768dfd8c06d19e803d06ee96b58fa86",
+      "bytes": 44866
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase97-v001/exit.json",
+      "sha256": "dbb2bb619e606bc5a3b149ae4241fbbc81fb6dc2b3c34fbec46c46634821f5fe",
+      "bytes": 88
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase97-v001/player.log",
+      "sha256": "7fe971a4ea7bf4916b7452e2f6b6f37d79c5f609b5990d83e49a600088cd33d1",
+      "bytes": 1392
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase97-v001/process.json",
+      "sha256": "78a638470f393ffab4fe4a28936507d417005f5775667312a3322ce080b74cc4",
+      "bytes": 1056
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase97-v001/progress.json",
+      "sha256": "5c64155951f3216818cac938b02a8b9857c4f06aa8c88887d61436a7d7bb441f",
+      "bytes": 44849
+    },
+    {
+      "path": "docs/validation/station-v019-research-20261004/research-player-phase97-v001/route.json",
+      "sha256": "5124dcba7bd3bb7e15ef844238af16233138a420663619cf47edb1c112530b1c",
+      "bytes": 44863
+    },
+    {
+      "path": "docs/黑洞空间站升级方案/v019/施工任务_v001.md",
+      "sha256": "fbe675d94e03391dee3aa2eba74d0f62d1ab7dc03b753ab9749df31b0d888cb4",
+      "bytes": 6890
+    },
+    {
+      "path": "production/black-hole-station/v019/README.md",
+      "sha256": "832188b0399fd5c3dae079c62935c1b39accf6b2a816b723fc24f2673cf42d18",
+      "bytes": 5300
+    },
+    {
+      "path": "production/black-hole-station/v019/audit-preservation.py",
+      "sha256": "682296bd53405444eb481842b675c12baa75b07ffe7ba04a031c7186586265cb",
+      "bytes": 2419
+    },
+    {
+      "path": "production/black-hole-station/v019/capture-district-massing.cs",
+      "sha256": "51ff429d0c9eeed36b6923df9cc6662ad86815d668094b4f96f7b9537fb2c1d0",
+      "bytes": 4439
+    },
+    {
+      "path": "production/black-hole-station/v019/check-district-lots.cs",
+      "sha256": "1d44168f2c7124635cc8c51f6eac6d0c6f79c80221c4f485c1cc6b14e97db66b",
+      "bytes": 2208
+    },
+    {
+      "path": "production/black-hole-station/v019/check-lot-paving.cs",
+      "sha256": "da50c2263500e65fddf579960bfbcc54e6af716bc9d21dbf68413790c232e03e",
+      "bytes": 2821
+    },
+    {
+      "path": "production/black-hole-station/v019/district-lots.json",
+      "sha256": "87ae0d3cd93d2f7145ca13f491eb0bd8c6aa3cb1fc82f8bdfb7cdac519c93864",
+      "bytes": 2800
+    },
+    {
+      "path": "production/black-hole-station/v019/export-height-study.cs",
+      "sha256": "2996a099e3c53551c337195d633189f7ee85ff2c8287ca09449103a4181c935d",
+      "bytes": 2933
+    },
+    {
+      "path": "production/black-hole-station/v019/plot-height-study.py",
+      "sha256": "f3f236cbde4e983d7a570405857d9ae8c6e6b9ba6683d42d9c3c2bdab8b0de57",
+      "bytes": 4790
+    },
+    {
+      "path": "production/black-hole-station/v019/preserve-build.ps1",
+      "sha256": "77d9e8d5e6554ee7b0aadd5b5b55c58cffea506d0a699dfeb4144cc02412f32e",
+      "bytes": 1828
+    },
+    {
+      "path": "production/black-hole-station/v019/research-guards.json",
+      "sha256": "989b000603063d2e270f6431593e6aa36086e4e8e3587c74ad5dc3678d3283f8",
+      "bytes": 9778
+    },
+    {
+      "path": "production/black-hole-station/v019/research-guards.py",
+      "sha256": "8417064b55e4d182b224c914be399ed2f350e600959697d4c51e98a69b4c4e72",
+      "bytes": 1779
+    },
+    {
+      "path": "production/black-hole-station/v019/run-player.ps1",
+      "sha256": "9235fbd129d751ecb7a5bcb1f39fee8e3e5e18c63af7c5b74213dc73563375f2",
+      "bytes": 2455
+    },
+    {
+      "path": "production/black-hole-station/v019/start-guard-probe.cs",
+      "sha256": "41cddd91ede7d35972d0d6b9ed367a3bc68b9edf8e9d1205bedfaaaa548498ae",
+      "bytes": 718
+    }
+  ]
+}

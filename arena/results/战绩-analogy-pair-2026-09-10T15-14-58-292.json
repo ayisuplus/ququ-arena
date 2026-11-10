@@ -1,0 +1,1254 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "analogy-pair",
+    "title": "类比推理擂台",
+    "description": "形制致敬行测/SAT 类比推理（A:B::C:?，内容自建）。题干给一组词的关系，四选项中选关系最相似的一组，exact 裁判（选项字母）。四维度均为单关系可判别：tool-function 工具与用途、person-place 人物与场所、part-whole 部分与整体、degree 程度递进（轻：重）；每题干扰项全部来自其它三种关系——不靠「哪个更像」的模糊度出题，关系判错即翻车。每题 meta.relation 标关系类型、meta.answerText 锚定正确选项文本，契约测试逐题校验字母↔文本一致性与选项结构。",
+    "author": "AI斗兽场（内容自建，形制致敬行测类比推理）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:analogy-pair:2026-09-10",
+    "taskPrefix": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "tool-function": "工具与用途（牙刷：刷牙）",
+      "person-place": "人物与场所（医生：医院）",
+      "part-whole": "部分与整体（轮胎：汽车）",
+      "degree": "程度递进（冷：严寒）"
+    }
+  },
+  "startedAt": "2026-09-10T15:14:58.292Z",
+  "durationMs": 3,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "AN-TF-01",
+      "condition": "tool-function",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n牙刷：刷牙。与这组关系最相似的是：\nA. 钢笔：写字\nB. 医生：医院\nC. 轮胎：汽车\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 288,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-01",
+      "condition": "tool-function",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n牙刷：刷牙。与这组关系最相似的是：\nA. 钢笔：写字\nB. 医生：医院\nC. 轮胎：汽车\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 215,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-01",
+      "condition": "tool-function",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n牙刷：刷牙。与这组关系最相似的是：\nA. 钢笔：写字\nB. 医生：医院\nC. 轮胎：汽车\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 195,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-01",
+      "condition": "tool-function",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n牙刷：刷牙。与这组关系最相似的是：\nA. 钢笔：写字\nB. 医生：医院\nC. 轮胎：汽车\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-02",
+      "condition": "tool-function",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n钥匙：开锁。与这组关系最相似的是：\nA. 教师：学校\nB. 车轮：汽车\nC. 锤子：敲打\nD. 高：矮",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-02",
+      "condition": "tool-function",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n钥匙：开锁。与这组关系最相似的是：\nA. 教师：学校\nB. 车轮：汽车\nC. 锤子：敲打\nD. 高：矮",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-02",
+      "condition": "tool-function",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n钥匙：开锁。与这组关系最相似的是：\nA. 教师：学校\nB. 车轮：汽车\nC. 锤子：敲打\nD. 高：矮",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 422,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-02",
+      "condition": "tool-function",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n钥匙：开锁。与这组关系最相似的是：\nA. 教师：学校\nB. 车轮：汽车\nC. 锤子：敲打\nD. 高：矮",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 296,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-03",
+      "condition": "tool-function",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n尺子：测量。与这组关系最相似的是：\nA. 船：河流\nB. 温度计：测温\nC. 树根：大树\nD. 冷：严寒",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-03",
+      "condition": "tool-function",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n尺子：测量。与这组关系最相似的是：\nA. 船：河流\nB. 温度计：测温\nC. 树根：大树\nD. 冷：严寒",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 154,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-03",
+      "condition": "tool-function",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n尺子：测量。与这组关系最相似的是：\nA. 船：河流\nB. 温度计：测温\nC. 树根：大树\nD. 冷：严寒",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 85,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-03",
+      "condition": "tool-function",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n尺子：测量。与这组关系最相似的是：\nA. 船：河流\nB. 温度计：测温\nC. 树根：大树\nD. 冷：严寒",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 215,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-04",
+      "condition": "tool-function",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n雨伞：遮雨。与这组关系最相似的是：\nA. 医生：诊所\nB. 花瓣：花\nC. 热：酷热\nD. 口罩：防尘",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-04",
+      "condition": "tool-function",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n雨伞：遮雨。与这组关系最相似的是：\nA. 医生：诊所\nB. 花瓣：花\nC. 热：酷热\nD. 口罩：防尘",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-04",
+      "condition": "tool-function",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n雨伞：遮雨。与这组关系最相似的是：\nA. 医生：诊所\nB. 花瓣：花\nC. 热：酷热\nD. 口罩：防尘",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-04",
+      "condition": "tool-function",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n雨伞：遮雨。与这组关系最相似的是：\nA. 医生：诊所\nB. 花瓣：花\nC. 热：酷热\nD. 口罩：防尘",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 279,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-05",
+      "condition": "tool-function",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n相机：拍照。与这组关系最相似的是：\nA. 鸟：鸟巢\nB. 手机：通讯\nC. 手指：手\nD. 快：飞快",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-05",
+      "condition": "tool-function",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n相机：拍照。与这组关系最相似的是：\nA. 鸟：鸟巢\nB. 手机：通讯\nC. 手指：手\nD. 快：飞快",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-05",
+      "condition": "tool-function",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n相机：拍照。与这组关系最相似的是：\nA. 鸟：鸟巢\nB. 手机：通讯\nC. 手指：手\nD. 快：飞快",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 443,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-TF-05",
+      "condition": "tool-function",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n相机：拍照。与这组关系最相似的是：\nA. 鸟：鸟巢\nB. 手机：通讯\nC. 手指：手\nD. 快：飞快",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 214,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-01",
+      "condition": "person-place",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n医生：医院。与这组关系最相似的是：\nA. 教师：学校\nB. 牙刷：刷牙\nC. 机翼：飞机\nD. 冷：严寒",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 421,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-01",
+      "condition": "person-place",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n医生：医院。与这组关系最相似的是：\nA. 教师：学校\nB. 牙刷：刷牙\nC. 机翼：飞机\nD. 冷：严寒",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 271,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-01",
+      "condition": "person-place",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n医生：医院。与这组关系最相似的是：\nA. 教师：学校\nB. 牙刷：刷牙\nC. 机翼：飞机\nD. 冷：严寒",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 438,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-01",
+      "condition": "person-place",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n医生：医院。与这组关系最相似的是：\nA. 教师：学校\nB. 牙刷：刷牙\nC. 机翼：飞机\nD. 冷：严寒",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 272,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-02",
+      "condition": "person-place",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n厨师：厨房。与这组关系最相似的是：\nA. 尺子：测量\nB. 键盘：电脑\nC. 法官：法庭\nD. 怒：暴怒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-02",
+      "condition": "person-place",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n厨师：厨房。与这组关系最相似的是：\nA. 尺子：测量\nB. 键盘：电脑\nC. 法官：法庭\nD. 怒：暴怒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 237,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-02",
+      "condition": "person-place",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n厨师：厨房。与这组关系最相似的是：\nA. 尺子：测量\nB. 键盘：电脑\nC. 法官：法庭\nD. 怒：暴怒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 292,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "AN-PP-02",
+      "condition": "person-place",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n厨师：厨房。与这组关系最相似的是：\nA. 尺子：测量\nB. 键盘：电脑\nC. 法官：法庭\nD. 怒：暴怒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-03",
+      "condition": "person-place",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n农民：农田。与这组关系最相似的是：\nA. 剪刀：裁布\nB. 工人：工厂\nC. 花瓣：花\nD. 看：凝视",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-03",
+      "condition": "person-place",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n农民：农田。与这组关系最相似的是：\nA. 剪刀：裁布\nB. 工人：工厂\nC. 花瓣：花\nD. 看：凝视",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 350,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-03",
+      "condition": "person-place",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n农民：农田。与这组关系最相似的是：\nA. 剪刀：裁布\nB. 工人：工厂\nC. 花瓣：花\nD. 看：凝视",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 450,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-03",
+      "condition": "person-place",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n农民：农田。与这组关系最相似的是：\nA. 剪刀：裁布\nB. 工人：工厂\nC. 花瓣：花\nD. 看：凝视",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 311,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-04",
+      "condition": "person-place",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n士兵：军营。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 琴弦：吉他\nC. 哭：痛哭\nD. 水手：舰船",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 417,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-04",
+      "condition": "person-place",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n士兵：军营。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 琴弦：吉他\nC. 哭：痛哭\nD. 水手：舰船",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-04",
+      "condition": "person-place",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n士兵：军营。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 琴弦：吉他\nC. 哭：痛哭\nD. 水手：舰船",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 310,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-04",
+      "condition": "person-place",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n士兵：军营。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 琴弦：吉他\nC. 哭：痛哭\nD. 水手：舰船",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 207,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-05",
+      "condition": "person-place",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n图书管理员：图书馆。与这组关系最相似的是：\nA. 药剂师：药房\nB. 相机：拍照\nC. 脚趾：脚\nD. 笑：狂笑",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 223,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-05",
+      "condition": "person-place",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n图书管理员：图书馆。与这组关系最相似的是：\nA. 药剂师：药房\nB. 相机：拍照\nC. 脚趾：脚\nD. 笑：狂笑",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 478,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-05",
+      "condition": "person-place",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n图书管理员：图书馆。与这组关系最相似的是：\nA. 药剂师：药房\nB. 相机：拍照\nC. 脚趾：脚\nD. 笑：狂笑",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 204,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PP-05",
+      "condition": "person-place",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n图书管理员：图书馆。与这组关系最相似的是：\nA. 药剂师：药房\nB. 相机：拍照\nC. 脚趾：脚\nD. 笑：狂笑",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 374,
+      "score": 1,
+      "usage": {
+        "input": 54,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-01",
+      "condition": "part-whole",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n轮胎：汽车。与这组关系最相似的是：\nA. 医生：医院\nB. 机翼：飞机\nC. 牙刷：刷牙\nD. 高：矮",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 135,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-01",
+      "condition": "part-whole",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n轮胎：汽车。与这组关系最相似的是：\nA. 医生：医院\nB. 机翼：飞机\nC. 牙刷：刷牙\nD. 高：矮",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 294,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-01",
+      "condition": "part-whole",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n轮胎：汽车。与这组关系最相似的是：\nA. 医生：医院\nB. 机翼：飞机\nC. 牙刷：刷牙\nD. 高：矮",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-01",
+      "condition": "part-whole",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n轮胎：汽车。与这组关系最相似的是：\nA. 医生：医院\nB. 机翼：飞机\nC. 牙刷：刷牙\nD. 高：矮",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 158,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-02",
+      "condition": "part-whole",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n花瓣：花。与这组关系最相似的是：\nA. 锤子：敲打\nB. 教师：学校\nC. 果皮：果实\nD. 冷：严寒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 329,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-02",
+      "condition": "part-whole",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n花瓣：花。与这组关系最相似的是：\nA. 锤子：敲打\nB. 教师：学校\nC. 果皮：果实\nD. 冷：严寒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 336,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-02",
+      "condition": "part-whole",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n花瓣：花。与这组关系最相似的是：\nA. 锤子：敲打\nB. 教师：学校\nC. 果皮：果实\nD. 冷：严寒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 453,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-02",
+      "condition": "part-whole",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n花瓣：花。与这组关系最相似的是：\nA. 锤子：敲打\nB. 教师：学校\nC. 果皮：果实\nD. 冷：严寒",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 263,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-03",
+      "condition": "part-whole",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n键盘：电脑。与这组关系最相似的是：\nA. 屏幕：手机\nB. 农民：农田\nC. 尺子：测量\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 314,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-03",
+      "condition": "part-whole",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n键盘：电脑。与这组关系最相似的是：\nA. 屏幕：手机\nB. 农民：农田\nC. 尺子：测量\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 378,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-03",
+      "condition": "part-whole",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n键盘：电脑。与这组关系最相似的是：\nA. 屏幕：手机\nB. 农民：农田\nC. 尺子：测量\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-03",
+      "condition": "part-whole",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n键盘：电脑。与这组关系最相似的是：\nA. 屏幕：手机\nB. 农民：农田\nC. 尺子：测量\nD. 喜欢：热爱",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-04",
+      "condition": "part-whole",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n手指：手。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 士兵：军营\nC. 怒：暴怒\nD. 脚趾：脚",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-04",
+      "condition": "part-whole",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n手指：手。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 士兵：军营\nC. 怒：暴怒\nD. 脚趾：脚",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-04",
+      "condition": "part-whole",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n手指：手。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 士兵：军营\nC. 怒：暴怒\nD. 脚趾：脚",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 281,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-04",
+      "condition": "part-whole",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n手指：手。与这组关系最相似的是：\nA. 钥匙：开锁\nB. 士兵：军营\nC. 怒：暴怒\nD. 脚趾：脚",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 379,
+      "score": 1,
+      "usage": {
+        "input": 51,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-05",
+      "condition": "part-whole",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n琴弦：吉他。与这组关系最相似的是：\nA. 相机：拍照\nB. 水手：舰船\nC. 指针：钟表\nD. 快：飞快",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 295,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-05",
+      "condition": "part-whole",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n琴弦：吉他。与这组关系最相似的是：\nA. 相机：拍照\nB. 水手：舰船\nC. 指针：钟表\nD. 快：飞快",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 256,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-05",
+      "condition": "part-whole",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n琴弦：吉他。与这组关系最相似的是：\nA. 相机：拍照\nB. 水手：舰船\nC. 指针：钟表\nD. 快：飞快",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 402,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-PW-05",
+      "condition": "part-whole",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n琴弦：吉他。与这组关系最相似的是：\nA. 相机：拍照\nB. 水手：舰船\nC. 指针：钟表\nD. 快：飞快",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 226,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-01",
+      "condition": "degree",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n冷：严寒。与这组关系最相似的是：\nA. 热：酷热\nB. 牙刷：刷牙\nC. 轮胎：汽车\nD. 医生：医院",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 309,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-01",
+      "condition": "degree",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n冷：严寒。与这组关系最相似的是：\nA. 热：酷热\nB. 牙刷：刷牙\nC. 轮胎：汽车\nD. 医生：医院",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 317,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-01",
+      "condition": "degree",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n冷：严寒。与这组关系最相似的是：\nA. 热：酷热\nB. 牙刷：刷牙\nC. 轮胎：汽车\nD. 医生：医院",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-01",
+      "condition": "degree",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n冷：严寒。与这组关系最相似的是：\nA. 热：酷热\nB. 牙刷：刷牙\nC. 轮胎：汽车\nD. 医生：医院",
+      "answer": "A",
+      "target": "A",
+      "latencyMs": 160,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-02",
+      "condition": "degree",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n喜欢：热爱。与这组关系最相似的是：\nA. 法官：法庭\nB. 害怕：恐惧\nC. 键盘：电脑\nD. 钥匙：开锁",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 80,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-02",
+      "condition": "degree",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n喜欢：热爱。与这组关系最相似的是：\nA. 法官：法庭\nB. 害怕：恐惧\nC. 键盘：电脑\nD. 钥匙：开锁",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 258,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-02",
+      "condition": "degree",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n喜欢：热爱。与这组关系最相似的是：\nA. 法官：法庭\nB. 害怕：恐惧\nC. 键盘：电脑\nD. 钥匙：开锁",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 265,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-02",
+      "condition": "degree",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n喜欢：热爱。与这组关系最相似的是：\nA. 法官：法庭\nB. 害怕：恐惧\nC. 键盘：电脑\nD. 钥匙：开锁",
+      "answer": "B",
+      "target": "B",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 53,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-03",
+      "condition": "degree",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n怒：暴怒。与这组关系最相似的是：\nA. 尺子：测量\nB. 工人：工厂\nC. 高兴：狂喜\nD. 琴弦：吉他",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-03",
+      "condition": "degree",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n怒：暴怒。与这组关系最相似的是：\nA. 尺子：测量\nB. 工人：工厂\nC. 高兴：狂喜\nD. 琴弦：吉他",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 468,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-03",
+      "condition": "degree",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n怒：暴怒。与这组关系最相似的是：\nA. 尺子：测量\nB. 工人：工厂\nC. 高兴：狂喜\nD. 琴弦：吉他",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-03",
+      "condition": "degree",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n怒：暴怒。与这组关系最相似的是：\nA. 尺子：测量\nB. 工人：工厂\nC. 高兴：狂喜\nD. 琴弦：吉他",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 124,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-04",
+      "condition": "degree",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n看：凝视。与这组关系最相似的是：\nA. 手机：通讯\nB. 药剂师：药房\nC. 指针：钟表\nD. 哭：痛哭",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 299,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-04",
+      "condition": "degree",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n看：凝视。与这组关系最相似的是：\nA. 手机：通讯\nB. 药剂师：药房\nC. 指针：钟表\nD. 哭：痛哭",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 242,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-04",
+      "condition": "degree",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n看：凝视。与这组关系最相似的是：\nA. 手机：通讯\nB. 药剂师：药房\nC. 指针：钟表\nD. 哭：痛哭",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 283,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-04",
+      "condition": "degree",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n看：凝视。与这组关系最相似的是：\nA. 手机：通讯\nB. 药剂师：药房\nC. 指针：钟表\nD. 哭：痛哭",
+      "answer": "D",
+      "target": "D",
+      "latencyMs": 197,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-05",
+      "condition": "degree",
+      "model": "mock:xueba-o9",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n快：飞快。与这组关系最相似的是：\nA. 口罩：防尘\nB. 厨师：厨房\nC. 白：雪白\nD. 果皮：果实",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 175,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-05",
+      "condition": "degree",
+      "model": "mock:huatou-72b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n快：飞快。与这组关系最相似的是：\nA. 口罩：防尘\nB. 厨师：厨房\nC. 白：雪白\nD. 果皮：果实",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 144,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-05",
+      "condition": "degree",
+      "model": "mock:jianglv-7b",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n快：飞快。与这组关系最相似的是：\nA. 口罩：防尘\nB. 厨师：厨房\nC. 白：雪白\nD. 果皮：果实",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 457,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    },
+    {
+      "taskId": "AN-DG-05",
+      "condition": "degree",
+      "model": "mock:laoshi-k2",
+      "prompt": "题干给出一组词的关系，从四个选项中选出关系最相似的一组。只输出选项字母（A/B/C/D），不多一个字。\n快：飞快。与这组关系最相似的是：\nA. 口罩：防尘\nB. 厨师：厨房\nC. 白：雪白\nD. 果皮：果实",
+      "answer": "C",
+      "target": "C",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 52,
+        "output": 1
+      },
+      "finishedMs": 2
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "d40349b34b7d4d77",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "3.5.0"
+  }
+}

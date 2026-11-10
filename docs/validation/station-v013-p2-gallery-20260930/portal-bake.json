@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\"||UnityEditor.EditorApplication.isPlaying||UnityEditor.Lightmapping.isRunning)throw new System.Exception(\"Idle v013 required\");\nint count=0;\nforeach(var t in UnityEngine.GameObject.Find(\"V013 continuous observation gallery\").GetComponentsInChildren<UnityEngine.Transform>()){\n if(t.name!=\"Gallery open-base portal\")continue;\n t.position=new UnityEngine.Vector3(t.position.x,-.17f,t.position.z);\n foreach(var r in t.GetComponentsInChildren<UnityEngine.MeshRenderer>())r.scaleInLightmap=2;\n count++;\n}\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nreturn new{adjustedPortals=count,ceilingOverlap=.02f,started=UnityEditor.Lightmapping.BakeAsync()};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "adjustedPortals": 10,
+        "ceilingOverlap": 0.02,
+        "started": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

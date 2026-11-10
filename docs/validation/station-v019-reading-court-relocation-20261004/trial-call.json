@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\trial-reading-relocation.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "isDirty": false,
+        "reports": [
+          {
+            "centre": [
+              -44,
+              0,
+              153
+            ],
+            "yaw": 344,
+            "position": [
+              -8.792939,
+              0,
+              -36.2439346
+            ],
+            "rotation": [
+              0,
+              103.999985,
+              0
+            ],
+            "min": [
+              -56.35181,
+              -0.24,
+              143.557114
+            ],
+            "max": [
+              -31.61235,
+              11.9,
+              162.508636
+            ],
+            "maxRadius": 166.362762
+          },
+          {
+            "centre": [
+              -44,
+              0,
+              157
+            ],
+            "yaw": 344,
+            "position": [
+              -5.32883739,
+              0,
+              -38.2439346
+            ],
+            "rotation": [
+              0,
+              103.999985,
+              0
+            ],
+            "min": [
+              -56.3518066,
+              -0.24,
+              147.557114
+            ],
+            "max": [
+              -31.61235,
+              11.9,
+              166.508636
+            ],
+            "maxRadius": 170.2567
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

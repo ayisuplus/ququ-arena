@@ -1,0 +1,412 @@
+{
+    "phase": 97.0,
+    "gameSeconds": 711.9898071289063,
+    "realSeconds": 240.661376953125,
+    "timeScale": 3.0,
+    "passed": false,
+    "residents": [
+        {
+            "id": "chatgpt",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -219.2855224609375,
+                "y": 0.07999998331069946,
+                "z": -59.00975036621094
+            }
+        },
+        {
+            "id": "claude",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -226.20132446289063,
+                "y": 0.08000004291534424,
+                "z": -20.033416748046876
+            }
+        },
+        {
+            "id": "deepseek",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -205.70765686035157,
+                "y": 0.07999998331069946,
+                "z": -96.19183349609375
+            }
+        },
+        {
+            "id": "gemini",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -193.83425903320313,
+                "y": 0.07999998331069946,
+                "z": 82.41397094726563
+            }
+        },
+        {
+            "id": "glm",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -203.3463897705078,
+                "y": 0.07999998331069946,
+                "z": 102.2769775390625
+            }
+        },
+        {
+            "id": "kimi",
+            "ground": "v015-r3",
+            "visits": 2,
+            "returns": 2,
+            "target": 1,
+            "outbound": true,
+            "position": {
+                "x": -209.25039672851563,
+                "y": 0.07999998331069946,
+                "z": 89.58248901367188
+            }
+        }
+    ],
+    "checks": [
+        {
+            "name": "six visible independent residents",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "six original room identities enabled",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/out new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/out progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/back new state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini/back progress restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "all six complete original daily purpose and return",
+            "passed": false,
+            "error": 0.0
+        },
+        {
+            "name": "all samples have floor",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "no furniture penetration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "resident separation",
+            "passed": true,
+            "error": 1.0326606035232545
+        },
+        {
+            "name": "chatgpt original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi original room ownership",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi legacy home state accepted",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi legacy home moves to new room",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi normalized reload has no second migration",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi remote dialogue rejected",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "chatgpt waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "claude waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "deepseek waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "gemini waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "glm waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "kimi waiting follows normal-speed ring",
+            "passed": true,
+            "error": 0.0
+        }
+    ],
+    "issues": [
+        "claude stalled at 7"
+    ]
+}

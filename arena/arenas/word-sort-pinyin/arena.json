@@ -1,0 +1,12 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "word-sort-pinyin",
+  "title": "拼音排序擂台",
+  "description": "BBH word sorting 中文版（生成器自建）：四个常见词按拼音字典序排列。拼音表人工录入为权威，拼音互不相同才入题（防并列歧义）。契约测试用 meta 拼音表独立复排。",
+  "author": "AI斗兽场（生成器自建，机制致敬 BBH）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:word-sort-pinyin:2026-09-10",
+  "taskPrefix": "只输出排列结果本身（词与词用「、」连接），不多一个字。\n",
+  "judge": { "kind": "exact" },
+  "conditions": { "pinyin-sort": "四词拼音字典序" }
+}

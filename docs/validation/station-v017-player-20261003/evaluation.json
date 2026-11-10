@@ -1,0 +1,226 @@
+{
+  "status": "Ready with limitations; final visual acceptance pending",
+  "graphicsDevice": "NVIDIA GeForce RTX 5090",
+  "sameGraphicsAndCamera": true,
+  "normalRenderingVerified": true,
+  "renderCountersVerified": true,
+  "sameProbeAssembly": true,
+  "probeAssemblyHashes": [
+    "8b32366542604dc5cfe0e7232afbef4c100d0a9f6e0b884625f6748da41c1f34",
+    "8b32366542604dc5cfe0e7232afbef4c100d0a9f6e0b884625f6748da41c1f34"
+  ],
+  "renderCounterScope": "Mean whole-render-frame Unity counters, including other visible station geometry, shadows and reflection cameras; not park-only triangles.",
+  "lodTransitions": [
+    {
+      "name": "lod-transition-0-near",
+      "distance": 30.03191566467285,
+      "transitionHeight": 0.2800000011920929,
+      "lodBias": 2.0,
+      "eyePosition": {
+        "x": -9.80982780456543,
+        "y": 11.611316680908203,
+        "z": 12.772067070007324
+      },
+      "boundaryDistance": 31.818709636645835,
+      "distanceRatio": 0.943844549562905,
+      "passed": true
+    },
+    {
+      "name": "lod-transition-0-far",
+      "distance": 33.85073471069336,
+      "transitionHeight": 0.2800000011920929,
+      "lodBias": 2.0,
+      "eyePosition": {
+        "x": -9.812108993530273,
+        "y": 12.708480834960938,
+        "z": 16.429889678955078
+      },
+      "boundaryDistance": 31.818709636645835,
+      "distanceRatio": 1.0638625857947184,
+      "passed": true
+    },
+    {
+      "name": "lod-transition-1-near",
+      "distance": 83.86602020263672,
+      "transitionHeight": 0.10000000149011612,
+      "lodBias": 2.0,
+      "eyePosition": {
+        "x": -9.840412139892578,
+        "y": 27.08133888244629,
+        "z": 64.33552551269531
+      },
+      "boundaryDistance": 89.09238698260833,
+      "distanceRatio": 0.9413376725332115,
+      "passed": true
+    },
+    {
+      "name": "lod-transition-1-far",
+      "distance": 94.55662536621094,
+      "transitionHeight": 0.10000000149011612,
+      "lodBias": 2.0,
+      "eyePosition": {
+        "x": -9.846382141113281,
+        "y": 30.153396606445312,
+        "z": 74.57522583007812
+      },
+      "boundaryDistance": 89.09238698260833,
+      "distanceRatio": 1.0613322705639179,
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "performance": [
+    {
+      "view": "entry",
+      "beforeP95Ms": 3.2173044681549072,
+      "afterP95Ms": 3.4111039638519287,
+      "changePercent": 6.023660415582732,
+      "limitP95Ms": 16.67,
+      "renderedFrames": 3080,
+      "sampleFrames": 3080,
+      "beforeMeanRenderCounters": {
+        "batches": 1962.698981167027,
+        "drawCalls": 1962.698981167027,
+        "setPasses": 122.04600185242359,
+        "triangles": 3514742.884223526,
+        "shadowCasters": 498.4100030873727
+      },
+      "afterMeanRenderCounters": {
+        "batches": 1911.5496753246753,
+        "drawCalls": 1911.5496753246753,
+        "setPasses": 125.45584415584416,
+        "triangles": 5044094.662337663,
+        "shadowCasters": 427.07435064935066
+      },
+      "passed": true
+    },
+    {
+      "view": "plant-layers",
+      "beforeP95Ms": 3.289299726486206,
+      "afterP95Ms": 3.3820011615753174,
+      "changePercent": 2.818272665840027,
+      "limitP95Ms": 16.67,
+      "renderedFrames": 3080,
+      "sampleFrames": 3080,
+      "beforeMeanRenderCounters": {
+        "batches": 1867.0931541106595,
+        "drawCalls": 1867.0931541106595,
+        "setPasses": 129.40668959049702,
+        "triangles": 2891248.7649265397,
+        "shadowCasters": 208.56298843388558
+      },
+      "afterMeanRenderCounters": {
+        "batches": 1848.0224025974026,
+        "drawCalls": 1848.0224025974026,
+        "setPasses": 132.37305194805194,
+        "triangles": 4078288.955844156,
+        "shadowCasters": 176.44415584415583
+      },
+      "passed": true
+    },
+    {
+      "view": "water",
+      "beforeP95Ms": 2.9919004440307617,
+      "afterP95Ms": 3.084899425506592,
+      "changePercent": 3.108358156147051,
+      "limitP95Ms": 16.67,
+      "renderedFrames": 3428,
+      "sampleFrames": 3428,
+      "beforeMeanRenderCounters": {
+        "batches": 918.7518166573504,
+        "drawCalls": 918.7518166573504,
+        "setPasses": 85.05002794857462,
+        "triangles": 2557885.745388485,
+        "shadowCasters": 573.6257685858021
+      },
+      "afterMeanRenderCounters": {
+        "batches": 871.1514002333722,
+        "drawCalls": 871.1514002333722,
+        "setPasses": 92.02508751458576,
+        "triangles": 2847605.9638273045,
+        "shadowCasters": 511.73833138856475
+      },
+      "passed": true
+    },
+    {
+      "view": "fountain",
+      "beforeP95Ms": 3.729102849960327,
+      "afterP95Ms": 4.034800052642822,
+      "changePercent": 8.197607172077515,
+      "limitP95Ms": 16.67,
+      "renderedFrames": 2563,
+      "sampleFrames": 2563,
+      "beforeMeanRenderCounters": {
+        "batches": 3356.8642728904847,
+        "drawCalls": 3356.8642728904847,
+        "setPasses": 232.3511669658887,
+        "triangles": 5011134.080789946,
+        "shadowCasters": 442.69263913824057
+      },
+      "afterMeanRenderCounters": {
+        "batches": 3307.8509559110416,
+        "drawCalls": 3307.8509559110416,
+        "setPasses": 232.5458447132267,
+        "triangles": 5098365.243074522,
+        "shadowCasters": 373.4436207569255
+      },
+      "passed": true
+    }
+  ],
+  "waterMotion": {
+    "method": "Two frames 2 seconds apart; rings/reflections/particles frozen; water-color mask within pond ROI",
+    "pixels": 62809,
+    "changedPixelsAtLeast2": 44466,
+    "changedFractionAtLeast2": 0.7079558661975195,
+    "meanAbsoluteChannelMaximum": 2.7471063064210544,
+    "passed": true
+  },
+  "functional": [
+    {
+      "probe": "daily",
+      "phase": 0,
+      "checks": 488,
+      "failedChecks": 0,
+      "passed": true
+    },
+    {
+      "probe": "daily",
+      "phase": 97,
+      "checks": 488,
+      "failedChecks": 0,
+      "passed": true
+    },
+    {
+      "probe": "interior",
+      "phase": 0,
+      "checks": 59,
+      "failedChecks": 0,
+      "passed": true
+    },
+    {
+      "probe": "interior",
+      "phase": 97,
+      "checks": 59,
+      "failedChecks": 0,
+      "passed": true
+    }
+  ],
+  "missingScripts": [],
+  "shaderErrors": [],
+  "waterShaderSupported": true,
+  "unexplainedDependencies": [],
+  "preservation": {
+    "status": "font cache modified after Unity build; excluded from owned commit",
+    "sourceSceneUnchanged": true,
+    "currentHash": "637AA5584274FD482F275C3B268785974A2E5F07E988FFED07B5C6857278CA72",
+    "originalHash": "332211D458AB40593E6DC9FDACDE447F75C350A31DB1ECDD85F96C5B570DB32F",
+    "recovery": "No byte-identical backup located. Read-only prefix checks did not match; no speculative reconstruction performed."
+  },
+  "limitations": [
+    "Measurements cover RTX5090/D3D11/1600x1000 only; no lower-end hardware coverage.",
+    "Water sound is installed; human listening review pending.",
+    "Font was already dirty; its dynamic cache changed during build and remains excluded from this commit.",
+    "Final park visual approval is reserved for the user."
+  ],
+  "technicalPassed": true
+}

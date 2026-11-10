@@ -1,0 +1,235 @@
+{
+  "scope": "Current edit-mode sampled geometry; no pixel-area, Player-replay or artistic verdict",
+  "bands": {
+    "terrace-slab-edge": {
+      "samples": 19,
+      "valid_target": 19,
+      "with_uncertain_foreground": 0,
+      "with_transparent_foreground": 11,
+      "no_accepted_opaque_hit": 16,
+      "accepted_opaque_blocker": 3,
+      "nearest_accepted_opaque_is_canopy": 2
+    },
+    "upper": {
+      "samples": 99,
+      "valid_target": 99,
+      "with_uncertain_foreground": 0,
+      "with_transparent_foreground": 27,
+      "no_accepted_opaque_hit": 91,
+      "accepted_opaque_blocker": 8,
+      "nearest_accepted_opaque_is_canopy": 5
+    },
+    "crown": {
+      "samples": 89,
+      "valid_target": 89,
+      "with_uncertain_foreground": 0,
+      "with_transparent_foreground": 31,
+      "no_accepted_opaque_hit": 28,
+      "accepted_opaque_blocker": 61,
+      "nearest_accepted_opaque_is_canopy": 61
+    }
+  },
+  "nearestAcceptedOpaqueBlockers": {
+    "R2 public planning deck/V015 public research and reading courts/Research column 122": 4,
+    "R2 public planning deck/V015 public research and reading courts/Research folded linking canopy": 68
+  },
+  "canopySideSamples": {
+    "above128": 5,
+    "opening-boundary": 2,
+    "below124": 61
+  },
+  "canopyIntersectionRange": {
+    "angle": [
+      122.797653,
+      129.200211
+    ],
+    "radius": [
+      145.4737,
+      152.999924
+    ],
+    "distance": [
+      9.800618,
+      26.7951279
+    ]
+  },
+  "examples": [
+    {
+      "x": 210,
+      "y": 530,
+      "band": "terrace-slab-edge",
+      "target": {
+        "renderer": 161,
+        "distance": 49.5180779,
+        "triangleIndex": 3886,
+        "submesh": 0,
+        "point": [
+          -100.823235,
+          8.703651,
+          -92.8245
+        ],
+        "researchLocal": [
+          2.79999924,
+          8.703651,
+          -20.9032364
+        ],
+        "normal": [
+          -0.5000001,
+          0.0,
+          -0.8660253
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": false,
+        "angle": 137.3653,
+        "radius": 137.046387
+      },
+      "nearestAcceptedOpaque": {
+        "renderer": 2355,
+        "distance": 25.5738754,
+        "triangleIndex": 351,
+        "submesh": 0,
+        "point": [
+          -90.29202,
+          5.323909,
+          -114.061157
+        ],
+        "researchLocal": [
+          15.9258776,
+          5.323909,
+          -1.16460419
+        ],
+        "normal": [
+          -0.09843252,
+          -0.984972954,
+          -0.141913056
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": true,
+        "angle": 128.365509,
+        "radius": 145.4737
+      }
+    },
+    {
+      "x": 290,
+      "y": 710,
+      "band": "crown",
+      "target": {
+        "renderer": 3216,
+        "distance": 41.7583237,
+        "triangleIndex": 13930,
+        "submesh": 0,
+        "point": [
+          -94.63307,
+          15.5285168,
+          -100.550987
+        ],
+        "researchLocal": [
+          6.39625168,
+          15.5285168,
+          -11.6791515
+        ],
+        "normal": [
+          -0.50000006,
+          0.0,
+          -0.8660253
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": false,
+        "angle": 133.263351,
+        "radius": 138.079391
+      },
+      "nearestAcceptedOpaque": {
+        "renderer": 2355,
+        "distance": 12.02051,
+        "triangleIndex": 313,
+        "submesh": 0,
+        "point": [
+          -83.52613,
+          5.7036705,
+          -126.327835
+        ],
+        "researchLocal": [
+          23.1661835,
+          5.7036705,
+          10.8281679
+        ],
+        "normal": [
+          0.109739371,
+          -0.98487103,
+          0.13411288
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": true,
+        "angle": 123.472107,
+        "radius": 151.444168
+      }
+    },
+    {
+      "x": 270,
+      "y": 770,
+      "band": "crown",
+      "target": {
+        "renderer": 161,
+        "distance": 41.8266563,
+        "triangleIndex": 7012,
+        "submesh": 0,
+        "point": [
+          -95.15717,
+          17.7227745,
+          -101.617065
+        ],
+        "researchLocal": [
+          7.58155346,
+          17.7227745,
+          -11.5999966
+        ],
+        "normal": [
+          0.8660253,
+          0.0,
+          -0.50000006
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": false,
+        "angle": 133.11972,
+        "radius": 139.215363
+      },
+      "nearestAcceptedOpaque": {
+        "renderer": 2355,
+        "distance": 9.800618,
+        "triangleIndex": 289,
+        "submesh": 0,
+        "point": [
+          -82.81549,
+          5.48375273,
+          -128.516068
+        ],
+        "researchLocal": [
+          24.7059288,
+          5.48375273,
+          12.5377178
+        ],
+        "normal": [
+          0.108897857,
+          -0.984855354,
+          0.134911612
+        ],
+        "front": true,
+        "facingAccepted": true,
+        "surface": "opaque",
+        "isCanopy": true,
+        "angle": 122.797653,
+        "radius": 152.888153
+      }
+    }
+  ],
+  "verifiedSamples": 207
+}

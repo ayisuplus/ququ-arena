@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var s=UnityEngine.SceneManagement.SceneManager.GetActiveScene();return new{s.path,s.isDirty,roots=s.rootCount,playing=UnityEditor.EditorApplication.isPlaying,temporary=UnityEngine.Resources.FindObjectsOfTypeAll<UnityEngine.GameObject>().Count(g=>g.name==\"R18 temporary arrival geometry camera\")};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "path": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+        "isDirty": false,
+        "roots": 12,
+        "playing": false,
+        "temporary": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

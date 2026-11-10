@@ -1,0 +1,2011 @@
+{
+  "scope": "Selected sources, not full dependency closure",
+  "buildId": "build_edbd46880337",
+  "prebuildFiles": 311,
+  "sourceDrift": [],
+  "sceneSha256": "11912cc2a8c7e69ede21ffd4764c72764db6ab2d7ae40511943cdee46f3df29c",
+  "runs": [
+    {
+      "folder": "render-corrected",
+      "checks": 0,
+      "phase": null,
+      "views": [
+        {
+          "name": "group",
+          "frames": 2592,
+          "renderedFrames": 2592,
+          "p95Ms": 3.965695858001709,
+          "drawCalls": 965.0833333333334
+        },
+        {
+          "name": "street-76",
+          "frames": 2527,
+          "renderedFrames": 2527,
+          "p95Ms": 4.113300800323486,
+          "drawCalls": 1049.022952117135
+        },
+        {
+          "name": "street-78",
+          "frames": 2609,
+          "renderedFrames": 2609,
+          "p95Ms": 3.943997859954834,
+          "drawCalls": 703.1234189344576
+        },
+        {
+          "name": "court",
+          "frames": 2638,
+          "renderedFrames": 2638,
+          "p95Ms": 3.9575045108795166,
+          "drawCalls": 647.4636087945413
+        },
+        {
+          "name": "old-lounge-entry",
+          "frames": 2639,
+          "renderedFrames": 2639,
+          "p95Ms": 4.078797817230225,
+          "drawCalls": 416.5301250473664
+        },
+        {
+          "name": "old-lounge-interior",
+          "frames": 1827,
+          "renderedFrames": 1827,
+          "p95Ms": 5.515696048736572,
+          "drawCalls": 5997.9501915708815
+        },
+        {
+          "name": "outer-promenade",
+          "frames": 2374,
+          "renderedFrames": 2374,
+          "p95Ms": 4.5696001052856445,
+          "drawCalls": 1811.3479359730413
+        }
+      ]
+    },
+    {
+      "folder": "player-homes-0-v002",
+      "checks": 274,
+      "phase": 0.0,
+      "views": null
+    },
+    {
+      "folder": "player-homes-97-v002",
+      "checks": 274,
+      "phase": 97.0,
+      "views": null
+    },
+    {
+      "folder": "player-residents-0-v002",
+      "checks": 66,
+      "phase": 0.0,
+      "views": null
+    },
+    {
+      "folder": "player-residents-97-v002",
+      "checks": 66,
+      "phase": 97.0,
+      "views": null
+    }
+  ],
+  "sources": [
+    {
+      "path": "production/black-hole-station/v019/audit-lounge-arrival.cs",
+      "sha256": "e45594c515c0803b5d67ba4c095be181f8728a8a46cdaaf8fd6433ebe4b52ecc"
+    },
+    {
+      "path": "production/black-hole-station/v019/audit-lounge-swept-clearance.cs",
+      "sha256": "0187db401ea60cdf2e9b4a4590eb6361a133feb4c292f7f89b8d19ef89f6b8c8"
+    },
+    {
+      "path": "production/black-hole-station/v019/bind-lounge-arrival.py",
+      "sha256": "e382c722b0a143078002bc433e21aa91a98e38942cb365cf5404fcb8248ed7ba"
+    },
+    {
+      "path": "production/black-hole-station/v019/check-lounge-arrival.py",
+      "sha256": "863b3d118728fa900146d88b96ee9b88beda416e145871045f12e90a93897239"
+    },
+    {
+      "path": "production/black-hole-station/v019/correct-lounge-benches.cs",
+      "sha256": "e2be7e5bed4a32a466e4ce4be9a22e7c50b621c94a0503ebc89510860f9428e7"
+    },
+    {
+      "path": "production/black-hole-station/v019/diagnose-lounge-resident.cs",
+      "sha256": "a5a480cd51a137855b58aee43ab0c54efe2760d26a7b008ec645955f0d000af0"
+    },
+    {
+      "path": "production/black-hole-station/v019/export-lounge-arrival-section.cs",
+      "sha256": "de03ea10e63234156f2a066c3361dd0ce6614f883bcb11c28fff346aa945f7b4"
+    },
+    {
+      "path": "production/black-hole-station/v019/homes-guards.json",
+      "sha256": "3a9f0b64c45a5e06bd7e6f511b2156fd3e14741bc176a9d159ef01ea229222cb"
+    },
+    {
+      "path": "production/black-hole-station/v019/homes-routes.json",
+      "sha256": "72d2103ab635e84d59d1d4092198332c2ce074964f270348b12714b5cc155804"
+    },
+    {
+      "path": "production/black-hole-station/v019/homesgroup-routes.json",
+      "sha256": "f2e21a71c6d64bc6938f5f786d4b175e3af1c60d6372fbc0a13f3e8b6f3457ec"
+    },
+    {
+      "path": "production/black-hole-station/v019/install-lounge-arrival.cs",
+      "sha256": "412000809f1a09e09569af90e15fde1a7121729faafee1ebba245389ad645294"
+    },
+    {
+      "path": "production/black-hole-station/v019/plot-lounge-arrival.py",
+      "sha256": "6293b98cdade61cd44c76405927827d279364d047217dde937ffffde854a8599"
+    },
+    {
+      "path": "production/black-hole-station/v019/preflight-lounge-arrival.cs",
+      "sha256": "bf352ab494d4d81e02d199ee1d1145a5c4b5d94197a9f451b52fb08b63474122"
+    },
+    {
+      "path": "production/black-hole-station/v019/run-player.ps1",
+      "sha256": "ac4947cab7ded3c5e231d4f489e479f236c588431c41199b1f75892573eb0c8c"
+    },
+    {
+      "path": "production/black-hole-station/v019/survey-homes-arrival-layout.cs",
+      "sha256": "dadc9ceedea19a1707c4ebfc4524f405bd38888702ea6f8491da81e96a04c2fe"
+    },
+    {
+      "path": "production/black-hole-station/v019/survey-lounge-attachments.cs",
+      "sha256": "9aa8fd908cbf3b83cd192b2935906efdbab5979cf6634d767423fb3a0141f988"
+    },
+    {
+      "path": "production/black-hole-station/v019/trial-lounge-arrival.cs",
+      "sha256": "0da084900c4c86c872ebdeae2fe268899f69fe4052169a61f0b3134d07afe346"
+    },
+    {
+      "path": "production/black-hole-station/v019/trial-lounge-bench-clearance.cs",
+      "sha256": "a138ec37f4a401672c10aade6f48f35f39decb634b17090c22dfed945f3cae86"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/ArenaBootstrap.cs",
+      "sha256": "116afcae8a4322ea8f838dd98df0b86ade9a3505754161992f9e93de2d33c475"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/ArenaGame.cs",
+      "sha256": "429555e54f0f72ca49d869b2d6b5bb6a5be5fd47dd9639b8f620fdac05db15bd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/ArenaHarness.cs",
+      "sha256": "483ec9d8f5ec68743c95c7e8c11fd9f7b21ecf5f4b318c530f06a18a0e751252"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/ArenaStationLiveMatch.cs",
+      "sha256": "bd8a94b07e2f7f7db9e56a77496c4c6a4c3e8106cf73cacf032fc293cb39c9df"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationArrivalGuide.cs",
+      "sha256": "07aba0ce587e61ef360c45bd6aad1329c12c7ddb7cfc0b586d385834170c755b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationDistrictStatusBoard.cs",
+      "sha256": "933b40c39507479b571c944975f262e07865964d788337d7099809fe7ef855b7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationObservationPoint.cs",
+      "sha256": "fa5507bb0852e5d7da7b82439c8b530ef9cf7a09f2072f0805fd94c5725524ee"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationPublicMatchNotice.cs",
+      "sha256": "6c0779ed4e3f483dfcfb801c7b290952ba76789eff070e8c582eb3ab952fd446"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationReadingPanel.cs",
+      "sha256": "7700de6b3ecbf4a3e4953443b816f33b1bc8ce8454de7a1365ed14de469291ca"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationResearchArchive.cs",
+      "sha256": "921563575ff5888e46eb87d12fd351abf39731329db5b313a4d05f85ff4c12a0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationResearchDesk.cs",
+      "sha256": "c44e5c12659454d9fe1025cbc5fd7d89357cf8af6b30a398eced7c792378e066"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationResidentRoutine.cs",
+      "sha256": "2397d2cc213fae363bca3e339b3fefb6765427bb07509ceffeed2d20f7ff7216"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationSingularityClock.cs",
+      "sha256": "951320d0f381fb1652e607ecb0f84fe64a249316112629c24267e6917249e60b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationSoundscape.cs",
+      "sha256": "fb9b130a912a19e9232078f34017d2fee83c62637846dbb65ba97ecc45cc23ee"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationUnsafeSaveZone.cs",
+      "sha256": "5a05c5ca7cdc274f10717623346b2cc81019f0c9a16860fc29b8e09a5790e4b6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/App/StationWorldSave.cs",
+      "sha256": "7b791f640fff69db3c4926dc1fed0ab788fd6ce8b1b6fc56b7c6e9b3ad49bf80"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaCompetitionProtocol.cs",
+      "sha256": "da1cffbeb167a4689572ae8660458e528938da776ad231db33cc5034789cf6b4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaConstants.cs",
+      "sha256": "9f914f4c85d2a2694c5d31ef170fde0ab98aec03125f482644a595973555035c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaFrameRouter.cs",
+      "sha256": "554588000d8eedbf8e1f8df8bd3a78ef96e14c2e713c1f81a5dada81149e9b58"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaMatchEvents.cs",
+      "sha256": "aa61d40fd83be29c527f61e8d7634f9cb381c3ce8b3226c50d0805c3d61625fc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaModelPresets.cs",
+      "sha256": "e1b24f3571b87ccc820b4f17e2287a2fb62a124ed61863a1aa4ced74dbd09cf5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaPreferences.cs",
+      "sha256": "683f4e144b9c60f498c43bec57a758502d06380152a0b2f4a461d43cd1e3fea4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaProtocol.cs",
+      "sha256": "6613f37c5d5079adfc4588d19a4b22a13552405a27a5a4c4d96ea38ca92354d5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaServices.cs",
+      "sha256": "9809cf0d4c8af68510a625b4595431f3687b31133460c3656ecec900ae9e1d74"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Core/ArenaTuning.cs",
+      "sha256": "2b8ff3b2de80748cd7ee8d096763ec16af48b51c133377b41ff418736366c820"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Infrastructure/ArenaConnection.cs",
+      "sha256": "4363147840adf106c70c40cd89fb481c1e50846158d863cc9bd4aef8e70769c2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Infrastructure/ArenaTaskCenter.cs",
+      "sha256": "4e66e22038ac45e59fc706b79ad88ac8e8f2009459cf7d7cede0ce035248303c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaAnswerDesk.cs",
+      "sha256": "83698fdb5d7b66607d51f1e448506ef8f6d4b458705bd051595bb3fde9aa07c4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaAvatarMode.cs",
+      "sha256": "4d5dfc5baa7614d04b6abf0ccb7e45533a4584c9dd48c02cd489ceb08e13dea1"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaAvatarPreview.cs",
+      "sha256": "daef44c748cae1cab1acce67b9f6107f6c328fa12f5e7f83b6768b150e234cea"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaChibiDetail.cs",
+      "sha256": "5a0a0fab5cdbc89481de1cab0faf6a50a696bd1e3f146a454808bfc76aee18d4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaCombatGrade.cs",
+      "sha256": "1aaf5e6c33120590acdb0aa5281ff63fe1deaa62561e68eb2f673e34df267e7d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaCombatMotion.cs",
+      "sha256": "0458f0b821edb0e4db60f2cbbbd082995477a01e75837c0909332708b20d80bd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaCombatVFX.cs",
+      "sha256": "7bf72b175892287146126ffdfab29a28d690784dacf94a064b51d388d46630dc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaCommentaryDrawer.cs",
+      "sha256": "22bf135998a2003a4cbc88ca0f68eeb79976f3bd972b2379931afd4be32fe381"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaCommentarySettings.cs",
+      "sha256": "8cf21188c785fb3dc45ca8fb2884906b66afd3016098d38cbe1c3a22b70aad55"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaControlsBar.cs",
+      "sha256": "3da3bf4b92106242181f2753c6389bdfe88effb8c487c82b0806b9f9a9bf7e32"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDesktopHub.cs",
+      "sha256": "3546f608726b4830bddf180570736d05eebe20a52ad7d8f23279d6d5ce3f5bdf"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDesktopRuntime.cs",
+      "sha256": "81af0f6f9fd6f27b5e5617a49896e93d1120f84d80e54c9b19efdfc66c09ec10"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDivineEffect.cs",
+      "sha256": "1e977610a8d41f8e4126bdafc23e675456687d955e85db1c0f58e78048213292"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDivinePose.cs",
+      "sha256": "7eb039a7841193fa64fbe5f1772b6a02cd73e5fcb4055f7b3c8be5f788536683"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDuelController.cs",
+      "sha256": "c38fe6f975855b8181ada31de90ecd4f24d7942b29de0a4c4ab381136fd2e718"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDuelHUD.cs",
+      "sha256": "c79c9aee7a7813b91bf189476a7eb57f0c5146db871954342c2e91aa6154b0c5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaDuelPlatforms.cs",
+      "sha256": "75c5d3b57c388064f4d032685134eab6d86f7dfaad97c56a4374022d11bb2e7b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaEntranceLifts.cs",
+      "sha256": "8a4d4c121f5bac27545a32353eebe91d70a865f933b3ad31ac2c5b9ee9e513eb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaEvaluationWorkbench.cs",
+      "sha256": "0a7c46f19dacd0e867d6313b74378ee37feef0badc12d390558282aca5d860b4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaExperimentResults.cs",
+      "sha256": "4db9779b73aa6e25116a6c1d0008c77394a795d54aea68f36a28286c04f6332c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaExperimentWorkbench.cs",
+      "sha256": "6e885e70abb8b70b3f840820ef496b1a4b49f44d0e92a5ce63f2b70731d92eff"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaExtensionWorkbench.cs",
+      "sha256": "3d8f8be5e73b09188bdd4ba7ee830a97afd220b8fdea109e16d98bf9293373c6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaFighter.cs",
+      "sha256": "e3f899a625ec9208d9cfcf47010f001f92dab18c3a258e1f4d33db6a75ebb1c7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaFreeCamera.cs",
+      "sha256": "3e702ecfcc98a76f9d998b5767969b0e5c220d6b3d0ea1ba94d0f6fe732e94a9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaGalaxyDisplay.cs",
+      "sha256": "9114bf7f620951009e4faa7d1a560e2d206d7c7f37759ec64ce8f097bc084c94"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaGallery.cs",
+      "sha256": "309e8cc0c67360e241a4cd19222a8a90d80568256ec1a481e252ba0247209e11"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaGalleryActor.cs",
+      "sha256": "ad451ff9a8b37dc4704a38ffd88245ea69018f8122ecdd6445b0b5e697b688d1"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaGalleryView.cs",
+      "sha256": "d1a0b11ee2e0bc3653a3b639a8f2a1959ccbe1fbea54bdd360b0ee52ef940397"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaHeaderBar.cs",
+      "sha256": "447986522d4b5a3db7ae7b5ce027faabb282fbfbe455fda1e29953627f55b981"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaHistoryManager.cs",
+      "sha256": "80803029b198d8c401ad1f711289081bceb7dbb215369aac57a4e97237dd8928"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaHomeScreen.cs",
+      "sha256": "726305cbf98599df11701c8d90b192277f46c04df82d410ea34e2249164924cc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaInstrumentDisplay.cs",
+      "sha256": "d971c1507e00be2182b4b52d297b258b8cd004d0a452aa1eb68f5241dcfc67c1"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaInteriorProbe.cs",
+      "sha256": "8bbe93d613a1e2c3f9e22608abbdbe8219b9f9d3352c0111967ac15452446d5c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaLayout.cs",
+      "sha256": "f6ccccfb74eb85558d9ac795bb15b3ec1f6e6ac19ee29c0c75196889209f8149"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaLightShow.cs",
+      "sha256": "f52aeaaf1f0cb4896ff17ce9055f976369a2c605d55ec42a5aaddffc51e054b8"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaMatchPresenter.cs",
+      "sha256": "cc80e9a581c7df1d2bc9035651a5b74d2b8f6846b0831d6530a89d57677e0671"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaMedia.cs",
+      "sha256": "b4d5776bc3dab1656c0cf9463c047bce128bab3fab9b39e667254f68cfe8492f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaModelManager.cs",
+      "sha256": "daa26389a7efec93af838157170df42a229ebb5987c27a97a0a66a3cb949ac32"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaNavigation.cs",
+      "sha256": "cc82d848d7ad5b130a7d290fb867402999207ec081b5588bc153e56db2ff53cc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaOfflineDemo.cs",
+      "sha256": "323555504c46ed5d18e5379e16aeed13515e965532723b733d86c38afd0f5b64"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaOrbitalNetwork.cs",
+      "sha256": "cd8a79c69239bed7098873457309b48ee64d61f4a66c5a50a357076f8f29bb54"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaPanel.cs",
+      "sha256": "ec1d6bd5b652512fccfe5ab28bfeac2549c12760ea78be524821ce9f63fdb521"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaPixelBroadcast.cs",
+      "sha256": "cde5b4f074cf573351620f0ecc38374fdd43c1ff7583133414221cdaaa474675"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaPresetArchive.cs",
+      "sha256": "00a94aa6b53c7eb75adec41dfeacb394ac35c2a479f6d053ff35bfe9f86c6fac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaQuestionManager.cs",
+      "sha256": "8d16672b2100ad493b52b04d3bdccc1c1956c1a760b3b6af79aa49d118fd9f89"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaQuitFlow.cs",
+      "sha256": "85d548035a7229be51908399ca80c1d5e081ad57fe8ea1d8848a83367ab91f5c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaReadingDrawer.cs",
+      "sha256": "154645e0568a0ac642c95629cab90a9528cdaa61b2921ebb9b23458c5d25436c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaRefereeBoard.cs",
+      "sha256": "dd3dc692dc7afe17a2b6e68976861fb188a7744893b86e5ea9c14243734e8eae"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaRosterPanel.cs",
+      "sha256": "2823849a4e8e50eb2e561458b64958c502d3f801f7eda82785d01d22b7ed4962"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaSettingsScreens.cs",
+      "sha256": "72821576f4bf4c2edecff9339881b8303413bcdbf3e6c2981d5bc30764a0a504"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaShellContracts.cs",
+      "sha256": "ed96988fb4d77e03ec89dba946c7bfb7465f0cb45a3818205cf348714c328072"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaSingularity.cs",
+      "sha256": "14e09b6329d5ab324f6910b9930306585f5e6bd7ba30ba30a8140e377e34eba4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaSkyLift.cs",
+      "sha256": "885e3fbeb6f27740bea07b73f01ca0fbf18e33ac411f64de79521b555f919dbe"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaSpectator.cs",
+      "sha256": "010f7ec8590b8daa80b5ba99e9dc95157b8b5b1de0b72d696c52bcfa42701d5d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaStage.cs",
+      "sha256": "b24cceabf24b6d784a42acd3f9b9538fd5a8a140a42c691c59ee251fca173af4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaStationGrayboxPreview.cs",
+      "sha256": "62afe1a5e1c988bb9fcd8b80c9d2e77006f2ec115e2a8e23d726b16c37486f06"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaStationTransport.cs",
+      "sha256": "150c10f18e664ca839c96de65ef2058fb4b0152e59fa99b9a15897d2b0a1f8ac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaTaskBankEditor.cs",
+      "sha256": "080af3881e2074962f0fb7e87a1f02433c4a5f876c68298bb033dc193e0fd99b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaTrophyBay.cs",
+      "sha256": "c65649fecbdf106a4d18a0bd8035bc3f0c17b5462c250dcc42e7e221e8c0d7e2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaUI.cs",
+      "sha256": "2789acb1e6bdd6ad1906a1d311441d9471b7c43babdedf92678fe8efec3cde35"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaVenue.cs",
+      "sha256": "a61c1cad710cb42d1eaf92bd517fc920b021cc302393ecc388ee47b0882ea3ab"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/ArenaWorkbench.cs",
+      "sha256": "7151a34c049248d4961cd627cab6d7ac0a7e50affa49927abfcdaec6576ae18f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationArenaSafety.cs",
+      "sha256": "a40e1353dcd3dcdd600c54d29a830ebcb4b2b9e98cbeeca7e56331199e1a3484"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationCafeMoment.cs",
+      "sha256": "df1da18e526a6261361083be7ead810a9833033618ace000a6c342935eccc691"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationConservatoryDoor.cs",
+      "sha256": "5c92cd3eab9ac7f9b2ce26f8c8c63a75c210f201088c08056a20e34d31429cd4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationCoreEastGate.cs",
+      "sha256": "d39cb46f717b3e69bcfd15f6762d918f121ab353dff590a5d1ed381e6625a49b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationDockAirlock.cs",
+      "sha256": "7b28ac0d732f1572edf457aa63033e0ce2f8b7861d0a2e3a405df869673740cb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationDockCargoService.cs",
+      "sha256": "a2d40e424150d69dbad794b45436ee3f61f5e1c017818b4151c0147ed522ba36"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationDockedVesselHatch.cs",
+      "sha256": "2cfe94f6a381a89ff825331611cbb68052d382a49cd05133840a87ae93def5ea"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationGardenSeat.cs",
+      "sha256": "46d76bb15d945f449d26663a26bd87c641d41c873469ebd24930f3af6a6ac626"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationGrayboxWalker.cs",
+      "sha256": "5341105398a5e180b19c5e5e62cb5211830a5c9308fb2559f7b6f47bd9afd546"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationGreenhouseCare.cs",
+      "sha256": "b51dab15d78c012ade48731e6a28443583555034e686e6f362491435e2a1cf90"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationGuestDoor.cs",
+      "sha256": "e9606d07e652d45fc9910c09aa3a11705133ac5895206880a3282e0f0c47a290"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationLandscapeReflections.cs",
+      "sha256": "478f3dc40dd810665930add23d4fff6ef5c0b3045b44399b17f92f968b508ad2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationLoungeBroadcast.cs",
+      "sha256": "ea8a272887b78d981c648432619cd16d75fba88c9fbc98c2fdd2e1843a52db24"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationMatchHUD.cs",
+      "sha256": "0db94477aae9ebb7c8756ec92921c8be2388f87216d08eca72bad9efe5cfbc14"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationPressureVestibule.cs",
+      "sha256": "fcbdde4796ee632889e34e34f8650789270be2d299f30e03bdcd3f9d486d828b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationQuestionBoard.cs",
+      "sha256": "fe7199584f87203d9d6950d568cd333a6d09caee9bdf640baa73f3a590af4f7d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationReflectionVolume.cs",
+      "sha256": "47a431b9c24e55b9b7b4a3d0e83bf34340e91eaad1c983dcffe1aa1fd8ded7b9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationResidentPath.cs",
+      "sha256": "b058a8cb3f59b226e60af888f88d51ac78575529c7d3d05dcc18193ae4fd489a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationRoomIdentity.cs",
+      "sha256": "b6418e859075122a099ff9dc2b53faf4718645f6e571f266c76aad796898dcc6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationRotatingRing.cs",
+      "sha256": "bb170d1ec1aa72908827e5676d869f7f551bf7e5ba203ebdbadfba148f640dc5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationSpectatorCamera.cs",
+      "sha256": "9f3d52f661a24e43515350e025adfa019850b030505812a98739e57ada341f75"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Presentation/StationSpectatorSeat.cs",
+      "sha256": "acf900c9c01fdd8b89dd7db6eee1671d6acd68322e6f40f723585809aff7e1e9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaAgentCheck.cs",
+      "sha256": "df50afceb63fb4d7eb85b09da4c4f5daac40d7437290cd0338c185bdbebd2eda"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaArchitectureCheck.cs",
+      "sha256": "3bb23368defb65c49719b6c5edef4d9edf23d41ef4fc6b5f91af9d9a0dc1ab80"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaBoothCheck.cs",
+      "sha256": "18826bf837d04300dd60f2c6b9f1c6a9272d76d2596fc4cdb89daedb434af7b5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaControlRoomCheck.cs",
+      "sha256": "ee168483526690c47218fc1ba1bdbf77b4896fb98b65448f0be216b3516f34d1"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaDesktopCheck.cs",
+      "sha256": "6464429395800b4056a4047c6bcbc3d7e674e419418052900adf9aac07ca9eeb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaDivineCheck.cs",
+      "sha256": "5d199b88d38bf2db134f46de3af6ef90d2cd1a10b843e1cfb2769f8e8a3f8dbf"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaDuelCheck.cs",
+      "sha256": "bb13b8caa2340c727f3a3c5be0762ba31e326bd3602b021f496e1a6cca78e028"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaGalaxyCheck.cs",
+      "sha256": "ddffebc994eba78ee64adf9de16f8ef493e6c49ce7254900a0c9467e901ed343"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaGalleryCheck.cs",
+      "sha256": "afe0c442d3af19b6d06c056ce2468206c2769cb846620b780f84553fa5815107"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaHairCheck.cs",
+      "sha256": "b8e1c7ba3c4f49a49fcf96b0f3e6511f495500f40ebefa9959fc5c8ca5debe80"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaLiftCheck.cs",
+      "sha256": "ec37f30a408a87a9259a31081c7930f3ea241a8aa2a91bd29655b2c389b8b79f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaModelPresetCheck.cs",
+      "sha256": "d25df46e96cf6b38a5b5d47aff74484b5afcadef084a93403174a95c12418146"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaOrbitalCheck.cs",
+      "sha256": "961a5c01f302ef1041aa93b231ad156b8dcce51a6248203316c6cdd24e81f712"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaPerformanceCheck.cs",
+      "sha256": "8bcb2d5128e97f8fd04b30a1c4ee8359724b5eeecd740800bd5f9a60366d1257"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaPlanCheck.cs",
+      "sha256": "755665d9380509dcb2704940697db6cbe8466d6d834603e068f24e7c3ccbe15b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaProductionCheck.cs",
+      "sha256": "fab67a3544a58489ecf01f54acf32dba7e42e60199a6f9254d3d250c92907e4a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaPropsCloseupCheck.cs",
+      "sha256": "febf7a1d9b93179c9757ddca4053697f7477e0b966770f398ecd915287774097"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaResearchCheck.cs",
+      "sha256": "f05cabcf35c8dced03e081cda992136d2d6e8de82b64f11ff8fabce785cf5feb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaSingularityCapture.cs",
+      "sha256": "8e771795abb61265afc1b4de7ab890e02c3fcec5be157cd20de7f221473089cf"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaSlapCheck.cs",
+      "sha256": "eb17ff8e5be5bea8663909a8bca059ebdc2cb48381a2ba6cdd0acb5dfd9be7f5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaSpectatorCapture.cs",
+      "sha256": "f1b6ab1b16de69c7e821905479d26f9239733b72ddc0501647f89b147ba29ca9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaSpectatorCheck.cs",
+      "sha256": "a9b8271c8eb9348fe6286c7e9247f35a4f3f4e367e9bb347e6f84585cb1f4996"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaV22Check.cs",
+      "sha256": "135554df79e791120a08f4c8b3899c1ad50280a2f7f80d32186d6f5bffdb2099"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaVenueCheck.cs",
+      "sha256": "04dba07f19edf08f8ef0ea7265f89143e06d813cd59908077ee324d838c627fd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaVideoCapture.cs",
+      "sha256": "cddf75cf7526cfa5e52a96e5704dc677a952dcabe42a0c49e981b29d7d7965af"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaVisualCheck.cs",
+      "sha256": "cd303c22ecd5355f039028a73e62666ad8b40e803d9486c12f0cfcc9e722b8a2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/ArenaWorkbenchCheck.cs",
+      "sha256": "c9328b00d155e837850fe239f6ab1a2bbf4ae17280ea99cdfd044df7d22ca068"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexInteriorProbeV018.cs",
+      "sha256": "eef1badf2cced4c7d380e5514740773b1eaf39abc976bc18f17229f240927797"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationAnnexRenderProbeV018.cs",
+      "sha256": "1920eb7b13899363eb1aacc46a8efb12b0800fc80576d3b4c17d944782ce4282"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalGuidePlayerProbe.cs",
+      "sha256": "261020b8c21df4e91dc1bf9ad38aa443f95a00b00e6bd88a88cb1b1a8f1dfb5e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalPlayerProbe.cs",
+      "sha256": "99b4458724c035aeab2d6045cce078ec937dae64b576d2fe51c443e2845db36e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationArrivalSpinePlayerProbe.cs",
+      "sha256": "46c22abdd09798d343b2f25b9749161948193f93249ec265b255e4b5f7267bfd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCafePlayerProbe.cs",
+      "sha256": "ee1b6822177bd9f0e70624a2246d5729f67ac99fcf240ca2ad1cb36c253ae530"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCircularStandProbe.cs",
+      "sha256": "48681f225d29d4bf87a239c90f3e5f5a0b89a72a15ed9cf16d325b9590e13f92"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationContinuousWorldPlayerProbe.cs",
+      "sha256": "56be498cb69189afba597f2afc27edd53db18e92bca7625660c84f01d59b3c44"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationCreativeBuildingProbeV016.cs",
+      "sha256": "5c7ed98110f810f76d752432d70ded2fd8b747cf2f8ebb3f5e3824af86d80e85"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationDistrictGuardProbeV019.cs",
+      "sha256": "33482bd6dbb5410f5902e2e696847b2620023d86b31d4a6d29d1afd41589dd49"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationEastPublicGatePlayerProbe.cs",
+      "sha256": "143b5d2f74d8231e8ef43f326e59087c1bf95327fddf1b6510105f4840113969"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationEcologicalParkProbeV017.cs",
+      "sha256": "2eedb9ee1dbe047d58c42f436295e0d452b5ac5e2d6dd8c5d43a9d8cc4a95a8b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationFourDistrictPlayerProbe.cs",
+      "sha256": "6512f9d84bd17c7b991d8f51e9267785120b1ea01aa4ebe74f215fed23629b74"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationFourDistrictTourPlayerProbe.cs",
+      "sha256": "374e6929d319c2a8f0e7baf01c5c5e454c354377d504bdf96e673c12bdc3a9ae"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationGardenPlayerProbe.cs",
+      "sha256": "bd6dbb67b8f620527a2d0f7a292e3439a7150cbe3091ad900f332cf197577f44"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationGreenhousePlayerProbe.cs",
+      "sha256": "96eb5c7b6e645c3cb49680a2438e7df4e65c1b824b0244590f0c7e9f90704394"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationModelHomesPlayerProbe.cs",
+      "sha256": "54e9543c1ceb1ad065bff5d30ea0a8775d98dc31ea0b80cdaefe8f8f7327b378"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationNorthResidencePlayerProbe.cs",
+      "sha256": "19933c0d56bdf6a99d9d1a5944a7fefef5bd76ab24fb2387f7d1272a8da55045"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPromenadePlayerProbe.cs",
+      "sha256": "dd154654ee42caa74705f17ca81ccb282c58ed38d4cedd607e7758871ed4b92c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicCourtProbe.cs",
+      "sha256": "8a4f82e69dea5bd40f078985ae3b99659972593492d0e5c7f89e4d381ee8f725"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicGroupsProbe.cs",
+      "sha256": "67f193b142314004a2b90554e4b44d0bc1b4151ed577779a7d5d494a430fe2cc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationPublicMatchNoticePlayerProbe.cs",
+      "sha256": "2478c5a3d439e7b269d01838446a9b51c92b4113b581d1ba54b40202add5f295"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationReflectionControlProbe.cs",
+      "sha256": "5bf33c502a7486642810e41f01e01c69152967bb0f37a0b3c04397708d476176"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchFacadeProbe.cs",
+      "sha256": "d75f984c885c5b40e404e91ba6ce95a0c85c3cb63d292f411c564d3975e1b5b0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchGalleryPlayerProbe.cs",
+      "sha256": "4200c2c9e14ae63a9ac462582076df801ed8edc23f713771ce91454aa315a749"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResearchPlayerProbe.cs",
+      "sha256": "45f73f8e1a32cc0d18dc3be062a52061d23ec628a9fceeda94d1fdd66e9da06d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResidentialGroupsProbe.cs",
+      "sha256": "6e07d7041af829a8e94626e9f5288d4735bfdc1d10c8630b8a24557774b4317c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationResidentPlayerProbe.cs",
+      "sha256": "0a1b061086cfffe5d8164b02c353a81518f07300ac13e1e2327e371bc17c03c9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingAccessProbe.cs",
+      "sha256": "8a5cb662d110a0a8c11a8fd8209ad40d3c71140dc92e8e64ea44b664244bea73"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingArenaSafetyProbe.cs",
+      "sha256": "a517709f911f24a19280f6cd220153f7939c44f1f23f3c34841d10f7711c329b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingCargoProbe.cs",
+      "sha256": "29f6ef21954ad869497377372ec271632ad1c8b7793092f753e5964239e5d227"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingDailyProbe.cs",
+      "sha256": "177becda20bb1e808c20e9e19383e72776d4cb1e2ec97a36f1436bfd98d25f87"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingDockProbe.cs",
+      "sha256": "9022b0b653ad2b6c76aadf0cdff42672b7721115af16165ddd5173b95d164598"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingEdgeProbe.cs",
+      "sha256": "20b697c6cebbeb135f69a1d7aacb7ed21e96de8608f6cc13416ebd7cd7da5479"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingHomeProbe.cs",
+      "sha256": "5aa0d2ad1b279f5c5db595b8ae089dc7224d29b0a67bde6b6d549ff4fd85cb4b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingLayoutProbe.cs",
+      "sha256": "1f1ba6beb20aeecc8cda925c0274b485625310b5a3bd668b8c1a859b771c8b61"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingLevelProbe.cs",
+      "sha256": "28f8e0db72948ce6ff3df323f807b3fd10b322e47352697ada137cf073f4bb15"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingPrototypeProbe.cs",
+      "sha256": "66c07fd61eb38b1f3de27cdc6d25f0868c2a9cad3e546ce306dc22f8a8bb5e2f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingReadingProbe.cs",
+      "sha256": "be902805ac4cf52f95ca773aa9d33e0f68267138ce20bb676cb815f83f96cad0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingReflectionProbe.cs",
+      "sha256": "6dd9a6eeb465210da7e9d7f15e007ae5d06e789a0300cdf4d44d33f540ed66ff"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingResidentProbe.cs",
+      "sha256": "04a4ef01f74f62d655b44ea0988931ca62bd73f8b3f6717506090c2797863e86"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingSeatProbe.cs",
+      "sha256": "403d393d0f6f9711ff0b742f4af0d58008279a10aa04c59c05fc911dc2722b60"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingSpectatorProbe.cs",
+      "sha256": "c026985a36f617967103515bc5fe02f7ed4b0b229e265329896c85caaf17fb13"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingUpperGuardProbe.cs",
+      "sha256": "c01c26df027266f4ef67d72ae4994c07276e97704849256b8ed8cdd74e583b5a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationRingUpperProbe.cs",
+      "sha256": "69f0524fbab5fdcf0c48d1dc7e3c43be04a9652c3293a282c9af540abf795212"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSeedConservatoryProbeV016.cs",
+      "sha256": "d0fd5c1a18c1b635a72dbe272a29b1b430b03ab4416abc7e7bd6815567bed28d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSingularityPlayerProbe.cs",
+      "sha256": "6d0da7407887518679b8029a60db4f030ee1019bdfeb37e65335d6c232149f2e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSouthDescentPlayerProbe.cs",
+      "sha256": "24ad51b88c1718e934c79739a2031cb030fe75088d20eb16f0fa5e94e0f7cdd3"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationSouthGardenLoopPlayerProbe.cs",
+      "sha256": "cbdbfd0c0b093a8a1791e66ea540dde16008d63805c5f6952b85deb24438c675"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationThreeDestinationsPlayerProbe.cs",
+      "sha256": "b6e6f28c53d86908f476c22b5853fcab278c38424683775702baaf6af80db5fa"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationVisualSamplePerformanceProbe.cs",
+      "sha256": "e445866d44aaedc1d35fd4f9591a3ad08a8ad3dc7abe0485353b921e498e4172"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationVisualSamplePlayerProbe.cs",
+      "sha256": "9ca2650262db7a2f8fa6770120424146d5d8ca9566987be63a49b0e3ab3fb4fe"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldMigrationPlayerProbe.cs",
+      "sha256": "9adf4e8630bd06811bbf588f7b9e27ea5de773eca2c7399408fcc17f927c70e2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldPlayerProbe.cs",
+      "sha256": "b76372459eeb2c7b1723424e5e3cda604638a630e3392383e09270611fe4a751"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Scripts/Validation/StationWorldSaveProbe.cs",
+      "sha256": "b832887aca744870fe9f2d894cf0e358279bb2438b70acaed98cb4b7efee50ac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesArrivalV019v001/Homes paving arrival.asset",
+      "sha256": "616b57f74a5f5ece4ffde70bb44dad4ae403276afa5dc6e7432431b7aaea1cac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesArrivalV019v001/Homes paving arrival.asset.meta",
+      "sha256": "d3f3dbe933d4c9276c3d9ab3dc854d16b9fc685ce8dc6babd0a180b6e28f8c6f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesArrivalV019v001/Lounge entrance sage court arrival.asset",
+      "sha256": "c1bda176df63b68cb686d2b8eb40baa456c997112f7ccbdbb00324bcb92fb540"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesArrivalV019v001/Lounge entrance sage court arrival.asset.meta",
+      "sha256": "2660b0cc24cb979da8b8c2b892ebd72de401753a2d818032c56a303a56d15bc5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesArrivalV019v001.meta",
+      "sha256": "412ffbec32738a17522000b57599d4e7a458185a96f068e0d19ac17b1960eeef"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesGroupV019v001/Homes shortened shared walk.asset",
+      "sha256": "ae7187f39b75e88e2690feee1c48c3a3078124cd00cb6fec1d862d15574f1584"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesGroupV019v001/Homes shortened shared walk.asset.meta",
+      "sha256": "ae6863d740e6d99fbf90e8ef821ecfef22b9457d83f42ea78cec7e264c50f217"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes deep teal ceramic.mat",
+      "sha256": "62c5802d6df3688c002c94b9b951bedd7a725c91a0aec25becb2cdef45bbedee"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes deep teal ceramic.mat.meta",
+      "sha256": "a287f5f15f1753df2967294fdfcd6a16040f8f9d492d290aab2777b52f00aac5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes jade large slab court.mat",
+      "sha256": "7a8c30600867ce6a1cb63f47500cbb702825d9d95c2212a72721c59341b0ce97"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes jade large slab court.mat.meta",
+      "sha256": "6bd2796a0b396cb0d2ea709cffd3a9831c11ffea674183b182696af17764e417"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes natural oak contact.mat",
+      "sha256": "41d670e591e60cb81a118fab1dcab3e8e4ca01234102df23895c73c96bc1a16b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes natural oak contact.mat.meta",
+      "sha256": "7c65b9f3f6f539c85d7c72360fda11d3a3101e826805f1f11b948cc2539b8075"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes pearl ceramic surface.mat",
+      "sha256": "f9a9ba1b566be852543eb87ae89cbb965a91a31b0d715fa251c67a26b817512b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes pearl ceramic surface.mat.meta",
+      "sha256": "bafe9d2324e83ceb5c953c3752265a30400301158d663426b7fe5b3a2644769a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes satin roof field.mat",
+      "sha256": "f7c3ae256411a452138db495a156bed415ae5dccd35736288601b8dc5417e520"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes satin roof field.mat.meta",
+      "sha256": "1304113ef29acd6f4bc85fca4a02531caf8e9b758a9e27579b7b815db509e372"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 1.asset",
+      "sha256": "e9878fa57113134dc1e2bcc789391cbcbb2ffa997d7fa27c6b7d9f7a4a3c77a6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 1.asset.meta",
+      "sha256": "bd7e734b0f15d7aa2422b67703d3676771f68ebb9c186b3ac6a7be7ef778c68f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 10.asset",
+      "sha256": "ecdda8c61f79606d271c958967258c15dd5b1949c2b217a6cd3337e257439b86"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 10.asset.meta",
+      "sha256": "3857d3b9992ef69b5defcd3ccdb9368e2982d0681551910c6a699a6d6ab688ff"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 11.asset",
+      "sha256": "d1d81a928009b9c65f451892c42960b8e2b0e2e78e26c2ffa2a4cb9992224c13"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 11.asset.meta",
+      "sha256": "7b89c816e68cdac83903954bc9c7adcbacaed2533f025da94ac6f8746318781f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 12.asset",
+      "sha256": "cda565bbf6936b9ea86e1aa022f06360b3f7065f8936e7777dea8a4fc35e8a2a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 12.asset.meta",
+      "sha256": "b42685343cdfe924f15eaab39d6641b6eb1082ff4acf7d5e9c33d2f67a9b8d6f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 13.asset",
+      "sha256": "b048f77b9452f2f49d1b9b8b830825b286797286e6a6dee71454ec5b84cad73a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 13.asset.meta",
+      "sha256": "c8999b7aed1f4a42be9b34ea25b39f9ff7372049f44d2e34067be9dac84a3176"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 14.asset",
+      "sha256": "e250c949bab5bd824b68bcdbdab77083a50c8fd3c0bdaad0cfd4389f358702bd"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 14.asset.meta",
+      "sha256": "534d129309583084575b9eec5d1c5c84157c6edb0ece235b92cf4e8ddc43df2d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 15.asset",
+      "sha256": "c8968779800e7255428f71454bc39808d760312c1f70ad72c693c514e456d240"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 15.asset.meta",
+      "sha256": "844e35103d326d9268d9d48a431fc7478257042f68364a4a0a757ac92229f66d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 16.asset",
+      "sha256": "39ba099456eff5e79f8c4b37d5a58d57177b2d121bb4e368dc2b02bf62b4d3df"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 16.asset.meta",
+      "sha256": "7b9f7db5b530d48ba977c5f2df66d18e5b1307cb4bead74789ddb2c53f9089a7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 17.asset",
+      "sha256": "d587d5fb19052883c8f25034e663de586f6629ae665dbbf188cfff5d03733ec3"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 17.asset.meta",
+      "sha256": "4a7646205a0bbb073689fd61bef12cdb70726ddd1b23f15f58f7966aaba2af83"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 18.asset",
+      "sha256": "20f087f794831cb5249212ca10bdd79cd2f68a31a98896bd72e41d08929132be"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 18.asset.meta",
+      "sha256": "221a7a4d867986da0065a629f10dce9964a3d3ea31c262d2113d7b03791c4ed6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 19.asset",
+      "sha256": "443fba5ee2de8cdb169849df9ff27a03d0a38ef5989e215b4de8e1855eafdf82"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 19.asset.meta",
+      "sha256": "973267123a2c2d10e7d6b2e42536cd5eea9c0918cc7d5431c83024615936929a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 2.asset",
+      "sha256": "029993e1356914ccd2aed96994ebe09deb91aa8ccb06cfabfe940cea8adea482"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 2.asset.meta",
+      "sha256": "f3ba6af6a9cf85f1100895321ab7bcf4ed3091dcd4f2b2fce4f7723877604f41"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 20.asset",
+      "sha256": "b92bf56b0d4eff4745541abec56eaa4f9a9399310e81e337a6d655f7e4b97a88"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 20.asset.meta",
+      "sha256": "3a082ac6824a36489b89744276490b5630c26c84093071f6769af07f132efc72"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 21.asset",
+      "sha256": "cd10656a27ca5b0559d252a50691bc81fb94fbb28ea283d1630ebd0ffd6a8b2c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 21.asset.meta",
+      "sha256": "7a482518e872dca7f2cc56361128a94f90201ac90e85c2b328a359a168ff2aea"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 22.asset",
+      "sha256": "dd11eea842b88b0af44b373551c3766d0615975fa91724683d08dc376ec655d2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 22.asset.meta",
+      "sha256": "50e9fd67e7e890bd860ba84e6b5aff7083aea6dfe7c5c69dd93003ba7356758c"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 23.asset",
+      "sha256": "b627b38bb14262f9a10a01d5d67a150c884f70132f442bd59a1306d604415b95"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 23.asset.meta",
+      "sha256": "c33ebfd956f43860be33ca516d6fd607a7c35f0ca1ff1eeeee6803bfc55f39c6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 24.asset",
+      "sha256": "67b9a45739176caa1307bf034f5fd7707b450f303f69fbcdc40adb81fd251b0f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 24.asset.meta",
+      "sha256": "b26d0b07e3aa29876596f25b6d9d153f14376f8e270085132279f7e1eb0c3709"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 25.asset",
+      "sha256": "2fada643e352ee0c52c728786455f00046cf29f03bc8dd77463f133d1ce5c7b4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 25.asset.meta",
+      "sha256": "892f5aa4447acb42b1889613bad3a784ea26291aa300930dd2866c5771070841"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 26.asset",
+      "sha256": "13aece4b87720735ad50cac3e83c859965897dadd5f7a36bfbe97bc94faf4c91"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 26.asset.meta",
+      "sha256": "3a29569d3509db35a7cb570f96f479f45cf2fcb2286c27c466dc5c6ce07a870b"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 27.asset",
+      "sha256": "1ec6b88600f1b9bf570de3ff8465650e407408be9f2a8163d8d52dd4fea31c13"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 27.asset.meta",
+      "sha256": "8834539edb1298faf48fccd7d9e7a0b650f0b4455be23c3825edd264a979b147"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 28.asset",
+      "sha256": "9a0924e94f70b6b66cf5324c87b58032f0dd8ee09fe298d3c95687e1c4e46634"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 28.asset.meta",
+      "sha256": "4c40b960e112056b63b865ad4055b0fff0735e2ffbcde9f171c496f5f9ee510d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 29.asset",
+      "sha256": "fbe0aa2f0fa3faaa840c687a092e7c25d206b6e2c217b090a0d467e1277b1aa5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 29.asset.meta",
+      "sha256": "8835e72642c75d788459d8d75c5d4e699fb153027e04403cdf0117fd657e7846"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 3.asset",
+      "sha256": "41e594f5677850c9a5e58729599a36076d15d269abf754df2121b8b588dfd4de"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 3.asset.meta",
+      "sha256": "ee3c778d1f33a635fe648e3a23e7630fb0182810dc7d0a608e23f0dd2118931e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 30.asset",
+      "sha256": "4ac2520c6a693abd399d8f5f22d19f5999ca10367ed594b8eced7ce77431d068"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 30.asset.meta",
+      "sha256": "b71517be391890b95baeffa747b43b205882c986ae2dd8ae8ec5d00bc893452d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 31.asset",
+      "sha256": "1e22e9ab384be25d93567f29287bfcb5c52f051859116d470d038623b1a639bb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 31.asset.meta",
+      "sha256": "9b9d9e8076b99d662997e05512066478d9ba528051674a3820509377895750f1"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 32.asset",
+      "sha256": "8a56c777e57976ecc09e32341e1f29301a79922e972ddf858b55161cf3bb7b7a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 32.asset.meta",
+      "sha256": "83774fb3665c6ee62671bf53437488dd7250220c3f3397c6c503f62eddab7520"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 33.asset",
+      "sha256": "df7a10f90fd0e24c7c3c0dfb40ec1f5c224cb6930f433e5529d29e5c440cee78"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 33.asset.meta",
+      "sha256": "4651a6b56524e33c9147f925d78d4c1637a5af76df7d24eb2d1168148ca5f441"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 34.asset",
+      "sha256": "a05d7d0ea885d2e649c8142c3bbb397102e2234dc988ae71bd9232e433a434c9"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 34.asset.meta",
+      "sha256": "ebff8f09952788f72d66b334613e7ad46614d17356a484460e2079b17e4704e6"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 35.asset",
+      "sha256": "6b2829172ef354c54fea3026ebaa8b5400428e9636286ee1ef5c4bf840eaabd0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 35.asset.meta",
+      "sha256": "17515937690e8933306888f2e5045275faa6a8753d819eab52da0801ecc98898"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 36.asset",
+      "sha256": "8b8b302df2e15175d92422095e508f7d259cf42b0c307533f1bda97fc85740ac"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 36.asset.meta",
+      "sha256": "91327e6b7f9d31b524cde5e08cb09155f11acf5a47a4a52cb6ab1eaca4e15865"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 37.asset",
+      "sha256": "ac5beee7e7fb88c2761c797c2f48f2d85b9bd8fc5bb93a334ccfe7a1aa633785"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 37.asset.meta",
+      "sha256": "3b39fd3234133966057a07390589d749f5c0ff010862c5a2f2e0ec2a5654dfbe"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 38.asset",
+      "sha256": "00a59452815b42dda12bcb73003e12dd8b2ece340a7ed642d96f8bfe8a850740"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 38.asset.meta",
+      "sha256": "8a64832523526bab53951a284a5a6a763cb81ee56461ca9f0ea5a82b98f84966"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 39.asset",
+      "sha256": "d8858d735ac7f62c1c2c64237771bdcd4aae9fac70370ca15ef9ccd134f9ef47"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 39.asset.meta",
+      "sha256": "ffa0483701a8b44fe28f95cd466e8f6af30c04dfb0c740d61ee9b66f2a68a79a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 4.asset",
+      "sha256": "c26a2200308994374a98bd33d94fa750020f212543d4d204f86d8b27fe9d986f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 4.asset.meta",
+      "sha256": "2c369f239906505b69a4b1e366882a562834b20eed2f2d1eebd85b06b5f2c4c0"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 40.asset",
+      "sha256": "5ac3cb30be1e0e1cc2cf7982a87394d9c09875286562d4581e11272be7fbfb29"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 40.asset.meta",
+      "sha256": "2abe246d26a11285aca065dd2df9895c16a7f0436ab21622e7c1ec3d6b04235e"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 41.asset",
+      "sha256": "86d99c14965dba412351fa82a24700e8709e6aa68ddecbf32531d2091a3fd0e8"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 41.asset.meta",
+      "sha256": "6b8f004b31a6d1d29ed63aaabda087d142696d7e26ded988e9ce8027047a4044"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 42.asset",
+      "sha256": "76600a7357fd7a1536bc991dd2aadd072e4c02cb1df14be763eec90efa20fdcc"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 42.asset.meta",
+      "sha256": "590d23600add42d08563799295a0b341c69a42257e0943765657820a44e57ae2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 43.asset",
+      "sha256": "ef8c739b9eb0714503d24ba6edeac7bc4fd0b650da073a4d685573ae3378dda7"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 43.asset.meta",
+      "sha256": "cb96f56f2018f184c6c079708b4eb5dd4018295b458e0ba6dbcb3c92ef0b45d5"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 44.asset",
+      "sha256": "81b1c620fd865e59a31d2f0a15c448c10fe91f3328b8b7bc1d7157b36c365661"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 44.asset.meta",
+      "sha256": "df06cda8d9445ac2fa36c3272e615ea86b21e11f4e4b6b8baf67dc9262aadac4"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 5.asset",
+      "sha256": "216e70935ab549d6e0944214431a69054db1eadf19a08c68d1a2f56049bd939a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 5.asset.meta",
+      "sha256": "3543791f6cc4e64d0282ec3599ba0bd4f662c0242d839c7509c25809b120e8ad"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 6.asset",
+      "sha256": "396bc675db4e7f3e9d6df87149f314c811ee2712c6b6e0b1df5223b7415e426d"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 6.asset.meta",
+      "sha256": "4cb915f40f30958524a3f8038c1ec9cce074f5a5c3fded9ac541823863a56218"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 7.asset",
+      "sha256": "b6215f414ddcf314033862218c99a1ad03ebf59d8e08078e27aae4cfa0cba282"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 7.asset.meta",
+      "sha256": "d9d82e1ad37acdd3ccd8074aa275c3c481d8be7a64b2cd2b152ad4653501d226"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 8.asset",
+      "sha256": "fa55c0bee037026e1304efcf33d81a9c15805c17f502cfde95fba47c3c172c81"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 8.asset.meta",
+      "sha256": "305e44f77534b82a0cbb233d35dc158cf2c352e9a21e96beaf8799c9b2de0390"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 9.asset",
+      "sha256": "62b8ed64883f04788a136c009853190b1ebb1c6dabaa3efd1014f8dee8c5aa14"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001/Homes surface 9.asset.meta",
+      "sha256": "c00e6d06c2bf8e69af399fe4995a76dd52281e7851539ea5c1172e92034dab36"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesMaterialsV019v001.meta",
+      "sha256": "97912231ace1e476da72052d0df9d1f90f6709108216e892c0c0a6f4d24d69f8"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes green clean beam junctions.asset",
+      "sha256": "e7506ef3334210bc00658ae2a5536942e4affdb59c306934e0d2c6f133d5fc07"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes green clean beam junctions.asset.meta",
+      "sha256": "c8fc9948b1ace5524b884afa156aab7c3bd0fd687dad619272295d2758aa8b9a"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes low sheen soffit.mat",
+      "sha256": "4d548087bd39151af1594c9a6c076913fa70554b5949bd2f97ce350fc09c9006"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes low sheen soffit.mat.meta",
+      "sha256": "d388d19d3d6de6070a68389587a2c3ff2b6bf6c64a7d943cfe160a116ec29600"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes porcelain with separate soffits.asset",
+      "sha256": "a1286772d94fd457bed669e4298a99c5e863425baedada821687140d496f887f"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001/Homes porcelain with separate soffits.asset.meta",
+      "sha256": "f9018a61219d5f68385930317bd38c9de89b00c3b170b66a24efefa45efd99bb"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Models/HomesSurfaceFinishV019v001.meta",
+      "sha256": "9585d9e157db43aafb32950751741ee276699496e33731b74442e94916ae2da2"
+    },
+    {
+      "path": "QuQuArena3D/Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+      "sha256": "11912cc2a8c7e69ede21ffd4764c72764db6ab2d7ae40511943cdee46f3df29c"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/attachments-call.json",
+      "sha256": "eabf687798efbb0e00169746bf2250cb4afad2e35b4cce7fa42f7d0911c49d9e"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/attachments.json",
+      "sha256": "92b7703eeb801657dec188bd973f2b3dfe71fc9b6c560ae0926aeebf13fba482"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/audit-call-v002.json",
+      "sha256": "139f1e9ff3a7284435ed9dbd6bcf36dd5746e80889bcc4342082ea55cb7c55fc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/audit-call.json",
+      "sha256": "8e63f345296c78f66ab7b8b365b21bcd01ed103c8c46c11cdf675aa6963ee3d1"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/audit-corrected-arc-call.json",
+      "sha256": "139f1e9ff3a7284435ed9dbd6bcf36dd5746e80889bcc4342082ea55cb7c55fc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/audit-corrected-call.json",
+      "sha256": "139f1e9ff3a7284435ed9dbd6bcf36dd5746e80889bcc4342082ea55cb7c55fc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/bench-correction-call.json",
+      "sha256": "9469b38d46805f2f83f36222fa6678fc927001f621c0ae22f4c1b6fc97cb67ce"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/bench-correction.json",
+      "sha256": "b8e3740d3b2785c7b94bc5035ccdfd99d661586e02092ce9e8cd831bda90e93f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/bench-trial-call-v002.json",
+      "sha256": "0e7d58d6c03be4eb2449afa0ad4da1bda52570f736562eb4a942ad1d30a0f2d9"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/bench-trial-call.json",
+      "sha256": "911c151c60a1d7fe18233a2a4bcdeab4f591b4d5d030b6a41a1f5deb01bd25d1"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/bench-trial.json",
+      "sha256": "dec8667f8b6789336ff265c3c533939c8988b4aae02541c534a816d494727747"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/build-summary-v001.json",
+      "sha256": "bdb6fb3f7c2449818404de330fb4645117a46a4ab09bead0e35240f6470092c8"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/build-summary.json",
+      "sha256": "6503587509e2bc3fe33c5242f9c45a4963b625cd33e0a0cc4087a196393d7297"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/install-call.json",
+      "sha256": "6ab2be5b19f90a9de0a6b18f8b08754ef67619e8a49e43077698a43ea201bad3"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/installed.json",
+      "sha256": "aeb5ff51d854a6f2e54ac610cfbdd9edc263e54d850c8c9b50c54f27715cb5f4"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/layout-section.png",
+      "sha256": "d16f1ce5bc04c43e332b07f6d8125fa1b6d8839ad241e05248e664db1a334029"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/layout-section.svg",
+      "sha256": "f1770a8d6b8211ef63a418b73be33a02513bc893b4d0287b5bbb5b8d3aa60c8d"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0/exit.json",
+      "sha256": "a3c16595c8477d1f8807898ce0f7fe56fa54b0040b40e7ead9cdfe7e7ca549bb"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0/process.json",
+      "sha256": "123fbbac0d4131f10e8773485d632307cef9e5346cd2665851601368b73bded1"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0/progress.json",
+      "sha256": "7661223b7065f1b15ad7131fb05bacfdff21825c9e03ceb562dacca0d2418074"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0/route.json",
+      "sha256": "2b04652ed220d3ec3a06f0ee37901d34a95a2a4c75d5d3841a3286e900a6459d"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0-v002/exit.json",
+      "sha256": "be73600cfd96ffe43db11bd9468722ea5b3b0ec35bea417d2f30ca5e4548470b"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0-v002/process.json",
+      "sha256": "26608fb8c7ff20c4eb782238a59f5d24799eb392e17ccf6900ef73a3fa53f300"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-0-v002/route.json",
+      "sha256": "40e9877c9dc5c2c71e8d64bfae2a0cd840e936a076693511e06109dc8e22baef"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97/exit.json",
+      "sha256": "36b28e078c1655764ee166fceddacf4f667dd45654458537ff7de425d0a8d97c"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97/process.json",
+      "sha256": "15879346ab67f591a4caaee618def8de40a93c5a2489182d2834235c3411bfe8"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97/progress.json",
+      "sha256": "6dc4fc9d9b3cbba6fbf55fa292f85868196088f98c6b0b51906568dc38bd90db"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97/route.json",
+      "sha256": "c930e9acd565f30b4e201c4890f701704c98b9efd8ed4fdc42f4dd26efc88424"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97-v002/exit.json",
+      "sha256": "efad86f9367e76edb8bfdf5c2384a3e939d25b1b16959b0de98c3dd7a123fa81"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97-v002/process.json",
+      "sha256": "b21e0f0f1ac573c08f5c5f545ebe6abf029342d00f35c8b3de32a2e68bad589e"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-homes-97-v002/route.json",
+      "sha256": "a1d4bb09f3bc83164073b049148d94f553498e421a24895de0ed60c4fb28cd46"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/chatgpt-back.json",
+      "sha256": "9cfea8e7361dbd145e26a6afbb5dff12a8f1da3cfc64783c14e6066488db80d9"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/chatgpt-out.json",
+      "sha256": "eaa33fe509132e14fb43fb85a6e78744c93ec4280183cac3d93e60eb31bce950"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/claude-back.json",
+      "sha256": "c372e8ed0391dd35fb380d3e548b774897b869758b069aa86f082599de2bbbbe"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/claude-out.json",
+      "sha256": "0efbd1af87afb52bf422215d88b32feb6c5af467c44f7ec8b39a6ac749b877a6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/deepseek-back.json",
+      "sha256": "35fe4ecf25e4620903bff301d35aaa4c91b039584a80e6203713203bb585cffd"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/deepseek-out.json",
+      "sha256": "96c6a2f1da5ddaa290e52ea3a6ea82e9cd442ac755bf4c41939a750dd6d10ed7"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/exit.json",
+      "sha256": "ea1991fc61eab2de8a94e5994492956ac0af04e84b4e3c0207d475937bb0d223"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/gemini-back.json",
+      "sha256": "153a483904c8f4c8e03327e92461d85541894c18dfb2d0e252d7622c858ce0cf"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/gemini-out.json",
+      "sha256": "35b3123e9f7cbec597f382e1a7b1731b2e1b60e7f4ecfe4320fe51bb7c42ae75"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/glm-back.json",
+      "sha256": "5345e7f36332254e6f5968ebb8429c44ee1fba6ec063c5ec682f0aa32756ba98"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/glm-out.json",
+      "sha256": "01c385fe99cc718fa6f63c2bb037878fc3a285841aa1697e7dc9af387b30deab"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/kimi-back.json",
+      "sha256": "657051259fb2640dfe753ac58f95a2e25ade8776e15bec98486d0091913e2b33"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/kimi-out.json",
+      "sha256": "7e22ad88fc759915e974a5d2fe268a70701fc8b088a033ba157e39300a9ccddd"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/process.json",
+      "sha256": "4e5f1355ae30f0e0edbeb07bdc67044fb877c9f6d23d95bd42999a67174f5624"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/progress.json",
+      "sha256": "11441538a0d77996182a9516b127a98b002c7b03461ae3267117e0ac17e118e7"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0/residents.json",
+      "sha256": "eb8083cef1f9caa6c7ddf9006776d94b8fe536c9503a13c5ae87c56d2207bbbb"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/chatgpt-back.json",
+      "sha256": "2f655d734304670b3c9a178c5bfce6ba4a43a64f5b9eb5454faa4adf4990e2e2"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/chatgpt-out.json",
+      "sha256": "e39088adb08e10da1a5cf32294bef9dae678d0854d489768f1ec8a9952f295dc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/claude-back.json",
+      "sha256": "98a726921686df40d38992ad1cc1a561e843b5275a95a6938c691c7a09a1827f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/claude-out.json",
+      "sha256": "61a0ec7e0df21eaf044759d3de38bfe5c2bfea8371478712a0068f5304d98ee8"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/deepseek-back.json",
+      "sha256": "e7dbe60bce8ce1c0944e9142ca315ed6775398dc425b99c1771075abb89dec97"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/deepseek-out.json",
+      "sha256": "1b6080eb092946433609cd5658fa75f0c02d550217c399bf50571139be5bfcd4"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/exit.json",
+      "sha256": "00d8b7b9ac3bf9eb990efdc5e91e894f10e7953308b3ebb3678380c05d30c7b0"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/gemini-back.json",
+      "sha256": "4b8e572711a620359775194ca20238cd100302874eed3c9e1e4efb48c59c2665"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/gemini-out.json",
+      "sha256": "206ce8c508812abcd3c69af7ffd49618f7a7ded2483ce526bb56f476673d6556"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/glm-back.json",
+      "sha256": "08d438c1b64a1739570ccc202e7774572d5ccac7084dbfba0fe45a2881391660"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/glm-out.json",
+      "sha256": "a94576420813e33133570cf1c946978d6b49dcd41b1b064bd7c1ffedea1af73f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/kimi-back.json",
+      "sha256": "5e4fa001e8ac10368bbe6d053de1820c5dc2259a25d9a301b23d7bc76b45b64d"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/kimi-out.json",
+      "sha256": "cfa97b6948e7f62303339c09f39a1f2b615214665e36991317f8acec30fd07e0"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/process.json",
+      "sha256": "d74f3074cf846541ee0778afcfb5b6203e9581576009dc1efe8393606419c635"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-0-v002/residents.json",
+      "sha256": "0f2948e9008328ccabec40fa3e65ff838556bc837b7d9a97664d52d857fe1cc5"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/chatgpt-back.json",
+      "sha256": "7defe2fef8fbc93681069ae0f582b1e7c3018c949f7ab63081310a036b6a1f05"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/chatgpt-out.json",
+      "sha256": "539fe7af712e450982ad40ddfdc8eda693dd4477eb4f2ad9e5085e044b44e0f2"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/claude-out.json",
+      "sha256": "e6946e37d695e7947e359b675038d469677ded2e4bf65617a3f04b3f855af668"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/deepseek-back.json",
+      "sha256": "82a322f986451eadc56a6ec8250bb1fc3963b2350540fbe7c17c4f3b180a7158"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/deepseek-out.json",
+      "sha256": "5b04c68e6469334a5419285db20241480ec94c4c85f4ad223bfd2558972a8976"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/exit.json",
+      "sha256": "ff1bc71578427d678c48c2d812f5e3d6e07e895eb29dc3ed9bb01a8c328a8ed1"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/gemini-back.json",
+      "sha256": "1f63f54290486f80fa216ce3bd754d2b5a9633d649c154a4ce28163d476682f9"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/gemini-out.json",
+      "sha256": "ab9d43a3f9b7d2dc25dcb0a99113d131e55be84bd7974ac4b7cb2485c8ba1d96"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/glm-back.json",
+      "sha256": "3544c83bff7d7b2745a1f464f27a6b0e90fd1bc7f09818ce11948d45e3695e33"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/glm-out.json",
+      "sha256": "f6021f9bd9ff3362c7a1fbc2585ab2dce28840ae921a4f9cf8d91e30de403f60"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/kimi-back.json",
+      "sha256": "3bfcadee9e7daafffde3e43f1e548aa7ac206a24f869f0dc57ca8440fd5ad049"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/kimi-out.json",
+      "sha256": "c70a0257b0f0238420c0de51fcd317d66f28680619deb78d21163f673b761183"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/process.json",
+      "sha256": "ef7c709be1908b7ae7391bbc01c1b7838e123b3a7000063351e69cc5e88ae300"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/progress.json",
+      "sha256": "218e5dc223272c460d6c5832e141e133fc5e83a66c623bdd40bf8a3f8e1c187f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97/residents.json",
+      "sha256": "7093a72e5ed061398ee697338b2ecfc813298dee0613a27cc9a5c28593deaeef"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/chatgpt-back.json",
+      "sha256": "de4faa5c8ce187c16d6ca1b8a79e3435944b1dfe75e2e92400bc3f8dea8840ee"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/chatgpt-out.json",
+      "sha256": "41dfd96892c92c9ab9f671e121d5a1410ceaafa43950a4ba298ccb0d01052bfc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/claude-back.json",
+      "sha256": "fa4be953d08fb63b6544b8d8e43fc1bc991990b975ee8e1b03fb091aa9f933a6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/claude-out.json",
+      "sha256": "adc0d4069d8421309c66da22c8a2a9b143e08cbb5ad226b3098b99faa11dfe44"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/deepseek-back.json",
+      "sha256": "a30c4c671a9cfb291f381f21a8e12890ee2c87f2ac0b5d121a1d299f4246cbc6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/deepseek-out.json",
+      "sha256": "9d00e825d8bfa6709c0d562721a8088f4f5c1568e9970e036fa22b12533d8cba"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/exit.json",
+      "sha256": "9d55a047ab5eb800a4db6af7bc85200ce79879643a1f03624c80e1e203d736a3"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/gemini-back.json",
+      "sha256": "ab2f9a75f2ccb2a85b408423358af0e24f369e4df547ac830d70df9ffa6182eb"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/gemini-out.json",
+      "sha256": "84aad3231afef84aea57cff032abe0ba88f96fecef8218609be5cceb82445dce"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/glm-back.json",
+      "sha256": "a0039afa414661c5533bd217a21fc90895eac7f0759433d6eda4bb44f3aed60e"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/glm-out.json",
+      "sha256": "b2db2089c08ade8ec6455c21188f9667bcbc1e487c6585e2c79136141c8c79db"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/kimi-back.json",
+      "sha256": "986b56e4b94e452c9d459e87abf6a2c9582651598e653b7b9567f8456ee177ef"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/kimi-out.json",
+      "sha256": "6ec3cac64bafd73ae3f906868048c81babb495b111cf3c8bf7ee67fb9dbd4d8a"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/process.json",
+      "sha256": "4d5e04a2953e16e3a75ef65968b93506f66e409f8b84b2f3dffd4a7e6696c5f6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/player-residents-97-v002/residents.json",
+      "sha256": "4019305171be68e96713e1eb785a25ce1cf56480427a06a94216a8205b45918d"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/prebuild-binding-v002.json",
+      "sha256": "2a721874c77e56e9161e9fb6789cf0caaca5f0fe84ed2969d2900720538fcf57"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/prebuild-binding.json",
+      "sha256": "34a589c2e0538bba56219ad3379dab767cdfb8df8d6e8d313c8267ed80052d75"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/preflight-call-v002.json",
+      "sha256": "1abe994c4cf94ae0c0e8b6bf51b3ca04d6c9bff50e064612dc330aa7a69fc109"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/preflight-call.json",
+      "sha256": "d74a016b6991ad39a9bbf6fb911e0729e9ebe8e83fe3a1f5ba0d0da39636bc5d"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/preflight.json",
+      "sha256": "7c6d4e10189abad4aaebeaf0e4c23f23bb2d236d162b98f66ec2eaffa863c2a0"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/preservation-v001.json",
+      "sha256": "98b2249e26e54b5e5f39a30f6c21f8c6b985013d439d980736e2346b58f2e347"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/preservation.json",
+      "sha256": "27f48ec1594801a98a228321d72aa167bbea2ad21406d546ae981767ee908b38"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/README.md",
+      "sha256": "636358cb7da8ead69129fe8267fab7a4861007f777a9027a7b5f9ce6f206188e"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/reload-call-v002.json",
+      "sha256": "651691788614b94072ebbb4b163e55a02b222f1d7ca9a99165c47a07bc665247"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/reload-call.json",
+      "sha256": "651691788614b94072ebbb4b163e55a02b222f1d7ca9a99165c47a07bc665247"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/court.png",
+      "sha256": "49c86828b17c2d81ee9df8ef111d332de21adb11edb6e802aaa326a19e49e252"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/exit.json",
+      "sha256": "bd417386f7f563264dd522d6a93c12b6c331f54dcddb322d3ea9d798db364851"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/group.png",
+      "sha256": "8ae0c12340686246d77c2ac2352bdc82408bb20fbf62a08b2ff3d5205104a6bb"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/old-lounge-entry.png",
+      "sha256": "427b0fc9e0a10e112fb56923b0dbca2d11c5af1726e2ffa9440c1dd3c1ee709b"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/old-lounge-interior.png",
+      "sha256": "770aa4ea573bda48dbcdfe208c07c3b1cadc2d751dca8a5b0dea7d95464e4b5c"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/outer-promenade.png",
+      "sha256": "f24cc878c07268da903c839a934a885f48c3d0bf434a8c7e8ba25ddfab92510b"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/process.json",
+      "sha256": "ffde9b015ca8746266645526d94327005504c3f0dfa5c8f0628611b30555da98"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/rendering.json",
+      "sha256": "31db2ed0f9c1c7e682f861499d0574508783a2f561d5f962be6f92f5e1d0e17b"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/street-76.png",
+      "sha256": "a46ba58c74c93168efa0b3b3ccd3b5f3f07e3abbbee15653554aa6d622074890"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-corrected/street-78.png",
+      "sha256": "a3f1815d9bd9686f1974f5f2de0174d80befb40ade43e29d58576cdc1019cc2e"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/court.png",
+      "sha256": "54b71548be81329ba2c4fa48520aaab057170dbd0f97a75377ef5a4c4b9fd893"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/exit.json",
+      "sha256": "b1360332679161ebf8863bff6580754b6c89b70ab440ddae9588428035132218"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/group.png",
+      "sha256": "d2d767789f772959a89f1f6d1dc1699fd22a9e566c54fd5ca8f8d5eade31ae24"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/old-lounge-entry.png",
+      "sha256": "5141d589b07bec8015f4fc6da45cabe799b1d29248940b43fd414c3fe1ed9cdc"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/old-lounge-interior.png",
+      "sha256": "c4e99ac6ed4f76d4e4d17aad7cb48efab616aee9f878e9a777198b72182ccdd5"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/outer-promenade.png",
+      "sha256": "7c8455639b59658dbf5f1979f46aa868208b7cc1c46781bb0f056001dc7c262f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/process.json",
+      "sha256": "91cd2ed33475de17dd5d8914e1ef409c24393920a18cd65362a8ae57728e55bf"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/progress.json",
+      "sha256": "656ca5aa4f4b96d7df72eab1d4f55e1c8c59abae86fa94facefa2dd9c0f459ae"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/rendering.json",
+      "sha256": "b9a5fba1911d7877859b2af66264f19ab381c7ac910b85917ff322875c20ee3b"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/street-76.png",
+      "sha256": "8a8e279f5899119f4ca91b0fbe1eb1ad0ddc10ebb7516fa9451f0e750bfa7a2a"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/render-final/street-78.png",
+      "sha256": "9ff2185dd375085565284b541d9ded9a4ad88fca51c23679fc007f45eb486935"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/resident-diagnosis-call-v002.json",
+      "sha256": "e057d0922cc90aab00eb19a6a5d08bad37d640d137a030f2a8266e465dd4b58f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/resident-diagnosis-call.json",
+      "sha256": "17e600ea9f3ec914015453289f59fcb1d60da16273270a5011bb949e7f15bde2"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/resident-diagnosis.json",
+      "sha256": "eab8369fdcba8df5f8573e9ead531965d27d1c3ae72901ee06b977c71e8fbf52"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/saved-audit-v001.json",
+      "sha256": "a0b148e19ac97db193c0031e7a829c93e57440856147eb955a8af23b7406a08f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/saved-audit.json",
+      "sha256": "c86044a01ea49a8adc2d75d6c833372038ea3ae8e17148e9cdaf3d1b47a8de99"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/section-call.json",
+      "sha256": "da360c79896740306a8af115f25e849d4deb69e606f0fbccca43cbcf28c46e32"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/section.json",
+      "sha256": "22559247fc1dace0f7124ab59c603cf2a396470c94829bb96a683805eb66be45"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/survey-call.json",
+      "sha256": "44448863dc36867bda09ed380fd6ea5b3779bc47c99788012f3a0f08d280fdb6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/survey.json",
+      "sha256": "446641bcf6c4da64c0fb2949a9f937fff4053e38820560d253692b40ec91e2a2"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/swept-clearance-call-v002.json",
+      "sha256": "c4a8a516de5b249b95cf00d2ed51e9875c8529da48682cb98e55c8dc1492e84f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/swept-clearance-call.json",
+      "sha256": "2274301670d4cad63a0ec2378471e6d4310e03ff509da6f2de6a0ff3cc3788db"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/swept-clearance-v001.json",
+      "sha256": "fccd9e3da33da8ff8a461af01c17738ac36fe61e4f21cdfd69fcaa0d1ed0a2d9"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/swept-clearance.json",
+      "sha256": "5b3ea36f8662ab9a6bbad4f38fb7e7b687a1bd24d4cf1e87e0ae55c1f6a30a10"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/swept-corrected-call.json",
+      "sha256": "9403ecc8d87d82947ed07b8e468b402bb442ab2dc13b332706960c9341a93921"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trial-call.json",
+      "sha256": "e7bf4fc1ac8c7104ab4d57916bf97a154b0ddc5ad499ec96e0f17f017e04bc71"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/outward-8/court.png",
+      "sha256": "a99e23c468c9981f14c1fb7121ec6b50fd1b5ce16fdddc0c761f1200157a1ca5"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/outward-8/group.png",
+      "sha256": "ffbac6a31133475f815fb55752909a0c474e91c5f38cd9e138e31be42be45373"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/outward-8/street-76.png",
+      "sha256": "4cdb0fd51f9ed3af2f98ed7a65d26f37c265a27f8f2cadca32b41e7c92b19eaf"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/outward-8/street-78.png",
+      "sha256": "e0de5f4cee950729af886243e2b7166783017da2d9bb08a41b8d7fda8aa2a2f6"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/report.json",
+      "sha256": "523bb11e4b51b528f3382e0cfcc04b9568953c9a6dc8ddc4cd9268384ddf911f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/retain/court.png",
+      "sha256": "eaf26dd75ec1b1c890030fa7daea7c6385d7736475888288c021c0f959fe1f7f"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/retain/group.png",
+      "sha256": "94d6aab1cedd3169e0dcaf832425b506e1d36307bdb72f57688c179a8f42b9dd"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/retain/street-76.png",
+      "sha256": "ccf2ab6658cf26044d4937fc05e3a6782d88e498fc4a5794280bcec55181b29c"
+    },
+    {
+      "path": "docs/validation/station-v019-homes-arrival-20261004/trials/retain/street-78.png",
+      "sha256": "28cfe7f3ebfb26671d3e52547c04b95342eecc2b91eb3fcd7da899d7857d9d85"
+    }
+  ],
+  "payload": [
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019.exe",
+      "sha256": "e1a9d9e062bbcdb91f76983fae8bb1e4fb8036d55289318ef91033f130d38ecc"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/level0",
+      "sha256": "cba2be7a3833dd8acfd61cc64181c16e82a3931d3dfe6cbe50184df147261bc9"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/Managed/QuQu.App.dll",
+      "sha256": "ad4117c023421a551104faf4c7d590807679962dccd40cb73258f06f324022db"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/Managed/QuQu.Core.dll",
+      "sha256": "ec93650100644be7747d409df20a48dac04ccd6f9cf21637c0d55e21619e6125"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/Managed/QuQu.Infrastructure.dll",
+      "sha256": "3d853d2205fa35dd286de3192e911e082a0f93670efafe142c5ec42f08c0db41"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/Managed/QuQu.Presentation.dll",
+      "sha256": "7e727830cf9f8c8507ea53c55935ac22d61e43c5cf9d4e21a70e73e45de267a3"
+    },
+    {
+      "path": ".cache/v019-homes-arrival-corrected-player/StationV019_Data/Managed/QuQu.Validation.dll",
+      "sha256": "e4218895602e589f1c54751f0de4e5914734b450b797447eea32591d04a3bc57"
+    }
+  ]
+}

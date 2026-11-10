@@ -1,0 +1,15 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "math24-judge",
+  "title": "24 点裁决擂台",
+  "description": "四个 1-9 数字能否凑出 24（能/不能）——把「表达式多解」绕过为可解性二值判断。可解性由生成器全排列枚举权威判定；能/不能各 15 均衡采样；锚定已知案：3 3 8 8（经典难题，能）与 1 1 1 1（不能）。测算术搜索与数感。",
+  "author": "AI斗兽场（生成器自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:math24-judge:2026-09-10",
+  "taskPrefix": "只输出「能」或「不能」，不多一个字。\n",
+  "judge": { "kind": "exact", "lenient": true },
+  "conditions": {
+    "solvable": "可解（应回答「能」）",
+    "unsolvable": "不可解（应回答「不能」）"
+  }
+}

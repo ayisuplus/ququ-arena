@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\furnish-reading.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "seats": [
+          {
+            "id": "v019-reading-L0-west",
+            "position": "(-11.650, 0.000, 27.800)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-L0-east",
+            "position": "(-8.350, 0.000, 27.800)",
+            "yaw": 270
+          },
+          {
+            "id": "v019-reading-L0-rear-west",
+            "position": "(-11.650, 0.000, 32.000)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-L0-rear-east",
+            "position": "(-8.350, 0.000, 32.000)",
+            "yaw": 270
+          },
+          {
+            "id": "v019-reading-L1-west",
+            "position": "(-11.650, 3.600, 27.800)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-L1-east",
+            "position": "(-8.350, 3.600, 27.800)",
+            "yaw": 270
+          },
+          {
+            "id": "v019-reading-L1-rear-west",
+            "position": "(-11.650, 3.600, 32.000)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-L1-rear-east",
+            "position": "(-8.350, 3.600, 32.000)",
+            "yaw": 270
+          },
+          {
+            "id": "v019-reading-L2-west",
+            "position": "(-11.650, 7.200, 31.500)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-L2-east",
+            "position": "(-8.350, 7.200, 31.500)",
+            "yaw": 270
+          },
+          {
+            "id": "v019-reading-terrace-west",
+            "position": "(-11.650, 7.200, 25.200)",
+            "yaw": 90
+          },
+          {
+            "id": "v019-reading-terrace-east",
+            "position": "(-8.350, 7.200, 25.200)",
+            "yaw": 270
+          }
+        ],
+        "sources": [
+          "Assets/Station/Models/SereneSpacesV013/RoundCafeTable.fbx",
+          "Assets/Station/Models/SoftChairV013/SoftChair.fbx",
+          "Assets/Station/Models/CivicInteriorsV014/LibraryWall.fbx"
+        ],
+        "addedLights": 6,
+        "priorProbes": 32,
+        "totalProbes": 33,
+        "newMeshyCredits": 0,
+        "isDirty": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

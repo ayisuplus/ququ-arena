@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v016\\b01-moon-sail\\package-v002",
+    "manifest": {
+      "assetId": "v016_b01_moon_sail_exterior_trial",
+      "description": "Retained Meshy moon-sail shell with closed edge returns, fine voxel repair and trims following the existing curved glazing; original glass and frames unchanged. Closed exterior candidate; rear junctions and final materials still pending.",
+      "displayName": "V016 B01 Moon Sail Exterior Trial",
+      "files": [
+        {
+          "bytes": 1182488,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "6408f97e2a0c93698ea2e0697a909b6e4cb21f1a6a8a29a3084ef10403d93de9"
+        },
+        {
+          "bytes": 1821,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "7749cecb329c6790f12a03b463da0cfe6d2464d98c1dc6b09d9874a02c222273"
+        },
+        {
+          "bytes": 870,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "c81102f6e496fa7def20485dbb01c50af90747ded818b7b2e9004af24b243cc7"
+        },
+        {
+          "bytes": 2691,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "17a1ca952a63abe7bf01f541ef28809991bd39efddd666a663d0f53b86858981"
+        }
+      ],
+      "license": "LicenseRef-Meshy-Account-Terms",
+      "model": "model.glb",
+      "packageId": "pkg_3281bb229eba80d88eb5e31b",
+      "provenance": {
+        "origin": "generated",
+        "provider": "Meshy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

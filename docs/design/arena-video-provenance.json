@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-13",
+  "provider": "Local ComfyUI",
+  "server": "http://127.0.0.1:8188",
+  "model": "MiniMax H3 ref2va FP8 + 4-step LoRA 0.75 + SageAttention",
+  "promptId": "24540e9c-3e36-476e-8a3b-aaa7c2d19374",
+  "cloudCreditsSpent": 0,
+  "input": {
+    "sha256": "26135780880A072FEF520581391B73F8012CCEC7BE3237FDF717F69671872966",
+    "path": "docs/design/arena-stadium-premium-v1.png"
+  },
+  "workflow": {
+    "steps": 4,
+    "path": "docs/design/arena-stadium-motion-workflow.json",
+    "seed": 2026091301,
+    "megapixels": 0.7,
+    "sampler": "res_multistep",
+    "sha256": "0907535375FAC5B54D5FB14A01BDA1EBA141BD4ED5BB41E3989C1B346926BDB3",
+    "scheduler": "simple",
+    "aspectRatio": "21:9"
+  },
+  "original": {
+    "durationSeconds": 6.583333,
+    "sha256": "E1F0CE3DA8E18E72CFD7DC7A908876CF0DE1874C1B9E46C5E59B730898076A7F",
+    "nativePath": "G:\\comfyui\\output\\arena-stadium-pulse-20260913_00001_.mp4",
+    "path": "docs/design/arena-stadium-motion-original.mp4"
+  },
+  "installedLoop": {
+    "bytes": 3710723,
+    "audio": false,
+    "height": 576,
+    "durationSeconds": 13.166667,
+    "frames": 316,
+    "width": 1312,
+    "sha256": "0B78448CF1A103B6446C8FBA007C421D38F903F89C8BB99EE279289057E3B082",
+    "fps": 24,
+    "path": "arena/web/media/arena-loop.mp4"
+  },
+  "processing": "Forward plus reverse loop; H.264 CRF 23, yuv420p, faststart; audio removed.",
+  "inspection": "Six-frame contact sheet inspected: fixed stadium view, cyan and violet ring illumination, sweeping spotlights, no characters or text. Reverse half returns to the opening composition; not a claim of identical compressed end frames.",
+  "browserValidation": [
+    "1080p and 1440p",
+    "2/4/8/16 model fullscreen",
+    "native and embedded fullscreen",
+    "Esc and scroll restoration",
+    "muted playback",
+    "video loop boundary",
+    "motion pause and reduced motion"
+  ],
+  "previous": "docs/design/arena-video-provenance-doubao-20260912.json"
+}

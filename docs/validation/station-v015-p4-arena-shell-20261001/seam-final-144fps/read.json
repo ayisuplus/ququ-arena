@@ -1,0 +1,46 @@
+{
+    "stage": "read",
+    "mode": "Standalone Player, real frame movement",
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationRingPrototypeV015.unity",
+    "error": "",
+    "passed": true,
+    "frames": 288,
+    "targetFrameRate": 144,
+    "checks": [
+        {
+            "name": "real world save initialized",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "primary save restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "ring-local pose resolves",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "player restored into current ring phase",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "view yaw restored",
+            "passed": true,
+            "error": 0.0
+        },
+        {
+            "name": "restored standing position stable",
+            "passed": true,
+            "error": 0.0004655894299503416
+        },
+        {
+            "name": "restored standing camera yaw stable",
+            "passed": true,
+            "error": 0.0
+        }
+    ]
+}

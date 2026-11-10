@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "E:\\projects\\黑洞空间站\\production\\black-hole-station\\v019\\diagnose-reading-relocation-routes.cs",
+      "timeout": "30000"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": [
+        {
+          "label": "Reading return",
+          "hits": [
+            {
+              "path": "R2 public planning deck/V015 public research and reading courts/V019 reading activity court rear edges/Activity side court edge",
+              "distance": 4.851135,
+              "type": "BoxCollider",
+              "localPosition": "(-33.55, 0.05, 144.83)",
+              "bounds": "Center: (-33.55, 0.38, 144.83), Extents: (7.56, 0.33, 1.79)"
+            }
+          ]
+        },
+        {
+          "label": "East passage",
+          "hits": [
+            {
+              "path": "R2 public planning deck/V015 public research and reading courts/V019 reading activity court rear edges/Activity side court edge",
+              "distance": 0.28237927,
+              "type": "BoxCollider",
+              "localPosition": "(-33.55, 0.05, 144.83)",
+              "bounds": "Center: (-33.55, 0.38, 144.83), Extents: (7.56, 0.33, 1.79)"
+            }
+          ]
+        }
+      ]
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

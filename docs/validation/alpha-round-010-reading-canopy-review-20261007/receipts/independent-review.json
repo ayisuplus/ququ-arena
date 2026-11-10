@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "reviewedUtc": "2026-10-07T01:04:00.1385083Z",
+  "reviewer": "Codex independent adversarial reviewer /root/station_baseline_review",
+  "passed": true,
+  "status": "ready_for_scoped_archive_after_coordinator_seal_checks",
+  "gameHead": "5d086c57bfb23cafda31dc11da76d7068ec752ff",
+  "approvedScope": "docs/validation/alpha-round-010-reading-canopy-review-20261007/",
+  "blockingFindings": [],
+  "reviewExecution": {
+    "readOnlyExceptThisReceipt": true,
+    "originalPngsViewedIndependently": true,
+    "imageViewingMethod": "view_image, detail original; both existing PNGs viewed at original 1600x1000.",
+    "startedUnityOrPlayer": false,
+    "sentModelRequest": false,
+    "ranGameScriptsOrFullTests": false,
+    "modifiedAuthorDocumentOrGameAssets": false,
+    "performedGitMutation": false
+  },
+  "scopeCheck": {
+    "trackedChangesAtReview": [],
+    "stagedChangesAtReview": [],
+    "allNewGameFilesConfinedToApprovedDirectory": true,
+    "alphaOnlyWrote": "near-image-review.md",
+    "coordinatorDocumentsAndSelectedReceiptsAreSeparatelyAttributed": true,
+    "previousSealedRoundUnchangedInTrackedDiff": true
+  },
+  "provenance": {
+    "provider": "opencode-zen",
+    "modelId": "space-bunny-free",
+    "sessionId": "d5aea103-943c-4334-a78e-5d8502f331d3",
+    "ompSessionId": "01a113ac-b88c-7000-a419-3fd26d715f42",
+    "autoRetryDisableSuccessFromReloadReceipt": true,
+    "messageCountBefore": 187,
+    "messageCountAfter": 204,
+    "finalCoreStateMatchesPrivateGetState": true,
+    "settled": true,
+    "streaming": false,
+    "pendingAsyncWork": false,
+    "queuedMessageCount": 0,
+    "independentlyCountedToolCalls": 9,
+    "toolKinds": {
+      "bash": 3,
+      "read": 5,
+      "write": 1
+    },
+    "toolErrors": 0,
+    "nativeEval": 0,
+    "nativeBrowser": 0,
+    "concreteCommandsChecked": "All three bash calls only inspect Git or list the approved directory. No Player launch, Unity query, script execution, download or asset mutation appears.",
+    "publishedConcreteToolEventsCompared": 12,
+    "publishedToolEventMismatches": 0,
+    "selectedAssistantMessagesCompared": 7,
+    "selectedAssistantMessageMismatches": 0,
+    "assistantComparisonMethod": "Compare private get_messages_page records by timestamp after projecting only role, timestamp, provider, model, stopReason, text blocks and toolCall type/name/id/arguments; omit internal reasoning and transport-only tool metadata. Object property order is ignored.",
+    "authorWrite": {
+      "toolCallId": "call_01a113db48d2774f926d4bff",
+      "completedUtc": "2026-10-07T00:55:00.997Z",
+      "bytes": 3021,
+      "sha256": "6fb5d24688774c2565f1061052a30eb0d33ed0a42f8094b9ef71e5e4bbca2aab",
+      "actualFileBytesMatchPrivateWriteContent": true,
+      "followedBothSuccessfulImageReads": true
+    },
+    "imageReceiptLimit": "Private events retain sanitized image-block metadata, not encoded image data. The recorded dataSha256 metadata was compared with the public receipt; encoded image bytes were not rehashed or reconstructed by this review. Alpha received the runtime WEBP representation (1568x980) of each requested original 1600x1000 PNG."
+  },
+  "originalImages": [
+    {
+      "path": "docs/validation/alpha-round-007-reading-canopy-20261007/player-reading-group-windowed/activity-door.png",
+      "bytes": 1373367,
+      "sha256": "9361823942c0c9641f7e3aad7b8256583594ee72a9aae0a36b30360043a5a431",
+      "actualFileHashMatchesReceipt": true,
+      "toolCallId": "call_01a113daee69763497eb3152",
+      "readCompletedUtc": "2026-10-07T00:54:37.837Z",
+      "returnedImageMimeType": "image/webp",
+      "encodedCharactersMetadata": 62676,
+      "reviewerObservation": "08门正前方，上方的大面积暖棕底面可见细长木纹、木结和明暗变化，向远处收拢。不能把旁边的门廊天花、灯具或白色柱当作木纹面。没有发现足以要求立即改密度的严重块状放大或显眼硬接缝。"
+    },
+    {
+      "path": "docs/validation/alpha-round-007-reading-canopy-20261007/player-reading-group-windowed/reading-door.png",
+      "bytes": 1409709,
+      "sha256": "27867e77dea1f522c9bf08552effe55453f6414179432217e86ad1a0110e7e0b",
+      "actualFileHashMatchesReceipt": true,
+      "toolCallId": "call_01a113db03a176bbbcababd5",
+      "readCompletedUtc": "2026-10-07T00:54:43.271Z",
+      "returnedImageMimeType": "image/webp",
+      "encodedCharactersMetadata": 71088,
+      "reviewerObservation": "06门侧，上方至右侧的宽连廊底面可见沿面延伸的木纹及木结；画面还含门口小檐与背景屋檐等其他暖棕表面。相似颜色本身不能证明这些表面属于同一网格或材质槽。主目标木纹方向仍可辨，未发现需要立即改密度的严重视觉失真。"
+    }
+  ],
+  "materialBinding": {
+    "targetObject": "Reading curved linking canopy",
+    "materialSlot": 1,
+    "sharedMaterial": "Reading natural oak soffits",
+    "sharedUseCount": 4,
+    "tiling": [
+      0.5,
+      0.5
+    ],
+    "approximateRepeatMeters": 5,
+    "authority": "These are the previous R9 source-only mesh/material/query checks and independent review, preserved by the documentation-only archive. No new Unity query was performed here. Image color alone does not establish slot binding or sharing count.",
+    "aabbCoverageNotUsedAsVisualProof": true
+  },
+  "acceptedDecision": {
+    "densityDisposition": "The two existing views do not provide sufficient evidence to adjust tiling. Retain the current material and density in this round.",
+    "gameAssetChangesAdopted": false,
+    "colorOrContrastCandidateAdopted": false,
+    "mandatoryNextMaterialConstruction": false,
+    "candidateMeaning": "降橙色、提高对比度和独享派生材质对照是作者尚未采纳的候选，不是已确认缺陷、用户要求或下一轮必做任务。未来如另有依据做实验，应只派生目标slot1，不修改四处共用的原材质。",
+    "coordinatorReadmeAndHandoffExplicitlyPreserveNoChangeConclusion": true
+  },
+  "nonBlockingQualifications": [
+    {
+      "authorLines": [
+        26,
+        27,
+        28
+      ],
+      "observation": "没有显眼接缝或严重失真可以作为本次目视结果；未检出同图案重复不能排除真实重复、UV失真或跨视角相同纹理。木纹本身有细长方向及相似木结，未做周期或UV误差测量。",
+      "disposition": "README明确限定为两帧目视未发现；本轮不据此证明纹理没有重复或UV正确。"
+    },
+    {
+      "authorLines": [
+        29,
+        30,
+        39,
+        40,
+        41
+      ],
+      "observation": "暖棕颜色与较柔的纹理明暗可见；高饱和、陶土感、更像色调问题及唯一候选是审美推断。没有颜色校准、材质参数对照或候选比较来证明这些是缺陷或唯一方案。",
+      "disposition": "README/HANDOFF明确未采纳该色调候选，不触发材质施工，也不阻断有依据的无修改结论。"
+    },
+    {
+      "authorLines": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "observation": "上方约三分之一及第二帧更易分辨是粗略目视描述，不是分割面积或辨识度测量；图中其他木色檐面不能因颜色相近并入目标槽。",
+      "disposition": "仅用于说明取景与可见木纹，不扩大为整块目标的覆盖度或所有表面的材质绑定证明。"
+    }
+  ],
+  "lifecycleCheck": {
+    "requestStartedUtc": "2026-10-07T00:53:18.116Z",
+    "localCommandAcknowledgedUtc": "2026-10-07T00:54:19.984Z",
+    "privatePromptResponseObservedUtc": "2026-10-07T00:54:19.983Z",
+    "requestToLocalAcknowledgementMs": 61868,
+    "preAcknowledgementStateUtc": "2026-10-07T00:54:06.407Z",
+    "preAcknowledgementMessageCount": 187,
+    "preAcknowledgementSettled": true,
+    "actualAgentStartUtc": "2026-10-07T00:54:20.273Z",
+    "actualNativeSessionSettledUtc": "2026-10-07T00:55:10.308Z",
+    "hostSnapshotObservedUtc": [
+      "2026-10-07T00:56:12.351Z",
+      "2026-10-07T00:56:12.45Z"
+    ],
+    "keyLifecycleTimesMatchPrivateEvents": true,
+    "modelFirstTokenLatencyNotMeasured": true,
+    "allLatencyRootCauseNotEstablished": true,
+    "noDuplicateAuthorDispatchSeenInRoundEvents": true,
+    "nextHandoffScope": "先用既有回执和只读源码定位准备阶段状态窗口，必要时最小修复；不扩展游戏或发新的生成请求。",
+    "sourceImplementationNotReauditedInThisRound": true,
+    "helperProcessTerminationNotIndependentlyReexecuted": true
+  },
+  "limits": [
+    "Both images remain bound to sourceGameHead c21c4dc3d00764932457199735697d7f34223b8e and the existing PID146836 Player run with actual exit0; R9/R10 documentation archives are not new business builds.",
+    "No new Player, full user-data inventory, complete Player hash inventory, model run or complete Alpha test suite was executed for this review. Previous results retain their original round and actor attribution.",
+    "Two fixed views do not prove walking, collision, route connectivity, complete reflection validation, sustained performance, physical material accuracy or user visual acceptance.",
+    "No complete private state, system prompt, encoded image data, internal reasoning or credentials are included in this receipt."
+  ],
+  "remainingCoordinatorCommitChecks": [
+    "Freeze the manifest after this receipt and verify exact bytes/SHA256 of every entry.",
+    "Verify staged scope and raw Git blob bytes against the same bounded directory.",
+    "Run the stated CR-aware whitespace gate if preserving CRLF receipts; name that gate accurately."
+  ]
+}

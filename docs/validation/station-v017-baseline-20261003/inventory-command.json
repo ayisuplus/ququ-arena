@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationCreativeBuildingsV016\"||scene.isDirty||UnityEditor.EditorApplication.isPlaying)throw new System.Exception(\"Saved V016 Edit required\");\nconst string output=\"../docs/validation/station-v017-baseline-20261003/\";\nvar garden=UnityEngine.GameObject.Find(\"V015 package - glass ecology garden\").transform;\nstring Path(UnityEngine.Transform t){return t.parent?Path(t.parent)+\"/\"+t.name:t.name;}\nfloat[] Vec(UnityEngine.Vector3 v){return new[]{v.x,v.y,v.z};}\nvar meshes=garden.GetComponentsInChildren<UnityEngine.MeshFilter>(true).Select(f=>{\n var b=f.sharedMesh.bounds;var local=new UnityEngine.Bounds();bool first=true;\n foreach(int x in new[]{-1,1})foreach(int y in new[]{-1,1})foreach(int z in new[]{-1,1}){var p=garden.InverseTransformPoint(f.transform.TransformPoint(b.center+UnityEngine.Vector3.Scale(b.extents,new UnityEngine.Vector3(x,y,z))));if(first){local=new UnityEngine.Bounds(p,UnityEngine.Vector3.zero);first=false;}else local.Encapsulate(p);}\n return new{path=Path(f.transform),active=f.gameObject.activeInHierarchy,mesh=UnityEditor.AssetDatabase.GetAssetPath(f.sharedMesh),min=Vec(local.min),max=Vec(local.max),triangles=f.sharedMesh.triangles.Length/3};\n}).ToArray();\nvar objects=garden.GetComponentsInChildren<UnityEngine.Transform>(true).Select(t=>new{path=Path(t),t.name,active=t.gameObject.activeSelf,position=Vec(garden.InverseTransformPoint(t.position)),localPosition=Vec(t.localPosition),scale=Vec(t.localScale),components=t.GetComponents<UnityEngine.Component>().Select(c=>c?c.GetType().Name:\"MISSING\").ToArray()}).ToArray();\nvar lights=UnityEngine.Object.FindObjectsByType<UnityEngine.Light>(UnityEngine.FindObjectsInactive.Include,UnityEngine.FindObjectsSortMode.None).Where(l=>l.gameObject.scene==scene).Select(l=>new{path=Path(l.transform),l.name,active=l.gameObject.activeInHierarchy,l.enabled,type=l.type.ToString(),color=new[]{l.color.r,l.color.g,l.color.b},l.useColorTemperature,l.colorTemperature,l.intensity,l.range,mode=l.lightmapBakeType.ToString(),shadows=l.shadows.ToString(),position=Vec(l.transform.position)}).ToArray();\nvar volumes=UnityEngine.Object.FindObjectsByType<UnityEngine.Rendering.Volume>(UnityEngine.FindObjectsInactive.Include,UnityEngine.FindObjectsSortMode.None).Where(v=>v.gameObject.scene==scene).Select(v=>new{path=Path(v.transform),v.isGlobal,v.weight,profile=UnityEditor.AssetDatabase.GetAssetPath(v.sharedProfile),json=v.sharedProfile?UnityEditor.EditorJsonUtility.ToJson(v.sharedProfile):\"\"}).ToArray();\nvar player=UnityEngine.Object.FindFirstObjectByType<QuQu.StationGrayboxWalker>().View;\nvar report=new{scene=scene.path,dirty=scene.isDirty,garden=Path(garden),gardenPosition=Vec(garden.position),gardenScale=Vec(garden.lossyScale),gardenRotation=Vec(garden.eulerAngles),meshes,objects,lights,volumes,renderSettings=new{ambientMode=UnityEngine.RenderSettings.ambientMode.ToString(),ambientSky=UnityEngine.RenderSettings.ambientSkyColor.ToString(),ambientEquator=UnityEngine.RenderSettings.ambientEquatorColor.ToString(),ambientGround=UnityEngine.RenderSettings.ambientGroundColor.ToString(),UnityEngine.RenderSettings.ambientIntensity,UnityEngine.RenderSettings.reflectionIntensity,skybox=UnityEditor.AssetDatabase.GetAssetPath(UnityEngine.RenderSettings.skybox)},playerCamera=UnityEditor.EditorJsonUtility.ToJson(player),urp=UnityEditor.EditorJsonUtility.ToJson(player.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>())};\nSystem.IO.File.WriteAllText(output+\"inventory.json\",Newtonsoft.Json.JsonConvert.SerializeObject(report,Newtonsoft.Json.Formatting.Indented));\nreturn new{report.scene,objects=objects.Length,meshes=meshes.Length,activeLights=lights.Count(l=>l.active&&l.enabled),activeRealtimeLights=lights.Count(l=>l.active&&l.enabled&&l.mode==\"Realtime\"),report.gardenPosition,report.gardenRotation,report.gardenScale};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationCreativeBuildingsV016.unity",
+        "objects": 989,
+        "meshes": 661,
+        "activeLights": 161,
+        "activeRealtimeLights": 11,
+        "gardenPosition": [
+          -109,
+          0,
+          188.793533
+        ],
+        "gardenRotation": [
+          0,
+          240,
+          0
+        ],
+        "gardenScale": [
+          1.00000024,
+          1,
+          1.00000024
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

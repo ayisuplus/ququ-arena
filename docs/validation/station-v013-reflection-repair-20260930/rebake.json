@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();\nif(scene.name!=\"BlackHoleStationSereneV013\" || UnityEditor.EditorApplication.isPlaying || scene.isDirty)throw new System.Exception(\"Clean v013 required\");\nvar probe=UnityEngine.GameObject.Find(\"Cafe local reflections\").GetComponent<UnityEngine.ReflectionProbe>();\nvar before=new{mode=probe.mode.ToString(),texture=probe.texture?probe.texture.name:null,realtimeEnabled=UnityEngine.QualitySettings.realtimeReflectionProbes};\nvar folder=\"Assets/Station/Textures/SereneReflectionsV013\";\nif(!UnityEditor.AssetDatabase.IsValidFolder(folder))UnityEditor.AssetDatabase.CreateFolder(\"Assets/Station/Textures\",\"SereneReflectionsV013\");\nvar path=folder+\"/CafeInterior.exr\";\nUnityEditor.Undo.RecordObject(probe,\"Bake v013 cafe reflections\");\nprobe.mode=UnityEngine.Rendering.ReflectionProbeMode.Custom;\nprobe.renderDynamicObjects=true;\nprobe.resolution=256;\n// Include the non-static furniture, but do not freeze the visitor avatar into the room reflection.\nvar avatar=UnityEngine.GameObject.Find(\"P2W visible player graybox avatar\").GetComponent<UnityEngine.Renderer>();\nvar avatarEnabled=avatar.enabled;\ntry {\n    avatar.enabled=false;\n    if(!UnityEditor.Lightmapping.BakeReflectionProbe(probe,path))throw new System.Exception(\"Reflection bake failed\");\n}\nfinally {avatar.enabled=avatarEnabled;}\nUnityEditor.AssetDatabase.ImportAsset(path,UnityEditor.ImportAssetOptions.ForceSynchronousImport);\nvar cube=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Cubemap>(path);\nif(!cube || cube.width!=256)throw new System.Exception(\"Baked reflection cubemap missing\");\nprobe.customBakedTexture=cube;\nUnityEditor.EditorUtility.SetDirty(probe);\nUnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);\nUnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);\nUnityEditor.AssetDatabase.SaveAssets();\nreturn new{before,mode=probe.mode.ToString(),texture=probe.texture.name,resolution=probe.texture.width,path,realtimeEnabled=UnityEngine.QualitySettings.realtimeReflectionProbes};\n"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "before": {
+          "mode": "Custom",
+          "texture": "CafeInterior",
+          "realtimeEnabled": false
+        },
+        "mode": "Custom",
+        "texture": "CafeInterior",
+        "resolution": 256,
+        "path": "Assets/Station/Textures/SereneReflectionsV013/CafeInterior.exr",
+        "realtimeEnabled": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\projects\\黑洞空间站\\QuQuArena3D"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

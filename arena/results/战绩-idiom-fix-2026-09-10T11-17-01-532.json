@@ -1,0 +1,1273 @@
+{
+  "arena": {
+    "$schema": "../arena.schema.json",
+    "name": "idiom-fix",
+    "title": "成语纠错擂台",
+    "description": "高频错写成语改正（自建 canonical，20 题）：再接再励→再接再厉、世外桃园→世外桃源、默守成规→墨守成规。与 tongjia-typo（题面单字归正）互补：本罐考高频错写习惯的识别。exact 裁判（输出正确成语）。",
+    "author": "AI斗兽场（自建）",
+    "version": "0.1.0",
+    "canary": "ququ-arena:idiom-fix:2026-09-10",
+    "taskPrefix": "只输出改正后的成语本身，不多一个字。\n",
+    "judge": {
+      "kind": "exact"
+    },
+    "conditions": {
+      "fix": "错写成语改正"
+    }
+  },
+  "startedAt": "2026-09-10T11:17:01.532Z",
+  "durationMs": 2,
+  "contestants": [
+    {
+      "id": "mock:xueba-o9",
+      "name": "学霸-o9",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:huatou-72b",
+      "name": "滑头-72B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:jianglv-7b",
+      "name": "犟驴-7B",
+      "kind": "mock"
+    },
+    {
+      "id": "mock:laoshi-k2",
+      "name": "老实-k2",
+      "kind": "mock"
+    }
+  ],
+  "records": [
+    {
+      "taskId": "IF-01",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「再接再励」。请写出正确写法。",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 262,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-01",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「再接再励」。请写出正确写法。",
+      "answer": "再接再不",
+      "target": "再接再厉",
+      "latencyMs": 380,
+      "score": 0,
+      "note": "期望「再接再厉」，实答「再接再不」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-01",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「再接再励」。请写出正确写法。",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 239,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-01",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「再接再励」。请写出正确写法。",
+      "answer": "再接再厉",
+      "target": "再接再厉",
+      "latencyMs": 161,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-02",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一愁莫展」。请写出正确写法。",
+      "answer": "一筹莫展",
+      "target": "一筹莫展",
+      "latencyMs": 476,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-02",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一愁莫展」。请写出正确写法。",
+      "answer": "一筹莫展",
+      "target": "一筹莫展",
+      "latencyMs": 303,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-02",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一愁莫展」。请写出正确写法。",
+      "answer": "一筹莫展",
+      "target": "一筹莫展",
+      "latencyMs": 456,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-02",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一愁莫展」。请写出正确写法。",
+      "answer": "一筹莫展",
+      "target": "一筹莫展",
+      "latencyMs": 268,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-03",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「谈笑风声」。请写出正确写法。",
+      "answer": "谈笑风生",
+      "target": "谈笑风生",
+      "latencyMs": 148,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-03",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「谈笑风声」。请写出正确写法。",
+      "answer": "谈笑在生",
+      "target": "谈笑风生",
+      "latencyMs": 234,
+      "score": 0,
+      "note": "期望「谈笑风生」，实答「谈笑在生」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-03",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「谈笑风声」。请写出正确写法。",
+      "answer": "谈笑风",
+      "target": "谈笑风生",
+      "latencyMs": 384,
+      "score": 0,
+      "note": "期望「谈笑风生」，实答「谈笑风」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-03",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「谈笑风声」。请写出正确写法。",
+      "answer": "谈笑风生",
+      "target": "谈笑风生",
+      "latencyMs": 313,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-04",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「走头无路」。请写出正确写法。",
+      "answer": "走投",
+      "target": "走投无路",
+      "latencyMs": 425,
+      "score": 0,
+      "note": "期望「走投无路」，实答「走投」",
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-04",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「走头无路」。请写出正确写法。",
+      "answer": "走投无国",
+      "target": "走投无路",
+      "latencyMs": 101,
+      "score": 0,
+      "note": "期望「走投无路」，实答「走投无国」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-04",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「走头无路」。请写出正确写法。",
+      "answer": "走投无路",
+      "target": "走投无路",
+      "latencyMs": 331,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-04",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「走头无路」。请写出正确写法。",
+      "answer": "走投无",
+      "target": "走投无路",
+      "latencyMs": 218,
+      "score": 0,
+      "note": "期望「走投无路」，实答「走投无」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-05",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「世外桃园」。请写出正确写法。",
+      "answer": "世外桃源",
+      "target": "世外桃源",
+      "latencyMs": 125,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-05",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「世外桃园」。请写出正确写法。",
+      "answer": "世外桃源",
+      "target": "世外桃源",
+      "latencyMs": 213,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-05",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「世外桃园」。请写出正确写法。",
+      "answer": "世外",
+      "target": "世外桃源",
+      "latencyMs": 382,
+      "score": 0,
+      "note": "期望「世外桃源」，实答「世外」",
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-05",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「世外桃园」。请写出正确写法。",
+      "answer": "世外桃源",
+      "target": "世外桃源",
+      "latencyMs": 305,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-06",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「洁白无暇」。请写出正确写法。",
+      "answer": "洁白无瑕",
+      "target": "洁白无瑕",
+      "latencyMs": 219,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-06",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「洁白无暇」。请写出正确写法。",
+      "answer": "洁白无瑕",
+      "target": "洁白无瑕",
+      "latencyMs": 233,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-06",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「洁白无暇」。请写出正确写法。",
+      "answer": "洁白无瑕",
+      "target": "洁白无瑕",
+      "latencyMs": 150,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-06",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「洁白无暇」。请写出正确写法。",
+      "answer": "洁白无瑕",
+      "target": "洁白无瑕",
+      "latencyMs": 322,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-07",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「苦心孤意」。请写出正确写法。",
+      "answer": "苦心孤诣",
+      "target": "苦心孤诣",
+      "latencyMs": 222,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-07",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「苦心孤意」。请写出正确写法。",
+      "answer": "苦心",
+      "target": "苦心孤诣",
+      "latencyMs": 281,
+      "score": 0,
+      "note": "期望「苦心孤诣」，实答「苦心」",
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-07",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「苦心孤意」。请写出正确写法。",
+      "answer": "苦心孤诣",
+      "target": "苦心孤诣",
+      "latencyMs": 159,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 0
+    },
+    {
+      "taskId": "IF-07",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「苦心孤意」。请写出正确写法。",
+      "answer": "苦心孤诣",
+      "target": "苦心孤诣",
+      "latencyMs": 115,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-08",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「默守成规」。请写出正确写法。",
+      "answer": "墨守成规",
+      "target": "墨守成规",
+      "latencyMs": 301,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-08",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「默守成规」。请写出正确写法。",
+      "answer": "墨守",
+      "target": "墨守成规",
+      "latencyMs": 427,
+      "score": 0,
+      "note": "期望「墨守成规」，实答「墨守」",
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-08",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「默守成规」。请写出正确写法。",
+      "answer": "守成规",
+      "target": "墨守成规",
+      "latencyMs": 420,
+      "score": 0,
+      "note": "期望「墨守成规」，实答「守成规」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-08",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「默守成规」。请写出正确写法。",
+      "answer": "墨守成规",
+      "target": "墨守成规",
+      "latencyMs": 174,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-09",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「按步就班」。请写出正确写法。",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 145,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-09",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「按步就班」。请写出正确写法。",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 169,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-09",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「按步就班」。请写出正确写法。",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 182,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-09",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「按步就班」。请写出正确写法。",
+      "answer": "按部就班",
+      "target": "按部就班",
+      "latencyMs": 369,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-10",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「搬门弄斧」。请写出正确写法。",
+      "answer": "班门弄斧",
+      "target": "班门弄斧",
+      "latencyMs": 172,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-10",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「搬门弄斧」。请写出正确写法。",
+      "answer": "班门是斧",
+      "target": "班门弄斧",
+      "latencyMs": 462,
+      "score": 0,
+      "note": "期望「班门弄斧」，实答「班门是斧」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-10",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「搬门弄斧」。请写出正确写法。",
+      "answer": "班门弄",
+      "target": "班门弄斧",
+      "latencyMs": 154,
+      "score": 0,
+      "note": "期望「班门弄斧」，实答「班门弄」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-10",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「搬门弄斧」。请写出正确写法。",
+      "answer": "班弄斧",
+      "target": "班门弄斧",
+      "latencyMs": 87,
+      "score": 0,
+      "note": "期望「班门弄斧」，实答「班弄斧」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-11",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「美仑美奂」。请写出正确写法。",
+      "answer": "美轮美奂",
+      "target": "美轮美奂",
+      "latencyMs": 227,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-11",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「美仑美奂」。请写出正确写法。",
+      "answer": "美轮美奂",
+      "target": "美轮美奂",
+      "latencyMs": 370,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-11",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「美仑美奂」。请写出正确写法。",
+      "answer": "美轮有奂",
+      "target": "美轮美奂",
+      "latencyMs": 156,
+      "score": 0,
+      "note": "期望「美轮美奂」，实答「美轮有奂」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-11",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「美仑美奂」。请写出正确写法。",
+      "answer": "美轮美奂",
+      "target": "美轮美奂",
+      "latencyMs": 342,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-12",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一如继往」。请写出正确写法。",
+      "answer": "一如既往",
+      "target": "一如既往",
+      "latencyMs": 473,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-12",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一如继往」。请写出正确写法。",
+      "answer": "一如既往",
+      "target": "一如既往",
+      "latencyMs": 116,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-12",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一如继往」。请写出正确写法。",
+      "answer": "一如既往",
+      "target": "一如既往",
+      "latencyMs": 245,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-12",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「一如继往」。请写出正确写法。",
+      "answer": "一如既往",
+      "target": "一如既往",
+      "latencyMs": 432,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-13",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「声名雀起」。请写出正确写法。",
+      "answer": "声名鹊起",
+      "target": "声名鹊起",
+      "latencyMs": 347,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-13",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「声名雀起」。请写出正确写法。",
+      "answer": "声名鹊起",
+      "target": "声名鹊起",
+      "latencyMs": 211,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-13",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「声名雀起」。请写出正确写法。",
+      "answer": "声名鹊起",
+      "target": "声名鹊起",
+      "latencyMs": 131,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-13",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「声名雀起」。请写出正确写法。",
+      "answer": "声名鹊起",
+      "target": "声名鹊起",
+      "latencyMs": 348,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-14",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「蛛丝蚂迹」。请写出正确写法。",
+      "answer": "蛛丝马迹",
+      "target": "蛛丝马迹",
+      "latencyMs": 345,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-14",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「蛛丝蚂迹」。请写出正确写法。",
+      "answer": "蛛丝马迹",
+      "target": "蛛丝马迹",
+      "latencyMs": 229,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-14",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「蛛丝蚂迹」。请写出正确写法。",
+      "answer": "蛛是马迹",
+      "target": "蛛丝马迹",
+      "latencyMs": 416,
+      "score": 0,
+      "note": "期望「蛛丝马迹」，实答「蛛是马迹」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-14",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「蛛丝蚂迹」。请写出正确写法。",
+      "answer": "蛛丝马迹",
+      "target": "蛛丝马迹",
+      "latencyMs": 188,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-15",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「烩炙人口」。请写出正确写法。",
+      "answer": "脍炙人口",
+      "target": "脍炙人口",
+      "latencyMs": 249,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-15",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「烩炙人口」。请写出正确写法。",
+      "answer": "脍炙人口",
+      "target": "脍炙人口",
+      "latencyMs": 209,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-15",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「烩炙人口」。请写出正确写法。",
+      "answer": "脍炙人口",
+      "target": "脍炙人口",
+      "latencyMs": 252,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-15",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「烩炙人口」。请写出正确写法。",
+      "answer": "脍炙人口",
+      "target": "脍炙人口",
+      "latencyMs": 373,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-16",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「惹事生非」。请写出正确写法。",
+      "answer": "惹是生非",
+      "target": "惹是生非",
+      "latencyMs": 144,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-16",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「惹事生非」。请写出正确写法。",
+      "answer": "惹是生非",
+      "target": "惹是生非",
+      "latencyMs": 98,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-16",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「惹事生非」。请写出正确写法。",
+      "answer": "惹是非",
+      "target": "惹是生非",
+      "latencyMs": 80,
+      "score": 0,
+      "note": "期望「惹是生非」，实答「惹是非」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-16",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「惹事生非」。请写出正确写法。",
+      "answer": "惹是生非",
+      "target": "惹是生非",
+      "latencyMs": 83,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-17",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「金榜提名」。请写出正确写法。",
+      "answer": "金榜题名",
+      "target": "金榜题名",
+      "latencyMs": 162,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-17",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「金榜提名」。请写出正确写法。",
+      "answer": "金榜题名",
+      "target": "金榜题名",
+      "latencyMs": 307,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-17",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「金榜提名」。请写出正确写法。",
+      "answer": "国榜题名",
+      "target": "金榜题名",
+      "latencyMs": 336,
+      "score": 0,
+      "note": "期望「金榜题名」，实答「国榜题名」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-17",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「金榜提名」。请写出正确写法。",
+      "answer": "金榜题名",
+      "target": "金榜题名",
+      "latencyMs": 88,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-18",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「老奸巨滑」。请写出正确写法。",
+      "answer": "老奸巨猾",
+      "target": "老奸巨猾",
+      "latencyMs": 426,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-18",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「老奸巨滑」。请写出正确写法。",
+      "answer": "老奸巨猾",
+      "target": "老奸巨猾",
+      "latencyMs": 326,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-18",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「老奸巨滑」。请写出正确写法。",
+      "answer": "老奸",
+      "target": "老奸巨猾",
+      "latencyMs": 431,
+      "score": 0,
+      "note": "期望「老奸巨猾」，实答「老奸」",
+      "usage": {
+        "input": 21,
+        "output": 1
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-18",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「老奸巨滑」。请写出正确写法。",
+      "answer": "奸巨猾",
+      "target": "老奸巨猾",
+      "latencyMs": 174,
+      "score": 0,
+      "note": "期望「老奸巨猾」，实答「奸巨猾」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-19",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「迫不急待」。请写出正确写法。",
+      "answer": "迫不及待",
+      "target": "迫不及待",
+      "latencyMs": 463,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-19",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「迫不急待」。请写出正确写法。",
+      "answer": "迫不及为",
+      "target": "迫不及待",
+      "latencyMs": 182,
+      "score": 0,
+      "note": "期望「迫不及待」，实答「迫不及为」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-19",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「迫不急待」。请写出正确写法。",
+      "answer": "迫不及待",
+      "target": "迫不及待",
+      "latencyMs": 451,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-19",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「迫不急待」。请写出正确写法。",
+      "answer": "迫不及待",
+      "target": "迫不及待",
+      "latencyMs": 240,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-20",
+      "condition": "fix",
+      "model": "mock:xueba-o9",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「故技重演」。请写出正确写法。",
+      "answer": "伎重演",
+      "target": "故伎重演",
+      "latencyMs": 402,
+      "score": 0,
+      "note": "期望「故伎重演」，实答「伎重演」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-20",
+      "condition": "fix",
+      "model": "mock:huatou-72b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「故技重演」。请写出正确写法。",
+      "answer": "故一重演",
+      "target": "故伎重演",
+      "latencyMs": 133,
+      "score": 0,
+      "note": "期望「故伎重演」，实答「故一重演」",
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-20",
+      "condition": "fix",
+      "model": "mock:jianglv-7b",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「故技重演」。请写出正确写法。",
+      "answer": "故伎重演",
+      "target": "故伎重演",
+      "latencyMs": 113,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    },
+    {
+      "taskId": "IF-20",
+      "condition": "fix",
+      "model": "mock:laoshi-k2",
+      "prompt": "只输出改正后的成语本身，不多一个字。\n这个成语写错了：「故技重演」。请写出正确写法。",
+      "answer": "故伎重演",
+      "target": "故伎重演",
+      "latencyMs": 238,
+      "score": 1,
+      "usage": {
+        "input": 21,
+        "output": 2
+      },
+      "finishedMs": 1
+    }
+  ],
+  "meta": {
+    "arenaFingerprint": "0e56d389aa2d2acd",
+    "judgeModels": [
+      "mock:laoshi-k2"
+    ],
+    "toolVersion": "2.26.0"
+  }
+}

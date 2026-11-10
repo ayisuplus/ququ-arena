@@ -1,0 +1,17 @@
+{
+  "$schema": "../../arena.schema.json",
+  "name": "couplet-chain",
+  "title": "名句接龙擂台",
+  "description": "16 条名联/古诗名句，出上联/上句答下联/下句（自建，canonical 答案）。测中文经典文本库存——「海阔凭鱼跃」接不出「天高任鸟飞」的模型，中文文学常识欠费。exact 裁判（归一化去标点）。",
+  "author": "AI斗兽场（自建）",
+  "version": "0.1.0",
+  "canary": "ququ-arena:couplet-chain:2026-09-10",
+  "taskPrefix": "只输出下联/下句本身，不多一个字、不加标点。\n",
+  "judge": {
+    "kind": "exact",
+    "lenient": true
+  },
+  "conditions": {
+    "classic": "名联/古诗接下句"
+  }
+}

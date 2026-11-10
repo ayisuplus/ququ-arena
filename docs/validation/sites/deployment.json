@@ -1,0 +1,74 @@
+{
+  "id": "appgdep_6aa6682b0c108191bd0c6485e327dd98",
+  "project_id": "appgprj_6aa65b29e1f081919e7bf254b233246a",
+  "title": "AI斗兽场 · 工程实验台",
+  "version_id": "appgprj_6aa65b29e1f081919e7bf254b233246a~appgver_c13ac4a1b090819180d5ec167793567a",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://ququ-engineering-arena.zluo66977.chatgpt.site",
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6aa65b29e1f081919e7bf254b233246a",
+  "failure_message": null,
+  "env_set_revision": 1,
+  "updated_at": "2026-09-13T09:09:21.129632+00:00",
+  "sourceCommit": "3a8c7eec3b7009b7c63daf3dc256c38cbc055842",
+  "observed": [
+    {
+      "at": "2026-09-13T09:11:37.910Z",
+      "method": "GET",
+      "path": "/sites-api/status",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:36.096Z",
+      "method": "POST",
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:34.288Z",
+      "method": "POST",
+      "path": "/sites-api/executor/sync",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:33.562Z",
+      "method": "GET",
+      "path": "/sites-api/status",
+      "status": 401,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:32.680Z",
+      "method": "GET",
+      "path": "/sites-api/status",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:32.427Z",
+      "method": "POST",
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:30.949Z",
+      "method": "POST",
+      "path": "/sites-api/executor/sync",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "at": "2026-09-13T09:11:28.895Z",
+      "method": "POST",
+      "path": "/sites-api/executor/poll",
+      "status": 200,
+      "outcome": "ok"
+    }
+  ],
+  "machineTokenIsNotUserIdentity": true
+}

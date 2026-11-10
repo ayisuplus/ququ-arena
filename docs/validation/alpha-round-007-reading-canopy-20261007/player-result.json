@@ -1,0 +1,97 @@
+{
+  "startedUtc": "2026-10-07T00:33:11.209Z",
+  "supervisorPid": 145904,
+  "playerPid": 146836,
+  "executable": "C:\\Users\\36322\\.codex\\worktrees\\unified-capabilities\\alpha-agent\\.alpha\\alpha-round-007-player-baseline\\BatchPlayer\\StationV019.exe",
+  "executableSha256": "e1a9d9e062bbcdb91f76983fae8bb1e4fb8036d55289318ef91033f130d38ecc",
+  "artifactManifest": "C:\\Users\\36322\\.codex\\worktrees\\unified-capabilities\\alpha-agent\\.alpha\\alpha-round-007-player-baseline\\build-artifact-manifest-v2.json",
+  "sourceGameHead": "c21c4dc3d00764932457199735697d7f34223b8e",
+  "probeMode": "--station-reading-group-render",
+  "target": "Reading curved linking canopy / material slot 1 Reading natural oak soffits",
+  "output": "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-007-reading-canopy-20261007\\player-reading-group-windowed",
+  "saveDir": "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-007-reading-canopy-20261007\\player-reading-group-windowed\\save",
+  "args": [
+    "-force-d3d11",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "1600",
+    "-screen-height",
+    "1000",
+    "--station-world-save-dir",
+    "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-007-reading-canopy-20261007\\player-reading-group-windowed\\save",
+    "--arena-backend",
+    "http://127.0.0.1:65534",
+    "-logFile",
+    "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-007-reading-canopy-20261007\\player-reading-group-windowed\\player.log",
+    "--station-annex-render-output",
+    "E:\\projects\\黑洞空间站\\docs\\validation\\alpha-round-007-reading-canopy-20261007\\player-reading-group-windowed",
+    "--station-reading-group-render"
+  ],
+  "windowsHide": false,
+  "d3d11": true,
+  "resolution": "1600x1000",
+  "batchmode": false,
+  "note": "Existing probe mode reused unmodified. No user input. No game mutation. Player still reads real user preference files; the world save directory is isolated.",
+  "finishedUtc": "2026-10-07T00:34:32.025Z",
+  "actualPlayerExitCode": 0,
+  "report": {
+    "scene": "Assets/Station/Scenes/Candidates/BlackHoleStationDistrictsV019.unity",
+    "graphicsDevice": "NVIDIA GeForce RTX 5090",
+    "graphicsApi": "Direct3D11",
+    "urp": "{\"m_RenderShadows\":true,\"m_RequiresDepthTextureOption\":2,\"m_RequiresOpaqueTextureOption\":2,\"m_CameraType\":0,\"m_Cameras\":[],\"m_RendererIndex\":1,\"m_VolumeLayerMask\":{\"serializedVersion\":\"2\",\"m_Bits\":1},\"m_VolumeTrigger\":{\"instanceID\":0},\"m_VolumeFrameworkUpdateModeOption\":2,\"m_RenderPostProcessing\":true,\"m_Antialiasing\":2,\"m_AntialiasingQuality\":2,\"m_StopNaN\":false,\"m_Dithering\":false,\"m_ClearDepth\":true,\"m_AllowXRRendering\":true,\"m_AllowHDROutput\":true,\"m_UseScreenCoordOverride\":false,\"m_ScreenSizeOverride\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_ScreenCoordScaleBias\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},\"m_RequiresDepthTexture\":false,\"m_RequiresColorTexture\":false,\"m_TaaSettings\":{\"m_Quality\":3,\"m_FrameInfluence\":0.10000000149011612,\"m_JitterScale\":1.0,\"m_MipBias\":0.0,\"m_VarianceClampScale\":0.8999999761581421,\"m_ContrastAdaptiveSharpening\":0.0},\"m_Version\":2}",
+    "width": 1600,
+    "height": 1000,
+    "passed": true,
+    "reflectionCaptures": 141,
+    "reflectionCycles": 3,
+    "researchReflectionTextures": [
+      "V019 reflection - research main runtime updates=6",
+      "V019 reflection - research low runtime updates=6"
+    ],
+    "readingReflectionTextures": [],
+    "originalReadingReflectionTextures": [],
+    "cafeReflectionTextures": [],
+    "r2ReflectionTextures": [],
+    "homesReflectionTextures": [],
+    "views": [
+      {
+        "name": "street-arrival",
+        "frames": 2009,
+        "renderedFrames": 2009,
+        "p95Ms": 4.958602428436279,
+        "drawCalls": 3707.3479342956693
+      },
+      {
+        "name": "reading-door",
+        "frames": 2110,
+        "renderedFrames": 2110,
+        "p95Ms": 4.831299781799316,
+        "drawCalls": 2165.263507109005
+      },
+      {
+        "name": "activity-door",
+        "frames": 2167,
+        "renderedFrames": 2167,
+        "p95Ms": 4.62820291519165,
+        "drawCalls": 1912.4467005076142
+      },
+      {
+        "name": "reading-street-turn",
+        "frames": 2000,
+        "renderedFrames": 2000,
+        "p95Ms": 5.019897937774658,
+        "drawCalls": 3189.063
+      },
+      {
+        "name": "reading-corner",
+        "frames": 2051,
+        "renderedFrames": 2051,
+        "p95Ms": 4.920698642730713,
+        "drawCalls": 2365.216967333008
+      }
+    ],
+    "errors": []
+  },
+  "scope": "Fixed-view render capture only. Not walking/passage validation, not reflection-complete proof for the reading zone, not visual approval."
+}

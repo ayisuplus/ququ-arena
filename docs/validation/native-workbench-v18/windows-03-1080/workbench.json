@@ -1,0 +1,7 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "transport": "localhost fixed-response fixture; not a cloud model",
+  "error": "System.ArgumentException: Passed in texture is invalid (null).\r\n  at (wrapper managed-to-native) UnityEngine.ImageConversion.EncodeToPNG_Injected(intptr,UnityEngine.Bindings.BlittableArrayWrapper&)\r\n  at UnityEngine.ImageConversion.EncodeToPNG (UnityEngine.Texture2D tex) [0x00006] in <2235a36793554c429d7459ed207e199b>:0 \r\n  at QuQu.ArenaSpectatorCapture.Save (System.String path) [0x00006] in <edb4a99c1f914e39bb9477fd63b6b819>:0 \r\n  at QuQu.ArenaWorkbenchCheck+<Photo>d__5.MoveNext () [0x00078] in <edb4a99c1f914e39bb9477fd63b6b819>:0 \r\n  at QuQu.ArenaWorkbenchCheck+<Run>d__6.MoveNext () [0x000d2] in <edb4a99c1f914e39bb9477fd63b6b819>:0 ",
+  "passed": false
+}
